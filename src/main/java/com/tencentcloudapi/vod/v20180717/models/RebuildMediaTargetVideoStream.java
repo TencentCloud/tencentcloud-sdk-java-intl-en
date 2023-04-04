@@ -60,7 +60,7 @@ Default value: `open`.
     private String ResolutionAdaptive;
 
     /**
-    * The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+    * The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -73,7 +73,7 @@ Default value: `0`.
     private Long Width;
 
     /**
-    * The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+    * The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -205,14 +205,14 @@ Default value: `open`.
     }
 
     /**
-     * Get The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+     * Get The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`. 
-     * @return Width The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+     * @return Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -225,14 +225,14 @@ Default value: `0`.
     }
 
     /**
-     * Set The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+     * Set The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-     * @param Width The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+     * @param Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -245,14 +245,14 @@ Default value: `0`.
     }
 
     /**
-     * Get The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+     * Get The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`. 
-     * @return Height The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+     * @return Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -265,14 +265,14 @@ Default value: `0`.
     }
 
     /**
-     * Set The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+     * Set The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-     * @param Height The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+     * @param Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>

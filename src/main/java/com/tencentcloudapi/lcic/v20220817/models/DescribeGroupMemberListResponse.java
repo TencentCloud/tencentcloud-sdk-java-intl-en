@@ -30,7 +30,8 @@ public class DescribeGroupMemberListResponse extends AbstractModel{
     private Long Total;
 
     /**
-    * The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MemberIds")
     @Expose
@@ -60,16 +61,20 @@ public class DescribeGroupMemberListResponse extends AbstractModel{
     }
 
     /**
-     * Get The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemberIds The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MemberIds 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getMemberIds() {
         return this.MemberIds;
     }
 
     /**
-     * Set The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemberIds The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MemberIds 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemberIds(String [] MemberIds) {
         this.MemberIds = MemberIds;

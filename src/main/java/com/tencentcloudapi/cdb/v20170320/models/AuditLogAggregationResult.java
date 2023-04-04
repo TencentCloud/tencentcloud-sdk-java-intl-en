@@ -13,115 +13,87 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lcic.v20220817.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchUserInfo extends AbstractModel{
+public class AuditLogAggregationResult extends AbstractModel{
 
     /**
-    * The SDKAppID assigned by LCIC.
-
-    */
-    @SerializedName("SdkAppId")
-    @Expose
-    private Long SdkAppId;
-
-    /**
-    * 
+    * Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("UserId")
+    @SerializedName("AggregationField")
     @Expose
-    private String UserId;
+    private String AggregationField;
 
     /**
-    * 
+    * Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("OriginId")
+    @SerializedName("Buckets")
     @Expose
-    private String OriginId;
+    private Bucket [] Buckets;
 
     /**
-     * Get The SDKAppID assigned by LCIC.
- 
-     * @return SdkAppId The SDKAppID assigned by LCIC.
-
-     */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
-    }
-
-    /**
-     * Set The SDKAppID assigned by LCIC.
-
-     * @param SdkAppId The SDKAppID assigned by LCIC.
-
-     */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get 
+     * Get Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserId 
+     * @return AggregationField Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getUserId() {
-        return this.UserId;
+    public String getAggregationField() {
+        return this.AggregationField;
     }
 
     /**
-     * Set 
+     * Set Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserId 
+     * @param AggregationField Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setAggregationField(String AggregationField) {
+        this.AggregationField = AggregationField;
     }
 
     /**
-     * Get 
+     * Get Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginId 
+     * @return Buckets Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getOriginId() {
-        return this.OriginId;
+    public Bucket [] getBuckets() {
+        return this.Buckets;
     }
 
     /**
-     * Set 
+     * Set Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginId 
+     * @param Buckets Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setOriginId(String OriginId) {
-        this.OriginId = OriginId;
+    public void setBuckets(Bucket [] Buckets) {
+        this.Buckets = Buckets;
     }
 
-    public BatchUserInfo() {
+    public AuditLogAggregationResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public BatchUserInfo(BatchUserInfo source) {
-        if (source.SdkAppId != null) {
-            this.SdkAppId = new Long(source.SdkAppId);
+    public AuditLogAggregationResult(AuditLogAggregationResult source) {
+        if (source.AggregationField != null) {
+            this.AggregationField = new String(source.AggregationField);
         }
-        if (source.UserId != null) {
-            this.UserId = new String(source.UserId);
-        }
-        if (source.OriginId != null) {
-            this.OriginId = new String(source.OriginId);
+        if (source.Buckets != null) {
+            this.Buckets = new Bucket[source.Buckets.length];
+            for (int i = 0; i < source.Buckets.length; i++) {
+                this.Buckets[i] = new Bucket(source.Buckets[i]);
+            }
         }
     }
 
@@ -130,9 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "OriginId", this.OriginId);
+        this.setParamSimple(map, prefix + "AggregationField", this.AggregationField);
+        this.setParamArrayObj(map, prefix + "Buckets.", this.Buckets);
 
     }
 }

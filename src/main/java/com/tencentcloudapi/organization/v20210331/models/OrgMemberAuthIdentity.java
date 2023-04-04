@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IdentityId;
 
     /**
-    * Identity role name.
+    * Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityRoleName")
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IdentityRoleName;
 
     /**
-    * Identity role alias.
+    * Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityRoleAliasName")
@@ -71,6 +71,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IdentityType")
+    @Expose
+    private Long IdentityType;
+
+    /**
      * Get Identity ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IdentityId Identity ID.
@@ -91,9 +99,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Identity role name.
+     * Get Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IdentityRoleName Identity role name.
+     * @return IdentityRoleName Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentityRoleName() {
@@ -101,9 +109,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Identity role name.
+     * Set Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IdentityRoleName Identity role name.
+     * @param IdentityRoleName Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityRoleName(String IdentityRoleName) {
@@ -111,9 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Identity role alias.
+     * Get Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IdentityRoleAliasName Identity role alias.
+     * @return IdentityRoleAliasName Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentityRoleAliasName() {
@@ -121,9 +129,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Identity role alias.
+     * Set Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IdentityRoleAliasName Identity role alias.
+     * @param IdentityRoleAliasName Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityRoleAliasName(String IdentityRoleAliasName) {
@@ -190,6 +198,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IdentityType Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIdentityType() {
+        return this.IdentityType;
+    }
+
+    /**
+     * Set Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IdentityType Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIdentityType(Long IdentityType) {
+        this.IdentityType = IdentityType;
+    }
+
     public OrgMemberAuthIdentity() {
     }
 
@@ -216,6 +244,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.IdentityType != null) {
+            this.IdentityType = new Long(source.IdentityType);
+        }
     }
 
 
@@ -229,6 +260,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
 
     }
 }

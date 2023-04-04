@@ -13,29 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lcic.v20220817.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupListResponse extends AbstractModel{
+public class AnalyzeAuditLogsResponse extends AbstractModel{
 
     /**
-    * The total number of groups that meet the conditions.
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
-
-    /**
-    * 
+    * Information set of the aggregation bucket returned
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("GroupInfos")
+    @SerializedName("Items")
     @Expose
-    private GroupInfo [] GroupInfos;
+    private AuditLogAggregationResult [] Items;
+
+    /**
+    * Number of scanned logs
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +46,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The total number of groups that meet the conditions. 
-     * @return Total The total number of groups that meet the conditions.
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set The total number of groups that meet the conditions.
-     * @param Total The total number of groups that meet the conditions.
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 
+     * Get Information set of the aggregation bucket returned
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupInfos 
+     * @return Items Information set of the aggregation bucket returned
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public GroupInfo [] getGroupInfos() {
-        return this.GroupInfos;
+    public AuditLogAggregationResult [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 
+     * Set Information set of the aggregation bucket returned
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupInfos 
+     * @param Items Information set of the aggregation bucket returned
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setGroupInfos(GroupInfo [] GroupInfos) {
-        this.GroupInfos = GroupInfos;
+    public void setItems(AuditLogAggregationResult [] Items) {
+        this.Items = Items;
+    }
+
+    /**
+     * Get Number of scanned logs
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount Number of scanned logs
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Number of scanned logs
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount Number of scanned logs
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -96,22 +101,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeGroupListResponse() {
+    public AnalyzeAuditLogsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGroupListResponse(DescribeGroupListResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.GroupInfos != null) {
-            this.GroupInfos = new GroupInfo[source.GroupInfos.length];
-            for (int i = 0; i < source.GroupInfos.length; i++) {
-                this.GroupInfos[i] = new GroupInfo(source.GroupInfos[i]);
+    public AnalyzeAuditLogsResponse(AnalyzeAuditLogsResponse source) {
+        if (source.Items != null) {
+            this.Items = new AuditLogAggregationResult[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new AuditLogAggregationResult(source.Items[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "GroupInfos.", this.GroupInfos);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

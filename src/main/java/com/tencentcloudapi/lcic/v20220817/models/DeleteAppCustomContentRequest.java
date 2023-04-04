@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSupervisorRequest extends AbstractModel{
+public class DeleteAppCustomContentRequest extends AbstractModel{
 
     /**
     * The application ID.
@@ -30,11 +30,11 @@ public class CreateSupervisorRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * The user IDs.
+    * The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
     */
-    @SerializedName("Users")
+    @SerializedName("Scenes")
     @Expose
-    private String [] Users;
+    private String [] Scenes;
 
     /**
      * Get The application ID. 
@@ -53,36 +53,36 @@ public class CreateSupervisorRequest extends AbstractModel{
     }
 
     /**
-     * Get The user IDs. 
-     * @return Users The user IDs.
+     * Get The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted. 
+     * @return Scenes The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
      */
-    public String [] getUsers() {
-        return this.Users;
+    public String [] getScenes() {
+        return this.Scenes;
     }
 
     /**
-     * Set The user IDs.
-     * @param Users The user IDs.
+     * Set The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
+     * @param Scenes The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
      */
-    public void setUsers(String [] Users) {
-        this.Users = Users;
+    public void setScenes(String [] Scenes) {
+        this.Scenes = Scenes;
     }
 
-    public CreateSupervisorRequest() {
+    public DeleteAppCustomContentRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSupervisorRequest(CreateSupervisorRequest source) {
+    public DeleteAppCustomContentRequest(DeleteAppCustomContentRequest source) {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
-        if (source.Users != null) {
-            this.Users = new String[source.Users.length];
-            for (int i = 0; i < source.Users.length; i++) {
-                this.Users[i] = new String(source.Users[i]);
+        if (source.Scenes != null) {
+            this.Scenes = new String[source.Scenes.length];
+            for (int i = 0; i < source.Scenes.length; i++) {
+                this.Scenes[i] = new String(source.Scenes[i]);
             }
         }
     }
@@ -93,7 +93,7 @@ public class CreateSupervisorRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamArraySimple(map, prefix + "Users.", this.Users);
+        this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
 
     }
 }

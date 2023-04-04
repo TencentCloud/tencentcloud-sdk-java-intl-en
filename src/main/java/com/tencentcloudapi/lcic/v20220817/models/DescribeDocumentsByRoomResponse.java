@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeDocumentsByRoomResponse extends AbstractModel{
 
     /**
-    * The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Documents")
     @Expose
@@ -44,16 +45,20 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The information of the documents. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Documents 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DocumentInfo [] getDocuments() {
         return this.Documents;
     }
 
     /**
-     * Set The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Documents 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDocuments(DocumentInfo [] Documents) {
         this.Documents = Documents;

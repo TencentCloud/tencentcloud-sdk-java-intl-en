@@ -261,6 +261,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] ProxyIds;
 
     /**
+    * Database engine type
+    */
+    @SerializedName("EngineTypes")
+    @Expose
+    private String [] EngineTypes;
+
+    /**
      * Get Project ID. 
      * @return ProjectId Project ID.
      */
@@ -804,6 +811,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.ProxyIds = ProxyIds;
     }
 
+    /**
+     * Get Database engine type 
+     * @return EngineTypes Database engine type
+     */
+    public String [] getEngineTypes() {
+        return this.EngineTypes;
+    }
+
+    /**
+     * Set Database engine type
+     * @param EngineTypes Database engine type
+     */
+    public void setEngineTypes(String [] EngineTypes) {
+        this.EngineTypes = EngineTypes;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -977,6 +1000,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.ProxyIds[i] = new String(source.ProxyIds[i]);
             }
         }
+        if (source.EngineTypes != null) {
+            this.EngineTypes = new String[source.EngineTypes.length];
+            for (int i = 0; i < source.EngineTypes.length; i++) {
+                this.EngineTypes[i] = new String(source.EngineTypes[i]);
+            }
+        }
     }
 
 
@@ -1018,6 +1047,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
         this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
+        this.setParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
 
     }
 }

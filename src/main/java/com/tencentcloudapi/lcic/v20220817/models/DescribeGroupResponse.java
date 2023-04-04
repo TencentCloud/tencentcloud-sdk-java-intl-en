@@ -37,7 +37,8 @@ public class DescribeGroupResponse extends AbstractModel{
     private String GroupName;
 
     /**
-    * The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeacherId")
     @Expose
@@ -51,7 +52,8 @@ public class DescribeGroupResponse extends AbstractModel{
     private Long GroupType;
 
     /**
-    * The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubGroupIds")
     @Expose
@@ -97,16 +99,20 @@ public class DescribeGroupResponse extends AbstractModel{
     }
 
     /**
-     * Get The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeacherId The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TeacherId 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeacherId The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TeacherId 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
@@ -129,16 +135,20 @@ public class DescribeGroupResponse extends AbstractModel{
     }
 
     /**
-     * Get The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubGroupIds 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSubGroupIds() {
         return this.SubGroupIds;
     }
 
     /**
-     * Set The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubGroupIds 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubGroupIds(String [] SubGroupIds) {
         this.SubGroupIds = SubGroupIds;

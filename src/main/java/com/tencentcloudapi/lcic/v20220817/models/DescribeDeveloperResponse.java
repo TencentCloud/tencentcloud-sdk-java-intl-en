@@ -20,22 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupListResponse extends AbstractModel{
-
-    /**
-    * The total number of groups that meet the conditions.
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+public class DescribeDeveloperResponse extends AbstractModel{
 
     /**
     * 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("GroupInfos")
+    @SerializedName("DeveloperId")
     @Expose
-    private GroupInfo [] GroupInfos;
+    private String DeveloperId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The total number of groups that meet the conditions. 
-     * @return Total The total number of groups that meet the conditions.
+     * Get  
+     * @return DeveloperId 
      */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set The total number of groups that meet the conditions.
-     * @param Total The total number of groups that meet the conditions.
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupInfos 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public GroupInfo [] getGroupInfos() {
-        return this.GroupInfos;
+    public String getDeveloperId() {
+        return this.DeveloperId;
     }
 
     /**
      * Set 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupInfos 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeveloperId 
      */
-    public void setGroupInfos(GroupInfo [] GroupInfos) {
-        this.GroupInfos = GroupInfos;
+    public void setDeveloperId(String DeveloperId) {
+        this.DeveloperId = DeveloperId;
     }
 
     /**
@@ -96,22 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeGroupListResponse() {
+    public DescribeDeveloperResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGroupListResponse(DescribeGroupListResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.GroupInfos != null) {
-            this.GroupInfos = new GroupInfo[source.GroupInfos.length];
-            for (int i = 0; i < source.GroupInfos.length; i++) {
-                this.GroupInfos[i] = new GroupInfo(source.GroupInfos[i]);
-            }
+    public DescribeDeveloperResponse(DescribeDeveloperResponse source) {
+        if (source.DeveloperId != null) {
+            this.DeveloperId = new String(source.DeveloperId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "GroupInfos.", this.GroupInfos);
+        this.setParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

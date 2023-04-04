@@ -104,6 +104,15 @@ Default value: `1`
     private Float SamplingRate;
 
     /**
+    * Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get Start time of the log to be searched, which is a Unix timestamp in milliseconds 
      * @return From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
@@ -319,6 +328,30 @@ Default value: `1`
         this.SamplingRate = SamplingRate;
     }
 
+    /**
+     * Get Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules. 
+     * @return SyntaxRule Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+     * @param SyntaxRule Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -354,6 +387,9 @@ Default value: `1`
         if (source.SamplingRate != null) {
             this.SamplingRate = new Float(source.SamplingRate);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -370,6 +406,7 @@ Default value: `1`
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

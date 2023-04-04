@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeOrganizationMembersRequest extends AbstractModel{
 
     /**
-    * Offset.
+    * Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number of returned results. Maximum value: `50`.
+    * Limit, which defaults to `10`. Value range: 1-50.
     */
     @SerializedName("Limit")
     @Expose
@@ -65,32 +65,32 @@ public class DescribeOrganizationMembersRequest extends AbstractModel{
     private String Product;
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+     * Get Offset, which is an integer multiple of the value of `Limit`. Default value: `0`. 
+     * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+     * @param Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number of returned results. Maximum value: `50`. 
-     * @return Limit Maximum number of returned results. Maximum value: `50`.
+     * Get Limit, which defaults to `10`. Value range: 1-50. 
+     * @return Limit Limit, which defaults to `10`. Value range: 1-50.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of returned results. Maximum value: `50`.
-     * @param Limit Maximum number of returned results. Maximum value: `50`.
+     * Set Limit, which defaults to `10`. Value range: 1-50.
+     * @param Limit Limit, which defaults to `10`. Value range: 1-50.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDefaultParamsRequest extends AbstractModel{
 
     /**
-    * MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+    * Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -37,16 +37,23 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
     private String TemplateType;
 
     /**
-     * Get MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"]. 
-     * @return EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+    * Parameter template engine. Default value: `InnoDB`.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
+     * Get Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`. 
+     * @return EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
-     * @param EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+     * Set Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+     * @param EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -68,6 +75,22 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         this.TemplateType = TemplateType;
     }
 
+    /**
+     * Get Parameter template engine. Default value: `InnoDB`. 
+     * @return EngineType Parameter template engine. Default value: `InnoDB`.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Parameter template engine. Default value: `InnoDB`.
+     * @param EngineType Parameter template engine. Default value: `InnoDB`.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public DescribeDefaultParamsRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

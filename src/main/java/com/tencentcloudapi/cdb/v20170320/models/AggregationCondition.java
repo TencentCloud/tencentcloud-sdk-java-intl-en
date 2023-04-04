@@ -13,100 +13,100 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.organization.v20210331.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel{
+public class AggregationCondition extends AbstractModel{
 
     /**
-    * Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+    * Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+    */
+    @SerializedName("AggregationField")
+    @Expose
+    private String AggregationField;
+
+    /**
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit, which defaults to `10`. Value range: 1-50.
+    * Number of buckets returned under this field. Maximum value: `100`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Organization member UIN.
-    */
-    @SerializedName("MemberUin")
-    @Expose
-    private Long MemberUin;
+     * Get Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type). 
+     * @return AggregationField Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+     */
+    public String getAggregationField() {
+        return this.AggregationField;
+    }
 
     /**
-     * Get Offset, which is an integer multiple of the value of `Limit`. Default value: `0`. 
-     * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+     * Set Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+     * @param AggregationField Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+     */
+    public void setAggregationField(String AggregationField) {
+        this.AggregationField = AggregationField;
+    }
+
+    /**
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
-     * @param Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit, which defaults to `10`. Value range: 1-50. 
-     * @return Limit Limit, which defaults to `10`. Value range: 1-50.
+     * Get Number of buckets returned under this field. Maximum value: `100`. 
+     * @return Limit Number of buckets returned under this field. Maximum value: `100`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit, which defaults to `10`. Value range: 1-50.
-     * @param Limit Limit, which defaults to `10`. Value range: 1-50.
+     * Set Number of buckets returned under this field. Maximum value: `100`.
+     * @param Limit Number of buckets returned under this field. Maximum value: `100`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
-    /**
-     * Get Organization member UIN. 
-     * @return MemberUin Organization member UIN.
-     */
-    public Long getMemberUin() {
-        return this.MemberUin;
-    }
-
-    /**
-     * Set Organization member UIN.
-     * @param MemberUin Organization member UIN.
-     */
-    public void setMemberUin(Long MemberUin) {
-        this.MemberUin = MemberUin;
-    }
-
-    public DescribeOrganizationMemberAuthIdentitiesRequest() {
+    public AggregationCondition() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOrganizationMemberAuthIdentitiesRequest(DescribeOrganizationMemberAuthIdentitiesRequest source) {
+    public AggregationCondition(AggregationCondition source) {
+        if (source.AggregationField != null) {
+            this.AggregationField = new String(source.AggregationField);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.MemberUin != null) {
-            this.MemberUin = new Long(source.MemberUin);
         }
     }
 
@@ -115,9 +115,9 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AggregationField", this.AggregationField);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
 
     }
 }

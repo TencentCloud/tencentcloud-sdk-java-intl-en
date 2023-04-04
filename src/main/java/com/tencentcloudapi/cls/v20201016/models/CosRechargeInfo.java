@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Bucket;
 
     /**
-    * COS bucket region.
+    * Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BucketRegion")
@@ -244,9 +244,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get COS bucket region.
+     * Get Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BucketRegion COS bucket region.
+     * @return BucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBucketRegion() {
@@ -254,9 +254,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set COS bucket region.
+     * Set Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BucketRegion COS bucket region.
+     * @param BucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBucketRegion(String BucketRegion) {

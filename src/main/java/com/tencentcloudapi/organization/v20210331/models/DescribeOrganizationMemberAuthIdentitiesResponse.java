@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel{
 
     /**
-    * List.
+    * List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
@@ -46,9 +46,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List.
+     * Get List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items List.
+     * @return Items List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public OrgMemberAuthIdentity [] getItems() {
@@ -56,9 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List.
+     * Set List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items List.
+     * @param Items List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(OrgMemberAuthIdentity [] Items) {

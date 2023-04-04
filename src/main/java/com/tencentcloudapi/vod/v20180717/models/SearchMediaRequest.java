@@ -187,6 +187,28 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] StorageClasses;
 
     /**
+    * The file formats.
+<li>Array length limit: 10</li>
+    */
+    @SerializedName("MediaTypes")
+    @Expose
+    private String [] MediaTypes;
+
+    /**
+    * 
+    */
+    @SerializedName("Status")
+    @Expose
+    private String [] Status;
+
+    /**
+    * 
+    */
+    @SerializedName("ReviewResults")
+    @Expose
+    private String [] ReviewResults;
+
+    /**
     * The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
     */
@@ -704,6 +726,58 @@ End time in the creation time range.
     }
 
     /**
+     * Get The file formats.
+<li>Array length limit: 10</li> 
+     * @return MediaTypes The file formats.
+<li>Array length limit: 10</li>
+     */
+    public String [] getMediaTypes() {
+        return this.MediaTypes;
+    }
+
+    /**
+     * Set The file formats.
+<li>Array length limit: 10</li>
+     * @param MediaTypes The file formats.
+<li>Array length limit: 10</li>
+     */
+    public void setMediaTypes(String [] MediaTypes) {
+        this.MediaTypes = MediaTypes;
+    }
+
+    /**
+     * Get  
+     * @return Status 
+     */
+    public String [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 
+     * @param Status 
+     */
+    public void setStatus(String [] Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get  
+     * @return ReviewResults 
+     */
+    public String [] getReviewResults() {
+        return this.ReviewResults;
+    }
+
+    /**
+     * Set 
+     * @param ReviewResults 
+     */
+    public void setReviewResults(String [] ReviewResults) {
+        this.ReviewResults = ReviewResults;
+    }
+
+    /**
      * Get The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li> 
      * @return TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
@@ -1001,6 +1075,24 @@ End time in the creation time range.
                 this.StorageClasses[i] = new String(source.StorageClasses[i]);
             }
         }
+        if (source.MediaTypes != null) {
+            this.MediaTypes = new String[source.MediaTypes.length];
+            for (int i = 0; i < source.MediaTypes.length; i++) {
+                this.MediaTypes[i] = new String(source.MediaTypes[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
+        if (source.ReviewResults != null) {
+            this.ReviewResults = new String[source.ReviewResults.length];
+            for (int i = 0; i < source.ReviewResults.length; i++) {
+                this.ReviewResults[i] = new String(source.ReviewResults[i]);
+            }
+        }
         if (source.TrtcSdkAppIds != null) {
             this.TrtcSdkAppIds = new Long[source.TrtcSdkAppIds.length];
             for (int i = 0; i < source.TrtcSdkAppIds.length; i++) {
@@ -1062,6 +1154,9 @@ End time in the creation time range.
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+        this.setParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamArraySimple(map, prefix + "ReviewResults.", this.ReviewResults);
         this.setParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
         this.setParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
         this.setParamSimple(map, prefix + "Text", this.Text);

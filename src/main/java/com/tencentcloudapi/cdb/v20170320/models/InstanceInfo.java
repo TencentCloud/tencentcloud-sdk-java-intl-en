@@ -349,6 +349,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxDelayTime;
 
     /**
+    * Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
      * Get Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled) 
      * @return WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      */
@@ -1112,6 +1119,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MaxDelayTime = MaxDelayTime;
     }
 
+    /**
+     * Get Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD). 
+     * @return DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+     * @param DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1264,6 +1287,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MaxDelayTime != null) {
             this.MaxDelayTime = new Long(source.MaxDelayTime);
         }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
     }
 
 
@@ -1316,6 +1342,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

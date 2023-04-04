@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class RoomInfo extends AbstractModel{
 
     /**
-    * The room name. Note: This field may return null, indicating that no valid values can be obtained.
+    * The room name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+    * The room start time (Unix timestamp).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+    * The room end time (Unix timestamp).
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+    * The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
     */
     @SerializedName("Resolution")
     @Expose
     private Long Resolution;
 
     /**
-    * The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+    * The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -59,70 +59,69 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubType")
     @Expose
     private String SubType;
 
     /**
-    * The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+    * The user ID of the teacher. User IDs are returned by the user registration APIs.
     */
     @SerializedName("TeacherId")
     @Expose
     private String TeacherId;
 
     /**
-    * Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
     */
     @SerializedName("AutoMic")
     @Expose
     private Long AutoMic;
 
     /**
-    * Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
     */
     @SerializedName("TurnOffMic")
     @Expose
     private Long TurnOffMic;
 
     /**
-    * Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
     */
     @SerializedName("AudioQuality")
     @Expose
     private Long AudioQuality;
 
     /**
-    * Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
     */
     @SerializedName("DisableRecord")
     @Expose
     private Long DisableRecord;
 
     /**
-    * The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+    * The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
     */
     @SerializedName("Assistants")
     @Expose
     private String [] Assistants;
 
     /**
-    * The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+    * The number of RTC users.
     */
     @SerializedName("RTCAudienceNumber")
     @Expose
     private Long RTCAudienceNumber;
 
     /**
-    * The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+    * The audience type.
     */
     @SerializedName("AudienceType")
     @Expose
     private Long AudienceType;
 
     /**
-    * The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+    * The recording layout.
     */
     @SerializedName("RecordLayout")
     @Expose
@@ -136,90 +135,88 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String GroupId;
 
     /**
-     * Get The room name. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name The room name. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The room name. 
+     * @return Name The room name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The room name. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name The room name. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The room name.
+     * @param Name The room name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The room start time (Unix timestamp). 
+     * @return StartTime The room start time (Unix timestamp).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The room start time (Unix timestamp).
+     * @param StartTime The room start time (Unix timestamp).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The room end time (Unix timestamp). 
+     * @return EndTime The room end time (Unix timestamp).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The room end time (Unix timestamp).
+     * @param EndTime The room end time (Unix timestamp).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD. 
+     * @return Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
      */
     public Long getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+     * @param Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
      */
     public void setResolution(Long Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The maximum number of mic-on users (excluding the teacher). Value range: 0-16. 
+     * @return MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+     * @param MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
     }
 
     /**
-     * Get The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher. 
      * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubType() {
         return this.SubType;
@@ -227,153 +224,151 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user ID of the teacher. User IDs are returned by the user registration APIs. 
+     * @return TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs.
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user ID of the teacher. User IDs are returned by the user registration APIs.
+     * @param TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs.
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
     }
 
     /**
-     * Get Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes. 
+     * @return AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
      */
     public Long getAutoMic() {
         return this.AutoMic;
     }
 
     /**
-     * Set Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
+     * @param AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
      */
     public void setAutoMic(Long AutoMic) {
         this.AutoMic = AutoMic;
     }
 
     /**
-     * Get Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No. 
+     * @return TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
      */
     public Long getTurnOffMic() {
         return this.TurnOffMic;
     }
 
     /**
-     * Set Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+     * @param TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
      */
     public void setTurnOffMic(Long TurnOffMic) {
         this.TurnOffMic = TurnOffMic;
     }
 
     /**
-     * Get Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes. 
+     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
      */
     public Long getAudioQuality() {
         return this.AudioQuality;
     }
 
     /**
-     * Set Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
+     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
      */
     public void setAudioQuality(Long AudioQuality) {
         this.AudioQuality = AudioQuality;
     }
 
     /**
-     * Get Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends. 
+     * @return DisableRecord Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
      */
     public Long getDisableRecord() {
         return this.DisableRecord;
     }
 
     /**
-     * Set Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+     * @param DisableRecord Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
      */
     public void setDisableRecord(Long DisableRecord) {
         this.DisableRecord = DisableRecord;
     }
 
     /**
-     * Get The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. 
+     * @return Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
      */
     public String [] getAssistants() {
         return this.Assistants;
     }
 
     /**
-     * Set The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+     * @param Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
     }
 
     /**
-     * Get The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RTCAudienceNumber The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The number of RTC users. 
+     * @return RTCAudienceNumber The number of RTC users.
      */
     public Long getRTCAudienceNumber() {
         return this.RTCAudienceNumber;
     }
 
     /**
-     * Set The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RTCAudienceNumber The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The number of RTC users.
+     * @param RTCAudienceNumber The number of RTC users.
      */
     public void setRTCAudienceNumber(Long RTCAudienceNumber) {
         this.RTCAudienceNumber = RTCAudienceNumber;
     }
 
     /**
-     * Get The audience type. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudienceType The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The audience type. 
+     * @return AudienceType The audience type.
      */
     public Long getAudienceType() {
         return this.AudienceType;
     }
 
     /**
-     * Set The audience type. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudienceType The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The audience type.
+     * @param AudienceType The audience type.
      */
     public void setAudienceType(Long AudienceType) {
         this.AudienceType = AudienceType;
     }
 
     /**
-     * Get The recording layout. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordLayout The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The recording layout. 
+     * @return RecordLayout The recording layout.
      */
     public Long getRecordLayout() {
         return this.RecordLayout;
     }
 
     /**
-     * Set The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordLayout The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The recording layout.
+     * @param RecordLayout The recording layout.
      */
     public void setRecordLayout(Long RecordLayout) {
         this.RecordLayout = RecordLayout;

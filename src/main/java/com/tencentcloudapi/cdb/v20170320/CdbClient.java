@@ -59,6 +59,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to aggregate the audit logs filtered by different conditions and aggregate the statistics of the specified data rows.
+     * @param req AnalyzeAuditLogsRequest
+     * @return AnalyzeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AnalyzeAuditLogsResponse AnalyzeAuditLogs(AnalyzeAuditLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AnalyzeAuditLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AnalyzeAuditLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AnalyzeAuditLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -1503,6 +1523,8 @@ Note: the HTTP response packet will be very large if it contain a single large s
 
     /**
      *该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
+
+This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
 
 This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
      * @param req InitDBInstancesRequest

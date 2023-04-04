@@ -88,6 +88,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String HostName;
 
     /**
+    * Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RawLog")
+    @Expose
+    private String RawLog;
+
+    /**
+    * The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexStatus")
+    @Expose
+    private String IndexStatus;
+
+    /**
      * Get Log time in milliseconds 
      * @return Time Log time in milliseconds
      */
@@ -239,6 +255,46 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.HostName = HostName;
     }
 
+    /**
+     * Get Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRawLog() {
+        return this.RawLog;
+    }
+
+    /**
+     * Set Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRawLog(String RawLog) {
+        this.RawLog = RawLog;
+    }
+
+    /**
+     * Get The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIndexStatus() {
+        return this.IndexStatus;
+    }
+
+    /**
+     * Set The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexStatus(String IndexStatus) {
+        this.IndexStatus = IndexStatus;
+    }
+
     public LogInfo() {
     }
 
@@ -274,6 +330,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.RawLog != null) {
+            this.RawLog = new String(source.RawLog);
+        }
+        if (source.IndexStatus != null) {
+            this.IndexStatus = new String(source.IndexStatus);
+        }
     }
 
 
@@ -290,6 +352,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         this.setParamSimple(map, prefix + "LogJson", this.LogJson);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "RawLog", this.RawLog);
+        this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
 
     }
 }

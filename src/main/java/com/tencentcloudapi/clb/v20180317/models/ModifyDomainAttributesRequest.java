@@ -72,6 +72,13 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
+    * Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Boolean Quic;
+
+    /**
     * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
     */
     @SerializedName("NewDefaultServerDomain")
@@ -205,6 +212,22 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names. 
+     * @return Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     */
+    public Boolean getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     * @param Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     */
+    public void setQuic(Boolean Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Get Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them. 
      * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
@@ -281,6 +304,9 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         if (source.DefaultServer != null) {
             this.DefaultServer = new Boolean(source.DefaultServer);
         }
+        if (source.Quic != null) {
+            this.Quic = new Boolean(source.Quic);
+        }
         if (source.NewDefaultServerDomain != null) {
             this.NewDefaultServerDomain = new String(source.NewDefaultServerDomain);
         }
@@ -307,6 +333,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+        this.setParamSimple(map, prefix + "Quic", this.Quic);
         this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         this.setParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);

@@ -33,7 +33,7 @@ public class ValueInfo extends AbstractModel{
     * Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -74,11 +74,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. 
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r. 
      * @return Tokenizer Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      */
     public String getTokenizer() {
         return this.Tokenizer;
@@ -88,11 +88,11 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
      * Set Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      * @param Tokenizer Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;

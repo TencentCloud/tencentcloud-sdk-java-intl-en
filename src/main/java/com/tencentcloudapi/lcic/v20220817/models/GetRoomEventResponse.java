@@ -20,22 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupListResponse extends AbstractModel{
+public class GetRoomEventResponse extends AbstractModel{
 
     /**
-    * The total number of groups that meet the conditions.
+    * The total number of events for the room. The value of this parameter is not affected by `keyword`.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 
+    * The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("GroupInfos")
+    @SerializedName("Events")
     @Expose
-    private GroupInfo [] GroupInfos;
+    private EventInfo [] Events;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +45,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The total number of groups that meet the conditions. 
-     * @return Total The total number of groups that meet the conditions.
+     * Get The total number of events for the room. The value of this parameter is not affected by `keyword`. 
+     * @return Total The total number of events for the room. The value of this parameter is not affected by `keyword`.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set The total number of groups that meet the conditions.
-     * @param Total The total number of groups that meet the conditions.
+     * Set The total number of events for the room. The value of this parameter is not affected by `keyword`.
+     * @param Total The total number of events for the room. The value of this parameter is not affected by `keyword`.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 
+     * Get The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupInfos 
+     * @return Events The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public GroupInfo [] getGroupInfos() {
-        return this.GroupInfos;
+    public EventInfo [] getEvents() {
+        return this.Events;
     }
 
     /**
-     * Set 
+     * Set The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupInfos 
+     * @param Events The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setGroupInfos(GroupInfo [] GroupInfos) {
-        this.GroupInfos = GroupInfos;
+    public void setEvents(EventInfo [] Events) {
+        this.Events = Events;
     }
 
     /**
@@ -96,21 +96,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeGroupListResponse() {
+    public GetRoomEventResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGroupListResponse(DescribeGroupListResponse source) {
+    public GetRoomEventResponse(GetRoomEventResponse source) {
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
-        if (source.GroupInfos != null) {
-            this.GroupInfos = new GroupInfo[source.GroupInfos.length];
-            for (int i = 0; i < source.GroupInfos.length; i++) {
-                this.GroupInfos[i] = new GroupInfo(source.GroupInfos[i]);
+        if (source.Events != null) {
+            this.Events = new EventInfo[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new EventInfo(source.Events[i]);
             }
         }
         if (source.RequestId != null) {
@@ -124,7 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "GroupInfos.", this.GroupInfos);
+        this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

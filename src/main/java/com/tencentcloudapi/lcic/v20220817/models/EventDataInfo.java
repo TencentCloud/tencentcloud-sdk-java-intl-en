@@ -20,18 +20,18 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserInfo extends AbstractModel{
+public class EventDataInfo extends AbstractModel{
 
     /**
-    * 
+    * The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("SdkAppId")
+    @SerializedName("RoomId")
     @Expose
-    private Long SdkAppId;
+    private Long RoomId;
 
     /**
-    * 
+    * The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserId")
@@ -39,45 +39,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UserId;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Avatar")
-    @Expose
-    private String Avatar;
-
-    /**
-     * Get 
+     * Get The room ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SdkAppId 
+     * @return RoomId The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
+    public Long getRoomId() {
+        return this.RoomId;
     }
 
     /**
-     * Set 
+     * Set The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SdkAppId 
+     * @param RoomId The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
+    public void setRoomId(Long RoomId) {
+        this.RoomId = RoomId;
     }
 
     /**
-     * Get 
+     * Get The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserId 
+     * @return UserId The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserId() {
@@ -85,74 +69,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set 
+     * Set The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserId 
+     * @param UserId The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
-    /**
-     * Get 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Avatar 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getAvatar() {
-        return this.Avatar;
-    }
-
-    /**
-     * Set 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Avatar 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setAvatar(String Avatar) {
-        this.Avatar = Avatar;
-    }
-
-    public UserInfo() {
+    public EventDataInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UserInfo(UserInfo source) {
-        if (source.SdkAppId != null) {
-            this.SdkAppId = new Long(source.SdkAppId);
+    public EventDataInfo(EventDataInfo source) {
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
         }
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Avatar != null) {
-            this.Avatar = new String(source.Avatar);
         }
     }
 
@@ -161,10 +99,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Avatar", this.Avatar);
 
     }
 }

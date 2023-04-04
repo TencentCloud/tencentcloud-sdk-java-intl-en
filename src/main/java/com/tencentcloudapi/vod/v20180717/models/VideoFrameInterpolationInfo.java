@@ -32,7 +32,7 @@ public class VideoFrameInterpolationInfo extends AbstractModel{
     private String Switch;
 
     /**
-    * The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+    * The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
     */
     @SerializedName("Fps")
     @Expose
@@ -63,16 +63,16 @@ public class VideoFrameInterpolationInfo extends AbstractModel{
     }
 
     /**
-     * Get The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used. 
-     * @return Fps The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * Get The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used. 
+     * @return Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-     * @param Fps The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * Set The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * @param Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
