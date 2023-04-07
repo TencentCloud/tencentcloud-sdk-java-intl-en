@@ -65,7 +65,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+    * Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
     */
     @SerializedName("Format")
     @Expose
@@ -168,16 +168,16 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format. 
-     * @return Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     * Get Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later. 
+     * @return Format Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
-     * @param Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     * Set Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
+     * @param Format Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
      */
     public void setFormat(String Format) {
         this.Format = Format;

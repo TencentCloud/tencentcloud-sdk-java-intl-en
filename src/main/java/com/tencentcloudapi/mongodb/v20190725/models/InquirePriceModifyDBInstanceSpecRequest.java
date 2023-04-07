@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
 
     /**
-    * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+    * Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,30 +44,30 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
     private Long Volume;
 
     /**
-    * Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+    * Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+    * Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
     */
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
 
     /**
-     * Get Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console. 
-     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+     * Get Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
-     * @param InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+     * Set Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,32 +106,32 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged. 
-     * @return NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * Get Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently. 
+     * @return NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
-     * @param NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * Set Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+     * @param NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged. 
-     * @return ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * Get Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently. 
+     * @return ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
-     * @param ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * Set Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+     * @param ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;

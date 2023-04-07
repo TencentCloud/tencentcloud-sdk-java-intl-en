@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
-    * List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+    * List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+    * Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+    * Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+    * Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * VPC ID. This parameter can be left empty for the basic network
+    * VPC ID. This parameter can be left empty for the classic network.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+    * Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -72,28 +72,28 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long PayMode;
 
     /**
-    * Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+    * Number of results returned per request. Default value: `20`. Value range: [1,100].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0
+    * Offset. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+    * Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+    * Sorting method of the return result set. Valid values: `ASC`, `DESC`.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -107,7 +107,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long [] ProjectIds;
 
     /**
-    * Search keyword, which can be instance ID, instance name, or complete IP
+    * Search keyword, which can be instance ID, instance name, or complete IP.
     */
     @SerializedName("SearchKey")
     @Expose
@@ -118,99 +118,99 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Tags")
     @Expose
-    private TagInfo Tags;
+    private TagInfo [] Tags;
 
     /**
-     * Get List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
-     * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Get List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page. 
+     * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+     * @param InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery) 
-     * @return InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+     * Get Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul> 
+     * @return InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
-     * @param InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+     * Set Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+     * @param InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances) 
-     * @return ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+     * Get Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul> 
+     * @return ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
-     * @param ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+     * Set Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+     * @param ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance) 
-     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+     * Get Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul> 
+     * @return Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
-     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+     * Set Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+     * @param Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get VPC ID. This parameter can be left empty for the basic network 
-     * @return VpcId VPC ID. This parameter can be left empty for the basic network
+     * Get VPC ID. This parameter can be left empty for the classic network. 
+     * @return VpcId VPC ID. This parameter can be left empty for the classic network.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID. This parameter can be left empty for the basic network
-     * @param VpcId VPC ID. This parameter can be left empty for the basic network
+     * Set VPC ID. This parameter can be left empty for the classic network.
+     * @param VpcId VPC ID. This parameter can be left empty for the classic network.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set 
-     * @return SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+     * Get Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set. 
+     * @return SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
-     * @param SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+     * Set Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+     * @param SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -233,64 +233,64 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of results to be returned for a single request. Valid values: 1-100. Default value: 20 
-     * @return Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+     * Get Number of results returned per request. Default value: `20`. Value range: [1,100]. 
+     * @return Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
-     * @param Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+     * Set Number of results returned per request. Default value: `20`. Value range: [1,100].
+     * @param Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0 
-     * @return Offset Offset. Default value: 0
+     * Get Offset. Default value: `0`. 
+     * @return Offset Offset. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0
-     * @param Offset Offset. Default value: 0
+     * Set Offset. Default value: `0`.
+     * @param Offset Offset. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default. 
-     * @return OrderBy Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+     * Get Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default. 
+     * @return OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
-     * @param OrderBy Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+     * Set Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+     * @param OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method of the return result set. Currently, "ASC" or "DESC" is supported 
-     * @return OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+     * Get Sorting method of the return result set. Valid values: `ASC`, `DESC`. 
+     * @return OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
-     * @param OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+     * Set Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+     * @param OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
@@ -313,16 +313,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Search keyword, which can be instance ID, instance name, or complete IP 
-     * @return SearchKey Search keyword, which can be instance ID, instance name, or complete IP
+     * Get Search keyword, which can be instance ID, instance name, or complete IP. 
+     * @return SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Search keyword, which can be instance ID, instance name, or complete IP
-     * @param SearchKey Search keyword, which can be instance ID, instance name, or complete IP
+     * Set Search keyword, which can be instance ID, instance name, or complete IP.
+     * @param SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
@@ -332,7 +332,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get Tag information 
      * @return Tags Tag information
      */
-    public TagInfo getTags() {
+    public TagInfo [] getTags() {
         return this.Tags;
     }
 
@@ -340,7 +340,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set Tag information
      * @param Tags Tag information
      */
-    public void setTags(TagInfo Tags) {
+    public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
@@ -401,7 +401,10 @@ public class DescribeDBInstancesRequest extends AbstractModel{
             this.SearchKey = new String(source.SearchKey);
         }
         if (source.Tags != null) {
-            this.Tags = new TagInfo(source.Tags);
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
         }
     }
 
@@ -423,7 +426,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
-        this.setParamObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

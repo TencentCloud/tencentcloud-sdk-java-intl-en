@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstancesResponse extends AbstractModel{
 
     /**
-    * Number of eligible instances.
+    * Number of eligible instances
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCount Number of eligible instances.
+     * Get Number of eligible instances 
+     * @return TotalCount Number of eligible instances
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCount Number of eligible instances.
+     * Set Number of eligible instances
+     * @param TotalCount Number of eligible instances
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

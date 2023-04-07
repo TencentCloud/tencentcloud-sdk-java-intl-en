@@ -400,7 +400,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query price of instance specification adjustment.
+     *This API is used to query the price of instance specification adjustment.
      * @param req InquirePriceModifyDBInstanceSpecRequest
      * @return InquirePriceModifyDBInstanceSpecResponse
      * @throws TencentCloudSDKException
