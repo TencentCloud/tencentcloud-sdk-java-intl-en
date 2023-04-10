@@ -58,6 +58,14 @@ public class Subtitle extends AbstractModel{
     private Long EndIndex;
 
     /**
+    * The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Phoneme")
+    @Expose
+    private String Phoneme;
+
+    /**
      * Get The word in the text that is sent. 
      * @return Text The word in the text that is sent.
      */
@@ -137,6 +145,26 @@ public class Subtitle extends AbstractModel{
         this.EndIndex = EndIndex;
     }
 
+    /**
+     * Get The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Phoneme The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPhoneme() {
+        return this.Phoneme;
+    }
+
+    /**
+     * Set The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Phoneme The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPhoneme(String Phoneme) {
+        this.Phoneme = Phoneme;
+    }
+
     public Subtitle() {
     }
 
@@ -160,6 +188,9 @@ public class Subtitle extends AbstractModel{
         if (source.EndIndex != null) {
             this.EndIndex = new Long(source.EndIndex);
         }
+        if (source.Phoneme != null) {
+            this.Phoneme = new String(source.Phoneme);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class Subtitle extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "BeginIndex", this.BeginIndex);
         this.setParamSimple(map, prefix + "EndIndex", this.EndIndex);
+        this.setParamSimple(map, prefix + "Phoneme", this.Phoneme);
 
     }
 }

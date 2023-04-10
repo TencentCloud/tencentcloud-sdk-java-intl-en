@@ -245,6 +245,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SoftDependInfo [] OutSideSoftInfo;
 
     /**
+    * Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsSupportOutsideCluster")
+    @Expose
+    private Boolean IsSupportOutsideCluster;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -784,6 +792,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.OutSideSoftInfo = OutSideSoftInfo;
     }
 
+    /**
+     * Get Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsSupportOutsideCluster Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsSupportOutsideCluster() {
+        return this.IsSupportOutsideCluster;
+    }
+
+    /**
+     * Set Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsSupportOutsideCluster Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsSupportOutsideCluster(Boolean IsSupportOutsideCluster) {
+        this.IsSupportOutsideCluster = IsSupportOutsideCluster;
+    }
+
     public EmrListInstance() {
     }
 
@@ -885,6 +913,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.OutSideSoftInfo[i] = new SoftDependInfo(source.OutSideSoftInfo[i]);
             }
         }
+        if (source.IsSupportOutsideCluster != null) {
+            this.IsSupportOutsideCluster = new Boolean(source.IsSupportOutsideCluster);
+        }
     }
 
 
@@ -921,6 +952,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
         this.setParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
         this.setParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
+        this.setParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
 
     }
 }
