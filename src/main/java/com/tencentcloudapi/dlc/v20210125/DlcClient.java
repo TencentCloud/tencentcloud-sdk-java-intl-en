@@ -59,6 +59,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a data engine.
+     * @param req CreateDataEngineRequest
+     * @return CreateDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataEngineResponse CreateDataEngine(CreateDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDataEngineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a managed internal table. It has been disused.
      * @param req CreateInternalTableRequest
      * @return CreateInternalTableResponse
@@ -191,6 +211,86 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSparkAppResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSparkApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the resource usage of a data engine based on its ID.
+     * @param req DescribeEngineUsageInfoRequest
+     * @return DescribeEngineUsageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(DescribeEngineUsageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEngineUsageInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEngineUsageInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEngineUsageInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of disabled table attributes.
+     * @param req DescribeForbiddenTableProRequest
+     * @return DescribeForbiddenTableProResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForbiddenTableProResponse DescribeForbiddenTablePro(DescribeForbiddenTableProRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeForbiddenTableProResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeForbiddenTableProResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeForbiddenTablePro");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the summary of a specified directory in a managed storage.
+     * @param req DescribeLakeFsDirSummaryRequest
+     * @return DescribeLakeFsDirSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(DescribeLakeFsDirSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLakeFsDirSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLakeFsDirSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLakeFsDirSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query managed storage information.
+     * @param req DescribeLakeFsInfoRequest
+     * @return DescribeLakeFsInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLakeFsInfoResponse DescribeLakeFsInfo(DescribeLakeFsInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLakeFsInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLakeFsInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLakeFsInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -391,6 +491,46 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SuspendResumeDataEngineResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SuspendResumeDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to switch between the primary and standby clusters.
+     * @param req SwitchDataEngineRequest
+     * @return SwitchDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDataEngineResponse SwitchDataEngine(SwitchDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDataEngineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update row filters. Please note that it updates filters only but not catalogs, databases, or tables.
+     * @param req UpdateRowFilterRequest
+     * @return UpdateRowFilterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRowFilterResponse UpdateRowFilter(UpdateRowFilterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRowFilterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRowFilterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateRowFilter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
