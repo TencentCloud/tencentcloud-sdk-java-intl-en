@@ -279,6 +279,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long JobExecutorMaxNumbers;
 
     /**
+    * The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SparkImageVersion")
+    @Expose
+    private String SparkImageVersion;
+
+    /**
      * Get Spark job ID 
      * @return JobId Spark job ID
      */
@@ -882,6 +890,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.JobExecutorMaxNumbers = JobExecutorMaxNumbers;
     }
 
+    /**
+     * Get The image version.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkImageVersion The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSparkImageVersion() {
+        return this.SparkImageVersion;
+    }
+
+    /**
+     * Set The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkImageVersion The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSparkImageVersion(String SparkImageVersion) {
+        this.SparkImageVersion = SparkImageVersion;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -995,6 +1023,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.JobExecutorMaxNumbers != null) {
             this.JobExecutorMaxNumbers = new Long(source.JobExecutorMaxNumbers);
         }
+        if (source.SparkImageVersion != null) {
+            this.SparkImageVersion = new String(source.SparkImageVersion);
+        }
     }
 
 
@@ -1037,6 +1068,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TaskNum", this.TaskNum);
         this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
         this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
+        this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
 
     }
 }
