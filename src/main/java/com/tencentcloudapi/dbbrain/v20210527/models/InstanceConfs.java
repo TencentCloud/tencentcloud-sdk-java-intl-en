@@ -37,6 +37,14 @@ public class InstanceConfs extends AbstractModel{
     private String OverviewDisplay;
 
     /**
+    * Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KeyDelimiters")
+    @Expose
+    private String [] KeyDelimiters;
+
+    /**
      * Get Whether to enable database inspection. Valid values: Yes, No. 
      * @return DailyInspection Whether to enable database inspection. Valid values: Yes, No.
      */
@@ -68,6 +76,26 @@ public class InstanceConfs extends AbstractModel{
         this.OverviewDisplay = OverviewDisplay;
     }
 
+    /**
+     * Get Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KeyDelimiters Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getKeyDelimiters() {
+        return this.KeyDelimiters;
+    }
+
+    /**
+     * Set Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KeyDelimiters Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKeyDelimiters(String [] KeyDelimiters) {
+        this.KeyDelimiters = KeyDelimiters;
+    }
+
     public InstanceConfs() {
     }
 
@@ -82,6 +110,12 @@ public class InstanceConfs extends AbstractModel{
         if (source.OverviewDisplay != null) {
             this.OverviewDisplay = new String(source.OverviewDisplay);
         }
+        if (source.KeyDelimiters != null) {
+            this.KeyDelimiters = new String[source.KeyDelimiters.length];
+            for (int i = 0; i < source.KeyDelimiters.length; i++) {
+                this.KeyDelimiters[i] = new String(source.KeyDelimiters[i]);
+            }
+        }
     }
 
 
@@ -91,6 +125,7 @@ public class InstanceConfs extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
         this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+        this.setParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
 
     }
 }

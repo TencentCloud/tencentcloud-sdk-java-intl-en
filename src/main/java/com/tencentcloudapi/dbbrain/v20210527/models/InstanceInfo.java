@@ -219,6 +219,29 @@ public class InstanceInfo extends AbstractModel{
     private String AuditRunningStatus;
 
     /**
+    * Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InternalVip")
+    @Expose
+    private String InternalVip;
+
+    /**
+    * Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InternalVport")
+    @Expose
+    private Long InternalVport;
+
+    /**
+    * Creation time
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -666,6 +689,62 @@ public class InstanceInfo extends AbstractModel{
         this.AuditRunningStatus = AuditRunningStatus;
     }
 
+    /**
+     * Get Private VIP
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InternalVip Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInternalVip() {
+        return this.InternalVip;
+    }
+
+    /**
+     * Set Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InternalVip Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInternalVip(String InternalVip) {
+        this.InternalVip = InternalVip;
+    }
+
+    /**
+     * Get Private network port
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InternalVport Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getInternalVport() {
+        return this.InternalVport;
+    }
+
+    /**
+     * Set Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InternalVport Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInternalVport(Long InternalVport) {
+        this.InternalVport = InternalVport;
+    }
+
+    /**
+     * Get Creation time 
+     * @return CreateTime Creation time
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time
+     * @param CreateTime Creation time
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public InstanceInfo() {
     }
 
@@ -758,6 +837,15 @@ public class InstanceInfo extends AbstractModel{
         if (source.AuditRunningStatus != null) {
             this.AuditRunningStatus = new String(source.AuditRunningStatus);
         }
+        if (source.InternalVip != null) {
+            this.InternalVip = new String(source.InternalVip);
+        }
+        if (source.InternalVport != null) {
+            this.InternalVport = new Long(source.InternalVport);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -793,6 +881,9 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SecAuditStatus", this.SecAuditStatus);
         this.setParamSimple(map, prefix + "AuditPolicyStatus", this.AuditPolicyStatus);
         this.setParamSimple(map, prefix + "AuditRunningStatus", this.AuditRunningStatus);
+        this.setParamSimple(map, prefix + "InternalVip", this.InternalVip);
+        this.setParamSimple(map, prefix + "InternalVport", this.InternalVport);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
