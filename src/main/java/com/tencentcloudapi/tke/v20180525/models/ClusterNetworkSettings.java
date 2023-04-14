@@ -120,6 +120,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Ipv6ServiceCIDR;
 
     /**
+    * Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CiliumMode")
+    @Expose
+    private String CiliumMode;
+
+    /**
      * Get CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC. 
      * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
      */
@@ -351,6 +360,30 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.Ipv6ServiceCIDR = Ipv6ServiceCIDR;
     }
 
+    /**
+     * Get Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CiliumMode Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getCiliumMode() {
+        return this.CiliumMode;
+    }
+
+    /**
+     * Set Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CiliumMode Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCiliumMode(String CiliumMode) {
+        this.CiliumMode = CiliumMode;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -401,6 +434,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.Ipv6ServiceCIDR != null) {
             this.Ipv6ServiceCIDR = new String(source.Ipv6ServiceCIDR);
         }
+        if (source.CiliumMode != null) {
+            this.CiliumMode = new String(source.CiliumMode);
+        }
     }
 
 
@@ -421,6 +457,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
         this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
         this.setParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
+        this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
 
     }
 }

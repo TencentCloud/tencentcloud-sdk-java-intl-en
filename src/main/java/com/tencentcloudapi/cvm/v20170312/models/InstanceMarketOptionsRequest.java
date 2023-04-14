@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class InstanceMarketOptionsRequest extends AbstractModel{
 
     /**
-    * Options related to bidding
+    * Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SpotOptions")
     @Expose
     private SpotMarketOptions SpotOptions;
 
     /**
-    * Market option type. Currently `spot` is the only supported value.
+    * Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("MarketType")
     @Expose
     private String MarketType;
 
     /**
-     * Get Options related to bidding 
-     * @return SpotOptions Options related to bidding
+     * Get Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SpotOptions Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public SpotMarketOptions getSpotOptions() {
         return this.SpotOptions;
     }
 
     /**
-     * Set Options related to bidding
-     * @param SpotOptions Options related to bidding
+     * Set Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SpotOptions Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSpotOptions(SpotMarketOptions SpotOptions) {
         this.SpotOptions = SpotOptions;
     }
 
     /**
-     * Get Market option type. Currently `spot` is the only supported value. 
-     * @return MarketType Market option type. Currently `spot` is the only supported value.
+     * Get Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return MarketType Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getMarketType() {
         return this.MarketType;
     }
 
     /**
-     * Set Market option type. Currently `spot` is the only supported value.
-     * @param MarketType Market option type. Currently `spot` is the only supported value.
+     * Set Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param MarketType Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMarketType(String MarketType) {
         this.MarketType = MarketType;

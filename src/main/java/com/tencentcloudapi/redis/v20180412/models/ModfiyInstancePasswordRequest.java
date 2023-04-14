@@ -37,7 +37,10 @@ public class ModfiyInstancePasswordRequest extends AbstractModel{
     private String OldPassword;
 
     /**
-    * New password of an instance
+    * New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
     */
     @SerializedName("Password")
     @Expose
@@ -76,16 +79,28 @@ public class ModfiyInstancePasswordRequest extends AbstractModel{
     }
 
     /**
-     * Get New password of an instance 
-     * @return Password New password of an instance
+     * Get New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/) 
+     * @return Password New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set New password of an instance
-     * @param Password New password of an instance
+     * Set New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+     * @param Password New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
      */
     public void setPassword(String Password) {
         this.Password = Password;

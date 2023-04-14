@@ -44,7 +44,7 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * Keyword for fuzzy search, which can be an instance name or instance ID.
+    * Key words for fuzzy query, which can be set as the ID or name of a replication group.
     */
     @SerializedName("SearchKey")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Keyword for fuzzy search, which can be an instance name or instance ID. 
-     * @return SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
+     * Get Key words for fuzzy query, which can be set as the ID or name of a replication group. 
+     * @return SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Keyword for fuzzy search, which can be an instance name or instance ID.
-     * @param SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
+     * Set Key words for fuzzy query, which can be set as the ID or name of a replication group.
+     * @param SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

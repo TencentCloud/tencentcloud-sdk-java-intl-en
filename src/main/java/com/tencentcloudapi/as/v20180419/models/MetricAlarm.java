@@ -65,6 +65,13 @@ public class MetricAlarm extends AbstractModel{
     private String Statistic;
 
     /**
+    * Exact alarming threshold. This parameter is only used in API outputs. Values: <br><li>`CPU_UTILIZATION` (in %): (0, 100]</li><li>`MEM_UTILIZATION` (in %): (0, 100]</li><li>`LAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`LAN_TRAFFIC_IN` (in Mbps): > 0</li><li>`WAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`WAN_TRAFFIC_IN` (in Mbps): > 0</li>
+    */
+    @SerializedName("PreciseThreshold")
+    @Expose
+    private Float PreciseThreshold;
+
+    /**
      * Get Comparison operator. Value range: <br><li>GREATER_THAN: greater than </li><li>GREATER_THAN_OR_EQUAL_TO: greater than or equal to </li><li>LESS_THAN: less than </li><li> LESS_THAN_OR_EQUAL_TO: less than or equal to </li><li> EQUAL_TO: equal to </li> <li>NOT_EQUAL_TO: not equal to </li> 
      * @return ComparisonOperator Comparison operator. Value range: <br><li>GREATER_THAN: greater than </li><li>GREATER_THAN_OR_EQUAL_TO: greater than or equal to </li><li>LESS_THAN: less than </li><li> LESS_THAN_OR_EQUAL_TO: less than or equal to </li><li> EQUAL_TO: equal to </li> <li>NOT_EQUAL_TO: not equal to </li>
      */
@@ -160,6 +167,22 @@ public class MetricAlarm extends AbstractModel{
         this.Statistic = Statistic;
     }
 
+    /**
+     * Get Exact alarming threshold. This parameter is only used in API outputs. Values: <br><li>`CPU_UTILIZATION` (in %): (0, 100]</li><li>`MEM_UTILIZATION` (in %): (0, 100]</li><li>`LAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`LAN_TRAFFIC_IN` (in Mbps): > 0</li><li>`WAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`WAN_TRAFFIC_IN` (in Mbps): > 0</li> 
+     * @return PreciseThreshold Exact alarming threshold. This parameter is only used in API outputs. Values: <br><li>`CPU_UTILIZATION` (in %): (0, 100]</li><li>`MEM_UTILIZATION` (in %): (0, 100]</li><li>`LAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`LAN_TRAFFIC_IN` (in Mbps): > 0</li><li>`WAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`WAN_TRAFFIC_IN` (in Mbps): > 0</li>
+     */
+    public Float getPreciseThreshold() {
+        return this.PreciseThreshold;
+    }
+
+    /**
+     * Set Exact alarming threshold. This parameter is only used in API outputs. Values: <br><li>`CPU_UTILIZATION` (in %): (0, 100]</li><li>`MEM_UTILIZATION` (in %): (0, 100]</li><li>`LAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`LAN_TRAFFIC_IN` (in Mbps): > 0</li><li>`WAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`WAN_TRAFFIC_IN` (in Mbps): > 0</li>
+     * @param PreciseThreshold Exact alarming threshold. This parameter is only used in API outputs. Values: <br><li>`CPU_UTILIZATION` (in %): (0, 100]</li><li>`MEM_UTILIZATION` (in %): (0, 100]</li><li>`LAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`LAN_TRAFFIC_IN` (in Mbps): > 0</li><li>`WAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`WAN_TRAFFIC_IN` (in Mbps): > 0</li>
+     */
+    public void setPreciseThreshold(Float PreciseThreshold) {
+        this.PreciseThreshold = PreciseThreshold;
+    }
+
     public MetricAlarm() {
     }
 
@@ -186,6 +209,9 @@ public class MetricAlarm extends AbstractModel{
         if (source.Statistic != null) {
             this.Statistic = new String(source.Statistic);
         }
+        if (source.PreciseThreshold != null) {
+            this.PreciseThreshold = new Float(source.PreciseThreshold);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class MetricAlarm extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "ContinuousTime", this.ContinuousTime);
         this.setParamSimple(map, prefix + "Statistic", this.Statistic);
+        this.setParamSimple(map, prefix + "PreciseThreshold", this.PreciseThreshold);
 
     }
 }

@@ -207,6 +207,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private TagSpecification [] TagSpecification;
 
     /**
+    * Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
      * Get Location of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Placement Location of the instance.
@@ -666,6 +679,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DisableApiTermination Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DisableApiTermination Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
     public LaunchTemplateVersionData() {
     }
 
@@ -755,6 +808,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
     }
 
 
@@ -785,6 +841,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
 
     }
 }

@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class ActionTimer extends AbstractModel{
 
     /**
-    * Timer name. Currently `TerminateInstances` is the only supported value.
+    * Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TimerAction")
     @Expose
     private String TimerAction;
 
     /**
-    * Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+    * Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ActionTime")
     @Expose
     private String ActionTime;
 
     /**
-    * Additional data
+    * Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Externals")
     @Expose
     private Externals Externals;
 
     /**
-     * Get Timer name. Currently `TerminateInstances` is the only supported value. 
-     * @return TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
+     * Get Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TimerAction Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getTimerAction() {
         return this.TimerAction;
     }
 
     /**
-     * Set Timer name. Currently `TerminateInstances` is the only supported value.
-     * @param TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
+     * Set Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TimerAction Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTimerAction(String TimerAction) {
         this.TimerAction = TimerAction;
     }
 
     /**
-     * Get Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z. 
-     * @return ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+     * Get Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * Set Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-     * @param ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+     * Set Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;
     }
 
     /**
-     * Get Additional data 
-     * @return Externals Additional data
+     * Get Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Externals Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Externals getExternals() {
         return this.Externals;
     }
 
     /**
-     * Set Additional data
-     * @param Externals Additional data
+     * Set Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Externals Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setExternals(Externals Externals) {
         this.Externals = Externals;

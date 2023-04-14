@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ExecuteScalingPolicyRequest extends AbstractModel{
 
     /**
-    * Alarm-based scaling policy ID
+    * Auto-scaling policy ID. This parameter is not available to a target tracking policy.
     */
     @SerializedName("AutoScalingPolicyId")
     @Expose
@@ -44,16 +44,16 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
     private String TriggerSource;
 
     /**
-     * Get Alarm-based scaling policy ID 
-     * @return AutoScalingPolicyId Alarm-based scaling policy ID
+     * Get Auto-scaling policy ID. This parameter is not available to a target tracking policy. 
+     * @return AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
      */
     public String getAutoScalingPolicyId() {
         return this.AutoScalingPolicyId;
     }
 
     /**
-     * Set Alarm-based scaling policy ID
-     * @param AutoScalingPolicyId Alarm-based scaling policy ID
+     * Set Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+     * @param AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
         this.AutoScalingPolicyId = AutoScalingPolicyId;

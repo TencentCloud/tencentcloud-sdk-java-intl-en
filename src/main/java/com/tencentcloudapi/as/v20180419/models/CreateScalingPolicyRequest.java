@@ -37,32 +37,67 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     private String ScalingPolicyName;
 
     /**
-    * The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+    * Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+    */
+    @SerializedName("ScalingPolicyType")
+    @Expose
+    private String ScalingPolicyType;
+
+    /**
+    * The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
     */
     @SerializedName("AdjustmentType")
     @Expose
     private String AdjustmentType;
 
     /**
-    * The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
+    * Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
     */
     @SerializedName("AdjustmentValue")
     @Expose
     private Long AdjustmentValue;
 
     /**
-    * Alarm monitoring metric.
+    * Cooldown period (in seconds). This parameter is only applicable to a simple policy. Default value: 300.
+    */
+    @SerializedName("Cooldown")
+    @Expose
+    private Long Cooldown;
+
+    /**
+    * Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
     */
     @SerializedName("MetricAlarm")
     @Expose
     private MetricAlarm MetricAlarm;
 
     /**
-    * Cooldown period in seconds. Default value: 300 seconds.
+    * Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
     */
-    @SerializedName("Cooldown")
+    @SerializedName("PredefinedMetricType")
     @Expose
-    private Long Cooldown;
+    private String PredefinedMetricType;
+
+    /**
+    * Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+    */
+    @SerializedName("TargetValue")
+    @Expose
+    private Long TargetValue;
+
+    /**
+    * Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+    */
+    @SerializedName("EstimatedInstanceWarmup")
+    @Expose
+    private Long EstimatedInstanceWarmup;
+
+    /**
+    * Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Do not scale in </li><li>`false` (default): Both scale-out and scale-in can be triggered.</li>
+    */
+    @SerializedName("DisableScaleIn")
+    @Expose
+    private Boolean DisableScaleIn;
 
     /**
     * This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
@@ -105,67 +140,147 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Get The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li> 
-     * @return AdjustmentType The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+     * Get Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>. 
+     * @return ScalingPolicyType Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+     */
+    public String getScalingPolicyType() {
+        return this.ScalingPolicyType;
+    }
+
+    /**
+     * Set Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+     * @param ScalingPolicyType Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+     */
+    public void setScalingPolicyType(String ScalingPolicyType) {
+        this.ScalingPolicyType = ScalingPolicyType;
+    }
+
+    /**
+     * Get The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li> 
+     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
      */
     public String getAdjustmentType() {
         return this.AdjustmentType;
     }
 
     /**
-     * Set The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
-     * @param AdjustmentType The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+     * Set The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+     * @param AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
      */
     public void setAdjustmentType(String AdjustmentType) {
         this.AdjustmentType = AdjustmentType;
     }
 
     /**
-     * Get The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered. 
-     * @return AdjustmentValue The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
+     * Get Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly. 
+     * @return AdjustmentValue Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
      */
     public Long getAdjustmentValue() {
         return this.AdjustmentValue;
     }
 
     /**
-     * Set The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
-     * @param AdjustmentValue The adjusted value of desired number of instances after the alarm is triggered. Value range: <br><li>When AdjustmentType is CHANGE_IN_CAPACITY, if AdjustmentValue is a positive value, some new instances will be added after the alarm is triggered, and if it is a negative value, some existing instances will be removed after the alarm is triggered </li> <li> When AdjustmentType is EXACT_CAPACITY, the value of AdjustmentValue is the desired number of instances after the alarm is triggered, which should be equal to or greater than 0 </li> <li> When AdjustmentType is PERCENT_CHANGE_IN_CAPACITY, if AdjusmentValue (in %) is a positive value, new instances will be added by percentage after the alarm is triggered; if it is a negative value, existing instances will be removed by percentage after the alarm is triggered.
+     * Set Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
+     * @param AdjustmentValue Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
      */
     public void setAdjustmentValue(Long AdjustmentValue) {
         this.AdjustmentValue = AdjustmentValue;
     }
 
     /**
-     * Get Alarm monitoring metric. 
-     * @return MetricAlarm Alarm monitoring metric.
-     */
-    public MetricAlarm getMetricAlarm() {
-        return this.MetricAlarm;
-    }
-
-    /**
-     * Set Alarm monitoring metric.
-     * @param MetricAlarm Alarm monitoring metric.
-     */
-    public void setMetricAlarm(MetricAlarm MetricAlarm) {
-        this.MetricAlarm = MetricAlarm;
-    }
-
-    /**
-     * Get Cooldown period in seconds. Default value: 300 seconds. 
-     * @return Cooldown Cooldown period in seconds. Default value: 300 seconds.
+     * Get Cooldown period (in seconds). This parameter is only applicable to a simple policy. Default value: 300. 
+     * @return Cooldown Cooldown period (in seconds). This parameter is only applicable to a simple policy. Default value: 300.
      */
     public Long getCooldown() {
         return this.Cooldown;
     }
 
     /**
-     * Set Cooldown period in seconds. Default value: 300 seconds.
-     * @param Cooldown Cooldown period in seconds. Default value: 300 seconds.
+     * Set Cooldown period (in seconds). This parameter is only applicable to a simple policy. Default value: 300.
+     * @param Cooldown Cooldown period (in seconds). This parameter is only applicable to a simple policy. Default value: 300.
      */
     public void setCooldown(Long Cooldown) {
         this.Cooldown = Cooldown;
+    }
+
+    /**
+     * Get Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`. 
+     * @return MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+     */
+    public MetricAlarm getMetricAlarm() {
+        return this.MetricAlarm;
+    }
+
+    /**
+     * Set Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+     * @param MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+     */
+    public void setMetricAlarm(MetricAlarm MetricAlarm) {
+        this.MetricAlarm = MetricAlarm;
+    }
+
+    /**
+     * Get Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li> 
+     * @return PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+     */
+    public String getPredefinedMetricType() {
+        return this.PredefinedMetricType;
+    }
+
+    /**
+     * Set Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+     * @param PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+     */
+    public void setPredefinedMetricType(String PredefinedMetricType) {
+        this.PredefinedMetricType = PredefinedMetricType;
+    }
+
+    /**
+     * Get Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li> 
+     * @return TargetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+     */
+    public Long getTargetValue() {
+        return this.TargetValue;
+    }
+
+    /**
+     * Set Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+     * @param TargetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+     */
+    public void setTargetValue(Long TargetValue) {
+        this.TargetValue = TargetValue;
+    }
+
+    /**
+     * Get Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300. 
+     * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+     */
+    public Long getEstimatedInstanceWarmup() {
+        return this.EstimatedInstanceWarmup;
+    }
+
+    /**
+     * Set Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+     * @param EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+     */
+    public void setEstimatedInstanceWarmup(Long EstimatedInstanceWarmup) {
+        this.EstimatedInstanceWarmup = EstimatedInstanceWarmup;
+    }
+
+    /**
+     * Get Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Do not scale in </li><li>`false` (default): Both scale-out and scale-in can be triggered.</li> 
+     * @return DisableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Do not scale in </li><li>`false` (default): Both scale-out and scale-in can be triggered.</li>
+     */
+    public Boolean getDisableScaleIn() {
+        return this.DisableScaleIn;
+    }
+
+    /**
+     * Set Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Do not scale in </li><li>`false` (default): Both scale-out and scale-in can be triggered.</li>
+     * @param DisableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Do not scale in </li><li>`false` (default): Both scale-out and scale-in can be triggered.</li>
+     */
+    public void setDisableScaleIn(Boolean DisableScaleIn) {
+        this.DisableScaleIn = DisableScaleIn;
     }
 
     /**
@@ -202,17 +317,32 @@ Notification group ID, which is the set of user group IDs.
         if (source.ScalingPolicyName != null) {
             this.ScalingPolicyName = new String(source.ScalingPolicyName);
         }
+        if (source.ScalingPolicyType != null) {
+            this.ScalingPolicyType = new String(source.ScalingPolicyType);
+        }
         if (source.AdjustmentType != null) {
             this.AdjustmentType = new String(source.AdjustmentType);
         }
         if (source.AdjustmentValue != null) {
             this.AdjustmentValue = new Long(source.AdjustmentValue);
         }
+        if (source.Cooldown != null) {
+            this.Cooldown = new Long(source.Cooldown);
+        }
         if (source.MetricAlarm != null) {
             this.MetricAlarm = new MetricAlarm(source.MetricAlarm);
         }
-        if (source.Cooldown != null) {
-            this.Cooldown = new Long(source.Cooldown);
+        if (source.PredefinedMetricType != null) {
+            this.PredefinedMetricType = new String(source.PredefinedMetricType);
+        }
+        if (source.TargetValue != null) {
+            this.TargetValue = new Long(source.TargetValue);
+        }
+        if (source.EstimatedInstanceWarmup != null) {
+            this.EstimatedInstanceWarmup = new Long(source.EstimatedInstanceWarmup);
+        }
+        if (source.DisableScaleIn != null) {
+            this.DisableScaleIn = new Boolean(source.DisableScaleIn);
         }
         if (source.NotificationUserGroupIds != null) {
             this.NotificationUserGroupIds = new String[source.NotificationUserGroupIds.length];
@@ -229,10 +359,15 @@ Notification group ID, which is the set of user group IDs.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "ScalingPolicyName", this.ScalingPolicyName);
+        this.setParamSimple(map, prefix + "ScalingPolicyType", this.ScalingPolicyType);
         this.setParamSimple(map, prefix + "AdjustmentType", this.AdjustmentType);
         this.setParamSimple(map, prefix + "AdjustmentValue", this.AdjustmentValue);
-        this.setParamObj(map, prefix + "MetricAlarm.", this.MetricAlarm);
         this.setParamSimple(map, prefix + "Cooldown", this.Cooldown);
+        this.setParamObj(map, prefix + "MetricAlarm.", this.MetricAlarm);
+        this.setParamSimple(map, prefix + "PredefinedMetricType", this.PredefinedMetricType);
+        this.setParamSimple(map, prefix + "TargetValue", this.TargetValue);
+        this.setParamSimple(map, prefix + "EstimatedInstanceWarmup", this.EstimatedInstanceWarmup);
+        this.setParamSimple(map, prefix + "DisableScaleIn", this.DisableScaleIn);
         this.setParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
 
     }

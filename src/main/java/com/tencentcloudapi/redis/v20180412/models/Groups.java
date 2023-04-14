@@ -30,14 +30,32 @@ public class Groups extends AbstractModel{
     private Long AppId;
 
     /**
-    * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+    * Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * Replication group info
+    * Replication group ID
     */
     @SerializedName("GroupId")
     @Expose
@@ -45,14 +63,19 @@ public class Groups extends AbstractModel{
 
     /**
     * Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+    * Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
     */
     @SerializedName("Status")
     @Expose
@@ -66,8 +89,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long InstanceCount;
 
     /**
-    * Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Instances")
     @Expose
@@ -75,7 +98,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
@@ -98,32 +121,104 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan 
-     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+     * Get Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan 
+     * @return RegionId Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
-     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+     * Set Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
+     * @param RegionId Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Replication group info 
-     * @return GroupId Replication group info
+     * Get Replication group ID 
+     * @return GroupId Replication group ID
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group info
-     * @param GroupId Replication group info
+     * Set Replication group ID
+     * @param GroupId Replication group ID
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -131,9 +226,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return GroupName Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupName() {
         return this.GroupName;
@@ -141,25 +236,45 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param GroupName Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles) 
-     * @return Status Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+     * Get Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles 
+     * @return Status Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
-     * @param Status Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+     * Set Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
+     * @param Status Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -182,20 +297,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Instances Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Instances Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Instances [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Instances Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Instances Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstances(Instances [] Instances) {
         this.Instances = Instances;
@@ -203,9 +318,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Remark Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -213,9 +328,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

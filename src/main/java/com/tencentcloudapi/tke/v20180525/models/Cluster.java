@@ -93,7 +93,7 @@ public class Cluster extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
-    * Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+    * Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -192,6 +192,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
+
+    /**
+    * Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterEtcdNodeNum")
+    @Expose
+    private Long ClusterEtcdNodeNum;
 
     /**
      * Get Cluster ID 
@@ -354,16 +362,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`) 
-     * @return ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+     * Get Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`. 
+     * @return ClusterStatus Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
-     * @param ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+     * Set Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
+     * @param ClusterStatus Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
@@ -601,6 +609,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.RuntimeVersion = RuntimeVersion;
     }
 
+    /**
+     * Get Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterEtcdNodeNum Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getClusterEtcdNodeNum() {
+        return this.ClusterEtcdNodeNum;
+    }
+
+    /**
+     * Set Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterEtcdNodeNum Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterEtcdNodeNum(Long ClusterEtcdNodeNum) {
+        this.ClusterEtcdNodeNum = ClusterEtcdNodeNum;
+    }
+
     public Cluster() {
     }
 
@@ -681,6 +709,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.RuntimeVersion != null) {
             this.RuntimeVersion = new String(source.RuntimeVersion);
         }
+        if (source.ClusterEtcdNodeNum != null) {
+            this.ClusterEtcdNodeNum = new Long(source.ClusterEtcdNodeNum);
+        }
     }
 
 
@@ -711,6 +742,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+        this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
 
     }
 }

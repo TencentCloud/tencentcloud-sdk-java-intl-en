@@ -102,10 +102,9 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *This API (CompleteLifecycleAction) is used to complete a lifecycle action.
+     *This API is used to complete a lifecycle action by setting the status of lifecycle hook to `CONTINUE` or `ABANDON`.
 
-* The result ("CONTINUE" or "ABANDON") of a specific lifecycle hook can be specified by calling this API. If this API is not called at all, the lifecycle hook will be processed based on the "DefaultResult" after timeout.
-
+* If this API is not called, the lifecycle hook goes to the status specified in `DefaultResult` after the timeout period.
      * @param req CompleteLifecycleActionRequest
      * @return CompleteLifecycleActionResponse
      * @throws TencentCloudSDKException
@@ -169,10 +168,9 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
     /**
      *This API is used to create a launch configuration.
 
-* To modify a launch configuration, you can use `ModifyLaunchConfigurationAttributes`.
+* To modify a launch configuration, please use `ModifyLaunchConfigurationAttributes`.
 
-* You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
-
+* Up to 20 launch configurations can be created for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
      * @param req CreateLaunchConfigurationRequest
      * @return CreateLaunchConfigurationResponse
      * @throws TencentCloudSDKException
@@ -776,10 +774,11 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
     }
 
     /**
-     *This API (ExecuteScalingPolicy) is used to execute a scaling policy.
+     *This API is used to execute a scaling policy.
 
 * The scaling policy can be executed based on the scaling policy ID.
-* When the auto scaling group to which the scaling policy belongs is performing a scaling activity, the scaling policy will be rejected.
+* The policy cannot be executed if there are ongoing scaling actions on the scaling group.
+* Executing a target tracking policy is not supported.
      * @param req ExecuteScalingPolicyRequest
      * @return ExecuteScalingPolicyResponse
      * @throws TencentCloudSDKException

@@ -205,6 +205,13 @@ Note: This field is default to empty
     private IPv6InternetAccessible IPv6InternetAccessible;
 
     /**
+    * Placement group ID. Only one is allowed.
+    */
+    @SerializedName("DisasterRecoverGroupIds")
+    @Expose
+    private String [] DisasterRecoverGroupIds;
+
+    /**
      * Get Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed.. 
      * @return LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
      */
@@ -644,6 +651,22 @@ Note: This field is default to empty
         this.IPv6InternetAccessible = IPv6InternetAccessible;
     }
 
+    /**
+     * Get Placement group ID. Only one is allowed. 
+     * @return DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+     */
+    public String [] getDisasterRecoverGroupIds() {
+        return this.DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set Placement group ID. Only one is allowed.
+     * @param DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+     */
+    public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
+        this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
+    }
+
     public CreateLaunchConfigurationRequest() {
     }
 
@@ -739,6 +762,12 @@ Note: This field is default to empty
         if (source.IPv6InternetAccessible != null) {
             this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
         }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
     }
 
 
@@ -770,6 +799,7 @@ Note: This field is default to empty
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
+        this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
 
     }
 }

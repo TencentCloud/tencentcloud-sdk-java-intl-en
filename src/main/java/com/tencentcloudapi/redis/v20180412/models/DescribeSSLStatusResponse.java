@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSSLStatusResponse extends AbstractModel{
 
     /**
-    * Certificate download address
+    * Download address for SSL certificate
     */
     @SerializedName("CertDownloadUrl")
     @Expose
@@ -37,21 +37,27 @@ public class DescribeSSLStatusResponse extends AbstractModel{
     private String UrlExpiredTime;
 
     /**
-    * SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+    * Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
     */
     @SerializedName("SSLConfig")
     @Expose
     private Boolean SSLConfig;
 
     /**
-    * Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+    * Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
     */
     @SerializedName("FeatureSupport")
     @Expose
     private Boolean FeatureSupport;
 
     /**
-    * SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+    * Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
     */
     @SerializedName("Status")
     @Expose
@@ -65,16 +71,16 @@ public class DescribeSSLStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Certificate download address 
-     * @return CertDownloadUrl Certificate download address
+     * Get Download address for SSL certificate 
+     * @return CertDownloadUrl Download address for SSL certificate
      */
     public String getCertDownloadUrl() {
         return this.CertDownloadUrl;
     }
 
     /**
-     * Set Certificate download address
-     * @param CertDownloadUrl Certificate download address
+     * Set Download address for SSL certificate
+     * @param CertDownloadUrl Download address for SSL certificate
      */
     public void setCertDownloadUrl(String CertDownloadUrl) {
         this.CertDownloadUrl = CertDownloadUrl;
@@ -97,48 +103,72 @@ public class DescribeSSLStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable). 
-     * @return SSLConfig SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+     * Get Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled 
+     * @return SSLConfig Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
      */
     public Boolean getSSLConfig() {
         return this.SSLConfig;
     }
 
     /**
-     * Set SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
-     * @param SSLConfig SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+     * Set Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
+     * @param SSLConfig Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
      */
     public void setSSLConfig(Boolean SSLConfig) {
         this.SSLConfig = SSLConfig;
     }
 
     /**
-     * Get Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No). 
-     * @return FeatureSupport Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+     * Get Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported 
+     * @return FeatureSupport Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
      */
     public Boolean getFeatureSupport() {
         return this.FeatureSupport;
     }
 
     /**
-     * Set Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
-     * @param FeatureSupport Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+     * Set Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
+     * @param FeatureSupport Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
      */
     public void setFeatureSupport(Boolean FeatureSupport) {
         this.FeatureSupport = FeatureSupport;
     }
 
     /**
-     * Get SSL configuration status. Valid values: `1`(Configuring), `2` (Configured). 
-     * @return Status SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+     * Get Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully 
+     * @return Status Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
-     * @param Status SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+     * Set Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
+     * @param Status Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -23,6 +23,14 @@ import java.util.HashMap;
 public class ServiceAccountAuthenticationOptions extends AbstractModel{
 
     /**
+    * Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UseTKEDefault")
+    @Expose
+    private Boolean UseTKEDefault;
+
+    /**
     * service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -45,6 +53,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("AutoCreateDiscoveryAnonymousAuth")
     @Expose
     private Boolean AutoCreateDiscoveryAnonymousAuth;
+
+    /**
+     * Get Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return UseTKEDefault Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getUseTKEDefault() {
+        return this.UseTKEDefault;
+    }
+
+    /**
+     * Set Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param UseTKEDefault Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUseTKEDefault(Boolean UseTKEDefault) {
+        this.UseTKEDefault = UseTKEDefault;
+    }
 
     /**
      * Get service-account-issuer
@@ -114,6 +142,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ServiceAccountAuthenticationOptions(ServiceAccountAuthenticationOptions source) {
+        if (source.UseTKEDefault != null) {
+            this.UseTKEDefault = new Boolean(source.UseTKEDefault);
+        }
         if (source.Issuer != null) {
             this.Issuer = new String(source.Issuer);
         }
@@ -130,6 +161,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UseTKEDefault", this.UseTKEDefault);
         this.setParamSimple(map, prefix + "Issuer", this.Issuer);
         this.setParamSimple(map, prefix + "JWKSURI", this.JWKSURI);
         this.setParamSimple(map, prefix + "AutoCreateDiscoveryAnonymousAuth", this.AutoCreateDiscoveryAnonymousAuth);

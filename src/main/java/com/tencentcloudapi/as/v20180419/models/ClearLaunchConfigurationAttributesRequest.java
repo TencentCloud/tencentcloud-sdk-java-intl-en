@@ -54,6 +54,14 @@ Setting it to `true` will clear the instance name settings, which means that CVM
     private Boolean ClearInstanceNameSettings;
 
     /**
+    * Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+    */
+    @SerializedName("ClearDisasterRecoverGroupIds")
+    @Expose
+    private Boolean ClearDisasterRecoverGroupIds;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -129,6 +137,26 @@ Setting it to `true` will clear the instance name settings, which means that CVM
         this.ClearInstanceNameSettings = ClearInstanceNameSettings;
     }
 
+    /**
+     * Get Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information. 
+     * @return ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+     */
+    public Boolean getClearDisasterRecoverGroupIds() {
+        return this.ClearDisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+     * @param ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+     */
+    public void setClearDisasterRecoverGroupIds(Boolean ClearDisasterRecoverGroupIds) {
+        this.ClearDisasterRecoverGroupIds = ClearDisasterRecoverGroupIds;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -149,6 +177,9 @@ Setting it to `true` will clear the instance name settings, which means that CVM
         if (source.ClearInstanceNameSettings != null) {
             this.ClearInstanceNameSettings = new Boolean(source.ClearInstanceNameSettings);
         }
+        if (source.ClearDisasterRecoverGroupIds != null) {
+            this.ClearDisasterRecoverGroupIds = new Boolean(source.ClearDisasterRecoverGroupIds);
+        }
     }
 
 
@@ -160,6 +191,7 @@ Setting it to `true` will clear the instance name settings, which means that CVM
         this.setParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
         this.setParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
         this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
+        this.setParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
 
     }
 }

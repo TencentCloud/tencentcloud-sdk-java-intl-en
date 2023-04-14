@@ -95,7 +95,7 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
     private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
 
     /**
-    * Node image (it is required when creating a node)
+    * Node image
     */
     @SerializedName("ImageId")
     @Expose
@@ -270,16 +270,16 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
     }
 
     /**
-     * Get Node image (it is required when creating a node) 
-     * @return ImageId Node image (it is required when creating a node)
+     * Get Node image 
+     * @return ImageId Node image
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Node image (it is required when creating a node)
-     * @param ImageId Node image (it is required when creating a node)
+     * Set Node image
+     * @param ImageId Node image
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

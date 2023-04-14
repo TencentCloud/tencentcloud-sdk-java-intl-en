@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel{
 
     /**
-    * The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
+    * Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * List of tags
+    * Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key). 
-     * @return ResourceType The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
+     * Get Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
-     * @param ResourceType The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
+     * Set Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get List of tags 
-     * @return Tags List of tags
+     * Get Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of tags
-     * @param Tags List of tags
+     * Set Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

@@ -199,6 +199,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to clone a complete instance based on the current instance backup file.
+     * @param req CloneInstancesRequest
+     * @return CloneInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneInstancesResponse CloneInstances(CloneInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable SSL.
      * @param req CloseSSLRequest
      * @return CloseSSLResponse
@@ -959,7 +979,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query SSL status.
+     *This API is used to query the SSL authentication information of an instance, such as enablement status, configuration status, and certificate address.
      * @param req DescribeSSLStatusRequest
      * @return DescribeSSLStatusResponse
      * @throws TencentCloudSDKException
@@ -1239,7 +1259,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to change the Redis password.
+     *This API is used to modify the access password for an instance.
      * @param req ModfiyInstancePasswordRequest
      * @return ModfiyInstancePasswordResponse
      * @throws TencentCloudSDKException
