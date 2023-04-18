@@ -162,6 +162,46 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
+     *This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for two hours (2*3,600s) after generation and can be called multiple times.
+     * @param req GetFaceIdResultIntlRequest
+     * @return GetFaceIdResultIntlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFaceIdResultIntlResponse GetFaceIdResultIntl(GetFaceIdResultIntlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFaceIdResultIntlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFaceIdResultIntlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFaceIdResultIntl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to apply for an SDK token before calling the liveness detection and face comparison SDK each time. The SDK token is used throughout the identity verification process and to get the verification result after the verification is completed. A token is valid for one identity verification process only.
+     * @param req GetFaceIdTokenIntlRequest
+     * @return GetFaceIdTokenIntlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFaceIdTokenIntlResponse GetFaceIdTokenIntl(GetFaceIdTokenIntlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFaceIdTokenIntlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFaceIdTokenIntlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFaceIdTokenIntl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
      * @param req GetLivenessResultRequest
      * @return GetLivenessResultResponse

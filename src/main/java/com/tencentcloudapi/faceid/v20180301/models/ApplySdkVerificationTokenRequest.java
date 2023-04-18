@@ -30,7 +30,7 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel{
     private Boolean NeedVerifyIdCard;
 
     /**
-    * The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card).
+    * The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
     */
     @SerializedName("IdCardType")
     @Expose
@@ -74,16 +74,16 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card). 
-     * @return IdCardType The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card).
+     * Get The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license). 
+     * @return IdCardType The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card).
-     * @param IdCardType The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card).
+     * Set The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
+     * @param IdCardType The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;

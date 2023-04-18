@@ -381,6 +381,46 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
+     *This API is used to start or stop the monitor or services.
+     * @param req StartStopServiceOrMonitorRequest
+     * @return StartStopServiceOrMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(StartStopServiceOrMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartStopServiceOrMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartStopServiceOrMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate cluster nodes.
+     * @param req TerminateClusterNodesRequest
+     * @return TerminateClusterNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateClusterNodesResponse TerminateClusterNodes(TerminateClusterNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateClusterNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateClusterNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
      * @param req TerminateInstanceRequest
      * @return TerminateInstanceResponse
