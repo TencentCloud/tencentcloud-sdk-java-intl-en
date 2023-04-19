@@ -129,6 +129,9 @@ public enum MariadbErrorCode {
     // Failed to get the database object.
      INTERNALERROR_GETDBOBJECTFAILED("InternalError.GetDbObjectFailed"),
      
+    // Failed to get the instance details.
+     INTERNALERROR_GETINSTANCEDETAILFAILED("InternalError.GetInstanceDetailFailed"),
+     
     // Failed to get the backend instance information.
      INTERNALERROR_GETINSTANCEINFOFAILED("InternalError.GetInstanceInfoFailed"),
      

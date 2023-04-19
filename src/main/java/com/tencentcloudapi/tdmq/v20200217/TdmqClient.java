@@ -219,6 +219,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a TDMQ for RabbitMQ exclusive instance.
+     * @param req CreateRabbitMQVipInstanceRequest
+     * @return CreateRabbitMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(CreateRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a RocketMQ cluster.
      * @param req CreateRocketMQClusterRequest
      * @return CreateRocketMQClusterResponse

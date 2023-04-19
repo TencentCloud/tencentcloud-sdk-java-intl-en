@@ -79,6 +79,13 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
     private Boolean NotScrape;
 
     /**
+    * Whether to enable the default recording rule
+    */
+    @SerializedName("OpenDefaultRecord")
+    @Expose
+    private Boolean OpenDefaultRecord;
+
+    /**
      * Get Cluster ID 
      * @return Region Cluster ID
      */
@@ -206,6 +213,22 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
         this.NotScrape = NotScrape;
     }
 
+    /**
+     * Get Whether to enable the default recording rule 
+     * @return OpenDefaultRecord Whether to enable the default recording rule
+     */
+    public Boolean getOpenDefaultRecord() {
+        return this.OpenDefaultRecord;
+    }
+
+    /**
+     * Set Whether to enable the default recording rule
+     * @param OpenDefaultRecord Whether to enable the default recording rule
+     */
+    public void setOpenDefaultRecord(Boolean OpenDefaultRecord) {
+        this.OpenDefaultRecord = OpenDefaultRecord;
+    }
+
     public PrometheusClusterAgentBasic() {
     }
 
@@ -241,6 +264,9 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
         if (source.NotScrape != null) {
             this.NotScrape = new Boolean(source.NotScrape);
         }
+        if (source.OpenDefaultRecord != null) {
+            this.OpenDefaultRecord = new Boolean(source.OpenDefaultRecord);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
         this.setParamSimple(map, prefix + "NotInstallBasicScrape", this.NotInstallBasicScrape);
         this.setParamSimple(map, prefix + "NotScrape", this.NotScrape);
+        this.setParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
 
     }
 }

@@ -103,7 +103,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+    * Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -354,16 +354,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`. 
-     * @return DbVersionId Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+     * Get Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`. 
+     * @return DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * Set Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
-     * @param DbVersionId Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+     * Set Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+     * @param DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

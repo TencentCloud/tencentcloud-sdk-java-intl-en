@@ -51,6 +51,13 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
     private String [] PolicyIds;
 
     /**
+    * Notification rules for different alarm levels
+    */
+    @SerializedName("HierarchicalNotices")
+    @Expose
+    private AlarmHierarchicalNotice [] HierarchicalNotices;
+
+    /**
      * Get Module name, which is specified as `monitor`. 
      * @return Module Module name, which is specified as `monitor`.
      */
@@ -114,6 +121,22 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
         this.PolicyIds = PolicyIds;
     }
 
+    /**
+     * Get Notification rules for different alarm levels 
+     * @return HierarchicalNotices Notification rules for different alarm levels
+     */
+    public AlarmHierarchicalNotice [] getHierarchicalNotices() {
+        return this.HierarchicalNotices;
+    }
+
+    /**
+     * Set Notification rules for different alarm levels
+     * @param HierarchicalNotices Notification rules for different alarm levels
+     */
+    public void setHierarchicalNotices(AlarmHierarchicalNotice [] HierarchicalNotices) {
+        this.HierarchicalNotices = HierarchicalNotices;
+    }
+
     public ModifyAlarmPolicyNoticeRequest() {
     }
 
@@ -140,6 +163,12 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.HierarchicalNotices != null) {
+            this.HierarchicalNotices = new AlarmHierarchicalNotice[source.HierarchicalNotices.length];
+            for (int i = 0; i < source.HierarchicalNotices.length; i++) {
+                this.HierarchicalNotices[i] = new AlarmHierarchicalNotice(source.HierarchicalNotices[i]);
+            }
+        }
     }
 
 
@@ -151,6 +180,7 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
 
     }
 }

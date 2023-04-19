@@ -13,100 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePrometheusRecordRuleYamlRequest extends AbstractModel{
+public class DescribeDBInstanceDetailRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * Instance ID in the format of `tdsql-ow728lmc`
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * YAML content
-    */
-    @SerializedName("Content")
-    @Expose
-    private String Content;
-
-    /**
-    * Rule name
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID in the format of `tdsql-ow728lmc` 
+     * @return InstanceId Instance ID in the format of `tdsql-ow728lmc`
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID in the format of `tdsql-ow728lmc`
+     * @param InstanceId Instance ID in the format of `tdsql-ow728lmc`
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get YAML content 
-     * @return Content YAML content
-     */
-    public String getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set YAML content
-     * @param Content YAML content
-     */
-    public void setContent(String Content) {
-        this.Content = Content;
-    }
-
-    /**
-     * Get Rule name 
-     * @return Name Rule name
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set Rule name
-     * @param Name Rule name
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    public CreatePrometheusRecordRuleYamlRequest() {
+    public DescribeDBInstanceDetailRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreatePrometheusRecordRuleYamlRequest(CreatePrometheusRecordRuleYamlRequest source) {
+    public DescribeDBInstanceDetailRequest(DescribeDBInstanceDetailRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.Content != null) {
-            this.Content = new String(source.Content);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
         }
     }
 
@@ -116,8 +64,6 @@ public class CreatePrometheusRecordRuleYamlRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Content", this.Content);
-        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

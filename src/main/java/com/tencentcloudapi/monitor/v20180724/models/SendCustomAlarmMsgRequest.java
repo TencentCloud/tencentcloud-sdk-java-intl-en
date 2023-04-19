@@ -30,7 +30,7 @@ public class SendCustomAlarmMsgRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Message policy ID, which is configured on the custom message page of Cloud Monitor.
+    * Message policy ID, which is configured on the custom message page.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -60,16 +60,16 @@ public class SendCustomAlarmMsgRequest extends AbstractModel{
     }
 
     /**
-     * Get Message policy ID, which is configured on the custom message page of Cloud Monitor. 
-     * @return PolicyId Message policy ID, which is configured on the custom message page of Cloud Monitor.
+     * Get Message policy ID, which is configured on the custom message page. 
+     * @return PolicyId Message policy ID, which is configured on the custom message page.
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Message policy ID, which is configured on the custom message page of Cloud Monitor.
-     * @param PolicyId Message policy ID, which is configured on the custom message page of Cloud Monitor.
+     * Set Message policy ID, which is configured on the custom message page.
+     * @param PolicyId Message policy ID, which is configured on the custom message page.
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

@@ -139,7 +139,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a Cloud Monitor alarm policy.
+     *This API is used to create an alarm policy.
      * @param req CreateAlarmPolicyRequest
      * @return CreateAlarmPolicyResponse
      * @throws TencentCloudSDKException
@@ -321,7 +321,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
-     *This API is used to associate a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance with a cluster.
+     *This API is used to associate a cluster with a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance.
      * @param req CreatePrometheusClusterAgentRequest
      * @return CreatePrometheusClusterAgentResponse
      * @throws TencentCloudSDKException
@@ -523,7 +523,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
-     *This API is used to delete alarm notification templates.
+     *This API is used to delete an alarm notification template.
      * @param req DeleteAlarmNoticesRequest
      * @return DeleteAlarmNoticesResponse
      * @throws TencentCloudSDKException
@@ -965,7 +965,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
-     *This API is used to get all the callback URLs of an alarm notification template.
+     *This API is used to obtain all the callback URLs of an alarm notification template.
      * @param req DescribeAlarmNoticeCallbacksRequest
      * @return DescribeAlarmNoticeCallbacksResponse
      * @throws TencentCloudSDKException
@@ -1365,7 +1365,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
-     *This API is used to list all the monitor types supported by CM.
+     *This API is used to list all the monitoring types supported by CM.
      * @param req DescribeMonitorTypesRequest
      * @return DescribeMonitorTypesResponse
      * @throws TencentCloudSDKException
@@ -2175,7 +2175,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     }
 
     /**
-     *This API is used to modify the task triggered by an alarm policy. The `TriggerTasks` field contains the list of triggered tasks. If an empty array is passed in for `TriggerTasks`, it indicates to unbind all the triggered tasks from this policy.
+     *This API is used to modify the tasks triggered by alarm policy, which are listed by the value of the `TriggerTasks` field. If an empty array is passed in for `TriggerTasks`, it means unbinding all the trigger tasks from the policy.
      * @param req ModifyAlarmPolicyTasksRequest
      * @return ModifyAlarmPolicyTasksResponse
      * @throws TencentCloudSDKException
@@ -2395,7 +2395,9 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     }
 
     /**
-     *The default API request rate limit is 50 requests/sec.
+     *对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
+
+The default API request rate limit is 50 requests/sec.
 The default upper limit on metrics of a single tenant is 100.
 A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
 
