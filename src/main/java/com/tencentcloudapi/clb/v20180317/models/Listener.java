@@ -196,6 +196,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long MaxCps;
 
     /**
+    * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IdleConnectTimeout")
+    @Expose
+    private Long IdleConnectTimeout;
+
+    /**
      * Get CLB listener ID 
      * @return ListenerId CLB listener ID
      */
@@ -623,6 +631,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.MaxCps = MaxCps;
     }
 
+    /**
+     * Get Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIdleConnectTimeout() {
+        return this.IdleConnectTimeout;
+    }
+
+    /**
+     * Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIdleConnectTimeout(Long IdleConnectTimeout) {
+        this.IdleConnectTimeout = IdleConnectTimeout;
+    }
+
     public Listener() {
     }
 
@@ -706,6 +734,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.MaxCps != null) {
             this.MaxCps = new Long(source.MaxCps);
         }
+        if (source.IdleConnectTimeout != null) {
+            this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
+        }
     }
 
 
@@ -735,6 +766,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
+        this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
 
     }
 }

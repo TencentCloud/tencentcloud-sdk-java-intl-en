@@ -129,6 +129,13 @@ They represent weighted round robin and least connections, respectively. Default
     private Long MaxCps;
 
     /**
+    * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+    */
+    @SerializedName("IdleConnectTimeout")
+    @Expose
+    private Long IdleConnectTimeout;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -372,6 +379,22 @@ They represent weighted round robin and least connections, respectively. Default
         this.MaxCps = MaxCps;
     }
 
+    /**
+     * Get Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category).  
+     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     */
+    public Long getIdleConnectTimeout() {
+        return this.IdleConnectTimeout;
+    }
+
+    /**
+     * Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     * @param IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     */
+    public void setIdleConnectTimeout(Long IdleConnectTimeout) {
+        this.IdleConnectTimeout = IdleConnectTimeout;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -425,6 +448,9 @@ They represent weighted round robin and least connections, respectively. Default
         if (source.MaxCps != null) {
             this.MaxCps = new Long(source.MaxCps);
         }
+        if (source.IdleConnectTimeout != null) {
+            this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
+        }
     }
 
 
@@ -447,6 +473,7 @@ They represent weighted round robin and least connections, respectively. Default
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
+        this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
 
     }
 }

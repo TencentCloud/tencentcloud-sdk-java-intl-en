@@ -119,6 +119,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API shows you how to create an ACL rule.
+     * @param req CreateAclRuleRequest
+     * @return CreateAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAclRuleResponse CreateAclRule(CreateAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAclRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a consumer group.
      * @param req CreateConsumerRequest
      * @return CreateConsumerResponse
@@ -411,6 +431,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeACLResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeACL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the ACL rule list.
+     * @param req DescribeAclRuleRequest
+     * @return DescribeAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAclRuleResponse DescribeAclRule(DescribeAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAclRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -873,6 +913,46 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 Type type = new TypeToken<JsonResponseModel<InquireCkafkaPriceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquireCkafkaPrice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+     * @param req ModifyAclRuleRequest
+     * @return ModifyAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAclRuleResponse ModifyAclRule(ModifyAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAclRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the DataHub topic attributes.
+     * @param req ModifyDatahubTopicRequest
+     * @return ModifyDatahubTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatahubTopicResponse ModifyDatahubTopic(ModifyDatahubTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatahubTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatahubTopic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

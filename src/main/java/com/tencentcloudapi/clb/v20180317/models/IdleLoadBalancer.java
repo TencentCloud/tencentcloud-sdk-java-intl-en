@@ -73,6 +73,14 @@ public class IdleLoadBalancer extends AbstractModel{
     private Long Forward;
 
     /**
+    * The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -188,6 +196,26 @@ public class IdleLoadBalancer extends AbstractModel{
         this.Forward = Forward;
     }
 
+    /**
+     * Get The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Domain The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Domain The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public IdleLoadBalancer() {
     }
 
@@ -217,6 +245,9 @@ public class IdleLoadBalancer extends AbstractModel{
         if (source.Forward != null) {
             this.Forward = new Long(source.Forward);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -231,6 +262,7 @@ public class IdleLoadBalancer extends AbstractModel{
         this.setParamSimple(map, prefix + "IdleReason", this.IdleReason);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Forward", this.Forward);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

@@ -281,6 +281,26 @@ Note: Accounts with the same username but different hosts are considered as diff
     }
 
     /**
+     *This API is used to query the list of backup files.
+     * @param req DescribeBackupFilesRequest
+     * @return DescribeBackupFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupFilesResponse DescribeBackupFiles(DescribeBackupFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of various logs of a database, including cold backups, binlogs, errlogs, and slowlogs.
      * @param req DescribeDBLogFilesRequest
      * @return DescribeDBLogFilesResponse
@@ -373,6 +393,26 @@ Note: Accounts with the same username but different hosts are considered as diff
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSyncModeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBSyncMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the details of a TDSQL instance.
+     * @param req DescribeDCDBInstanceDetailRequest
+     * @return DescribeDCDBInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetail(DescribeDCDBInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDCDBInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDCDBInstanceDetail");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
