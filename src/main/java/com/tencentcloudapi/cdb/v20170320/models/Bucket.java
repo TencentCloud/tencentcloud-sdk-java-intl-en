@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Key;
 
     /**
-    * Number of keys in the statistic report
+    * Number of occurrences of the key value
     */
     @SerializedName("Count")
     @Expose
@@ -58,16 +58,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of keys in the statistic report 
-     * @return Count Number of keys in the statistic report
+     * Get Number of occurrences of the key value 
+     * @return Count Number of occurrences of the key value
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of keys in the statistic report
-     * @param Count Number of keys in the statistic report
+     * Set Number of occurrences of the key value
+     * @param Count Number of occurrences of the key value
      */
     public void setCount(Long Count) {
         this.Count = Count;

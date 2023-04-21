@@ -93,7 +93,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private Boolean IsCreditLimited;
 
     /**
-    * Credit limit. Credit limit－available credit balance = consumption amount
+    * Credit limit in cents. Credit limit－available credit balance = consumption amount
     */
     @SerializedName("CreditAmount")
     @Expose
@@ -281,16 +281,16 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Get Credit limit. Credit limit－available credit balance = consumption amount 
-     * @return CreditAmount Credit limit. Credit limit－available credit balance = consumption amount
+     * Get Credit limit in cents. Credit limit－available credit balance = consumption amount 
+     * @return CreditAmount Credit limit in cents. Credit limit－available credit balance = consumption amount
      */
     public Float getCreditAmount() {
         return this.CreditAmount;
     }
 
     /**
-     * Set Credit limit. Credit limit－available credit balance = consumption amount
-     * @param CreditAmount Credit limit. Credit limit－available credit balance = consumption amount
+     * Set Credit limit in cents. Credit limit－available credit balance = consumption amount
+     * @param CreditAmount Credit limit in cents. Credit limit－available credit balance = consumption amount
      */
     public void setCreditAmount(Float CreditAmount) {
         this.CreditAmount = CreditAmount;

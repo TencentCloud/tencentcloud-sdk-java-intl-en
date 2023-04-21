@@ -100,14 +100,14 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String DeviceType;
 
     /**
-    * The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
+    * The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+    * QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
     */
     @SerializedName("FastUpgrade")
     @Expose
@@ -133,6 +133,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
+
+    /**
+    * Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
+    */
+    @SerializedName("RoTransType")
+    @Expose
+    private String RoTransType;
 
     /**
      * Get Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters. 
@@ -311,32 +318,32 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value. 
-     * @return Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
+     * Get The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value. 
+     * @return Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
-     * @param Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
+     * Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+     * @param Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned. 
-     * @return FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     * Get QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned. 
+     * @return FastUpgrade QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
      */
     public Long getFastUpgrade() {
         return this.FastUpgrade;
     }
 
     /**
-     * Set Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
-     * @param FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     * Set QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
+     * @param FastUpgrade QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
      */
     public void setFastUpgrade(Long FastUpgrade) {
         this.FastUpgrade = FastUpgrade;
@@ -388,6 +395,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.). 
+     * @return RoTransType Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
+     */
+    public String getRoTransType() {
+        return this.RoTransType;
+    }
+
+    /**
+     * Set Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
+     * @param RoTransType Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
+     */
+    public void setRoTransType(String RoTransType) {
+        this.RoTransType = RoTransType;
     }
 
     public UpgradeDBInstanceRequest() {
@@ -446,6 +469,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.RoTransType != null) {
+            this.RoTransType = new String(source.RoTransType);
+        }
     }
 
 
@@ -469,6 +495,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "RoTransType", this.RoTransType);
 
     }
 }

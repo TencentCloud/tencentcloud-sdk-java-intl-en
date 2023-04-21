@@ -20,14 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeveloperResponse extends AbstractModel{
+public class DescribeAnswerListResponse extends AbstractModel{
 
     /**
-    * The developer ID.
+    * The total number of answers.
     */
-    @SerializedName("DeveloperId")
+    @SerializedName("Total")
     @Expose
-    private String DeveloperId;
+    private Long Total;
+
+    /**
+    * A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AnswerInfo")
+    @Expose
+    private AnswerInfo [] AnswerInfo;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +45,39 @@ public class DescribeDeveloperResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The developer ID. 
-     * @return DeveloperId The developer ID.
+     * Get The total number of answers. 
+     * @return Total The total number of answers.
      */
-    public String getDeveloperId() {
-        return this.DeveloperId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set The developer ID.
-     * @param DeveloperId The developer ID.
+     * Set The total number of answers.
+     * @param Total The total number of answers.
      */
-    public void setDeveloperId(String DeveloperId) {
-        this.DeveloperId = DeveloperId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AnswerInfo A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AnswerInfo [] getAnswerInfo() {
+        return this.AnswerInfo;
+    }
+
+    /**
+     * Set A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AnswerInfo A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAnswerInfo(AnswerInfo [] AnswerInfo) {
+        this.AnswerInfo = AnswerInfo;
     }
 
     /**
@@ -68,16 +96,22 @@ public class DescribeDeveloperResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDeveloperResponse() {
+    public DescribeAnswerListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeveloperResponse(DescribeDeveloperResponse source) {
-        if (source.DeveloperId != null) {
-            this.DeveloperId = new String(source.DeveloperId);
+    public DescribeAnswerListResponse(DescribeAnswerListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.AnswerInfo != null) {
+            this.AnswerInfo = new AnswerInfo[source.AnswerInfo.length];
+            for (int i = 0; i < source.AnswerInfo.length; i++) {
+                this.AnswerInfo[i] = new AnswerInfo(source.AnswerInfo[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class DescribeDeveloperResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "AnswerInfo.", this.AnswerInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

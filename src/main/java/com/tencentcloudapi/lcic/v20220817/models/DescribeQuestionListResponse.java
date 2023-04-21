@@ -20,14 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeveloperResponse extends AbstractModel{
+public class DescribeQuestionListResponse extends AbstractModel{
 
     /**
-    * The developer ID.
+    * The total number of quiz questions.
     */
-    @SerializedName("DeveloperId")
+    @SerializedName("Total")
     @Expose
-    private String DeveloperId;
+    private Long Total;
+
+    /**
+    * A list of the questions.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QuestionInfo")
+    @Expose
+    private QuestionInfo [] QuestionInfo;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +45,39 @@ public class DescribeDeveloperResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The developer ID. 
-     * @return DeveloperId The developer ID.
+     * Get The total number of quiz questions. 
+     * @return Total The total number of quiz questions.
      */
-    public String getDeveloperId() {
-        return this.DeveloperId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set The developer ID.
-     * @param DeveloperId The developer ID.
+     * Set The total number of quiz questions.
+     * @param Total The total number of quiz questions.
      */
-    public void setDeveloperId(String DeveloperId) {
-        this.DeveloperId = DeveloperId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get A list of the questions.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QuestionInfo A list of the questions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public QuestionInfo [] getQuestionInfo() {
+        return this.QuestionInfo;
+    }
+
+    /**
+     * Set A list of the questions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QuestionInfo A list of the questions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQuestionInfo(QuestionInfo [] QuestionInfo) {
+        this.QuestionInfo = QuestionInfo;
     }
 
     /**
@@ -68,16 +96,22 @@ public class DescribeDeveloperResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDeveloperResponse() {
+    public DescribeQuestionListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeveloperResponse(DescribeDeveloperResponse source) {
-        if (source.DeveloperId != null) {
-            this.DeveloperId = new String(source.DeveloperId);
+    public DescribeQuestionListResponse(DescribeQuestionListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.QuestionInfo != null) {
+            this.QuestionInfo = new QuestionInfo[source.QuestionInfo.length];
+            for (int i = 0; i < source.QuestionInfo.length; i++) {
+                this.QuestionInfo[i] = new QuestionInfo(source.QuestionInfo[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class DescribeDeveloperResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

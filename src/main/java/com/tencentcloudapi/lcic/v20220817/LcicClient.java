@@ -432,6 +432,26 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to get the answers to a quiz question in a room.
+     * @param req DescribeAnswerListRequest
+     * @return DescribeAnswerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAnswerListResponse DescribeAnswerList(DescribeAnswerListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAnswerListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAnswerListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAnswerList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the user list of a room. This API will not work if a room has ended or expired.
 A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeCurrentMemberListRequest
@@ -578,6 +598,26 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to get the quiz details of a room.
+     * @param req DescribeQuestionListRequest
+     * @return DescribeQuestionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuestionListResponse DescribeQuestionList(DescribeQuestionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQuestionListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQuestionListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQuestionList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get room information.
 A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeRoomRequest
@@ -641,6 +681,26 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to get the spectators of a room.
+     * @param req DescribeSupervisorsRequest
+     * @return DescribeSupervisorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupervisorsResponse DescribeSupervisors(DescribeSupervisorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSupervisorsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSupervisorsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSupervisors");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain user profile.
      * @param req DescribeUserRequest
      * @return DescribeUserResponse
@@ -693,6 +753,26 @@ A maximum of 20 requests can be initiated per second for this API.
                 Type type = new TypeToken<JsonResponseModel<GetRoomMessageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetRoomMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the room list.
+     * @param req GetRoomsRequest
+     * @return GetRoomsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRoomsResponse GetRooms(GetRoomsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRoomsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRoomsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRooms");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

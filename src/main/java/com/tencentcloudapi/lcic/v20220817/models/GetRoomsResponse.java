@@ -20,14 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeveloperResponse extends AbstractModel{
+public class GetRoomsResponse extends AbstractModel{
 
     /**
-    * The developer ID.
+    * The total number of rooms.
     */
-    @SerializedName("DeveloperId")
+    @SerializedName("Total")
     @Expose
-    private String DeveloperId;
+    private Long Total;
+
+    /**
+    * The room list.
+    */
+    @SerializedName("Rooms")
+    @Expose
+    private RoomItem [] Rooms;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class DescribeDeveloperResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The developer ID. 
-     * @return DeveloperId The developer ID.
+     * Get The total number of rooms. 
+     * @return Total The total number of rooms.
      */
-    public String getDeveloperId() {
-        return this.DeveloperId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set The developer ID.
-     * @param DeveloperId The developer ID.
+     * Set The total number of rooms.
+     * @param Total The total number of rooms.
      */
-    public void setDeveloperId(String DeveloperId) {
-        this.DeveloperId = DeveloperId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get The room list. 
+     * @return Rooms The room list.
+     */
+    public RoomItem [] getRooms() {
+        return this.Rooms;
+    }
+
+    /**
+     * Set The room list.
+     * @param Rooms The room list.
+     */
+    public void setRooms(RoomItem [] Rooms) {
+        this.Rooms = Rooms;
     }
 
     /**
@@ -68,16 +91,22 @@ public class DescribeDeveloperResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDeveloperResponse() {
+    public GetRoomsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeveloperResponse(DescribeDeveloperResponse source) {
-        if (source.DeveloperId != null) {
-            this.DeveloperId = new String(source.DeveloperId);
+    public GetRoomsResponse(GetRoomsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Rooms != null) {
+            this.Rooms = new RoomItem[source.Rooms.length];
+            for (int i = 0; i < source.Rooms.length; i++) {
+                this.Rooms[i] = new RoomItem(source.Rooms[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class DescribeDeveloperResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Rooms.", this.Rooms);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

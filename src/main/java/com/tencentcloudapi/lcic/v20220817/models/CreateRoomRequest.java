@@ -86,6 +86,13 @@ public class CreateRoomRequest extends AbstractModel{
     private Long AutoMic;
 
     /**
+    * Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+    */
+    @SerializedName("TurnOffMic")
+    @Expose
+    private Long TurnOffMic;
+
+    /**
     * Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
     */
     @SerializedName("AudioQuality")
@@ -105,6 +112,20 @@ public class CreateRoomRequest extends AbstractModel{
     @SerializedName("Assistants")
     @Expose
     private String [] Assistants;
+
+    /**
+    * The number of RTC users.
+    */
+    @SerializedName("RTCAudienceNumber")
+    @Expose
+    private Long RTCAudienceNumber;
+
+    /**
+    * The audience type.
+    */
+    @SerializedName("AudienceType")
+    @Expose
+    private Long AudienceType;
 
     /**
     * Recording layout
@@ -265,6 +286,22 @@ public class CreateRoomRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No. 
+     * @return TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+     */
+    public Long getTurnOffMic() {
+        return this.TurnOffMic;
+    }
+
+    /**
+     * Set Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+     * @param TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+     */
+    public void setTurnOffMic(Long TurnOffMic) {
+        this.TurnOffMic = TurnOffMic;
+    }
+
+    /**
      * Get Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. 
      * @return AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
      */
@@ -310,6 +347,38 @@ public class CreateRoomRequest extends AbstractModel{
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
+    }
+
+    /**
+     * Get The number of RTC users. 
+     * @return RTCAudienceNumber The number of RTC users.
+     */
+    public Long getRTCAudienceNumber() {
+        return this.RTCAudienceNumber;
+    }
+
+    /**
+     * Set The number of RTC users.
+     * @param RTCAudienceNumber The number of RTC users.
+     */
+    public void setRTCAudienceNumber(Long RTCAudienceNumber) {
+        this.RTCAudienceNumber = RTCAudienceNumber;
+    }
+
+    /**
+     * Get The audience type. 
+     * @return AudienceType The audience type.
+     */
+    public Long getAudienceType() {
+        return this.AudienceType;
+    }
+
+    /**
+     * Set The audience type.
+     * @param AudienceType The audience type.
+     */
+    public void setAudienceType(Long AudienceType) {
+        this.AudienceType = AudienceType;
     }
 
     /**
@@ -379,6 +448,9 @@ public class CreateRoomRequest extends AbstractModel{
         if (source.AutoMic != null) {
             this.AutoMic = new Long(source.AutoMic);
         }
+        if (source.TurnOffMic != null) {
+            this.TurnOffMic = new Long(source.TurnOffMic);
+        }
         if (source.AudioQuality != null) {
             this.AudioQuality = new Long(source.AudioQuality);
         }
@@ -390,6 +462,12 @@ public class CreateRoomRequest extends AbstractModel{
             for (int i = 0; i < source.Assistants.length; i++) {
                 this.Assistants[i] = new String(source.Assistants[i]);
             }
+        }
+        if (source.RTCAudienceNumber != null) {
+            this.RTCAudienceNumber = new Long(source.RTCAudienceNumber);
+        }
+        if (source.AudienceType != null) {
+            this.AudienceType = new Long(source.AudienceType);
         }
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
@@ -413,9 +491,12 @@ public class CreateRoomRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubType", this.SubType);
         this.setParamSimple(map, prefix + "TeacherId", this.TeacherId);
         this.setParamSimple(map, prefix + "AutoMic", this.AutoMic);
+        this.setParamSimple(map, prefix + "TurnOffMic", this.TurnOffMic);
         this.setParamSimple(map, prefix + "AudioQuality", this.AudioQuality);
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+        this.setParamSimple(map, prefix + "RTCAudienceNumber", this.RTCAudienceNumber);
+        this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
