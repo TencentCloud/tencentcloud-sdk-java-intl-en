@@ -45,17 +45,18 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 
     /**
     * The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -111,29 +112,31 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 
     /**
      * Get The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li> 
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li> 
      * @return Type The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      */
     public String getType() {
         return this.Type;
@@ -141,29 +144,31 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
 
     /**
      * Set The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      * @param Type The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -195,14 +195,21 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] MediaTypes;
 
     /**
-    * 
+    * The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * 
+    * The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
     */
     @SerializedName("ReviewResults")
     @Expose
@@ -746,32 +753,60 @@ End time in the creation time range.
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li> 
+     * @return Status The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
+     * @param Status The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ReviewResults 
+     * Get The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li> 
+     * @return ReviewResults The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
      */
     public String [] getReviewResults() {
         return this.ReviewResults;
     }
 
     /**
-     * Set 
-     * @param ReviewResults 
+     * Set The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
+     * @param ReviewResults The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
      */
     public void setReviewResults(String [] ReviewResults) {
         this.ReviewResults = ReviewResults;

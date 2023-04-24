@@ -59,7 +59,7 @@ Note: You need to pass in the full list of subtasks even if you want to change o
     private TaskOutputStorage OutputStorage;
 
     /**
-    * The directory to save the output file.
+    * The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
     */
     @SerializedName("OutputDir")
@@ -158,9 +158,9 @@ Note: You need to pass in the full list of subtasks even if you want to change o
     }
 
     /**
-     * Get The directory to save the output file.
+     * Get The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated. 
-     * @return OutputDir The directory to save the output file.
+     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
      */
     public String getOutputDir() {
@@ -168,9 +168,9 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
     }
 
     /**
-     * Set The directory to save the output file.
+     * Set The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
-     * @param OutputDir The directory to save the output file.
+     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
      */
     public void setOutputDir(String OutputDir) {

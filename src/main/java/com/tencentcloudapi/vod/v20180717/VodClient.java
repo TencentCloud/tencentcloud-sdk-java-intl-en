@@ -277,7 +277,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     }
 
     /**
-     *This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+     *This API is used to create a custom image processing template. A template can include at most 10 operations, for example, crop-scale-crop-blur-scale-crop-scale-crop-blur-scale. You can have up to 16 image processing templates.
      * @param req CreateImageProcessingTemplateRequest
      * @return CreateImageProcessingTemplateResponse
      * @throws TencentCloudSDKException
@@ -349,6 +349,26 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
                 Type type = new TypeToken<JsonResponseModel<CreateProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a remaster template.
+     * @param req CreateRebuildMediaTemplateRequest
+     * @return CreateRebuildMediaTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplate(CreateRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRebuildMediaTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRebuildMediaTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRebuildMediaTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -802,6 +822,26 @@ This API is used to delete a custom audio/video moderation template.
                 Type type = new TypeToken<JsonResponseModel<DeleteProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a remaster template.
+     * @param req DeleteRebuildMediaTemplateRequest
+     * @return DeleteRebuildMediaTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(DeleteRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRebuildMediaTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRebuildMediaTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRebuildMediaTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1474,6 +1514,26 @@ This API is used to get the information of custom and [preset](https://intl.clou
                 Type type = new TypeToken<JsonResponseModel<DescribeProcedureTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProcedureTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query remaster templates.
+     * @param req DescribeRebuildMediaTemplatesRequest
+     * @return DescribeRebuildMediaTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplates(DescribeRebuildMediaTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRebuildMediaTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRebuildMediaTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRebuildMediaTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2176,6 +2236,26 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     }
 
     /**
+     *This API is used to modify a remaster template.
+     * @param req ModifyRebuildMediaTemplateRequest
+     * @return ModifyRebuildMediaTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplate(ModifyRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRebuildMediaTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRebuildMediaTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRebuildMediaTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a custom moderation template.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
      * @param req ModifyReviewTemplateRequest
@@ -2606,6 +2686,26 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     }
 
     /**
+     *This API is used to start a remaster task using a template.
+     * @param req RebuildMediaByTemplateRequest
+     * @return RebuildMediaByTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebuildMediaByTemplateResponse RebuildMediaByTemplate(RebuildMediaByTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RebuildMediaByTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RebuildMediaByTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RebuildMediaByTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *1. This API is used to purge URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
@@ -2740,6 +2840,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
 - Specify the types (`Categories`) of media files. Any file that matches one of the types will be returned. There are three file types: `Video`, `Audio`, and `Image`. If `Categories` is set to `Video` and `Audio`, all audio and video files will be returned.
 - Specify the source types (`SourceTypes`). Any file that matches one of the source types specified will be returned. For example, if you set `SourceTypes` to `Record` (live recording) and `Upload` (upload), all recording files and uploaded files will be returned.
 - Specify the file formats (`MediaTypes`), such as MP4, AVI, and MP3. All files in the specified formats will be returned. For example, if you set `MediaTypes` to MP4 and MP3, all files in these two formats will be returned.
+- Specify the file statuses (`Status`). Files in the specified statuses will be returned. Valid values: `Normal`, `SystemForbidden` (blocked by VOD), `Forbidden` (blocked by you). If you set `Status` to `Normal` and `Forbidden`, files in either status will be returned.
+- Specify the types of moderation results (`ReviewResults`). Files that have the specified types of moderation results will be returned. Valid values include `pass`, `block`, and more. If you set `ReviewResults` to `pass` and `block`, files whose moderation result is "pass" or "block" will be returned.
 - Specify the stream IDs (`StreamIds`) of live recording files.
 - Specify a time range for search by file creation time.
 - Specify the TRTC application IDs.

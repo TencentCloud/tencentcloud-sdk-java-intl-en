@@ -37,11 +37,25 @@ public class ProcessMediaRequest extends AbstractModel{
     private TaskOutputStorage OutputStorage;
 
     /**
-    * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+    * The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
+
+    /**
+    * The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
 
     /**
     * The media processing parameters to use.
@@ -72,6 +86,13 @@ public class ProcessMediaRequest extends AbstractModel{
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
+    * The parameters of a quality control task.
+    */
+    @SerializedName("AiQualityControlTask")
+    @Expose
+    private AiQualityControlTaskInput AiQualityControlTask;
+
+    /**
     * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
     */
     @SerializedName("TaskNotifyConfig")
@@ -98,19 +119,6 @@ public class ProcessMediaRequest extends AbstractModel{
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
-
-    /**
-    * The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-    */
-    @SerializedName("ScheduleId")
-    @Expose
-    private Long ScheduleId;
 
     /**
     * The task type.
@@ -154,19 +162,63 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     }
 
     /**
-     * Get The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`. 
-     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+     * Get The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`. 
+     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
-     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+     * Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
+     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
+    }
+
+    /**
+     * Get The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme. 
+     * @return ScheduleId The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     * @param ScheduleId The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
     }
 
     /**
@@ -234,6 +286,22 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     }
 
     /**
+     * Get The parameters of a quality control task. 
+     * @return AiQualityControlTask The parameters of a quality control task.
+     */
+    public AiQualityControlTaskInput getAiQualityControlTask() {
+        return this.AiQualityControlTask;
+    }
+
+    /**
+     * Set The parameters of a quality control task.
+     * @param AiQualityControlTask The parameters of a quality control task.
+     */
+    public void setAiQualityControlTask(AiQualityControlTaskInput AiQualityControlTask) {
+        this.AiQualityControlTask = AiQualityControlTask;
+    }
+
+    /**
      * Get Event notification information of a task. If this parameter is left empty, no event notifications will be obtained. 
      * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
      */
@@ -298,46 +366,6 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     }
 
     /**
-     * Get The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme. 
-     * @return ScheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-     */
-    public Long getScheduleId() {
-        return this.ScheduleId;
-    }
-
-    /**
-     * Set The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-     * @param ScheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-     */
-    public void setScheduleId(Long ScheduleId) {
-        this.ScheduleId = ScheduleId;
-    }
-
-    /**
      * Get The task type.
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li> 
@@ -378,6 +406,9 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         if (source.OutputDir != null) {
             this.OutputDir = new String(source.OutputDir);
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
         if (source.MediaProcessTask != null) {
             this.MediaProcessTask = new MediaProcessTaskInput(source.MediaProcessTask);
         }
@@ -390,6 +421,9 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
+        if (source.AiQualityControlTask != null) {
+            this.AiQualityControlTask = new AiQualityControlTaskInput(source.AiQualityControlTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -401,9 +435,6 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         }
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
-        }
-        if (source.ScheduleId != null) {
-            this.ScheduleId = new Long(source.ScheduleId);
         }
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
@@ -418,15 +449,16 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+        this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
-        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }

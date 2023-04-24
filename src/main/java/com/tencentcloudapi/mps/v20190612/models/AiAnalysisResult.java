@@ -63,6 +63,14 @@ public class AiAnalysisResult extends AbstractModel{
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
+    * The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HighlightTask")
+    @Expose
+    private AiAnalysisTaskHighlightResult HighlightTask;
+
+    /**
      * Get Task type. Valid values:
 <li>Classification: intelligent categorization</li>
 <li>Cover: intelligent cover generating</li>
@@ -162,6 +170,26 @@ public class AiAnalysisResult extends AbstractModel{
         this.FrameTagTask = FrameTagTask;
     }
 
+    /**
+     * Get The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskHighlightResult getHighlightTask() {
+        return this.HighlightTask;
+    }
+
+    /**
+     * Set The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
+        this.HighlightTask = HighlightTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -185,6 +213,9 @@ public class AiAnalysisResult extends AbstractModel{
         if (source.FrameTagTask != null) {
             this.FrameTagTask = new AiAnalysisTaskFrameTagResult(source.FrameTagTask);
         }
+        if (source.HighlightTask != null) {
+            this.HighlightTask = new AiAnalysisTaskHighlightResult(source.HighlightTask);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class AiAnalysisResult extends AbstractModel{
         this.setParamObj(map, prefix + "CoverTask.", this.CoverTask);
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
+        this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
 
     }
 }

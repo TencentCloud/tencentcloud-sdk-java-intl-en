@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class LiveStreamAiReviewResultItem extends AbstractModel{
 
     /**
-    * The type of the moderation result. Valid values:
+    * The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
     */
     @SerializedName("Type")
     @Expose
@@ -55,39 +55,39 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     private LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet;
 
     /**
-    * Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+    * The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
     */
     @SerializedName("VoicePornResultSet")
     @Expose
     private LiveStreamAiReviewVoicePornResult [] VoicePornResultSet;
 
     /**
-     * Get The type of the moderation result. Valid values:
+     * Get The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li> 
-     * @return Type The type of the moderation result. Valid values:
+<li>VoicePorn</li> 
+     * @return Type The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The type of the moderation result. Valid values:
+     * Set The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
-     * @param Type The type of the moderation result. Valid values:
+<li>VoicePorn</li>
+     * @param Type The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -142,16 +142,16 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     }
 
     /**
-     * Get Result of porn information detection in speech, which is valid when `Type` is `PornVoice`. 
-     * @return VoicePornResultSet Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+     * Get The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`. 
+     * @return VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
      */
     public LiveStreamAiReviewVoicePornResult [] getVoicePornResultSet() {
         return this.VoicePornResultSet;
     }
 
     /**
-     * Set Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
-     * @param VoicePornResultSet Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+     * Set The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+     * @param VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
      */
     public void setVoicePornResultSet(LiveStreamAiReviewVoicePornResult [] VoicePornResultSet) {
         this.VoicePornResultSet = VoicePornResultSet;

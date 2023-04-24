@@ -35,6 +35,7 @@ public class Activity extends AbstractModel{
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ActivityType")
     @Expose
@@ -42,6 +43,7 @@ public class Activity extends AbstractModel{
 
     /**
     * The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReardriveIndex")
     @Expose
@@ -49,6 +51,7 @@ public class Activity extends AbstractModel{
 
     /**
     * The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ActivityPara")
     @Expose
@@ -66,7 +69,8 @@ public class Activity extends AbstractModel{
 <li>`action-animated-graphics`: Animated screenshot generation.</li>
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
-<li>`action-adaptive-substream`: Adaptive bitrate streaming.</li> 
+<li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ActivityType The subtask type.
 <li>`input`: The start.</li>
 <li>`output`: The end.</li>
@@ -79,6 +83,7 @@ public class Activity extends AbstractModel{
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -97,6 +102,7 @@ public class Activity extends AbstractModel{
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ActivityType The subtask type.
 <li>`input`: The start.</li>
 <li>`output`: The end.</li>
@@ -109,14 +115,17 @@ public class Activity extends AbstractModel{
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get The indexes of the subsequent actions. 
+     * Get The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ReardriveIndex The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getReardriveIndex() {
         return this.ReardriveIndex;
@@ -124,15 +133,19 @@ public class Activity extends AbstractModel{
 
     /**
      * Set The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReardriveIndex The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReardriveIndex(Long [] ReardriveIndex) {
         this.ReardriveIndex = ReardriveIndex;
     }
 
     /**
-     * Get The parameters of a subtask. 
+     * Get The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ActivityPara The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ActivityPara getActivityPara() {
         return this.ActivityPara;
@@ -140,7 +153,9 @@ public class Activity extends AbstractModel{
 
     /**
      * Set The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ActivityPara The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setActivityPara(ActivityPara ActivityPara) {
         this.ActivityPara = ActivityPara;

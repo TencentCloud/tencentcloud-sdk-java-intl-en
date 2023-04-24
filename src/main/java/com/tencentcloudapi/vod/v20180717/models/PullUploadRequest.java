@@ -31,6 +31,14 @@ For more information about supported extensions, see [Media types](https://intl.
     private String MediaUrl;
 
     /**
+    * The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private String MediaType;
+
+    /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
     */
     @SerializedName("SubAppId")
@@ -127,6 +135,26 @@ For more information about supported extensions, see [Media types](https://intl.
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
+    }
+
+    /**
+     * Get The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`. 
+     * @return MediaType The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+     */
+    public String getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+     * @param MediaType The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+     */
+    public void setMediaType(String MediaType) {
+        this.MediaType = MediaType;
     }
 
     /**
@@ -324,6 +352,9 @@ For more information about supported extensions, see [Media types](https://intl.
         if (source.MediaUrl != null) {
             this.MediaUrl = new String(source.MediaUrl);
         }
+        if (source.MediaType != null) {
+            this.MediaType = new String(source.MediaType);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
@@ -365,6 +396,7 @@ For more information about supported extensions, see [Media types](https://intl.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "MediaName", this.MediaName);
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);

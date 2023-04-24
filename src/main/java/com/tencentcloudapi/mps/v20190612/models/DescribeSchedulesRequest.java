@@ -30,10 +30,20 @@ public class DescribeSchedulesRequest extends AbstractModel{
     private Long [] ScheduleIds;
 
     /**
+    * The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private String TriggerType;
+
+    /**
     * The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
     */
     @SerializedName("Status")
     @Expose
@@ -70,14 +80,42 @@ If you do not specify this parameter, schemes in both statuses will be returned.
     }
 
     /**
+     * Get The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type. 
+     * @return TriggerType The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+     */
+    public String getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+     * @param TriggerType The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+     */
+    public void setTriggerType(String TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
+    /**
      * Get The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned. 
+If you do not specify this parameter, all schemes will be returned regardless of the status. 
      * @return Status The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
      */
     public String getStatus() {
         return this.Status;
@@ -87,11 +125,11 @@ If you do not specify this parameter, schemes in both statuses will be returned.
      * Set The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
      * @param Status The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -143,6 +181,9 @@ If you do not specify this parameter, schemes in both statuses will be returned.
                 this.ScheduleIds[i] = new Long(source.ScheduleIds[i]);
             }
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -160,6 +201,7 @@ If you do not specify this parameter, schemes in both statuses will be returned.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ScheduleIds.", this.ScheduleIds);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

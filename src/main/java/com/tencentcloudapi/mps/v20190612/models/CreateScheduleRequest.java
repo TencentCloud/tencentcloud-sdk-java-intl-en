@@ -51,7 +51,8 @@ public class CreateScheduleRequest extends AbstractModel{
     private TaskOutputStorage OutputStorage;
 
     /**
-    * The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+    * The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
     */
     @SerializedName("OutputDir")
     @Expose
@@ -129,16 +130,20 @@ public class CreateScheduleRequest extends AbstractModel{
     }
 
     /**
-     * Get The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used. 
-     * @return OutputDir The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+     * Get The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory. 
+     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
-     * @param OutputDir The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+     * Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
+     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;

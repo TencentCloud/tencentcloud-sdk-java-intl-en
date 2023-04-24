@@ -46,6 +46,13 @@ public class ImageOperation extends AbstractModel{
     private ImageCenterCut CenterCut;
 
     /**
+    * Image blurring. This parameter is valid only if `Type` is `Blur`.
+    */
+    @SerializedName("Blur")
+    @Expose
+    private ImageBlur Blur;
+
+    /**
      * Get The image processing type. Valid values:
 <li>`Scale`: Scaling</li>
 <li>`CenterCut`: Cropping</li> 
@@ -101,6 +108,22 @@ public class ImageOperation extends AbstractModel{
         this.CenterCut = CenterCut;
     }
 
+    /**
+     * Get Image blurring. This parameter is valid only if `Type` is `Blur`. 
+     * @return Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+     */
+    public ImageBlur getBlur() {
+        return this.Blur;
+    }
+
+    /**
+     * Set Image blurring. This parameter is valid only if `Type` is `Blur`.
+     * @param Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+     */
+    public void setBlur(ImageBlur Blur) {
+        this.Blur = Blur;
+    }
+
     public ImageOperation() {
     }
 
@@ -118,6 +141,9 @@ public class ImageOperation extends AbstractModel{
         if (source.CenterCut != null) {
             this.CenterCut = new ImageCenterCut(source.CenterCut);
         }
+        if (source.Blur != null) {
+            this.Blur = new ImageBlur(source.Blur);
+        }
     }
 
 
@@ -128,6 +154,7 @@ public class ImageOperation extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Scale.", this.Scale);
         this.setParamObj(map, prefix + "CenterCut.", this.CenterCut);
+        this.setParamObj(map, prefix + "Blur.", this.Blur);
 
     }
 }

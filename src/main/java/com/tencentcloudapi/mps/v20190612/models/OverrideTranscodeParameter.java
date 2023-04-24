@@ -76,6 +76,14 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private SubtitleTemplate SubtitleTemplate;
 
     /**
+    * The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AddonAudioStream")
+    @Expose
+    private MediaInputInfo [] AddonAudioStream;
+
+    /**
      * Get Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files. 
      * @return Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
      */
@@ -203,6 +211,26 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
+    /**
+     * Get The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AddonAudioStream The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public MediaInputInfo [] getAddonAudioStream() {
+        return this.AddonAudioStream;
+    }
+
+    /**
+     * Set The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AddonAudioStream The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAddonAudioStream(MediaInputInfo [] AddonAudioStream) {
+        this.AddonAudioStream = AddonAudioStream;
+    }
+
     public OverrideTranscodeParameter() {
     }
 
@@ -232,6 +260,12 @@ public class OverrideTranscodeParameter extends AbstractModel{
         if (source.SubtitleTemplate != null) {
             this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
         }
+        if (source.AddonAudioStream != null) {
+            this.AddonAudioStream = new MediaInputInfo[source.AddonAudioStream.length];
+            for (int i = 0; i < source.AddonAudioStream.length; i++) {
+                this.AddonAudioStream[i] = new MediaInputInfo(source.AddonAudioStream[i]);
+            }
+        }
     }
 
 
@@ -246,6 +280,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
+        this.setParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
 
     }
 }

@@ -20,22 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConfirmEventsRequest extends AbstractModel{
+public class DeleteRebuildMediaTemplateRequest extends AbstractModel{
 
     /**
-    * Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
+    * The remaster template ID.
     */
-    @SerializedName("EventHandles")
+    @SerializedName("Definition")
     @Expose
-    private String [] EventHandles;
-
-    /**
-    * Reserved field for special purposes.
-    */
-    @SerializedName("ExtInfo")
-    @Expose
-    private String ExtInfo;
+    private Long Definition;
 
     /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -45,39 +37,19 @@ Array length limit: 16.
     private Long SubAppId;
 
     /**
-     * Get Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16. 
-     * @return EventHandles Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
+     * Get The remaster template ID. 
+     * @return Definition The remaster template ID.
      */
-    public String [] getEventHandles() {
-        return this.EventHandles;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
-     * @param EventHandles Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
-Array length limit: 16.
+     * Set The remaster template ID.
+     * @param Definition The remaster template ID.
      */
-    public void setEventHandles(String [] EventHandles) {
-        this.EventHandles = EventHandles;
-    }
-
-    /**
-     * Get Reserved field for special purposes. 
-     * @return ExtInfo Reserved field for special purposes.
-     */
-    public String getExtInfo() {
-        return this.ExtInfo;
-    }
-
-    /**
-     * Set Reserved field for special purposes.
-     * @param ExtInfo Reserved field for special purposes.
-     */
-    public void setExtInfo(String ExtInfo) {
-        this.ExtInfo = ExtInfo;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
     /**
@@ -96,22 +68,16 @@ Array length limit: 16.
         this.SubAppId = SubAppId;
     }
 
-    public ConfirmEventsRequest() {
+    public DeleteRebuildMediaTemplateRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ConfirmEventsRequest(ConfirmEventsRequest source) {
-        if (source.EventHandles != null) {
-            this.EventHandles = new String[source.EventHandles.length];
-            for (int i = 0; i < source.EventHandles.length; i++) {
-                this.EventHandles[i] = new String(source.EventHandles[i]);
-            }
-        }
-        if (source.ExtInfo != null) {
-            this.ExtInfo = new String(source.ExtInfo);
+    public DeleteRebuildMediaTemplateRequest(DeleteRebuildMediaTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -123,8 +89,7 @@ Array length limit: 16.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "EventHandles.", this.EventHandles);
-        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

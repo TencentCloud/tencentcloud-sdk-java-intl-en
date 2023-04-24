@@ -97,6 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
+    * The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AiQualityControlTaskResult")
+    @Expose
+    private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
+
+    /**
      * Get The media processing task ID. 
      * @return TaskId The media processing task ID.
      */
@@ -272,6 +280,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
+    /**
+     * Get The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AiQualityControlTaskResult The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
+        return this.AiQualityControlTaskResult;
+    }
+
+    /**
+     * Set The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiQualityControlTaskResult The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {
+        this.AiQualityControlTaskResult = AiQualityControlTaskResult;
+    }
+
     public WorkflowTask() {
     }
 
@@ -322,6 +350,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AiRecognitionResultSet[i] = new AiRecognitionResult(source.AiRecognitionResultSet[i]);
             }
         }
+        if (source.AiQualityControlTaskResult != null) {
+            this.AiQualityControlTaskResult = new ScheduleQualityControlTaskResult(source.AiQualityControlTaskResult);
+        }
     }
 
 
@@ -339,6 +370,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
         this.setParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
+        this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
 
     }
 }

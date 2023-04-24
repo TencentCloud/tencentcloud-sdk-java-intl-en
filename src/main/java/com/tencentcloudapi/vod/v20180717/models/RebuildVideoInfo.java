@@ -20,38 +20,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RebuildMediaTaskInput extends AbstractModel{
+public class RebuildVideoInfo extends AbstractModel{
 
     /**
-    * The file ID.
-    */
-    @SerializedName("FileId")
-    @Expose
-    private String FileId;
-
-    /**
-    * The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-    */
-    @SerializedName("StartTimeOffset")
-    @Expose
-    private Float StartTimeOffset;
-
-    /**
-    * The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-    */
-    @SerializedName("EndTimeOffset")
-    @Expose
-    private Float EndTimeOffset;
-
-    /**
-    * The ID of the remaster template.
-    */
-    @SerializedName("Definition")
-    @Expose
-    private Long Definition;
-
-    /**
-    * The video quality remastering parameters.
+    * The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RepairInfo")
     @Expose
@@ -59,6 +32,7 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VideoFrameInterpolationInfo")
     @Expose
@@ -66,13 +40,15 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuperResolutionInfo")
     @Expose
     private SuperResolutionInfo SuperResolutionInfo;
 
     /**
-    * The high dynamic range (HDR) parameters.
+    * The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HDRInfo")
     @Expose
@@ -80,20 +56,15 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VideoDenoiseInfo")
     @Expose
     private VideoDenoiseInfo VideoDenoiseInfo;
 
     /**
-    * The noise removal parameters.
-    */
-    @SerializedName("AudioDenoiseInfo")
-    @Expose
-    private AudioDenoiseInfo AudioDenoiseInfo;
-
-    /**
     * The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ColorInfo")
     @Expose
@@ -101,6 +72,7 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SharpInfo")
     @Expose
@@ -108,6 +80,7 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FaceInfo")
     @Expose
@@ -115,6 +88,7 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LowLightInfo")
     @Expose
@@ -122,108 +96,45 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
     * The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScratchRepairInfo")
     @Expose
     private ScratchRepairInfo ScratchRepairInfo;
 
     /**
-    * The artifact removal (smoothing) parameters.
+    * The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ArtifactRepairInfo")
     @Expose
     private ArtifactRepairInfo ArtifactRepairInfo;
 
     /**
-    * The output parameters of the file.
-    */
-    @SerializedName("TargetInfo")
-    @Expose
-    private RebuildMediaTargetInfo TargetInfo;
-
-    /**
-     * Get The file ID. 
-     * @return FileId The file ID.
-     */
-    public String getFileId() {
-        return this.FileId;
-    }
-
-    /**
-     * Set The file ID.
-     * @param FileId The file ID.
-     */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
-    }
-
-    /**
-     * Get The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video. 
-     * @return StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     */
-    public Float getStartTimeOffset() {
-        return this.StartTimeOffset;
-    }
-
-    /**
-     * Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     * @param StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     */
-    public void setStartTimeOffset(Float StartTimeOffset) {
-        this.StartTimeOffset = StartTimeOffset;
-    }
-
-    /**
-     * Get The end offset (seconds). If you do not specify this, the segment will end at the end of the video. 
-     * @return EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     */
-    public Float getEndTimeOffset() {
-        return this.EndTimeOffset;
-    }
-
-    /**
-     * Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     */
-    public void setEndTimeOffset(Float EndTimeOffset) {
-        this.EndTimeOffset = EndTimeOffset;
-    }
-
-    /**
-     * Get The ID of the remaster template. 
-     * @return Definition The ID of the remaster template.
-     */
-    public Long getDefinition() {
-        return this.Definition;
-    }
-
-    /**
-     * Set The ID of the remaster template.
-     * @param Definition The ID of the remaster template.
-     */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
-    }
-
-    /**
-     * Get The video quality remastering parameters. 
-     * @return RepairInfo The video quality remastering parameters.
+     * Get The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RepairInfo The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RepairInfo getRepairInfo() {
         return this.RepairInfo;
     }
 
     /**
-     * Set The video quality remastering parameters.
-     * @param RepairInfo The video quality remastering parameters.
+     * Set The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RepairInfo The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRepairInfo(RepairInfo RepairInfo) {
         this.RepairInfo = RepairInfo;
     }
 
     /**
-     * Get The smart frame interpolation parameters. 
+     * Get The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VideoFrameInterpolationInfo The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() {
         return this.VideoFrameInterpolationInfo;
@@ -231,15 +142,19 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VideoFrameInterpolationInfo The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo VideoFrameInterpolationInfo) {
         this.VideoFrameInterpolationInfo = VideoFrameInterpolationInfo;
     }
 
     /**
-     * Get The super resolution parameters. 
+     * Get The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SuperResolutionInfo The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SuperResolutionInfo getSuperResolutionInfo() {
         return this.SuperResolutionInfo;
@@ -247,31 +162,39 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SuperResolutionInfo The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSuperResolutionInfo(SuperResolutionInfo SuperResolutionInfo) {
         this.SuperResolutionInfo = SuperResolutionInfo;
     }
 
     /**
-     * Get The high dynamic range (HDR) parameters. 
-     * @return HDRInfo The high dynamic range (HDR) parameters.
+     * Get The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HDRInfo The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public HDRInfo getHDRInfo() {
         return this.HDRInfo;
     }
 
     /**
-     * Set The high dynamic range (HDR) parameters.
-     * @param HDRInfo The high dynamic range (HDR) parameters.
+     * Set The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HDRInfo The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHDRInfo(HDRInfo HDRInfo) {
         this.HDRInfo = HDRInfo;
     }
 
     /**
-     * Get The image noise removal parameters. 
+     * Get The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VideoDenoiseInfo The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VideoDenoiseInfo getVideoDenoiseInfo() {
         return this.VideoDenoiseInfo;
@@ -279,31 +202,19 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VideoDenoiseInfo The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVideoDenoiseInfo(VideoDenoiseInfo VideoDenoiseInfo) {
         this.VideoDenoiseInfo = VideoDenoiseInfo;
     }
 
     /**
-     * Get The noise removal parameters. 
-     * @return AudioDenoiseInfo The noise removal parameters.
-     */
-    public AudioDenoiseInfo getAudioDenoiseInfo() {
-        return this.AudioDenoiseInfo;
-    }
-
-    /**
-     * Set The noise removal parameters.
-     * @param AudioDenoiseInfo The noise removal parameters.
-     */
-    public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
-        this.AudioDenoiseInfo = AudioDenoiseInfo;
-    }
-
-    /**
-     * Get The color enhancement parameters. 
+     * Get The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ColorInfo The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ColorEnhanceInfo getColorInfo() {
         return this.ColorInfo;
@@ -311,15 +222,19 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ColorInfo The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColorInfo(ColorEnhanceInfo ColorInfo) {
         this.ColorInfo = ColorInfo;
     }
 
     /**
-     * Get The detail enhancement parameters. 
+     * Get The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SharpInfo The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SharpEnhanceInfo getSharpInfo() {
         return this.SharpInfo;
@@ -327,15 +242,19 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SharpInfo The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSharpInfo(SharpEnhanceInfo SharpInfo) {
         this.SharpInfo = SharpInfo;
     }
 
     /**
-     * Get The face enhancement parameters. 
+     * Get The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FaceInfo The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FaceEnhanceInfo getFaceInfo() {
         return this.FaceInfo;
@@ -343,15 +262,19 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param FaceInfo The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFaceInfo(FaceEnhanceInfo FaceInfo) {
         this.FaceInfo = FaceInfo;
     }
 
     /**
-     * Get The low-light enhancement parameters. 
+     * Get The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LowLightInfo The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LowLightEnhanceInfo getLowLightInfo() {
         return this.LowLightInfo;
@@ -359,15 +282,19 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LowLightInfo The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLowLightInfo(LowLightEnhanceInfo LowLightInfo) {
         this.LowLightInfo = LowLightInfo;
     }
 
     /**
-     * Get The banding removal parameters. 
+     * Get The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ScratchRepairInfo The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScratchRepairInfo getScratchRepairInfo() {
         return this.ScratchRepairInfo;
@@ -375,64 +302,42 @@ public class RebuildMediaTaskInput extends AbstractModel{
 
     /**
      * Set The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScratchRepairInfo The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScratchRepairInfo(ScratchRepairInfo ScratchRepairInfo) {
         this.ScratchRepairInfo = ScratchRepairInfo;
     }
 
     /**
-     * Get The artifact removal (smoothing) parameters. 
-     * @return ArtifactRepairInfo The artifact removal (smoothing) parameters.
+     * Get The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ArtifactRepairInfo The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ArtifactRepairInfo getArtifactRepairInfo() {
         return this.ArtifactRepairInfo;
     }
 
     /**
-     * Set The artifact removal (smoothing) parameters.
-     * @param ArtifactRepairInfo The artifact removal (smoothing) parameters.
+     * Set The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ArtifactRepairInfo The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setArtifactRepairInfo(ArtifactRepairInfo ArtifactRepairInfo) {
         this.ArtifactRepairInfo = ArtifactRepairInfo;
     }
 
-    /**
-     * Get The output parameters of the file. 
-     * @return TargetInfo The output parameters of the file.
-     */
-    public RebuildMediaTargetInfo getTargetInfo() {
-        return this.TargetInfo;
-    }
-
-    /**
-     * Set The output parameters of the file.
-     * @param TargetInfo The output parameters of the file.
-     */
-    public void setTargetInfo(RebuildMediaTargetInfo TargetInfo) {
-        this.TargetInfo = TargetInfo;
-    }
-
-    public RebuildMediaTaskInput() {
+    public RebuildVideoInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RebuildMediaTaskInput(RebuildMediaTaskInput source) {
-        if (source.FileId != null) {
-            this.FileId = new String(source.FileId);
-        }
-        if (source.StartTimeOffset != null) {
-            this.StartTimeOffset = new Float(source.StartTimeOffset);
-        }
-        if (source.EndTimeOffset != null) {
-            this.EndTimeOffset = new Float(source.EndTimeOffset);
-        }
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
-        }
+    public RebuildVideoInfo(RebuildVideoInfo source) {
         if (source.RepairInfo != null) {
             this.RepairInfo = new RepairInfo(source.RepairInfo);
         }
@@ -447,9 +352,6 @@ public class RebuildMediaTaskInput extends AbstractModel{
         }
         if (source.VideoDenoiseInfo != null) {
             this.VideoDenoiseInfo = new VideoDenoiseInfo(source.VideoDenoiseInfo);
-        }
-        if (source.AudioDenoiseInfo != null) {
-            this.AudioDenoiseInfo = new AudioDenoiseInfo(source.AudioDenoiseInfo);
         }
         if (source.ColorInfo != null) {
             this.ColorInfo = new ColorEnhanceInfo(source.ColorInfo);
@@ -469,9 +371,6 @@ public class RebuildMediaTaskInput extends AbstractModel{
         if (source.ArtifactRepairInfo != null) {
             this.ArtifactRepairInfo = new ArtifactRepairInfo(source.ArtifactRepairInfo);
         }
-        if (source.TargetInfo != null) {
-            this.TargetInfo = new RebuildMediaTargetInfo(source.TargetInfo);
-        }
     }
 
 
@@ -479,23 +378,17 @@ public class RebuildMediaTaskInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
-        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
-        this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RepairInfo.", this.RepairInfo);
         this.setParamObj(map, prefix + "VideoFrameInterpolationInfo.", this.VideoFrameInterpolationInfo);
         this.setParamObj(map, prefix + "SuperResolutionInfo.", this.SuperResolutionInfo);
         this.setParamObj(map, prefix + "HDRInfo.", this.HDRInfo);
         this.setParamObj(map, prefix + "VideoDenoiseInfo.", this.VideoDenoiseInfo);
-        this.setParamObj(map, prefix + "AudioDenoiseInfo.", this.AudioDenoiseInfo);
         this.setParamObj(map, prefix + "ColorInfo.", this.ColorInfo);
         this.setParamObj(map, prefix + "SharpInfo.", this.SharpInfo);
         this.setParamObj(map, prefix + "FaceInfo.", this.FaceInfo);
         this.setParamObj(map, prefix + "LowLightInfo.", this.LowLightInfo);
         this.setParamObj(map, prefix + "ScratchRepairInfo.", this.ScratchRepairInfo);
         this.setParamObj(map, prefix + "ArtifactRepairInfo.", this.ArtifactRepairInfo);
-        this.setParamObj(map, prefix + "TargetInfo.", this.TargetInfo);
 
     }
 }

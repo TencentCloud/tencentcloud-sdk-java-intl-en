@@ -20,15 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageProcessingTemplateRequest extends AbstractModel{
+public class DescribeRebuildMediaTemplatesRequest extends AbstractModel{
 
     /**
-    * An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+    * The remaster template IDs.
     */
-    @SerializedName("Operations")
+    @SerializedName("Definitions")
     @Expose
-    private ImageOperation [] Operations;
+    private Long [] Definitions;
 
     /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -38,37 +37,42 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * The name of the image processing template. Length limit: 64 characters.
+    * The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
     */
-    @SerializedName("Name")
+    @SerializedName("Type")
     @Expose
-    private String Name;
+    private String Type;
 
     /**
-    * The template description. Length limit: 256 characters.
+    * The pagination offset. Default value: 0.
     */
-    @SerializedName("Comment")
+    @SerializedName("Offset")
     @Expose
-    private String Comment;
+    private Long Offset;
 
     /**
-     * Get An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li> 
-     * @return Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+    * The maximum number of records to return. Default value: 10. Maximum value: 100.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get The remaster template IDs. 
+     * @return Definitions The remaster template IDs.
      */
-    public ImageOperation [] getOperations() {
-        return this.Operations;
+    public Long [] getDefinitions() {
+        return this.Definitions;
     }
 
     /**
-     * Set An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
-     * @param Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+     * Set The remaster template IDs.
+     * @param Definitions The remaster template IDs.
      */
-    public void setOperations(ImageOperation [] Operations) {
-        this.Operations = Operations;
+    public void setDefinitions(Long [] Definitions) {
+        this.Definitions = Definitions;
     }
 
     /**
@@ -88,59 +92,86 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get The name of the image processing template. Length limit: 64 characters. 
-     * @return Name The name of the image processing template. Length limit: 64 characters.
+     * Get The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li> 
+     * @return Type The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
      */
-    public String getName() {
-        return this.Name;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set The name of the image processing template. Length limit: 64 characters.
-     * @param Name The name of the image processing template. Length limit: 64 characters.
+     * Set The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
+     * @param Type The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
-     * Get The template description. Length limit: 256 characters. 
-     * @return Comment The template description. Length limit: 256 characters.
+     * Get The pagination offset. Default value: 0. 
+     * @return Offset The pagination offset. Default value: 0.
      */
-    public String getComment() {
-        return this.Comment;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set The template description. Length limit: 256 characters.
-     * @param Comment The template description. Length limit: 256 characters.
+     * Set The pagination offset. Default value: 0.
+     * @param Offset The pagination offset. Default value: 0.
      */
-    public void setComment(String Comment) {
-        this.Comment = Comment;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
-    public CreateImageProcessingTemplateRequest() {
+    /**
+     * Get The maximum number of records to return. Default value: 10. Maximum value: 100. 
+     * @return Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set The maximum number of records to return. Default value: 10. Maximum value: 100.
+     * @param Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    public DescribeRebuildMediaTemplatesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateImageProcessingTemplateRequest(CreateImageProcessingTemplateRequest source) {
-        if (source.Operations != null) {
-            this.Operations = new ImageOperation[source.Operations.length];
-            for (int i = 0; i < source.Operations.length; i++) {
-                this.Operations[i] = new ImageOperation(source.Operations[i]);
+    public DescribeRebuildMediaTemplatesRequest(DescribeRebuildMediaTemplatesRequest source) {
+        if (source.Definitions != null) {
+            this.Definitions = new Long[source.Definitions.length];
+            for (int i = 0; i < source.Definitions.length; i++) {
+                this.Definitions[i] = new Long(source.Definitions[i]);
             }
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
-        if (source.Comment != null) {
-            this.Comment = new String(source.Comment);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
     }
 
@@ -149,10 +180,11 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Operations.", this.Operations);
+        this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

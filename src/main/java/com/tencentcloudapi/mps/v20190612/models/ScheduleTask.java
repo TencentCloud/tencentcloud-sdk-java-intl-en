@@ -39,6 +39,20 @@ public class ScheduleTask extends AbstractModel{
     private String Status;
 
     /**
+    * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private Long ErrCode;
+
+    /**
+    * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * The information of the file processed.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -100,6 +114,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type. 
+     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     */
+    public Long getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * @param ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     */
+    public void setErrCode(Long ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type. 
+     * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     * @param Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -176,6 +222,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.InputInfo != null) {
             this.InputInfo = new MediaInputInfo(source.InputInfo);
         }
@@ -197,6 +249,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamArrayObj(map, prefix + "ActivityResultSet.", this.ActivityResultSet);

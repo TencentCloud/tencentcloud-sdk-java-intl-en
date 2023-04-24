@@ -180,6 +180,110 @@ This API is not fully available for the time being. For more information, please
     }
 
     /**
+     *This API is used to recognize an Indonesian identity card.
+
+The API request rate is limited to 20 requests/sec by default.
+     * @param req RecognizeIndonesiaIDCardOCRRequest
+     * @return RecognizeIndonesiaIDCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeIndonesiaIDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to recognize a Philippine driver's license.
+     * @param req RecognizePhilippinesDrivingLicenseOCRRequest
+     * @return RecognizePhilippinesDrivingLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to recognize a Philippine SSSID/UMID card.
+     * @param req RecognizePhilippinesSssIDOCRRequest
+     * @return RecognizePhilippinesSssIDOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesSssIDOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to recognize a Philippine TIN ID card.
+     * @param req RecognizePhilippinesTinIDOCRRequest
+     * @return RecognizePhilippinesTinIDOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesTinIDOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to recognize a Philippine voters ID card. It can recognize fields such as first name, family name, date of birth, civil status, citizenship, address, precinct, and voter's identification number (VIN).
+
+The API request rate is limited to 20 requests/sec by default.
+     * @param req RecognizePhilippinesVoteIDOCRRequest
+     * @return RecognizePhilippinesVoteIDOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesVoteIDOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
 
 This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
