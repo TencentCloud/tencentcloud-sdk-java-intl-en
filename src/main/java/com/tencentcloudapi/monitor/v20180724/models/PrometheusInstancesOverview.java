@@ -134,6 +134,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long BoundNormal;
 
     /**
+    * Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourcePackageStatus")
+    @Expose
+    private Long ResourcePackageStatus;
+
+    /**
+    * Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourcePackageSpecName")
+    @Expose
+    private String ResourcePackageSpecName;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -397,6 +413,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.BoundNormal = BoundNormal;
     }
 
+    /**
+     * Get Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourcePackageStatus Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getResourcePackageStatus() {
+        return this.ResourcePackageStatus;
+    }
+
+    /**
+     * Set Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourcePackageStatus Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourcePackageStatus(Long ResourcePackageStatus) {
+        this.ResourcePackageStatus = ResourcePackageStatus;
+    }
+
+    /**
+     * Get Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourcePackageSpecName Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getResourcePackageSpecName() {
+        return this.ResourcePackageSpecName;
+    }
+
+    /**
+     * Set Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourcePackageSpecName Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourcePackageSpecName(String ResourcePackageSpecName) {
+        this.ResourcePackageSpecName = ResourcePackageSpecName;
+    }
+
     public PrometheusInstancesOverview() {
     }
 
@@ -450,6 +506,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BoundNormal != null) {
             this.BoundNormal = new Long(source.BoundNormal);
         }
+        if (source.ResourcePackageStatus != null) {
+            this.ResourcePackageStatus = new Long(source.ResourcePackageStatus);
+        }
+        if (source.ResourcePackageSpecName != null) {
+            this.ResourcePackageSpecName = new String(source.ResourcePackageSpecName);
+        }
     }
 
 
@@ -472,6 +534,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "BoundTotal", this.BoundTotal);
         this.setParamSimple(map, prefix + "BoundNormal", this.BoundNormal);
+        this.setParamSimple(map, prefix + "ResourcePackageStatus", this.ResourcePackageStatus);
+        this.setParamSimple(map, prefix + "ResourcePackageSpecName", this.ResourcePackageSpecName);
 
     }
 }

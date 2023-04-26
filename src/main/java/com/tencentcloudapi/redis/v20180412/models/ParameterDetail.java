@@ -30,7 +30,7 @@ public class ParameterDetail extends AbstractModel{
     private String Name;
 
     /**
-    * Data type of the parameter
+    * Parameter Type
     */
     @SerializedName("ParamType")
     @Expose
@@ -51,14 +51,16 @@ public class ParameterDetail extends AbstractModel{
     private String Description;
 
     /**
-    * Current value
+    * Current value of the parameter
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+    * Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
     */
     @SerializedName("NeedReboot")
     @Expose
@@ -81,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Min;
 
     /**
-    * Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+    * Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnumValue")
@@ -105,16 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data type of the parameter 
-     * @return ParamType Data type of the parameter
+     * Get Parameter Type 
+     * @return ParamType Parameter Type
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set Data type of the parameter
-     * @param ParamType Data type of the parameter
+     * Set Parameter Type
+     * @param ParamType Parameter Type
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
@@ -153,32 +155,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Current value 
-     * @return CurrentValue Current value
+     * Get Current value of the parameter 
+     * @return CurrentValue Current value of the parameter
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value
-     * @param CurrentValue Current value
+     * Set Current value of the parameter
+     * @param CurrentValue Current value of the parameter
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes). 
-     * @return NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+     * Get Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required. 
+     * @return NeedReboot Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
-     * @param NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+     * Set Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
+     * @param NeedReboot Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
@@ -225,9 +235,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+     * Get Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getEnumValue() {
@@ -235,9 +245,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+     * Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnumValue(String [] EnumValue) {

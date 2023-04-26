@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Groups extends AbstractModel{
 
     /**
-    * User App ID
+    * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
     */
     @SerializedName("AppId")
     @Expose
@@ -55,7 +55,7 @@ public class Groups extends AbstractModel{
     private Long RegionId;
 
     /**
-    * Replication group ID
+    * Replication group ID in the format of "crs-rpl-deind****"
     */
     @SerializedName("GroupId")
     @Expose
@@ -105,16 +105,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Remark;
 
     /**
-     * Get User App ID 
-     * @return AppId User App ID
+     * Get User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID. 
+     * @return AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User App ID
-     * @param AppId User App ID
+     * Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+     * @param AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -209,16 +209,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Replication group ID 
-     * @return GroupId Replication group ID
+     * Get Replication group ID in the format of "crs-rpl-deind****" 
+     * @return GroupId Replication group ID in the format of "crs-rpl-deind****"
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID
-     * @param GroupId Replication group ID
+     * Set Replication group ID in the format of "crs-rpl-deind****"
+     * @param GroupId Replication group ID in the format of "crs-rpl-deind****"
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

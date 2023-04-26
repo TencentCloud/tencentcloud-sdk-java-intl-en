@@ -37,7 +37,8 @@ public class InstanceSet extends AbstractModel{
     private String InstanceId;
 
     /**
-    * User AppID
+    * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
     */
     @SerializedName("Appid")
     @Expose
@@ -100,28 +101,38 @@ public class InstanceSet extends AbstractModel{
     private Long Port;
 
     /**
-    * Instance creation time
+    * Instance creation time in the format of "2020-01-15 10:20:00"
     */
     @SerializedName("Createtime")
     @Expose
     private String Createtime;
 
     /**
-    * Instance capacity in MB
+    * Instance memory capacity in MB (1 MB = 1024 KB)
     */
     @SerializedName("Size")
     @Expose
     private Float Size;
 
     /**
-    * This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+    * This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
     */
     @SerializedName("SizeUsed")
     @Expose
     private Float SizeUsed;
 
     /**
-    * Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+    * Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
     */
     @SerializedName("Type")
     @Expose
@@ -135,7 +146,7 @@ public class InstanceSet extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * Instance expiration time
+    * The time when a monthly subscribed instance expires
     */
     @SerializedName("DeadlineTime")
     @Expose
@@ -184,7 +195,7 @@ public class InstanceSet extends AbstractModel{
     private String InstanceTitle;
 
     /**
-    * Scheduled deactivation time
+    * The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -240,7 +251,7 @@ public class InstanceSet extends AbstractModel{
     private Long PriceId;
 
     /**
-    * Isolation time
+    * The time when an instance start to be isolated
     */
     @SerializedName("CloseTime")
     @Expose
@@ -342,7 +353,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long DiskSize;
 
     /**
-    * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+    * Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MonitorVersion")
@@ -390,8 +401,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String WanAddress;
 
     /**
-    * Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolarisServer")
     @Expose
@@ -462,16 +473,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get User AppID 
-     * @return Appid User AppID
+     * Get User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+ 
+     * @return Appid User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set User AppID
-     * @param Appid User AppID
+     * Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
+     * @param Appid User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
@@ -606,64 +621,104 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Instance creation time 
-     * @return Createtime Instance creation time
+     * Get Instance creation time in the format of "2020-01-15 10:20:00" 
+     * @return Createtime Instance creation time in the format of "2020-01-15 10:20:00"
      */
     public String getCreatetime() {
         return this.Createtime;
     }
 
     /**
-     * Set Instance creation time
-     * @param Createtime Instance creation time
+     * Set Instance creation time in the format of "2020-01-15 10:20:00"
+     * @param Createtime Instance creation time in the format of "2020-01-15 10:20:00"
      */
     public void setCreatetime(String Createtime) {
         this.Createtime = Createtime;
     }
 
     /**
-     * Get Instance capacity in MB 
-     * @return Size Instance capacity in MB
+     * Get Instance memory capacity in MB (1 MB = 1024 KB) 
+     * @return Size Instance memory capacity in MB (1 MB = 1024 KB)
      */
     public Float getSize() {
         return this.Size;
     }
 
     /**
-     * Set Instance capacity in MB
-     * @param Size Instance capacity in MB
+     * Set Instance memory capacity in MB (1 MB = 1024 KB)
+     * @param Size Instance memory capacity in MB (1 MB = 1024 KB)
      */
     public void setSize(Float Size) {
         this.Size = Size;
     }
 
     /**
-     * Get This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance. 
-     * @return SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * Get This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance. 
+     * @return SizeUsed This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      */
     public Float getSizeUsed() {
         return this.SizeUsed;
     }
 
     /**
-     * Set This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
-     * @param SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * Set This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * @param SizeUsed This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      */
     public void setSizeUsed(Float SizeUsed) {
         this.SizeUsed = SizeUsed;
     }
 
     /**
-     * Get Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul> 
-     * @return Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+     * Get Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture). 
+     * @return Type Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
-     * @param Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+     * Set Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+     * @param Type Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -686,16 +741,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Instance expiration time 
-     * @return DeadlineTime Instance expiration time
+     * Get The time when a monthly subscribed instance expires 
+     * @return DeadlineTime The time when a monthly subscribed instance expires
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set Instance expiration time
-     * @param DeadlineTime Instance expiration time
+     * Set The time when a monthly subscribed instance expires
+     * @param DeadlineTime The time when a monthly subscribed instance expires
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
@@ -798,16 +853,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Scheduled deactivation time 
-     * @return OfflineTime Scheduled deactivation time
+     * Get The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default. 
+     * @return OfflineTime The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set Scheduled deactivation time
-     * @param OfflineTime Scheduled deactivation time
+     * Set The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
+     * @param OfflineTime The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
@@ -926,16 +981,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Isolation time 
-     * @return CloseTime Isolation time
+     * Get The time when an instance start to be isolated 
+     * @return CloseTime The time when an instance start to be isolated
      */
     public String getCloseTime() {
         return this.CloseTime;
     }
 
     /**
-     * Set Isolation time
-     * @param CloseTime Isolation time
+     * Set The time when an instance start to be isolated
+     * @param CloseTime The time when an instance start to be isolated
      */
     public void setCloseTime(String CloseTime) {
         this.CloseTime = CloseTime;
@@ -1178,9 +1233,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+     * Get Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+     * @return MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMonitorVersion() {
@@ -1188,9 +1243,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+     * Set Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+     * @param MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMonitorVersion(String MonitorVersion) {
@@ -1298,20 +1353,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PolarisServer Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PolarisServer Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolarisServer() {
         return this.PolarisServer;
     }
 
     /**
-     * Set Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PolarisServer Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PolarisServer Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolarisServer(String PolarisServer) {
         this.PolarisServer = PolarisServer;

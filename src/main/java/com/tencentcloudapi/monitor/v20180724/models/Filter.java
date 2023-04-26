@@ -44,6 +44,20 @@ public class Filter extends AbstractModel{
     private String Value;
 
     /**
+    * Filter name
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Filter value range
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
      * Get Filter method. Valid values: `=`, `!=`, `in`. 
      * @return Type Filter method. Valid values: `=`, `!=`, `in`.
      */
@@ -91,6 +105,38 @@ public class Filter extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get Filter name 
+     * @return Name Filter name
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Filter name
+     * @param Name Filter name
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Filter value range 
+     * @return Values Filter value range
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set Filter value range
+     * @param Values Filter value range
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
+    }
+
     public Filter() {
     }
 
@@ -108,6 +154,15 @@ public class Filter extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class Filter extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

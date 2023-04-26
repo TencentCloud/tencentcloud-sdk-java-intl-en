@@ -23,29 +23,33 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `15` (Redis 6.0 Memory Edition in standard architecture), `16` (Redis 6.0 Memory Edition in cluster architecture)
+    * Instance type
+<ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul>
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-If `TypeId` is the standard architecture, `MemSize` indicates the total memory capacity of the instance; if `TypeId` is the cluster architecture, `MemSize` indicates the memory capacity per shard.
+    * Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+- When **TypeId** is a standard architecture, **MemSize** is the total memory capacity of the instance;
+- When **TypeId** is a cluster architecture, **MemSize** is the single-shard memory capacity.
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
+    * The number of instances for each purchase. For details, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * Length of purchase in months, which is required when creating a monthly subscribed instance. Valid values: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, set the parameter to `1`.
+    * The purchase duration of an instance
+- If `BillingMode` is `1`, that is, when the billing mode is monthly subscription, you need to set this parameter to specify the duration of the purchased instance. Unit: month. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+- If `BillingMode` is `0`, that is, when the billing mode is pay-as-you-go, you need to set this parameter to `1`.
     */
     @SerializedName("Period")
     @Expose
@@ -66,100 +70,114 @@ If `TypeId` is the standard architecture, `MemSize` indicates the total memory c
     private Long ZoneId;
 
     /**
-    * Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
-If the instance `TypeId` is Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8–30 characters in at least two of the following character types: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and digits.
+    * Instance access password
+- When the input parameter `NoAuth` is `true`, it means that the instance access is set to be password-free, and the `Password` field does not need to be configured; otherwise, `Password` is a required parameter.
+- When the instance type `TypeId` is Redis 2.8 Memory Edition (Standard Architecture), Redis 4.0, 5.0, 6.0 (regardless of architecture), the password must contains 8-30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+- When the instance type **TypeId** is CKV 3.2 Memory Edition (regardless of architecture), the password contains 8-30 letters and digits and excludes other characters.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the classic network will be selected by default. Use the VPC list querying API to query.
+    * VPC ID. If this parameter is not passed in, the classic network will be selected by default. You can query the specific VPC ID in the [VPC console](https://console.cloud.tencent.com/vpc).
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * In the classic network, `subnetId` is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2.
+    * VPC subnet ID. This parameter is not required for the classic network. You can get the specific subnet ID by querying the subnet list in the [VPC console](https://console.cloud.tencent.com/vpc).
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Project ID. The value is subject to the `projectId` returned by user account > user account querying APIs > project list.
+    * Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+    * Auto-renewal flag
+- `0`: Manual renewal (default).
+- `1`: Auto-renewal.
+- `2`: Not auto-renewal (set by user).
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * Array of security group IDs.
+    * Array of security group IDs. Get the security group ID of the instance through the [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1) API.
     */
     @SerializedName("SecurityGroupIdList")
     @Expose
     private String [] SecurityGroupIdList;
 
     /**
-    * User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535].
+    * User-defined network port. Default value: `6379`. Range: [1024,65535].
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * Number of shards in an instance. This parameter is required for Cluster Edition instances. Valid values: [3,5,8,12,16,24,32,64,96,128].
+    * Quantity of instance shards
+- This parameter is not required for instances of Standard Edition.
+- For instances of Cluster Edition, the range of shard quantity is [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128].
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * Number of replicas in the instance. Redis 2.8 Standard Edition and CKV Standard Edition support 1 replica. Standard/Cluster Edition 4.0 and 5.0 support 1–5 replicas.
+    * Quantity of instance replicas
+- For Redis Memory Edition 4.0, 5.0, 6.2 (regardless of architecture), the range of replica quantity is [1,5].
+- For Redis 2.8 Standard Edition and CKV Standard Edition, the replica quantity is `1`.
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * Whether to support read-only replicas. Neither Redis 2.8 Standard Edition nor CKV Standard Edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed to replica nodes. To enable read-only replicas, we recommend you create two or more replicas.
+    * Whether to support read-only replicas.
+- Redis 2.8 Standard Edition and CKV Standard Edition don’t support read-only replicas.
+- If read-only replicas are enabled, read/write separation will be automatically enabled for an instance, with write requests routed to the master node and read requests to the replica node.
+- To enable read-only replicas, we recommend that you create two or more replicas.
     */
     @SerializedName("ReplicasReadonly")
     @Expose
     private Boolean ReplicasReadonly;
 
     /**
-    * Instance name, which can contain up to 60 letters, digits, underscores, or hyphens.
+    * Instance name, which can contain up to 60 letters, digits, hyphens, and underscores.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
+    * Whether to support password-free access for an instance
+- `true`: The instance access is password-free.
+- `false`: The instance access is password-enabled. Default value: `false`. Only instances in a VPC support the password-free access.
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * Node information of the instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for single-AZ deployed instances.
+    * The node information of the instance, including node ID, type, and AZ. For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
+Node information of an instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for instances deployed in a single AZ.
     */
     @SerializedName("NodeSet")
     @Expose
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * Tag bound to the instance to be purchased
+    * The tag for an instance
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -173,96 +191,119 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
     private String ZoneName;
 
     /**
-    * ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+    * The parameter template ID associated with the instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- Query the list of parameter templates of an instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
+    * An internal parameter used to indicate whether to check when creating an instance.
+- `false`: Default value. Send a normal request and create an instance if all the requirements are met.
+- `true`: Send a check request and create no instance.
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-    * Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+    * The product edition of the instance
+- `local`: Local Disk Edition.
+- `cloud`: Cloud Disk Edition.
+- `cdc`: Dedicated Cluster Edition. Default value: `local`.
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+    * Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
     */
     @SerializedName("RedisClusterId")
     @Expose
     private String RedisClusterId;
 
     /**
-     * Get Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `15` (Redis 6.0 Memory Edition in standard architecture), `16` (Redis 6.0 Memory Edition in cluster architecture) 
-     * @return TypeId Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `15` (Redis 6.0 Memory Edition in standard architecture), `16` (Redis 6.0 Memory Edition in cluster architecture)
+     * Get Instance type
+<ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul> 
+     * @return TypeId Instance type
+<ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul>
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `15` (Redis 6.0 Memory Edition in standard architecture), `16` (Redis 6.0 Memory Edition in cluster architecture)
-     * @param TypeId Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `15` (Redis 6.0 Memory Edition in standard architecture), `16` (Redis 6.0 Memory Edition in cluster architecture)
+     * Set Instance type
+<ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul>
+     * @param TypeId Instance type
+<ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul>
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-If `TypeId` is the standard architecture, `MemSize` indicates the total memory capacity of the instance; if `TypeId` is the cluster architecture, `MemSize` indicates the memory capacity per shard. 
-     * @return MemSize Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-If `TypeId` is the standard architecture, `MemSize` indicates the total memory capacity of the instance; if `TypeId` is the cluster architecture, `MemSize` indicates the memory capacity per shard.
+     * Get Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+- When **TypeId** is a standard architecture, **MemSize** is the total memory capacity of the instance;
+- When **TypeId** is a cluster architecture, **MemSize** is the single-shard memory capacity. 
+     * @return MemSize Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+- When **TypeId** is a standard architecture, **MemSize** is the total memory capacity of the instance;
+- When **TypeId** is a cluster architecture, **MemSize** is the single-shard memory capacity.
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-If `TypeId` is the standard architecture, `MemSize` indicates the total memory capacity of the instance; if `TypeId` is the cluster architecture, `MemSize` indicates the memory capacity per shard.
-     * @param MemSize Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-If `TypeId` is the standard architecture, `MemSize` indicates the total memory capacity of the instance; if `TypeId` is the cluster architecture, `MemSize` indicates the memory capacity per shard.
+     * Set Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+- When **TypeId** is a standard architecture, **MemSize** is the total memory capacity of the instance;
+- When **TypeId** is a cluster architecture, **MemSize** is the single-shard memory capacity.
+     * @param MemSize Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+- When **TypeId** is a standard architecture, **MemSize** is the total memory capacity of the instance;
+- When **TypeId** is a cluster architecture, **MemSize** is the single-shard memory capacity.
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1). 
-     * @return GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
+     * Get The number of instances for each purchase. For details, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API. 
+     * @return GoodsNum The number of instances for each purchase. For details, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-     * @param GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
+     * Set The number of instances for each purchase. For details, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+     * @param GoodsNum The number of instances for each purchase. For details, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get Length of purchase in months, which is required when creating a monthly subscribed instance. Valid values: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, set the parameter to `1`. 
-     * @return Period Length of purchase in months, which is required when creating a monthly subscribed instance. Valid values: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, set the parameter to `1`.
+     * Get The purchase duration of an instance
+- If `BillingMode` is `1`, that is, when the billing mode is monthly subscription, you need to set this parameter to specify the duration of the purchased instance. Unit: month. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+- If `BillingMode` is `0`, that is, when the billing mode is pay-as-you-go, you need to set this parameter to `1`. 
+     * @return Period The purchase duration of an instance
+- If `BillingMode` is `1`, that is, when the billing mode is monthly subscription, you need to set this parameter to specify the duration of the purchased instance. Unit: month. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+- If `BillingMode` is `0`, that is, when the billing mode is pay-as-you-go, you need to set this parameter to `1`.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase in months, which is required when creating a monthly subscribed instance. Valid values: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, set the parameter to `1`.
-     * @param Period Length of purchase in months, which is required when creating a monthly subscribed instance. Valid values: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, set the parameter to `1`.
+     * Set The purchase duration of an instance
+- If `BillingMode` is `1`, that is, when the billing mode is monthly subscription, you need to set this parameter to specify the duration of the purchased instance. Unit: month. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+- If `BillingMode` is `0`, that is, when the billing mode is pay-as-you-go, you need to set this parameter to `1`.
+     * @param Period The purchase duration of an instance
+- If `BillingMode` is `1`, that is, when the billing mode is monthly subscription, you need to set this parameter to specify the duration of the purchased instance. Unit: month. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+- If `BillingMode` is `0`, that is, when the billing mode is pay-as-you-go, you need to set this parameter to `1`.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -301,232 +342,288 @@ If `TypeId` is the standard architecture, `MemSize` indicates the total memory c
     }
 
     /**
-     * Get Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
-If the instance `TypeId` is Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8–30 characters in at least two of the following character types: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and digits. 
-     * @return Password Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
-If the instance `TypeId` is Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8–30 characters in at least two of the following character types: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and digits.
+     * Get Instance access password
+- When the input parameter `NoAuth` is `true`, it means that the instance access is set to be password-free, and the `Password` field does not need to be configured; otherwise, `Password` is a required parameter.
+- When the instance type `TypeId` is Redis 2.8 Memory Edition (Standard Architecture), Redis 4.0, 5.0, 6.0 (regardless of architecture), the password must contains 8-30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+- When the instance type **TypeId** is CKV 3.2 Memory Edition (regardless of architecture), the password contains 8-30 letters and digits and excludes other characters. 
+     * @return Password Instance access password
+- When the input parameter `NoAuth` is `true`, it means that the instance access is set to be password-free, and the `Password` field does not need to be configured; otherwise, `Password` is a required parameter.
+- When the instance type `TypeId` is Redis 2.8 Memory Edition (Standard Architecture), Redis 4.0, 5.0, 6.0 (regardless of architecture), the password must contains 8-30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+- When the instance type **TypeId** is CKV 3.2 Memory Edition (regardless of architecture), the password contains 8-30 letters and digits and excludes other characters.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
-If the instance `TypeId` is Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8–30 characters in at least two of the following character types: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and digits.
-     * @param Password Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
-If the instance `TypeId` is Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8–30 characters in at least two of the following character types: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and digits.
+     * Set Instance access password
+- When the input parameter `NoAuth` is `true`, it means that the instance access is set to be password-free, and the `Password` field does not need to be configured; otherwise, `Password` is a required parameter.
+- When the instance type `TypeId` is Redis 2.8 Memory Edition (Standard Architecture), Redis 4.0, 5.0, 6.0 (regardless of architecture), the password must contains 8-30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+- When the instance type **TypeId** is CKV 3.2 Memory Edition (regardless of architecture), the password contains 8-30 letters and digits and excludes other characters.
+     * @param Password Instance access password
+- When the input parameter `NoAuth` is `true`, it means that the instance access is set to be password-free, and the `Password` field does not need to be configured; otherwise, `Password` is a required parameter.
+- When the instance type `TypeId` is Redis 2.8 Memory Edition (Standard Architecture), Redis 4.0, 5.0, 6.0 (regardless of architecture), the password must contains 8-30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+- When the instance type **TypeId** is CKV 3.2 Memory Edition (regardless of architecture), the password contains 8-30 letters and digits and excludes other characters.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the classic network will be selected by default. Use the VPC list querying API to query. 
-     * @return VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the classic network will be selected by default. Use the VPC list querying API to query.
+     * Get VPC ID. If this parameter is not passed in, the classic network will be selected by default. You can query the specific VPC ID in the [VPC console](https://console.cloud.tencent.com/vpc). 
+     * @return VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default. You can query the specific VPC ID in the [VPC console](https://console.cloud.tencent.com/vpc).
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the classic network will be selected by default. Use the VPC list querying API to query.
-     * @param VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the classic network will be selected by default. Use the VPC list querying API to query.
+     * Set VPC ID. If this parameter is not passed in, the classic network will be selected by default. You can query the specific VPC ID in the [VPC console](https://console.cloud.tencent.com/vpc).
+     * @param VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default. You can query the specific VPC ID in the [VPC console](https://console.cloud.tencent.com/vpc).
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get In the classic network, `subnetId` is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2. 
-     * @return SubnetId In the classic network, `subnetId` is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2.
+     * Get VPC subnet ID. This parameter is not required for the classic network. You can get the specific subnet ID by querying the subnet list in the [VPC console](https://console.cloud.tencent.com/vpc). 
+     * @return SubnetId VPC subnet ID. This parameter is not required for the classic network. You can get the specific subnet ID by querying the subnet list in the [VPC console](https://console.cloud.tencent.com/vpc).
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set In the classic network, `subnetId` is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2.
-     * @param SubnetId In the classic network, `subnetId` is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2.
+     * Set VPC subnet ID. This parameter is not required for the classic network. You can get the specific subnet ID by querying the subnet list in the [VPC console](https://console.cloud.tencent.com/vpc).
+     * @param SubnetId VPC subnet ID. This parameter is not required for the classic network. You can get the specific subnet ID by querying the subnet list in the [VPC console](https://console.cloud.tencent.com/vpc).
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Project ID. The value is subject to the `projectId` returned by user account > user account querying APIs > project list. 
-     * @return ProjectId Project ID. The value is subject to the `projectId` returned by user account > user account querying APIs > project list.
+     * Get Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID. 
+     * @return ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. The value is subject to the `projectId` returned by user account > user account querying APIs > project list.
-     * @param ProjectId Project ID. The value is subject to the `projectId` returned by user account > user account querying APIs > project list.
+     * Set Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+     * @param ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled 
-     * @return AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Get Auto-renewal flag
+- `0`: Manual renewal (default).
+- `1`: Auto-renewal.
+- `2`: Not auto-renewal (set by user). 
+     * @return AutoRenew Auto-renewal flag
+- `0`: Manual renewal (default).
+- `1`: Auto-renewal.
+- `2`: Not auto-renewal (set by user).
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-     * @param AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Set Auto-renewal flag
+- `0`: Manual renewal (default).
+- `1`: Auto-renewal.
+- `2`: Not auto-renewal (set by user).
+     * @param AutoRenew Auto-renewal flag
+- `0`: Manual renewal (default).
+- `1`: Auto-renewal.
+- `2`: Not auto-renewal (set by user).
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get Array of security group IDs. 
-     * @return SecurityGroupIdList Array of security group IDs.
+     * Get Array of security group IDs. Get the security group ID of the instance through the [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1) API. 
+     * @return SecurityGroupIdList Array of security group IDs. Get the security group ID of the instance through the [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1) API.
      */
     public String [] getSecurityGroupIdList() {
         return this.SecurityGroupIdList;
     }
 
     /**
-     * Set Array of security group IDs.
-     * @param SecurityGroupIdList Array of security group IDs.
+     * Set Array of security group IDs. Get the security group ID of the instance through the [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1) API.
+     * @param SecurityGroupIdList Array of security group IDs. Get the security group ID of the instance through the [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1) API.
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
         this.SecurityGroupIdList = SecurityGroupIdList;
     }
 
     /**
-     * Get User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]. 
-     * @return VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535].
+     * Get User-defined network port. Default value: `6379`. Range: [1024,65535]. 
+     * @return VPort User-defined network port. Default value: `6379`. Range: [1024,65535].
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535].
-     * @param VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535].
+     * Set User-defined network port. Default value: `6379`. Range: [1024,65535].
+     * @param VPort User-defined network port. Default value: `6379`. Range: [1024,65535].
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get Number of shards in an instance. This parameter is required for Cluster Edition instances. Valid values: [3,5,8,12,16,24,32,64,96,128]. 
-     * @return RedisShardNum Number of shards in an instance. This parameter is required for Cluster Edition instances. Valid values: [3,5,8,12,16,24,32,64,96,128].
+     * Get Quantity of instance shards
+- This parameter is not required for instances of Standard Edition.
+- For instances of Cluster Edition, the range of shard quantity is [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128]. 
+     * @return RedisShardNum Quantity of instance shards
+- This parameter is not required for instances of Standard Edition.
+- For instances of Cluster Edition, the range of shard quantity is [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128].
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Number of shards in an instance. This parameter is required for Cluster Edition instances. Valid values: [3,5,8,12,16,24,32,64,96,128].
-     * @param RedisShardNum Number of shards in an instance. This parameter is required for Cluster Edition instances. Valid values: [3,5,8,12,16,24,32,64,96,128].
+     * Set Quantity of instance shards
+- This parameter is not required for instances of Standard Edition.
+- For instances of Cluster Edition, the range of shard quantity is [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128].
+     * @param RedisShardNum Quantity of instance shards
+- This parameter is not required for instances of Standard Edition.
+- For instances of Cluster Edition, the range of shard quantity is [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128].
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get Number of replicas in the instance. Redis 2.8 Standard Edition and CKV Standard Edition support 1 replica. Standard/Cluster Edition 4.0 and 5.0 support 1–5 replicas. 
-     * @return RedisReplicasNum Number of replicas in the instance. Redis 2.8 Standard Edition and CKV Standard Edition support 1 replica. Standard/Cluster Edition 4.0 and 5.0 support 1–5 replicas.
+     * Get Quantity of instance replicas
+- For Redis Memory Edition 4.0, 5.0, 6.2 (regardless of architecture), the range of replica quantity is [1,5].
+- For Redis 2.8 Standard Edition and CKV Standard Edition, the replica quantity is `1`. 
+     * @return RedisReplicasNum Quantity of instance replicas
+- For Redis Memory Edition 4.0, 5.0, 6.2 (regardless of architecture), the range of replica quantity is [1,5].
+- For Redis 2.8 Standard Edition and CKV Standard Edition, the replica quantity is `1`.
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set Number of replicas in the instance. Redis 2.8 Standard Edition and CKV Standard Edition support 1 replica. Standard/Cluster Edition 4.0 and 5.0 support 1–5 replicas.
-     * @param RedisReplicasNum Number of replicas in the instance. Redis 2.8 Standard Edition and CKV Standard Edition support 1 replica. Standard/Cluster Edition 4.0 and 5.0 support 1–5 replicas.
+     * Set Quantity of instance replicas
+- For Redis Memory Edition 4.0, 5.0, 6.2 (regardless of architecture), the range of replica quantity is [1,5].
+- For Redis 2.8 Standard Edition and CKV Standard Edition, the replica quantity is `1`.
+     * @param RedisReplicasNum Quantity of instance replicas
+- For Redis Memory Edition 4.0, 5.0, 6.2 (regardless of architecture), the range of replica quantity is [1,5].
+- For Redis 2.8 Standard Edition and CKV Standard Edition, the replica quantity is `1`.
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get Whether to support read-only replicas. Neither Redis 2.8 Standard Edition nor CKV Standard Edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed to replica nodes. To enable read-only replicas, we recommend you create two or more replicas. 
-     * @return ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 Standard Edition nor CKV Standard Edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed to replica nodes. To enable read-only replicas, we recommend you create two or more replicas.
+     * Get Whether to support read-only replicas.
+- Redis 2.8 Standard Edition and CKV Standard Edition don’t support read-only replicas.
+- If read-only replicas are enabled, read/write separation will be automatically enabled for an instance, with write requests routed to the master node and read requests to the replica node.
+- To enable read-only replicas, we recommend that you create two or more replicas. 
+     * @return ReplicasReadonly Whether to support read-only replicas.
+- Redis 2.8 Standard Edition and CKV Standard Edition don’t support read-only replicas.
+- If read-only replicas are enabled, read/write separation will be automatically enabled for an instance, with write requests routed to the master node and read requests to the replica node.
+- To enable read-only replicas, we recommend that you create two or more replicas.
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set Whether to support read-only replicas. Neither Redis 2.8 Standard Edition nor CKV Standard Edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed to replica nodes. To enable read-only replicas, we recommend you create two or more replicas.
-     * @param ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 Standard Edition nor CKV Standard Edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed to replica nodes. To enable read-only replicas, we recommend you create two or more replicas.
+     * Set Whether to support read-only replicas.
+- Redis 2.8 Standard Edition and CKV Standard Edition don’t support read-only replicas.
+- If read-only replicas are enabled, read/write separation will be automatically enabled for an instance, with write requests routed to the master node and read requests to the replica node.
+- To enable read-only replicas, we recommend that you create two or more replicas.
+     * @param ReplicasReadonly Whether to support read-only replicas.
+- Redis 2.8 Standard Edition and CKV Standard Edition don’t support read-only replicas.
+- If read-only replicas are enabled, read/write separation will be automatically enabled for an instance, with write requests routed to the master node and read requests to the replica node.
+- To enable read-only replicas, we recommend that you create two or more replicas.
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
     /**
-     * Get Instance name, which can contain up to 60 letters, digits, underscores, or hyphens. 
-     * @return InstanceName Instance name, which can contain up to 60 letters, digits, underscores, or hyphens.
+     * Get Instance name, which can contain up to 60 letters, digits, hyphens, and underscores. 
+     * @return InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and underscores.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name, which can contain up to 60 letters, digits, underscores, or hyphens.
-     * @param InstanceName Instance name, which can contain up to 60 letters, digits, underscores, or hyphens.
+     * Set Instance name, which can contain up to 60 letters, digits, hyphens, and underscores.
+     * @param InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and underscores.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access. 
-     * @return NoAuth Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
+     * Get Whether to support password-free access for an instance
+- `true`: The instance access is password-free.
+- `false`: The instance access is password-enabled. Default value: `false`. Only instances in a VPC support the password-free access. 
+     * @return NoAuth Whether to support password-free access for an instance
+- `true`: The instance access is password-free.
+- `false`: The instance access is password-enabled. Default value: `false`. Only instances in a VPC support the password-free access.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
-     * @param NoAuth Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
+     * Set Whether to support password-free access for an instance
+- `true`: The instance access is password-free.
+- `false`: The instance access is password-enabled. Default value: `false`. Only instances in a VPC support the password-free access.
+     * @param NoAuth Whether to support password-free access for an instance
+- `true`: The instance access is password-free.
+- `false`: The instance access is password-enabled. Default value: `false`. Only instances in a VPC support the password-free access.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get Node information of the instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for single-AZ deployed instances. 
-     * @return NodeSet Node information of the instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for single-AZ deployed instances.
+     * Get The node information of the instance, including node ID, type, and AZ. For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
+Node information of an instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for instances deployed in a single AZ. 
+     * @return NodeSet The node information of the instance, including node ID, type, and AZ. For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
+Node information of an instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for instances deployed in a single AZ.
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set Node information of the instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for single-AZ deployed instances.
-     * @param NodeSet Node information of the instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for single-AZ deployed instances.
+     * Set The node information of the instance, including node ID, type, and AZ. For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
+Node information of an instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for instances deployed in a single AZ.
+     * @param NodeSet The node information of the instance, including node ID, type, and AZ. For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
+Node information of an instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for instances deployed in a single AZ.
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
     }
 
     /**
-     * Get Tag bound to the instance to be purchased 
-     * @return ResourceTags Tag bound to the instance to be purchased
+     * Get The tag for an instance 
+     * @return ResourceTags The tag for an instance
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Tag bound to the instance to be purchased
-     * @param ResourceTags Tag bound to the instance to be purchased
+     * Set The tag for an instance
+     * @param ResourceTags The tag for an instance
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
@@ -549,64 +646,92 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
     }
 
     /**
-     * Get ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied. 
-     * @return TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+     * Get The parameter template ID associated with the instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- Query the list of parameter templates of an instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API. 
+     * @return TemplateId The parameter template ID associated with the instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- Query the list of parameter templates of an instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
-     * @param TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+     * Set The parameter template ID associated with the instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- Query the list of parameter templates of an instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+     * @param TemplateId The parameter template ID associated with the instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- Query the list of parameter templates of an instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance. 
-     * @return DryRun false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
+     * Get An internal parameter used to indicate whether to check when creating an instance.
+- `false`: Default value. Send a normal request and create an instance if all the requirements are met.
+- `true`: Send a check request and create no instance. 
+     * @return DryRun An internal parameter used to indicate whether to check when creating an instance.
+- `false`: Default value. Send a normal request and create an instance if all the requirements are met.
+- `true`: Send a check request and create no instance.
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
-     * @param DryRun false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
+     * Set An internal parameter used to indicate whether to check when creating an instance.
+- `false`: Default value. Send a normal request and create an instance if all the requirements are met.
+- `true`: Send a check request and create no instance.
+     * @param DryRun An internal parameter used to indicate whether to check when creating an instance.
+- `false`: Default value. Send a normal request and create an instance if all the requirements are met.
+- `true`: Send a check request and create no instance.
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition) 
-     * @return ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     * Get The product edition of the instance
+- `local`: Local Disk Edition.
+- `cloud`: Cloud Disk Edition.
+- `cdc`: Dedicated Cluster Edition. Default value: `local`. 
+     * @return ProductVersion The product edition of the instance
+- `local`: Local Disk Edition.
+- `cloud`: Cloud Disk Edition.
+- `cdc`: Dedicated Cluster Edition. Default value: `local`.
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
-     * @param ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     * Set The product edition of the instance
+- `local`: Local Disk Edition.
+- `cloud`: Cloud Disk Edition.
+- `cdc`: Dedicated Cluster Edition. Default value: `local`.
+     * @param ProductVersion The product edition of the instance
+- `local`: Local Disk Edition.
+- `cloud`: Cloud Disk Edition.
+- `cdc`: Dedicated Cluster Edition. Default value: `local`.
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get Dedicated cluster ID, which is required when `ProductVersion` is "cdc". 
-     * @return RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+     * Get Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required. 
+     * @return RedisClusterId Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
      */
     public String getRedisClusterId() {
         return this.RedisClusterId;
     }
 
     /**
-     * Set Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
-     * @param RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+     * Set Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
+     * @param RedisClusterId Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
      */
     public void setRedisClusterId(String RedisClusterId) {
         this.RedisClusterId = RedisClusterId;

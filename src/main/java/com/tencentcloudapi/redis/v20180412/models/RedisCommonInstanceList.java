@@ -37,14 +37,14 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String InstanceId;
 
     /**
-    * User ID
+    * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Instance project ID
+    * Project ID of the instance
     */
     @SerializedName("ProjectId")
     @Expose
@@ -65,28 +65,33 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String Zone;
 
     /**
-    * Instance network ID
+    * Instance VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * VPC subnet ID
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+    * Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Instance network IP
+    * Private network IP address of an instance
     */
     @SerializedName("Vips")
     @Expose
@@ -107,14 +112,18 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String Createtime;
 
     /**
-    * Billing mode. 0: pay-as-you-go; 1: monthly subscription
+    * Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Network type. Valid values: 0 (classic network); 1 (VPC).
+    * Network Type
+- `0`: Classic network.
+- `1`: VPC.
     */
     @SerializedName("NetType")
     @Expose
@@ -153,32 +162,32 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get User ID 
-     * @return AppId User ID
+     * Get User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID. 
+     * @return AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User ID
-     * @param AppId User ID
+     * Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+     * @param AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Instance project ID 
-     * @return ProjectId Instance project ID
+     * Get Project ID of the instance 
+     * @return ProjectId Project ID of the instance
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Instance project ID
-     * @param ProjectId Instance project ID
+     * Set Project ID of the instance
+     * @param ProjectId Project ID of the instance
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -217,64 +226,84 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Instance network ID 
-     * @return VpcId Instance network ID
+     * Get Instance VPC ID 
+     * @return VpcId Instance VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Instance network ID
-     * @param VpcId Instance network ID
+     * Set Instance VPC ID
+     * @param VpcId Instance VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get VPC subnet ID 
+     * @return SubnetId VPC subnet ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set VPC subnet ID
+     * @param SubnetId VPC subnet ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated 
-     * @return Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+     * Get Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated. 
+     * @return Status Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
-     * @param Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+     * Set Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
+     * @param Status Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance network IP 
-     * @return Vips Instance network IP
+     * Get Private network IP address of an instance 
+     * @return Vips Private network IP address of an instance
      */
     public String [] getVips() {
         return this.Vips;
     }
 
     /**
-     * Set Instance network IP
-     * @param Vips Instance network IP
+     * Set Private network IP address of an instance
+     * @param Vips Private network IP address of an instance
      */
     public void setVips(String [] Vips) {
         this.Vips = Vips;
@@ -313,32 +342,48 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Billing mode. 0: pay-as-you-go; 1: monthly subscription 
-     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * Get Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription. 
+     * @return PayMode Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. 0: pay-as-you-go; 1: monthly subscription
-     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * Set Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
+     * @param PayMode Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Network type. Valid values: 0 (classic network); 1 (VPC). 
-     * @return NetType Network type. Valid values: 0 (classic network); 1 (VPC).
+     * Get Network Type
+- `0`: Classic network.
+- `1`: VPC. 
+     * @return NetType Network Type
+- `0`: Classic network.
+- `1`: VPC.
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. Valid values: 0 (classic network); 1 (VPC).
-     * @param NetType Network type. Valid values: 0 (classic network); 1 (VPC).
+     * Set Network Type
+- `0`: Classic network.
+- `1`: VPC.
+     * @param NetType Network Type
+- `0`: Classic network.
+- `1`: VPC.
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;

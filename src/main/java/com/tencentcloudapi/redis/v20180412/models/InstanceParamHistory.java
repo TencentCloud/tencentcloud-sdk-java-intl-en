@@ -30,21 +30,24 @@ public class InstanceParamHistory extends AbstractModel{
     private String ParamName;
 
     /**
-    * Value before modification
+    * The value of the parameter before modification
     */
     @SerializedName("PreValue")
     @Expose
     private String PreValue;
 
     /**
-    * Value after modification
+    * The value of the parameter after modification
     */
     @SerializedName("NewValue")
     @Expose
     private String NewValue;
 
     /**
-    * Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+    * Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
     */
     @SerializedName("Status")
     @Expose
@@ -74,48 +77,60 @@ public class InstanceParamHistory extends AbstractModel{
     }
 
     /**
-     * Get Value before modification 
-     * @return PreValue Value before modification
+     * Get The value of the parameter before modification 
+     * @return PreValue The value of the parameter before modification
      */
     public String getPreValue() {
         return this.PreValue;
     }
 
     /**
-     * Set Value before modification
-     * @param PreValue Value before modification
+     * Set The value of the parameter before modification
+     * @param PreValue The value of the parameter before modification
      */
     public void setPreValue(String PreValue) {
         this.PreValue = PreValue;
     }
 
     /**
-     * Get Value after modification 
-     * @return NewValue Value after modification
+     * Get The value of the parameter after modification 
+     * @return NewValue The value of the parameter after modification
      */
     public String getNewValue() {
         return this.NewValue;
     }
 
     /**
-     * Set Value after modification
-     * @param NewValue Value after modification
+     * Set The value of the parameter after modification
+     * @param NewValue The value of the parameter after modification
      */
     public void setNewValue(String NewValue) {
         this.NewValue = NewValue;
     }
 
     /**
-     * Get Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration 
-     * @return Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+     * Get Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration. 
+     * @return Status Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
-     * @param Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+     * Set Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
+     * @param Status Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

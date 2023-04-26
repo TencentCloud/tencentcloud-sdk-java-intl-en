@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class InstanceClusterShard extends AbstractModel{
 
     /**
-    * Shard node name
+    * The name of a shard node
     */
     @SerializedName("ShardName")
     @Expose
     private String ShardName;
 
     /**
-    * Shard node ID
+    * The serial number of a shard node
     */
     @SerializedName("ShardId")
     @Expose
     private String ShardId;
 
     /**
-    * Role
+    * The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
     */
     @SerializedName("Role")
     @Expose
@@ -58,7 +60,7 @@ public class InstanceClusterShard extends AbstractModel{
     private String Slots;
 
     /**
-    * Storage capacity
+    * Used Capacity
     */
     @SerializedName("Storage")
     @Expose
@@ -72,62 +74,72 @@ public class InstanceClusterShard extends AbstractModel{
     private Float StorageSlope;
 
     /**
-    * ID of the runtime node of the instance
+    * Instance runtime node ID
     */
     @SerializedName("Runid")
     @Expose
     private String Runid;
 
     /**
-    * Service status. 0: down; 1: on
+    * Service status
+- `0`: Down.
+- `1`: On.
     */
     @SerializedName("Connected")
     @Expose
     private Long Connected;
 
     /**
-     * Get Shard node name 
-     * @return ShardName Shard node name
+     * Get The name of a shard node 
+     * @return ShardName The name of a shard node
      */
     public String getShardName() {
         return this.ShardName;
     }
 
     /**
-     * Set Shard node name
-     * @param ShardName Shard node name
+     * Set The name of a shard node
+     * @param ShardName The name of a shard node
      */
     public void setShardName(String ShardName) {
         this.ShardName = ShardName;
     }
 
     /**
-     * Get Shard node ID 
-     * @return ShardId Shard node ID
+     * Get The serial number of a shard node 
+     * @return ShardId The serial number of a shard node
      */
     public String getShardId() {
         return this.ShardId;
     }
 
     /**
-     * Set Shard node ID
-     * @param ShardId Shard node ID
+     * Set The serial number of a shard node
+     * @param ShardId The serial number of a shard node
      */
     public void setShardId(String ShardId) {
         this.ShardId = ShardId;
     }
 
     /**
-     * Get Role 
-     * @return Role Role
+     * Get The role of a shard node
+- `0`: Master node.
+- `1`: Replica node. 
+     * @return Role The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set Role
-     * @param Role Role
+     * Set The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
+     * @param Role The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
      */
     public void setRole(Long Role) {
         this.Role = Role;
@@ -166,16 +178,16 @@ public class InstanceClusterShard extends AbstractModel{
     }
 
     /**
-     * Get Storage capacity 
-     * @return Storage Storage capacity
+     * Get Used Capacity 
+     * @return Storage Used Capacity
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage capacity
-     * @param Storage Storage capacity
+     * Set Used Capacity
+     * @param Storage Used Capacity
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -198,32 +210,40 @@ public class InstanceClusterShard extends AbstractModel{
     }
 
     /**
-     * Get ID of the runtime node of the instance 
-     * @return Runid ID of the runtime node of the instance
+     * Get Instance runtime node ID 
+     * @return Runid Instance runtime node ID
      */
     public String getRunid() {
         return this.Runid;
     }
 
     /**
-     * Set ID of the runtime node of the instance
-     * @param Runid ID of the runtime node of the instance
+     * Set Instance runtime node ID
+     * @param Runid Instance runtime node ID
      */
     public void setRunid(String Runid) {
         this.Runid = Runid;
     }
 
     /**
-     * Get Service status. 0: down; 1: on 
-     * @return Connected Service status. 0: down; 1: on
+     * Get Service status
+- `0`: Down.
+- `1`: On. 
+     * @return Connected Service status
+- `0`: Down.
+- `1`: On.
      */
     public Long getConnected() {
         return this.Connected;
     }
 
     /**
-     * Set Service status. 0: down; 1: on
-     * @param Connected Service status. 0: down; 1: on
+     * Set Service status
+- `0`: Down.
+- `1`: On.
+     * @param Connected Service status
+- `0`: Down.
+- `1`: On.
      */
     public void setConnected(Long Connected) {
         this.Connected = Connected;

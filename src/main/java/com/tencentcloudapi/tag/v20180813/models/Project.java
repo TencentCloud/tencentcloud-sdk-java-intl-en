@@ -1,0 +1,178 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tag.v20180813.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class Project extends AbstractModel{
+
+    /**
+    * Project ID.
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * Project name.
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
+    * Creator UIN.
+    */
+    @SerializedName("CreatorUin")
+    @Expose
+    private Long CreatorUin;
+
+    /**
+    * Project description.
+    */
+    @SerializedName("ProjectInfo")
+    @Expose
+    private String ProjectInfo;
+
+    /**
+    * Creation time.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+     * Get Project ID. 
+     * @return ProjectId Project ID.
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID.
+     * @param ProjectId Project ID.
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get Project name. 
+     * @return ProjectName Project name.
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set Project name.
+     * @param ProjectName Project name.
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
+     * Get Creator UIN. 
+     * @return CreatorUin Creator UIN.
+     */
+    public Long getCreatorUin() {
+        return this.CreatorUin;
+    }
+
+    /**
+     * Set Creator UIN.
+     * @param CreatorUin Creator UIN.
+     */
+    public void setCreatorUin(Long CreatorUin) {
+        this.CreatorUin = CreatorUin;
+    }
+
+    /**
+     * Get Project description. 
+     * @return ProjectInfo Project description.
+     */
+    public String getProjectInfo() {
+        return this.ProjectInfo;
+    }
+
+    /**
+     * Set Project description.
+     * @param ProjectInfo Project description.
+     */
+    public void setProjectInfo(String ProjectInfo) {
+        this.ProjectInfo = ProjectInfo;
+    }
+
+    /**
+     * Get Creation time. 
+     * @return CreateTime Creation time.
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time.
+     * @param CreateTime Creation time.
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    public Project() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Project(Project source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new Long(source.CreatorUin);
+        }
+        if (source.ProjectInfo != null) {
+            this.ProjectInfo = new String(source.ProjectInfo);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
+        this.setParamSimple(map, prefix + "ProjectInfo", this.ProjectInfo);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+
+    }
+}
+

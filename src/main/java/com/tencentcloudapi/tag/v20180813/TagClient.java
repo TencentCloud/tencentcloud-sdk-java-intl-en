@@ -159,7 +159,7 @@ public class TagClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete multiple tag key-value pairs.
+     *This API is used to delete tag keys and tag values in batches.
      * @param req DeleteTagsRequest
      * @return DeleteTagsResponse
      * @throws TencentCloudSDKException
@@ -171,6 +171,26 @@ public class TagClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTagsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get project lists.
+     * @param req DescribeProjectsRequest
+     * @return DescribeProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProjects");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

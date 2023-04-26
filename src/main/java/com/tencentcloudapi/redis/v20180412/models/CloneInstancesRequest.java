@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class CloneInstancesRequest extends AbstractModel{
 
     /**
-    * ID of the current instance
+    * The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+    * The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -79,14 +81,14 @@ public class CloneInstancesRequest extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-    * VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+    * The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC subnet ID, which is not required for the classic network.
+    * The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -107,7 +109,7 @@ public class CloneInstancesRequest extends AbstractModel{
     private String Password;
 
     /**
-    * The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+    * The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -128,7 +130,7 @@ public class CloneInstancesRequest extends AbstractModel{
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+    * Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -142,46 +144,56 @@ public class CloneInstancesRequest extends AbstractModel{
     private ResourceTag [] ResourceTags;
 
     /**
-    * The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+    * The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+    * The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
     */
     @SerializedName("AlarmPolicyList")
     @Expose
     private String [] AlarmPolicyList;
 
     /**
-     * Get ID of the current instance 
-     * @return InstanceId ID of the current instance
+     * Get The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the current instance
-     * @param InstanceId ID of the current instance
+     * Set The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region. 
-     * @return GoodsNum Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+     * Get The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase. 
+     * @return GoodsNum The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
-     * @param GoodsNum Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+     * Set The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
+     * @param GoodsNum The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
@@ -284,32 +296,32 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC ID. If this parameter is not passed in, the classic network will be selected by default. 
-     * @return VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+     * Get The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default. 
+     * @return VpcId The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID. If this parameter is not passed in, the classic network will be selected by default.
-     * @param VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+     * Set The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+     * @param VpcId The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC subnet ID, which is not required for the classic network. 
-     * @return SubnetId VPC subnet ID, which is not required for the classic network.
+     * Get The VPC subnet ID to which the clone instance belongs, which is not required for the classic network. 
+     * @return SubnetId The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID, which is not required for the classic network.
-     * @param SubnetId VPC subnet ID, which is not required for the classic network.
+     * Set The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
+     * @param SubnetId The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -348,16 +360,16 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul> 
-     * @return AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+     * Get The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul> 
+     * @return AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
-     * @param AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+     * Set The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
+     * @param AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -396,16 +408,16 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console. 
-     * @return ProjectId Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+     * Get Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner. 
+     * @return ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
-     * @param ProjectId Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+     * Set Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
+     * @param ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -428,32 +440,40 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied. 
-     * @return TemplateId The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+     * Get The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API. 
+     * @return TemplateId The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
-     * @param TemplateId The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+     * Set The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+     * @param TemplateId The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console. 
-     * @return AlarmPolicyList Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+     * Get The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>. 
+     * @return AlarmPolicyList The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
      */
     public String [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
-     * @param AlarmPolicyList Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+     * Set The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+     * @param AlarmPolicyList The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
      */
     public void setAlarmPolicyList(String [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;

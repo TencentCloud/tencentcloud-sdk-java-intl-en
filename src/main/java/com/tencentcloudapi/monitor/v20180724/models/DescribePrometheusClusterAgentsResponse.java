@@ -37,6 +37,13 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
     private Long Total;
 
     /**
+    * Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+    */
+    @SerializedName("IsFirstBind")
+    @Expose
+    private Boolean IsFirstBind;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
     }
 
     /**
+     * Get Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule. 
+     * @return IsFirstBind Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+     */
+    public Boolean getIsFirstBind() {
+        return this.IsFirstBind;
+    }
+
+    /**
+     * Set Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+     * @param IsFirstBind Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+     */
+    public void setIsFirstBind(Boolean IsFirstBind) {
+        this.IsFirstBind = IsFirstBind;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +131,9 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.IsFirstBind != null) {
+            this.IsFirstBind = new Boolean(source.IsFirstBind);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "IsFirstBind", this.IsFirstBind);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

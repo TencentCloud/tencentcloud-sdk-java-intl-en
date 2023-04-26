@@ -1,5 +1,8 @@
 package com.tencentcloudapi.tag.v20180813;
 public enum TagErrorCode {
+    // Error with CAM signature/authentication.
+     AUTHFAILURE("AuthFailure"),
+     
     // CAM authentication failed.
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
@@ -11,6 +14,9 @@ public enum TagErrorCode {
      
     // The resource tag is being processed.
      FAILEDOPERATION_RESOURCETAGPROCESSING("FailedOperation.ResourceTagProcessing"),
+     
+    // A quota has already been allocated to tags.
+     FAILEDOPERATION_TAGATTACHEDQUOTA("FailedOperation.TagAttachedQuota"),
      
     // Tags associated with resources cannot be deleted.
      FAILEDOPERATION_TAGATTACHEDRESOURCE("FailedOperation.TagAttachedResource"),
@@ -87,6 +93,9 @@ public enum TagErrorCode {
     // The quota limit is exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
+    // The quota limit is reached.
+     LIMITEXCEEDED_QUOTA("LimitExceeded.Quota"),
+     
     // The number of tags associated with the resource exceeds the limit.
      LIMITEXCEEDED_RESOURCEATTACHEDTAGS("LimitExceeded.ResourceAttachedTags"),
      
@@ -118,7 +127,10 @@ public enum TagErrorCode {
      RESOURCENOTFOUND_ATTACHEDTAGKEYNOTFOUND("ResourceNotFound.AttachedTagKeyNotFound"),
      
     // Tag does not exist.
-     RESOURCENOTFOUND_TAGNONEXIST("ResourceNotFound.TagNonExist");
+     RESOURCENOTFOUND_TAGNONEXIST("ResourceNotFound.TagNonExist"),
+     
+    // Unsupported operation.
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TagErrorCode (String value){

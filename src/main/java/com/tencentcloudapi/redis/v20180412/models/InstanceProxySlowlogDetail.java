@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InstanceProxySlowlogDetail extends AbstractModel{
 
     /**
-    * Duration of the slow query in ms.
+    * Slow query duration in milliseconds
     */
     @SerializedName("Duration")
     @Expose
@@ -37,14 +37,14 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     private String Client;
 
     /**
-    * Command
+    * Slow query command
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * Command line details
+    * Detailed command line information of slow query
     */
     @SerializedName("CommandLine")
     @Expose
@@ -58,16 +58,16 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     private String ExecuteTime;
 
     /**
-     * Get Duration of the slow query in ms. 
-     * @return Duration Duration of the slow query in ms.
+     * Get Slow query duration in milliseconds 
+     * @return Duration Slow query duration in milliseconds
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration of the slow query in ms.
-     * @param Duration Duration of the slow query in ms.
+     * Set Slow query duration in milliseconds
+     * @param Duration Slow query duration in milliseconds
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
@@ -90,32 +90,32 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     }
 
     /**
-     * Get Command 
-     * @return Command Command
+     * Get Slow query command 
+     * @return Command Slow query command
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set Command
-     * @param Command Command
+     * Set Slow query command
+     * @param Command Slow query command
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get Command line details 
-     * @return CommandLine Command line details
+     * Get Detailed command line information of slow query 
+     * @return CommandLine Detailed command line information of slow query
      */
     public String getCommandLine() {
         return this.CommandLine;
     }
 
     /**
-     * Set Command line details
-     * @param CommandLine Command line details
+     * Set Detailed command line information of slow query
+     * @param CommandLine Detailed command line information of slow query
      */
     public void setCommandLine(String CommandLine) {
         this.CommandLine = CommandLine;

@@ -23,14 +23,24 @@ import java.util.HashMap;
 public class ProductConf extends AbstractModel{
 
     /**
-    * Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+    * Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+    * Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
     */
     @SerializedName("TypeName")
     @Expose
@@ -52,20 +62,22 @@ public class ProductConf extends AbstractModel{
 
     /**
     * Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
     */
     @SerializedName("Saleout")
     @Expose
     private Boolean Saleout;
 
     /**
-    * Product engine: Tencent Cloud CKV or Redis community edition
+    * Product engines, including Tencent Cloud CKV and Redis Community Edition.
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+    * Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
     */
     @SerializedName("Version")
     @Expose
@@ -86,21 +98,23 @@ public class ProductConf extends AbstractModel{
     private String [] ShardSize;
 
     /**
-    * Number of replicas
+    * Quantity of replicas
     */
     @SerializedName("ReplicaNum")
     @Expose
     private String [] ReplicaNum;
 
     /**
-    * Number of shards
+    * Quantity of shards
     */
     @SerializedName("ShardNum")
     @Expose
     private String [] ShardNum;
 
     /**
-    * Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+    * Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
     */
     @SerializedName("PayMode")
     @Expose
@@ -108,38 +122,80 @@ public class ProductConf extends AbstractModel{
 
     /**
     * Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
     */
     @SerializedName("EnableRepicaReadOnly")
     @Expose
     private Boolean EnableRepicaReadOnly;
 
     /**
-     * Get Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)). 
-     * @return Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+     * Get Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture). 
+     * @return Type Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
-     * @param Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+     * Set Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+     * @param Type Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition 
-     * @return TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+     * Get Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition. 
+     * @return TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
-     * @param TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+     * Set Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+     * @param TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
@@ -178,8 +234,12 @@ public class ProductConf extends AbstractModel{
     }
 
     /**
-     * Get Whether a product is sold out 
+     * Get Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out. 
      * @return Saleout Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
      */
     public Boolean getSaleout() {
         return this.Saleout;
@@ -187,39 +247,43 @@ public class ProductConf extends AbstractModel{
 
     /**
      * Set Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
      * @param Saleout Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
      */
     public void setSaleout(Boolean Saleout) {
         this.Saleout = Saleout;
     }
 
     /**
-     * Get Product engine: Tencent Cloud CKV or Redis community edition 
-     * @return Engine Product engine: Tencent Cloud CKV or Redis community edition
+     * Get Product engines, including Tencent Cloud CKV and Redis Community Edition. 
+     * @return Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set Product engine: Tencent Cloud CKV or Redis community edition
-     * @param Engine Product engine: Tencent Cloud CKV or Redis community edition
+     * Set Product engines, including Tencent Cloud CKV and Redis Community Edition.
+     * @param Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0 
-     * @return Version Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+     * Get Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2. 
+     * @return Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
-     * @param Version Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+     * Set Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+     * @param Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
      */
     public void setVersion(String Version) {
         this.Version = Version;
@@ -258,56 +322,68 @@ public class ProductConf extends AbstractModel{
     }
 
     /**
-     * Get Number of replicas 
-     * @return ReplicaNum Number of replicas
+     * Get Quantity of replicas 
+     * @return ReplicaNum Quantity of replicas
      */
     public String [] getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set Number of replicas
-     * @param ReplicaNum Number of replicas
+     * Set Quantity of replicas
+     * @param ReplicaNum Quantity of replicas
      */
     public void setReplicaNum(String [] ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get Number of shards 
-     * @return ShardNum Number of shards
+     * Get Quantity of shards 
+     * @return ShardNum Quantity of shards
      */
     public String [] getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set Number of shards
-     * @param ShardNum Number of shards
+     * Set Quantity of shards
+     * @param ShardNum Quantity of shards
      */
     public void setShardNum(String [] ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get Supported billing method. 1: monthly subscription; 0: pay-as-you-go 
-     * @return PayMode Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+     * Get Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go. 
+     * @return PayMode Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Supported billing method. 1: monthly subscription; 0: pay-as-you-go
-     * @param PayMode Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+     * Set Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
+     * @param PayMode Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Whether to support read-only replicas 
+     * Get Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported. 
      * @return EnableRepicaReadOnly Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
      */
     public Boolean getEnableRepicaReadOnly() {
         return this.EnableRepicaReadOnly;
@@ -315,7 +391,11 @@ public class ProductConf extends AbstractModel{
 
     /**
      * Set Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
      * @param EnableRepicaReadOnly Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
      */
     public void setEnableRepicaReadOnly(Boolean EnableRepicaReadOnly) {
         this.EnableRepicaReadOnly = EnableRepicaReadOnly;

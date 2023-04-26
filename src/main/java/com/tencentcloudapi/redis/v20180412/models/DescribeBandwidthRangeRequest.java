@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceTag extends AbstractModel{
+public class DescribeBandwidthRangeRequest extends AbstractModel{
 
     /**
-    * Tag key
+    * Instance ID
     */
-    @SerializedName("TagKey")
+    @SerializedName("InstanceId")
     @Expose
-    private String TagKey;
+    private String InstanceId;
 
     /**
-    * The value corresponding to the tag key
-    */
-    @SerializedName("TagValue")
-    @Expose
-    private String TagValue;
-
-    /**
-     * Get Tag key 
-     * @return TagKey Tag key
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set Tag key
-     * @param TagKey Tag key
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get The value corresponding to the tag key 
-     * @return TagValue The value corresponding to the tag key
-     */
-    public String getTagValue() {
-        return this.TagValue;
-    }
-
-    /**
-     * Set The value corresponding to the tag key
-     * @param TagValue The value corresponding to the tag key
-     */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
-    }
-
-    public ResourceTag() {
+    public DescribeBandwidthRangeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResourceTag(ResourceTag source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
+    public DescribeBandwidthRangeRequest(DescribeBandwidthRangeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -89,8 +63,7 @@ public class ResourceTag extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

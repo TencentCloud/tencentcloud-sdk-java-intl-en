@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class BackupLimitVpcItem extends AbstractModel{
 
     /**
-    * Region of the VPC of the custom backup file download address.
+    * The region of the VPC that corresponds to the download address of the backup file
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * VPC list of the custom backup file download address.
+    * The list of VPCs that correspond to the download addresses of the backup files
     */
     @SerializedName("VpcList")
     @Expose
     private String [] VpcList;
 
     /**
-     * Get Region of the VPC of the custom backup file download address. 
-     * @return Region Region of the VPC of the custom backup file download address.
+     * Get The region of the VPC that corresponds to the download address of the backup file 
+     * @return Region The region of the VPC that corresponds to the download address of the backup file
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region of the VPC of the custom backup file download address.
-     * @param Region Region of the VPC of the custom backup file download address.
+     * Set The region of the VPC that corresponds to the download address of the backup file
+     * @param Region The region of the VPC that corresponds to the download address of the backup file
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get VPC list of the custom backup file download address. 
-     * @return VpcList VPC list of the custom backup file download address.
+     * Get The list of VPCs that correspond to the download addresses of the backup files 
+     * @return VpcList The list of VPCs that correspond to the download addresses of the backup files
      */
     public String [] getVpcList() {
         return this.VpcList;
     }
 
     /**
-     * Set VPC list of the custom backup file download address.
-     * @param VpcList VPC list of the custom backup file download address.
+     * Set The list of VPCs that correspond to the download addresses of the backup files
+     * @param VpcList The list of VPCs that correspond to the download addresses of the backup files
      */
     public void setVpcList(String [] VpcList) {
         this.VpcList = VpcList;

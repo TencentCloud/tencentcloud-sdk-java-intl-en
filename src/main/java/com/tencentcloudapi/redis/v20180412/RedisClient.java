@@ -199,7 +199,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to clone a complete instance based on the current instance backup file.
+     *This API is used to clone a complete new instance based on the current instance backup file.
      * @param req CloneInstancesRequest
      * @return CloneInstancesResponse
      * @throws TencentCloudSDKException
@@ -259,7 +259,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a Redis instance.
+     *This API is used to create an TencentDB or Redis instance.
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
@@ -391,6 +391,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of instance bandwidth.
+     * @param req DescribeBandwidthRangeRequest
+     * @return DescribeBandwidthRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthRangeResponse DescribeBandwidthRange(DescribeBandwidthRangeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthRangeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBandwidthRange");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -839,7 +859,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the parameter template details.
+     *This API is used to query the details of a parameter template.
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
      * @throws TencentCloudSDKException
@@ -1511,6 +1531,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseWanAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove a member from a replication group.
+     * @param req RemoveReplicationInstanceRequest
+     * @return RemoveReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveReplicationInstanceResponse RemoveReplicationInstance(RemoveReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveReplicationInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

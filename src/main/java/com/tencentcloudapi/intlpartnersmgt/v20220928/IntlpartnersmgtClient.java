@@ -87,6 +87,66 @@ Notes:<br>
     }
 
     /**
+     *This API is used to obtain the total amount of customer bills by payment mode.
+     * @param req DescribeBillSummaryByPayModeRequest
+     * @return DescribeBillSummaryByPayModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillSummaryByPayMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the total amount of customer bills by product.
+     * @param req DescribeBillSummaryByProductRequest
+     * @return DescribeBillSummaryByProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProductResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillSummaryByProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the total amount of customer bills by region.
+     * @param req DescribeBillSummaryByRegionRequest
+     * @return DescribeBillSummaryByRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillSummaryByRegion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the customer bill details.
      * @param req DescribeCustomerBillDetailRequest
      * @return DescribeCustomerBillDetailResponse

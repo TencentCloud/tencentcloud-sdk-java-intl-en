@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeParamTemplateInfoRequest extends AbstractModel{
 
     /**
-    * Parameter template ID.
+    * The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get Parameter template ID. 
-     * @return TemplateId Parameter template ID.
+     * Get The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API. 
+     * @return TemplateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID.
-     * @param TemplateId Parameter template ID.
+     * Set The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+     * @param TemplateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

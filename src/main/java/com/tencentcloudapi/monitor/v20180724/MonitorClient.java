@@ -1689,7 +1689,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
-     *This API is used to get the list of CM-integrated instances.
+     *This API is used to obtain the list of Tencent Managed Service for Prometheus (TMP) instances and the clusters associated with them.
      * @param req DescribePrometheusInstancesOverviewRequest
      * @return DescribePrometheusInstancesOverviewResponse
      * @throws TencentCloudSDKException
@@ -2396,6 +2396,8 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
 
     /**
      *对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
+
+This API is not deprecated, but its related console features and backend services were deactivated two years ago.
 
 The default API request rate limit is 50 requests/sec.
 The default upper limit on metrics of a single tenant is 100.
