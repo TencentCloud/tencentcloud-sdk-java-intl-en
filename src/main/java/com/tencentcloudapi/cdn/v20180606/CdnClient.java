@@ -59,6 +59,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a CDN acceleration domain name. Up to 100 domain names can be added per minute.
+     * @param req AddCdnDomainRequest
+     * @return AddCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCdnDomainResponse AddCdnDomain(AddCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCdnDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCdnDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddCdnDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a log topic. Up to 10 log topics can be created under one logset.
      * @param req CreateClsLogTopicRequest
      * @return CreateClsLogTopicResponse

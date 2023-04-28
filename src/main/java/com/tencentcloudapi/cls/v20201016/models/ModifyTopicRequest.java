@@ -72,6 +72,28 @@ public class ModifyTopicRequest extends AbstractModel{
     private Long Period;
 
     /**
+    * Log topic description
+    */
+    @SerializedName("Describes")
+    @Expose
+    private String Describes;
+
+    /**
+    * `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+    */
+    @SerializedName("HotPeriod")
+    @Expose
+    private Long HotPeriod;
+
+    /**
+    * Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+    */
+    @SerializedName("IsWebTracking")
+    @Expose
+    private Boolean IsWebTracking;
+
+    /**
      * Get Log topic ID 
      * @return TopicId Log topic ID
      */
@@ -183,6 +205,58 @@ public class ModifyTopicRequest extends AbstractModel{
         this.Period = Period;
     }
 
+    /**
+     * Get Log topic description 
+     * @return Describes Log topic description
+     */
+    public String getDescribes() {
+        return this.Describes;
+    }
+
+    /**
+     * Set Log topic description
+     * @param Describes Log topic description
+     */
+    public void setDescribes(String Describes) {
+        this.Describes = Describes;
+    }
+
+    /**
+     * Get `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`. 
+     * @return HotPeriod `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     */
+    public Long getHotPeriod() {
+        return this.HotPeriod;
+    }
+
+    /**
+     * Set `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     * @param HotPeriod `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     */
+    public void setHotPeriod(Long HotPeriod) {
+        this.HotPeriod = HotPeriod;
+    }
+
+    /**
+     * Get Whether to enable web tracking. Valid values: `false` (disable); `true` (enable) 
+     * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     */
+    public Boolean getIsWebTracking() {
+        return this.IsWebTracking;
+    }
+
+    /**
+     * Set Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * @param IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     */
+    public void setIsWebTracking(Boolean IsWebTracking) {
+        this.IsWebTracking = IsWebTracking;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -215,6 +289,15 @@ public class ModifyTopicRequest extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.Describes != null) {
+            this.Describes = new String(source.Describes);
+        }
+        if (source.HotPeriod != null) {
+            this.HotPeriod = new Long(source.HotPeriod);
+        }
+        if (source.IsWebTracking != null) {
+            this.IsWebTracking = new Boolean(source.IsWebTracking);
+        }
     }
 
 
@@ -229,6 +312,9 @@ public class ModifyTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "Describes", this.Describes);
+        this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
 
     }
 }

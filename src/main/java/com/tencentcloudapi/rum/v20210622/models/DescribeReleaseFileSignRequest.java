@@ -30,6 +30,13 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
     private Long Timeout;
 
     /**
+    * Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+    */
+    @SerializedName("FileType")
+    @Expose
+    private Long FileType;
+
+    /**
      * Get Timeout period. If it is not set, it will be 5 minutes by default 
      * @return Timeout Timeout period. If it is not set, it will be 5 minutes by default
      */
@@ -45,6 +52,22 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
         this.Timeout = Timeout;
     }
 
+    /**
+     * Get Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application). 
+     * @return FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+     */
+    public Long getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+     * @param FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+     */
+    public void setFileType(Long FileType) {
+        this.FileType = FileType;
+    }
+
     public DescribeReleaseFileSignRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
         if (source.Timeout != null) {
             this.Timeout = new Long(source.Timeout);
         }
+        if (source.FileType != null) {
+            this.FileType = new Long(source.FileType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
 
     }
 }

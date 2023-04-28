@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateDomainConfigRequest extends AbstractModel{
+public class AddCdnDomainRequest extends AbstractModel{
 
     /**
     * Domain name
@@ -30,11 +30,16 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * Project ID
+    * Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
     */
-    @SerializedName("ProjectId")
+    @SerializedName("ServiceType")
     @Expose
-    private Long ProjectId;
+    private String ServiceType;
 
     /**
     * Origin server configuration
@@ -44,28 +49,35 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Origin Origin;
 
     /**
-    * IP blocklist/allowlist configuration
+    * Project ID. Default value: 0, indicating `Default Project`
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * IP blocklist/allowlist
     */
     @SerializedName("IpFilter")
     @Expose
     private IpFilter IpFilter;
 
     /**
-    * IP access limit configuration
+    * IP rate limiting
     */
     @SerializedName("IpFreqLimit")
     @Expose
     private IpFreqLimit IpFreqLimit;
 
     /**
-    * Status code cache configuration
+    * Status code cache
     */
     @SerializedName("StatusCodeCache")
     @Expose
     private StatusCodeCache StatusCodeCache;
 
     /**
-    * Smart compression configuration
+    * Smart compression
     */
     @SerializedName("Compression")
     @Expose
@@ -93,7 +105,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private FollowRedirect FollowRedirect;
 
     /**
-    * Error code redirect configuration (This feature is in beta and not generally available yet.)
+    * Error code redirection (in beta)
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -142,85 +154,82 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private VideoSeek VideoSeek;
 
     /**
-    * Cache expiration time configuration
+    * Cache validity configuration
     */
     @SerializedName("Cache")
     @Expose
     private Cache Cache;
 
     /**
-    * (Disused) Cross-border linkage optimization\
+    * Cross-MLC-border origin-pull optimization
     */
     @SerializedName("OriginPullOptimization")
     @Expose
     private OriginPullOptimization OriginPullOptimization;
 
     /**
-    * HTTPS acceleration configuration
+    * HTTPS acceleration
     */
     @SerializedName("Https")
     @Expose
     private Https Https;
 
     /**
-    * Timestamp hotlink protection configuration
+    * Timestamp hotlink protection
     */
     @SerializedName("Authentication")
     @Expose
     private Authentication Authentication;
 
     /**
-    * SEO configuration
+    * SEO optimization
     */
     @SerializedName("Seo")
     @Expose
     private Seo Seo;
 
     /**
-    * Protocol redirect configuration
+    * Force redirect by access protocol
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * Referer configuration
+    * Referer hotlink protection
     */
     @SerializedName("Referer")
     @Expose
     private Referer Referer;
 
     /**
-    * Browser cache configuration (This feature is in beta and not generally available yet.)
+    * Browser caching (in beta)
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAge MaxAge;
 
     /**
-    * Specific-region special configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+    * IPv6 configuration (This feature is in beta and not generally available yet.)
+    */
+    @SerializedName("Ipv6")
+    @Expose
+    private Ipv6 Ipv6;
+
+    /**
+    * Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
     */
     @SerializedName("SpecificConfig")
     @Expose
     private SpecificConfig SpecificConfig;
 
     /**
-    * Domain name service type
-`web`: Static acceleration
-`download`: Download acceleration
-`media`: Streaming media VOD acceleration
-    */
-    @SerializedName("ServiceType")
-    @Expose
-    private String ServiceType;
-
-    /**
     * Domain name acceleration region
-`mainland`: Acceleration inside the Chinese mainland
-`overseas`: Acceleration outside the Chinese mainland
-`global`: Acceleration over the globe
-After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+mainland: acceleration inside mainland China
+overseas: acceleration outside mainland China
+global: global acceleration
+Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
     */
     @SerializedName("Area")
     @Expose
@@ -234,56 +243,14 @@ After switching to global acceleration, configurations of the domain name will b
     private OriginPullTimeout OriginPullTimeout;
 
     /**
-    * Access authentication for S3 origin
+    * Tag configuration
     */
-    @SerializedName("AwsPrivateAccess")
+    @SerializedName("Tag")
     @Expose
-    private AwsPrivateAccess AwsPrivateAccess;
+    private Tag [] Tag;
 
     /**
-    * UA blocklist/allowlist configuration
-    */
-    @SerializedName("UserAgentFilter")
-    @Expose
-    private UserAgentFilter UserAgentFilter;
-
-    /**
-    * Access control
-    */
-    @SerializedName("AccessControl")
-    @Expose
-    private AccessControl AccessControl;
-
-    /**
-    * URL rewriting configuration
-    */
-    @SerializedName("UrlRedirect")
-    @Expose
-    private UrlRedirect UrlRedirect;
-
-    /**
-    * Access port configuration
-    */
-    @SerializedName("AccessPort")
-    @Expose
-    private Long [] AccessPort;
-
-    /**
-    * Timestamp hotlink protection advanced configuration (allowlist feature)
-    */
-    @SerializedName("AdvancedAuthentication")
-    @Expose
-    private AdvancedAuthentication AdvancedAuthentication;
-
-    /**
-    * Origin-pull authentication advanced configuration (allowlist feature)
-    */
-    @SerializedName("OriginAuthentication")
-    @Expose
-    private OriginAuthentication OriginAuthentication;
-
-    /**
-    * IPv6 access configuration
+    * Ipv6 access configuration
     */
     @SerializedName("Ipv6Access")
     @Expose
@@ -297,25 +264,18 @@ After switching to global acceleration, configurations of the domain name will b
     private OfflineCache OfflineCache;
 
     /**
-    * Merging pull requests
-    */
-    @SerializedName("OriginCombine")
-    @Expose
-    private OriginCombine OriginCombine;
-
-    /**
-    * Post transport configuration
-    */
-    @SerializedName("PostMaxSize")
-    @Expose
-    private PostSize PostMaxSize;
-
-    /**
     * QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
+
+    /**
+    * Access authentication for S3 origin
+    */
+    @SerializedName("AwsPrivateAccess")
+    @Expose
+    private AwsPrivateAccess AwsPrivateAccess;
 
     /**
     * Access authentication for OSS origin
@@ -325,35 +285,14 @@ After switching to global acceleration, configurations of the domain name will b
     private OssPrivateAccess OssPrivateAccess;
 
     /**
-    * WebSocket configuration
-    */
-    @SerializedName("WebSocket")
-    @Expose
-    private WebSocket WebSocket;
-
-    /**
-    * Remote authentication configuration
-    */
-    @SerializedName("RemoteAuthentication")
-    @Expose
-    private RemoteAuthentication RemoteAuthentication;
-
-    /**
-    * Shared CNAME configuration (only available to beta users)
-    */
-    @SerializedName("ShareCname")
-    @Expose
-    private ShareCname ShareCname;
-
-    /**
-    * Access authentication for Huawei Cloud OBS origin
+    * Origin-pull authentication for Huawei Cloud OBS origin
     */
     @SerializedName("HwPrivateAccess")
     @Expose
     private HwPrivateAccess HwPrivateAccess;
 
     /**
-    * Access authentication for QiNiu Cloud Kodo origin
+    * Origin-pull authentication for Qiniu Cloud Kodo origin
     */
     @SerializedName("QnPrivateAccess")
     @Expose
@@ -367,7 +306,7 @@ After switching to global acceleration, configurations of the domain name will b
     private OthersPrivateAccess OthersPrivateAccess;
 
     /**
-    * HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+    * HTTPS (enabled by default), which is a paid service. You can check the product document and Billing Overview for more information.
     */
     @SerializedName("HttpsBilling")
     @Expose
@@ -390,19 +329,39 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration 
+     * @return ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
-    public Long getProjectId() {
-        return this.ProjectId;
+    public String getServiceType() {
+        return this.ServiceType;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
+     * @param ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
     }
 
     /**
@@ -422,64 +381,80 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get IP blocklist/allowlist configuration 
-     * @return IpFilter IP blocklist/allowlist configuration
+     * Get Project ID. Default value: 0, indicating `Default Project` 
+     * @return ProjectId Project ID. Default value: 0, indicating `Default Project`
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID. Default value: 0, indicating `Default Project`
+     * @param ProjectId Project ID. Default value: 0, indicating `Default Project`
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get IP blocklist/allowlist 
+     * @return IpFilter IP blocklist/allowlist
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
     }
 
     /**
-     * Set IP blocklist/allowlist configuration
-     * @param IpFilter IP blocklist/allowlist configuration
+     * Set IP blocklist/allowlist
+     * @param IpFilter IP blocklist/allowlist
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;
     }
 
     /**
-     * Get IP access limit configuration 
-     * @return IpFreqLimit IP access limit configuration
+     * Get IP rate limiting 
+     * @return IpFreqLimit IP rate limiting
      */
     public IpFreqLimit getIpFreqLimit() {
         return this.IpFreqLimit;
     }
 
     /**
-     * Set IP access limit configuration
-     * @param IpFreqLimit IP access limit configuration
+     * Set IP rate limiting
+     * @param IpFreqLimit IP rate limiting
      */
     public void setIpFreqLimit(IpFreqLimit IpFreqLimit) {
         this.IpFreqLimit = IpFreqLimit;
     }
 
     /**
-     * Get Status code cache configuration 
-     * @return StatusCodeCache Status code cache configuration
+     * Get Status code cache 
+     * @return StatusCodeCache Status code cache
      */
     public StatusCodeCache getStatusCodeCache() {
         return this.StatusCodeCache;
     }
 
     /**
-     * Set Status code cache configuration
-     * @param StatusCodeCache Status code cache configuration
+     * Set Status code cache
+     * @param StatusCodeCache Status code cache
      */
     public void setStatusCodeCache(StatusCodeCache StatusCodeCache) {
         this.StatusCodeCache = StatusCodeCache;
     }
 
     /**
-     * Get Smart compression configuration 
-     * @return Compression Smart compression configuration
+     * Get Smart compression 
+     * @return Compression Smart compression
      */
     public Compression getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Smart compression configuration
-     * @param Compression Smart compression configuration
+     * Set Smart compression
+     * @param Compression Smart compression
      */
     public void setCompression(Compression Compression) {
         this.Compression = Compression;
@@ -534,16 +509,16 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Error code redirect configuration (This feature is in beta and not generally available yet.) 
-     * @return ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
+     * Get Error code redirection (in beta) 
+     * @return ErrorPage Error code redirection (in beta)
      */
     public ErrorPage getErrorPage() {
         return this.ErrorPage;
     }
 
     /**
-     * Set Error code redirect configuration (This feature is in beta and not generally available yet.)
-     * @param ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
+     * Set Error code redirection (in beta)
+     * @param ErrorPage Error code redirection (in beta)
      */
     public void setErrorPage(ErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;
@@ -646,192 +621,180 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Cache expiration time configuration 
-     * @return Cache Cache expiration time configuration
+     * Get Cache validity configuration 
+     * @return Cache Cache validity configuration
      */
     public Cache getCache() {
         return this.Cache;
     }
 
     /**
-     * Set Cache expiration time configuration
-     * @param Cache Cache expiration time configuration
+     * Set Cache validity configuration
+     * @param Cache Cache validity configuration
      */
     public void setCache(Cache Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get (Disused) Cross-border linkage optimization\ 
-     * @return OriginPullOptimization (Disused) Cross-border linkage optimization\
+     * Get Cross-MLC-border origin-pull optimization 
+     * @return OriginPullOptimization Cross-MLC-border origin-pull optimization
      */
     public OriginPullOptimization getOriginPullOptimization() {
         return this.OriginPullOptimization;
     }
 
     /**
-     * Set (Disused) Cross-border linkage optimization\
-     * @param OriginPullOptimization (Disused) Cross-border linkage optimization\
+     * Set Cross-MLC-border origin-pull optimization
+     * @param OriginPullOptimization Cross-MLC-border origin-pull optimization
      */
     public void setOriginPullOptimization(OriginPullOptimization OriginPullOptimization) {
         this.OriginPullOptimization = OriginPullOptimization;
     }
 
     /**
-     * Get HTTPS acceleration configuration 
-     * @return Https HTTPS acceleration configuration
+     * Get HTTPS acceleration 
+     * @return Https HTTPS acceleration
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set HTTPS acceleration configuration
-     * @param Https HTTPS acceleration configuration
+     * Set HTTPS acceleration
+     * @param Https HTTPS acceleration
      */
     public void setHttps(Https Https) {
         this.Https = Https;
     }
 
     /**
-     * Get Timestamp hotlink protection configuration 
-     * @return Authentication Timestamp hotlink protection configuration
+     * Get Timestamp hotlink protection 
+     * @return Authentication Timestamp hotlink protection
      */
     public Authentication getAuthentication() {
         return this.Authentication;
     }
 
     /**
-     * Set Timestamp hotlink protection configuration
-     * @param Authentication Timestamp hotlink protection configuration
+     * Set Timestamp hotlink protection
+     * @param Authentication Timestamp hotlink protection
      */
     public void setAuthentication(Authentication Authentication) {
         this.Authentication = Authentication;
     }
 
     /**
-     * Get SEO configuration 
-     * @return Seo SEO configuration
+     * Get SEO optimization 
+     * @return Seo SEO optimization
      */
     public Seo getSeo() {
         return this.Seo;
     }
 
     /**
-     * Set SEO configuration
-     * @param Seo SEO configuration
+     * Set SEO optimization
+     * @param Seo SEO optimization
      */
     public void setSeo(Seo Seo) {
         this.Seo = Seo;
     }
 
     /**
-     * Get Protocol redirect configuration 
-     * @return ForceRedirect Protocol redirect configuration
+     * Get Force redirect by access protocol 
+     * @return ForceRedirect Force redirect by access protocol
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Protocol redirect configuration
-     * @param ForceRedirect Protocol redirect configuration
+     * Set Force redirect by access protocol
+     * @param ForceRedirect Force redirect by access protocol
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get Referer configuration 
-     * @return Referer Referer configuration
+     * Get Referer hotlink protection 
+     * @return Referer Referer hotlink protection
      */
     public Referer getReferer() {
         return this.Referer;
     }
 
     /**
-     * Set Referer configuration
-     * @param Referer Referer configuration
+     * Set Referer hotlink protection
+     * @param Referer Referer hotlink protection
      */
     public void setReferer(Referer Referer) {
         this.Referer = Referer;
     }
 
     /**
-     * Get Browser cache configuration (This feature is in beta and not generally available yet.) 
-     * @return MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
+     * Get Browser caching (in beta) 
+     * @return MaxAge Browser caching (in beta)
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set Browser cache configuration (This feature is in beta and not generally available yet.)
-     * @param MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
+     * Set Browser caching (in beta)
+     * @param MaxAge Browser caching (in beta)
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get Specific-region special configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland. 
-     * @return SpecificConfig Specific-region special configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+     * Get IPv6 configuration (This feature is in beta and not generally available yet.) 
+     * @return Ipv6 IPv6 configuration (This feature is in beta and not generally available yet.)
+     */
+    public Ipv6 getIpv6() {
+        return this.Ipv6;
+    }
+
+    /**
+     * Set IPv6 configuration (This feature is in beta and not generally available yet.)
+     * @param Ipv6 IPv6 configuration (This feature is in beta and not generally available yet.)
+     */
+    public void setIpv6(Ipv6 Ipv6) {
+        this.Ipv6 = Ipv6;
+    }
+
+    /**
+     * Get Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China. 
+     * @return SpecificConfig Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      */
     public SpecificConfig getSpecificConfig() {
         return this.SpecificConfig;
     }
 
     /**
-     * Set Specific-region special configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
-     * @param SpecificConfig Specific-region special configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+     * Set Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+     * @param SpecificConfig Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      */
     public void setSpecificConfig(SpecificConfig SpecificConfig) {
         this.SpecificConfig = SpecificConfig;
     }
 
     /**
-     * Get Domain name service type
-`web`: Static acceleration
-`download`: Download acceleration
-`media`: Streaming media VOD acceleration 
-     * @return ServiceType Domain name service type
-`web`: Static acceleration
-`download`: Download acceleration
-`media`: Streaming media VOD acceleration
-     */
-    public String getServiceType() {
-        return this.ServiceType;
-    }
-
-    /**
-     * Set Domain name service type
-`web`: Static acceleration
-`download`: Download acceleration
-`media`: Streaming media VOD acceleration
-     * @param ServiceType Domain name service type
-`web`: Static acceleration
-`download`: Download acceleration
-`media`: Streaming media VOD acceleration
-     */
-    public void setServiceType(String ServiceType) {
-        this.ServiceType = ServiceType;
-    }
-
-    /**
      * Get Domain name acceleration region
-`mainland`: Acceleration inside the Chinese mainland
-`overseas`: Acceleration outside the Chinese mainland
-`global`: Acceleration over the globe
-After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings. 
+mainland: acceleration inside mainland China
+overseas: acceleration outside mainland China
+global: global acceleration
+Overseas acceleration service must be enabled to use overseas acceleration and global acceleration. 
      * @return Area Domain name acceleration region
-`mainland`: Acceleration inside the Chinese mainland
-`overseas`: Acceleration outside the Chinese mainland
-`global`: Acceleration over the globe
-After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+mainland: acceleration inside mainland China
+overseas: acceleration outside mainland China
+global: global acceleration
+Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
      */
     public String getArea() {
         return this.Area;
@@ -839,15 +802,15 @@ After switching to global acceleration, configurations of the domain name will b
 
     /**
      * Set Domain name acceleration region
-`mainland`: Acceleration inside the Chinese mainland
-`overseas`: Acceleration outside the Chinese mainland
-`global`: Acceleration over the globe
-After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+mainland: acceleration inside mainland China
+overseas: acceleration outside mainland China
+global: global acceleration
+Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
      * @param Area Domain name acceleration region
-`mainland`: Acceleration inside the Chinese mainland
-`overseas`: Acceleration outside the Chinese mainland
-`global`: Acceleration over the globe
-After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+mainland: acceleration inside mainland China
+overseas: acceleration outside mainland China
+global: global acceleration
+Overseas acceleration service must be enabled to use overseas acceleration and global acceleration.
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -870,128 +833,32 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Access authentication for S3 origin 
-     * @return AwsPrivateAccess Access authentication for S3 origin
+     * Get Tag configuration 
+     * @return Tag Tag configuration
      */
-    public AwsPrivateAccess getAwsPrivateAccess() {
-        return this.AwsPrivateAccess;
+    public Tag [] getTag() {
+        return this.Tag;
     }
 
     /**
-     * Set Access authentication for S3 origin
-     * @param AwsPrivateAccess Access authentication for S3 origin
+     * Set Tag configuration
+     * @param Tag Tag configuration
      */
-    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
-        this.AwsPrivateAccess = AwsPrivateAccess;
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
     }
 
     /**
-     * Get UA blocklist/allowlist configuration 
-     * @return UserAgentFilter UA blocklist/allowlist configuration
-     */
-    public UserAgentFilter getUserAgentFilter() {
-        return this.UserAgentFilter;
-    }
-
-    /**
-     * Set UA blocklist/allowlist configuration
-     * @param UserAgentFilter UA blocklist/allowlist configuration
-     */
-    public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
-        this.UserAgentFilter = UserAgentFilter;
-    }
-
-    /**
-     * Get Access control 
-     * @return AccessControl Access control
-     */
-    public AccessControl getAccessControl() {
-        return this.AccessControl;
-    }
-
-    /**
-     * Set Access control
-     * @param AccessControl Access control
-     */
-    public void setAccessControl(AccessControl AccessControl) {
-        this.AccessControl = AccessControl;
-    }
-
-    /**
-     * Get URL rewriting configuration 
-     * @return UrlRedirect URL rewriting configuration
-     */
-    public UrlRedirect getUrlRedirect() {
-        return this.UrlRedirect;
-    }
-
-    /**
-     * Set URL rewriting configuration
-     * @param UrlRedirect URL rewriting configuration
-     */
-    public void setUrlRedirect(UrlRedirect UrlRedirect) {
-        this.UrlRedirect = UrlRedirect;
-    }
-
-    /**
-     * Get Access port configuration 
-     * @return AccessPort Access port configuration
-     */
-    public Long [] getAccessPort() {
-        return this.AccessPort;
-    }
-
-    /**
-     * Set Access port configuration
-     * @param AccessPort Access port configuration
-     */
-    public void setAccessPort(Long [] AccessPort) {
-        this.AccessPort = AccessPort;
-    }
-
-    /**
-     * Get Timestamp hotlink protection advanced configuration (allowlist feature) 
-     * @return AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
-     */
-    public AdvancedAuthentication getAdvancedAuthentication() {
-        return this.AdvancedAuthentication;
-    }
-
-    /**
-     * Set Timestamp hotlink protection advanced configuration (allowlist feature)
-     * @param AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
-     */
-    public void setAdvancedAuthentication(AdvancedAuthentication AdvancedAuthentication) {
-        this.AdvancedAuthentication = AdvancedAuthentication;
-    }
-
-    /**
-     * Get Origin-pull authentication advanced configuration (allowlist feature) 
-     * @return OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
-     */
-    public OriginAuthentication getOriginAuthentication() {
-        return this.OriginAuthentication;
-    }
-
-    /**
-     * Set Origin-pull authentication advanced configuration (allowlist feature)
-     * @param OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
-     */
-    public void setOriginAuthentication(OriginAuthentication OriginAuthentication) {
-        this.OriginAuthentication = OriginAuthentication;
-    }
-
-    /**
-     * Get IPv6 access configuration 
-     * @return Ipv6Access IPv6 access configuration
+     * Get Ipv6 access configuration 
+     * @return Ipv6Access Ipv6 access configuration
      */
     public Ipv6Access getIpv6Access() {
         return this.Ipv6Access;
     }
 
     /**
-     * Set IPv6 access configuration
-     * @param Ipv6Access IPv6 access configuration
+     * Set Ipv6 access configuration
+     * @param Ipv6Access Ipv6 access configuration
      */
     public void setIpv6Access(Ipv6Access Ipv6Access) {
         this.Ipv6Access = Ipv6Access;
@@ -1014,38 +881,6 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Merging pull requests 
-     * @return OriginCombine Merging pull requests
-     */
-    public OriginCombine getOriginCombine() {
-        return this.OriginCombine;
-    }
-
-    /**
-     * Set Merging pull requests
-     * @param OriginCombine Merging pull requests
-     */
-    public void setOriginCombine(OriginCombine OriginCombine) {
-        this.OriginCombine = OriginCombine;
-    }
-
-    /**
-     * Get Post transport configuration 
-     * @return PostMaxSize Post transport configuration
-     */
-    public PostSize getPostMaxSize() {
-        return this.PostMaxSize;
-    }
-
-    /**
-     * Set Post transport configuration
-     * @param PostMaxSize Post transport configuration
-     */
-    public void setPostMaxSize(PostSize PostMaxSize) {
-        this.PostMaxSize = PostMaxSize;
-    }
-
-    /**
      * Get QUIC access, which is a paid service. You can check the product document and Billing Overview for more information. 
      * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
@@ -1059,6 +894,22 @@ After switching to global acceleration, configurations of the domain name will b
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
+    }
+
+    /**
+     * Get Access authentication for S3 origin 
+     * @return AwsPrivateAccess Access authentication for S3 origin
+     */
+    public AwsPrivateAccess getAwsPrivateAccess() {
+        return this.AwsPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for S3 origin
+     * @param AwsPrivateAccess Access authentication for S3 origin
+     */
+    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
+        this.AwsPrivateAccess = AwsPrivateAccess;
     }
 
     /**
@@ -1078,80 +929,32 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get WebSocket configuration 
-     * @return WebSocket WebSocket configuration
-     */
-    public WebSocket getWebSocket() {
-        return this.WebSocket;
-    }
-
-    /**
-     * Set WebSocket configuration
-     * @param WebSocket WebSocket configuration
-     */
-    public void setWebSocket(WebSocket WebSocket) {
-        this.WebSocket = WebSocket;
-    }
-
-    /**
-     * Get Remote authentication configuration 
-     * @return RemoteAuthentication Remote authentication configuration
-     */
-    public RemoteAuthentication getRemoteAuthentication() {
-        return this.RemoteAuthentication;
-    }
-
-    /**
-     * Set Remote authentication configuration
-     * @param RemoteAuthentication Remote authentication configuration
-     */
-    public void setRemoteAuthentication(RemoteAuthentication RemoteAuthentication) {
-        this.RemoteAuthentication = RemoteAuthentication;
-    }
-
-    /**
-     * Get Shared CNAME configuration (only available to beta users) 
-     * @return ShareCname Shared CNAME configuration (only available to beta users)
-     */
-    public ShareCname getShareCname() {
-        return this.ShareCname;
-    }
-
-    /**
-     * Set Shared CNAME configuration (only available to beta users)
-     * @param ShareCname Shared CNAME configuration (only available to beta users)
-     */
-    public void setShareCname(ShareCname ShareCname) {
-        this.ShareCname = ShareCname;
-    }
-
-    /**
-     * Get Access authentication for Huawei Cloud OBS origin 
-     * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     * Get Origin-pull authentication for Huawei Cloud OBS origin 
+     * @return HwPrivateAccess Origin-pull authentication for Huawei Cloud OBS origin
      */
     public HwPrivateAccess getHwPrivateAccess() {
         return this.HwPrivateAccess;
     }
 
     /**
-     * Set Access authentication for Huawei Cloud OBS origin
-     * @param HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     * Set Origin-pull authentication for Huawei Cloud OBS origin
+     * @param HwPrivateAccess Origin-pull authentication for Huawei Cloud OBS origin
      */
     public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
         this.HwPrivateAccess = HwPrivateAccess;
     }
 
     /**
-     * Get Access authentication for QiNiu Cloud Kodo origin 
-     * @return QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+     * Get Origin-pull authentication for Qiniu Cloud Kodo origin 
+     * @return QnPrivateAccess Origin-pull authentication for Qiniu Cloud Kodo origin
      */
     public QnPrivateAccess getQnPrivateAccess() {
         return this.QnPrivateAccess;
     }
 
     /**
-     * Set Access authentication for QiNiu Cloud Kodo origin
-     * @param QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+     * Set Origin-pull authentication for Qiniu Cloud Kodo origin
+     * @param QnPrivateAccess Origin-pull authentication for Qiniu Cloud Kodo origin
      */
     public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
         this.QnPrivateAccess = QnPrivateAccess;
@@ -1174,37 +977,40 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get HTTPS, which is a paid service. You can check the product document and Billing Overview for more information. 
-     * @return HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+     * Get HTTPS (enabled by default), which is a paid service. You can check the product document and Billing Overview for more information. 
+     * @return HttpsBilling HTTPS (enabled by default), which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public HttpsBilling getHttpsBilling() {
         return this.HttpsBilling;
     }
 
     /**
-     * Set HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
-     * @param HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+     * Set HTTPS (enabled by default), which is a paid service. You can check the product document and Billing Overview for more information.
+     * @param HttpsBilling HTTPS (enabled by default), which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public void setHttpsBilling(HttpsBilling HttpsBilling) {
         this.HttpsBilling = HttpsBilling;
     }
 
-    public UpdateDomainConfigRequest() {
+    public AddCdnDomainRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateDomainConfigRequest(UpdateDomainConfigRequest source) {
+    public AddCdnDomainRequest(AddCdnDomainRequest source) {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
         }
         if (source.Origin != null) {
             this.Origin = new Origin(source.Origin);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
         }
         if (source.IpFilter != null) {
             this.IpFilter = new IpFilter(source.IpFilter);
@@ -1272,11 +1078,11 @@ After switching to global acceleration, configurations of the domain name will b
         if (source.MaxAge != null) {
             this.MaxAge = new MaxAge(source.MaxAge);
         }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new Ipv6(source.Ipv6);
+        }
         if (source.SpecificConfig != null) {
             this.SpecificConfig = new SpecificConfig(source.SpecificConfig);
-        }
-        if (source.ServiceType != null) {
-            this.ServiceType = new String(source.ServiceType);
         }
         if (source.Area != null) {
             this.Area = new String(source.Area);
@@ -1284,29 +1090,11 @@ After switching to global acceleration, configurations of the domain name will b
         if (source.OriginPullTimeout != null) {
             this.OriginPullTimeout = new OriginPullTimeout(source.OriginPullTimeout);
         }
-        if (source.AwsPrivateAccess != null) {
-            this.AwsPrivateAccess = new AwsPrivateAccess(source.AwsPrivateAccess);
-        }
-        if (source.UserAgentFilter != null) {
-            this.UserAgentFilter = new UserAgentFilter(source.UserAgentFilter);
-        }
-        if (source.AccessControl != null) {
-            this.AccessControl = new AccessControl(source.AccessControl);
-        }
-        if (source.UrlRedirect != null) {
-            this.UrlRedirect = new UrlRedirect(source.UrlRedirect);
-        }
-        if (source.AccessPort != null) {
-            this.AccessPort = new Long[source.AccessPort.length];
-            for (int i = 0; i < source.AccessPort.length; i++) {
-                this.AccessPort[i] = new Long(source.AccessPort[i]);
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
             }
-        }
-        if (source.AdvancedAuthentication != null) {
-            this.AdvancedAuthentication = new AdvancedAuthentication(source.AdvancedAuthentication);
-        }
-        if (source.OriginAuthentication != null) {
-            this.OriginAuthentication = new OriginAuthentication(source.OriginAuthentication);
         }
         if (source.Ipv6Access != null) {
             this.Ipv6Access = new Ipv6Access(source.Ipv6Access);
@@ -1314,26 +1102,14 @@ After switching to global acceleration, configurations of the domain name will b
         if (source.OfflineCache != null) {
             this.OfflineCache = new OfflineCache(source.OfflineCache);
         }
-        if (source.OriginCombine != null) {
-            this.OriginCombine = new OriginCombine(source.OriginCombine);
-        }
-        if (source.PostMaxSize != null) {
-            this.PostMaxSize = new PostSize(source.PostMaxSize);
-        }
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
+        if (source.AwsPrivateAccess != null) {
+            this.AwsPrivateAccess = new AwsPrivateAccess(source.AwsPrivateAccess);
+        }
         if (source.OssPrivateAccess != null) {
             this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
-        }
-        if (source.WebSocket != null) {
-            this.WebSocket = new WebSocket(source.WebSocket);
-        }
-        if (source.RemoteAuthentication != null) {
-            this.RemoteAuthentication = new RemoteAuthentication(source.RemoteAuthentication);
-        }
-        if (source.ShareCname != null) {
-            this.ShareCname = new ShareCname(source.ShareCname);
         }
         if (source.HwPrivateAccess != null) {
             this.HwPrivateAccess = new HwPrivateAccess(source.HwPrivateAccess);
@@ -1355,8 +1131,9 @@ After switching to global acceleration, configurations of the domain name will b
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamObj(map, prefix + "Origin.", this.Origin);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamObj(map, prefix + "IpFilter.", this.IpFilter);
         this.setParamObj(map, prefix + "IpFreqLimit.", this.IpFreqLimit);
         this.setParamObj(map, prefix + "StatusCodeCache.", this.StatusCodeCache);
@@ -1379,26 +1156,16 @@ After switching to global acceleration, configurations of the domain name will b
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamObj(map, prefix + "Referer.", this.Referer);
         this.setParamObj(map, prefix + "MaxAge.", this.MaxAge);
+        this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
-        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
-        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
-        this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
-        this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
-        this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
-        this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
-        this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
-        this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
-        this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
-        this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
+        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
-        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
-        this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
-        this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         this.setParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);

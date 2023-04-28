@@ -30,6 +30,14 @@ public class DatahubTopicResp extends AbstractModel{
     private String TopicName;
 
     /**
+    * TopicId
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
      * Get Topic name 
      * @return TopicName Topic name
      */
@@ -45,6 +53,26 @@ public class DatahubTopicResp extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    /**
+     * Get TopicId
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicId TopicId
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set TopicId
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicId TopicId
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
     public DatahubTopicResp() {
     }
 
@@ -56,6 +84,9 @@ public class DatahubTopicResp extends AbstractModel{
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
     }
 
 
@@ -64,6 +95,7 @@ public class DatahubTopicResp extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
 
     }
 }

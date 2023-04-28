@@ -79,14 +79,14 @@ public class DescribeVoucherInfoRequest extends AbstractModel{
     private String VoucherName;
 
     /**
-    * The start time of the promotional campaign.
+    * The start date of the voucher issuance, such as `2021-01-01`.
     */
     @SerializedName("TimeFrom")
     @Expose
     private String TimeFrom;
 
     /**
-    * The end time of the promotional campaign.
+    * The end date of the voucher issuance, such as `2021-01-01`.
     */
     @SerializedName("TimeTo")
     @Expose
@@ -256,32 +256,32 @@ public class DescribeVoucherInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get The start time of the promotional campaign. 
-     * @return TimeFrom The start time of the promotional campaign.
+     * Get The start date of the voucher issuance, such as `2021-01-01`. 
+     * @return TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
      */
     public String getTimeFrom() {
         return this.TimeFrom;
     }
 
     /**
-     * Set The start time of the promotional campaign.
-     * @param TimeFrom The start time of the promotional campaign.
+     * Set The start date of the voucher issuance, such as `2021-01-01`.
+     * @param TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
      */
     public void setTimeFrom(String TimeFrom) {
         this.TimeFrom = TimeFrom;
     }
 
     /**
-     * Get The end time of the promotional campaign. 
-     * @return TimeTo The end time of the promotional campaign.
+     * Get The end date of the voucher issuance, such as `2021-01-01`. 
+     * @return TimeTo The end date of the voucher issuance, such as `2021-01-01`.
      */
     public String getTimeTo() {
         return this.TimeTo;
     }
 
     /**
-     * Set The end time of the promotional campaign.
-     * @param TimeTo The end time of the promotional campaign.
+     * Set The end date of the voucher issuance, such as `2021-01-01`.
+     * @param TimeTo The end date of the voucher issuance, such as `2021-01-01`.
      */
     public void setTimeTo(String TimeTo) {
         this.TimeTo = TimeTo;

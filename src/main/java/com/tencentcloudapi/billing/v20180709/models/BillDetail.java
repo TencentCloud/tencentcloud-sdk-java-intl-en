@@ -195,6 +195,14 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private Long ProjectId;
 
     /**
+    * Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PriceInfo")
+    @Expose
+    private String [] PriceInfo;
+
+    /**
      * Get Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL 
      * @return BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
      */
@@ -594,6 +602,26 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get Price attribute
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PriceInfo Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getPriceInfo() {
+        return this.PriceInfo;
+    }
+
+    /**
+     * Set Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PriceInfo Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPriceInfo(String [] PriceInfo) {
+        this.PriceInfo = PriceInfo;
+    }
+
     public BillDetail() {
     }
 
@@ -680,6 +708,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.PriceInfo != null) {
+            this.PriceInfo = new String[source.PriceInfo.length];
+            for (int i = 0; i < source.PriceInfo.length; i++) {
+                this.PriceInfo[i] = new String(source.PriceInfo[i]);
+            }
+        }
     }
 
 
@@ -711,6 +745,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "PriceInfo.", this.PriceInfo);
 
     }
 }

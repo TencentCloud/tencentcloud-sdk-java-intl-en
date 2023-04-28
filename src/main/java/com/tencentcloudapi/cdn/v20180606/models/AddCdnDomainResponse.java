@@ -20,41 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpsBilling extends AbstractModel{
+public class AddCdnDomainResponse extends AbstractModel{
 
     /**
-    * HTTPS (enabled by default), which will incur charges.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("Switch")
+    @SerializedName("RequestId")
     @Expose
-    private String Switch;
+    private String RequestId;
 
     /**
-     * Get HTTPS (enabled by default), which will incur charges. 
-     * @return Switch HTTPS (enabled by default), which will incur charges.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set HTTPS (enabled by default), which will incur charges.
-     * @param Switch HTTPS (enabled by default), which will incur charges.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public HttpsBilling() {
+    public AddCdnDomainResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HttpsBilling(HttpsBilling source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public AddCdnDomainResponse(AddCdnDomainResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class HttpsBilling extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

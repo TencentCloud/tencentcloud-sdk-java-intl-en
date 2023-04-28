@@ -79,7 +79,7 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query bill resources summary. 
+     *This API is used to query bill resources summary.
      * @param req DescribeBillResourceSummaryRequest
      * @return DescribeBillResourceSummaryResponse
      * @throws TencentCloudSDKException

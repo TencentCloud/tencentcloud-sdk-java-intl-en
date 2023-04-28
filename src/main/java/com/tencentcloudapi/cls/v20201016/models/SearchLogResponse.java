@@ -89,6 +89,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Column [] Columns;
 
     /**
+    * Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SamplingRate")
+    @Expose
+    private Float SamplingRate;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -264,6 +272,26 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SamplingRate Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getSamplingRate() {
+        return this.SamplingRate;
+    }
+
+    /**
+     * Set Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SamplingRate Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSamplingRate(Float SamplingRate) {
+        this.SamplingRate = SamplingRate;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -326,6 +354,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.Columns[i] = new Column(source.Columns[i]);
             }
         }
+        if (source.SamplingRate != null) {
+            this.SamplingRate = new Float(source.SamplingRate);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -344,6 +375,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
         this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
+        this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

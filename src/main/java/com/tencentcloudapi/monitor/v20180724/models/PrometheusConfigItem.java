@@ -45,6 +45,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TemplateId;
 
     /**
+    * Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Targets")
+    @Expose
+    private Targets Targets;
+
+    /**
      * Get Name 
      * @return Name Name
      */
@@ -96,6 +104,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get Number of targets
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Targets Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Targets getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Targets Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTargets(Targets Targets) {
+        this.Targets = Targets;
+    }
+
     public PrometheusConfigItem() {
     }
 
@@ -113,6 +141,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.Targets != null) {
+            this.Targets = new Targets(source.Targets);
+        }
     }
 
 
@@ -123,6 +154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamObj(map, prefix + "Targets.", this.Targets);
 
     }
 }

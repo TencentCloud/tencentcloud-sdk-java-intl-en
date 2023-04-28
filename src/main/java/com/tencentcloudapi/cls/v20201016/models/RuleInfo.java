@@ -47,6 +47,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RuleTagInfo Tag;
 
     /**
+    * Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DynamicIndex")
+    @Expose
+    private DynamicIndex DynamicIndex;
+
+    /**
      * Get Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
@@ -106,6 +114,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Tag = Tag;
     }
 
+    /**
+     * Get Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DynamicIndex getDynamicIndex() {
+        return this.DynamicIndex;
+    }
+
+    /**
+     * Set Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDynamicIndex(DynamicIndex DynamicIndex) {
+        this.DynamicIndex = DynamicIndex;
+    }
+
     public RuleInfo() {
     }
 
@@ -123,6 +151,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Tag != null) {
             this.Tag = new RuleTagInfo(source.Tag);
         }
+        if (source.DynamicIndex != null) {
+            this.DynamicIndex = new DynamicIndex(source.DynamicIndex);
+        }
     }
 
 
@@ -133,6 +164,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "FullText.", this.FullText);
         this.setParamObj(map, prefix + "KeyValue.", this.KeyValue);
         this.setParamObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "DynamicIndex.", this.DynamicIndex);
 
     }
 }

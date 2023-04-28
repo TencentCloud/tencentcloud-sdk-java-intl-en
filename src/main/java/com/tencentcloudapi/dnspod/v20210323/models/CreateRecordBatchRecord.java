@@ -102,6 +102,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MX;
 
     /**
+    * The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get Subdomain (host record).
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SubDomain Subdomain (host record).
@@ -297,6 +305,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MX = MX;
     }
 
+    /**
+     * Get The record weight.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Weight The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Weight The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public CreateRecordBatchRecord() {
     }
 
@@ -335,6 +363,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MX != null) {
             this.MX = new Long(source.MX);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -352,6 +383,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "MX", this.MX);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

@@ -599,6 +599,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get alarm records, such as today's uncleared alarms.
+     * @param req DescribeAlertRecordHistoryRequest
+     * @return DescribeAlertRecordHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlertRecordHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlertRecordHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlertRecordHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the machine group bound to a collection rule configuration.
      * @param req DescribeConfigMachineGroupsRequest
      * @return DescribeConfigMachineGroupsResponse

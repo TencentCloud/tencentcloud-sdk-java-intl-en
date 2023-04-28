@@ -199,6 +199,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete health report generation tasks by task ID.
+     * @param req DeleteDBDiagReportTasksRequest
+     * @return DeleteDBDiagReportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBDiagReportTasksResponse DeleteDBDiagReportTasks(DeleteDBDiagReportTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDBDiagReportTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDBDiagReportTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDBDiagReportTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a security audit log export task.
      * @param req DeleteSecurityAuditLogExportTasksRequest
      * @return DeleteSecurityAuditLogExportTasksResponse
@@ -591,6 +611,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSlowLogUserHostStats");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the slow query log details of a SQL template in a specified time period.
+     * @param req DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowLogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

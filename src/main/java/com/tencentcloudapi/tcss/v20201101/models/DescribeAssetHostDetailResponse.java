@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAssetHostDetailResponse extends AbstractModel{
 
     /**
-    * CWPP UUID
+    * TCSS UUID
     */
     @SerializedName("UUID")
     @Expose
@@ -212,16 +212,16 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get CWPP UUID 
-     * @return UUID CWPP UUID
+     * Get TCSS UUID 
+     * @return UUID TCSS UUID
      */
     public String getUUID() {
         return this.UUID;
     }
 
     /**
-     * Set CWPP UUID
-     * @param UUID CWPP UUID
+     * Set TCSS UUID
+     * @param UUID TCSS UUID
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;

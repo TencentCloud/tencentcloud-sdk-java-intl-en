@@ -54,6 +54,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PrometheusConfigItem [] RawJobs;
 
     /**
+    * List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Probes")
+    @Expose
+    private PrometheusConfigItem [] Probes;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -137,6 +145,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Probes List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PrometheusConfigItem [] getProbes() {
+        return this.Probes;
+    }
+
+    /**
+     * Set List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Probes List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProbes(PrometheusConfigItem [] Probes) {
+        this.Probes = Probes;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -181,6 +209,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.RawJobs[i] = new PrometheusConfigItem(source.RawJobs[i]);
             }
         }
+        if (source.Probes != null) {
+            this.Probes = new PrometheusConfigItem[source.Probes.length];
+            for (int i = 0; i < source.Probes.length; i++) {
+                this.Probes[i] = new PrometheusConfigItem(source.Probes[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -195,6 +229,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
         this.setParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
         this.setParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+        this.setParamArrayObj(map, prefix + "Probes.", this.Probes);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

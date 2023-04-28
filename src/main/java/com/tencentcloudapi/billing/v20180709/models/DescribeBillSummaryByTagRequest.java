@@ -37,7 +37,7 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * Cost allocation tag key
+    * Cost allocation tag key, which can be customized.
     */
     @SerializedName("TagKey")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
     }
 
     /**
-     * Get Cost allocation tag key 
-     * @return TagKey Cost allocation tag key
+     * Get Cost allocation tag key, which can be customized. 
+     * @return TagKey Cost allocation tag key, which can be customized.
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Cost allocation tag key
-     * @param TagKey Cost allocation tag key
+     * Set Cost allocation tag key, which can be customized.
+     * @param TagKey Cost allocation tag key, which can be customized.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;

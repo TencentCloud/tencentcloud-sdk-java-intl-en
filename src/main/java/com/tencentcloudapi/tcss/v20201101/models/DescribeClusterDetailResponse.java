@@ -191,6 +191,13 @@ public class DescribeClusterDetailResponse extends AbstractModel{
     private Long IngressCount;
 
     /**
+    * IPs of the primary nodes
+    */
+    @SerializedName("MasterIps")
+    @Expose
+    private String MasterIps;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -582,6 +589,22 @@ public class DescribeClusterDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get IPs of the primary nodes 
+     * @return MasterIps IPs of the primary nodes
+     */
+    public String getMasterIps() {
+        return this.MasterIps;
+    }
+
+    /**
+     * Set IPs of the primary nodes
+     * @param MasterIps IPs of the primary nodes
+     */
+    public void setMasterIps(String MasterIps) {
+        this.MasterIps = MasterIps;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -677,6 +700,9 @@ public class DescribeClusterDetailResponse extends AbstractModel{
         if (source.IngressCount != null) {
             this.IngressCount = new Long(source.IngressCount);
         }
+        if (source.MasterIps != null) {
+            this.MasterIps = new String(source.MasterIps);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -711,6 +737,7 @@ public class DescribeClusterDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PodCount", this.PodCount);
         this.setParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
         this.setParamSimple(map, prefix + "IngressCount", this.IngressCount);
+        this.setParamSimple(map, prefix + "MasterIps", this.MasterIps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

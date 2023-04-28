@@ -60,8 +60,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private IpFilterPathRule [] FilterRules;
 
     /**
-    * [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -168,20 +168,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

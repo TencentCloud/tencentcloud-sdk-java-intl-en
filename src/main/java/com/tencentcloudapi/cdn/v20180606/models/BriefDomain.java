@@ -54,7 +54,8 @@ public class BriefDomain extends AbstractModel{
     * Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
     */
     @SerializedName("Status")
@@ -217,12 +218,14 @@ global: Locked globally
      * Get Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled 
      * @return Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
      */
     public String getStatus() {
@@ -233,12 +236,14 @@ global: Locked globally
      * Set Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
      * @param Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
      */
     public void setStatus(String Status) {

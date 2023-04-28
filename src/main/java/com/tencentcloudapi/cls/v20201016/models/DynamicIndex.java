@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpsBilling extends AbstractModel{
+public class DynamicIndex extends AbstractModel{
 
     /**
-    * HTTPS (enabled by default), which will incur charges.
+    * Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Switch")
+    @SerializedName("Status")
     @Expose
-    private String Switch;
+    private Boolean Status;
 
     /**
-     * Get HTTPS (enabled by default), which will incur charges. 
-     * @return Switch HTTPS (enabled by default), which will incur charges.
+     * Get Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getSwitch() {
-        return this.Switch;
+    public Boolean getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set HTTPS (enabled by default), which will incur charges.
-     * @param Switch HTTPS (enabled by default), which will incur charges.
+     * Set Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
     }
 
-    public HttpsBilling() {
+    public DynamicIndex() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HttpsBilling(HttpsBilling source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public DynamicIndex(DynamicIndex source) {
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
         }
     }
 
@@ -63,7 +68,7 @@ public class HttpsBilling extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

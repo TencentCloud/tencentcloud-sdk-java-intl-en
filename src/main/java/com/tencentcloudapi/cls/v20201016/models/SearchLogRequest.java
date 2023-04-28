@@ -104,9 +104,9 @@ Default value: `1`
     private Float SamplingRate;
 
     /**
-    * Search syntax.
+    * Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
     */
     @SerializedName("SyntaxRule")
     @Expose
@@ -329,24 +329,24 @@ Default value: `1`
     }
 
     /**
-     * Get Search syntax.
+     * Get Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules. 
-     * @return SyntaxRule Search syntax.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a> 
+     * @return SyntaxRule Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Search syntax.
+     * Set Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
-     * @param SyntaxRule Search syntax.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+     * @param SyntaxRule Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;

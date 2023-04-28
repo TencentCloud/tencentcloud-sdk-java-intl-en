@@ -60,6 +60,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ClusterId;
 
     /**
+    * Status
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * id
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get Instance name 
      * @return Name Instance name
      */
@@ -147,6 +171,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get Status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get id
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Id id
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set id
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Id id
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get Number of rules
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Count Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Count Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public PrometheusRecordRuleYamlItem() {
     }
 
@@ -170,6 +254,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -182,6 +275,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

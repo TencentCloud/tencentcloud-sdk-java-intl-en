@@ -44,7 +44,7 @@ public class CosDetailSets extends AbstractModel{
     private String DosageEndTime;
 
     /**
-    * Sub-product name
+    * Subproduct name
     */
     @SerializedName("SubProductCodeName")
     @Expose
@@ -120,16 +120,16 @@ public class CosDetailSets extends AbstractModel{
     }
 
     /**
-     * Get Sub-product name 
-     * @return SubProductCodeName Sub-product name
+     * Get Subproduct name 
+     * @return SubProductCodeName Subproduct name
      */
     public String getSubProductCodeName() {
         return this.SubProductCodeName;
     }
 
     /**
-     * Set Sub-product name
-     * @param SubProductCodeName Sub-product name
+     * Set Subproduct name
+     * @param SubProductCodeName Subproduct name
      */
     public void setSubProductCodeName(String SubProductCodeName) {
         this.SubProductCodeName = SubProductCodeName;

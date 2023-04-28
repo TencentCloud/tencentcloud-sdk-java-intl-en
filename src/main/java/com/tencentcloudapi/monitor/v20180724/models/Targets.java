@@ -13,149 +13,146 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnalysisDimensional extends AbstractModel{
+public class Targets extends AbstractModel{
 
     /**
-    * Analysis name
+    * The total count
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Name")
+    @SerializedName("Total")
     @Expose
-    private String Name;
+    private Long Total;
 
     /**
-    * Type of data being analyzed. Valid values: `query`, `field`, `original`
+    * Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Type")
+    @SerializedName("Up")
     @Expose
-    private String Type;
+    private Long Up;
 
     /**
-    * Analysis content
+    * Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Content")
+    @SerializedName("Down")
     @Expose
-    private String Content;
+    private Long Down;
 
     /**
-    * Configuration
+    * Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ConfigInfo")
+    @SerializedName("Unknown")
     @Expose
-    private AlarmAnalysisConfig [] ConfigInfo;
+    private Long Unknown;
 
     /**
-     * Get Analysis name
+     * Get The total count
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Analysis name
+     * @return Total The total count
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getName() {
-        return this.Name;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set Analysis name
+     * Set The total count
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Analysis name
+     * @param Total The total count
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get Type of data being analyzed. Valid values: `query`, `field`, `original`
+     * Get Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type of data being analyzed. Valid values: `query`, `field`, `original`
+     * @return Up Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getType() {
-        return this.Type;
+    public Long getUp() {
+        return this.Up;
     }
 
     /**
-     * Set Type of data being analyzed. Valid values: `query`, `field`, `original`
+     * Set Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type of data being analyzed. Valid values: `query`, `field`, `original`
+     * @param Up Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setUp(Long Up) {
+        this.Up = Up;
     }
 
     /**
-     * Get Analysis content
+     * Get Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Content Analysis content
+     * @return Down Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getContent() {
-        return this.Content;
+    public Long getDown() {
+        return this.Down;
     }
 
     /**
-     * Set Analysis content
+     * Set Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Content Analysis content
+     * @param Down Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setDown(Long Down) {
+        this.Down = Down;
     }
 
     /**
-     * Get Configuration
+     * Get Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigInfo Configuration
+     * @return Unknown Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public AlarmAnalysisConfig [] getConfigInfo() {
-        return this.ConfigInfo;
+    public Long getUnknown() {
+        return this.Unknown;
     }
 
     /**
-     * Set Configuration
+     * Set Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigInfo Configuration
+     * @param Unknown Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setConfigInfo(AlarmAnalysisConfig [] ConfigInfo) {
-        this.ConfigInfo = ConfigInfo;
+    public void setUnknown(Long Unknown) {
+        this.Unknown = Unknown;
     }
 
-    public AnalysisDimensional() {
+    public Targets() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AnalysisDimensional(AnalysisDimensional source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+    public Targets(Targets source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.Up != null) {
+            this.Up = new Long(source.Up);
         }
-        if (source.Content != null) {
-            this.Content = new String(source.Content);
+        if (source.Down != null) {
+            this.Down = new Long(source.Down);
         }
-        if (source.ConfigInfo != null) {
-            this.ConfigInfo = new AlarmAnalysisConfig[source.ConfigInfo.length];
-            for (int i = 0; i < source.ConfigInfo.length; i++) {
-                this.ConfigInfo[i] = new AlarmAnalysisConfig(source.ConfigInfo[i]);
-            }
+        if (source.Unknown != null) {
+            this.Unknown = new Long(source.Unknown);
         }
     }
 
@@ -164,10 +161,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Content", this.Content);
-        this.setParamArrayObj(map, prefix + "ConfigInfo.", this.ConfigInfo);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "Up", this.Up);
+        this.setParamSimple(map, prefix + "Down", this.Down);
+        this.setParamSimple(map, prefix + "Unknown", this.Unknown);
 
     }
 }

@@ -93,6 +93,13 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     private Long FailedClusterCount;
 
     /**
+    * Number of clusters not imported
+    */
+    @SerializedName("NotImportedClusterCount")
+    @Expose
+    private Long NotImportedClusterCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -260,6 +267,22 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get Number of clusters not imported 
+     * @return NotImportedClusterCount Number of clusters not imported
+     */
+    public Long getNotImportedClusterCount() {
+        return this.NotImportedClusterCount;
+    }
+
+    /**
+     * Set Number of clusters not imported
+     * @param NotImportedClusterCount Number of clusters not imported
+     */
+    public void setNotImportedClusterCount(Long NotImportedClusterCount) {
+        this.NotImportedClusterCount = NotImportedClusterCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -313,6 +336,9 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         if (source.FailedClusterCount != null) {
             this.FailedClusterCount = new Long(source.FailedClusterCount);
         }
+        if (source.NotImportedClusterCount != null) {
+            this.NotImportedClusterCount = new Long(source.NotImportedClusterCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +359,7 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoCheckClusterCount", this.AutoCheckClusterCount);
         this.setParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
         this.setParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
+        this.setParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

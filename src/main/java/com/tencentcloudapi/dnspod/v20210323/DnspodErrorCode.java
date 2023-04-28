@@ -192,6 +192,9 @@ public enum DnspodErrorCode {
     // The user UIN is invalid.
      INVALIDPARAMETER_QCLOUDUININVALID("InvalidParameter.QcloudUinInvalid"),
      
+    // 
+     INVALIDPARAMETER_QUHUITXTNOTMATCH("InvalidParameter.QuhuiTxtNotMatch"),
+     
     // The TXT record was not set or has not taken effect. Try again later.
      INVALIDPARAMETER_QUHUITXTRECORDWAIT("InvalidParameter.QuhuiTxtRecordWait"),
      

@@ -58,8 +58,7 @@ public class AddRecordBatch extends AbstractModel{
     private String RecordLineId;
 
     /**
-    * Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The record weight (not supported).
     */
     @SerializedName("Weight")
     @Expose
@@ -174,20 +173,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Weight Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The record weight (not supported). 
+     * @return Weight The record weight (not supported).
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Weight Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The record weight (not supported).
+     * @param Weight The record weight (not supported).
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

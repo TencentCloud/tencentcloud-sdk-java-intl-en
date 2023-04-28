@@ -65,6 +65,41 @@ public class DescribeVulSummaryResponse extends AbstractModel{
     private Long SeriousVulNewestImageCount;
 
     /**
+    * Number of high-priority system vulnerabilities
+    */
+    @SerializedName("SystemVulnerabilityFocusCount")
+    @Expose
+    private Long SystemVulnerabilityFocusCount;
+
+    /**
+    * Number of high-priority web vulnerabilities
+    */
+    @SerializedName("WebVulnerabilityFocusCount")
+    @Expose
+    private Long WebVulnerabilityFocusCount;
+
+    /**
+    * Number of affected local images
+    */
+    @SerializedName("SeriousVulnerabilityLocalImageCount")
+    @Expose
+    private Long SeriousVulnerabilityLocalImageCount;
+
+    /**
+    * Number of affected repository images
+    */
+    @SerializedName("SeriousVulnerabilityRegistryImageCount")
+    @Expose
+    private Long SeriousVulnerabilityRegistryImageCount;
+
+    /**
+    * Number of emergency vulnerabilities
+    */
+    @SerializedName("EmergencyVulnerabilityCount")
+    @Expose
+    private Long EmergencyVulnerabilityCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -168,6 +203,86 @@ public class DescribeVulSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get Number of high-priority system vulnerabilities 
+     * @return SystemVulnerabilityFocusCount Number of high-priority system vulnerabilities
+     */
+    public Long getSystemVulnerabilityFocusCount() {
+        return this.SystemVulnerabilityFocusCount;
+    }
+
+    /**
+     * Set Number of high-priority system vulnerabilities
+     * @param SystemVulnerabilityFocusCount Number of high-priority system vulnerabilities
+     */
+    public void setSystemVulnerabilityFocusCount(Long SystemVulnerabilityFocusCount) {
+        this.SystemVulnerabilityFocusCount = SystemVulnerabilityFocusCount;
+    }
+
+    /**
+     * Get Number of high-priority web vulnerabilities 
+     * @return WebVulnerabilityFocusCount Number of high-priority web vulnerabilities
+     */
+    public Long getWebVulnerabilityFocusCount() {
+        return this.WebVulnerabilityFocusCount;
+    }
+
+    /**
+     * Set Number of high-priority web vulnerabilities
+     * @param WebVulnerabilityFocusCount Number of high-priority web vulnerabilities
+     */
+    public void setWebVulnerabilityFocusCount(Long WebVulnerabilityFocusCount) {
+        this.WebVulnerabilityFocusCount = WebVulnerabilityFocusCount;
+    }
+
+    /**
+     * Get Number of affected local images 
+     * @return SeriousVulnerabilityLocalImageCount Number of affected local images
+     */
+    public Long getSeriousVulnerabilityLocalImageCount() {
+        return this.SeriousVulnerabilityLocalImageCount;
+    }
+
+    /**
+     * Set Number of affected local images
+     * @param SeriousVulnerabilityLocalImageCount Number of affected local images
+     */
+    public void setSeriousVulnerabilityLocalImageCount(Long SeriousVulnerabilityLocalImageCount) {
+        this.SeriousVulnerabilityLocalImageCount = SeriousVulnerabilityLocalImageCount;
+    }
+
+    /**
+     * Get Number of affected repository images 
+     * @return SeriousVulnerabilityRegistryImageCount Number of affected repository images
+     */
+    public Long getSeriousVulnerabilityRegistryImageCount() {
+        return this.SeriousVulnerabilityRegistryImageCount;
+    }
+
+    /**
+     * Set Number of affected repository images
+     * @param SeriousVulnerabilityRegistryImageCount Number of affected repository images
+     */
+    public void setSeriousVulnerabilityRegistryImageCount(Long SeriousVulnerabilityRegistryImageCount) {
+        this.SeriousVulnerabilityRegistryImageCount = SeriousVulnerabilityRegistryImageCount;
+    }
+
+    /**
+     * Get Number of emergency vulnerabilities 
+     * @return EmergencyVulnerabilityCount Number of emergency vulnerabilities
+     */
+    public Long getEmergencyVulnerabilityCount() {
+        return this.EmergencyVulnerabilityCount;
+    }
+
+    /**
+     * Set Number of emergency vulnerabilities
+     * @param EmergencyVulnerabilityCount Number of emergency vulnerabilities
+     */
+    public void setEmergencyVulnerabilityCount(Long EmergencyVulnerabilityCount) {
+        this.EmergencyVulnerabilityCount = EmergencyVulnerabilityCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -209,6 +324,21 @@ public class DescribeVulSummaryResponse extends AbstractModel{
         if (source.SeriousVulNewestImageCount != null) {
             this.SeriousVulNewestImageCount = new Long(source.SeriousVulNewestImageCount);
         }
+        if (source.SystemVulnerabilityFocusCount != null) {
+            this.SystemVulnerabilityFocusCount = new Long(source.SystemVulnerabilityFocusCount);
+        }
+        if (source.WebVulnerabilityFocusCount != null) {
+            this.WebVulnerabilityFocusCount = new Long(source.WebVulnerabilityFocusCount);
+        }
+        if (source.SeriousVulnerabilityLocalImageCount != null) {
+            this.SeriousVulnerabilityLocalImageCount = new Long(source.SeriousVulnerabilityLocalImageCount);
+        }
+        if (source.SeriousVulnerabilityRegistryImageCount != null) {
+            this.SeriousVulnerabilityRegistryImageCount = new Long(source.SeriousVulnerabilityRegistryImageCount);
+        }
+        if (source.EmergencyVulnerabilityCount != null) {
+            this.EmergencyVulnerabilityCount = new Long(source.EmergencyVulnerabilityCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +355,11 @@ public class DescribeVulSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PocExpLevelVulCount", this.PocExpLevelVulCount);
         this.setParamSimple(map, prefix + "RemoteExpLevelVulCount", this.RemoteExpLevelVulCount);
         this.setParamSimple(map, prefix + "SeriousVulNewestImageCount", this.SeriousVulNewestImageCount);
+        this.setParamSimple(map, prefix + "SystemVulnerabilityFocusCount", this.SystemVulnerabilityFocusCount);
+        this.setParamSimple(map, prefix + "WebVulnerabilityFocusCount", this.WebVulnerabilityFocusCount);
+        this.setParamSimple(map, prefix + "SeriousVulnerabilityLocalImageCount", this.SeriousVulnerabilityLocalImageCount);
+        this.setParamSimple(map, prefix + "SeriousVulnerabilityRegistryImageCount", this.SeriousVulnerabilityRegistryImageCount);
+        this.setParamSimple(map, prefix + "EmergencyVulnerabilityCount", this.EmergencyVulnerabilityCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

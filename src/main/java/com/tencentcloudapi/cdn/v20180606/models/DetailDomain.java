@@ -55,6 +55,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     * Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
     */
@@ -552,12 +553,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private QnPrivateAccess QnPrivateAccess;
 
     /**
-    * HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+    * HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpsBilling")
     @Expose
     private HttpsBilling HttpsBilling;
+
+    /**
+    * Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OthersPrivateAccess")
+    @Expose
+    private OthersPrivateAccess OthersPrivateAccess;
 
     /**
      * Get Domain name ID 
@@ -631,11 +640,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Get Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled 
      * @return Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
      */
@@ -647,11 +658,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Set Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
      * @param Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
      */
@@ -1908,23 +1921,43 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpsBilling HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return HttpsBilling HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public HttpsBilling getHttpsBilling() {
         return this.HttpsBilling;
     }
 
     /**
-     * Set HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpsBilling HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param HttpsBilling HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHttpsBilling(HttpsBilling HttpsBilling) {
         this.HttpsBilling = HttpsBilling;
+    }
+
+    /**
+     * Get Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OthersPrivateAccess Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public OthersPrivateAccess getOthersPrivateAccess() {
+        return this.OthersPrivateAccess;
+    }
+
+    /**
+     * Set Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OthersPrivateAccess Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOthersPrivateAccess(OthersPrivateAccess OthersPrivateAccess) {
+        this.OthersPrivateAccess = OthersPrivateAccess;
     }
 
     public DetailDomain() {
@@ -2139,6 +2172,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HttpsBilling != null) {
             this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
         }
+        if (source.OthersPrivateAccess != null) {
+            this.OthersPrivateAccess = new OthersPrivateAccess(source.OthersPrivateAccess);
+        }
     }
 
 
@@ -2211,6 +2247,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
+        this.setParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
 
     }
 }
