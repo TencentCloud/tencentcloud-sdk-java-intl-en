@@ -74,7 +74,8 @@ In UTC format, such as 2019-01-07T15:00:00Z.
     private Long Duration;
 
     /**
-    * Host IP.
+    * The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
     */
     @SerializedName("ClientIp")
     @Expose
@@ -208,16 +209,20 @@ In UTC format, such as 2019-01-07T15:00:00Z.
     }
 
     /**
-     * Get Host IP. 
-     * @return ClientIp Host IP.
+     * Get The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`. 
+     * @return ClientIp The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set Host IP.
-     * @param ClientIp Host IP.
+     * Set The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
+     * @param ClientIp The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;

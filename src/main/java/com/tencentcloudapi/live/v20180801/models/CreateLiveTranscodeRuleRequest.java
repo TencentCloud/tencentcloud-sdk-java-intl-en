@@ -30,7 +30,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+    * The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
     */
     @SerializedName("AppName")
     @Expose
@@ -67,16 +67,16 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty. 
-     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+     * Get The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string. 
+     * @return AppName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
-     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+     * Set The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
+     * @param AppName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

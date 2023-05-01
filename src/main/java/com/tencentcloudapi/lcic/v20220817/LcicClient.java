@@ -164,6 +164,26 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to get courseware information.
+     * @param req BatchDescribeDocumentRequest
+     * @return BatchDescribeDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDescribeDocumentResponse BatchDescribeDocument(BatchDescribeDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDescribeDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDescribeDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
 A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchRegisterRequest
@@ -432,6 +452,26 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to delete spectators.
+     * @param req DeleteSupervisorRequest
+     * @return DeleteSupervisorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSupervisorResponse DeleteSupervisor(DeleteSupervisorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSupervisorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSupervisorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSupervisor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the answers to a quiz question in a room.
      * @param req DescribeAnswerListRequest
      * @return DescribeAnswerListResponse
@@ -506,6 +546,30 @@ A maximum of 20 requests can be initiated per second for this API.
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *有新接口替换
+
+A new API is offered for this action now.
+
+This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
+     * @param req DescribeDocumentsRequest
+     * @return DescribeDocumentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocumentsResponse DescribeDocuments(DescribeDocumentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDocumentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDocumentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDocuments");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -713,6 +777,26 @@ A maximum of 20 requests can be initiated per second for this API.
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to end a room.
+     * @param req EndRoomRequest
+     * @return EndRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public EndRoomResponse EndRoom(EndRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EndRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EndRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EndRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -979,6 +1063,26 @@ A maximum of 20 requests can be initiated per second for this API.
                 Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start a room. Before you call this API, make sure a user has entered the room so that the class is initialized.
+     * @param req StartRoomRequest
+     * @return StartRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartRoomResponse StartRoom(StartRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

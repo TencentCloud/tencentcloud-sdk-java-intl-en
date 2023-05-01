@@ -101,6 +101,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PushExceptionNotifyUrl;
 
     /**
+    * The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AudioAuditNotifyUrl")
+    @Expose
+    private String AudioAuditNotifyUrl;
+
+    /**
      * Get Template ID. 
      * @return TemplateId Template ID.
      */
@@ -280,6 +288,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
     }
 
+    /**
+     * Get The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AudioAuditNotifyUrl The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAudioAuditNotifyUrl() {
+        return this.AudioAuditNotifyUrl;
+    }
+
+    /**
+     * Set The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioAuditNotifyUrl The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAudioAuditNotifyUrl(String AudioAuditNotifyUrl) {
+        this.AudioAuditNotifyUrl = AudioAuditNotifyUrl;
+    }
+
     public CallBackTemplateInfo() {
     }
 
@@ -321,6 +349,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PushExceptionNotifyUrl != null) {
             this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
         }
+        if (source.AudioAuditNotifyUrl != null) {
+            this.AudioAuditNotifyUrl = new String(source.AudioAuditNotifyUrl);
+        }
     }
 
 
@@ -339,6 +370,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
+        this.setParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
 
     }
 }

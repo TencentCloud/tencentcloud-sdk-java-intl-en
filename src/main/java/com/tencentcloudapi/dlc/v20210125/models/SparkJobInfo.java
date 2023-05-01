@@ -287,6 +287,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SparkImageVersion;
 
     /**
+    * The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * 
+    */
+    @SerializedName("DataEngineClusterType")
+    @Expose
+    private String DataEngineClusterType;
+
+    /**
+    * 
+    */
+    @SerializedName("DataEngineImageVersion")
+    @Expose
+    private String DataEngineImageVersion;
+
+    /**
      * Get Spark job ID 
      * @return JobId Spark job ID
      */
@@ -910,6 +932,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SparkImageVersion = SparkImageVersion;
     }
 
+    /**
+     * Get The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SessionId The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SessionId The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get  
+     * @return DataEngineClusterType 
+     */
+    public String getDataEngineClusterType() {
+        return this.DataEngineClusterType;
+    }
+
+    /**
+     * Set 
+     * @param DataEngineClusterType 
+     */
+    public void setDataEngineClusterType(String DataEngineClusterType) {
+        this.DataEngineClusterType = DataEngineClusterType;
+    }
+
+    /**
+     * Get  
+     * @return DataEngineImageVersion 
+     */
+    public String getDataEngineImageVersion() {
+        return this.DataEngineImageVersion;
+    }
+
+    /**
+     * Set 
+     * @param DataEngineImageVersion 
+     */
+    public void setDataEngineImageVersion(String DataEngineImageVersion) {
+        this.DataEngineImageVersion = DataEngineImageVersion;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1026,6 +1100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SparkImageVersion != null) {
             this.SparkImageVersion = new String(source.SparkImageVersion);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.DataEngineClusterType != null) {
+            this.DataEngineClusterType = new String(source.DataEngineClusterType);
+        }
+        if (source.DataEngineImageVersion != null) {
+            this.DataEngineImageVersion = new String(source.DataEngineImageVersion);
+        }
     }
 
 
@@ -1069,6 +1152,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
         this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
+        this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
 
     }
 }

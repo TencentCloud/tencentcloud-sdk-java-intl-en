@@ -939,6 +939,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the information of a TDMQ for Pulsar pro cluster instance.
+     * @param req DescribePulsarProInstanceDetailRequest
+     * @return DescribePulsarProInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(DescribePulsarProInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePulsarProInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of the purchased TDMQ for Pulsar pro instances.
+     * @param req DescribePulsarProInstancesRequest
+     * @return DescribePulsarProInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePulsarProInstancesResponse DescribePulsarProInstances(DescribePulsarProInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePulsarProInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePulsarProInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
      * @param req DescribeRabbitMQNodeListRequest
      * @return DescribeRabbitMQNodeListResponse

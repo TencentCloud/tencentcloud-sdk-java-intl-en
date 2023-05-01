@@ -135,6 +135,36 @@ public class MemberRecord extends AbstractModel{
     private Long PerMemberMessageCount;
 
     /**
+    * The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+    */
+    @SerializedName("Role")
+    @Expose
+    private Long Role;
+
+    /**
+    * The class number.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubGroupId")
+    @Expose
+    private String [] SubGroupId;
+
+    /**
+    * Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Stage")
+    @Expose
+    private Long Stage;
+
+    /**
      * Get User ID 
      * @return UserId User ID
      */
@@ -390,6 +420,78 @@ public class MemberRecord extends AbstractModel{
         this.PerMemberMessageCount = PerMemberMessageCount;
     }
 
+    /**
+     * Get The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator. 
+     * @return Role The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+     */
+    public Long getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+     * @param Role The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+     */
+    public void setRole(Long Role) {
+        this.Role = Role;
+    }
+
+    /**
+     * Get The class number. 
+     * @return GroupId The class number.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set The class number.
+     * @param GroupId The class number.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubGroupId The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getSubGroupId() {
+        return this.SubGroupId;
+    }
+
+    /**
+     * Set The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubGroupId The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubGroupId(String [] SubGroupId) {
+        this.SubGroupId = SubGroupId;
+    }
+
+    /**
+     * Get Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Stage Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStage() {
+        return this.Stage;
+    }
+
+    /**
+     * Set Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Stage Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStage(Long Stage) {
+        this.Stage = Stage;
+    }
+
     public MemberRecord() {
     }
 
@@ -446,6 +548,21 @@ public class MemberRecord extends AbstractModel{
         if (source.PerMemberMessageCount != null) {
             this.PerMemberMessageCount = new Long(source.PerMemberMessageCount);
         }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.SubGroupId != null) {
+            this.SubGroupId = new String[source.SubGroupId.length];
+            for (int i = 0; i < source.SubGroupId.length; i++) {
+                this.SubGroupId[i] = new String(source.SubGroupId[i]);
+            }
+        }
+        if (source.Stage != null) {
+            this.Stage = new Long(source.Stage);
+        }
     }
 
 
@@ -469,6 +586,10 @@ public class MemberRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "Device", this.Device);
         this.setParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
         this.setParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
+        this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
+        this.setParamSimple(map, prefix + "Stage", this.Stage);
 
     }
 }

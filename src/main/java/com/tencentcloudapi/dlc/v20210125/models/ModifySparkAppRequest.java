@@ -212,6 +212,13 @@ public class ModifySparkAppRequest extends AbstractModel{
     private Long AppExecutorMaxNumbers;
 
     /**
+    * The associated Data Lake Compute query script.
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get Spark application name 
      * @return AppName Spark application name
      */
@@ -643,6 +650,22 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.AppExecutorMaxNumbers = AppExecutorMaxNumbers;
     }
 
+    /**
+     * Get The associated Data Lake Compute query script. 
+     * @return SessionId The associated Data Lake Compute query script.
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set The associated Data Lake Compute query script.
+     * @param SessionId The associated Data Lake Compute query script.
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public ModifySparkAppRequest() {
     }
 
@@ -732,6 +755,9 @@ public class ModifySparkAppRequest extends AbstractModel{
         if (source.AppExecutorMaxNumbers != null) {
             this.AppExecutorMaxNumbers = new Long(source.AppExecutorMaxNumbers);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -766,6 +792,7 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
         this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

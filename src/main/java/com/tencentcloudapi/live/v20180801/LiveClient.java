@@ -395,8 +395,8 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
+     *This API is used to create a transcoding rule that binds a template ID to a stream. Up to 50 transcoding rules can be created in total. Before you call this API, you need to first call [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) to get the template ID.
+<br>Related document: [Live Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
      * @param req CreateLiveTranscodeRuleRequest
      * @return CreateLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
@@ -478,6 +478,32 @@ Note: only one screencapturing template can be associated with one domain name.
                 Type type = new TypeToken<JsonResponseModel<CreateRecordTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateRecordTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a screencapturing task that has a specific start and end time and takes screenshots according to the template configured.
+- Note
+1. If the stream is interrupted, screencapturing will stop. However, the task will still be valid before the specified end time, and screencapturing will be performed as required after the stream is resumed.
+2. Avoid creating screencapturing tasks with overlapping time periods. The system will execute at most three screencapturing tasks on the same stream at a time.
+3. Task records are only kept for three months.
+4. The new screencapturing APIs (CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask) are not compatible with the legacy ones (CreateLiveInstantSnapshot/StopLiveInstantSnapshot). Do not mix them when you call APIs to manage screencapturing tasks.
+5. If you create a screencapturing task and publish the stream at the same time, the task may fail to be executed at the specified time. After creating a screencapturing task, we recommend you wait at least three seconds before publishing the stream.
+     * @param req CreateScreenshotTaskRequest
+     * @return CreateScreenshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScreenshotTaskResponse CreateScreenshotTask(CreateScreenshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScreenshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScreenshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScreenshotTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2001,7 +2027,11 @@ Note: If you call this API to pause an inactive stream, the request will be cons
     }
 
     /**
-     *This API is used to forbid the push of a specific stream. You can preset a time point to resume the stream.
+     *This API is used to disable a stream. You can set a time to resume the stream.
+Note:
+1. As long as the correct stream name is passed in, the stream will be disabled successfully.
+2. If you want a stream to be disabled only if the push domain, push path, and stream name match, please submit a ticket.
+3. If you have configured domain groups, you must pass in the correct push domain in order to disable a stream.
      * @param req ForbidLiveStreamRequest
      * @return ForbidLiveStreamResponse
      * @throws TencentCloudSDKException
@@ -2205,7 +2235,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     }
 
     /**
-     *This API is used to modify a standby stream template.
+     *This API is used to modify a time shifting template.
      * @param req ModifyLiveTimeShiftTemplateRequest
      * @return ModifyLiveTimeShiftTemplateResponse
      * @throws TencentCloudSDKException

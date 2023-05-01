@@ -80,6 +80,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String CreateTime;
 
     /**
+    * The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QUICConfig")
+    @Expose
+    private DomainQUICConfig QUICConfig;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -223,6 +231,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QUICConfig The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DomainQUICConfig getQUICConfig() {
+        return this.QUICConfig;
+    }
+
+    /**
+     * Set The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QUICConfig The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQUICConfig(DomainQUICConfig QUICConfig) {
+        this.QUICConfig = QUICConfig;
+    }
+
     public DomainDetailInfo() {
     }
 
@@ -255,6 +283,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.QUICConfig != null) {
+            this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
+        }
     }
 
 
@@ -269,6 +300,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
 
     }
 }

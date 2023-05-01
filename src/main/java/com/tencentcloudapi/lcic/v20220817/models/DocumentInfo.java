@@ -121,6 +121,38 @@ public class DocumentInfo extends AbstractModel{
     private Long UpdateTime;
 
     /**
+    * The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Pages")
+    @Expose
+    private Long Pages;
+
+    /**
+    * The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
+    * The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Cover")
+    @Expose
+    private String Cover;
+
+    /**
      * Get The document ID. Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -344,6 +376,86 @@ public class DocumentInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Pages The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getPages() {
+        return this.Pages;
+    }
+
+    /**
+     * Set The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Pages The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPages(Long Pages) {
+        this.Pages = Pages;
+    }
+
+    /**
+     * Get The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Width The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Width The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Height The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Height The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Cover The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCover() {
+        return this.Cover;
+    }
+
+    /**
+     * Set The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Cover The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCover(String Cover) {
+        this.Cover = Cover;
+    }
+
     public DocumentInfo() {
     }
 
@@ -394,6 +506,18 @@ public class DocumentInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.Pages != null) {
+            this.Pages = new Long(source.Pages);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Cover != null) {
+            this.Cover = new String(source.Cover);
+        }
     }
 
 
@@ -415,6 +539,10 @@ public class DocumentInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DocumentType", this.DocumentType);
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Pages", this.Pages);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "Cover", this.Cover);
 
     }
 }

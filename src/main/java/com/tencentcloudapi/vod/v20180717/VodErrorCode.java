@@ -18,6 +18,9 @@ public enum VodErrorCode {
     // Operation failed: unsupported cover type.
      FAILEDOPERATION_COVERTYPE("FailedOperation.CoverType"),
      
+    // 
+     FAILEDOPERATION_DBERROR("FailedOperation.DBError"),
+     
     // You cannot modify the settings of the domain name as it is being deployed.
      FAILEDOPERATION_DOMAINDEPLOYING("FailedOperation.DomainDeploying"),
      

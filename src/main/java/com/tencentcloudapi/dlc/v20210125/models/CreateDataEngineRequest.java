@@ -212,14 +212,14 @@ public class CreateDataEngineRequest extends AbstractModel{
     private String MainClusterName;
 
     /**
-    * 
+    * Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
     */
     @SerializedName("ElasticSwitch")
     @Expose
     private Boolean ElasticSwitch;
 
     /**
-    * 
+    * The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
     */
     @SerializedName("ElasticLimit")
     @Expose
@@ -658,32 +658,32 @@ public class CreateDataEngineRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ElasticSwitch 
+     * Get Whether to enable the scaling feature for a monthly subscribed Spark job cluster. 
+     * @return ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
      */
     public Boolean getElasticSwitch() {
         return this.ElasticSwitch;
     }
 
     /**
-     * Set 
-     * @param ElasticSwitch 
+     * Set Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
+     * @param ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
      */
     public void setElasticSwitch(Boolean ElasticSwitch) {
         this.ElasticSwitch = ElasticSwitch;
     }
 
     /**
-     * Get  
-     * @return ElasticLimit 
+     * Get The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster. 
+     * @return ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
      */
     public Long getElasticLimit() {
         return this.ElasticLimit;
     }
 
     /**
-     * Set 
-     * @param ElasticLimit 
+     * Set The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
+     * @param ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
      */
     public void setElasticLimit(Long ElasticLimit) {
         this.ElasticLimit = ElasticLimit;

@@ -44,28 +44,28 @@ public class DescribeSparkAppJobsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * Update start time
+    * The update start time in the format of yyyy-mm-dd HH:MM:SS.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Update end time
+    * The update end time in the format of yyyy-mm-dd HH:MM:SS.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Query list offset
+    * The query list offset, which defaults to 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Query list limit
+    * The maximum number of queries allowed in the list, which defaults to 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -120,64 +120,64 @@ public class DescribeSparkAppJobsRequest extends AbstractModel{
     }
 
     /**
-     * Get Update start time 
-     * @return StartTime Update start time
+     * Get The update start time in the format of yyyy-mm-dd HH:MM:SS. 
+     * @return StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Update start time
-     * @param StartTime Update start time
+     * Set The update start time in the format of yyyy-mm-dd HH:MM:SS.
+     * @param StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Update end time 
-     * @return EndTime Update end time
+     * Get The update end time in the format of yyyy-mm-dd HH:MM:SS. 
+     * @return EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Update end time
-     * @param EndTime Update end time
+     * Set The update end time in the format of yyyy-mm-dd HH:MM:SS.
+     * @param EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Query list offset 
-     * @return Offset Query list offset
+     * Get The query list offset, which defaults to 0. 
+     * @return Offset The query list offset, which defaults to 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Query list offset
-     * @param Offset Query list offset
+     * Set The query list offset, which defaults to 0.
+     * @param Offset The query list offset, which defaults to 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Query list limit 
-     * @return Limit Query list limit
+     * Get The maximum number of queries allowed in the list, which defaults to 100. 
+     * @return Limit The maximum number of queries allowed in the list, which defaults to 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Query list limit
-     * @param Limit Query list limit
+     * Set The maximum number of queries allowed in the list, which defaults to 100.
+     * @param Limit The maximum number of queries allowed in the list, which defaults to 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

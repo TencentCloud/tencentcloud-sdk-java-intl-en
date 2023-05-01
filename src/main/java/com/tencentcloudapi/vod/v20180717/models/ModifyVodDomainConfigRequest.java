@@ -51,6 +51,13 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
 
     /**
+    * The QUIC configuration.
+    */
+    @SerializedName("QUICConfig")
+    @Expose
+    private DomainQUICConfig QUICConfig;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -114,6 +121,22 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
+    /**
+     * Get The QUIC configuration. 
+     * @return QUICConfig The QUIC configuration.
+     */
+    public DomainQUICConfig getQUICConfig() {
+        return this.QUICConfig;
+    }
+
+    /**
+     * Set The QUIC configuration.
+     * @param QUICConfig The QUIC configuration.
+     */
+    public void setQUICConfig(DomainQUICConfig QUICConfig) {
+        this.QUICConfig = QUICConfig;
+    }
+
     public ModifyVodDomainConfigRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
         if (source.UrlSignatureAuthPolicy != null) {
             this.UrlSignatureAuthPolicy = new UrlSignatureAuthPolicy(source.UrlSignatureAuthPolicy);
         }
+        if (source.QUICConfig != null) {
+            this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
+        this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
 
     }
 }
