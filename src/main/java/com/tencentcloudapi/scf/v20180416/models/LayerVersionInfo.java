@@ -75,6 +75,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
+    * Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Stamp")
+    @Expose
+    private String Stamp;
+
+    /**
      * Get Runtime applicable to a version
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CompatibleRuntimes Runtime applicable to a version
@@ -198,6 +206,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Status = Status;
     }
 
+    /**
+     * Get Stamp
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Stamp Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStamp() {
+        return this.Stamp;
+    }
+
+    /**
+     * Set Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Stamp Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStamp(String Stamp) {
+        this.Stamp = Stamp;
+    }
+
     public LayerVersionInfo() {
     }
 
@@ -230,6 +258,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Stamp != null) {
+            this.Stamp = new String(source.Stamp);
+        }
     }
 
 
@@ -244,6 +275,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LayerVersion", this.LayerVersion);
         this.setParamSimple(map, prefix + "LayerName", this.LayerName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Stamp", this.Stamp);
 
     }
 }

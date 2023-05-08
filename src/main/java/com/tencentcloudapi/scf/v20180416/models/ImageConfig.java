@@ -69,6 +69,25 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private String Args;
 
     /**
+    * Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ContainerImageAccelerate")
+    @Expose
+    private Boolean ContainerImageAccelerate;
+
+    /**
+    * Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ImagePort")
+    @Expose
+    private Long ImagePort;
+
+    /**
      * Get Image repository type, which can be `personal` or `enterprise` 
      * @return ImageType Image repository type, which can be `personal` or `enterprise`
      */
@@ -180,6 +199,58 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.Args = Args;
     }
 
+    /**
+     * Get Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ContainerImageAccelerate Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getContainerImageAccelerate() {
+        return this.ContainerImageAccelerate;
+    }
+
+    /**
+     * Set Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ContainerImageAccelerate Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setContainerImageAccelerate(Boolean ContainerImageAccelerate) {
+        this.ContainerImageAccelerate = ContainerImageAccelerate;
+    }
+
+    /**
+     * Get Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ImagePort Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getImagePort() {
+        return this.ImagePort;
+    }
+
+    /**
+     * Set Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImagePort Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setImagePort(Long ImagePort) {
+        this.ImagePort = ImagePort;
+    }
+
     public ImageConfig() {
     }
 
@@ -206,6 +277,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.Args != null) {
             this.Args = new String(source.Args);
         }
+        if (source.ContainerImageAccelerate != null) {
+            this.ContainerImageAccelerate = new Boolean(source.ContainerImageAccelerate);
+        }
+        if (source.ImagePort != null) {
+            this.ImagePort = new Long(source.ImagePort);
+        }
     }
 
 
@@ -219,6 +296,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Args", this.Args);
+        this.setParamSimple(map, prefix + "ContainerImageAccelerate", this.ContainerImageAccelerate);
+        this.setParamSimple(map, prefix + "ImagePort", this.ImagePort);
 
     }
 }

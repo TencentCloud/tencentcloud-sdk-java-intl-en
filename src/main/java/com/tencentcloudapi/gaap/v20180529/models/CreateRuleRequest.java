@@ -51,7 +51,7 @@ public class CreateRuleRequest extends AbstractModel{
     private String RealServerType;
 
     /**
-    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
     */
     @SerializedName("Scheduler")
     @Expose
@@ -87,7 +87,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     private String ForwardHost;
 
     /**
-    * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+    * Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
     */
     @SerializedName("ServerNameIndicationSwitch")
     @Expose
@@ -172,16 +172,16 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     }
 
     /**
-     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
-     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
-     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -256,16 +256,16 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     }
 
     /**
-     * Get Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable). 
-     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * Get Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default. 
+     * @return ServerNameIndicationSwitch Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
      */
     public String getServerNameIndicationSwitch() {
         return this.ServerNameIndicationSwitch;
     }
 
     /**
-     * Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
-     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * Set Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
+     * @param ServerNameIndicationSwitch Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
      */
     public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
         this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;

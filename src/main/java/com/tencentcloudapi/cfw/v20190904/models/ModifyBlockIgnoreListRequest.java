@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyBlockIgnoreListRequest extends AbstractModel{
 
     /**
-    * 1: blocklist; 2: ignore list
+    * Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
     */
     @SerializedName("RuleType")
     @Expose
@@ -51,23 +51,23 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+    * End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 1: blocklist; 2: ignore list 
-     * @return RuleType 1: blocklist; 2: ignore list
+     * Get Type of the rule. Values: `1` (Blocklist); `2` (Allowlist) 
+     * @return RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 1: blocklist; 2: ignore list
-     * @param RuleType 1: blocklist; 2: ignore list
+     * Set Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+     * @param RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
@@ -122,16 +122,16 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add 
-     * @return EndTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+     * Get End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`.  
+     * @return EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
-     * @param EndTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+     * Set End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+     * @param EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

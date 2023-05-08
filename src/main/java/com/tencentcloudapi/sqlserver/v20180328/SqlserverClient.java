@@ -579,6 +579,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the attributes of an instance.
+     * @param req DescribeDBInstancesAttributeRequest
+     * @return DescribeDBInstancesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstancesAttributeResponse DescribeDBInstancesAttribute(DescribeDBInstancesAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstancesAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstancesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of databases
      * @param req DescribeDBsRequest
      * @return DescribeDBsResponse
@@ -851,6 +871,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadBackupInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUploadBackupInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of extended events.
+     * @param req DescribeXEventsRequest
+     * @return DescribeXEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeXEventsResponse DescribeXEvents(DescribeXEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeXEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeXEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeXEvents");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1301,7 +1341,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     }
 
     /**
-     *This API is used to restore an instance from a backup file.
+     *This API is used to roll back the database by backup set.
      * @param req RestoreInstanceRequest
      * @return RestoreInstanceResponse
      * @throws TencentCloudSDKException
@@ -1321,7 +1361,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     }
 
     /**
-     *This API is used to roll back an instance.
+     *This API is used to roll back the instance by time point.
      * @param req RollbackInstanceRequest
      * @return RollbackInstanceResponse
      * @throws TencentCloudSDKException
@@ -1393,6 +1433,26 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 Type type = new TypeToken<JsonResponseModel<StartIncrementalMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartIncrementalMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start and stop an extended event.
+     * @param req StartInstanceXEventRequest
+     * @return StartInstanceXEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartInstanceXEventResponse StartInstanceXEvent(StartInstanceXEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartInstanceXEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartInstanceXEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartInstanceXEvent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

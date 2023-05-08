@@ -135,6 +135,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ZoneZhBak;
 
     /**
+    * Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleUsed")
+    @Expose
+    private Long RuleUsed;
+
+    /**
+    * The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleMax")
+    @Expose
+    private Long RuleMax;
+
+    /**
      * Get NAT instance ID 
      * @return NatinsId NAT instance ID
      */
@@ -402,6 +418,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ZoneZhBak = ZoneZhBak;
     }
 
+    /**
+     * Get Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RuleUsed Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRuleUsed() {
+        return this.RuleUsed;
+    }
+
+    /**
+     * Set Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleUsed Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRuleUsed(Long RuleUsed) {
+        this.RuleUsed = RuleUsed;
+    }
+
+    /**
+     * Get The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RuleMax The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRuleMax() {
+        return this.RuleMax;
+    }
+
+    /**
+     * Set The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleMax The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRuleMax(Long RuleMax) {
+        this.RuleMax = RuleMax;
+    }
+
     public NatInstanceInfo() {
     }
 
@@ -464,6 +520,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ZoneZhBak != null) {
             this.ZoneZhBak = new String(source.ZoneZhBak);
         }
+        if (source.RuleUsed != null) {
+            this.RuleUsed = new Long(source.RuleUsed);
+        }
+        if (source.RuleMax != null) {
+            this.RuleMax = new Long(source.RuleMax);
+        }
     }
 
 
@@ -486,6 +548,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RegionDetail", this.RegionDetail);
         this.setParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
         this.setParamSimple(map, prefix + "ZoneZhBak", this.ZoneZhBak);
+        this.setParamSimple(map, prefix + "RuleUsed", this.RuleUsed);
+        this.setParamSimple(map, prefix + "RuleMax", this.RuleMax);
 
     }
 }

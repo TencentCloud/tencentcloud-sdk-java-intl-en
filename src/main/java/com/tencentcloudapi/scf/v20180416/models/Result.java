@@ -72,7 +72,7 @@ public class Result extends AbstractModel{
     private String FunctionRequestId;
 
     /**
-    * `0` indicates successful execution. Null is returned for asynchronous invocations.
+    * The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
     */
     @SerializedName("InvokeResult")
     @Expose
@@ -191,16 +191,16 @@ public class Result extends AbstractModel{
     }
 
     /**
-     * Get `0` indicates successful execution. Null is returned for asynchronous invocations. 
-     * @return InvokeResult `0` indicates successful execution. Null is returned for asynchronous invocations.
+     * Get The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API.  
+     * @return InvokeResult The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
      */
     public Long getInvokeResult() {
         return this.InvokeResult;
     }
 
     /**
-     * Set `0` indicates successful execution. Null is returned for asynchronous invocations.
-     * @param InvokeResult `0` indicates successful execution. Null is returned for asynchronous invocations.
+     * Set The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
+     * @param InvokeResult The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
      */
     public void setInvokeResult(Long InvokeResult) {
         this.InvokeResult = InvokeResult;

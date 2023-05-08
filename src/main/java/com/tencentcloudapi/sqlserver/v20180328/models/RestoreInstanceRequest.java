@@ -51,7 +51,21 @@ public class RestoreInstanceRequest extends AbstractModel{
     private RenameRestoreDatabase [] RenameRestore;
 
     /**
-    * Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+    * Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * Database to be overwritten, which is required when overwriting a rollback database.
+    */
+    @SerializedName("DBList")
+    @Expose
+    private String [] DBList;
+
+    /**
+    * Group ID of unarchived backup files grouped by backup task
     */
     @SerializedName("GroupId")
     @Expose
@@ -122,16 +136,48 @@ public class RestoreInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API. 
-     * @return GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     * Get Rollback type. Valid values: `0` (overwriting), `1` (renaming). 
+     * @return Type Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+     * @param Type Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get Database to be overwritten, which is required when overwriting a rollback database. 
+     * @return DBList Database to be overwritten, which is required when overwriting a rollback database.
+     */
+    public String [] getDBList() {
+        return this.DBList;
+    }
+
+    /**
+     * Set Database to be overwritten, which is required when overwriting a rollback database.
+     * @param DBList Database to be overwritten, which is required when overwriting a rollback database.
+     */
+    public void setDBList(String [] DBList) {
+        this.DBList = DBList;
+    }
+
+    /**
+     * Get Group ID of unarchived backup files grouped by backup task 
+     * @return GroupId Group ID of unarchived backup files grouped by backup task
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
-     * @param GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     * Set Group ID of unarchived backup files grouped by backup task
+     * @param GroupId Group ID of unarchived backup files grouped by backup task
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -160,6 +206,15 @@ public class RestoreInstanceRequest extends AbstractModel{
                 this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.DBList != null) {
+            this.DBList = new String[source.DBList.length];
+            for (int i = 0; i < source.DBList.length; i++) {
+                this.DBList[i] = new String(source.DBList[i]);
+            }
+        }
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
@@ -174,6 +229,8 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
         this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "DBList.", this.DBList);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }

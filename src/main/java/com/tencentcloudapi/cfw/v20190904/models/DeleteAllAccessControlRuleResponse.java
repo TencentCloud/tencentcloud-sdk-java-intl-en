@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteAllAccessControlRuleResponse extends AbstractModel{
 
     /**
-    * Status value. 0: modified successfully; !0: modification failed
+    * Status of the task. `0`: Modified successfully; Others: Modification failed
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +45,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Status value. 0: modified successfully; !0: modification failed 
-     * @return Status Status value. 0: modified successfully; !0: modification failed
+     * Get Status of the task. `0`: Modified successfully; Others: Modification failed 
+     * @return Status Status of the task. `0`: Modified successfully; Others: Modification failed
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status value. 0: modified successfully; !0: modification failed
-     * @param Status Status value. 0: modified successfully; !0: modification failed
+     * Set Status of the task. `0`: Modified successfully; Others: Modification failed
+     * @param Status Status of the task. `0`: Modified successfully; Others: Modification failed
      */
     public void setStatus(Long Status) {
         this.Status = Status;

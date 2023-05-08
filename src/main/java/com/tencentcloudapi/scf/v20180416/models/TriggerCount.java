@@ -100,6 +100,14 @@ public class TriggerCount extends AbstractModel{
     private Long Vod;
 
     /**
+    * Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Eb")
+    @Expose
+    private Long Eb;
+
+    /**
      * Get Number of COS triggers 
      * @return Cos Number of COS triggers
      */
@@ -275,6 +283,26 @@ public class TriggerCount extends AbstractModel{
         this.Vod = Vod;
     }
 
+    /**
+     * Get Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Eb Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getEb() {
+        return this.Eb;
+    }
+
+    /**
+     * Set Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Eb Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setEb(Long Eb) {
+        this.Eb = Eb;
+    }
+
     public TriggerCount() {
     }
 
@@ -316,6 +344,9 @@ public class TriggerCount extends AbstractModel{
         if (source.Vod != null) {
             this.Vod = new Long(source.Vod);
         }
+        if (source.Eb != null) {
+            this.Eb = new Long(source.Eb);
+        }
     }
 
 
@@ -334,6 +365,7 @@ public class TriggerCount extends AbstractModel{
         this.setParamSimple(map, prefix + "Mps", this.Mps);
         this.setParamSimple(map, prefix + "Cm", this.Cm);
         this.setParamSimple(map, prefix + "Vod", this.Vod);
+        this.setParamSimple(map, prefix + "Eb", this.Eb);
 
     }
 }

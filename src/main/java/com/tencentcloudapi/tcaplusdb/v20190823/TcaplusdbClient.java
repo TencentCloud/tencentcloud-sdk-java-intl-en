@@ -179,6 +179,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a manual backup.
+     * @param req DeleteBackupRecordsRequest
+     * @return DeleteBackupRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupRecordsResponse DeleteBackupRecords(DeleteBackupRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackupRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a TcaplusDB cluster, which will succeed only after all resources (including table groups and tables) in the cluster are released.
      * @param req DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -311,6 +331,30 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query backup records.
+
+When querying the cluster level, set `TableGroupId` to `-1` and `TableName` to `-1`.
+When querying the cluster and table group levels, set `TableName` to `-1`.
+When querying the cluster, table group, and table levels, both `TableGroupId` and `TableName` cannot be set to `-1`.
+     * @param req DescribeBackupRecordsRequest
+     * @return DescribeBackupRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupRecordsResponse DescribeBackupRecords(DescribeBackupRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupRecords");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -931,6 +975,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RollbackTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RollbackTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add/delete/modify backup expiration policy. `ClusterId` must be a specific cluster ID (appid).
+     * @param req SetBackupExpireRuleRequest
+     * @return SetBackupExpireRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetBackupExpireRuleResponse SetBackupExpireRule(SetBackupExpireRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetBackupExpireRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetBackupExpireRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

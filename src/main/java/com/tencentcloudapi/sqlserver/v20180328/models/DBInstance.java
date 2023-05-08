@@ -395,6 +395,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SlaveZones SlaveZones;
 
     /**
+    * Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Architecture")
+    @Expose
+    private String Architecture;
+
+    /**
+    * Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Style")
+    @Expose
+    private String Style;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1258,6 +1274,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SlaveZones = SlaveZones;
     }
 
+    /**
+     * Get Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getArchitecture() {
+        return this.Architecture;
+    }
+
+    /**
+     * Set Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setArchitecture(String Architecture) {
+        this.Architecture = Architecture;
+    }
+
+    /**
+     * Get Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStyle() {
+        return this.Style;
+    }
+
+    /**
+     * Set Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStyle(String Style) {
+        this.Style = Style;
+    }
+
     public DBInstance() {
     }
 
@@ -1431,6 +1487,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SlaveZones != null) {
             this.SlaveZones = new SlaveZones(source.SlaveZones);
         }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.Style != null) {
+            this.Style = new String(source.Style);
+        }
     }
 
 
@@ -1490,6 +1552,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
         this.setParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "Architecture", this.Architecture);
+        this.setParamSimple(map, prefix + "Style", this.Style);
 
     }
 }

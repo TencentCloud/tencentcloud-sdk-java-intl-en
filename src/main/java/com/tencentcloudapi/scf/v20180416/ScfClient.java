@@ -865,4 +865,24 @@ An alias must point to a master version and can point to an additional version a
         return rsp.response;
     }
 
+    /**
+     *This API is used to update the trigger status.
+     * @param req UpdateTriggerStatusRequest
+     * @return UpdateTriggerStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerStatusResponse UpdateTriggerStatus(UpdateTriggerStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateTriggerStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateTriggerStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateTriggerStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

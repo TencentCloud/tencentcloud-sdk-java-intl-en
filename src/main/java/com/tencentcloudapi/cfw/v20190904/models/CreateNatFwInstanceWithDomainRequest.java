@@ -93,6 +93,13 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
     private String Domain;
 
     /**
+    * IP range of the firewall
+    */
+    @SerializedName("FwCidrInfo")
+    @Expose
+    private FwCidrInfo FwCidrInfo;
+
+    /**
      * Get Firewall instance name 
      * @return Name Firewall instance name
      */
@@ -252,6 +259,22 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get IP range of the firewall 
+     * @return FwCidrInfo IP range of the firewall
+     */
+    public FwCidrInfo getFwCidrInfo() {
+        return this.FwCidrInfo;
+    }
+
+    /**
+     * Set IP range of the firewall
+     * @param FwCidrInfo IP range of the firewall
+     */
+    public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
+        this.FwCidrInfo = FwCidrInfo;
+    }
+
     public CreateNatFwInstanceWithDomainRequest() {
     }
 
@@ -293,6 +316,9 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.FwCidrInfo != null) {
+            this.FwCidrInfo = new FwCidrInfo(source.FwCidrInfo);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CrossAZone", this.CrossAZone);
         this.setParamSimple(map, prefix + "IsCreateDomain", this.IsCreateDomain);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
 
     }
 }

@@ -79,7 +79,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create rules.
+     *This API is used to add NAT access control rules.
+     * @param req AddNatAcRuleRequest
+     * @return AddNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddNatAcRuleResponse AddNatAcRule(AddNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddNatAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create access control rules.
      * @param req CreateAcRulesRequest
      * @return CreateAcRulesResponse
      * @throws TencentCloudSDKException
@@ -320,6 +340,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get allowlists or blocklists for intrusion prevention.
+     * @param req DescribeBlockIgnoreListRequest
+     * @return DescribeBlockIgnoreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(DescribeBlockIgnoreListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBlockIgnoreListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBlockIgnoreListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBlockIgnoreList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the most frequent attacker.
 
      * @param req DescribeBlockStaticListRequest
@@ -413,6 +453,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStatusListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIPStatusList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the NAT access control list.
+     * @param req DescribeNatAcRuleRequest
+     * @return DescribeNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatAcRuleResponse DescribeNatAcRule(DescribeNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNatAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -825,10 +885,10 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to:
-add IPs/domains in the blocklist or ignored list
-delete IPs/domains in the blocklist or ignored list
-modify IPs/domains in the blocklist or ignored list
+     *This API is used to manage blocked/allowed IPs and domains.
+Add IPs/domains to the blocked/allowed list
+Remove IPs/domains from the blocked/allowed list
+Modify events related with the IPs/domains in the blocked/allowed list
      * @param req ModifyBlockIgnoreListRequest
      * @return ModifyBlockIgnoreListResponse
      * @throws TencentCloudSDKException
@@ -860,6 +920,66 @@ modify IPs/domains in the blocklist or ignored list
                 Type type = new TypeToken<JsonResponseModel<ModifyBlockTopResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBlockTop");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the publishing status of an enterprise security group.
+     * @param req ModifyEnterpriseSecurityDispatchStatusRequest
+     * @return ModifyEnterpriseSecurityDispatchStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEnterpriseSecurityDispatchStatusResponse ModifyEnterpriseSecurityDispatchStatus(ModifyEnterpriseSecurityDispatchStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEnterpriseSecurityDispatchStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a new enterprise security group rule.
+     * @param req ModifyEnterpriseSecurityGroupRuleRequest
+     * @return ModifyEnterpriseSecurityGroupRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEnterpriseSecurityGroupRuleResponse ModifyEnterpriseSecurityGroupRule(ModifyEnterpriseSecurityGroupRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEnterpriseSecurityGroupRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify NAT access control rules.
+     * @param req ModifyNatAcRuleRequest
+     * @return ModifyNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatAcRuleResponse ModifyNatAcRule(ModifyNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNatAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -920,6 +1040,26 @@ modify IPs/domains in the blocklist or ignored list
                 Type type = new TypeToken<JsonResponseModel<ModifyNatFwVpcDnsSwitchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNatFwVpcDnsSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to change the sequence number of NAT firewall rules.
+     * @param req ModifyNatSequenceRulesRequest
+     * @return ModifyNatSequenceRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatSequenceRulesResponse ModifyNatSequenceRules(ModifyNatSequenceRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatSequenceRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatSequenceRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNatSequenceRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1050,6 +1190,26 @@ modify IPs/domains in the blocklist or ignored list
     }
 
     /**
+     *This API is used to modify the log retention period or to clear logs.
+     * @param req ModifyStorageSettingRequest
+     * @return ModifyStorageSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStorageSettingResponse ModifyStorageSetting(ModifyStorageSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStorageSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStorageSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStorageSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify rule list status.
      * @param req ModifyTableStatusRequest
      * @return ModifyTableStatusResponse
@@ -1102,6 +1262,26 @@ modify IPs/domains in the blocklist or ignored list
                 Type type = new TypeToken<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveEnterpriseSecurityGroupRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete NAT access control rules.
+     * @param req RemoveNatAcRuleRequest
+     * @return RemoveNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveNatAcRuleResponse RemoveNatAcRule(RemoveNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveNatAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

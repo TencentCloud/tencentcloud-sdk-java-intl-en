@@ -23,7 +23,12 @@ import java.util.HashMap;
 public class DescribeTLogInfoResponse extends AbstractModel{
 
     /**
-    * None
+    * `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +42,36 @@ public class DescribeTLogInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get None 
-     * @return Data None
+     * Get `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0 
+     * @return Data `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
      */
     public TLogInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set None
-     * @param Data None
+     * Set `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
+     * @param Data `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
      */
     public void setData(TLogInfo Data) {
         this.Data = Data;

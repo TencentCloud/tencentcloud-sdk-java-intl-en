@@ -39,6 +39,134 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add existing instances to the compute environment.
+Requirements: <br/>
+1. The instance is not in the batch compute system.<br/>
+2. The instance is in “Running” status.<br/>
+3. Spot instances are not supported.<b/>
+
+For instances added to the compute environment, their UserData will be reset, and the operating systems will be reinstalled.
+     * @param req AttachInstancesRequest
+     * @return AttachInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a compute environment.
+     * @param req CreateComputeEnvRequest
+     * @return CreateComputeEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateComputeEnvResponse CreateComputeEnv(CreateComputeEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateComputeEnvResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateComputeEnvResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateComputeEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a task template.
+     * @param req CreateTaskTemplateRequest
+     * @return CreateTaskTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskTemplateResponse CreateTaskTemplate(CreateTaskTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTaskTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTaskTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTaskTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a compute environment.
+     * @param req DeleteComputeEnvRequest
+     * @return DeleteComputeEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteComputeEnvResponse DeleteComputeEnv(DeleteComputeEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteComputeEnvResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteComputeEnvResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteComputeEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a job.
+When a job is deleted, all related information is deleted and the job cannot be queried.
+To delete a job, the job and all its task instances must be in SUCCEED or FAILED status.
+     * @param req DeleteJobRequest
+     * @return DeleteJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete task template information.
+     * @param req DeleteTaskTemplatesRequest
+     * @return DeleteTaskTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskTemplatesResponse DeleteTaskTemplates(DeleteTaskTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTaskTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTaskTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTaskTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to view the information of available CVM model configurations.
      * @param req DescribeAvailableCvmInstanceTypesRequest
      * @return DescribeAvailableCvmInstanceTypesResponse
@@ -51,6 +179,106 @@ public class BatchClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAvailableCvmInstanceTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query compute environment details.
+     * @param req DescribeComputeEnvRequest
+     * @return DescribeComputeEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeComputeEnvResponse DescribeComputeEnv(DescribeComputeEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeComputeEnvResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeComputeEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of activities in the compute environment.
+     * @param req DescribeComputeEnvActivitiesRequest
+     * @return DescribeComputeEnvActivitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeComputeEnvActivitiesResponse DescribeComputeEnvActivities(DescribeComputeEnvActivitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeComputeEnvActivitiesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvActivitiesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeComputeEnvActivities");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the compute environment creation information.
+     * @param req DescribeComputeEnvCreateInfoRequest
+     * @return DescribeComputeEnvCreateInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfo(DescribeComputeEnvCreateInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeComputeEnvCreateInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeComputeEnvCreateInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to view the list of information of compute environment creation, including name, description, type, environment parameters, notifications, and number of desired nodes.
+     * @param req DescribeComputeEnvCreateInfosRequest
+     * @return DescribeComputeEnvCreateInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(DescribeComputeEnvCreateInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeComputeEnvCreateInfosResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeComputeEnvCreateInfos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of compute environments.
+     * @param req DescribeComputeEnvsRequest
+     * @return DescribeComputeEnvsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeComputeEnvsResponse DescribeComputeEnvs(DescribeComputeEnvsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeComputeEnvsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeComputeEnvs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -91,6 +319,294 @@ public class BatchClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceCategoriesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceCategories");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a job, including internal task (`Task`) and dependency (`Dependence`) information.
+     * @param req DescribeJobRequest
+     * @return DescribeJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the submission information of the specified job, with the return including the job submission information used as input parameters in the JobId and SubmitJob APIs.
+     * @param req DescribeJobSubmitInfoRequest
+     * @return DescribeJobSubmitInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobSubmitInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobSubmitInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJobSubmitInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the overview information of several jobs.
+     * @param req DescribeJobsRequest
+     * @return DescribeJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a specified task, including information of the task instances inside the task.
+     * @param req DescribeTaskRequest
+     * @return DescribeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the standard outputs and standard error logs of multiple task instances.
+     * @param req DescribeTaskLogsRequest
+     * @return DescribeTaskLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskLogsResponse DescribeTaskLogs(DescribeTaskLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of task templates.
+     * @param req DescribeTaskTemplatesRequest
+     * @return DescribeTaskTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskTemplatesResponse DescribeTaskTemplates(DescribeTaskTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove instances that from compute environment. 
+     * @param req DetachInstancesRequest
+     * @return DetachInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the attributes of a compute environment.
+     * @param req ModifyComputeEnvRequest
+     * @return ModifyComputeEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyComputeEnvResponse ModifyComputeEnv(ModifyComputeEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyComputeEnvResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyComputeEnvResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyComputeEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a task template.
+     * @param req ModifyTaskTemplateRequest
+     * @return ModifyTaskTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTaskTemplateResponse ModifyTaskTemplate(ModifyTaskTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTaskTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTaskTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTaskTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to retry the failed task instances in a job.
+Job retry is supported only if a job is in the "FAILED" state. After the retry operation succeeds, the job will retry the failing task instances in each task in turn according to the task dependencies specified in the "DAG". The history information of the task instances will be reset, the instances will participate in subsequent scheduling and execution as if they are run for the first time.
+     * @param req RetryJobsRequest
+     * @return RetryJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryJobsResponse RetryJobs(RetryJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RetryJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RetryJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RetryJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate a compute node.
+Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABNORMAL state.
+     * @param req TerminateComputeNodeRequest
+     * @return TerminateComputeNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateComputeNodeResponse TerminateComputeNode(TerminateComputeNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateComputeNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateComputeNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateComputeNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate compute nodes in batches. It is not allowed to repeatedly terminate the same node.
+     * @param req TerminateComputeNodesRequest
+     * @return TerminateComputeNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateComputeNodesResponse TerminateComputeNodes(TerminateComputeNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateComputeNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateComputeNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateComputeNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate a job.
+Termination is prohibited if a job is in the `SUBMITTED` state and does not take effect if it is in the `SUCCEED` state.
+Job termination is an asynchronous process, and the time it takes to complete the entire process is directly proportional to the total number of tasks. The effect of terminating a job is equivalent to performing the TerminateTaskInstance operation on all the task instances contained in the job. For more information on the specific effect and usage, see TerminateTaskInstance.
+     * @param req TerminateJobRequest
+     * @return TerminateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateJobResponse TerminateJob(TerminateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate a task instance.
+`SUCCEED` and `FAILED` task instances: No action
+`SUBMITTED`, `PENDING`, and `RUNNABLE` task instances: Change status to `FAILED`.
+`STARTING`, `RUNNING` and `FAILED_INTERRUPTED` task instances: If `EnvId` is not specified, the CVM instance is terminated, and then the task status goes to `FAILED`. If `EnvId` is specified, the task instance changes to `FAILED`, then the related CVM instance is restarted. 
+`FAILED_INTERRUPTED` task instances: The related resources and quotas will be released only after the termination actually succeeds.
+     * @param req TerminateTaskInstanceRequest
+     * @return TerminateTaskInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateTaskInstanceResponse TerminateTaskInstance(TerminateTaskInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateTaskInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateTaskInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateTaskInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

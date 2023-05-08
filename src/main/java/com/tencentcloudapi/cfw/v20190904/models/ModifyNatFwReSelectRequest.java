@@ -51,6 +51,13 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
     private String [] VpcList;
 
     /**
+    * IP range of the firewall
+    */
+    @SerializedName("FwCidrInfo")
+    @Expose
+    private FwCidrInfo FwCidrInfo;
+
+    /**
      * Get Mode. 1: use existing; 0: create new 
      * @return Mode Mode. 1: use existing; 0: create new
      */
@@ -114,6 +121,22 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
         this.VpcList = VpcList;
     }
 
+    /**
+     * Get IP range of the firewall 
+     * @return FwCidrInfo IP range of the firewall
+     */
+    public FwCidrInfo getFwCidrInfo() {
+        return this.FwCidrInfo;
+    }
+
+    /**
+     * Set IP range of the firewall
+     * @param FwCidrInfo IP range of the firewall
+     */
+    public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
+        this.FwCidrInfo = FwCidrInfo;
+    }
+
     public ModifyNatFwReSelectRequest() {
     }
 
@@ -140,6 +163,9 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
                 this.VpcList[i] = new String(source.VpcList[i]);
             }
         }
+        if (source.FwCidrInfo != null) {
+            this.FwCidrInfo = new FwCidrInfo(source.FwCidrInfo);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CfwInstance", this.CfwInstance);
         this.setParamArraySimple(map, prefix + "NatGwList.", this.NatGwList);
         this.setParamArraySimple(map, prefix + "VpcList.", this.VpcList);
+        this.setParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
 
     }
 }

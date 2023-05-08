@@ -79,6 +79,13 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
     private Long CrossAZone;
 
     /**
+    * IP range of the firewall
+    */
+    @SerializedName("FwCidrInfo")
+    @Expose
+    private FwCidrInfo FwCidrInfo;
+
+    /**
      * Get Firewall instance name 
      * @return Name Firewall instance name
      */
@@ -206,6 +213,22 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
         this.CrossAZone = CrossAZone;
     }
 
+    /**
+     * Get IP range of the firewall 
+     * @return FwCidrInfo IP range of the firewall
+     */
+    public FwCidrInfo getFwCidrInfo() {
+        return this.FwCidrInfo;
+    }
+
+    /**
+     * Set IP range of the firewall
+     * @param FwCidrInfo IP range of the firewall
+     */
+    public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
+        this.FwCidrInfo = FwCidrInfo;
+    }
+
     public CreateNatFwInstanceRequest() {
     }
 
@@ -241,6 +264,9 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
         if (source.CrossAZone != null) {
             this.CrossAZone = new Long(source.CrossAZone);
         }
+        if (source.FwCidrInfo != null) {
+            this.FwCidrInfo = new FwCidrInfo(source.FwCidrInfo);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
         this.setParamSimple(map, prefix + "CrossAZone", this.CrossAZone);
+        this.setParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
 
     }
 }

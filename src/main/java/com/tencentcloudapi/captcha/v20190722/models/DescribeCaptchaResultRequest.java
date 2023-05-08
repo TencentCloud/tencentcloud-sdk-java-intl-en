@@ -65,14 +65,14 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private String AppSecretKey;
 
     /**
-    * Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+    * Reserved field.
     */
     @SerializedName("BusinessId")
     @Expose
     private Long BusinessId;
 
     /**
-    * Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+    * Reserved field.
     */
     @SerializedName("SceneId")
     @Expose
@@ -196,32 +196,32 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     }
 
     /**
-     * Get Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app. 
-     * @return BusinessId Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+     * Get Reserved field. 
+     * @return BusinessId Reserved field.
      */
     public Long getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
-     * @param BusinessId Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+     * Set Reserved field.
+     * @param BusinessId Reserved field.
      */
     public void setBusinessId(Long BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app. 
-     * @return SceneId Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+     * Get Reserved field. 
+     * @return SceneId Reserved field.
      */
     public Long getSceneId() {
         return this.SceneId;
     }
 
     /**
-     * Set Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
-     * @param SceneId Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+     * Set Reserved field.
+     * @param SceneId Reserved field.
      */
     public void setSceneId(Long SceneId) {
         this.SceneId = SceneId;

@@ -51,6 +51,13 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel{
     private Long URLExpireTime;
 
     /**
+    * Backup download restriction
+    */
+    @SerializedName("BackupDownloadRestriction")
+    @Expose
+    private BackupDownloadRestriction BackupDownloadRestriction;
+
+    /**
      * Get Instance ID. 
      * @return DBInstanceId Instance ID.
      */
@@ -114,6 +121,22 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel{
         this.URLExpireTime = URLExpireTime;
     }
 
+    /**
+     * Get Backup download restriction 
+     * @return BackupDownloadRestriction Backup download restriction
+     */
+    public BackupDownloadRestriction getBackupDownloadRestriction() {
+        return this.BackupDownloadRestriction;
+    }
+
+    /**
+     * Set Backup download restriction
+     * @param BackupDownloadRestriction Backup download restriction
+     */
+    public void setBackupDownloadRestriction(BackupDownloadRestriction BackupDownloadRestriction) {
+        this.BackupDownloadRestriction = BackupDownloadRestriction;
+    }
+
     public DescribeBackupDownloadURLRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel{
         if (source.URLExpireTime != null) {
             this.URLExpireTime = new Long(source.URLExpireTime);
         }
+        if (source.BackupDownloadRestriction != null) {
+            this.BackupDownloadRestriction = new BackupDownloadRestriction(source.BackupDownloadRestriction);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "URLExpireTime", this.URLExpireTime);
+        this.setParamObj(map, prefix + "BackupDownloadRestriction.", this.BackupDownloadRestriction);
 
     }
 }
