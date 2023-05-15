@@ -78,8 +78,7 @@ This parameter is invalid if the output format is HLS.
     private Long MaxMediaFileDuration;
 
     /**
-    * The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
     */
     @SerializedName("MediaId")
     @Expose
@@ -222,20 +221,16 @@ This parameter is invalid if the output format is HLS.
     }
 
     /**
-     * Get The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream. 
+     * @return MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
      */
     public Long getMediaId() {
         return this.MediaId;
     }
 
     /**
-     * Set The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+     * @param MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
      */
     public void setMediaId(Long MediaId) {
         this.MediaId = MediaId;

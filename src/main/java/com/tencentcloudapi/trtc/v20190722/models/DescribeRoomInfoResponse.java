@@ -20,14 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcRoomUsageResponse extends AbstractModel{
+public class DescribeRoomInfoResponse extends AbstractModel{
 
     /**
-    * The usage data grouped by room, in CSV format.
+    * The number of records returned.
     */
-    @SerializedName("Data")
+    @SerializedName("Total")
     @Expose
-    private String Data;
+    private Long Total;
+
+    /**
+    * The room information.
+    */
+    @SerializedName("RoomList")
+    @Expose
+    private RoomState [] RoomList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The usage data grouped by room, in CSV format. 
-     * @return Data The usage data grouped by room, in CSV format.
+     * Get The number of records returned. 
+     * @return Total The number of records returned.
      */
-    public String getData() {
-        return this.Data;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set The usage data grouped by room, in CSV format.
-     * @param Data The usage data grouped by room, in CSV format.
+     * Set The number of records returned.
+     * @param Total The number of records returned.
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get The room information. 
+     * @return RoomList The room information.
+     */
+    public RoomState [] getRoomList() {
+        return this.RoomList;
+    }
+
+    /**
+     * Set The room information.
+     * @param RoomList The room information.
+     */
+    public void setRoomList(RoomState [] RoomList) {
+        this.RoomList = RoomList;
     }
 
     /**
@@ -68,16 +91,22 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcRoomUsageResponse() {
+    public DescribeRoomInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public DescribeRoomInfoResponse(DescribeRoomInfoResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RoomList != null) {
+            this.RoomList = new RoomState[source.RoomList.length];
+            for (int i = 0; i < source.RoomList.length; i++) {
+                this.RoomList[i] = new RoomState(source.RoomList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "RoomList.", this.RoomList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

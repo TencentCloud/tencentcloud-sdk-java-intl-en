@@ -38,7 +38,6 @@ public class McuLayoutVolume extends AbstractModel{
 
     /**
     * The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Interval")
     @Expose
@@ -46,7 +45,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FollowIdr")
     @Expose
@@ -85,10 +83,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The SEI sending interval (milliseconds). The default value is 1000. 
      * @return Interval The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getInterval() {
         return this.Interval;
@@ -96,19 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Interval The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent. 
      * @return FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFollowIdr() {
         return this.FollowIdr;
@@ -116,9 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFollowIdr(Long FollowIdr) {
         this.FollowIdr = FollowIdr;

@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcRoomUsageResponse extends AbstractModel{
-
-    /**
-    * The usage data grouped by room, in CSV format.
-    */
-    @SerializedName("Data")
-    @Expose
-    private String Data;
+public class DeleteBackupStorageLocationResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get The usage data grouped by room, in CSV format. 
-     * @return Data The usage data grouped by room, in CSV format.
-     */
-    public String getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set The usage data grouped by room, in CSV format.
-     * @param Data The usage data grouped by room, in CSV format.
-     */
-    public void setData(String Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcRoomUsageResponse() {
+    public DeleteBackupStorageLocationResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
-        }
+    public DeleteBackupStorageLocationResponse(DeleteBackupStorageLocationResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

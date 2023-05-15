@@ -74,7 +74,7 @@ Sender <email address>
     private Attachment [] Attachments;
 
     /**
-    * Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+    * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
     */
     @SerializedName("Unsubscribe")
     @Expose
@@ -208,16 +208,16 @@ Sender <email address>
     }
 
     /**
-     * Get Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link 
-     * @return Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     * Get Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic 
+     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
-     * @param Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     * Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;

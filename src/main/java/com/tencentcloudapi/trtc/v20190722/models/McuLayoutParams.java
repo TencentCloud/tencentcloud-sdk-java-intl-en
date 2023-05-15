@@ -51,6 +51,13 @@ public class McuLayoutParams extends AbstractModel{
     private MaxVideoUser MaxVideoUser;
 
     /**
+    * The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+    */
+    @SerializedName("RenderMode")
+    @Expose
+    private Long RenderMode;
+
+    /**
      * Get The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts. 
      * @return MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
      */
@@ -114,6 +121,22 @@ public class McuLayoutParams extends AbstractModel{
         this.MaxVideoUser = MaxVideoUser;
     }
 
+    /**
+     * Get The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars. 
+     * @return RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+     */
+    public Long getRenderMode() {
+        return this.RenderMode;
+    }
+
+    /**
+     * Set The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+     * @param RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+     */
+    public void setRenderMode(Long RenderMode) {
+        this.RenderMode = RenderMode;
+    }
+
     public McuLayoutParams() {
     }
 
@@ -137,6 +160,9 @@ public class McuLayoutParams extends AbstractModel{
         if (source.MaxVideoUser != null) {
             this.MaxVideoUser = new MaxVideoUser(source.MaxVideoUser);
         }
+        if (source.RenderMode != null) {
+            this.RenderMode = new Long(source.RenderMode);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class McuLayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
         this.setParamArrayObj(map, prefix + "MixLayoutList.", this.MixLayoutList);
         this.setParamObj(map, prefix + "MaxVideoUser.", this.MaxVideoUser);
+        this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
 
     }
 }

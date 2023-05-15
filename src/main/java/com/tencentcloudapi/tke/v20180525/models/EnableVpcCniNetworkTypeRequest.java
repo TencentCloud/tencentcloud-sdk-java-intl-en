@@ -58,6 +58,13 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
     private Long ExpiredSeconds;
 
     /**
+    * Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+    */
+    @SerializedName("SkipAddingNonMasqueradeCIDRs")
+    @Expose
+    private Boolean SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -137,6 +144,22 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
         this.ExpiredSeconds = ExpiredSeconds;
     }
 
+    /**
+     * Get Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false` 
+     * @return SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     */
+    public Boolean getSkipAddingNonMasqueradeCIDRs() {
+        return this.SkipAddingNonMasqueradeCIDRs;
+    }
+
+    /**
+     * Set Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     * @param SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     */
+    public void setSkipAddingNonMasqueradeCIDRs(Boolean SkipAddingNonMasqueradeCIDRs) {
+        this.SkipAddingNonMasqueradeCIDRs = SkipAddingNonMasqueradeCIDRs;
+    }
+
     public EnableVpcCniNetworkTypeRequest() {
     }
 
@@ -163,6 +186,9 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
         if (source.ExpiredSeconds != null) {
             this.ExpiredSeconds = new Long(source.ExpiredSeconds);
         }
+        if (source.SkipAddingNonMasqueradeCIDRs != null) {
+            this.SkipAddingNonMasqueradeCIDRs = new Boolean(source.SkipAddingNonMasqueradeCIDRs);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableStaticIp", this.EnableStaticIp);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
         this.setParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
+        this.setParamSimple(map, prefix + "SkipAddingNonMasqueradeCIDRs", this.SkipAddingNonMasqueradeCIDRs);
 
     }
 }

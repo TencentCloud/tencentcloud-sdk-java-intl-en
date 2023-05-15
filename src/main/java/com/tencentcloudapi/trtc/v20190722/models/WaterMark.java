@@ -37,6 +37,20 @@ public class WaterMark extends AbstractModel{
     private WaterMarkImage WaterMarkImage;
 
     /**
+    * The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+    */
+    @SerializedName("WaterMarkChar")
+    @Expose
+    private WaterMarkChar WaterMarkChar;
+
+    /**
+    * The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+    */
+    @SerializedName("WaterMarkTimestamp")
+    @Expose
+    private WaterMarkTimestamp WaterMarkTimestamp;
+
+    /**
      * Get The watermark type. 0 (default): image; 1: text (not supported yet). 
      * @return WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
      */
@@ -68,6 +82,38 @@ public class WaterMark extends AbstractModel{
         this.WaterMarkImage = WaterMarkImage;
     }
 
+    /**
+     * Get The information of the text watermark. This parameter is required if `WaterMarkType` is `1`. 
+     * @return WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+     */
+    public WaterMarkChar getWaterMarkChar() {
+        return this.WaterMarkChar;
+    }
+
+    /**
+     * Set The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+     * @param WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+     */
+    public void setWaterMarkChar(WaterMarkChar WaterMarkChar) {
+        this.WaterMarkChar = WaterMarkChar;
+    }
+
+    /**
+     * Get The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`. 
+     * @return WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+     */
+    public WaterMarkTimestamp getWaterMarkTimestamp() {
+        return this.WaterMarkTimestamp;
+    }
+
+    /**
+     * Set The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+     * @param WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+     */
+    public void setWaterMarkTimestamp(WaterMarkTimestamp WaterMarkTimestamp) {
+        this.WaterMarkTimestamp = WaterMarkTimestamp;
+    }
+
     public WaterMark() {
     }
 
@@ -82,6 +128,12 @@ public class WaterMark extends AbstractModel{
         if (source.WaterMarkImage != null) {
             this.WaterMarkImage = new WaterMarkImage(source.WaterMarkImage);
         }
+        if (source.WaterMarkChar != null) {
+            this.WaterMarkChar = new WaterMarkChar(source.WaterMarkChar);
+        }
+        if (source.WaterMarkTimestamp != null) {
+            this.WaterMarkTimestamp = new WaterMarkTimestamp(source.WaterMarkTimestamp);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class WaterMark extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
         this.setParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+        this.setParamObj(map, prefix + "WaterMarkChar.", this.WaterMarkChar);
+        this.setParamObj(map, prefix + "WaterMarkTimestamp.", this.WaterMarkTimestamp);
 
     }
 }

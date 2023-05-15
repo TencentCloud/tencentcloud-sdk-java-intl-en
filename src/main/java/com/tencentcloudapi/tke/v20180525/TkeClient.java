@@ -159,6 +159,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a backup repository. You can specify the storage type (such as COS), the bucket region and the name. Up to 100 repositories can be created. Note that the settings of this API apply globally. You only need to create one backup repository, and back up TKE clusters in different regions in it.
+     * @param req CreateBackupStorageLocationRequest
+     * @return CreateBackupStorageLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupStorageLocationResponse CreateBackupStorageLocation(CreateBackupStorageLocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupStorageLocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackupStorageLocation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a cluster.
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -411,6 +431,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTKEEdgeClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTKEEdgeCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a backup repository.
+     * @param req DeleteBackupStorageLocationRequest
+     * @return DeleteBackupStorageLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupStorageLocationResponse DeleteBackupStorageLocation(DeleteBackupStorageLocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupStorageLocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackupStorageLocation");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -751,6 +791,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAvailableTKEEdgeVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query backup repositories.
+     * @param req DescribeBackupStorageLocationsRequest
+     * @return DescribeBackupStorageLocationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(DescribeBackupStorageLocationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupStorageLocationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupStorageLocations");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1971,6 +2031,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UninstallEdgeLogAgentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UninstallEdgeLogAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the Kubeconfig information of a cluster.
+     * @param req UpdateClusterKubeconfigRequest
+     * @return UpdateClusterKubeconfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(UpdateClusterKubeconfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateClusterKubeconfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateClusterKubeconfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

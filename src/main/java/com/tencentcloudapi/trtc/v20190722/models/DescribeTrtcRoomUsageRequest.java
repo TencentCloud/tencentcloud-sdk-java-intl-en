@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeTrtcRoomUsageRequest extends AbstractModel{
 
     /**
-    * 
+    * The `SDKAppID` of the room.
     */
     @SerializedName("SdkAppid")
     @Expose
     private Long SdkAppid;
 
     /**
-    * 
+    * The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get  
-     * @return SdkAppid 
+     * Get The `SDKAppID` of the room. 
+     * @return SdkAppid The `SDKAppID` of the room.
      */
     public Long getSdkAppid() {
         return this.SdkAppid;
     }
 
     /**
-     * Set 
-     * @param SdkAppid 
+     * Set The `SDKAppID` of the room.
+     * @param SdkAppid The `SDKAppID` of the room.
      */
     public void setSdkAppid(Long SdkAppid) {
         this.SdkAppid = SdkAppid;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute). 
+     * @return StartTime The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+     * @param StartTime The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart. 
+     * @return EndTime The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
+     * @param EndTime The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

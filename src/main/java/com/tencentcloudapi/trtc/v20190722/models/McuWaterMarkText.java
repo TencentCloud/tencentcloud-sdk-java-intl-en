@@ -59,23 +59,20 @@ public class McuWaterMarkText extends AbstractModel{
 
     /**
     * The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontSize")
     @Expose
     private Long FontSize;
 
     /**
-    * The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
     */
     @SerializedName("FontColor")
     @Expose
     private String FontColor;
 
     /**
-    * The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
     */
     @SerializedName("BackGroundColor")
     @Expose
@@ -162,10 +159,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The font size.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The font size. 
      * @return FontSize The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFontSize() {
         return this.FontSize;
@@ -173,49 +168,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FontSize The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFontSize(Long FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FontColor The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	 
+     * @return FontColor The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     public String getFontColor() {
         return this.FontColor;
     }
 
     /**
-     * Set The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FontColor The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+     * @param FontColor The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
     }
 
     /**
-     * Get The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	 
+     * @return BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     public String getBackGroundColor() {
         return this.BackGroundColor;
     }
 
     /**
-     * Set The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+     * @param BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     public void setBackGroundColor(String BackGroundColor) {
         this.BackGroundColor = BackGroundColor;

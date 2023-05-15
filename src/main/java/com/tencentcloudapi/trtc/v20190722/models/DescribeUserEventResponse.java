@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcRoomUsageResponse extends AbstractModel{
+public class DescribeUserEventResponse extends AbstractModel{
 
     /**
-    * The usage data grouped by room, in CSV format.
+    * The event list. An empty array will be returned if no data is obtained.
     */
     @SerializedName("Data")
     @Expose
-    private String Data;
+    private EventList [] Data;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,18 +37,18 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The usage data grouped by room, in CSV format. 
-     * @return Data The usage data grouped by room, in CSV format.
+     * Get The event list. An empty array will be returned if no data is obtained. 
+     * @return Data The event list. An empty array will be returned if no data is obtained.
      */
-    public String getData() {
+    public EventList [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The usage data grouped by room, in CSV format.
-     * @param Data The usage data grouped by room, in CSV format.
+     * Set The event list. An empty array will be returned if no data is obtained.
+     * @param Data The event list. An empty array will be returned if no data is obtained.
      */
-    public void setData(String Data) {
+    public void setData(EventList [] Data) {
         this.Data = Data;
     }
 
@@ -68,16 +68,19 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcRoomUsageResponse() {
+    public DescribeUserEventResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
+    public DescribeUserEventResponse(DescribeUserEventResponse source) {
         if (source.Data != null) {
-            this.Data = new String(source.Data);
+            this.Data = new EventList[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new EventList(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +92,7 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

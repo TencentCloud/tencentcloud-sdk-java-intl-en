@@ -252,6 +252,9 @@ public enum TkeErrorCode {
     // Failed to obtain the kubernetes resource list.
      INTERNALERROR_KUBERNETESLISTOPERATIONERROR("InternalError.KubernetesListOperationError"),
      
+    // Kubernetes Patch operation failed.
+     INTERNALERROR_KUBERNETESPATCHOPERATIONERROR("InternalError.KubernetesPatchOperationError"),
+     
     // An error occurs while calling the underlying CLB
      INTERNALERROR_LBCOMMON("InternalError.LbCommon"),
      

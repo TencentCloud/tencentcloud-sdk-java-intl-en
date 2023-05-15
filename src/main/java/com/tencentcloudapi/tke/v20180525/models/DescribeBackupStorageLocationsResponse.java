@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcRoomUsageResponse extends AbstractModel{
+public class DescribeBackupStorageLocationsResponse extends AbstractModel{
 
     /**
-    * The usage data grouped by room, in CSV format.
+    * Detailed information of the backup repository 
+Note: This parameter may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Data")
+    @SerializedName("BackupStorageLocationSet")
     @Expose
-    private String Data;
+    private BackupStorageLocation [] BackupStorageLocationSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +38,23 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The usage data grouped by room, in CSV format. 
-     * @return Data The usage data grouped by room, in CSV format.
+     * Get Detailed information of the backup repository 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return BackupStorageLocationSet Detailed information of the backup repository 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
-    public String getData() {
-        return this.Data;
+    public BackupStorageLocation [] getBackupStorageLocationSet() {
+        return this.BackupStorageLocationSet;
     }
 
     /**
-     * Set The usage data grouped by room, in CSV format.
-     * @param Data The usage data grouped by room, in CSV format.
+     * Set Detailed information of the backup repository 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param BackupStorageLocationSet Detailed information of the backup repository 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setBackupStorageLocationSet(BackupStorageLocation [] BackupStorageLocationSet) {
+        this.BackupStorageLocationSet = BackupStorageLocationSet;
     }
 
     /**
@@ -68,16 +73,19 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcRoomUsageResponse() {
+    public DescribeBackupStorageLocationsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public DescribeBackupStorageLocationsResponse(DescribeBackupStorageLocationsResponse source) {
+        if (source.BackupStorageLocationSet != null) {
+            this.BackupStorageLocationSet = new BackupStorageLocation[source.BackupStorageLocationSet.length];
+            for (int i = 0; i < source.BackupStorageLocationSet.length; i++) {
+                this.BackupStorageLocationSet[i] = new BackupStorageLocation(source.BackupStorageLocationSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +97,7 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamArrayObj(map, prefix + "BackupStorageLocationSet.", this.BackupStorageLocationSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

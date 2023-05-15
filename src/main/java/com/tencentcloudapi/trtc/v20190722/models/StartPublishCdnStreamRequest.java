@@ -51,14 +51,14 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private AgentParams AgentParams;
 
     /**
-    * Whether to transcode the streams. 0: No; 1: Yes.
+    * Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
     */
     @SerializedName("WithTranscoding")
     @Expose
     private Long WithTranscoding;
 
     /**
-    * The audio encoding parameters for relaying.
+    * The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
     */
     @SerializedName("AudioParams")
     @Expose
@@ -79,7 +79,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private SingleSubscribeParams SingleSubscribeParams;
 
     /**
-    * The CDN information.
+    * The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
     */
     @SerializedName("PublishCdnParams")
     @Expose
@@ -93,7 +93,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private McuSeiParams SeiParams;
 
     /**
-    * The information of the room to which streams are relayed.
+    * The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
     */
     @SerializedName("FeedBackRoomParams")
     @Expose
@@ -164,32 +164,32 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to transcode the streams. 0: No; 1: Yes. 
-     * @return WithTranscoding Whether to transcode the streams. 0: No; 1: Yes.
+     * Get Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred. 
+     * @return WithTranscoding Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
      */
     public Long getWithTranscoding() {
         return this.WithTranscoding;
     }
 
     /**
-     * Set Whether to transcode the streams. 0: No; 1: Yes.
-     * @param WithTranscoding Whether to transcode the streams. 0: No; 1: Yes.
+     * Set Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
+     * @param WithTranscoding Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
      */
     public void setWithTranscoding(Long WithTranscoding) {
         this.WithTranscoding = WithTranscoding;
     }
 
     /**
-     * Get The audio encoding parameters for relaying. 
-     * @return AudioParams The audio encoding parameters for relaying.
+     * Get The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task. 
+     * @return AudioParams The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
      */
     public McuAudioParams getAudioParams() {
         return this.AudioParams;
     }
 
     /**
-     * Set The audio encoding parameters for relaying.
-     * @param AudioParams The audio encoding parameters for relaying.
+     * Set The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
+     * @param AudioParams The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
      */
     public void setAudioParams(McuAudioParams AudioParams) {
         this.AudioParams = AudioParams;
@@ -228,16 +228,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get The CDN information. 
-     * @return PublishCdnParams The CDN information.
+     * Get The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`. 
+     * @return PublishCdnParams The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
      */
     public McuPublishCdnParam [] getPublishCdnParams() {
         return this.PublishCdnParams;
     }
 
     /**
-     * Set The CDN information.
-     * @param PublishCdnParams The CDN information.
+     * Set The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
+     * @param PublishCdnParams The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
      */
     public void setPublishCdnParams(McuPublishCdnParam [] PublishCdnParams) {
         this.PublishCdnParams = PublishCdnParams;
@@ -260,16 +260,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get The information of the room to which streams are relayed. 
-     * @return FeedBackRoomParams The information of the room to which streams are relayed.
+     * Get The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support. 
+     * @return FeedBackRoomParams The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
      */
     public McuFeedBackRoomParams [] getFeedBackRoomParams() {
         return this.FeedBackRoomParams;
     }
 
     /**
-     * Set The information of the room to which streams are relayed.
-     * @param FeedBackRoomParams The information of the room to which streams are relayed.
+     * Set The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
+     * @param FeedBackRoomParams The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
      */
     public void setFeedBackRoomParams(McuFeedBackRoomParams [] FeedBackRoomParams) {
         this.FeedBackRoomParams = FeedBackRoomParams;

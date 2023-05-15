@@ -38,7 +38,6 @@ public class McuWaterMarkParams extends AbstractModel{
 
     /**
     * The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WaterMarkText")
     @Expose
@@ -77,10 +76,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The text watermark configuration. This parameter is required if `WaterMarkType` is `1`. 
      * @return WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public McuWaterMarkText getWaterMarkText() {
         return this.WaterMarkText;
@@ -88,9 +85,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWaterMarkText(McuWaterMarkText WaterMarkText) {
         this.WaterMarkText = WaterMarkText;

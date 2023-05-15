@@ -37,6 +37,13 @@ public class VirtualNodeSpec extends AbstractModel{
     private String SubnetId;
 
     /**
+    * Tencent Cloud tags
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Node display name 
      * @return DisplayName Node display name
      */
@@ -68,6 +75,22 @@ public class VirtualNodeSpec extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get Tencent Cloud tags 
+     * @return Tags Tencent Cloud tags
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tencent Cloud tags
+     * @param Tags Tencent Cloud tags
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public VirtualNodeSpec() {
     }
 
@@ -82,6 +105,12 @@ public class VirtualNodeSpec extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class VirtualNodeSpec extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

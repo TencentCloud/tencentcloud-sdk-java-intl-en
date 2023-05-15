@@ -72,14 +72,14 @@ public class McuLayout extends AbstractModel{
     private Long RenderMode;
 
     /**
-    * The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+    * (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
     */
     @SerializedName("BackGroundColor")
     @Expose
@@ -212,44 +212,44 @@ Grey: 0x999999
     }
 
     /**
-     * Get The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999 
-     * @return BackGroundColor The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * Get (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999` 
+     * @return BackGroundColor (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
      */
     public String getBackGroundColor() {
         return this.BackGroundColor;
     }
 
     /**
-     * Set The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
-     * @param BackGroundColor The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * Set (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
+     * @param BackGroundColor (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
      */
     public void setBackGroundColor(String BackGroundColor) {
         this.BackGroundColor = BackGroundColor;

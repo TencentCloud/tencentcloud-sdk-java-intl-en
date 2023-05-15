@@ -20,14 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcRoomUsageResponse extends AbstractModel{
+public class DescribeScaleInfoResponse extends AbstractModel{
 
     /**
-    * The usage data grouped by room, in CSV format.
+    * The number of records returned.
     */
-    @SerializedName("Data")
+    @SerializedName("Total")
     @Expose
-    private String Data;
+    private Long Total;
+
+    /**
+    * The returned data.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ScaleList")
+    @Expose
+    private ScaleInfomation [] ScaleList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +45,39 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The usage data grouped by room, in CSV format. 
-     * @return Data The usage data grouped by room, in CSV format.
+     * Get The number of records returned. 
+     * @return Total The number of records returned.
      */
-    public String getData() {
-        return this.Data;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set The usage data grouped by room, in CSV format.
-     * @param Data The usage data grouped by room, in CSV format.
+     * Set The number of records returned.
+     * @param Total The number of records returned.
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get The returned data.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ScaleList The returned data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ScaleInfomation [] getScaleList() {
+        return this.ScaleList;
+    }
+
+    /**
+     * Set The returned data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ScaleList The returned data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setScaleList(ScaleInfomation [] ScaleList) {
+        this.ScaleList = ScaleList;
     }
 
     /**
@@ -68,16 +96,22 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcRoomUsageResponse() {
+    public DescribeScaleInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public DescribeScaleInfoResponse(DescribeScaleInfoResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ScaleList != null) {
+            this.ScaleList = new ScaleInfomation[source.ScaleList.length];
+            for (int i = 0; i < source.ScaleList.length; i++) {
+                this.ScaleList[i] = new ScaleInfomation(source.ScaleList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "ScaleList.", this.ScaleList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

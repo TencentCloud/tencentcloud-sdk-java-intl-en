@@ -133,6 +133,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String ChargeType;
 
     /**
+    * Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EdgeVersion")
+    @Expose
+    private String EdgeVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -392,6 +407,42 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ChargeType = ChargeType;
     }
 
+    /**
+     * Get Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EdgeVersion Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEdgeVersion() {
+        return this.EdgeVersion;
+    }
+
+    /**
+     * Set Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EdgeVersion Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEdgeVersion(String EdgeVersion) {
+        this.EdgeVersion = EdgeVersion;
+    }
+
+    /**
+     * Get  
+     * @return TagSpecification 
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 
+     * @param TagSpecification 
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public EdgeCluster() {
     }
 
@@ -445,6 +496,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
+        if (source.EdgeVersion != null) {
+            this.EdgeVersion = new String(source.EdgeVersion);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -467,6 +524,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

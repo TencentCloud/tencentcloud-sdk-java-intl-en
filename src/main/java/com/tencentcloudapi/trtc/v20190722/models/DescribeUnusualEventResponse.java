@@ -20,14 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcRoomUsageResponse extends AbstractModel{
+public class DescribeUnusualEventResponse extends AbstractModel{
 
     /**
-    * The usage data grouped by room, in CSV format.
+    * The number of records returned.
+Value range: 0-20.
     */
-    @SerializedName("Data")
+    @SerializedName("Total")
     @Expose
-    private String Data;
+    private Long Total;
+
+    /**
+    * The information of the abnormal user experiences.
+    */
+    @SerializedName("AbnormalExperienceList")
+    @Expose
+    private AbnormalExperience [] AbnormalExperienceList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +45,39 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The usage data grouped by room, in CSV format. 
-     * @return Data The usage data grouped by room, in CSV format.
+     * Get The number of records returned.
+Value range: 0-20. 
+     * @return Total The number of records returned.
+Value range: 0-20.
      */
-    public String getData() {
-        return this.Data;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set The usage data grouped by room, in CSV format.
-     * @param Data The usage data grouped by room, in CSV format.
+     * Set The number of records returned.
+Value range: 0-20.
+     * @param Total The number of records returned.
+Value range: 0-20.
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get The information of the abnormal user experiences. 
+     * @return AbnormalExperienceList The information of the abnormal user experiences.
+     */
+    public AbnormalExperience [] getAbnormalExperienceList() {
+        return this.AbnormalExperienceList;
+    }
+
+    /**
+     * Set The information of the abnormal user experiences.
+     * @param AbnormalExperienceList The information of the abnormal user experiences.
+     */
+    public void setAbnormalExperienceList(AbnormalExperience [] AbnormalExperienceList) {
+        this.AbnormalExperienceList = AbnormalExperienceList;
     }
 
     /**
@@ -68,16 +96,22 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTrtcRoomUsageResponse() {
+    public DescribeUnusualEventResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public DescribeUnusualEventResponse(DescribeUnusualEventResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.AbnormalExperienceList != null) {
+            this.AbnormalExperienceList = new AbnormalExperience[source.AbnormalExperienceList.length];
+            for (int i = 0; i < source.AbnormalExperienceList.length; i++) {
+                this.AbnormalExperienceList[i] = new AbnormalExperience(source.AbnormalExperienceList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "AbnormalExperienceList.", this.AbnormalExperienceList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

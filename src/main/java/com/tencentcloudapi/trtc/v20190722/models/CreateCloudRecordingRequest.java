@@ -58,7 +58,7 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     private RecordParams RecordParams;
 
     /**
-    * The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+    * The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
     */
     @SerializedName("StorageParams")
     @Expose
@@ -182,16 +182,16 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     }
 
     /**
-     * Get The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD. 
-     * @return StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+     * Get The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS. 
+     * @return StorageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
-     * @param StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+     * Set The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
+     * @param StorageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;
