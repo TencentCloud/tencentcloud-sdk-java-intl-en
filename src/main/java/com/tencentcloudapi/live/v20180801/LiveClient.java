@@ -856,6 +856,26 @@ Notes:
     }
 
     /**
+     *This API is used to query the data of billable LVB bandwidth and traffic.
+     * @param req DescribeBillBandwidthAndFluxListRequest
+     * @return DescribeBillBandwidthAndFluxListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillBandwidthAndFluxList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
      * @param req DescribeConcurrentRecordStreamNumRequest
      * @return DescribeConcurrentRecordStreamNumResponse
