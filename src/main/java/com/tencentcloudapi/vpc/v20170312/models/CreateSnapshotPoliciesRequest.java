@@ -20,43 +20,43 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReturnNormalAddressesRequest extends AbstractModel{
+public class CreateSnapshotPoliciesRequest extends AbstractModel{
 
     /**
-    * EIP addresses. Example: 101.35.139.183
+    * Details of a snapshot policy
     */
-    @SerializedName("AddressIps")
+    @SerializedName("SnapshotPolicies")
     @Expose
-    private String [] AddressIps;
+    private SnapshotPolicy [] SnapshotPolicies;
 
     /**
-     * Get EIP addresses. Example: 101.35.139.183 
-     * @return AddressIps EIP addresses. Example: 101.35.139.183
+     * Get Details of a snapshot policy 
+     * @return SnapshotPolicies Details of a snapshot policy
      */
-    public String [] getAddressIps() {
-        return this.AddressIps;
+    public SnapshotPolicy [] getSnapshotPolicies() {
+        return this.SnapshotPolicies;
     }
 
     /**
-     * Set EIP addresses. Example: 101.35.139.183
-     * @param AddressIps EIP addresses. Example: 101.35.139.183
+     * Set Details of a snapshot policy
+     * @param SnapshotPolicies Details of a snapshot policy
      */
-    public void setAddressIps(String [] AddressIps) {
-        this.AddressIps = AddressIps;
+    public void setSnapshotPolicies(SnapshotPolicy [] SnapshotPolicies) {
+        this.SnapshotPolicies = SnapshotPolicies;
     }
 
-    public ReturnNormalAddressesRequest() {
+    public CreateSnapshotPoliciesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReturnNormalAddressesRequest(ReturnNormalAddressesRequest source) {
-        if (source.AddressIps != null) {
-            this.AddressIps = new String[source.AddressIps.length];
-            for (int i = 0; i < source.AddressIps.length; i++) {
-                this.AddressIps[i] = new String(source.AddressIps[i]);
+    public CreateSnapshotPoliciesRequest(CreateSnapshotPoliciesRequest source) {
+        if (source.SnapshotPolicies != null) {
+            this.SnapshotPolicies = new SnapshotPolicy[source.SnapshotPolicies.length];
+            for (int i = 0; i < source.SnapshotPolicies.length; i++) {
+                this.SnapshotPolicies[i] = new SnapshotPolicy(source.SnapshotPolicies[i]);
             }
         }
     }
@@ -66,7 +66,7 @@ public class ReturnNormalAddressesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "AddressIps.", this.AddressIps);
+        this.setParamArrayObj(map, prefix + "SnapshotPolicies.", this.SnapshotPolicies);
 
     }
 }

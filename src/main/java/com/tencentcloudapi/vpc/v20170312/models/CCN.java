@@ -118,6 +118,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean RouteTableFlag;
 
     /**
+    * 
+    */
+    @SerializedName("IsSecurityLock")
+    @Expose
+    private Boolean IsSecurityLock;
+
+    /**
+    * Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteBroadcastPolicyFlag")
+    @Expose
+    private Boolean RouteBroadcastPolicyFlag;
+
+    /**
      * Get The unique ID of the CCN 
      * @return CcnId The unique ID of the CCN
      */
@@ -341,6 +356,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RouteTableFlag = RouteTableFlag;
     }
 
+    /**
+     * Get  
+     * @return IsSecurityLock 
+     */
+    public Boolean getIsSecurityLock() {
+        return this.IsSecurityLock;
+    }
+
+    /**
+     * Set 
+     * @param IsSecurityLock 
+     */
+    public void setIsSecurityLock(Boolean IsSecurityLock) {
+        this.IsSecurityLock = IsSecurityLock;
+    }
+
+    /**
+     * Get Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RouteBroadcastPolicyFlag Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getRouteBroadcastPolicyFlag() {
+        return this.RouteBroadcastPolicyFlag;
+    }
+
+    /**
+     * Set Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RouteBroadcastPolicyFlag Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRouteBroadcastPolicyFlag(Boolean RouteBroadcastPolicyFlag) {
+        this.RouteBroadcastPolicyFlag = RouteBroadcastPolicyFlag;
+    }
+
     public CCN() {
     }
 
@@ -391,6 +442,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.RouteTableFlag != null) {
             this.RouteTableFlag = new Boolean(source.RouteTableFlag);
         }
+        if (source.IsSecurityLock != null) {
+            this.IsSecurityLock = new Boolean(source.IsSecurityLock);
+        }
+        if (source.RouteBroadcastPolicyFlag != null) {
+            this.RouteBroadcastPolicyFlag = new Boolean(source.RouteBroadcastPolicyFlag);
+        }
     }
 
 
@@ -411,6 +468,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
         this.setParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
         this.setParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
+        this.setParamSimple(map, prefix + "IsSecurityLock", this.IsSecurityLock);
+        this.setParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
 
     }
 }

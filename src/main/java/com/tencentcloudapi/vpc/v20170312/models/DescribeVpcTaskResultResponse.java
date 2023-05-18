@@ -37,6 +37,14 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
     private String Output;
 
     /**
+    * Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Result")
+    @Expose
+    private VpcTaskResultDetailInfo [] Result;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
     }
 
     /**
+     * Get Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Result Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public VpcTaskResultDetailInfo [] getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Result Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setResult(VpcTaskResultDetailInfo [] Result) {
+        this.Result = Result;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -105,6 +133,12 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
         if (source.Output != null) {
             this.Output = new String(source.Output);
         }
+        if (source.Result != null) {
+            this.Result = new VpcTaskResultDetailInfo[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new VpcTaskResultDetailInfo(source.Result[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +151,7 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Output", this.Output);
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

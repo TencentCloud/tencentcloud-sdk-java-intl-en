@@ -395,6 +395,26 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to associate a snapshot policy with specified instances.
+     * @param req AttachSnapshotInstancesRequest
+     * @return AttachSnapshotInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachSnapshotInstancesResponse AttachSnapshotInstances(AttachSnapshotInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachSnapshotInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachSnapshotInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachSnapshotInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used by the service provider to perform a compliance audit.
 * This API is only provided for service providers to audit compliance review requests received. Tencent Cloud will verify the identity of the service provider by the `APPID`. 
 * The status of the review request can be changed between `APPROVED` and `DENY`.
@@ -1071,6 +1091,26 @@ Description:
                 Type type = new TypeToken<JsonResponseModel<CreateServiceTemplateGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateServiceTemplateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create snapshot policies.
+     * @param req CreateSnapshotPoliciesRequest
+     * @return CreateSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSnapshotPoliciesResponse CreateSnapshotPolicies(CreateSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1764,6 +1804,26 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceTemplateGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteServiceTemplateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete snapshot policies.
+     * @param req DeleteSnapshotPoliciesRequest
+     * @return DeleteSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSnapshotPoliciesResponse DeleteSnapshotPolicies(DeleteSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2843,6 +2903,86 @@ This API is only available for existing customers. For any questions, please [su
     }
 
     /**
+     *This API is used to query the snapshot file contents.
+     * @param req DescribeSgSnapshotFileContentRequest
+     * @return DescribeSgSnapshotFileContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSgSnapshotFileContentResponse DescribeSgSnapshotFileContent(DescribeSgSnapshotFileContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSgSnapshotFileContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSgSnapshotFileContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSgSnapshotFileContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query instances associated with a snapshot policy.
+     * @param req DescribeSnapshotAttachedInstancesRequest
+     * @return DescribeSnapshotAttachedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(DescribeSnapshotAttachedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotAttachedInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotAttachedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotAttachedInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query snapshot files.
+     * @param req DescribeSnapshotFilesRequest
+     * @return DescribeSnapshotFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotFilesResponse DescribeSnapshotFiles(DescribeSnapshotFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query snapshot policies.
+     * @param req DescribeSnapshotPoliciesRequest
+     * @return DescribeSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotPoliciesResponse DescribeSnapshotPolicies(DescribeSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeSubnets) is used to query the list of subnets.
      * @param req DescribeSubnetsRequest
      * @return DescribeSubnetsResponse
@@ -3229,6 +3369,26 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to disassociate a snapshot policy with instances.
+     * @param req DetachSnapshotInstancesRequest
+     * @return DetachSnapshotInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachSnapshotInstancesResponse DetachSnapshotInstances(DetachSnapshotInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachSnapshotInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachSnapshotInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachSnapshotInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DisableCcnRoutes) is used to disable CCN routes that are already enabled.
      * @param req DisableCcnRoutesRequest
      * @return DisableCcnRoutesResponse
@@ -3281,6 +3441,26 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<DisableGatewayFlowMonitorResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableGatewayFlowMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable specified snapshot policies.
+     * @param req DisableSnapshotPoliciesRequest
+     * @return DisableSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableSnapshotPoliciesResponse DisableSnapshotPolicies(DisableSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3486,6 +3666,26 @@ This API is used to verify whether there will be conflict with an existing route
                 Type type = new TypeToken<JsonResponseModel<EnableGatewayFlowMonitorResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableGatewayFlowMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable specified snapshot policies. 
+     * @param req EnableSnapshotPoliciesRequest
+     * @return EnableSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableSnapshotPoliciesResponse EnableSnapshotPolicies(EnableSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4321,6 +4521,26 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to modify specified snapshot policies.
+     * @param req ModifySnapshotPoliciesRequest
+     * @return ModifySnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapshotPoliciesResponse ModifySnapshotPolicies(ModifySnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySnapshotPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifySubnetAttribute) is used to modify subnet attributes.
      * @param req ModifySubnetAttributeRequest
      * @return ModifySubnetAttributeResponse
@@ -4801,6 +5021,26 @@ Note: When this API is called, all routing policies in the current route table a
                 Type type = new TypeToken<JsonResponseModel<ResetVpnGatewayInternetMaxBandwidthResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetVpnGatewayInternetMaxBandwidth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to restore security group policies with a backup.
+     * @param req ResumeSnapshotInstanceRequest
+     * @return ResumeSnapshotInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeSnapshotInstanceResponse ResumeSnapshotInstance(ResumeSnapshotInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeSnapshotInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeSnapshotInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeSnapshotInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransformAddressResponse extends AbstractModel{
+public class CreateSnapshotPoliciesResponse extends AbstractModel{
 
     /**
-    * The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+    * Snapshot policies
     */
-    @SerializedName("TaskId")
+    @SerializedName("SnapshotPolicies")
     @Expose
-    private Long TaskId;
-
-    /**
-    * The unique ID after converting to EIP
-    */
-    @SerializedName("AddressId")
-    @Expose
-    private String AddressId;
+    private SnapshotPolicy [] SnapshotPolicies;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class TransformAddressResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status. 
-     * @return TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * Get Snapshot policies 
+     * @return SnapshotPolicies Snapshot policies
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public SnapshotPolicy [] getSnapshotPolicies() {
+        return this.SnapshotPolicies;
     }
 
     /**
-     * Set The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
-     * @param TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * Set Snapshot policies
+     * @param SnapshotPolicies Snapshot policies
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    /**
-     * Get The unique ID after converting to EIP 
-     * @return AddressId The unique ID after converting to EIP
-     */
-    public String getAddressId() {
-        return this.AddressId;
-    }
-
-    /**
-     * Set The unique ID after converting to EIP
-     * @param AddressId The unique ID after converting to EIP
-     */
-    public void setAddressId(String AddressId) {
-        this.AddressId = AddressId;
+    public void setSnapshotPolicies(SnapshotPolicy [] SnapshotPolicies) {
+        this.SnapshotPolicies = SnapshotPolicies;
     }
 
     /**
@@ -91,19 +68,19 @@ public class TransformAddressResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public TransformAddressResponse() {
+    public CreateSnapshotPoliciesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TransformAddressResponse(TransformAddressResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
-        }
-        if (source.AddressId != null) {
-            this.AddressId = new String(source.AddressId);
+    public CreateSnapshotPoliciesResponse(CreateSnapshotPoliciesResponse source) {
+        if (source.SnapshotPolicies != null) {
+            this.SnapshotPolicies = new SnapshotPolicy[source.SnapshotPolicies.length];
+            for (int i = 0; i < source.SnapshotPolicies.length; i++) {
+                this.SnapshotPolicies[i] = new SnapshotPolicy(source.SnapshotPolicies[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +92,7 @@ public class TransformAddressResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "AddressId", this.AddressId);
+        this.setParamArrayObj(map, prefix + "SnapshotPolicies.", this.SnapshotPolicies);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

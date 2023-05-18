@@ -45,14 +45,14 @@ Default value: `4`.
     private String SecureLevel;
 
     /**
-    * The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+    * The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * The pass-through parameter.
+    * The pass-through parameter, which can be omitted if there are no special requirements.
     */
     @SerializedName("Extra")
     @Expose
@@ -123,32 +123,32 @@ Default value: `4`.
     }
 
     /**
-     * Get The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`. 
-     * @return Image The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+     * Get The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`. 
+     * @return Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
-     * @param Image The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+     * Set The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+     * @param Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get The pass-through parameter. 
-     * @return Extra The pass-through parameter.
+     * Get The pass-through parameter, which can be omitted if there are no special requirements. 
+     * @return Extra The pass-through parameter, which can be omitted if there are no special requirements.
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set The pass-through parameter.
-     * @param Extra The pass-through parameter.
+     * Set The pass-through parameter, which can be omitted if there are no special requirements.
+     * @param Extra The pass-through parameter, which can be omitted if there are no special requirements.
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

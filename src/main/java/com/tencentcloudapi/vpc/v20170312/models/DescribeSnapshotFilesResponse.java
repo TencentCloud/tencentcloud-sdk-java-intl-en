@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransformAddressResponse extends AbstractModel{
+public class DescribeSnapshotFilesResponse extends AbstractModel{
 
     /**
-    * The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+    * Snapshot files
     */
-    @SerializedName("TaskId")
+    @SerializedName("SnapshotFileSet")
     @Expose
-    private Long TaskId;
+    private SnapshotFileInfo [] SnapshotFileSet;
 
     /**
-    * The unique ID after converting to EIP
+    * The number of eligible objects.
     */
-    @SerializedName("AddressId")
+    @SerializedName("TotalCount")
     @Expose
-    private String AddressId;
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class TransformAddressResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status. 
-     * @return TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * Get Snapshot files 
+     * @return SnapshotFileSet Snapshot files
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public SnapshotFileInfo [] getSnapshotFileSet() {
+        return this.SnapshotFileSet;
     }
 
     /**
-     * Set The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
-     * @param TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * Set Snapshot files
+     * @param SnapshotFileSet Snapshot files
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setSnapshotFileSet(SnapshotFileInfo [] SnapshotFileSet) {
+        this.SnapshotFileSet = SnapshotFileSet;
     }
 
     /**
-     * Get The unique ID after converting to EIP 
-     * @return AddressId The unique ID after converting to EIP
+     * Get The number of eligible objects. 
+     * @return TotalCount The number of eligible objects.
      */
-    public String getAddressId() {
-        return this.AddressId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set The unique ID after converting to EIP
-     * @param AddressId The unique ID after converting to EIP
+     * Set The number of eligible objects.
+     * @param TotalCount The number of eligible objects.
      */
-    public void setAddressId(String AddressId) {
-        this.AddressId = AddressId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -91,19 +91,22 @@ public class TransformAddressResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public TransformAddressResponse() {
+    public DescribeSnapshotFilesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TransformAddressResponse(TransformAddressResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public DescribeSnapshotFilesResponse(DescribeSnapshotFilesResponse source) {
+        if (source.SnapshotFileSet != null) {
+            this.SnapshotFileSet = new SnapshotFileInfo[source.SnapshotFileSet.length];
+            for (int i = 0; i < source.SnapshotFileSet.length; i++) {
+                this.SnapshotFileSet[i] = new SnapshotFileInfo(source.SnapshotFileSet[i]);
+            }
         }
-        if (source.AddressId != null) {
-            this.AddressId = new String(source.AddressId);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +118,8 @@ public class TransformAddressResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "AddressId", this.AddressId);
+        this.setParamArrayObj(map, prefix + "SnapshotFileSet.", this.SnapshotFileSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

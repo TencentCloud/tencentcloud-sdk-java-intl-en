@@ -39,6 +39,13 @@ DISABLE: do not enable the route
     private String Status;
 
     /**
+    * Route CIDR block
+    */
+    @SerializedName("DestinationCidrBlock")
+    @Expose
+    private String DestinationCidrBlock;
+
+    /**
      * Get Route ID 
      * @return RouteId Route ID
      */
@@ -78,6 +85,22 @@ DISABLE: do not enable the route
         this.Status = Status;
     }
 
+    /**
+     * Get Route CIDR block 
+     * @return DestinationCidrBlock Route CIDR block
+     */
+    public String getDestinationCidrBlock() {
+        return this.DestinationCidrBlock;
+    }
+
+    /**
+     * Set Route CIDR block
+     * @param DestinationCidrBlock Route CIDR block
+     */
+    public void setDestinationCidrBlock(String DestinationCidrBlock) {
+        this.DestinationCidrBlock = DestinationCidrBlock;
+    }
+
     public VpngwCcnRoutes() {
     }
 
@@ -92,6 +115,9 @@ DISABLE: do not enable the route
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
     }
 
 
@@ -101,6 +127,7 @@ DISABLE: do not enable the route
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
 
     }
 }

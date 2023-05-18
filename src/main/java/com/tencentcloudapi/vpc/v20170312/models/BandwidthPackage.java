@@ -30,7 +30,7 @@ public class BandwidthPackage extends AbstractModel{
     private String BandwidthPackageId;
 
     /**
-    * The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+    * Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
     */
     @SerializedName("NetworkType")
     @Expose
@@ -95,16 +95,16 @@ public class BandwidthPackage extends AbstractModel{
     }
 
     /**
-     * Get The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST' 
-     * @return NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+     * Get Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC` 
+     * @return NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
-     * @param NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+     * Set Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+     * @param NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
