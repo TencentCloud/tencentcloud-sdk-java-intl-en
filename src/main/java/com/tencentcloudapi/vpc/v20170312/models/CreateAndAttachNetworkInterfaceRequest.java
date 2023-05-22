@@ -65,6 +65,13 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     private Long SecondaryPrivateIpAddressCount;
 
     /**
+    * IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
     * The security group to be bound with, such as ['sg-1dd51d'].
     */
     @SerializedName("SecurityGroupIds")
@@ -189,6 +196,22 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
+     * Get IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` 
+     * @return QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * @param QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
+    /**
      * Get The security group to be bound with, such as ['sg-1dd51d']. 
      * @return SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
      */
@@ -281,6 +304,9 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         if (source.SecondaryPrivateIpAddressCount != null) {
             this.SecondaryPrivateIpAddressCount = new Long(source.SecondaryPrivateIpAddressCount);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
         if (source.SecurityGroupIds != null) {
             this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
             for (int i = 0; i < source.SecurityGroupIds.length; i++) {
@@ -312,6 +338,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

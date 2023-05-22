@@ -44,7 +44,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     private String PreShareKey;
 
     /**
-    * The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+    * SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
     */
     @SerializedName("SecurityPolicyDatabases")
     @Expose
@@ -65,7 +65,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-    * Whether to enable the tunnel health check.
+    * Whether to enable the tunnel health check. The default value is `False`.
     */
     @SerializedName("EnableHealthCheck")
     @Expose
@@ -112,6 +112,13 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     @SerializedName("DpdAction")
     @Expose
     private String DpdAction;
+
+    /**
+    * Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+    */
+    @SerializedName("CustomerGatewayId")
+    @Expose
+    private String CustomerGatewayId;
 
     /**
      * Get The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`. 
@@ -162,16 +169,16 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC. 
-     * @return SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+     * Get SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC. 
+     * @return SecurityPolicyDatabases SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabases() {
         return this.SecurityPolicyDatabases;
     }
 
     /**
-     * Set The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
-     * @param SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+     * Set SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+     * @param SecurityPolicyDatabases SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      */
     public void setSecurityPolicyDatabases(SecurityPolicyDatabase [] SecurityPolicyDatabases) {
         this.SecurityPolicyDatabases = SecurityPolicyDatabases;
@@ -210,16 +217,16 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable the tunnel health check. 
-     * @return EnableHealthCheck Whether to enable the tunnel health check.
+     * Get Whether to enable the tunnel health check. The default value is `False`. 
+     * @return EnableHealthCheck Whether to enable the tunnel health check. The default value is `False`.
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set Whether to enable the tunnel health check.
-     * @param EnableHealthCheck Whether to enable the tunnel health check.
+     * Set Whether to enable the tunnel health check. The default value is `False`.
+     * @param EnableHealthCheck Whether to enable the tunnel health check. The default value is `False`.
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
@@ -321,6 +328,22 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         this.DpdAction = DpdAction;
     }
 
+    /**
+     * Get Peer gateway ID. You can update tunnels of V4.0 and later gateways. 
+     * @return CustomerGatewayId Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+     */
+    public String getCustomerGatewayId() {
+        return this.CustomerGatewayId;
+    }
+
+    /**
+     * Set Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+     * @param CustomerGatewayId Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+     */
+    public void setCustomerGatewayId(String CustomerGatewayId) {
+        this.CustomerGatewayId = CustomerGatewayId;
+    }
+
     public ModifyVpnConnectionAttributeRequest() {
     }
 
@@ -371,6 +394,9 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         if (source.DpdAction != null) {
             this.DpdAction = new String(source.DpdAction);
         }
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
         this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
+        this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
 
     }
 }

@@ -284,6 +284,28 @@ The API request rate is limited to 20 requests/sec by default.
     }
 
     /**
+     *This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+
+A maximum of 10 requests can be initiated per second for this API.
+     * @param req SmartStructuralOCRV2Request
+     * @return SmartStructuralOCRV2Response
+     * @throws TencentCloudSDKException
+     */
+    public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SmartStructuralOCRV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SmartStructuralOCRV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
 
 This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).

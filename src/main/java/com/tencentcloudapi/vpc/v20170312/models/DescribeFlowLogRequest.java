@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFlowLogRequest extends AbstractModel{
 
     /**
-    * ID of the VPC instance
+    * ID of the VPC instance.
     */
     @SerializedName("VpcId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeFlowLogRequest extends AbstractModel{
     private String FlowLogId;
 
     /**
-     * Get ID of the VPC instance 
-     * @return VpcId ID of the VPC instance
+     * Get ID of the VPC instance. 
+     * @return VpcId ID of the VPC instance.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set ID of the VPC instance
-     * @param VpcId ID of the VPC instance
+     * Set ID of the VPC instance.
+     * @param VpcId ID of the VPC instance.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

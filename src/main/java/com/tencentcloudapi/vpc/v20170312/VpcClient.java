@@ -948,8 +948,8 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
     }
 
     /**
-     *This API (CreateRoutes) is used to create a routing policy.
-* You can create routing policies in batch for a specified route table.
+     *This API is used to create routes. 
+* You can batch add routes to a specified route table.
      * @param req CreateRoutesRequest
      * @return CreateRoutesResponse
      * @throws TencentCloudSDKException
@@ -1937,7 +1937,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API (DeleteVpnConnection) is used to delete VPN tunnels.
+     *This API is used to delete a VPN tunnel.
      * @param req DeleteVpnConnectionRequest
      * @return DeleteVpnConnectionResponse
      * @throws TencentCloudSDKException
@@ -2983,6 +2983,26 @@ This API is only available for existing customers. For any questions, please [su
     }
 
     /**
+     *This API is used to query the subnet resource.
+     * @param req DescribeSubnetResourceDashboardRequest
+     * @return DescribeSubnetResourceDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboard(DescribeSubnetResourceDashboardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubnetResourceDashboardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubnetResourceDashboardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubnetResourceDashboard");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeSubnets) is used to query the list of subnets.
      * @param req DescribeSubnetsRequest
      * @return DescribeSubnetsResponse
@@ -3035,6 +3055,27 @@ This API is only available for existing customers. For any questions, please [su
                 Type type = new TypeToken<JsonResponseModel<DescribeTrafficPackagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTrafficPackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query IP usage of a subnet or VPC. 
+If the IP is taken, the associated resource type and ID are returned. Otherwise it returns null.
+     * @param req DescribeUsedIpAddressRequest
+     * @return DescribeUsedIpAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsedIpAddressResponse DescribeUsedIpAddress(DescribeUsedIpAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsedIpAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsedIpAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUsedIpAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3225,7 +3266,7 @@ This API is used to query only the information of IP addresses that are already 
     }
 
     /**
-     * This API (DescribeVpnConnections) is used to query the VPN tunnel list.
+     *This API is used to used to query the list of VPN tunnels.
      * @param req DescribeVpnConnectionsRequest
      * @return DescribeVpnConnectionsResponse
      * @throws TencentCloudSDKException
@@ -3857,9 +3898,9 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     * This API is used to migrate the private IPs between ENIs.
-* This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-* The source and destination ENIs must be in the same subnet.  
+     *This API is used to migrate the private IPs between ENIs. 
+* Note that primary IPs cannot be migrated. 
+* The source and destination ENI must be within the same subnet.  
 
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
      * @param req MigratePrivateIpAddressRequest
@@ -4989,7 +5030,7 @@ Note: When this API is called, all routing policies in the current route table a
     }
 
     /**
-     *The API (ResetVpnConnection) is used to reset VPN tunnels.
+     *The API is used to reset a VPN tunnel.
      * @param req ResetVpnConnectionRequest
      * @return ResetVpnConnectionResponse
      * @throws TencentCloudSDKException
@@ -5009,7 +5050,7 @@ Note: When this API is called, all routing policies in the current route table a
     }
 
     /**
-     *This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
+     *This API is used to adjust the bandwidth cap of a VPN gateway. The adjustment of the VPN gateway bandwidth is limited to [5,100] Mbps and [200,1000] Mbps. 
      * @param req ResetVpnGatewayInternetMaxBandwidthRequest
      * @return ResetVpnGatewayInternetMaxBandwidthResponse
      * @throws TencentCloudSDKException

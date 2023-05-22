@@ -37,7 +37,7 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * The name of the flow log.
+    * The name of the flow log instance.
     */
     @SerializedName("FlowLogName")
     @Expose
@@ -83,16 +83,16 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The name of the flow log. 
-     * @return FlowLogName The name of the flow log.
+     * Get The name of the flow log instance. 
+     * @return FlowLogName The name of the flow log instance.
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set The name of the flow log.
-     * @param FlowLogName The name of the flow log.
+     * Set The name of the flow log instance.
+     * @param FlowLogName The name of the flow log instance.
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;

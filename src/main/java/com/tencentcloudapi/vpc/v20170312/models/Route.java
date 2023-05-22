@@ -46,7 +46,8 @@ public class Route extends AbstractModel{
     private String GatewayType;
 
     /**
-    * Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+    * Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
     */
     @SerializedName("GatewayId")
     @Expose
@@ -191,15 +192,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
-     * @return GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance. 
+     * @return GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-     * @param GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+     * Set Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
+     * @param GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;

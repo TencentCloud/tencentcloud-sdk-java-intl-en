@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
-    * The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+    * The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Outbound policy.
+    * Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Egress")
     @Expose
     private SecurityGroupPolicy [] Egress;
 
     /**
-    * Inbound policy.
+    * Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Ingress")
     @Expose
     private SecurityGroupPolicy [] Ingress;
 
     /**
-     * Get The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty. 
-     * @return Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+     * Get The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
-     * @param Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+     * Set The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Outbound policy. 
-     * @return Egress Outbound policy.
+     * Get Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Egress Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public SecurityGroupPolicy [] getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set Outbound policy.
-     * @param Egress Outbound policy.
+     * Set Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Egress Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public void setEgress(SecurityGroupPolicy [] Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get Inbound policy. 
-     * @return Ingress Inbound policy.
+     * Get Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Ingress Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public SecurityGroupPolicy [] getIngress() {
         return this.Ingress;
     }
 
     /**
-     * Set Inbound policy.
-     * @param Ingress Inbound policy.
+     * Set Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Ingress Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public void setIngress(SecurityGroupPolicy [] Ingress) {
         this.Ingress = Ingress;

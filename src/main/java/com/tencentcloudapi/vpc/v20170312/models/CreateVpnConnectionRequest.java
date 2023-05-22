@@ -30,7 +30,7 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     private String VpnGatewayId;
 
     /**
-    * The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+    * The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
     */
     @SerializedName("CustomerGatewayId")
     @Expose
@@ -87,21 +87,21 @@ This parameter is optional for a CCN-based VPN tunnel.
     private Tag [] Tags;
 
     /**
-    * Whether the tunnel health check is supported.
+    * Whether the tunnel health check is supported. The default value is `False`.
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * Local IP address for the health check
+    * Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
     */
     @SerializedName("HealthCheckLocalIp")
     @Expose
     private String HealthCheckLocalIp;
 
     /**
-    * Peer IP address for the health check
+    * Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
     */
     @SerializedName("HealthCheckRemoteIp")
     @Expose
@@ -159,16 +159,16 @@ This parameter is optional for a CCN-based VPN tunnel.
     }
 
     /**
-     * Get The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API. 
-     * @return CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * Get The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API. 
+     * @return CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
-     * @param CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
+     * @param CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
@@ -291,48 +291,48 @@ This parameter is optional for a CCN-based VPN tunnel.
     }
 
     /**
-     * Get Whether the tunnel health check is supported. 
-     * @return EnableHealthCheck Whether the tunnel health check is supported.
+     * Get Whether the tunnel health check is supported. The default value is `False`. 
+     * @return EnableHealthCheck Whether the tunnel health check is supported. The default value is `False`.
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set Whether the tunnel health check is supported.
-     * @param EnableHealthCheck Whether the tunnel health check is supported.
+     * Set Whether the tunnel health check is supported. The default value is `False`.
+     * @param EnableHealthCheck Whether the tunnel health check is supported. The default value is `False`.
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get Local IP address for the health check 
-     * @return HealthCheckLocalIp Local IP address for the health check
+     * Get Local IP of health check. It defaults to a random IP within 169.254.128.0/17. 
+     * @return HealthCheckLocalIp Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
      */
     public String getHealthCheckLocalIp() {
         return this.HealthCheckLocalIp;
     }
 
     /**
-     * Set Local IP address for the health check
-     * @param HealthCheckLocalIp Local IP address for the health check
+     * Set Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
+     * @param HealthCheckLocalIp Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
      */
     public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
         this.HealthCheckLocalIp = HealthCheckLocalIp;
     }
 
     /**
-     * Get Peer IP address for the health check 
-     * @return HealthCheckRemoteIp Peer IP address for the health check
+     * Get Peer IP of health check. It defaults to a random IP within 169.254.128.0/17. 
+     * @return HealthCheckRemoteIp Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
      */
     public String getHealthCheckRemoteIp() {
         return this.HealthCheckRemoteIp;
     }
 
     /**
-     * Set Peer IP address for the health check
-     * @param HealthCheckRemoteIp Peer IP address for the health check
+     * Set Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
+     * @param HealthCheckRemoteIp Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
      */
     public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;

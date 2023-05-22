@@ -30,7 +30,7 @@ public class Filter extends AbstractModel{
     private String Name;
 
     /**
-    * The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+    * Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
     */
     @SerializedName("Values")
     @Expose
@@ -53,16 +53,16 @@ public class Filter extends AbstractModel{
     }
 
     /**
-     * Get The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`. 
-     * @return Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+     * Get Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`. 
+     * @return Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
-     * @param Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+     * Set Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
+     * @param Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

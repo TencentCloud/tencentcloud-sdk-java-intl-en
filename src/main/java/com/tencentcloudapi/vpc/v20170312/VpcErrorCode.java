@@ -411,7 +411,7 @@ public enum VpcErrorCode {
     // Ran out of the quota for returning under this account.
      LIMITEXCEEDED_ACCOUNTRETURNQUOTA("LimitExceeded.AccountReturnQuota"),
      
-    // 
+    // Too often API invocations
      LIMITEXCEEDED_ACTIONLIMITED("LimitExceeded.ActionLimited"),
      
     // The number of assigned IP addresses has reached the upper limit.
@@ -420,7 +420,7 @@ public enum VpcErrorCode {
     // The number of EIPs applied for exceeds the upper limit.
      LIMITEXCEEDED_ADDRESSQUOTALIMITEXCEEDED("LimitExceeded.AddressQuotaLimitExceeded"),
      
-    // 
+    // Reached the upper limit of snapshot policies associated with an instance
      LIMITEXCEEDED_ATTACHEDSNAPSHOTPOLICYEXCEEDED("LimitExceeded.AttachedSnapshotPolicyExceeded"),
      
     // Exceeded the upper limit of the bandwidth package quota.
@@ -432,7 +432,7 @@ public enum VpcErrorCode {
     // The number of assigned IP ranges of the VPC has reached the upper limit.
      LIMITEXCEEDED_CIDRBLOCK("LimitExceeded.CidrBlock"),
      
-    // 
+    // Reached the upper limit of associated CCN instances
      LIMITEXCEEDED_CURRENTINSTANCEATTACHEDCCNINSTANCES("LimitExceeded.CurrentInstanceAttachedCcnInstances"),
      
     // The number of EIPs applied for per day exceeds the upper limit.
@@ -588,7 +588,7 @@ public enum VpcErrorCode {
     // The instance is already associated with a CCN.
      UNSUPPORTEDOPERATION_CCNATTACHED("UnsupportedOperation.CcnAttached"),
      
-    // 
+    // You cannot associated the CCN instance with resources under other Tencent Cloud accounts. 
      UNSUPPORTEDOPERATION_CCNCROSSACCOUNT("UnsupportedOperation.CcnCrossAccount"),
      
     // This CCN instance cannot be deleted as it has flow logs.
@@ -654,7 +654,7 @@ public enum VpcErrorCode {
     // Form an ECMP with the user’s custom routes.
      UNSUPPORTEDOPERATION_ECMPWITHUSERROUTE("UnsupportedOperation.EcmpWithUserRoute"),
      
-    // 
+    // Multi-cast is not available in the current region.
      UNSUPPORTEDOPERATION_ENABLEMULTICAST("UnsupportedOperation.EnableMulticast"),
      
     // The endpoint service itself cannot be set as the endpoint.
@@ -729,7 +729,7 @@ public enum VpcErrorCode {
     // The public IP of the NAT gateway does not exist. 
      UNSUPPORTEDOPERATION_NATGATEWAYEIPNOTEXISTS("UnsupportedOperation.NatGatewayEipNotExists"),
      
-    // 
+    // There are IPs associated with this NAT gateway.
      UNSUPPORTEDOPERATION_NATGATEWAYHADEIPUNASSOCIATE("UnsupportedOperation.NatGatewayHadEipUnassociate"),
      
     // The private IP specified in the SNAT/DNAT forwarding rule has been bound with another rule.
@@ -738,7 +738,7 @@ public enum VpcErrorCode {
     // The private IP of the SNAT translation rule must be within the IP range of the VM ENI.
      UNSUPPORTEDOPERATION_NATGATEWAYSNATPIPNEEDVM("UnsupportedOperation.NatGatewaySnatPipNeedVm"),
      
-    // 
+    // The SNAT forwarding rule of the NAT gateway does not exist.
      UNSUPPORTEDOPERATION_NATGATEWAYSNATRULENOTEXISTS("UnsupportedOperation.NatGatewaySnatRuleNotExists"),
      
     // The specified NAT Gateway type does not support configuring a SNAT rule.
@@ -813,7 +813,7 @@ public enum VpcErrorCode {
     // The record does not exist.
      UNSUPPORTEDOPERATION_RECORDNOTEXISTS("UnsupportedOperation.RecordNotExists"),
      
-    // 
+    // Operation prohibited: The resource is not available.
      UNSUPPORTEDOPERATION_RESOURCEISINVALIDSTATE("UnsupportedOperation.ResourceIsInvalidState"),
      
     // The resource ID entered does not match with any resource bound with the IP. Check and try again.

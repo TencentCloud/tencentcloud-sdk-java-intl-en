@@ -52,7 +52,7 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
     private ServiceTemplateSpecification ServiceTemplate;
 
     /**
-    * IP range or IP (mutually exclusive).
+    * Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -169,16 +169,16 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
     }
 
     /**
-     * Get IP range or IP (mutually exclusive). 
-     * @return CidrBlock IP range or IP (mutually exclusive).
+     * Get Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0. 
+     * @return CidrBlock Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set IP range or IP (mutually exclusive).
-     * @param CidrBlock IP range or IP (mutually exclusive).
+     * Set Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
+     * @param CidrBlock Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

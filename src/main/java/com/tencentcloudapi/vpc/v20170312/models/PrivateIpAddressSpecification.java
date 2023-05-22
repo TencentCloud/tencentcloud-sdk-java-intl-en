@@ -76,6 +76,13 @@ AVAILABLE: Available
     private String State;
 
     /**
+    * IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * Get Private IP address. 
      * @return PrivateIpAddress Private IP address.
      */
@@ -203,6 +210,22 @@ AVAILABLE: Available
         this.State = State;
     }
 
+    /**
+     * Get IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` 
+     * @return QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * @param QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
     public PrivateIpAddressSpecification() {
     }
 
@@ -232,6 +255,9 @@ AVAILABLE: Available
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
     }
 
 
@@ -246,6 +272,7 @@ AVAILABLE: Available
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }
