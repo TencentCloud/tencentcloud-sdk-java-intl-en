@@ -30,22 +30,31 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * Filter list.
-<li>instance-name</li>Filter by **instance name**.
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
+    * Filter list. 
+<li>instance-name</li>Filter by the **instance name**. 
+Type: String 
+Required: No 
+<li>private-ip-address</li>Filter by the **private IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>public-ip-address</li>Filter by the **public IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>zone</li>Filter by the availability zone. 
+Type: String 
+Required: No 
+<li>instance-state</li>Filter by the **instance status**. 
+Type: String 
+Required: No 
+<li>tag-key</li>Filter by the **tag key**. 
+Type: String 
+Required: No 
+<li>tag-value</li>Filter by the **tag value**. 
+Type: String 
+Required: No 
+<li> tag:tag-key</li>Filter by tag key-value pair. The `tag-key` should be replaced with a specific tag key. 
+Type: String 
+Required: No 
 Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
     */
     @SerializedName("Filters")
@@ -83,39 +92,57 @@ Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot 
     }
 
     /**
-     * Get Filter list.
-<li>instance-name</li>Filter by **instance name**.
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
+     * Get Filter list. 
+<li>instance-name</li>Filter by the **instance name**. 
+Type: String 
+Required: No 
+<li>private-ip-address</li>Filter by the **private IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>public-ip-address</li>Filter by the **public IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>zone</li>Filter by the availability zone. 
+Type: String 
+Required: No 
+<li>instance-state</li>Filter by the **instance status**. 
+Type: String 
+Required: No 
+<li>tag-key</li>Filter by the **tag key**. 
+Type: String 
+Required: No 
+<li>tag-value</li>Filter by the **tag value**. 
+Type: String 
+Required: No 
+<li> tag:tag-key</li>Filter by tag key-value pair. The `tag-key` should be replaced with a specific tag key. 
+Type: String 
+Required: No 
 Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time. 
-     * @return Filters Filter list.
-<li>instance-name</li>Filter by **instance name**.
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
+     * @return Filters Filter list. 
+<li>instance-name</li>Filter by the **instance name**. 
+Type: String 
+Required: No 
+<li>private-ip-address</li>Filter by the **private IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>public-ip-address</li>Filter by the **public IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>zone</li>Filter by the availability zone. 
+Type: String 
+Required: No 
+<li>instance-state</li>Filter by the **instance status**. 
+Type: String 
+Required: No 
+<li>tag-key</li>Filter by the **tag key**. 
+Type: String 
+Required: No 
+<li>tag-value</li>Filter by the **tag value**. 
+Type: String 
+Required: No 
+<li> tag:tag-key</li>Filter by tag key-value pair. The `tag-key` should be replaced with a specific tag key. 
+Type: String 
+Required: No 
 Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
      */
     public Filter [] getFilters() {
@@ -123,39 +150,57 @@ Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot 
     }
 
     /**
-     * Set Filter list.
-<li>instance-name</li>Filter by **instance name**.
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
+     * Set Filter list. 
+<li>instance-name</li>Filter by the **instance name**. 
+Type: String 
+Required: No 
+<li>private-ip-address</li>Filter by the **private IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>public-ip-address</li>Filter by the **public IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>zone</li>Filter by the availability zone. 
+Type: String 
+Required: No 
+<li>instance-state</li>Filter by the **instance status**. 
+Type: String 
+Required: No 
+<li>tag-key</li>Filter by the **tag key**. 
+Type: String 
+Required: No 
+<li>tag-value</li>Filter by the **tag value**. 
+Type: String 
+Required: No 
+<li> tag:tag-key</li>Filter by tag key-value pair. The `tag-key` should be replaced with a specific tag key. 
+Type: String 
+Required: No 
 Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
-     * @param Filters Filter list.
-<li>instance-name</li>Filter by **instance name**.
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
+     * @param Filters Filter list. 
+<li>instance-name</li>Filter by the **instance name**. 
+Type: String 
+Required: No 
+<li>private-ip-address</li>Filter by the **private IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>public-ip-address</li>Filter by the **public IP of instance primary ENI**. 
+Type: String 
+Required: No 
+<li>zone</li>Filter by the availability zone. 
+Type: String 
+Required: No 
+<li>instance-state</li>Filter by the **instance status**. 
+Type: String 
+Required: No 
+<li>tag-key</li>Filter by the **tag key**. 
+Type: String 
+Required: No 
+<li>tag-value</li>Filter by the **tag value**. 
+Type: String 
+Required: No 
+<li> tag:tag-key</li>Filter by tag key-value pair. The `tag-key` should be replaced with a specific tag key. 
+Type: String 
+Required: No 
 Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
      */
     public void setFilters(Filter [] Filters) {

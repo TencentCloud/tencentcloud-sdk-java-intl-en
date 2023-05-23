@@ -44,6 +44,18 @@ public class CreateBlueprintRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+    */
+    @SerializedName("ForcePowerOff")
+    @Expose
+    private Boolean ForcePowerOff;
+
+    /**
      * Get Image name, which can contain up to 60 characters. 
      * @return BlueprintName Image name, which can contain up to 60 characters.
      */
@@ -91,6 +103,42 @@ public class CreateBlueprintRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss. 
+     * @return ForcePowerOff Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+     */
+    public Boolean getForcePowerOff() {
+        return this.ForcePowerOff;
+    }
+
+    /**
+     * Set Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+     * @param ForcePowerOff Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+     */
+    public void setForcePowerOff(Boolean ForcePowerOff) {
+        this.ForcePowerOff = ForcePowerOff;
+    }
+
     public CreateBlueprintRequest() {
     }
 
@@ -108,6 +156,9 @@ public class CreateBlueprintRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ForcePowerOff != null) {
+            this.ForcePowerOff = new Boolean(source.ForcePowerOff);
+        }
     }
 
 
@@ -118,6 +169,7 @@ public class CreateBlueprintRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ForcePowerOff", this.ForcePowerOff);
 
     }
 }

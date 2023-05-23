@@ -109,13 +109,28 @@ Valid values:
     private String BundleSalesState;
 
     /**
-    * Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+    * Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
     */
     @SerializedName("BundleType")
     @Expose
     private String BundleType;
+
+    /**
+    * Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BundleTypeDescription")
+    @Expose
+    private String BundleTypeDescription;
 
     /**
     * Package tag.
@@ -329,27 +344,75 @@ Valid values:
     }
 
     /**
-     * Get Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li> 
-     * @return BundleType Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+     * Get Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li> 
+     * @return BundleType Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
      */
     public String getBundleType() {
         return this.BundleType;
     }
 
     /**
-     * Set Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
-     * @param BundleType Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+     * Set Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
+     * @param BundleType Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
      */
     public void setBundleType(String BundleType) {
         this.BundleType = BundleType;
+    }
+
+    /**
+     * Get Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return BundleTypeDescription Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public String getBundleTypeDescription() {
+        return this.BundleTypeDescription;
+    }
+
+    /**
+     * Set Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param BundleTypeDescription Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setBundleTypeDescription(String BundleTypeDescription) {
+        this.BundleTypeDescription = BundleTypeDescription;
     }
 
     /**
@@ -431,6 +494,9 @@ Valid values:
         if (source.BundleType != null) {
             this.BundleType = new String(source.BundleType);
         }
+        if (source.BundleTypeDescription != null) {
+            this.BundleTypeDescription = new String(source.BundleTypeDescription);
+        }
         if (source.BundleDisplayLabel != null) {
             this.BundleDisplayLabel = new String(source.BundleDisplayLabel);
         }
@@ -454,6 +520,7 @@ Valid values:
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
         this.setParamSimple(map, prefix + "BundleType", this.BundleType);
+        this.setParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
         this.setParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
 
     }

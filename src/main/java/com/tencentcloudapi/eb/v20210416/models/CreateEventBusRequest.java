@@ -37,6 +37,20 @@ public class CreateEventBusRequest extends AbstractModel{
     private String Description;
 
     /**
+    * Log retention period
+    */
+    @SerializedName("SaveDays")
+    @Expose
+    private Long SaveDays;
+
+    /**
+    * Whether to enable log storage
+    */
+    @SerializedName("EnableStore")
+    @Expose
+    private Boolean EnableStore;
+
+    /**
      * Get Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter. 
      * @return EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
      */
@@ -68,6 +82,38 @@ public class CreateEventBusRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get Log retention period 
+     * @return SaveDays Log retention period
+     */
+    public Long getSaveDays() {
+        return this.SaveDays;
+    }
+
+    /**
+     * Set Log retention period
+     * @param SaveDays Log retention period
+     */
+    public void setSaveDays(Long SaveDays) {
+        this.SaveDays = SaveDays;
+    }
+
+    /**
+     * Get Whether to enable log storage 
+     * @return EnableStore Whether to enable log storage
+     */
+    public Boolean getEnableStore() {
+        return this.EnableStore;
+    }
+
+    /**
+     * Set Whether to enable log storage
+     * @param EnableStore Whether to enable log storage
+     */
+    public void setEnableStore(Boolean EnableStore) {
+        this.EnableStore = EnableStore;
+    }
+
     public CreateEventBusRequest() {
     }
 
@@ -82,6 +128,12 @@ public class CreateEventBusRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.SaveDays != null) {
+            this.SaveDays = new Long(source.SaveDays);
+        }
+        if (source.EnableStore != null) {
+            this.EnableStore = new Boolean(source.EnableStore);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class CreateEventBusRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "SaveDays", this.SaveDays);
+        this.setParamSimple(map, prefix + "EnableStore", this.EnableStore);
 
     }
 }

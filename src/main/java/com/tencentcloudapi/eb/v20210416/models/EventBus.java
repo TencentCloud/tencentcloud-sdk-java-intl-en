@@ -65,6 +65,30 @@ public class EventBus extends AbstractModel{
     private String Type;
 
     /**
+    * Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConnectionBriefs")
+    @Expose
+    private ConnectionBrief [] ConnectionBriefs;
+
+    /**
+    * Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TargetBriefs")
+    @Expose
+    private TargetBrief [] TargetBriefs;
+
+    /**
      * Get Update time 
      * @return ModTime Update time
      */
@@ -160,6 +184,66 @@ public class EventBus extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PayMode Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PayMode Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ConnectionBriefs Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ConnectionBrief [] getConnectionBriefs() {
+        return this.ConnectionBriefs;
+    }
+
+    /**
+     * Set Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ConnectionBriefs Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setConnectionBriefs(ConnectionBrief [] ConnectionBriefs) {
+        this.ConnectionBriefs = ConnectionBriefs;
+    }
+
+    /**
+     * Get Target information
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TargetBriefs Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TargetBrief [] getTargetBriefs() {
+        return this.TargetBriefs;
+    }
+
+    /**
+     * Set Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TargetBriefs Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTargetBriefs(TargetBrief [] TargetBriefs) {
+        this.TargetBriefs = TargetBriefs;
+    }
+
     public EventBus() {
     }
 
@@ -186,6 +270,21 @@ public class EventBus extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.ConnectionBriefs != null) {
+            this.ConnectionBriefs = new ConnectionBrief[source.ConnectionBriefs.length];
+            for (int i = 0; i < source.ConnectionBriefs.length; i++) {
+                this.ConnectionBriefs[i] = new ConnectionBrief(source.ConnectionBriefs[i]);
+            }
+        }
+        if (source.TargetBriefs != null) {
+            this.TargetBriefs = new TargetBrief[source.TargetBriefs.length];
+            for (int i = 0; i < source.TargetBriefs.length; i++) {
+                this.TargetBriefs[i] = new TargetBrief(source.TargetBriefs[i]);
+            }
+        }
     }
 
 
@@ -199,6 +298,9 @@ public class EventBus extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamArrayObj(map, prefix + "ConnectionBriefs.", this.ConnectionBriefs);
+        this.setParamArrayObj(map, prefix + "TargetBriefs.", this.TargetBriefs);
 
     }
 }

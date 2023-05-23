@@ -46,6 +46,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CkafkaParams CkafkaParams;
 
     /**
+    * Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DTSParams")
+    @Expose
+    private DTSParams DTSParams;
+
+    /**
      * Get Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) 
      * @return ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      */
@@ -101,6 +109,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.CkafkaParams = CkafkaParams;
     }
 
+    /**
+     * Get Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DTSParams Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public DTSParams getDTSParams() {
+        return this.DTSParams;
+    }
+
+    /**
+     * Set Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DTSParams Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDTSParams(DTSParams DTSParams) {
+        this.DTSParams = DTSParams;
+    }
+
     public ConnectionDescription() {
     }
 
@@ -118,6 +146,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CkafkaParams != null) {
             this.CkafkaParams = new CkafkaParams(source.CkafkaParams);
         }
+        if (source.DTSParams != null) {
+            this.DTSParams = new DTSParams(source.DTSParams);
+        }
     }
 
 
@@ -128,6 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ResourceDescription", this.ResourceDescription);
         this.setParamObj(map, prefix + "APIGWParams.", this.APIGWParams);
         this.setParamObj(map, prefix + "CkafkaParams.", this.CkafkaParams);
+        this.setParamObj(map, prefix + "DTSParams.", this.DTSParams);
 
     }
 }

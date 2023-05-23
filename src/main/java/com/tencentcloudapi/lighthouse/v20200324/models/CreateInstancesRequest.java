@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * Bundle ID.
+    * Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * Image ID
+    * Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
     */
     @SerializedName("BlueprintId")
     @Expose
@@ -104,32 +104,32 @@ If the dry run succeeds, the RequestId will be returned.
     private Boolean AutoVoucher;
 
     /**
-     * Get Bundle ID. 
-     * @return BundleId Bundle ID.
+     * Get Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API. 
+     * @return BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set Bundle ID.
-     * @param BundleId Bundle ID.
+     * Set Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+     * @param BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get Image ID 
-     * @return BlueprintId Image ID
+     * Get Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API. 
+     * @return BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set Image ID
-     * @param BlueprintId Image ID
+     * Set Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+     * @param BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;

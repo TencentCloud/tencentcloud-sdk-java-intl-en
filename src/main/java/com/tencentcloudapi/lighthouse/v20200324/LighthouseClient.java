@@ -1112,6 +1112,30 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *This API is used to return one or more Lighthouse instances. 
+* Only `RUNNING` and `STOPPED` instances can be returned. 
+* The instance status goes to `SHUTDOWN` after the API is called successfully. 
+* Batch operations are supported. Up to 20 resources (including instances and data disks) can be returned in each request. 
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+     * @param req IsolateInstancesRequest
+     * @return IsolateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateInstancesResponse IsolateInstances(IsolateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify an image attribute.
      * @param req ModifyBlueprintAttributeRequest
      * @return ModifyBlueprintAttributeResponse
@@ -1232,10 +1256,9 @@ In the `FirewallRules` parameter:
     }
 
     /**
-     *This API is used to modify the attributes of instances.
-* The instance name is used only for users’ convenience.
-* Batch operations are supported. Each request can contain up to 100 instances at a time.
-* This API is async. A successful request will return a `RequestId`, it does not mean the operation is completed. You can call the `DescribeInstances` API to query the operation result. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+     *This API is used to modify an instance attribute. 
+* The instance name is used only for users’ convenience. 
+* Batch operations are supported. The maximum number of instances in each request is 100.
      * @param req ModifyInstancesAttributeRequest
      * @return ModifyInstancesAttributeResponse
      * @throws TencentCloudSDKException
@@ -1247,6 +1270,29 @@ In the `FirewallRules` parameter:
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyInstancesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used change one or more Lighthouse instance bundles. 
+* Only `RUNNING` and `STOPPED` instances can be changed. 
+* Batch operations are supported. The maximum number of instances in each request is 30. 
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+     * @param req ModifyInstancesBundleRequest
+     * @return ModifyInstancesBundleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancesBundleResponse ModifyInstancesBundle(ModifyInstancesBundleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstancesBundleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstancesBundleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstancesBundle");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1277,11 +1323,10 @@ In the `FirewallRules` parameter:
     }
 
     /**
-     *This API is used to modify the renewal flags of monthly subscribed instances.
+     *This API is used to change the auto-renewal setting of monthly-subscribed instances. 
 
-* Instances marked with "auto-renewal" will be automatically renewed for one month when they expire.
-* Batch operations are supported. The maximum number of instances in each request is 100.
-* The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+* Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
+* Batch operations are supported. Up to 100 instances per request is allowed.
      * @param req ModifyInstancesRenewFlagRequest
      * @return ModifyInstancesRenewFlagResponse
      * @throws TencentCloudSDKException
