@@ -102,6 +102,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ElasticLimit;
 
     /**
+    * Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("DownGradeProtect")
+    @Expose
+    private Long DownGradeProtect;
+
+    /**
      * Get Base protection bandwidth (in Gbps) 
      * @return ProtectBandwidth Base protection bandwidth (in Gbps)
      */
@@ -297,6 +305,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ElasticLimit = ElasticLimit;
     }
 
+    /**
+     * Get Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return DownGradeProtect Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getDownGradeProtect() {
+        return this.DownGradeProtect;
+    }
+
+    /**
+     * Set Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param DownGradeProtect Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setDownGradeProtect(Long DownGradeProtect) {
+        this.DownGradeProtect = DownGradeProtect;
+    }
+
     public BGPInstanceSpecification() {
     }
 
@@ -335,6 +363,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ElasticLimit != null) {
             this.ElasticLimit = new Long(source.ElasticLimit);
         }
+        if (source.DownGradeProtect != null) {
+            this.DownGradeProtect = new Long(source.DownGradeProtect);
+        }
     }
 
 
@@ -352,6 +383,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
         this.setParamSimple(map, prefix + "EnterpriseFlag", this.EnterpriseFlag);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+        this.setParamSimple(map, prefix + "DownGradeProtect", this.DownGradeProtect);
 
     }
 }
