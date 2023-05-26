@@ -37,10 +37,14 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
+    * The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
     */
     @SerializedName("MetricNames")
     @Expose
@@ -132,28 +136,44 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     }
 
     /**
-     * Get The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li> 
-     * @return MetricNames The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
+     * Get The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li> 
+     * @return MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-     * @param MetricNames The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
+     * Set The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * @param MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

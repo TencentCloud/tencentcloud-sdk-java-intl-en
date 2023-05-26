@@ -30,6 +30,14 @@ public class IdentifyZoneRequest extends AbstractModel{
     private String ZoneName;
 
     /**
+    * A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get The site name. 
      * @return ZoneName The site name.
      */
@@ -45,6 +53,26 @@ public class IdentifyZoneRequest extends AbstractModel{
         this.ZoneName = ZoneName;
     }
 
+    /**
+     * Get A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+ 
+     * @return Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+
+     * @param Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public IdentifyZoneRequest() {
     }
 
@@ -56,6 +84,9 @@ public class IdentifyZoneRequest extends AbstractModel{
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -64,6 +95,7 @@ public class IdentifyZoneRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

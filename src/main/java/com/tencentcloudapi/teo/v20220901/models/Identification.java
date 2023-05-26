@@ -30,6 +30,14 @@ public class Identification extends AbstractModel{
     private String ZoneName;
 
     /**
+    * The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
     * The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
@@ -74,6 +82,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -163,6 +191,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -186,6 +217,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Ascription.", this.Ascription);
         this.setParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);

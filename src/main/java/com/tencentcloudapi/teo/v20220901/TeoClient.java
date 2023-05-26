@@ -639,6 +639,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query DDoS attack events.
+     * @param req DescribeDDoSAttackEventRequest
+     * @return DescribeDDoSAttackEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSAttackEventResponse DescribeDDoSAttackEvent(DescribeDDoSAttackEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSAttackEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSAttackEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the top-ranked DDoS attack data.
      * @param req DescribeDDoSAttackTopDataRequest
      * @return DescribeDDoSAttackTopDataResponse

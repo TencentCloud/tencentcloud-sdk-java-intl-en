@@ -81,6 +81,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String ApplyType;
 
     /**
+    * Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CipherSuite")
+    @Expose
+    private String CipherSuite;
+
+    /**
      * Get Whether to enable HTTP2. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -240,6 +251,38 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.ApplyType = ApplyType;
     }
 
+    /**
+     * Get Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CipherSuite Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getCipherSuite() {
+        return this.CipherSuite;
+    }
+
+    /**
+     * Set Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CipherSuite Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCipherSuite(String CipherSuite) {
+        this.CipherSuite = CipherSuite;
+    }
+
     public Https() {
     }
 
@@ -272,6 +315,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ApplyType != null) {
             this.ApplyType = new String(source.ApplyType);
         }
+        if (source.CipherSuite != null) {
+            this.CipherSuite = new String(source.CipherSuite);
+        }
     }
 
 
@@ -285,6 +331,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "Hsts.", this.Hsts);
         this.setParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
+        this.setParamSimple(map, prefix + "CipherSuite", this.CipherSuite);
 
     }
 }

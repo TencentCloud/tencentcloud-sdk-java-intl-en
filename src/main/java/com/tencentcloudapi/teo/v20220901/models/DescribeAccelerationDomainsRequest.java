@@ -30,11 +30,13 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+    * Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
     */
     @SerializedName("Filters")
     @Expose
@@ -99,32 +101,40 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+     * Get Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No 
+     * @return Filters Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
-     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+     * Set Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+     * @param Filters Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

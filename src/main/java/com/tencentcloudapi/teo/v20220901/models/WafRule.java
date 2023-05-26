@@ -32,14 +32,14 @@ public class WafRule extends AbstractModel{
     private String Switch;
 
     /**
-    * IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+    * IDs of the rules to be disabled.
     */
     @SerializedName("BlockRuleIDs")
     @Expose
     private Long [] BlockRuleIDs;
 
     /**
-    * IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+    * IDs of the rules to be executed in Observe mode.
     */
     @SerializedName("ObserveRuleIDs")
     @Expose
@@ -70,32 +70,32 @@ public class WafRule extends AbstractModel{
     }
 
     /**
-     * Get IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1). 
-     * @return BlockRuleIDs IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * Get IDs of the rules to be disabled. 
+     * @return BlockRuleIDs IDs of the rules to be disabled.
      */
     public Long [] getBlockRuleIDs() {
         return this.BlockRuleIDs;
     }
 
     /**
-     * Set IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-     * @param BlockRuleIDs IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * Set IDs of the rules to be disabled.
+     * @param BlockRuleIDs IDs of the rules to be disabled.
      */
     public void setBlockRuleIDs(Long [] BlockRuleIDs) {
         this.BlockRuleIDs = BlockRuleIDs;
     }
 
     /**
-     * Get IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1). 
-     * @return ObserveRuleIDs IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * Get IDs of the rules to be executed in Observe mode. 
+     * @return ObserveRuleIDs IDs of the rules to be executed in Observe mode.
      */
     public Long [] getObserveRuleIDs() {
         return this.ObserveRuleIDs;
     }
 
     /**
-     * Set IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-     * @param ObserveRuleIDs IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * Set IDs of the rules to be executed in Observe mode.
+     * @param ObserveRuleIDs IDs of the rules to be executed in Observe mode.
      */
     public void setObserveRuleIDs(Long [] ObserveRuleIDs) {
         this.ObserveRuleIDs = ObserveRuleIDs;

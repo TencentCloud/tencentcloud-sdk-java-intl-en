@@ -78,7 +78,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Cname;
 
     /**
-    * 
+    * Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentificationStatus")
     @Expose
@@ -221,16 +222,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IdentificationStatus 
+     * Get Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentificationStatus() {
         return this.IdentificationStatus;
     }
 
     /**
-     * Set 
-     * @param IdentificationStatus 
+     * Set Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentificationStatus(String IdentificationStatus) {
         this.IdentificationStatus = IdentificationStatus;

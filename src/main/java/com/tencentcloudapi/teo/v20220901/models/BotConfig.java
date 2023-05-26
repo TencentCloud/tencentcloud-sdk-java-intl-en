@@ -54,6 +54,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private IntelligenceRule IntelligenceRule;
 
     /**
+    * Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+    */
+    @SerializedName("BotUserRules")
+    @Expose
+    private BotUserRule [] BotUserRules;
+
+    /**
+    * Active bot detection rule.
+    */
+    @SerializedName("AlgDetectRule")
+    @Expose
+    private AlgDetectRule [] AlgDetectRule;
+
+    /**
+    * Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Customizes")
+    @Expose
+    private BotUserRule [] Customizes;
+
+    /**
      * Get Whether to enable bot security. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li> 
@@ -129,6 +151,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IntelligenceRule = IntelligenceRule;
     }
 
+    /**
+     * Get Settings of the custom bot rule. If it is null, the settings that were last configured will be used. 
+     * @return BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     */
+    public BotUserRule [] getBotUserRules() {
+        return this.BotUserRules;
+    }
+
+    /**
+     * Set Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     * @param BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     */
+    public void setBotUserRules(BotUserRule [] BotUserRules) {
+        this.BotUserRules = BotUserRules;
+    }
+
+    /**
+     * Get Active bot detection rule. 
+     * @return AlgDetectRule Active bot detection rule.
+     */
+    public AlgDetectRule [] getAlgDetectRule() {
+        return this.AlgDetectRule;
+    }
+
+    /**
+     * Set Active bot detection rule.
+     * @param AlgDetectRule Active bot detection rule.
+     */
+    public void setAlgDetectRule(AlgDetectRule [] AlgDetectRule) {
+        this.AlgDetectRule = AlgDetectRule;
+    }
+
+    /**
+     * Get Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Customizes Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public BotUserRule [] getCustomizes() {
+        return this.Customizes;
+    }
+
+    /**
+     * Set Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Customizes Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCustomizes(BotUserRule [] Customizes) {
+        this.Customizes = Customizes;
+    }
+
     public BotConfig() {
     }
 
@@ -149,6 +223,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IntelligenceRule != null) {
             this.IntelligenceRule = new IntelligenceRule(source.IntelligenceRule);
         }
+        if (source.BotUserRules != null) {
+            this.BotUserRules = new BotUserRule[source.BotUserRules.length];
+            for (int i = 0; i < source.BotUserRules.length; i++) {
+                this.BotUserRules[i] = new BotUserRule(source.BotUserRules[i]);
+            }
+        }
+        if (source.AlgDetectRule != null) {
+            this.AlgDetectRule = new AlgDetectRule[source.AlgDetectRule.length];
+            for (int i = 0; i < source.AlgDetectRule.length; i++) {
+                this.AlgDetectRule[i] = new AlgDetectRule(source.AlgDetectRule[i]);
+            }
+        }
+        if (source.Customizes != null) {
+            this.Customizes = new BotUserRule[source.Customizes.length];
+            for (int i = 0; i < source.Customizes.length; i++) {
+                this.Customizes[i] = new BotUserRule(source.Customizes[i]);
+            }
+        }
     }
 
 
@@ -160,6 +252,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "BotManagedRule.", this.BotManagedRule);
         this.setParamObj(map, prefix + "BotPortraitRule.", this.BotPortraitRule);
         this.setParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
+        this.setParamArrayObj(map, prefix + "BotUserRules.", this.BotUserRules);
+        this.setParamArrayObj(map, prefix + "AlgDetectRule.", this.AlgDetectRule);
+        this.setParamArrayObj(map, prefix + "Customizes.", this.Customizes);
 
     }
 }

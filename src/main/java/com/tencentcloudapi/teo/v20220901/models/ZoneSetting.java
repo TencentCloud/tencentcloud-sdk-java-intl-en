@@ -183,6 +183,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Grpc Grpc;
 
     /**
+    * Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ImageOptimize")
+    @Expose
+    private ImageOptimize ImageOptimize;
+
+    /**
+    * 
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
      * Get Name of the site 
      * @return ZoneName Name of the site
      */
@@ -582,6 +597,42 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.Grpc = Grpc;
     }
 
+    /**
+     * Get Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ImageOptimize Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public ImageOptimize getImageOptimize() {
+        return this.ImageOptimize;
+    }
+
+    /**
+     * Set Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ImageOptimize Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setImageOptimize(ImageOptimize ImageOptimize) {
+        this.ImageOptimize = ImageOptimize;
+    }
+
+    /**
+     * Get  
+     * @return AccelerateMainland 
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set 
+     * @param AccelerateMainland 
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
+    }
+
     public ZoneSetting() {
     }
 
@@ -650,6 +701,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.ImageOptimize != null) {
+            this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
+        }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -677,6 +734,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

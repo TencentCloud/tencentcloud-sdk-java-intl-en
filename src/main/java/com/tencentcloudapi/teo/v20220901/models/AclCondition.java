@@ -36,6 +36,11 @@ public class AclCondition extends AbstractModel{
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
     */
     @SerializedName("MatchFrom")
     @Expose
@@ -91,7 +96,12 @@ public class AclCondition extends AbstractModel{
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li> 
+<li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li> 
      * @return MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -105,6 +115,11 @@ public class AclCondition extends AbstractModel{
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
      */
     public String getMatchFrom() {
         return this.MatchFrom;
@@ -124,6 +139,11 @@ public class AclCondition extends AbstractModel{
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
      * @param MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -137,6 +157,11 @@ public class AclCondition extends AbstractModel{
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;

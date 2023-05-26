@@ -23,12 +23,11 @@ import java.util.HashMap;
 public class OriginInfo extends AbstractModel{
 
     /**
-    * The origin type. Values:
+    * The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginType")
     @Expose
@@ -36,7 +35,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Origin")
     @Expose
@@ -44,17 +42,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupOrigin")
     @Expose
     private String BackupOrigin;
 
     /**
-    * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+    * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -62,53 +58,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivateParameters")
     @Expose
     private PrivateParameter [] PrivateParameters;
 
     /**
-     * Get The origin type. Values:
+     * Get The origin type. Values: 
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li> 
+     * @return OriginType The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginType The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set The origin type. Values:
+     * Set The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginType The origin type. Values:
+     * @param OriginType The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`. 
      * @return Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOrigin() {
         return this.Origin;
@@ -116,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used. 
      * @return BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBackupOrigin() {
         return this.BackupOrigin;
@@ -136,47 +121,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupOrigin(String BackupOrigin) {
         this.BackupOrigin = BackupOrigin;
     }
 
     /**
-     * Get Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+     * Get Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
+<li>`on`: Enable private authentication.</li>
+<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used. 
+     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+     * Set Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+     * @param PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;
     }
 
     /**
-     * Get The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The private authentication parameters. This field is valid when `PrivateAccess=on`. 
      * @return PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
@@ -184,9 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;

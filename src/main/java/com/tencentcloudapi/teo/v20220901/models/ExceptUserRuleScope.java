@@ -33,10 +33,12 @@ public class ExceptUserRuleScope extends AbstractModel{
 
     /**
     * The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Modules")
     @Expose
@@ -84,15 +86,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return Modules The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String [] getModules() {
         return this.Modules;
@@ -100,15 +106,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param Modules The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setModules(String [] Modules) {
         this.Modules = Modules;
