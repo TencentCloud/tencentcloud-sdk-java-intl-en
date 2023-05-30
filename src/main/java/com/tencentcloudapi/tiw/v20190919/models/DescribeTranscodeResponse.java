@@ -102,6 +102,22 @@ If the document transcoding request carries the ThumbnailResolution parameter an
     private String CompressFileUrl;
 
     /**
+    * Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceListUrl")
+    @Expose
+    private String ResourceListUrl;
+
+    /**
+    * Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Ext")
+    @Expose
+    private String Ext;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -305,6 +321,46 @@ If the document transcoding request carries the ThumbnailResolution parameter an
     }
 
     /**
+     * Get Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return ResourceListUrl Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public String getResourceListUrl() {
+        return this.ResourceListUrl;
+    }
+
+    /**
+     * Set Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param ResourceListUrl Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourceListUrl(String ResourceListUrl) {
+        this.ResourceListUrl = ResourceListUrl;
+    }
+
+    /**
+     * Get Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Ext Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public String getExt() {
+        return this.Ext;
+    }
+
+    /**
+     * Set Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Ext Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setExt(String Ext) {
+        this.Ext = Ext;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -358,6 +414,12 @@ If the document transcoding request carries the ThumbnailResolution parameter an
         if (source.CompressFileUrl != null) {
             this.CompressFileUrl = new String(source.CompressFileUrl);
         }
+        if (source.ResourceListUrl != null) {
+            this.ResourceListUrl = new String(source.ResourceListUrl);
+        }
+        if (source.Ext != null) {
+            this.Ext = new String(source.Ext);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -378,6 +440,8 @@ If the document transcoding request carries the ThumbnailResolution parameter an
         this.setParamSimple(map, prefix + "ThumbnailUrl", this.ThumbnailUrl);
         this.setParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
         this.setParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
+        this.setParamSimple(map, prefix + "ResourceListUrl", this.ResourceListUrl);
+        this.setParamSimple(map, prefix + "Ext", this.Ext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

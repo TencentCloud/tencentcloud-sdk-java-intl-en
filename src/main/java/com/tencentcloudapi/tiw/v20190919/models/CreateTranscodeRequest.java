@@ -30,7 +30,7 @@ public class CreateTranscodeRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * Address of the file for transcoding
+    * URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
     */
     @SerializedName("Url")
     @Expose
@@ -45,9 +45,11 @@ If IsStaticPPT is False, documents with the .ppt or .pptx extension will be dyna
     private Boolean IsStaticPPT;
 
     /**
-    * Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+    * Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
 
- 
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
     */
     @SerializedName("MinResolution")
     @Expose
@@ -73,6 +75,46 @@ For static transcoding, this parameter does not work.
     private String CompressFileType;
 
     /**
+    * Internal parameter.
+    */
+    @SerializedName("ExtraData")
+    @Expose
+    private String ExtraData;
+
+    /**
+    * Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+    */
+    @SerializedName("Priority")
+    @Expose
+    private String Priority;
+
+    /**
+    * Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+    */
+    @SerializedName("MinScaleResolution")
+    @Expose
+    private String MinScaleResolution;
+
+    /**
+    * Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+    */
+    @SerializedName("AutoHandleUnsupportedElement")
+    @Expose
+    private Boolean AutoHandleUnsupportedElement;
+
+    /**
      * Get SdkAppId of the customer 
      * @return SdkAppId SdkAppId of the customer
      */
@@ -89,16 +131,16 @@ For static transcoding, this parameter does not work.
     }
 
     /**
-     * Get Address of the file for transcoding 
-     * @return Url Address of the file for transcoding
+     * Get URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding. 
+     * @return Url URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Address of the file for transcoding
-     * @param Url Address of the file for transcoding
+     * Set URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
+     * @param Url URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -125,24 +167,32 @@ If IsStaticPPT is False, documents with the .ppt or .pptx extension will be dyna
     }
 
     /**
-     * Get Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+     * Get Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
 
-  
-     * @return MinResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
 
- 
+Example: 1280x720. Note that the character between the numbers is the letter x. 
+     * @return MinResolution Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
+
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
      */
     public String getMinResolution() {
         return this.MinResolution;
     }
 
     /**
-     * Set Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+     * Set Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
 
- 
-     * @param MinResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
 
- 
+Example: 1280x720. Note that the character between the numbers is the letter x.
+     * @param MinResolution Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
+
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
      */
     public void setMinResolution(String MinResolution) {
         this.MinResolution = MinResolution;
@@ -200,6 +250,118 @@ For static transcoding, this parameter does not work.
         this.CompressFileType = CompressFileType;
     }
 
+    /**
+     * Get Internal parameter. 
+     * @return ExtraData Internal parameter.
+     */
+    public String getExtraData() {
+        return this.ExtraData;
+    }
+
+    /**
+     * Set Internal parameter.
+     * @param ExtraData Internal parameter.
+     */
+    public void setExtraData(String ExtraData) {
+        this.ExtraData = ExtraData;
+    }
+
+    /**
+     * Get Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority. 
+     * @return Priority Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+     */
+    public String getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+     * @param Priority Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+     */
+    public void setPriority(String Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
+     * Get Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x. 
+     * @return MinScaleResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+     */
+    public String getMinScaleResolution() {
+        return this.MinScaleResolution;
+    }
+
+    /**
+     * Set Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+     * @param MinScaleResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+     */
+    public void setMinScaleResolution(String MinScaleResolution) {
+        this.MinScaleResolution = MinScaleResolution;
+    }
+
+    /**
+     * Get Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file. 
+     * @return AutoHandleUnsupportedElement Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+     */
+    public Boolean getAutoHandleUnsupportedElement() {
+        return this.AutoHandleUnsupportedElement;
+    }
+
+    /**
+     * Set Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+     * @param AutoHandleUnsupportedElement Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+     */
+    public void setAutoHandleUnsupportedElement(Boolean AutoHandleUnsupportedElement) {
+        this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;
+    }
+
     public CreateTranscodeRequest() {
     }
 
@@ -226,6 +388,18 @@ For static transcoding, this parameter does not work.
         if (source.CompressFileType != null) {
             this.CompressFileType = new String(source.CompressFileType);
         }
+        if (source.ExtraData != null) {
+            this.ExtraData = new String(source.ExtraData);
+        }
+        if (source.Priority != null) {
+            this.Priority = new String(source.Priority);
+        }
+        if (source.MinScaleResolution != null) {
+            this.MinScaleResolution = new String(source.MinScaleResolution);
+        }
+        if (source.AutoHandleUnsupportedElement != null) {
+            this.AutoHandleUnsupportedElement = new Boolean(source.AutoHandleUnsupportedElement);
+        }
     }
 
 
@@ -239,6 +413,10 @@ For static transcoding, this parameter does not work.
         this.setParamSimple(map, prefix + "MinResolution", this.MinResolution);
         this.setParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
         this.setParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
+        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
+        this.setParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
 
     }
 }

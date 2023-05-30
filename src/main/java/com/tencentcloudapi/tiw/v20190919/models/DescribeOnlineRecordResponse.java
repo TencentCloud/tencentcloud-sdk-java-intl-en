@@ -24,9 +24,10 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
 
     /**
     * Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
     */
     @SerializedName("FinishReason")
     @Expose
@@ -115,6 +116,21 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     private VideoInfo [] VideoInfos;
 
     /**
+    * 
+    */
+    @SerializedName("ReplayUrl")
+    @Expose
+    private String ReplayUrl;
+
+    /**
+    * Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Interrupts")
+    @Expose
+    private Interrupt [] Interrupts;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -123,13 +139,15 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
 
     /**
      * Get Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording. 
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours. 
      * @return FinishReason Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
      */
     public String getFinishReason() {
         return this.FinishReason;
@@ -137,13 +155,15 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
 
     /**
      * Set Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
      * @param FinishReason Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
      */
     public void setFinishReason(String FinishReason) {
         this.FinishReason = FinishReason;
@@ -346,6 +366,42 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ReplayUrl 
+     */
+    public String getReplayUrl() {
+        return this.ReplayUrl;
+    }
+
+    /**
+     * Set 
+     * @param ReplayUrl 
+     */
+    public void setReplayUrl(String ReplayUrl) {
+        this.ReplayUrl = ReplayUrl;
+    }
+
+    /**
+     * Get Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Interrupts Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public Interrupt [] getInterrupts() {
+        return this.Interrupts;
+    }
+
+    /**
+     * Set Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Interrupts Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setInterrupts(Interrupt [] Interrupts) {
+        this.Interrupts = Interrupts;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -411,6 +467,15 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
                 this.VideoInfos[i] = new VideoInfo(source.VideoInfos[i]);
             }
         }
+        if (source.ReplayUrl != null) {
+            this.ReplayUrl = new String(source.ReplayUrl);
+        }
+        if (source.Interrupts != null) {
+            this.Interrupts = new Interrupt[source.Interrupts.length];
+            for (int i = 0; i < source.Interrupts.length; i++) {
+                this.Interrupts[i] = new Interrupt(source.Interrupts[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -433,6 +498,8 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ExceptionCnt", this.ExceptionCnt);
         this.setParamArrayObj(map, prefix + "OmittedDurations.", this.OmittedDurations);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
+        this.setParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
+        this.setParamArrayObj(map, prefix + "Interrupts.", this.Interrupts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

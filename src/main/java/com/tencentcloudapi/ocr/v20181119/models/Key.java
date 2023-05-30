@@ -30,6 +30,14 @@ public class Key extends AbstractModel{
     private String AutoName;
 
     /**
+    * The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigName")
+    @Expose
+    private String ConfigName;
+
+    /**
      * Get The name of the recognized field. 
      * @return AutoName The name of the recognized field.
      */
@@ -45,6 +53,26 @@ public class Key extends AbstractModel{
         this.AutoName = AutoName;
     }
 
+    /**
+     * Get The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigName The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getConfigName() {
+        return this.ConfigName;
+    }
+
+    /**
+     * Set The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigName The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigName(String ConfigName) {
+        this.ConfigName = ConfigName;
+    }
+
     public Key() {
     }
 
@@ -56,6 +84,9 @@ public class Key extends AbstractModel{
         if (source.AutoName != null) {
             this.AutoName = new String(source.AutoName);
         }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
     }
 
 
@@ -64,6 +95,7 @@ public class Key extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoName", this.AutoName);
+        this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
 
     }
 }

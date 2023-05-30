@@ -37,8 +37,8 @@ public class StartOnlineRecordRequest extends AbstractModel{
     private Long RoomId;
 
     /**
-    * User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+    * User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
     */
     @SerializedName("RecordUserId")
     @Expose
@@ -106,6 +106,36 @@ MIX_STREAM - Stream mixing feature
     private RecordControl RecordControl;
 
     /**
+    * 
+    */
+    @SerializedName("RecordMode")
+    @Expose
+    private String RecordMode;
+
+    /**
+    * 
+    */
+    @SerializedName("ChatGroupId")
+    @Expose
+    private String ChatGroupId;
+
+    /**
+    * Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+    */
+    @SerializedName("AutoStopTimeout")
+    @Expose
+    private Long AutoStopTimeout;
+
+    /**
+    * Internal parameter. You can ignore this parameter.
+    */
+    @SerializedName("ExtraData")
+    @Expose
+    private String ExtraData;
+
+    /**
      * Get SdkAppId of the customer 
      * @return SdkAppId SdkAppId of the customer
      */
@@ -138,20 +168,20 @@ MIX_STREAM - Stream mixing feature
     }
 
     /**
-     * Get User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation. 
-     * @return RecordUserId User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+     * Get User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation. 
+     * @return RecordUserId User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
      */
     public String getRecordUserId() {
         return this.RecordUserId;
     }
 
     /**
-     * Set User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
-     * @param RecordUserId User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+     * Set User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+     * @param RecordUserId User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
      */
     public void setRecordUserId(String RecordUserId) {
         this.RecordUserId = RecordUserId;
@@ -305,6 +335,78 @@ MIX_STREAM - Stream mixing feature
         this.RecordControl = RecordControl;
     }
 
+    /**
+     * Get  
+     * @return RecordMode 
+     */
+    public String getRecordMode() {
+        return this.RecordMode;
+    }
+
+    /**
+     * Set 
+     * @param RecordMode 
+     */
+    public void setRecordMode(String RecordMode) {
+        this.RecordMode = RecordMode;
+    }
+
+    /**
+     * Get  
+     * @return ChatGroupId 
+     */
+    public String getChatGroupId() {
+        return this.ChatGroupId;
+    }
+
+    /**
+     * Set 
+     * @param ChatGroupId 
+     */
+    public void setChatGroupId(String ChatGroupId) {
+        this.ChatGroupId = ChatGroupId;
+    }
+
+    /**
+     * Get Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task. 
+     * @return AutoStopTimeout Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+     */
+    public Long getAutoStopTimeout() {
+        return this.AutoStopTimeout;
+    }
+
+    /**
+     * Set Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+     * @param AutoStopTimeout Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+     */
+    public void setAutoStopTimeout(Long AutoStopTimeout) {
+        this.AutoStopTimeout = AutoStopTimeout;
+    }
+
+    /**
+     * Get Internal parameter. You can ignore this parameter. 
+     * @return ExtraData Internal parameter. You can ignore this parameter.
+     */
+    public String getExtraData() {
+        return this.ExtraData;
+    }
+
+    /**
+     * Set Internal parameter. You can ignore this parameter.
+     * @param ExtraData Internal parameter. You can ignore this parameter.
+     */
+    public void setExtraData(String ExtraData) {
+        this.ExtraData = ExtraData;
+    }
+
     public StartOnlineRecordRequest() {
     }
 
@@ -349,6 +451,18 @@ MIX_STREAM - Stream mixing feature
         if (source.RecordControl != null) {
             this.RecordControl = new RecordControl(source.RecordControl);
         }
+        if (source.RecordMode != null) {
+            this.RecordMode = new String(source.RecordMode);
+        }
+        if (source.ChatGroupId != null) {
+            this.ChatGroupId = new String(source.ChatGroupId);
+        }
+        if (source.AutoStopTimeout != null) {
+            this.AutoStopTimeout = new Long(source.AutoStopTimeout);
+        }
+        if (source.ExtraData != null) {
+            this.ExtraData = new String(source.ExtraData);
+        }
     }
 
 
@@ -367,6 +481,10 @@ MIX_STREAM - Stream mixing feature
         this.setParamArraySimple(map, prefix + "Extras.", this.Extras);
         this.setParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
         this.setParamObj(map, prefix + "RecordControl.", this.RecordControl);
+        this.setParamSimple(map, prefix + "RecordMode", this.RecordMode);
+        this.setParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
+        this.setParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
+        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
 
     }
 }

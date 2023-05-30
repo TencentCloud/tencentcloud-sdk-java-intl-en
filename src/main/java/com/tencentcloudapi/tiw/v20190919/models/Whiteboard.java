@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Whiteboard extends AbstractModel{
 
     /**
-    * Whiteboard video width in the real-time recording result. The default value is 1280.
+    * Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Whiteboard video height in the real-time recording result. The default value is 960.
+    * Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
     */
     @SerializedName("Height")
     @Expose
@@ -44,32 +44,32 @@ public class Whiteboard extends AbstractModel{
     private String InitParam;
 
     /**
-     * Get Whiteboard video width in the real-time recording result. The default value is 1280. 
-     * @return Width Whiteboard video width in the real-time recording result. The default value is 1280.
+     * Get Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280. 
+     * @return Width Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Whiteboard video width in the real-time recording result. The default value is 1280.
-     * @param Width Whiteboard video width in the real-time recording result. The default value is 1280.
+     * Set Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
+     * @param Width Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Whiteboard video height in the real-time recording result. The default value is 960. 
-     * @return Height Whiteboard video height in the real-time recording result. The default value is 960.
+     * Get Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960. 
+     * @return Height Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Whiteboard video height in the real-time recording result. The default value is 960.
-     * @param Height Whiteboard video height in the real-time recording result. The default value is 960.
+     * Set Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
+     * @param Height Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

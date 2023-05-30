@@ -202,6 +202,46 @@ The API request rate is limited to 20 requests/sec by default.
     }
 
     /**
+     *This API is used to recognize a South Korean driver's license.
+     * @param req RecognizeKoreanDrivingLicenseOCRRequest
+     * @return RecognizeKoreanDrivingLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to recognize a South Korean ID card.
+     * @param req RecognizeKoreanIDCardOCRRequest
+     * @return RecognizeKoreanIDCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeKoreanIDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to recognize a Philippine driver's license.
      * @param req RecognizePhilippinesDrivingLicenseOCRRequest
      * @return RecognizePhilippinesDrivingLicenseOCRResponse
