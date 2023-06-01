@@ -23,14 +23,23 @@ import java.util.HashMap;
 public class CompareResult extends AbstractModel{
 
     /**
-    * The final comparison result.
+    * The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * The description of the final comparison result.
+    * The description of the final verification result.
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -44,14 +53,17 @@ public class CompareResult extends AbstractModel{
     private FileInfo LiveData;
 
     /**
-    * The video for this liveness detection process. The URL is valid for 10 minutes.
+    * The download URL of the video used for verification, which is valid for 10 minutes.
     */
     @SerializedName("LiveVideo")
     @Expose
     private FileInfo LiveVideo;
 
     /**
-    * The code of the liveness detection result.
+    * The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
     */
     @SerializedName("LiveErrorCode")
     @Expose
@@ -65,23 +77,30 @@ public class CompareResult extends AbstractModel{
     private String LiveErrorMsg;
 
     /**
-    * The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BestFrame")
     @Expose
     private FileInfo BestFrame;
 
     /**
-    * The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+    * The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
     */
     @SerializedName("ProfileImage")
     @Expose
     private FileInfo ProfileImage;
 
     /**
-    * The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CompareErrorCode")
     @Expose
@@ -96,8 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CompareErrorMsg;
 
     /**
-    * Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Sim")
     @Expose
@@ -145,32 +164,68 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The final comparison result. 
-     * @return ErrorCode The final comparison result.
+     * Get The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard. 
+     * @return ErrorCode The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set The final comparison result.
-     * @param ErrorCode The final comparison result.
+     * Set The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+     * @param ErrorCode The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get The description of the final comparison result. 
-     * @return ErrorMsg The description of the final comparison result.
+     * Get The description of the final verification result. 
+     * @return ErrorMsg The description of the final verification result.
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set The description of the final comparison result.
-     * @param ErrorMsg The description of the final comparison result.
+     * Set The description of the final verification result.
+     * @param ErrorMsg The description of the final verification result.
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
@@ -193,32 +248,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The video for this liveness detection process. The URL is valid for 10 minutes. 
-     * @return LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
+     * Get The download URL of the video used for verification, which is valid for 10 minutes. 
+     * @return LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
      */
     public FileInfo getLiveVideo() {
         return this.LiveVideo;
     }
 
     /**
-     * Set The video for this liveness detection process. The URL is valid for 10 minutes.
-     * @param LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
+     * Set The download URL of the video used for verification, which is valid for 10 minutes.
+     * @param LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
      */
     public void setLiveVideo(FileInfo LiveVideo) {
         this.LiveVideo = LiveVideo;
     }
 
     /**
-     * Get The code of the liveness detection result. 
-     * @return LiveErrorCode The code of the liveness detection result.
+     * Get The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed. 
+     * @return LiveErrorCode The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
      */
     public String getLiveErrorCode() {
         return this.LiveErrorCode;
     }
 
     /**
-     * Set The code of the liveness detection result.
-     * @param LiveErrorCode The code of the liveness detection result.
+     * Set The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+     * @param LiveErrorCode The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
      */
     public void setLiveErrorCode(String LiveErrorCode) {
         this.LiveErrorCode = LiveErrorCode;
@@ -241,56 +308,84 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public FileInfo getBestFrame() {
         return this.BestFrame;
     }
 
     /**
-     * Set The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBestFrame(FileInfo BestFrame) {
         this.BestFrame = BestFrame;
     }
 
     /**
-     * Get The profile photo screenshot from the identity document. The URL is valid for 10 minutes. 
-     * @return ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+     * Get The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes. 
+     * @return ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
      */
     public FileInfo getProfileImage() {
         return this.ProfileImage;
     }
 
     /**
-     * Set The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
-     * @param ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+     * Set The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+     * @param ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
      */
     public void setProfileImage(FileInfo ProfileImage) {
         this.ProfileImage = ProfileImage;
     }
 
     /**
-     * Get The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompareErrorCode The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CompareErrorCode The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getCompareErrorCode() {
         return this.CompareErrorCode;
     }
 
     /**
-     * Set The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompareErrorCode The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CompareErrorCode The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCompareErrorCode(String CompareErrorCode) {
         this.CompareErrorCode = CompareErrorCode;
@@ -317,20 +412,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Similarity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sim Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Sim The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Float getSim() {
         return this.Sim;
     }
 
     /**
-     * Set Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sim Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Sim The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSim(Float Sim) {
         this.Sim = Sim;

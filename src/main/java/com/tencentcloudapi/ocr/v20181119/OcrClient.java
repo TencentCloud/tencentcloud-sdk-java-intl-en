@@ -302,6 +302,26 @@ The API request rate is limited to 20 requests/sec by default.
     }
 
     /**
+     *This API is used to recognize a Philippine Unified Multi-Purpose ID (UMID) card.
+     * @param req RecognizePhilippinesUMIDOCRRequest
+     * @return RecognizePhilippinesUMIDOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesUMIDOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to recognize a Philippine voters ID card. It can recognize fields such as first name, family name, date of birth, civil status, citizenship, address, precinct, and voter's identification number (VIN).
 
 The API request rate is limited to 20 requests/sec by default.
