@@ -53,6 +53,20 @@ Sender <email address>
     private String ReplyToAddresses;
 
     /**
+    * 
+    */
+    @SerializedName("Cc")
+    @Expose
+    private String [] Cc;
+
+    /**
+    * 
+    */
+    @SerializedName("Bcc")
+    @Expose
+    private String [] Bcc;
+
+    /**
     * Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
     */
     @SerializedName("Template")
@@ -74,7 +88,7 @@ Sender <email address>
     private Attachment [] Attachments;
 
     /**
-    * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+    * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
     */
     @SerializedName("Unsubscribe")
     @Expose
@@ -160,6 +174,38 @@ Sender <email address>
     }
 
     /**
+     * Get  
+     * @return Cc 
+     */
+    public String [] getCc() {
+        return this.Cc;
+    }
+
+    /**
+     * Set 
+     * @param Cc 
+     */
+    public void setCc(String [] Cc) {
+        this.Cc = Cc;
+    }
+
+    /**
+     * Get  
+     * @return Bcc 
+     */
+    public String [] getBcc() {
+        return this.Bcc;
+    }
+
+    /**
+     * Set 
+     * @param Bcc 
+     */
+    public void setBcc(String [] Bcc) {
+        this.Bcc = Bcc;
+    }
+
+    /**
      * Get Template parameters for template-based sending. As `Simple` has been disused, `Template` is required. 
      * @return Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      */
@@ -208,16 +254,16 @@ Sender <email address>
     }
 
     /**
-     * Get Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic 
-     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * Get Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai 
+     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
-     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;
@@ -262,6 +308,18 @@ Sender <email address>
         if (source.ReplyToAddresses != null) {
             this.ReplyToAddresses = new String(source.ReplyToAddresses);
         }
+        if (source.Cc != null) {
+            this.Cc = new String[source.Cc.length];
+            for (int i = 0; i < source.Cc.length; i++) {
+                this.Cc[i] = new String(source.Cc[i]);
+            }
+        }
+        if (source.Bcc != null) {
+            this.Bcc = new String[source.Bcc.length];
+            for (int i = 0; i < source.Bcc.length; i++) {
+                this.Bcc[i] = new String(source.Bcc[i]);
+            }
+        }
         if (source.Template != null) {
             this.Template = new Template(source.Template);
         }
@@ -291,6 +349,8 @@ Sender <email address>
         this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
         this.setParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
+        this.setParamArraySimple(map, prefix + "Cc.", this.Cc);
+        this.setParamArraySimple(map, prefix + "Bcc.", this.Bcc);
         this.setParamObj(map, prefix + "Template.", this.Template);
         this.setParamObj(map, prefix + "Simple.", this.Simple);
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
