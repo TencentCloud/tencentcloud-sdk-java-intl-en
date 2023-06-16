@@ -80,6 +80,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *CloneCDNDomain.
+     * @param req CloneCDNDomainRequest
+     * @return CloneCDNDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneCDNDomainResponse CloneCDNDomain(CloneCDNDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneCDNDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneCDNDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneCDNDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
      * @param req CommitUploadRequest
      * @return CommitUploadResponse
@@ -225,6 +245,26 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 Type type = new TypeToken<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAnimatedGraphicsTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This interface is used to add domain names to VOD, and a user can add at most 20 domains. 1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from the deployed state to the online state.
+     * @param req CreateCDNDomainRequest
+     * @return CreateCDNDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCDNDomainResponse CreateCDNDomain(CreateCDNDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCDNDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCDNDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCDNDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -686,6 +726,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *DeleteCDNDomain.
+     * @param req DeleteCDNDomainRequest
+     * @return DeleteCDNDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCDNDomainResponse DeleteCDNDomain(DeleteCDNDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCDNDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCDNDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCDNDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** A category can be deleted only if it has no subcategories and associated media files;
 * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
      * @param req DeleteClassRequest
@@ -1126,6 +1186,26 @@ This API is used to delete a player configuration.
                 Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAnimatedGraphicsTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeCDNDomains.
+     * @param req DescribeCDNDomainsRequest
+     * @return DescribeCDNDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCDNDomainsResponse DescribeCDNDomains(DescribeCDNDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCDNDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCDNDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCDNDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2083,6 +2163,26 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *ModifyCDNDomainConfig.
+     * @param req ModifyCDNDomainConfigRequest
+     * @return ModifyCDNDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCDNDomainConfigResponse ModifyCDNDomainConfig(ModifyCDNDomainConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCDNDomainConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCDNDomainConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCDNDomainConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the category of a media file.
      * @param req ModifyClassRequest
      * @return ModifyClassResponse
@@ -2941,6 +3041,26 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
                 Type type = new TypeToken<JsonResponseModel<SimpleHlsClipResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SimpleHlsClip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This interface is used to enable/disable CDN accelerated domain names.
+     * @param req StartCDNDomainRequest
+     * @return StartCDNDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartCDNDomainResponse StartCDNDomain(StartCDNDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartCDNDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartCDNDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartCDNDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
