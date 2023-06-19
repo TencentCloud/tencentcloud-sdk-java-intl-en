@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class AuthenticationTypeB extends AbstractModel{
 
     /**
-    * 
+    * The key for signature calculation 6-32 characters. Only digits and letters are allowed.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 
+    * Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 
+    * File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
     */
     @SerializedName("FileExtensions")
     @Expose
     private String [] FileExtensions;
 
     /**
-    * 
+    * whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
     */
     @SerializedName("BackupSecretKey")
     @Expose
     private String BackupSecretKey;
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get The key for signature calculation 6-32 characters. Only digits and letters are allowed. 
+     * @return SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+     * @param SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters. 
+     * @return ExpireTime Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
+     * @param ExpireTime Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return FileExtensions 
+     * Get File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files. 
+     * @return FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
     }
 
     /**
-     * Set 
-     * @param FileExtensions 
+     * Set File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+     * @param FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
     }
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated. 
+     * @return FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+     * @param FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return BackupSecretKey 
+     * Get Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed. 
+     * @return BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
      */
     public String getBackupSecretKey() {
         return this.BackupSecretKey;
     }
 
     /**
-     * Set 
-     * @param BackupSecretKey 
+     * Set Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+     * @param BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
      */
     public void setBackupSecretKey(String BackupSecretKey) {
         this.BackupSecretKey = BackupSecretKey;

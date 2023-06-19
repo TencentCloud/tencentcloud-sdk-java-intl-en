@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class Authentication extends AbstractModel{
 
     /**
-    * 
+    * Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Timestamp hotlink protection mode A configuration
     */
     @SerializedName("TypeA")
     @Expose
     private AuthenticationTypeA TypeA;
 
     /**
-    * 
+    * Timestamp hotlink protection mode B configuration
     */
     @SerializedName("TypeB")
     @Expose
     private AuthenticationTypeB TypeB;
 
     /**
-    * 
+    * Timestamp hotlink protection mode C configuration
     */
     @SerializedName("TypeC")
     @Expose
     private AuthenticationTypeC TypeC;
 
     /**
-    * 
+    * Timestamp hotlink protection mode D configuration
     */
     @SerializedName("TypeD")
     @Expose
     private AuthenticationTypeD TypeD;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li> 
+     * @return Switch Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * @param Switch Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return TypeA 
+     * Get Timestamp hotlink protection mode A configuration 
+     * @return TypeA Timestamp hotlink protection mode A configuration
      */
     public AuthenticationTypeA getTypeA() {
         return this.TypeA;
     }
 
     /**
-     * Set 
-     * @param TypeA 
+     * Set Timestamp hotlink protection mode A configuration
+     * @param TypeA Timestamp hotlink protection mode A configuration
      */
     public void setTypeA(AuthenticationTypeA TypeA) {
         this.TypeA = TypeA;
     }
 
     /**
-     * Get  
-     * @return TypeB 
+     * Get Timestamp hotlink protection mode B configuration 
+     * @return TypeB Timestamp hotlink protection mode B configuration
      */
     public AuthenticationTypeB getTypeB() {
         return this.TypeB;
     }
 
     /**
-     * Set 
-     * @param TypeB 
+     * Set Timestamp hotlink protection mode B configuration
+     * @param TypeB Timestamp hotlink protection mode B configuration
      */
     public void setTypeB(AuthenticationTypeB TypeB) {
         this.TypeB = TypeB;
     }
 
     /**
-     * Get  
-     * @return TypeC 
+     * Get Timestamp hotlink protection mode C configuration 
+     * @return TypeC Timestamp hotlink protection mode C configuration
      */
     public AuthenticationTypeC getTypeC() {
         return this.TypeC;
     }
 
     /**
-     * Set 
-     * @param TypeC 
+     * Set Timestamp hotlink protection mode C configuration
+     * @param TypeC Timestamp hotlink protection mode C configuration
      */
     public void setTypeC(AuthenticationTypeC TypeC) {
         this.TypeC = TypeC;
     }
 
     /**
-     * Get  
-     * @return TypeD 
+     * Get Timestamp hotlink protection mode D configuration 
+     * @return TypeD Timestamp hotlink protection mode D configuration
      */
     public AuthenticationTypeD getTypeD() {
         return this.TypeD;
     }
 
     /**
-     * Set 
-     * @param TypeD 
+     * Set Timestamp hotlink protection mode D configuration
+     * @param TypeD Timestamp hotlink protection mode D configuration
      */
     public void setTypeD(AuthenticationTypeD TypeD) {
         this.TypeD = TypeD;

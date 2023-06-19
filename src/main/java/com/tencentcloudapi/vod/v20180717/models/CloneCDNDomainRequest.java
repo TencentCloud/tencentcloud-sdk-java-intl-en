@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CloneCDNDomainRequest extends AbstractModel{
 
     /**
-    * Domain name.
+    * Domain
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The cloned domain name.
+    * The cloned domain.
     */
     @SerializedName("ReferenceDomain")
     @Expose
@@ -44,32 +44,32 @@ public class CloneCDNDomainRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Domain name. 
-     * @return Domain Domain name.
+     * Get Domain 
+     * @return Domain Domain
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name.
-     * @param Domain Domain name.
+     * Set Domain
+     * @param Domain Domain
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The cloned domain name. 
-     * @return ReferenceDomain The cloned domain name.
+     * Get The cloned domain. 
+     * @return ReferenceDomain The cloned domain.
      */
     public String getReferenceDomain() {
         return this.ReferenceDomain;
     }
 
     /**
-     * Set The cloned domain name.
-     * @param ReferenceDomain The cloned domain name.
+     * Set The cloned domain.
+     * @param ReferenceDomain The cloned domain.
      */
     public void setReferenceDomain(String ReferenceDomain) {
         this.ReferenceDomain = ReferenceDomain;

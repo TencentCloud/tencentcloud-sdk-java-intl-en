@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class CacheConfigCache extends AbstractModel{
 
     /**
-    * 
+    * Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
     */
     @SerializedName("CacheTime")
     @Expose
     private Long CacheTime;
 
     /**
-    * 
+    * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
     */
     @SerializedName("CompareMaxAge")
     @Expose
     private String CompareMaxAge;
 
     /**
-    * 
+    * Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
     private String IgnoreCacheControl;
 
     /**
-    * 
+    * Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
     */
     @SerializedName("IgnoreSetCookie")
     @Expose
     private String IgnoreSetCookie;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li> 
+     * @return Switch Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
+     * @param Switch Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return CacheTime 
+     * Get Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li> 
+     * @return CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set 
-     * @param CacheTime 
+     * Set Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+     * @param CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;
     }
 
     /**
-     * Get  
-     * @return CompareMaxAge 
+     * Get Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li> 
+     * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
      */
     public String getCompareMaxAge() {
         return this.CompareMaxAge;
     }
 
     /**
-     * Set 
-     * @param CompareMaxAge 
+     * Set Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
+     * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
      */
     public void setCompareMaxAge(String CompareMaxAge) {
         this.CompareMaxAge = CompareMaxAge;
     }
 
     /**
-     * Get  
-     * @return IgnoreCacheControl 
+     * Get Force cache: <li>on: Enable;</li> <li>off: Disable.</li> 
+     * @return IgnoreCacheControl Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
      */
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
     }
 
     /**
-     * Set 
-     * @param IgnoreCacheControl 
+     * Set Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
+     * @param IgnoreCacheControl Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;
     }
 
     /**
-     * Get  
-     * @return IgnoreSetCookie 
+     * Get Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li> 
+     * @return IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
      */
     public String getIgnoreSetCookie() {
         return this.IgnoreSetCookie;
     }
 
     /**
-     * Set 
-     * @param IgnoreSetCookie 
+     * Set Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
+     * @param IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {
         this.IgnoreSetCookie = IgnoreSetCookie;

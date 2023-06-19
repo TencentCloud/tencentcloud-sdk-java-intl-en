@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class HttpHeaderPathRule extends AbstractModel{
 
     /**
-    * 
+    * HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
     */
     @SerializedName("HeaderMode")
     @Expose
     private String HeaderMode;
 
     /**
-    * 
+    * HTTP header name. Up to 100 characters can be set.
     */
     @SerializedName("HeaderName")
     @Expose
     private String HeaderName;
 
     /**
-    * 
+    * HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
     */
     @SerializedName("HeaderValue")
     @Expose
     private String HeaderValue;
 
     /**
-    * 
+    * Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * 
+    * Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
     */
     @SerializedName("RulePaths")
     @Expose
     private String [] RulePaths;
 
     /**
-     * Get  
-     * @return HeaderMode 
+     * Get HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li> 
+     * @return HeaderMode HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
      */
     public String getHeaderMode() {
         return this.HeaderMode;
     }
 
     /**
-     * Set 
-     * @param HeaderMode 
+     * Set HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
+     * @param HeaderMode HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
      */
     public void setHeaderMode(String HeaderMode) {
         this.HeaderMode = HeaderMode;
     }
 
     /**
-     * Get  
-     * @return HeaderName 
+     * Get HTTP header name. Up to 100 characters can be set. 
+     * @return HeaderName HTTP header name. Up to 100 characters can be set.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set 
-     * @param HeaderName 
+     * Set HTTP header name. Up to 100 characters can be set.
+     * @param HeaderName HTTP header name. Up to 100 characters can be set.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;
     }
 
     /**
-     * Get  
-     * @return HeaderValue 
+     * Get HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li> 
+     * @return HeaderValue HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
      */
     public String getHeaderValue() {
         return this.HeaderValue;
     }
 
     /**
-     * Set 
-     * @param HeaderValue 
+     * Set HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
+     * @param HeaderValue HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
      */
     public void setHeaderValue(String HeaderValue) {
         this.HeaderValue = HeaderValue;
     }
 
     /**
-     * Get  
-     * @return RuleType 
+     * Get Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li> 
+     * @return RuleType Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 
-     * @param RuleType 
+     * Set Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+     * @param RuleType Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get  
-     * @return RulePaths 
+     * Get Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li> 
+     * @return RulePaths Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
      */
     public String [] getRulePaths() {
         return this.RulePaths;
     }
 
     /**
-     * Set 
-     * @param RulePaths 
+     * Set Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+     * @param RulePaths Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;

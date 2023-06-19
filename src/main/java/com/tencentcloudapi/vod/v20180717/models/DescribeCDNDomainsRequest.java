@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCDNDomainsRequest extends AbstractModel{
 
     /**
-    * List of domain names. If this field is left blank, all domain name information will be listed by default.
+    * List of domain. If this field is left blank, all domain information will be listed by default.
     */
     @SerializedName("Domains")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeCDNDomainsRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get List of domain names. If this field is left blank, all domain name information will be listed by default. 
-     * @return Domains List of domain names. If this field is left blank, all domain name information will be listed by default.
+     * Get List of domain. If this field is left blank, all domain information will be listed by default. 
+     * @return Domains List of domain. If this field is left blank, all domain information will be listed by default.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set List of domain names. If this field is left blank, all domain name information will be listed by default.
-     * @param Domains List of domain names. If this field is left blank, all domain name information will be listed by default.
+     * Set List of domain. If this field is left blank, all domain information will be listed by default.
+     * @param Domains List of domain. If this field is left blank, all domain information will be listed by default.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCDNDomainRequest extends AbstractModel{
 
     /**
-    * Domain name.
+    * Domain.
     */
     @SerializedName("Domain")
     @Expose
@@ -44,16 +44,16 @@ public class CreateCDNDomainRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Domain name. 
-     * @return Domain Domain name.
+     * Get Domain. 
+     * @return Domain Domain.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name.
-     * @param Domain Domain name.
+     * Set Domain.
+     * @param Domain Domain.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

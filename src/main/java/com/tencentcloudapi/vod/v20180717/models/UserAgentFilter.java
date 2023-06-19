@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UserAgentFilter extends AbstractModel{
 
     /**
-    * 
+    * UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * UA blacklist/whitelist effect rule list
     */
     @SerializedName("FilterRules")
     @Expose
     private UserAgentFilterRule [] FilterRules;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li> 
+     * @return Switch UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
+     * @param Switch UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return FilterRules 
+     * Get UA blacklist/whitelist effect rule list 
+     * @return FilterRules UA blacklist/whitelist effect rule list
      */
     public UserAgentFilterRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set 
-     * @param FilterRules 
+     * Set UA blacklist/whitelist effect rule list
+     * @param FilterRules UA blacklist/whitelist effect rule list
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {
         this.FilterRules = FilterRules;

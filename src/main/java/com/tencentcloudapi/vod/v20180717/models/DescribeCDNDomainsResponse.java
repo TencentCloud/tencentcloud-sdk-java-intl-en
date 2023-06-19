@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCDNDomainsResponse extends AbstractModel{
 
     /**
-    * List of domain name information.
+    * List of domain information.
     */
     @SerializedName("DomainSet")
     @Expose
     private CDNDomainInfo [] DomainSet;
 
     /**
-    * The total number of CDN domain names under the current application.
+    * The total number of CDN domain under the current application.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeCDNDomainsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of domain name information. 
-     * @return DomainSet List of domain name information.
+     * Get List of domain information. 
+     * @return DomainSet List of domain information.
      */
     public CDNDomainInfo [] getDomainSet() {
         return this.DomainSet;
     }
 
     /**
-     * Set List of domain name information.
-     * @param DomainSet List of domain name information.
+     * Set List of domain information.
+     * @param DomainSet List of domain information.
      */
     public void setDomainSet(CDNDomainInfo [] DomainSet) {
         this.DomainSet = DomainSet;
     }
 
     /**
-     * Get The total number of CDN domain names under the current application. 
-     * @return TotalCount The total number of CDN domain names under the current application.
+     * Get The total number of CDN domain under the current application. 
+     * @return TotalCount The total number of CDN domain under the current application.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of CDN domain names under the current application.
-     * @param TotalCount The total number of CDN domain names under the current application.
+     * Set The total number of CDN domain under the current application.
+     * @param TotalCount The total number of CDN domain under the current application.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

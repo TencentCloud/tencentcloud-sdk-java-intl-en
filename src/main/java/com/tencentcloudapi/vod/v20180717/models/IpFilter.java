@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel{
 
     /**
-    * 
+    * IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-    * 
+    * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
     */
     @SerializedName("FilterRules")
     @Expose
     private IpFilterPathRule [] FilterRules;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li> 
+     * @return Switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+     * @param Switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li> 
+     * @return FilterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+     * @param FilterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return Filters 
+     * Get IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered 
+     * @return Filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 
-     * @param Filters 
+     * Set IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+     * @param Filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get  
-     * @return FilterRules 
+     * Get IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers. 
+     * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
      */
     public IpFilterPathRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set 
-     * @param FilterRules 
+     * Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+     * @param FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
      */
     public void setFilterRules(IpFilterPathRule [] FilterRules) {
         this.FilterRules = FilterRules;

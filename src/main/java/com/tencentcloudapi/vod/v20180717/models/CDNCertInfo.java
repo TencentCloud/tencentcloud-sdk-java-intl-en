@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CDNCertInfo extends AbstractModel{
 
     /**
-    * 
+    * Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * 
+    * Server certificate information.
     */
     @SerializedName("Certificate")
     @Expose
     private String Certificate;
 
     /**
-    * 
+    * Server key information.
     */
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
 
     /**
-    * 
+    * Time when the certificate expires;Can be left blank when used as an input parameter.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get  
-     * @return CertId 
+     * Get Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service 
+     * @return CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 
-     * @param CertId 
+     * Set Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+     * @param CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get  
-     * @return Certificate 
+     * Get Server certificate information. 
+     * @return Certificate Server certificate information.
      */
     public String getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 
-     * @param Certificate 
+     * Set Server certificate information.
+     * @param Certificate Server certificate information.
      */
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get  
-     * @return PrivateKey 
+     * Get Server key information. 
+     * @return PrivateKey Server key information.
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set 
-     * @param PrivateKey 
+     * Set Server key information.
+     * @param PrivateKey Server key information.
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Time when the certificate expires;Can be left blank when used as an input parameter. 
+     * @return ExpireTime Time when the certificate expires;Can be left blank when used as an input parameter.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Time when the certificate expires;Can be left blank when used as an input parameter.
+     * @param ExpireTime Time when the certificate expires;Can be left blank when used as an input parameter.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

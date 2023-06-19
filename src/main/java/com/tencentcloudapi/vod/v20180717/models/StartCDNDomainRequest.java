@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class StartCDNDomainRequest extends AbstractModel{
 
     /**
-    * Domain name.
+    * Domain.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+    * Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
     */
     @SerializedName("Operation")
     @Expose
@@ -44,32 +44,32 @@ public class StartCDNDomainRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Domain name. 
-     * @return Domain Domain name.
+     * Get Domain. 
+     * @return Domain Domain.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name.
-     * @param Domain Domain name.
+     * Set Domain.
+     * @param Domain Domain.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li> 
-     * @return Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * Get Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li> 
+     * @return Operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-     * @param Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * Set Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * @param Operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

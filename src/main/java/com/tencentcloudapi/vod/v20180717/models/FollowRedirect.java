@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class FollowRedirect extends AbstractModel{
 
     /**
-    * 
+    * Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li> 
+     * @return Switch Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+     * @param Switch Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

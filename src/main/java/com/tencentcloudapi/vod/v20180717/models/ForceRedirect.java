@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel{
 
     /**
-    * 
+    * Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
     */
     @SerializedName("RedirectType")
     @Expose
     private String RedirectType;
 
     /**
-    * 
+    * Status code returned for forced redirect Supports 301, 302.
     */
     @SerializedName("RedirectStatusCode")
     @Expose
     private Long RedirectStatusCode;
 
     /**
-    * 
+    * Whether to return the newly added header during force redirection.
     */
     @SerializedName("CarryHeaders")
     @Expose
     private String CarryHeaders;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li> 
+     * @return Switch Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+     * @param Switch Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return RedirectType 
+     * Get Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li> 
+     * @return RedirectType Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
      */
     public String getRedirectType() {
         return this.RedirectType;
     }
 
     /**
-     * Set 
-     * @param RedirectType 
+     * Set Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+     * @param RedirectType Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
      */
     public void setRedirectType(String RedirectType) {
         this.RedirectType = RedirectType;
     }
 
     /**
-     * Get  
-     * @return RedirectStatusCode 
+     * Get Status code returned for forced redirect Supports 301, 302. 
+     * @return RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
     /**
-     * Set 
-     * @param RedirectStatusCode 
+     * Set Status code returned for forced redirect Supports 301, 302.
+     * @param RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;
     }
 
     /**
-     * Get  
-     * @return CarryHeaders 
+     * Get Whether to return the newly added header during force redirection. 
+     * @return CarryHeaders Whether to return the newly added header during force redirection.
      */
     public String getCarryHeaders() {
         return this.CarryHeaders;
     }
 
     /**
-     * Set 
-     * @param CarryHeaders 
+     * Set Whether to return the newly added header during force redirection.
+     * @param CarryHeaders Whether to return the newly added header during force redirection.
      */
     public void setCarryHeaders(String CarryHeaders) {
         this.CarryHeaders = CarryHeaders;

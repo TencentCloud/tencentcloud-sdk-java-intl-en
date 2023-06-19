@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class MaxAgeRule extends AbstractModel{
 
     /**
-    * 
+    * Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
     */
     @SerializedName("MaxAgeType")
     @Expose
     private String MaxAgeType;
 
     /**
-    * 
+    * Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
     */
     @SerializedName("MaxAgeContents")
     @Expose
     private String [] MaxAgeContents;
 
     /**
-    * 
+    * Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
     */
     @SerializedName("MaxAgeTime")
     @Expose
     private Long MaxAgeTime;
 
     /**
-    * 
+    * Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
     */
     @SerializedName("FollowOrigin")
     @Expose
     private String FollowOrigin;
 
     /**
-     * Get  
-     * @return MaxAgeType 
+     * Get Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li> 
+     * @return MaxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
      */
     public String getMaxAgeType() {
         return this.MaxAgeType;
     }
 
     /**
-     * Set 
-     * @param MaxAgeType 
+     * Set Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+     * @param MaxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
      */
     public void setMaxAgeType(String MaxAgeType) {
         this.MaxAgeType = MaxAgeType;
     }
 
     /**
-     * Get  
-     * @return MaxAgeContents 
+     * Get Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b> 
+     * @return MaxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
     }
 
     /**
-     * Set 
-     * @param MaxAgeContents 
+     * Set Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+     * @param MaxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
     }
 
     /**
-     * Get  
-     * @return MaxAgeTime 
+     * Get Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b> 
+     * @return MaxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
     /**
-     * Set 
-     * @param MaxAgeTime 
+     * Set Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+     * @param MaxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;
     }
 
     /**
-     * Get  
-     * @return FollowOrigin 
+     * Get Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored. 
+     * @return FollowOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set 
-     * @param FollowOrigin 
+     * Set Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
+     * @param FollowOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

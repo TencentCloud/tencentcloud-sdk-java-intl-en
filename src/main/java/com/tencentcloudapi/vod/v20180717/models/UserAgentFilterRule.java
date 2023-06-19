@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class UserAgentFilterRule extends AbstractModel{
 
     /**
-    * 
+    * UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * UserAgent list.
     */
     @SerializedName("UserAgents")
     @Expose
     private String [] UserAgents;
 
     /**
-    * 
+    * Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * 
+    * Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
     */
     @SerializedName("RulePaths")
     @Expose
     private String [] RulePaths;
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li> 
+     * @return FilterType UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
+     * @param FilterType UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return UserAgents 
+     * Get UserAgent list. 
+     * @return UserAgents UserAgent list.
      */
     public String [] getUserAgents() {
         return this.UserAgents;
     }
 
     /**
-     * Set 
-     * @param UserAgents 
+     * Set UserAgent list.
+     * @param UserAgents UserAgent list.
      */
     public void setUserAgents(String [] UserAgents) {
         this.UserAgents = UserAgents;
     }
 
     /**
-     * Get  
-     * @return RuleType 
+     * Get Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li> 
+     * @return RuleType Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 
-     * @param RuleType 
+     * Set Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
+     * @param RuleType Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get  
-     * @return RulePaths 
+     * Get Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li> 
+     * @return RulePaths Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
      */
     public String [] getRulePaths() {
         return this.RulePaths;
     }
 
     /**
-     * Set 
-     * @param RulePaths 
+     * Set Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
+     * @param RulePaths Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;

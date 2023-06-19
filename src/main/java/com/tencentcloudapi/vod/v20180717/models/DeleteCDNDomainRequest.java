@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteCDNDomainRequest extends AbstractModel{
 
     /**
-    * Domain name.
+    * Domain.
     */
     @SerializedName("Domain")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteCDNDomainRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Domain name. 
-     * @return Domain Domain name.
+     * Get Domain. 
+     * @return Domain Domain.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name.
-     * @param Domain Domain name.
+     * Set Domain.
+     * @param Domain Domain.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

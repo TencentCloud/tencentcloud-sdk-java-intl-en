@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class Https extends AbstractModel{
 
     /**
-    * 
+    * HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
     */
     @SerializedName("Http2")
     @Expose
     private String Http2;
 
     /**
-    * 
+    * Server certificate configuration information
     */
     @SerializedName("CertInfo")
     @Expose
     private CDNCertInfo CertInfo;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li> 
+     * @return Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * @param Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Http2 
+     * Get Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li> 
+     * @return Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
      */
     public String getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set 
-     * @param Http2 
+     * Set Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+     * @param Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
      */
     public void setHttp2(String Http2) {
         this.Http2 = Http2;
     }
 
     /**
-     * Get  
-     * @return CertInfo 
+     * Get Server certificate configuration information 
+     * @return CertInfo Server certificate configuration information
      */
     public CDNCertInfo getCertInfo() {
         return this.CertInfo;
     }
 
     /**
-     * Set 
-     * @param CertInfo 
+     * Set Server certificate configuration information
+     * @param CertInfo Server certificate configuration information
      */
     public void setCertInfo(CDNCertInfo CertInfo) {
         this.CertInfo = CertInfo;

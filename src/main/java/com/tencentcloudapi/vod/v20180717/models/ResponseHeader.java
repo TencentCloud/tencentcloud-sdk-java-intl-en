@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ResponseHeader extends AbstractModel{
 
     /**
-    * 
+    * Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Custom response header rules
     */
     @SerializedName("HeaderRules")
     @Expose
     private HttpHeaderPathRule [] HeaderRules;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li> 
+     * @return Switch Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
+     * @param Switch Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return HeaderRules 
+     * Get Custom response header rules 
+     * @return HeaderRules Custom response header rules
      */
     public HttpHeaderPathRule [] getHeaderRules() {
         return this.HeaderRules;
     }
 
     /**
-     * Set 
-     * @param HeaderRules 
+     * Set Custom response header rules
+     * @param HeaderRules Custom response header rules
      */
     public void setHeaderRules(HttpHeaderPathRule [] HeaderRules) {
         this.HeaderRules = HeaderRules;

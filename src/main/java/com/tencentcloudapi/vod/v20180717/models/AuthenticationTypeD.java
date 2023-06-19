@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class AuthenticationTypeD extends AbstractModel{
 
     /**
-    * 
+    * The key for signature calculation 6-32 characters. Only digits and letters are allowed.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 
+    * Signature expiration time;Unit: second. The maximum value is 630720000.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 
+    * File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
     */
     @SerializedName("FileExtensions")
     @Expose
     private String [] FileExtensions;
 
     /**
-    * 
+    * whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
     */
     @SerializedName("SignParam")
     @Expose
     private String SignParam;
 
     /**
-    * 
+    * Timestamp parameter name;Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
     */
     @SerializedName("TimeParam")
     @Expose
     private String TimeParam;
 
     /**
-    * 
+    * Timestamp settings: <li>dec: Decimal</li> <li>hex: Hexadecimal</li>
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-    * 
+    * Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
     */
     @SerializedName("BackupSecretKey")
     @Expose
     private String BackupSecretKey;
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get The key for signature calculation 6-32 characters. Only digits and letters are allowed. 
+     * @return SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+     * @param SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Signature expiration time;Unit: second. The maximum value is 630720000. 
+     * @return ExpireTime Signature expiration time;Unit: second. The maximum value is 630720000.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Signature expiration time;Unit: second. The maximum value is 630720000.
+     * @param ExpireTime Signature expiration time;Unit: second. The maximum value is 630720000.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return FileExtensions 
+     * Get File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files. 
+     * @return FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
     }
 
     /**
-     * Set 
-     * @param FileExtensions 
+     * Set File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+     * @param FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
     }
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated. 
+     * @return FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+     * @param FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return SignParam 
+     * Get Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters. 
+     * @return SignParam Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      */
     public String getSignParam() {
         return this.SignParam;
     }
 
     /**
-     * Set 
-     * @param SignParam 
+     * Set Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
+     * @param SignParam Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      */
     public void setSignParam(String SignParam) {
         this.SignParam = SignParam;
     }
 
     /**
-     * Get  
-     * @return TimeParam 
+     * Get Timestamp parameter name;Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters. 
+     * @return TimeParam Timestamp parameter name;Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      */
     public String getTimeParam() {
         return this.TimeParam;
     }
 
     /**
-     * Set 
-     * @param TimeParam 
+     * Set Timestamp parameter name;Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
+     * @param TimeParam Timestamp parameter name;Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      */
     public void setTimeParam(String TimeParam) {
         this.TimeParam = TimeParam;
     }
 
     /**
-     * Get  
-     * @return TimeFormat 
+     * Get Timestamp settings: <li>dec: Decimal</li> <li>hex: Hexadecimal</li> 
+     * @return TimeFormat Timestamp settings: <li>dec: Decimal</li> <li>hex: Hexadecimal</li>
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set 
-     * @param TimeFormat 
+     * Set Timestamp settings: <li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+     * @param TimeFormat Timestamp settings: <li>dec: Decimal</li> <li>hex: Hexadecimal</li>
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get  
-     * @return BackupSecretKey 
+     * Get Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed. 
+     * @return BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
      */
     public String getBackupSecretKey() {
         return this.BackupSecretKey;
     }
 
     /**
-     * Set 
-     * @param BackupSecretKey 
+     * Set Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+     * @param BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
      */
     public void setBackupSecretKey(String BackupSecretKey) {
         this.BackupSecretKey = BackupSecretKey;

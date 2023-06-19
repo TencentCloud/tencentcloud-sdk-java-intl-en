@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CacheConfigFollowOrigin extends AbstractModel{
 
     /**
-    * 
+    * Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Heuristic cache configuration
     */
     @SerializedName("HeuristicCache")
     @Expose
     private HeuristicCache HeuristicCache;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li> 
+     * @return Switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+     * @param Switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return HeuristicCache 
+     * Get Heuristic cache configuration 
+     * @return HeuristicCache Heuristic cache configuration
      */
     public HeuristicCache getHeuristicCache() {
         return this.HeuristicCache;
     }
 
     /**
-     * Set 
-     * @param HeuristicCache 
+     * Set Heuristic cache configuration
+     * @param HeuristicCache Heuristic cache configuration
      */
     public void setHeuristicCache(HeuristicCache HeuristicCache) {
         this.HeuristicCache = HeuristicCache;
