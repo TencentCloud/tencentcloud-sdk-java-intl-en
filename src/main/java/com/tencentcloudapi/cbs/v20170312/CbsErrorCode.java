@@ -1,10 +1,16 @@
 package com.tencentcloudapi.cbs.v20170312;
 public enum CbsErrorCode {
+    // Error with CAM signature/authentication.
+     AUTHFAILURE("AuthFailure"),
+     
     // Number of returned cloud disks has reached the limit and no more cloud disks can be returned.
      INSUFFICIENTREFUNDQUOTA("InsufficientRefundQuota"),
      
     // Insufficient snapshot quota.
      INSUFFICIENTSNAPSHOTQUOTA("InsufficientSnapshotQuota"),
+     
+    // Internal error.
+     INTERNALERROR("InternalError"),
      
     // Dependent component request failed. Please contact customer service.
      INTERNALERROR_COMPONENTERROR("InternalError.ComponentError"),

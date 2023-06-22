@@ -59,7 +59,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+     *This API is used to apply for a token before calling the Identity Verification SDK service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
      * @param req ApplySdkVerificationTokenRequest
      * @return ApplySdkVerificationTokenResponse
      * @throws TencentCloudSDKException

@@ -44,6 +44,20 @@ public class DescribeBinlogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Earliest Binlog start time in the format of  2016-03-17 02:10:37
+    */
+    @SerializedName("MinStartTime")
+    @Expose
+    private String MinStartTime;
+
+    /**
+    * Latest binlog start time in the format of  2016-03-17 02:10:37
+    */
+    @SerializedName("MaxStartTime")
+    @Expose
+    private String MaxStartTime;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -91,6 +105,38 @@ public class DescribeBinlogsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Earliest Binlog start time in the format of  2016-03-17 02:10:37 
+     * @return MinStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
+     */
+    public String getMinStartTime() {
+        return this.MinStartTime;
+    }
+
+    /**
+     * Set Earliest Binlog start time in the format of  2016-03-17 02:10:37
+     * @param MinStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
+     */
+    public void setMinStartTime(String MinStartTime) {
+        this.MinStartTime = MinStartTime;
+    }
+
+    /**
+     * Get Latest binlog start time in the format of  2016-03-17 02:10:37 
+     * @return MaxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+     */
+    public String getMaxStartTime() {
+        return this.MaxStartTime;
+    }
+
+    /**
+     * Set Latest binlog start time in the format of  2016-03-17 02:10:37
+     * @param MaxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+     */
+    public void setMaxStartTime(String MaxStartTime) {
+        this.MaxStartTime = MaxStartTime;
+    }
+
     public DescribeBinlogsRequest() {
     }
 
@@ -108,6 +154,12 @@ public class DescribeBinlogsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.MinStartTime != null) {
+            this.MinStartTime = new String(source.MinStartTime);
+        }
+        if (source.MaxStartTime != null) {
+            this.MaxStartTime = new String(source.MaxStartTime);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class DescribeBinlogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
+        this.setParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
 
     }
 }

@@ -72,7 +72,7 @@ public class RoGroup extends AbstractModel{
     private String WeightMode;
 
     /**
-    * Weight value.
+    * This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
     */
     @SerializedName("Weight")
     @Expose
@@ -252,16 +252,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Weight value. 
-     * @return Weight Weight value.
+     * Get This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field. 
+     * @return Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Weight value.
-     * @param Weight Weight value.
+     * Set This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+     * @param Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

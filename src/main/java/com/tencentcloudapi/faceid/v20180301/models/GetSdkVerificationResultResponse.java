@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class GetSdkVerificationResultResponse extends AbstractModel{
 
     /**
-    * The result of the entire verification process.
+    * The result code of the verification result.
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * The result description.
+    * The verification result description.
     */
     @SerializedName("Description")
     @Expose
@@ -44,21 +44,21 @@ public class GetSdkVerificationResultResponse extends AbstractModel{
     private Long ChargeCount;
 
     /**
-    * The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+    * The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
     */
     @SerializedName("CardVerifyResults")
     @Expose
     private CardVerifyResult [] CardVerifyResults;
 
     /**
-    * The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+    * The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
     */
     @SerializedName("CompareResults")
     @Expose
     private CompareResult [] CompareResults;
 
     /**
-    * Info passed in the process of getting the token.
+    * Data passed through in the process of getting the token.
     */
     @SerializedName("Extra")
     @Expose
@@ -72,32 +72,32 @@ public class GetSdkVerificationResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The result of the entire verification process. 
-     * @return Result The result of the entire verification process.
+     * Get The result code of the verification result. 
+     * @return Result The result code of the verification result.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set The result of the entire verification process.
-     * @param Result The result of the entire verification process.
+     * Set The result code of the verification result.
+     * @param Result The result code of the verification result.
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get The result description. 
-     * @return Description The result description.
+     * Get The verification result description. 
+     * @return Description The verification result description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set The result description.
-     * @param Description The result description.
+     * Set The verification result description.
+     * @param Description The verification result description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -120,48 +120,48 @@ public class GetSdkVerificationResultResponse extends AbstractModel{
     }
 
     /**
-     * Get The results of multiple OCR processes (in order). The result of the final process is taken as the valid result. 
-     * @return CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+     * Get The results of multiple OCR processes (in order). The result of the final process is used as the valid result. 
+     * @return CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
      */
     public CardVerifyResult [] getCardVerifyResults() {
         return this.CardVerifyResults;
     }
 
     /**
-     * Set The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
-     * @param CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+     * Set The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
+     * @param CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
      */
     public void setCardVerifyResults(CardVerifyResult [] CardVerifyResults) {
         this.CardVerifyResults = CardVerifyResults;
     }
 
     /**
-     * Get The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result. 
-     * @return CompareResults The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+     * Get The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result. 
+     * @return CompareResults The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
      */
     public CompareResult [] getCompareResults() {
         return this.CompareResults;
     }
 
     /**
-     * Set The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
-     * @param CompareResults The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+     * Set The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
+     * @param CompareResults The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
      */
     public void setCompareResults(CompareResult [] CompareResults) {
         this.CompareResults = CompareResults;
     }
 
     /**
-     * Get Info passed in the process of getting the token. 
-     * @return Extra Info passed in the process of getting the token.
+     * Get Data passed through in the process of getting the token. 
+     * @return Extra Data passed through in the process of getting the token.
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set Info passed in the process of getting the token.
-     * @param Extra Info passed in the process of getting the token.
+     * Set Data passed through in the process of getting the token.
+     * @param Extra Data passed through in the process of getting the token.
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

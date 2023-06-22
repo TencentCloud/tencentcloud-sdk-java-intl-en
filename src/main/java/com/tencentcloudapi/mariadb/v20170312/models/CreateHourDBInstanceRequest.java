@@ -100,7 +100,7 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * Whether IPv6 is supported.
+    * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -137,7 +137,7 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     private DBParamValue [] InitParams;
 
     /**
-    * ID of the instance whose backup data will be rolled back to the new instance you create.
+    * ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
     */
     @SerializedName("RollbackInstanceId")
     @Expose
@@ -327,16 +327,16 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether IPv6 is supported. 
-     * @return Ipv6Flag Whether IPv6 is supported.
+     * Get Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported). 
+     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set Whether IPv6 is supported.
-     * @param Ipv6Flag Whether IPv6 is supported.
+     * Set Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+     * @param Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
@@ -415,16 +415,16 @@ public class CreateHourDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get ID of the instance whose backup data will be rolled back to the new instance you create. 
-     * @return RollbackInstanceId ID of the instance whose backup data will be rolled back to the new instance you create.
+     * Get ID of the instance to be rolled back, such as “2021-11-22 00:00:00”. 
+     * @return RollbackInstanceId ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
      */
     public String getRollbackInstanceId() {
         return this.RollbackInstanceId;
     }
 
     /**
-     * Set ID of the instance whose backup data will be rolled back to the new instance you create.
-     * @param RollbackInstanceId ID of the instance whose backup data will be rolled back to the new instance you create.
+     * Set ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
+     * @param RollbackInstanceId ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
      */
     public void setRollbackInstanceId(String RollbackInstanceId) {
         this.RollbackInstanceId = RollbackInstanceId;

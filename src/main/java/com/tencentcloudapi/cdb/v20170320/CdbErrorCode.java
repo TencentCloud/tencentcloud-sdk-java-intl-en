@@ -48,6 +48,9 @@ public enum CdbErrorCode {
     // Failed to query database proxy.
      FAILEDOPERATION_DESCRIBEPROXYGROUPERROR("FailedOperation.DescribeProxyGroupError"),
      
+    // Unsupported operation
+     FAILEDOPERATION_FAILEDOPERATIONERROR("FailedOperation.FailedOperationError"),
+     
     // An error occurred while obtaining permissions.
      FAILEDOPERATION_GETPRIVILEGEERROR("FailedOperation.GetPrivilegeError"),
      
@@ -72,6 +75,9 @@ public enum CdbErrorCode {
     // Log query failed.
      FAILEDOPERATION_QUERYLOGERROR("FailedOperation.QueryLogError"),
      
+    // The proxy is being created or already exists. You cannot create it again.
+     FAILEDOPERATION_REPEATCREATEPROXYERROR("FailedOperation.RepeatCreateProxyError"),
+     
     // Exception with the backend request for the service. Please contact customer service.
      FAILEDOPERATION_RESPONSEVALUEERROR("FailedOperation.ResponseValueError"),
      
@@ -89,6 +95,9 @@ public enum CdbErrorCode {
      
     // This type of operations cannot be performed.
      FAILEDOPERATION_TYPEINCONFLICT("FailedOperation.TypeInConflict"),
+     
+    // The IP has been occupied.
+     FAILEDOPERATION_VPCIPINUSEERROR("FailedOperation.VpcIpInUseError"),
      
     // An internal error occurred.
      INTERNALERROR("InternalError"),
@@ -402,6 +411,15 @@ public enum CdbErrorCode {
     // There are other orders being submitted. Please try again later.
      OPERATIONDENIED_OTHERODERINPROCESS("OperationDenied.OtherOderInProcess"),
      
+    // The number of the proxy addresses exceeds the limit.
+     OPERATIONDENIED_PROXYADDRESSLIMITERROR("OperationDenied.ProxyAddressLimitError"),
+     
+    // Proxy address is not found.
+     OPERATIONDENIED_PROXYADDRESSNOTFUND("OperationDenied.ProxyAddressNotFund"),
+     
+    // The number of the proxy nodes exceeds the limit.
+     OPERATIONDENIED_PROXYNODECOUNTLIMITERROR("OperationDenied.ProxyNodeCountLimitError"),
+     
     // This operation is not allowed during database proxy upgrade task.
      OPERATIONDENIED_PROXYUPGRADETASKSTATUSERROR("OperationDenied.ProxyUpgradeTaskStatusError"),
      
@@ -413,6 +431,9 @@ public enum CdbErrorCode {
      
     // This instance is not refundable.
      OPERATIONDENIED_UNSUPPORTREFUNDERROR("OperationDenied.UnSupportRefundError"),
+     
+    // Creating a proxy address is not supported.
+     OPERATIONDENIED_UNSUPPORTCREATEADDRESSERROR("OperationDenied.UnsupportCreateAddressError"),
      
     // The audit feature cannot be enabled.
      OPERATIONDENIED_UNSUPPORTOPENAUDITERROR("OperationDenied.UnsupportOpenAuditError"),
@@ -440,6 +461,9 @@ public enum CdbErrorCode {
      
     // The instance cannot be found. Please check whether your instance status is normal.
      RESOURCENOTFOUND_CDBINSTANCENOTFOUNDERROR("ResourceNotFound.CdbInstanceNotFoundError"),
+     
+    // High-availability instance doesn’t exist.
+     RESOURCENOTFOUND_INSTANCENOTFOUNDERROR("ResourceNotFound.InstanceNotFoundError"),
      
     // The instance does not exist.
      RESOURCENOTFOUND_INSTANCENOTFUNDERROR("ResourceNotFound.InstanceNotFundError"),

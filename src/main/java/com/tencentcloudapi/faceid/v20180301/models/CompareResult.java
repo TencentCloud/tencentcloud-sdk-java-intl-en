@@ -46,7 +46,7 @@ public class CompareResult extends AbstractModel{
     private String ErrorMsg;
 
     /**
-    * 
+    * The liveness algorithm package generated during this SDK-based liveness detection.
     */
     @SerializedName("LiveData")
     @Expose
@@ -116,40 +116,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Sim")
     @Expose
     private Float Sim;
 
     /**
-    * This field is disused.
+    * This parameter is disused.
     */
     @SerializedName("IsNeedCharge")
     @Expose
     private Boolean IsNeedCharge;
 
     /**
-    * The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+    * The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardInfoInputJson")
@@ -232,16 +213,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return LiveData 
+     * Get The liveness algorithm package generated during this SDK-based liveness detection. 
+     * @return LiveData The liveness algorithm package generated during this SDK-based liveness detection.
      */
     public FileInfo getLiveData() {
         return this.LiveData;
     }
 
     /**
-     * Set 
-     * @param LiveData 
+     * Set The liveness algorithm package generated during this SDK-based liveness detection.
+     * @param LiveData The liveness algorithm package generated during this SDK-based liveness detection.
      */
     public void setLiveData(FileInfo LiveData) {
         this.LiveData = LiveData;
@@ -413,9 +394,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Sim The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getSim() {
         return this.Sim;
@@ -423,72 +404,34 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Sim The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSim(Float Sim) {
         this.Sim = Sim;
     }
 
     /**
-     * Get This field is disused. 
-     * @return IsNeedCharge This field is disused.
+     * Get This parameter is disused. 
+     * @return IsNeedCharge This parameter is disused.
      */
     public Boolean getIsNeedCharge() {
         return this.IsNeedCharge;
     }
 
     /**
-     * Set This field is disused.
-     * @param IsNeedCharge This field is disused.
+     * Set This parameter is disused.
+     * @param IsNeedCharge This parameter is disused.
      */
     public void setIsNeedCharge(Boolean IsNeedCharge) {
         this.IsNeedCharge = IsNeedCharge;
     }
 
     /**
-     * Get The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+     * Get The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+     * @return CardInfoInputJson The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FileInfo getCardInfoInputJson() {
@@ -496,47 +439,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+     * Set The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+     * @param CardInfoInputJson The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardInfoInputJson(FileInfo CardInfoInputJson) {

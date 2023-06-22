@@ -93,7 +93,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String InstanceRole;
 
     /**
-    * AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+    * Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
     */
     @SerializedName("MasterRegion")
     @Expose
@@ -170,7 +170,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+    * Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -212,7 +212,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long ParamTemplateId;
 
     /**
-    * Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+    * Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
     */
     @SerializedName("AlarmPolicyList")
     @Expose
@@ -442,16 +442,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances. 
-     * @return MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+     * Get Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance. 
+     * @return MasterRegion Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * Set AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
-     * @param MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+     * Set Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
+     * @param MasterRegion Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;
@@ -618,16 +618,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively. 
-     * @return InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+     * Get Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively. 
+     * @return InstanceName Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
-     * @param InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+     * Set Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
+     * @param InstanceName Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -714,16 +714,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API. 
-     * @return AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * Get Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API. 
+     * @return AlarmPolicyList Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
      */
     public Long [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
-     * @param AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * Set Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * @param AlarmPolicyList Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
      */
     public void setAlarmPolicyList(Long [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;

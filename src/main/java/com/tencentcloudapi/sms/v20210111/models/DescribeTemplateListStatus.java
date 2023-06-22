@@ -37,7 +37,7 @@ public class DescribeTemplateListStatus extends AbstractModel{
     private Long International;
 
     /**
-    * Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+    * Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
     */
     @SerializedName("StatusCode")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeTemplateListStatus extends AbstractModel{
     }
 
     /**
-     * Get Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed. 
-     * @return StatusCode Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+     * Get Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed. 
+     * @return StatusCode Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
-     * @param StatusCode Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+     * Set Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
+     * @param StatusCode Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;

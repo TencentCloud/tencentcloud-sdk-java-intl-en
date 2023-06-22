@@ -23,8 +23,7 @@ import java.util.HashMap;
 public class Objects extends AbstractModel{
 
     /**
-    * Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mode")
     @Expose
@@ -39,8 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Database [] Databases;
 
     /**
-    * Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvancedObjects")
     @Expose
@@ -55,20 +53,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private OnlineDDL OnlineDDL;
 
     /**
-     * Get Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mode Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mode Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -95,20 +89,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdvancedObjects Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAdvancedObjects() {
         return this.AdvancedObjects;
     }
 
     /**
-     * Set Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedObjects Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {
         this.AdvancedObjects = AdvancedObjects;

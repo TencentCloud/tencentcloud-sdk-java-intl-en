@@ -748,9 +748,9 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     }
 
     /**
-     *This API is used to adjust the cloud disk’s extra performance.
+     *This API is used to adjust extra performance for Enhanced SSD (CLOUD_HSSD) and ulTra SSD. 
 
-* Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+*This API only supports adjust extra performance for Enhanced SSD and ulTra SSD. 
      * @param req ModifyDiskExtraPerformanceRequest
      * @return ModifyDiskExtraPerformanceResponse
      * @throws TencentCloudSDKException
@@ -819,10 +819,9 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
     }
 
     /**
-     *This API is used to expand the capacity of a cloud disk.
+     *This API is used to expand cloud disks. 
 
-* This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API.
-* This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process. 
+*This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API. *This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process.
      * @param req ResizeDiskRequest
      * @return ResizeDiskResponse
      * @throws TencentCloudSDKException

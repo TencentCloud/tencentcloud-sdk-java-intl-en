@@ -142,6 +142,27 @@ public class AuditLogFilter extends AbstractModel{
     private String TransactionLivingTimeSection;
 
     /**
+    * Thread ID
+    */
+    @SerializedName("ThreadId")
+    @Expose
+    private String [] ThreadId;
+
+    /**
+    * Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+    */
+    @SerializedName("SentRows")
+    @Expose
+    private Long SentRows;
+
+    /**
+    * MySQL error codes
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private Long [] ErrCode;
+
+    /**
      * Get Client address 
      * @return Host Client address
      */
@@ -413,6 +434,54 @@ public class AuditLogFilter extends AbstractModel{
         this.TransactionLivingTimeSection = TransactionLivingTimeSection;
     }
 
+    /**
+     * Get Thread ID 
+     * @return ThreadId Thread ID
+     */
+    public String [] getThreadId() {
+        return this.ThreadId;
+    }
+
+    /**
+     * Set Thread ID
+     * @param ThreadId Thread ID
+     */
+    public void setThreadId(String [] ThreadId) {
+        this.ThreadId = ThreadId;
+    }
+
+    /**
+     * Get Number of returned rows,  which is used to filter the audit log with affected rows greater than this value. 
+     * @return SentRows Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+     */
+    public Long getSentRows() {
+        return this.SentRows;
+    }
+
+    /**
+     * Set Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+     * @param SentRows Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+     */
+    public void setSentRows(Long SentRows) {
+        this.SentRows = SentRows;
+    }
+
+    /**
+     * Get MySQL error codes 
+     * @return ErrCode MySQL error codes
+     */
+    public Long [] getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set MySQL error codes
+     * @param ErrCode MySQL error codes
+     */
+    public void setErrCode(Long [] ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
     public AuditLogFilter() {
     }
 
@@ -493,6 +562,21 @@ public class AuditLogFilter extends AbstractModel{
         if (source.TransactionLivingTimeSection != null) {
             this.TransactionLivingTimeSection = new String(source.TransactionLivingTimeSection);
         }
+        if (source.ThreadId != null) {
+            this.ThreadId = new String[source.ThreadId.length];
+            for (int i = 0; i < source.ThreadId.length; i++) {
+                this.ThreadId[i] = new String(source.ThreadId[i]);
+            }
+        }
+        if (source.SentRows != null) {
+            this.SentRows = new Long(source.SentRows);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long[source.ErrCode.length];
+            for (int i = 0; i < source.ErrCode.length; i++) {
+                this.ErrCode[i] = new Long(source.ErrCode[i]);
+            }
+        }
     }
 
 
@@ -517,6 +601,9 @@ public class AuditLogFilter extends AbstractModel{
         this.setParamSimple(map, prefix + "LockWaitTimeSection", this.LockWaitTimeSection);
         this.setParamSimple(map, prefix + "IoWaitTimeSection", this.IoWaitTimeSection);
         this.setParamSimple(map, prefix + "TransactionLivingTimeSection", this.TransactionLivingTimeSection);
+        this.setParamArraySimple(map, prefix + "ThreadId.", this.ThreadId);
+        this.setParamSimple(map, prefix + "SentRows", this.SentRows);
+        this.setParamArraySimple(map, prefix + "ErrCode.", this.ErrCode);
 
     }
 }

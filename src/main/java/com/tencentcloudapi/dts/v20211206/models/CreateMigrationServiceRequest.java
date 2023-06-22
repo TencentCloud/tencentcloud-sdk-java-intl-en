@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateMigrationServiceRequest extends AbstractModel{
 
     /**
-    * Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+    * Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
     */
     @SerializedName("SrcDatabaseType")
     @Expose
     private String SrcDatabaseType;
 
     /**
-    * Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+    * Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
     */
     @SerializedName("DstDatabaseType")
     @Expose
@@ -79,32 +79,32 @@ public class CreateMigrationServiceRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
-     * Get Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`. 
-     * @return SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * Get Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`. 
+     * @return SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      */
     public String getSrcDatabaseType() {
         return this.SrcDatabaseType;
     }
 
     /**
-     * Set Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
-     * @param SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * Set Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
+     * @param SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
         this.SrcDatabaseType = SrcDatabaseType;
     }
 
     /**
-     * Get Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`. 
-     * @return DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * Get Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`. 
+     * @return DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
-     * @param DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * Set Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
+     * @param DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;

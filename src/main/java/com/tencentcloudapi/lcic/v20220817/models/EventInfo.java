@@ -30,8 +30,16 @@ public class EventInfo extends AbstractModel{
     private Long Timestamp;
 
     /**
-    * The event type. Valid values:
+    * The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
     */
     @SerializedName("EventType")
     @Expose
@@ -62,20 +70,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The event type. Valid values:
-`RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished. 
-     * @return EventType The event type. Valid values:
+     * Get The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible. 
+     * @return EventType The event type. Valid values: 
+`RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set The event type. Valid values:
+     * Set The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
-     * @param EventType The event type. Valid values:
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
+     * @param EventType The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;

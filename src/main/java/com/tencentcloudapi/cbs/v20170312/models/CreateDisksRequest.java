@@ -135,6 +135,13 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DiskBackupQuota;
 
     /**
+    * Specifies whether to enable disk bursting.
+    */
+    @SerializedName("BurstPerformance")
+    @Expose
+    private Boolean BurstPerformance;
+
+    /**
      * Get Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project. If no project is specified, the default project will be used. 
      * @return Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project. If no project is specified, the default project will be used.
      */
@@ -390,6 +397,22 @@ public class CreateDisksRequest extends AbstractModel{
         this.DiskBackupQuota = DiskBackupQuota;
     }
 
+    /**
+     * Get Specifies whether to enable disk bursting. 
+     * @return BurstPerformance Specifies whether to enable disk bursting.
+     */
+    public Boolean getBurstPerformance() {
+        return this.BurstPerformance;
+    }
+
+    /**
+     * Set Specifies whether to enable disk bursting.
+     * @param BurstPerformance Specifies whether to enable disk bursting.
+     */
+    public void setBurstPerformance(Boolean BurstPerformance) {
+        this.BurstPerformance = BurstPerformance;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -449,6 +472,9 @@ public class CreateDisksRequest extends AbstractModel{
         if (source.DiskBackupQuota != null) {
             this.DiskBackupQuota = new Long(source.DiskBackupQuota);
         }
+        if (source.BurstPerformance != null) {
+            this.BurstPerformance = new Boolean(source.BurstPerformance);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class CreateDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
         this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
+        this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
 
     }
 }

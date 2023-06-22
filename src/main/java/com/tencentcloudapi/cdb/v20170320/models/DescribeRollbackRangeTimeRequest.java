@@ -30,6 +30,20 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+    */
+    @SerializedName("IsRemoteZone")
+    @Expose
+    private String IsRemoteZone;
+
+    /**
+    * The region of the clone instance, such as `ap-guangzhou`.
+    */
+    @SerializedName("BackupRegion")
+    @Expose
+    private String BackupRegion;
+
+    /**
      * Get Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceIds Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -43,6 +57,38 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel{
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no). 
+     * @return IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     */
+    public String getIsRemoteZone() {
+        return this.IsRemoteZone;
+    }
+
+    /**
+     * Set Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     * @param IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     */
+    public void setIsRemoteZone(String IsRemoteZone) {
+        this.IsRemoteZone = IsRemoteZone;
+    }
+
+    /**
+     * Get The region of the clone instance, such as `ap-guangzhou`. 
+     * @return BackupRegion The region of the clone instance, such as `ap-guangzhou`.
+     */
+    public String getBackupRegion() {
+        return this.BackupRegion;
+    }
+
+    /**
+     * Set The region of the clone instance, such as `ap-guangzhou`.
+     * @param BackupRegion The region of the clone instance, such as `ap-guangzhou`.
+     */
+    public void setBackupRegion(String BackupRegion) {
+        this.BackupRegion = BackupRegion;
     }
 
     public DescribeRollbackRangeTimeRequest() {
@@ -59,6 +105,12 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.IsRemoteZone != null) {
+            this.IsRemoteZone = new String(source.IsRemoteZone);
+        }
+        if (source.BackupRegion != null) {
+            this.BackupRegion = new String(source.BackupRegion);
+        }
     }
 
 
@@ -67,6 +119,8 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "IsRemoteZone", this.IsRemoteZone);
+        this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
 
     }
 }

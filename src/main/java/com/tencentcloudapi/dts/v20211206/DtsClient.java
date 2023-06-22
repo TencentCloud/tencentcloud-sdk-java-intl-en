@@ -205,6 +205,26 @@ After successful check, if the migration task needs to be modified, a new check 
     }
 
     /**
+     *This API is used to check whether the current data sync task supports object modification after the task configuration is modified.
+     * @param req CreateModifyCheckSyncJobRequest
+     * @return CreateModifyCheckSyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJob(CreateModifyCheckSyncJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateModifyCheckSyncJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateModifyCheckSyncJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateModifyCheckSyncJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a sync task.
      * @param req CreateSyncJobRequest
      * @return CreateSyncJobResponse
@@ -379,6 +399,26 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationJobsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeMigrationJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the result of the created check task for object modification.
+     * @param req DescribeModifyCheckSyncJobResultRequest
+     * @return DescribeModifyCheckSyncJobResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModifyCheckSyncJobResultResponse DescribeModifyCheckSyncJobResult(DescribeModifyCheckSyncJobResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeModifyCheckSyncJobResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeModifyCheckSyncJobResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeModifyCheckSyncJobResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -579,6 +619,26 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMigrationJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the configuration of a data sync task after the task is started.\n Configuration modification steps:  Modify sync task configuration -> Create a modification check task -> Query the check task result -> Start the configuration modification check task
+     * @param req ModifySyncJobConfigRequest
+     * @return ModifySyncJobConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncJobConfigResponse ModifySyncJobConfig(ModifySyncJobConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySyncJobConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySyncJobConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySyncJobConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -799,6 +859,26 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 Type type = new TypeToken<JsonResponseModel<StartMigrateJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartMigrateJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start the configuration modification process when the modification check task status becomes “success”.
+     * @param req StartModifySyncJobRequest
+     * @return StartModifySyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartModifySyncJobResponse StartModifySyncJob(StartModifySyncJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartModifySyncJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartModifySyncJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartModifySyncJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

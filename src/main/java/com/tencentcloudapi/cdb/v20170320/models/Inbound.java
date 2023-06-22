@@ -58,6 +58,13 @@ public class Inbound extends AbstractModel{
     private String Dir;
 
     /**
+    * Address module
+    */
+    @SerializedName("AddressModule")
+    @Expose
+    private String AddressModule;
+
+    /**
     * Rule description
     */
     @SerializedName("Desc")
@@ -145,6 +152,22 @@ public class Inbound extends AbstractModel{
     }
 
     /**
+     * Get Address module 
+     * @return AddressModule Address module
+     */
+    public String getAddressModule() {
+        return this.AddressModule;
+    }
+
+    /**
+     * Set Address module
+     * @param AddressModule Address module
+     */
+    public void setAddressModule(String AddressModule) {
+        this.AddressModule = AddressModule;
+    }
+
+    /**
      * Get Rule description 
      * @return Desc Rule description
      */
@@ -183,6 +206,9 @@ public class Inbound extends AbstractModel{
         if (source.Dir != null) {
             this.Dir = new String(source.Dir);
         }
+        if (source.AddressModule != null) {
+            this.AddressModule = new String(source.AddressModule);
+        }
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
@@ -198,6 +224,7 @@ public class Inbound extends AbstractModel{
         this.setParamSimple(map, prefix + "PortRange", this.PortRange);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         this.setParamSimple(map, prefix + "Dir", this.Dir);
+        this.setParamSimple(map, prefix + "AddressModule", this.AddressModule);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }

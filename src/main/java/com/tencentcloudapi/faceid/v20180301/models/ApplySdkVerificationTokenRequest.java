@@ -30,21 +30,61 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel{
     private Boolean NeedVerifyIdCard;
 
     /**
-    * The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+    * The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+    */
+    @SerializedName("CheckMode")
+    @Expose
+    private Long CheckMode;
+
+    /**
+    * The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+    */
+    @SerializedName("SecurityLevel")
+    @Expose
+    private Long SecurityLevel;
+
+    /**
+    * The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+    * The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+    */
+    @SerializedName("CompareImage")
+    @Expose
+    private String CompareImage;
+
+    /**
+    * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
     */
     @SerializedName("DisableChangeOcrResult")
     @Expose
     private Boolean DisableChangeOcrResult;
 
     /**
-    * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+    * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
     */
     @SerializedName("DisableCheckOcrWarnings")
     @Expose
@@ -74,48 +114,172 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions). 
-     * @return IdCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+     * Get The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1 
+     * @return CheckMode The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+     */
+    public Long getCheckMode() {
+        return this.CheckMode;
+    }
+
+    /**
+     * Set The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+     * @param CheckMode The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+     */
+    public void setCheckMode(Long CheckMode) {
+        this.CheckMode = CheckMode;
+    }
+
+    /**
+     * Get The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4 
+     * @return SecurityLevel The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+     */
+    public Long getSecurityLevel() {
+        return this.SecurityLevel;
+    }
+
+    /**
+     * Set The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+     * @param SecurityLevel The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+     */
+    public void setSecurityLevel(Long SecurityLevel) {
+        this.SecurityLevel = SecurityLevel;
+    }
+
+    /**
+     * Get The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions 
+     * @return IdCardType The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
-     * @param IdCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+     * Set The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+     * @param IdCardType The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
-     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+     * Get The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`. 
+     * @return CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+     */
+    public String getCompareImage() {
+        return this.CompareImage;
+    }
+
+    /**
+     * Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+     * @param CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+     */
+    public void setCompareImage(String CompareImage) {
+        this.CompareImage = CompareImage;
+    }
+
+    /**
+     * Get Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.) 
+     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
      */
     public Boolean getDisableChangeOcrResult() {
         return this.DisableChangeOcrResult;
     }
 
     /**
-     * Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
-     * @param DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+     * Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+     * @param DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
      */
     public void setDisableChangeOcrResult(Boolean DisableChangeOcrResult) {
         this.DisableChangeOcrResult = DisableChangeOcrResult;
     }
 
     /**
-     * Get Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`. 
-     * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+     * Get Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports. 
+     * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      */
     public Boolean getDisableCheckOcrWarnings() {
         return this.DisableCheckOcrWarnings;
     }
 
     /**
-     * Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
-     * @param DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+     * Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
+     * @param DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      */
     public void setDisableCheckOcrWarnings(Boolean DisableCheckOcrWarnings) {
         this.DisableCheckOcrWarnings = DisableCheckOcrWarnings;
@@ -148,8 +312,17 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel{
         if (source.NeedVerifyIdCard != null) {
             this.NeedVerifyIdCard = new Boolean(source.NeedVerifyIdCard);
         }
+        if (source.CheckMode != null) {
+            this.CheckMode = new Long(source.CheckMode);
+        }
+        if (source.SecurityLevel != null) {
+            this.SecurityLevel = new Long(source.SecurityLevel);
+        }
         if (source.IdCardType != null) {
             this.IdCardType = new String(source.IdCardType);
+        }
+        if (source.CompareImage != null) {
+            this.CompareImage = new String(source.CompareImage);
         }
         if (source.DisableChangeOcrResult != null) {
             this.DisableChangeOcrResult = new Boolean(source.DisableChangeOcrResult);
@@ -168,7 +341,10 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
+        this.setParamSimple(map, prefix + "CheckMode", this.CheckMode);
+        this.setParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
+        this.setParamSimple(map, prefix + "CompareImage", this.CompareImage);
         this.setParamSimple(map, prefix + "DisableChangeOcrResult", this.DisableChangeOcrResult);
         this.setParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
         this.setParamSimple(map, prefix + "Extra", this.Extra);

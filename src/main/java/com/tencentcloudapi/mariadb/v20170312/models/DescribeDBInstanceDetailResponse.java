@@ -427,6 +427,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RsAccessStrategy;
 
     /**
+    * Unclaimed network resource
+    */
+    @SerializedName("ReservedNetResources")
+    @Expose
+    private ReservedNetResource [] ReservedNetResources;
+
+    /**
+    * 
+    */
+    @SerializedName("IsPhysicalReplicationSupported")
+    @Expose
+    private Boolean IsPhysicalReplicationSupported;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -1390,6 +1404,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Unclaimed network resource 
+     * @return ReservedNetResources Unclaimed network resource
+     */
+    public ReservedNetResource [] getReservedNetResources() {
+        return this.ReservedNetResources;
+    }
+
+    /**
+     * Set Unclaimed network resource
+     * @param ReservedNetResources Unclaimed network resource
+     */
+    public void setReservedNetResources(ReservedNetResource [] ReservedNetResources) {
+        this.ReservedNetResources = ReservedNetResources;
+    }
+
+    /**
+     * Get  
+     * @return IsPhysicalReplicationSupported 
+     */
+    public Boolean getIsPhysicalReplicationSupported() {
+        return this.IsPhysicalReplicationSupported;
+    }
+
+    /**
+     * Set 
+     * @param IsPhysicalReplicationSupported 
+     */
+    public void setIsPhysicalReplicationSupported(Boolean IsPhysicalReplicationSupported) {
+        this.IsPhysicalReplicationSupported = IsPhysicalReplicationSupported;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1587,6 +1633,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RsAccessStrategy != null) {
             this.RsAccessStrategy = new Long(source.RsAccessStrategy);
         }
+        if (source.ReservedNetResources != null) {
+            this.ReservedNetResources = new ReservedNetResource[source.ReservedNetResources.length];
+            for (int i = 0; i < source.ReservedNetResources.length; i++) {
+                this.ReservedNetResources[i] = new ReservedNetResource(source.ReservedNetResources[i]);
+            }
+        }
+        if (source.IsPhysicalReplicationSupported != null) {
+            this.IsPhysicalReplicationSupported = new Boolean(source.IsPhysicalReplicationSupported);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1652,6 +1707,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
+        this.setParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
+        this.setParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

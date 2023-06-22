@@ -72,6 +72,14 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String TemplateType;
 
     /**
+    * Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -191,6 +199,26 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -238,6 +266,9 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -255,6 +286,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

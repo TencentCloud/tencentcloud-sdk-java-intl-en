@@ -160,7 +160,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+     *This API is used to create a monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to create pay-as-you-go instances.
+     *This API is used to create a pay-as-you-go TencentDB for MariaDB instance.
      * @param req CreateHourDBInstanceRequest
      * @return CreateHourDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -642,7 +642,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
-     *This API is used to terminate a pay-as-you-go instance.
+     *This API is used to terminate a pay-as-you-go TencentDB for MariaDB instance.
      * @param req DestroyHourDBInstanceRequest
      * @return DestroyHourDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -703,7 +703,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+     *This API is used to isolate a monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
      * @param req IsolateDBInstanceRequest
      * @return IsolateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -784,12 +784,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to modify the permissions of a TencentDB instance account.
-
-**Notes**
-- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
-- An error will be reported if read-write permissions are granted to a read-only account.
-- If the parameter of permissions at a level is left empty, no change will be made to the permissions at the level that have been granted. To clear granted permissions at a level, set `GlobalPrivileges.N` or `Privileges` to an empty array.
+     *This API is used to modify the permissions of a TencentDB instance account. \n\n**Note**\n-Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.An error will be reported if read-write permissions are granted to a read-only account. If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted view permissions, set `Privileges` to an empty array.
      * @param req ModifyAccountPrivilegesRequest
      * @return ModifyAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1002,6 +997,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TerminateDedicatedDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to expand the dedicated TencentDB instance.
+     * @param req UpgradeDedicatedDBInstanceRequest
+     * @return UpgradeDedicatedDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstance(UpgradeDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDedicatedDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

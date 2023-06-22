@@ -113,6 +113,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RecordUrl;
 
     /**
+    * The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxMicNumber")
+    @Expose
+    private Long MaxMicNumber;
+
+    /**
+    * Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get The name.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Name The name.
@@ -340,6 +356,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RecordUrl = RecordUrl;
     }
 
+    /**
+     * Get The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxMicNumber The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxMicNumber() {
+        return this.MaxMicNumber;
+    }
+
+    /**
+     * Set The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxMicNumber The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxMicNumber(Long MaxMicNumber) {
+        this.MaxMicNumber = MaxMicNumber;
+    }
+
+    /**
+     * Get Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found. 
+     * @return EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+     * @param EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public RoomItem() {
     }
 
@@ -381,6 +437,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
+        if (source.MaxMicNumber != null) {
+            this.MaxMicNumber = new Long(source.MaxMicNumber);
+        }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -399,6 +461,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxRTCMember", this.MaxRTCMember);
         this.setParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+        this.setParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

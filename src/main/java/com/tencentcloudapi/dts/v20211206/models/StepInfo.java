@@ -79,8 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private StepTip [] Warnings;
 
     /**
-    * Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Progress")
     @Expose
@@ -227,20 +226,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Progress Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Progress Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

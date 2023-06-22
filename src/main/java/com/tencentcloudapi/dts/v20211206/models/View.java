@@ -31,8 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ViewName;
 
     /**
-    * New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NewViewName")
     @Expose
@@ -59,20 +58,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get New view name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewViewName New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNewViewName() {
         return this.NewViewName;
     }
 
     /**
-     * Set New view name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewViewName New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNewViewName(String NewViewName) {
         this.NewViewName = NewViewName;

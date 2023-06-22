@@ -513,7 +513,7 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
-     *This API is used to get the developer information.
+     *This API is used to get developer information.
      * @param req DescribeDeveloperRequest
      * @return DescribeDeveloperResponse
      * @throws TencentCloudSDKException
@@ -878,6 +878,26 @@ A maximum of 20 requests can be initiated per second for this API.
                 Type type = new TypeToken<JsonResponseModel<GetWatermarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove a user from the room.
+     * @param req KickUserFromRoomRequest
+     * @return KickUserFromRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public KickUserFromRoomResponse KickUserFromRoom(KickUserFromRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KickUserFromRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KickUserFromRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KickUserFromRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

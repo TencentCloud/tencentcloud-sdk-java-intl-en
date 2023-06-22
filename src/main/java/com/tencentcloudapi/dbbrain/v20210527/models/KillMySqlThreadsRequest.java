@@ -58,6 +58,13 @@ public class KillMySqlThreadsRequest extends AbstractModel{
     private String Product;
 
     /**
+    * Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+    */
+    @SerializedName("RecordHistory")
+    @Expose
+    private Boolean RecordHistory;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -137,6 +144,22 @@ public class KillMySqlThreadsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    /**
+     * Get Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process. 
+     * @return RecordHistory Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+     */
+    public Boolean getRecordHistory() {
+        return this.RecordHistory;
+    }
+
+    /**
+     * Set Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+     * @param RecordHistory Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+     */
+    public void setRecordHistory(Boolean RecordHistory) {
+        this.RecordHistory = RecordHistory;
+    }
+
     public KillMySqlThreadsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class KillMySqlThreadsRequest extends AbstractModel{
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.RecordHistory != null) {
+            this.RecordHistory = new Boolean(source.RecordHistory);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class KillMySqlThreadsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Threads.", this.Threads);
         this.setParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "RecordHistory", this.RecordHistory);
 
     }
 }

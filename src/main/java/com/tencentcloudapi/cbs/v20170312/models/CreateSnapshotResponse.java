@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSnapshotResponse extends AbstractModel{
 
     /**
-    * ID of the new snapshot.
+    * ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateSnapshotResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ID of the new snapshot. 
-     * @return SnapshotId ID of the new snapshot.
+     * Get ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SnapshotId ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set ID of the new snapshot.
-     * @param SnapshotId ID of the new snapshot.
+     * Set ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SnapshotId ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;

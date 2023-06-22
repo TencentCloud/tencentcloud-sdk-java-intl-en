@@ -80,6 +80,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SlaveConst;
 
     /**
+    * Maximum number of connections. `0` indicates no limit.
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
      * Get Username 
      * @return UserName Username
      */
@@ -211,6 +218,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SlaveConst = SlaveConst;
     }
 
+    /**
+     * Get Maximum number of connections. `0` indicates no limit. 
+     * @return MaxUserConnections Maximum number of connections. `0` indicates no limit.
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set Maximum number of connections. `0` indicates no limit.
+     * @param MaxUserConnections Maximum number of connections. `0` indicates no limit.
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public DBAccount() {
     }
 
@@ -243,6 +266,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SlaveConst != null) {
             this.SlaveConst = new Long(source.SlaveConst);
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -258,6 +284,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
         this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }

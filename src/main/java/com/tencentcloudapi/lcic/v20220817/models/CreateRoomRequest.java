@@ -142,6 +142,15 @@ public class CreateRoomRequest extends AbstractModel{
     private String GroupId;
 
     /**
+    * Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get Room name 
      * @return Name Room name
      */
@@ -413,6 +422,30 @@ public class CreateRoomRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required) 
+     * @return EnableDirectControl Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+     * @param EnableDirectControl Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -475,6 +508,9 @@ public class CreateRoomRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -499,6 +535,7 @@ public class CreateRoomRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

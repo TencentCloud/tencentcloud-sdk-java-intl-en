@@ -128,6 +128,13 @@ public class DescribeRoomResponse extends AbstractModel{
     private String GroupId;
 
     /**
+    * Whether the students' consent is required to control their cameras/microphones.
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -375,6 +382,22 @@ public class DescribeRoomResponse extends AbstractModel{
     }
 
     /**
+     * Get Whether the students' consent is required to control their cameras/microphones. 
+     * @return EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set Whether the students' consent is required to control their cameras/microphones.
+     * @param EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -446,6 +469,9 @@ public class DescribeRoomResponse extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -471,6 +497,7 @@ public class DescribeRoomResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

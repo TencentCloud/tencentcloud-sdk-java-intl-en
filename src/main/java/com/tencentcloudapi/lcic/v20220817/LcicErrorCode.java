@@ -42,6 +42,9 @@ public enum LcicErrorCode {
     // Prohibited content (pornographic, terrorist, politically sensitive) detected.
      INVALIDPARAMETER_CONTENT("InvalidParameter.Content"),
      
+    // Unable to access the CSS/JavaScript address.
+     INVALIDPARAMETER_CSSORJS("InvalidParameter.CssOrJs"),
+     
     // The end time cannot be earlier than the current time.
      INVALIDPARAMETER_ENDTIME("InvalidParameter.EndTime"),
      

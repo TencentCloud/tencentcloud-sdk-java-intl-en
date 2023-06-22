@@ -121,6 +121,13 @@ public class ModifyRoomRequest extends AbstractModel{
     private String GroupId;
 
     /**
+    * Whether the students' consent is required to control their cameras/microphones.
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get The room ID. 
      * @return RoomId The room ID.
      */
@@ -344,6 +351,22 @@ public class ModifyRoomRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get Whether the students' consent is required to control their cameras/microphones. 
+     * @return EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set Whether the students' consent is required to control their cameras/microphones.
+     * @param EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -397,6 +420,9 @@ public class ModifyRoomRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class ModifyRoomRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

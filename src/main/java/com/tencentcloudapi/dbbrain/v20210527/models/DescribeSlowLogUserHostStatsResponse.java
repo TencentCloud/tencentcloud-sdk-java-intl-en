@@ -37,6 +37,20 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
     private SlowLogHost [] Items;
 
     /**
+    * Detailed list of the percentages of slow logs from different source usernames
+    */
+    @SerializedName("UserNameItems")
+    @Expose
+    private SlowLogUser [] UserNameItems;
+
+    /**
+    * The number of source users
+    */
+    @SerializedName("UserTotalCount")
+    @Expose
+    private Long UserTotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +90,38 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
     }
 
     /**
+     * Get Detailed list of the percentages of slow logs from different source usernames 
+     * @return UserNameItems Detailed list of the percentages of slow logs from different source usernames
+     */
+    public SlowLogUser [] getUserNameItems() {
+        return this.UserNameItems;
+    }
+
+    /**
+     * Set Detailed list of the percentages of slow logs from different source usernames
+     * @param UserNameItems Detailed list of the percentages of slow logs from different source usernames
+     */
+    public void setUserNameItems(SlowLogUser [] UserNameItems) {
+        this.UserNameItems = UserNameItems;
+    }
+
+    /**
+     * Get The number of source users 
+     * @return UserTotalCount The number of source users
+     */
+    public Long getUserTotalCount() {
+        return this.UserTotalCount;
+    }
+
+    /**
+     * Set The number of source users
+     * @param UserTotalCount The number of source users
+     */
+    public void setUserTotalCount(Long UserTotalCount) {
+        this.UserTotalCount = UserTotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +154,15 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
                 this.Items[i] = new SlowLogHost(source.Items[i]);
             }
         }
+        if (source.UserNameItems != null) {
+            this.UserNameItems = new SlowLogUser[source.UserNameItems.length];
+            for (int i = 0; i < source.UserNameItems.length; i++) {
+                this.UserNameItems[i] = new SlowLogUser(source.UserNameItems[i]);
+            }
+        }
+        if (source.UserTotalCount != null) {
+            this.UserTotalCount = new Long(source.UserTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +175,8 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "UserNameItems.", this.UserNameItems);
+        this.setParamSimple(map, prefix + "UserTotalCount", this.UserTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

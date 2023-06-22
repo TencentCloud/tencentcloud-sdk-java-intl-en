@@ -219,7 +219,7 @@ public class InstanceInfo extends AbstractModel{
     private String AuditRunningStatus;
 
     /**
-    * Private VIP
+    * Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InternalVip")
@@ -227,7 +227,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InternalVip;
 
     /**
-    * Private network port
+    * Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InternalVport")
@@ -240,6 +240,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
 
     /**
      * Get Instance ID. 
@@ -690,9 +706,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Private VIP
+     * Get Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InternalVip Private VIP
+     * @return InternalVip Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInternalVip() {
@@ -700,9 +716,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Private VIP
+     * Set Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InternalVip Private VIP
+     * @param InternalVip Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInternalVip(String InternalVip) {
@@ -710,9 +726,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Private network port
+     * Get Private network port 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InternalVport Private network port
+     * @return InternalVport Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getInternalVport() {
@@ -720,9 +736,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Private network port
+     * Set Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InternalVport Private network port
+     * @param InternalVport Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInternalVport(Long InternalVport) {
@@ -743,6 +759,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterId Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterId Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterName Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterName Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
     }
 
     public InstanceInfo() {
@@ -846,6 +902,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -884,6 +946,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InternalVip", this.InternalVip);
         this.setParamSimple(map, prefix + "InternalVport", this.InternalVport);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

@@ -30,30 +30,32 @@ public class OpenAuditServiceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+    * Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+    * Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
+
+    /**
+    * Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+    */
+    @SerializedName("AuditRuleFilters")
+    @Expose
+    private AuditRuleFilters [] AuditRuleFilters;
+
+    /**
+    * Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+    */
+    @SerializedName("RuleTemplateIds")
+    @Expose
+    private String [] RuleTemplateIds;
 
     /**
      * Get TencentDB for MySQL instance ID 
@@ -72,83 +74,67 @@ public class OpenAuditServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years). 
-     * @return LogExpireDay Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * Get Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years). 
+     * @return LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-     * @param LogExpireDay Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * Set Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+     * @param LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years). 
-     * @return HighLogExpireDay Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * Get Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month). 
+     * @return HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-     * @param HighLogExpireDay Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * Set Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+     * @param HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
+    }
+
+    /**
+     * Get Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied. 
+     * @return AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     */
+    public AuditRuleFilters [] getAuditRuleFilters() {
+        return this.AuditRuleFilters;
+    }
+
+    /**
+     * Set Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @param AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     */
+    public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
+        this.AuditRuleFilters = AuditRuleFilters;
+    }
+
+    /**
+     * Get Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied. 
+     * @return RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     */
+    public String [] getRuleTemplateIds() {
+        return this.RuleTemplateIds;
+    }
+
+    /**
+     * Set Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * @param RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     */
+    public void setRuleTemplateIds(String [] RuleTemplateIds) {
+        this.RuleTemplateIds = RuleTemplateIds;
     }
 
     public OpenAuditServiceRequest() {
@@ -168,6 +154,18 @@ public class OpenAuditServiceRequest extends AbstractModel{
         if (source.HighLogExpireDay != null) {
             this.HighLogExpireDay = new Long(source.HighLogExpireDay);
         }
+        if (source.AuditRuleFilters != null) {
+            this.AuditRuleFilters = new AuditRuleFilters[source.AuditRuleFilters.length];
+            for (int i = 0; i < source.AuditRuleFilters.length; i++) {
+                this.AuditRuleFilters[i] = new AuditRuleFilters(source.AuditRuleFilters[i]);
+            }
+        }
+        if (source.RuleTemplateIds != null) {
+            this.RuleTemplateIds = new String[source.RuleTemplateIds.length];
+            for (int i = 0; i < source.RuleTemplateIds.length; i++) {
+                this.RuleTemplateIds[i] = new String(source.RuleTemplateIds[i]);
+            }
+        }
     }
 
 
@@ -178,6 +176,8 @@ public class OpenAuditServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
         this.setParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
+        this.setParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+        this.setParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
 
     }
 }

@@ -325,6 +325,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ErrorPrompt;
 
     /**
+    * Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BurstPerformance")
+    @Expose
+    private Boolean BurstPerformance;
+
+    /**
      * Get Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
 Note: This field may return null, indicating that no valid value was found. 
      * @return DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
@@ -1040,6 +1047,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ErrorPrompt = ErrorPrompt;
     }
 
+    /**
+     * Get Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getBurstPerformance() {
+        return this.BurstPerformance;
+    }
+
+    /**
+     * Set Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBurstPerformance(Boolean BurstPerformance) {
+        this.BurstPerformance = BurstPerformance;
+    }
+
     public Disk() {
     }
 
@@ -1180,6 +1203,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ErrorPrompt != null) {
             this.ErrorPrompt = new String(source.ErrorPrompt);
         }
+        if (source.BurstPerformance != null) {
+            this.BurstPerformance = new Boolean(source.BurstPerformance);
+        }
     }
 
 
@@ -1228,6 +1254,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
         this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
+        this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
 
     }
 }

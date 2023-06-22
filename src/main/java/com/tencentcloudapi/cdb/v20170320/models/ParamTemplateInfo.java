@@ -58,6 +58,13 @@ public class ParamTemplateInfo extends AbstractModel{
     private String TemplateType;
 
     /**
+    * Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get Parameter template ID 
      * @return TemplateId Parameter template ID
      */
@@ -137,6 +144,22 @@ public class ParamTemplateInfo extends AbstractModel{
         this.TemplateType = TemplateType;
     }
 
+    /**
+     * Get Parameter template engine Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public ParamTemplateInfo() {
     }
 
@@ -160,6 +183,9 @@ public class ParamTemplateInfo extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ParamTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

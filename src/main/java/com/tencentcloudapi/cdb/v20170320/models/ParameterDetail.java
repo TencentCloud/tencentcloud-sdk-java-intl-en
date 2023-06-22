@@ -100,6 +100,13 @@ public class ParameterDetail extends AbstractModel{
     private String MinFunc;
 
     /**
+    * Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsNotSupportEdit")
+    @Expose
+    private Boolean IsNotSupportEdit;
+
+    /**
      * Get Parameter name 
      * @return Name Parameter name
      */
@@ -275,6 +282,22 @@ public class ParameterDetail extends AbstractModel{
         this.MinFunc = MinFunc;
     }
 
+    /**
+     * Get Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsNotSupportEdit() {
+        return this.IsNotSupportEdit;
+    }
+
+    /**
+     * Set Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsNotSupportEdit(Boolean IsNotSupportEdit) {
+        this.IsNotSupportEdit = IsNotSupportEdit;
+    }
+
     public ParameterDetail() {
     }
 
@@ -319,6 +342,9 @@ public class ParameterDetail extends AbstractModel{
         if (source.MinFunc != null) {
             this.MinFunc = new String(source.MinFunc);
         }
+        if (source.IsNotSupportEdit != null) {
+            this.IsNotSupportEdit = new Boolean(source.IsNotSupportEdit);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class ParameterDetail extends AbstractModel{
         this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
         this.setParamSimple(map, prefix + "MinFunc", this.MinFunc);
+        this.setParamSimple(map, prefix + "IsNotSupportEdit", this.IsNotSupportEdit);
 
     }
 }
