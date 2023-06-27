@@ -15,6 +15,15 @@ public enum EmrErrorCode {
     // Failed to call the CAM service.
      FAILEDOPERATION_GETCAMSERVERFAILED("FailedOperation.GetCamServerFailed"),
      
+    // 
+     FAILEDOPERATION_GETCVMCONFIGQUOTAFAILED("FailedOperation.GetCvmConfigQuotaFailed"),
+     
+    // 
+     FAILEDOPERATION_GETCVMSERVERFAILED("FailedOperation.GetCvmServerFailed"),
+     
+    // 
+     FAILEDOPERATION_GETTRADESERVERFAILED("FailedOperation.GetTradeServerFailed"),
+     
     // Operation failed. The pods are not supported.
      FAILEDOPERATION_NOTSUPPORTPOD("FailedOperation.NotSupportPod"),
      
@@ -86,6 +95,9 @@ public enum EmrErrorCode {
      
     // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
+     
+    // Parameter error.
+     INVALIDPARAMETER_APPIDRESOURCENOTMATCH("InvalidParameter.AppIdResourceNotMatch"),
      
     // Incorrect display policy.
      INVALIDPARAMETER_DISPLAYSTRATEGYNOTMATCH("InvalidParameter.DisplayStrategyNotMatch"),
@@ -314,6 +326,9 @@ public enum EmrErrorCode {
      
     // The instance was not found.
      RESOURCENOTFOUND_CLUSTERNOTFOUND("ResourceNotFound.ClusterNotFound"),
+     
+    // Unable to find the specified CVM instance.
+     RESOURCENOTFOUND_CVMINSTANCENOTFOUND("ResourceNotFound.CvmInstanceNotFound"),
      
     // No hardware information found.
      RESOURCENOTFOUND_HARDWAREINFONOTFOUND("ResourceNotFound.HardwareInfoNotFound"),

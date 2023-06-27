@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBaseBackupResponse extends AbstractModel{
-
-    /**
-    * Full backup set ID
-    */
-    @SerializedName("BaseBackupId")
-    @Expose
-    private String BaseBackupId;
+public class ModifyBackupDownloadRestrictionResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class CreateBaseBackupResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Full backup set ID 
-     * @return BaseBackupId Full backup set ID
-     */
-    public String getBaseBackupId() {
-        return this.BaseBackupId;
-    }
-
-    /**
-     * Set Full backup set ID
-     * @param BaseBackupId Full backup set ID
-     */
-    public void setBaseBackupId(String BaseBackupId) {
-        this.BaseBackupId = BaseBackupId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class CreateBaseBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBaseBackupResponse() {
+    public ModifyBackupDownloadRestrictionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBaseBackupResponse(CreateBaseBackupResponse source) {
-        if (source.BaseBackupId != null) {
-            this.BaseBackupId = new String(source.BaseBackupId);
-        }
+    public ModifyBackupDownloadRestrictionResponse(ModifyBackupDownloadRestrictionResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateBaseBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BaseBackupId", this.BaseBackupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

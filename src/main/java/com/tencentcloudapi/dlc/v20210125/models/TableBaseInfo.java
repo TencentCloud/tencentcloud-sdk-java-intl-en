@@ -93,6 +93,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DataGovernPolicy GovernPolicy;
 
     /**
+    * Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbGovernPolicyIsDisable")
+    @Expose
+    private String DbGovernPolicyIsDisable;
+
+    /**
      * Get The database name. 
      * @return DatabaseName The database name.
      */
@@ -264,6 +272,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.GovernPolicy = GovernPolicy;
     }
 
+    /**
+     * Get Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbGovernPolicyIsDisable() {
+        return this.DbGovernPolicyIsDisable;
+    }
+
+    /**
+     * Set Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbGovernPolicyIsDisable(String DbGovernPolicyIsDisable) {
+        this.DbGovernPolicyIsDisable = DbGovernPolicyIsDisable;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -299,6 +327,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.GovernPolicy != null) {
             this.GovernPolicy = new DataGovernPolicy(source.GovernPolicy);
         }
+        if (source.DbGovernPolicyIsDisable != null) {
+            this.DbGovernPolicyIsDisable = new String(source.DbGovernPolicyIsDisable);
+        }
     }
 
 
@@ -315,6 +346,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
+        this.setParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
 
     }
 }

@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBaseBackupResponse extends AbstractModel{
+public class IsolateDCDBInstanceResponse extends AbstractModel{
 
     /**
-    * Full backup set ID
+    * IDs of isolated instances
     */
-    @SerializedName("BaseBackupId")
+    @SerializedName("SuccessInstanceIds")
     @Expose
-    private String BaseBackupId;
+    private String [] SuccessInstanceIds;
+
+    /**
+    * IDs of instances failed to be isolated
+    */
+    @SerializedName("FailedInstanceIds")
+    @Expose
+    private String [] FailedInstanceIds;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class CreateBaseBackupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Full backup set ID 
-     * @return BaseBackupId Full backup set ID
+     * Get IDs of isolated instances 
+     * @return SuccessInstanceIds IDs of isolated instances
      */
-    public String getBaseBackupId() {
-        return this.BaseBackupId;
+    public String [] getSuccessInstanceIds() {
+        return this.SuccessInstanceIds;
     }
 
     /**
-     * Set Full backup set ID
-     * @param BaseBackupId Full backup set ID
+     * Set IDs of isolated instances
+     * @param SuccessInstanceIds IDs of isolated instances
      */
-    public void setBaseBackupId(String BaseBackupId) {
-        this.BaseBackupId = BaseBackupId;
+    public void setSuccessInstanceIds(String [] SuccessInstanceIds) {
+        this.SuccessInstanceIds = SuccessInstanceIds;
+    }
+
+    /**
+     * Get IDs of instances failed to be isolated 
+     * @return FailedInstanceIds IDs of instances failed to be isolated
+     */
+    public String [] getFailedInstanceIds() {
+        return this.FailedInstanceIds;
+    }
+
+    /**
+     * Set IDs of instances failed to be isolated
+     * @param FailedInstanceIds IDs of instances failed to be isolated
+     */
+    public void setFailedInstanceIds(String [] FailedInstanceIds) {
+        this.FailedInstanceIds = FailedInstanceIds;
     }
 
     /**
@@ -68,16 +91,25 @@ public class CreateBaseBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBaseBackupResponse() {
+    public IsolateDCDBInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBaseBackupResponse(CreateBaseBackupResponse source) {
-        if (source.BaseBackupId != null) {
-            this.BaseBackupId = new String(source.BaseBackupId);
+    public IsolateDCDBInstanceResponse(IsolateDCDBInstanceResponse source) {
+        if (source.SuccessInstanceIds != null) {
+            this.SuccessInstanceIds = new String[source.SuccessInstanceIds.length];
+            for (int i = 0; i < source.SuccessInstanceIds.length; i++) {
+                this.SuccessInstanceIds[i] = new String(source.SuccessInstanceIds[i]);
+            }
+        }
+        if (source.FailedInstanceIds != null) {
+            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
+            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
+                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +121,8 @@ public class CreateBaseBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BaseBackupId", this.BaseBackupId);
+        this.setParamArraySimple(map, prefix + "SuccessInstanceIds.", this.SuccessInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

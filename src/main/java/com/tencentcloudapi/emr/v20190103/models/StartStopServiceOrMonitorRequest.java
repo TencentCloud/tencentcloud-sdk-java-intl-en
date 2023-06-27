@@ -31,11 +31,11 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
 
     /**
     * The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
     */
     @SerializedName("OpType")
     @Expose
@@ -47,6 +47,13 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
     @SerializedName("OpScope")
     @Expose
     private OpScope OpScope;
+
+    /**
+    * The operation policy.
+    */
+    @SerializedName("StrategyConfig")
+    @Expose
+    private StrategyConfig StrategyConfig;
 
     /**
      * Get The cluster ID. 
@@ -66,17 +73,17 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
 
     /**
      * Get The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
- 
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li> 
      * @return OpType The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
      */
     public String getOpType() {
         return this.OpType;
@@ -84,17 +91,17 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
 
     /**
      * Set The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
      * @param OpType The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
      */
     public void setOpType(String OpType) {
         this.OpType = OpType;
@@ -116,6 +123,22 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
         this.OpScope = OpScope;
     }
 
+    /**
+     * Get The operation policy. 
+     * @return StrategyConfig The operation policy.
+     */
+    public StrategyConfig getStrategyConfig() {
+        return this.StrategyConfig;
+    }
+
+    /**
+     * Set The operation policy.
+     * @param StrategyConfig The operation policy.
+     */
+    public void setStrategyConfig(StrategyConfig StrategyConfig) {
+        this.StrategyConfig = StrategyConfig;
+    }
+
     public StartStopServiceOrMonitorRequest() {
     }
 
@@ -133,6 +156,9 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
         if (source.OpScope != null) {
             this.OpScope = new OpScope(source.OpScope);
         }
+        if (source.StrategyConfig != null) {
+            this.StrategyConfig = new StrategyConfig(source.StrategyConfig);
+        }
     }
 
 
@@ -143,6 +169,7 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "OpType", this.OpType);
         this.setParamObj(map, prefix + "OpScope.", this.OpScope);
+        this.setParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
 
     }
 }

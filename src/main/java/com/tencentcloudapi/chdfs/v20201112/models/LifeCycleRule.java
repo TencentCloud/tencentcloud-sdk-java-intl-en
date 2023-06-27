@@ -65,6 +65,20 @@ public class LifeCycleRule extends AbstractModel{
     private String CreateTime;
 
     /**
+    * Detailed storage usage of the current lifecycle rule path
+    */
+    @SerializedName("Summary")
+    @Expose
+    private Summary Summary;
+
+    /**
+    * Update time of `Summary`
+    */
+    @SerializedName("LastSummaryTime")
+    @Expose
+    private String LastSummaryTime;
+
+    /**
      * Get Lifecycle rule ID 
      * @return LifeCycleRuleId Lifecycle rule ID
      */
@@ -160,6 +174,38 @@ public class LifeCycleRule extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Detailed storage usage of the current lifecycle rule path 
+     * @return Summary Detailed storage usage of the current lifecycle rule path
+     */
+    public Summary getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set Detailed storage usage of the current lifecycle rule path
+     * @param Summary Detailed storage usage of the current lifecycle rule path
+     */
+    public void setSummary(Summary Summary) {
+        this.Summary = Summary;
+    }
+
+    /**
+     * Get Update time of `Summary` 
+     * @return LastSummaryTime Update time of `Summary`
+     */
+    public String getLastSummaryTime() {
+        return this.LastSummaryTime;
+    }
+
+    /**
+     * Set Update time of `Summary`
+     * @param LastSummaryTime Update time of `Summary`
+     */
+    public void setLastSummaryTime(String LastSummaryTime) {
+        this.LastSummaryTime = LastSummaryTime;
+    }
+
     public LifeCycleRule() {
     }
 
@@ -189,6 +235,12 @@ public class LifeCycleRule extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Summary != null) {
+            this.Summary = new Summary(source.Summary);
+        }
+        if (source.LastSummaryTime != null) {
+            this.LastSummaryTime = new String(source.LastSummaryTime);
+        }
     }
 
 
@@ -202,6 +254,8 @@ public class LifeCycleRule extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Transitions.", this.Transitions);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamObj(map, prefix + "Summary.", this.Summary);
+        this.setParamSimple(map, prefix + "LastSummaryTime", this.LastSummaryTime);
 
     }
 }

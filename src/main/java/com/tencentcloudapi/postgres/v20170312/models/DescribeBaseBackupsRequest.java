@@ -37,10 +37,7 @@ public class DescribeBaseBackupsRequest extends AbstractModel{
     private String MaxFinishTime;
 
     /**
-    * Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+    * Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
     */
     @SerializedName("Filters")
     @Expose
@@ -107,28 +104,16 @@ db-instance-ip: Filter by instance VPC IP (in string format).
     }
 
     /**
-     * Get Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format). 
-     * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * Get Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string),  
+     * @return Filters Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-     * @param Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * Set Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+     * @param Filters Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

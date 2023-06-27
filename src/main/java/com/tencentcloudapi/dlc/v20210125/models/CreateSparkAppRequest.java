@@ -212,6 +212,13 @@ public class CreateSparkAppRequest extends AbstractModel{
     private String SessionId;
 
     /**
+    * Whether to inherit the task resource configuration from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
+
+    /**
      * Get Spark application name 
      * @return AppName Spark application name
      */
@@ -643,6 +650,22 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get Whether to inherit the task resource configuration from the cluster template. Valid values: `0` (default): No; `1`: Yes. 
+     * @return IsInherit Whether to inherit the task resource configuration from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set Whether to inherit the task resource configuration from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+     * @param IsInherit Whether to inherit the task resource configuration from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
+    }
+
     public CreateSparkAppRequest() {
     }
 
@@ -732,6 +755,9 @@ public class CreateSparkAppRequest extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -766,6 +792,7 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
         this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

@@ -132,7 +132,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     private String InstanceName;
 
     /**
-    * Whether IPv6 is supported
+    * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -167,7 +167,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     private String DcnInstanceId;
 
     /**
-    * Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+    * Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -437,16 +437,16 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     }
 
     /**
-     * Get Whether IPv6 is supported 
-     * @return Ipv6Flag Whether IPv6 is supported
+     * Get Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported). 
+     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set Whether IPv6 is supported
-     * @param Ipv6Flag Whether IPv6 is supported
+     * Set Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+     * @param Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
@@ -517,16 +517,16 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     }
 
     /**
-     * Get Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`. 
-     * @return AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+     * Get Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`. 
+     * @return AutoRenewFlag Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
-     * @param AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+     * Set Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
+     * @param AutoRenewFlag Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

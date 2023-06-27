@@ -295,18 +295,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
-    * 
+    * `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineClusterType")
     @Expose
     private String DataEngineClusterType;
 
     /**
-    * 
+    * `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineImageVersion")
     @Expose
     private String DataEngineImageVersion;
+
+    /**
+    * Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
 
     /**
      * Get Spark job ID 
@@ -953,35 +963,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DataEngineClusterType 
+     * Get `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngineClusterType() {
         return this.DataEngineClusterType;
     }
 
     /**
-     * Set 
-     * @param DataEngineClusterType 
+     * Set `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineClusterType(String DataEngineClusterType) {
         this.DataEngineClusterType = DataEngineClusterType;
     }
 
     /**
-     * Get  
-     * @return DataEngineImageVersion 
+     * Get `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngineImageVersion() {
         return this.DataEngineImageVersion;
     }
 
     /**
-     * Set 
-     * @param DataEngineImageVersion 
+     * Set `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineImageVersion(String DataEngineImageVersion) {
         this.DataEngineImageVersion = DataEngineImageVersion;
+    }
+
+    /**
+     * Get Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
     }
 
     public SparkJobInfo() {
@@ -1109,6 +1147,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DataEngineImageVersion != null) {
             this.DataEngineImageVersion = new String(source.DataEngineImageVersion);
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -1155,6 +1196,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
         this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

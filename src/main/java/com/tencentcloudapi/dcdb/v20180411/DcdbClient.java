@@ -39,7 +39,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove the isolation of a pay-as-you-go TDSQL for MySQL instance.
+     *This API is used to remove a pay-as-you-go TDSQL instance from isolation.
      * @param req ActiveHourDCDBInstanceRequest
      * @return ActiveHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ Note: Accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, and purchased duration.
+     *This API is used to create a monthly subscribed TDSQL instance by passing in information such as instance specifications, database version number, and purchased duration.
      * @param req CreateDCDBInstanceRequest
      * @return CreateDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -200,7 +200,7 @@ Note: Accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to create pay-as-you-go TDSQL for MySQL instances.
+     *This API is used to create a pay-as-you-go TDSQL instance.
      * @param req CreateHourDCDBInstanceRequest
      * @return CreateHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -293,6 +293,26 @@ Note: Accounts with the same username but different hosts are considered as diff
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the encryption status of the instance data.
+     * @param req DescribeDBEncryptAttributesRequest
+     * @return DescribeDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBEncryptAttributes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -662,7 +682,7 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
-     *This API is used to terminate an isolated monthly-subscribed instance.
+     *This API is used to terminate an isolated monthly subscribed TDSQL instance.
      * @param req DestroyDCDBInstanceRequest
      * @return DestroyDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -682,7 +702,7 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
-     *This API is used to terminate a pay-as-you-go instance.
+     *This API is used to terminate a pay-as-you-go TDSQL instance.
      * @param req DestroyHourDCDBInstanceRequest
      * @return DestroyHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -763,6 +783,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to isolate a monthly subscribed TDSQL instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
+     * @param req IsolateDCDBInstanceRequest
+     * @return IsolateDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDCDBInstanceResponse IsolateDCDBInstance(IsolateDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to isolate a dedicated TencentDB instance.
      * @param req IsolateDedicatedDBInstanceRequest
      * @return IsolateDedicatedDBInstanceResponse
@@ -783,7 +823,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+     *This API is used to isolate a pay-as-you-go TDSQL instance.
      * @param req IsolateHourDCDBInstanceRequest
      * @return IsolateHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -823,6 +863,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to modify the configurations of an account, such as `max_user_connections`.
+     * @param req ModifyAccountConfigRequest
+     * @return ModifyAccountConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountConfigResponse ModifyAccountConfig(ModifyAccountConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the remarks of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
      * @param req ModifyAccountDescriptionRequest
@@ -844,12 +904,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to modify the permissions of a TencentDB instance account.
-
-**Notes**
-- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
-- An error will be reported if read-write permissions are granted to a read-only account.
-- If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+     *This API is used to modify the permissions of a TencentDB instance account. \n\n**Note**\n-Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted. An error will be reported if read-write permissions are granted to a read-only account. If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted view permissions, set `Privileges` to an empty array.
      * @param req ModifyAccountPrivilegesRequest
      * @return ModifyAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1110,7 +1165,7 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
+     *This API is used to upgrade a pay-as-you-go TDSQL instance.
      * @param req UpgradeHourDCDBInstanceRequest
      * @return UpgradeHourDCDBInstanceResponse
      * @throws TencentCloudSDKException

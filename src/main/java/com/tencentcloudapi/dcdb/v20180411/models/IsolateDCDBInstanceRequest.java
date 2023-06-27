@@ -20,39 +20,39 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IsolateHourDCDBInstanceRequest extends AbstractModel{
+public class IsolateDCDBInstanceRequest extends AbstractModel{
 
     /**
-    * ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+    * Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API. 
-     * @return InstanceIds ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * Get Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API. 
+     * @return InstanceIds Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
-     * @param InstanceIds ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * Set Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
+     * @param InstanceIds Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
-    public IsolateHourDCDBInstanceRequest() {
+    public IsolateDCDBInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public IsolateHourDCDBInstanceRequest(IsolateHourDCDBInstanceRequest source) {
+    public IsolateDCDBInstanceRequest(IsolateDCDBInstanceRequest source) {
         if (source.InstanceIds != null) {
             this.InstanceIds = new String[source.InstanceIds.length];
             for (int i = 0; i < source.InstanceIds.length; i++) {

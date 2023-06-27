@@ -39,8 +39,17 @@ public enum DcdbErrorCode {
     // Failed to query the security group details
      FAILEDOPERATION_GETSECURITYGROUPDETAILFAILED("FailedOperation.GetSecurityGroupDetailFailed"),
      
+    // Refund is not supported for the instance
+     FAILEDOPERATION_INSTANCECANNOTRETURN("FailedOperation.InstanceCanNotReturn"),
+     
+    // Instance refund failed
+     FAILEDOPERATION_INSTANCERETURNFAILED("FailedOperation.InstanceReturnFailed"),
+     
     // Failed to modify account permissions.
      FAILEDOPERATION_MODIFYRIGHTFAILED("FailedOperation.ModifyRightFailed"),
+     
+    // Failed to modify account permissions
+     FAILEDOPERATION_MODIFYUSERCONFIGFAILED("FailedOperation.ModifyUserConfigFailed"),
      
     // Failed to isolate the instance
      FAILEDOPERATION_OSSISOLATEINSTANCEFAILED("FailedOperation.OssIsolateInstanceFailed"),
@@ -332,6 +341,9 @@ public enum DcdbErrorCode {
      
     // You have no permission to manipulate this API or resource.
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
+     
+    // 
+     UNSUPPORTEDOPERATION_DBVERSIONNOTSUPPORTED("UnsupportedOperation.DbVersionNotSupported"),
      
     // Unsupported operation.
      UNSUPPORTEDOPERATION_INVALIDOPERATION("UnsupportedOperation.InvalidOperation"),

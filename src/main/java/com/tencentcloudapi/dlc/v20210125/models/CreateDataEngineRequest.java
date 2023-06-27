@@ -226,6 +226,13 @@ public class CreateDataEngineRequest extends AbstractModel{
     private Long ElasticLimit;
 
     /**
+    * The session resource configuration template for a Spark job cluster.
+    */
+    @SerializedName("SessionResourceTemplate")
+    @Expose
+    private SessionResourceTemplate SessionResourceTemplate;
+
+    /**
      * Get The engine type. Valid values: `spark` and `presto`. 
      * @return EngineType The engine type. Valid values: `spark` and `presto`.
      */
@@ -689,6 +696,22 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.ElasticLimit = ElasticLimit;
     }
 
+    /**
+     * Get The session resource configuration template for a Spark job cluster. 
+     * @return SessionResourceTemplate The session resource configuration template for a Spark job cluster.
+     */
+    public SessionResourceTemplate getSessionResourceTemplate() {
+        return this.SessionResourceTemplate;
+    }
+
+    /**
+     * Set The session resource configuration template for a Spark job cluster.
+     * @param SessionResourceTemplate The session resource configuration template for a Spark job cluster.
+     */
+    public void setSessionResourceTemplate(SessionResourceTemplate SessionResourceTemplate) {
+        this.SessionResourceTemplate = SessionResourceTemplate;
+    }
+
     public CreateDataEngineRequest() {
     }
 
@@ -790,6 +813,9 @@ public class CreateDataEngineRequest extends AbstractModel{
         if (source.ElasticLimit != null) {
             this.ElasticLimit = new Long(source.ElasticLimit);
         }
+        if (source.SessionResourceTemplate != null) {
+            this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
+        }
     }
 
 
@@ -826,6 +852,7 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MainClusterName", this.MainClusterName);
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+        this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
 
     }
 }

@@ -264,6 +264,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CmdArgs;
 
     /**
+    * The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ImageVersion")
+    @Expose
+    private String ImageVersion;
+
+    /**
+    * The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DriverSize")
+    @Expose
+    private String DriverSize;
+
+    /**
+    * The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExecutorSize")
+    @Expose
+    private String ExecutorSize;
+
+    /**
+    * The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExecutorNums")
+    @Expose
+    private Long ExecutorNums;
+
+    /**
+    * The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExecutorMaxNumbers")
+    @Expose
+    private Long ExecutorMaxNumbers;
+
+    /**
+    * 
+    */
+    @SerializedName("CommonMetrics")
+    @Expose
+    private CommonMetrics CommonMetrics;
+
+    /**
+    * 
+    */
+    @SerializedName("SparkMonitorMetrics")
+    @Expose
+    private SparkMonitorMetrics SparkMonitorMetrics;
+
+    /**
+    * 
+    */
+    @SerializedName("PrestoMonitorMetrics")
+    @Expose
+    private PrestoMonitorMetrics PrestoMonitorMetrics;
+
+    /**
      * Get Database name of the task 
      * @return DatabaseName Database name of the task
      */
@@ -843,6 +908,170 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CmdArgs = CmdArgs;
     }
 
+    /**
+     * Get The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ImageVersion The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getImageVersion() {
+        return this.ImageVersion;
+    }
+
+    /**
+     * Set The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageVersion The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setImageVersion(String ImageVersion) {
+        this.ImageVersion = ImageVersion;
+    }
+
+    /**
+     * Get The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DriverSize The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDriverSize() {
+        return this.DriverSize;
+    }
+
+    /**
+     * Set The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DriverSize The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDriverSize(String DriverSize) {
+        this.DriverSize = DriverSize;
+    }
+
+    /**
+     * Get The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutorSize The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getExecutorSize() {
+        return this.ExecutorSize;
+    }
+
+    /**
+     * Set The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutorSize The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExecutorSize(String ExecutorSize) {
+        this.ExecutorSize = ExecutorSize;
+    }
+
+    /**
+     * Get The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getExecutorNums() {
+        return this.ExecutorNums;
+    }
+
+    /**
+     * Set The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExecutorNums(Long ExecutorNums) {
+        this.ExecutorNums = ExecutorNums;
+    }
+
+    /**
+     * Get The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getExecutorMaxNumbers() {
+        return this.ExecutorMaxNumbers;
+    }
+
+    /**
+     * Set The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExecutorMaxNumbers(Long ExecutorMaxNumbers) {
+        this.ExecutorMaxNumbers = ExecutorMaxNumbers;
+    }
+
+    /**
+     * Get  
+     * @return CommonMetrics 
+     */
+    public CommonMetrics getCommonMetrics() {
+        return this.CommonMetrics;
+    }
+
+    /**
+     * Set 
+     * @param CommonMetrics 
+     */
+    public void setCommonMetrics(CommonMetrics CommonMetrics) {
+        this.CommonMetrics = CommonMetrics;
+    }
+
+    /**
+     * Get  
+     * @return SparkMonitorMetrics 
+     */
+    public SparkMonitorMetrics getSparkMonitorMetrics() {
+        return this.SparkMonitorMetrics;
+    }
+
+    /**
+     * Set 
+     * @param SparkMonitorMetrics 
+     */
+    public void setSparkMonitorMetrics(SparkMonitorMetrics SparkMonitorMetrics) {
+        this.SparkMonitorMetrics = SparkMonitorMetrics;
+    }
+
+    /**
+     * Get  
+     * @return PrestoMonitorMetrics 
+     */
+    public PrestoMonitorMetrics getPrestoMonitorMetrics() {
+        return this.PrestoMonitorMetrics;
+    }
+
+    /**
+     * Set 
+     * @param PrestoMonitorMetrics 
+     */
+    public void setPrestoMonitorMetrics(PrestoMonitorMetrics PrestoMonitorMetrics) {
+        this.PrestoMonitorMetrics = PrestoMonitorMetrics;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -947,6 +1176,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CmdArgs != null) {
             this.CmdArgs = new String(source.CmdArgs);
         }
+        if (source.ImageVersion != null) {
+            this.ImageVersion = new String(source.ImageVersion);
+        }
+        if (source.DriverSize != null) {
+            this.DriverSize = new String(source.DriverSize);
+        }
+        if (source.ExecutorSize != null) {
+            this.ExecutorSize = new String(source.ExecutorSize);
+        }
+        if (source.ExecutorNums != null) {
+            this.ExecutorNums = new Long(source.ExecutorNums);
+        }
+        if (source.ExecutorMaxNumbers != null) {
+            this.ExecutorMaxNumbers = new Long(source.ExecutorMaxNumbers);
+        }
+        if (source.CommonMetrics != null) {
+            this.CommonMetrics = new CommonMetrics(source.CommonMetrics);
+        }
+        if (source.SparkMonitorMetrics != null) {
+            this.SparkMonitorMetrics = new SparkMonitorMetrics(source.SparkMonitorMetrics);
+        }
+        if (source.PrestoMonitorMetrics != null) {
+            this.PrestoMonitorMetrics = new PrestoMonitorMetrics(source.PrestoMonitorMetrics);
+        }
     }
 
 
@@ -986,6 +1239,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UiUrl", this.UiUrl);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
         this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+        this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+        this.setParamSimple(map, prefix + "DriverSize", this.DriverSize);
+        this.setParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
+        this.setParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
+        this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+        this.setParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
+        this.setParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
+        this.setParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
 
     }
 }

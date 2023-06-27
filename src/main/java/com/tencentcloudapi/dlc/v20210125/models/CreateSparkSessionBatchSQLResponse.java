@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBaseBackupResponse extends AbstractModel{
+public class CreateSparkSessionBatchSQLResponse extends AbstractModel{
 
     /**
-    * Full backup set ID
+    * The unique identifier of a batch task.
     */
-    @SerializedName("BaseBackupId")
+    @SerializedName("BatchId")
     @Expose
-    private String BaseBackupId;
+    private String BatchId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateBaseBackupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Full backup set ID 
-     * @return BaseBackupId Full backup set ID
+     * Get The unique identifier of a batch task. 
+     * @return BatchId The unique identifier of a batch task.
      */
-    public String getBaseBackupId() {
-        return this.BaseBackupId;
+    public String getBatchId() {
+        return this.BatchId;
     }
 
     /**
-     * Set Full backup set ID
-     * @param BaseBackupId Full backup set ID
+     * Set The unique identifier of a batch task.
+     * @param BatchId The unique identifier of a batch task.
      */
-    public void setBaseBackupId(String BaseBackupId) {
-        this.BaseBackupId = BaseBackupId;
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateBaseBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBaseBackupResponse() {
+    public CreateSparkSessionBatchSQLResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBaseBackupResponse(CreateBaseBackupResponse source) {
-        if (source.BaseBackupId != null) {
-            this.BaseBackupId = new String(source.BaseBackupId);
+    public CreateSparkSessionBatchSQLResponse(CreateSparkSessionBatchSQLResponse source) {
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateBaseBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BaseBackupId", this.BaseBackupId);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

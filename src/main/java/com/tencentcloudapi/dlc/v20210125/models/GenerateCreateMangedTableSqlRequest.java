@@ -51,6 +51,13 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
     private Property [] Properties;
 
     /**
+    * The Upsert key for a v2 table (in Upsert mode).
+    */
+    @SerializedName("UpsertKeys")
+    @Expose
+    private String [] UpsertKeys;
+
+    /**
      * Get The basic table information. 
      * @return TableBaseInfo The basic table information.
      */
@@ -114,6 +121,22 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
         this.Properties = Properties;
     }
 
+    /**
+     * Get The Upsert key for a v2 table (in Upsert mode). 
+     * @return UpsertKeys The Upsert key for a v2 table (in Upsert mode).
+     */
+    public String [] getUpsertKeys() {
+        return this.UpsertKeys;
+    }
+
+    /**
+     * Set The Upsert key for a v2 table (in Upsert mode).
+     * @param UpsertKeys The Upsert key for a v2 table (in Upsert mode).
+     */
+    public void setUpsertKeys(String [] UpsertKeys) {
+        this.UpsertKeys = UpsertKeys;
+    }
+
     public GenerateCreateMangedTableSqlRequest() {
     }
 
@@ -143,6 +166,12 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
                 this.Properties[i] = new Property(source.Properties[i]);
             }
         }
+        if (source.UpsertKeys != null) {
+            this.UpsertKeys = new String[source.UpsertKeys.length];
+            for (int i = 0; i < source.UpsertKeys.length; i++) {
+                this.UpsertKeys[i] = new String(source.UpsertKeys[i]);
+            }
+        }
     }
 
 
@@ -154,6 +183,7 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
 
     }
 }

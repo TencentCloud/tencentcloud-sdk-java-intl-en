@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBaseBackupResponse extends AbstractModel{
+public class ModifyDBInstanceChargeTypeResponse extends AbstractModel{
 
     /**
-    * Full backup set ID
+    * Order name
     */
-    @SerializedName("BaseBackupId")
+    @SerializedName("DealName")
     @Expose
-    private String BaseBackupId;
+    private String DealName;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateBaseBackupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Full backup set ID 
-     * @return BaseBackupId Full backup set ID
+     * Get Order name 
+     * @return DealName Order name
      */
-    public String getBaseBackupId() {
-        return this.BaseBackupId;
+    public String getDealName() {
+        return this.DealName;
     }
 
     /**
-     * Set Full backup set ID
-     * @param BaseBackupId Full backup set ID
+     * Set Order name
+     * @param DealName Order name
      */
-    public void setBaseBackupId(String BaseBackupId) {
-        this.BaseBackupId = BaseBackupId;
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateBaseBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBaseBackupResponse() {
+    public ModifyDBInstanceChargeTypeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBaseBackupResponse(CreateBaseBackupResponse source) {
-        if (source.BaseBackupId != null) {
-            this.BaseBackupId = new String(source.BaseBackupId);
+    public ModifyDBInstanceChargeTypeResponse(ModifyDBInstanceChargeTypeResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateBaseBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BaseBackupId", this.BaseBackupId);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

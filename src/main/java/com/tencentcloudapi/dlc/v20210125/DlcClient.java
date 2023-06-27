@@ -39,6 +39,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to cancel a Spark SQL batch task.
+     * @param req CancelSparkSessionBatchSQLRequest
+     * @return CancelSparkSessionBatchSQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(CancelSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelSparkSessionBatchSQL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to cancel a task.
      * @param req CancelTaskRequest
      * @return CancelTaskResponse
@@ -151,6 +171,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSparkAppTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateSparkAppTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to submit a Spark SQL batch task.
+     * @param req CreateSparkSessionBatchSQLRequest
+     * @return CreateSparkSessionBatchSQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(CreateSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSparkSessionBatchSQL");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -379,6 +419,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the logs of a Spark SQL batch task.
+     * @param req DescribeSparkSessionBatchSqlLogRequest
+     * @return DescribeSparkSessionBatchSqlLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(DescribeSparkSessionBatchSqlLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSparkSessionBatchSqlLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the result of a task.
      * @param req DescribeTaskResultRequest
      * @return DescribeTaskResultResponse
@@ -471,6 +531,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySparkAppResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySparkApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify Spark job parameters in batches.
+     * @param req ModifySparkAppBatchRequest
+     * @return ModifySparkAppBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySparkAppBatchResponse ModifySparkAppBatch(ModifySparkAppBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySparkAppBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySparkAppBatch");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

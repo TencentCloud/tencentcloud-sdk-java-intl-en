@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeReadOnlyGroupsRequest extends AbstractModel{
 
     /**
-    * Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+    * Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
     */
     @SerializedName("Filters")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeReadOnlyGroupsRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-     * Get Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned. 
-     * @return Filters Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+     * Get Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string), 
+     * @return Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
-     * @param Filters Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+     * Set Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+     * @param Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -118,7 +118,7 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Whether IPv6 is supported
+    * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -160,7 +160,7 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     private String RollbackInstanceId;
 
     /**
-    * Rollback time
+    * Rollback time, such as "2021-11-22 00:00:00".
     */
     @SerializedName("RollbackTime")
     @Expose
@@ -398,16 +398,16 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether IPv6 is supported 
-     * @return Ipv6Flag Whether IPv6 is supported
+     * Get Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported). 
+     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set Whether IPv6 is supported
-     * @param Ipv6Flag Whether IPv6 is supported
+     * Set Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+     * @param Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
@@ -494,16 +494,16 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Rollback time 
-     * @return RollbackTime Rollback time
+     * Get Rollback time, such as "2021-11-22 00:00:00". 
+     * @return RollbackTime Rollback time, such as "2021-11-22 00:00:00".
      */
     public String getRollbackTime() {
         return this.RollbackTime;
     }
 
     /**
-     * Set Rollback time
-     * @param RollbackTime Rollback time
+     * Set Rollback time, such as "2021-11-22 00:00:00".
+     * @param RollbackTime Rollback time, such as "2021-11-22 00:00:00".
      */
     public void setRollbackTime(String RollbackTime) {
         this.RollbackTime = RollbackTime;
