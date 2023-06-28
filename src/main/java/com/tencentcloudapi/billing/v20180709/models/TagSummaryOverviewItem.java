@@ -31,14 +31,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TagValue;
 
     /**
-    * Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
-
-    /**
     * Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -47,44 +39,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RealTotalCostRatio;
 
     /**
-    * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("TotalCost")
+    @SerializedName("RealTotalCost")
     @Expose
-    private String TotalCost;
+    private String RealTotalCost;
 
     /**
-    * Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
+
+    /**
+    * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private String TotalCost;
 
     /**
      * Get Tag value
@@ -104,26 +99,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
-    }
-
-    /**
-     * Get Actual cost
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCost Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCost Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -147,6 +122,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
+    }
+
+    /**
+     * Set Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCashPayAmount() {
+        return this.CashPayAmount;
+    }
+
+    /**
+     * Set Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCashPayAmount(String CashPayAmount) {
+        this.CashPayAmount = CashPayAmount;
+    }
+
+    /**
+     * Get Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIncentivePayAmount() {
+        return this.IncentivePayAmount;
+    }
+
+    /**
+     * Set Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIncentivePayAmount(String IncentivePayAmount) {
+        this.IncentivePayAmount = IncentivePayAmount;
+    }
+
+    /**
+     * Get Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVoucherPayAmount() {
+        return this.VoucherPayAmount;
+    }
+
+    /**
+     * Set Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVoucherPayAmount(String VoucherPayAmount) {
+        this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
+    /**
      * Get The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -166,86 +221,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TotalCost = TotalCost;
     }
 
-    /**
-     * Get Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CashPayAmount Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getCashPayAmount() {
-        return this.CashPayAmount;
-    }
-
-    /**
-     * Set Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CashPayAmount Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setCashPayAmount(String CashPayAmount) {
-        this.CashPayAmount = CashPayAmount;
-    }
-
-    /**
-     * Get Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncentivePayAmount Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getIncentivePayAmount() {
-        return this.IncentivePayAmount;
-    }
-
-    /**
-     * Set Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncentivePayAmount Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setIncentivePayAmount(String IncentivePayAmount) {
-        this.IncentivePayAmount = IncentivePayAmount;
-    }
-
-    /**
-     * Get Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getVoucherPayAmount() {
-        return this.VoucherPayAmount;
-    }
-
-    /**
-     * Set Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setVoucherPayAmount(String VoucherPayAmount) {
-        this.VoucherPayAmount = VoucherPayAmount;
-    }
-
-    /**
-     * Get Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
-    }
-
     public TagSummaryOverviewItem() {
     }
 
@@ -257,14 +232,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TagValue != null) {
             this.TagValue = new String(source.TagValue);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
         }
-        if (source.TotalCost != null) {
-            this.TotalCost = new String(source.TotalCost);
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -278,6 +250,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
     }
 
 
@@ -286,13 +261,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagValue", this.TagValue);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

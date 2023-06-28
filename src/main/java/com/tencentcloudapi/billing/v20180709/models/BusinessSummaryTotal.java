@@ -23,32 +23,40 @@ import java.util.HashMap;
 public class BusinessSummaryTotal extends AbstractModel{
 
     /**
-    * Total cost
+    * Total amount after discount
+
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * Voucher amount
+    * Voucher payment:  The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Trial credit amount
+    * Free credit:  The amount paid by the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Cash amount
+    * Cash credit:  The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
+
+    /**
+    * Commission credit:  The amount paid by the user’s commission credit.
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -58,74 +66,87 @@ public class BusinessSummaryTotal extends AbstractModel{
     private String TotalCost;
 
     /**
-    * Payment by commission credits
-    */
-    @SerializedName("TransferPayAmount")
-    @Expose
-    private String TransferPayAmount;
+     * Get Total amount after discount
+ 
+     * @return RealTotalCost Total amount after discount
 
-    /**
-     * Get Total cost 
-     * @return RealTotalCost Total cost
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Total cost
-     * @param RealTotalCost Total cost
+     * Set Total amount after discount
+
+     * @param RealTotalCost Total amount after discount
+
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get Voucher amount 
-     * @return VoucherPayAmount Voucher amount
+     * Get Voucher payment:  The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher amount
-     * @param VoucherPayAmount Voucher amount
+     * Set Voucher payment:  The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Trial credit amount 
-     * @return IncentivePayAmount Trial credit amount
+     * Get Free credit:  The amount paid by the user’s free credit 
+     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Trial credit amount
-     * @param IncentivePayAmount Trial credit amount
+     * Set Free credit:  The amount paid by the user’s free credit
+     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Cash amount 
-     * @return CashPayAmount Cash amount
+     * Get Cash credit:  The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash amount
-     * @param CashPayAmount Cash amount
+     * Set Cash credit:  The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
+    }
+
+    /**
+     * Get Commission credit:  The amount paid by the user’s commission credit. 
+     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Commission credit:  The amount paid by the user’s commission credit.
+     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -142,22 +163,6 @@ public class BusinessSummaryTotal extends AbstractModel{
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
-    }
-
-    /**
-     * Get Payment by commission credits 
-     * @return TransferPayAmount Payment by commission credits
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set Payment by commission credits
-     * @param TransferPayAmount Payment by commission credits
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
     }
 
     public BusinessSummaryTotal() {
@@ -180,11 +185,11 @@ public class BusinessSummaryTotal extends AbstractModel{
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
         }
-        if (source.TotalCost != null) {
-            this.TotalCost = new String(source.TotalCost);
-        }
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
         }
     }
 
@@ -197,8 +202,8 @@ public class BusinessSummaryTotal extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

@@ -31,18 +31,11 @@ Note: This field may return null, indicating that no valid value was found.
     private String RegionId;
 
     /**
-    * Region name
+    * Region:  The region to which a resource belongs, such as South China (Guangzhou).
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
-
-    /**
-    * Actual cost
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
 
     /**
     * Cost ratio, to two decimal points
@@ -52,25 +45,39 @@ Note: This field may return null, indicating that no valid value was found.
     private String RealTotalCostRatio;
 
     /**
-    * Cash amount
+    * Total amount after discount
+    */
+    @SerializedName("RealTotalCost")
+    @Expose
+    private String RealTotalCost;
+
+    /**
+    * Cash credit:  The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Trial credit amount
+    * Free credit:  The amount paid by the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher amount
+    * Voucher payment:  The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
+
+    /**
+    * Commission credit:  The amount paid by the user’s commission credit.
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * Billing month, e.g. `2019-08`
@@ -85,13 +92,6 @@ Note: This field may return null, indicating that no valid value was found.
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
-
-    /**
-    * Payment by commission credits
-    */
-    @SerializedName("TransferPayAmount")
-    @Expose
-    private String TransferPayAmount;
 
     /**
      * Get Region ID
@@ -114,35 +114,19 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Region name 
-     * @return RegionName Region name
+     * Get Region:  The region to which a resource belongs, such as South China (Guangzhou). 
+     * @return RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region name
-     * @param RegionName Region name
+     * Set Region:  The region to which a resource belongs, such as South China (Guangzhou).
+     * @param RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
-    }
-
-    /**
-     * Get Actual cost 
-     * @return RealTotalCost Actual cost
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set Actual cost
-     * @param RealTotalCost Actual cost
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -162,51 +146,83 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cash amount 
-     * @return CashPayAmount Cash amount
+     * Get Total amount after discount 
+     * @return RealTotalCost Total amount after discount
+     */
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
+    }
+
+    /**
+     * Set Total amount after discount
+     * @param RealTotalCost Total amount after discount
+     */
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get Cash credit:  The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash amount
-     * @param CashPayAmount Cash amount
+     * Set Cash credit:  The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Trial credit amount 
-     * @return IncentivePayAmount Trial credit amount
+     * Get Free credit:  The amount paid by the user’s free credit 
+     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Trial credit amount
-     * @param IncentivePayAmount Trial credit amount
+     * Set Free credit:  The amount paid by the user’s free credit
+     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher amount 
-     * @return VoucherPayAmount Voucher amount
+     * Get Voucher payment:  The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher amount
-     * @param VoucherPayAmount Voucher amount
+     * Set Voucher payment:  The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get Commission credit:  The amount paid by the user’s commission credit. 
+     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Commission credit:  The amount paid by the user’s commission credit.
+     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -241,22 +257,6 @@ Note: This field may return null, indicating that no valid value was found.
         this.TotalCost = TotalCost;
     }
 
-    /**
-     * Get Payment by commission credits 
-     * @return TransferPayAmount Payment by commission credits
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set Payment by commission credits
-     * @param TransferPayAmount Payment by commission credits
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
-    }
-
     public RegionSummaryOverviewItem() {
     }
 
@@ -271,11 +271,11 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -286,14 +286,14 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.VoucherPayAmount != null) {
             this.VoucherPayAmount = new String(source.VoucherPayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
-        }
-        if (source.TransferPayAmount != null) {
-            this.TransferPayAmount = new String(source.TransferPayAmount);
         }
     }
 
@@ -304,14 +304,14 @@ Note: This field may return null, indicating that no valid value was found.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
-        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

@@ -20,28 +20,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionSummaryOverviewItem extends AbstractModel{
+public class SummaryDetail extends AbstractModel{
 
     /**
-    * Transaction type code
+    * Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ActionType")
+    @SerializedName("GroupKey")
     @Expose
-    private String ActionType;
+    private String GroupKey;
 
     /**
-    * Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+    * Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ActionTypeName")
+    @SerializedName("GroupValue")
     @Expose
-    private String ActionTypeName;
+    private String GroupValue;
 
     /**
-    * Cost ratio, to two decimal points
+    * Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
     */
-    @SerializedName("RealTotalCostRatio")
+    @SerializedName("TotalCost")
     @Expose
-    private String RealTotalCostRatio;
+    private String TotalCost;
 
     /**
     * Total amount after discount
@@ -79,65 +79,58 @@ public class ActionSummaryOverviewItem extends AbstractModel{
     private String TransferPayAmount;
 
     /**
-    * Billing month, e.g. `2019-08`
+    * Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("BillMonth")
+    @SerializedName("Business")
     @Expose
-    private String BillMonth;
+    private BusinessSummaryInfo [] Business;
 
     /**
-    * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-    */
-    @SerializedName("TotalCost")
-    @Expose
-    private String TotalCost;
-
-    /**
-     * Get Transaction type code 
-     * @return ActionType Transaction type code
+     * Get Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupKey Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String getGroupKey() {
+        return this.GroupKey;
     }
 
     /**
-     * Set Transaction type code
-     * @param ActionType Transaction type code
+     * Set Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param GroupKey Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setGroupKey(String GroupKey) {
+        this.GroupKey = GroupKey;
     }
 
     /**
-     * Get Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
-     * @return ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Get Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupValue Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
      */
-    public String getActionTypeName() {
-        return this.ActionTypeName;
+    public String getGroupValue() {
+        return this.GroupValue;
     }
 
     /**
-     * Set Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Set Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param GroupValue Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
      */
-    public void setActionTypeName(String ActionTypeName) {
-        this.ActionTypeName = ActionTypeName;
+    public void setGroupValue(String GroupValue) {
+        this.GroupValue = GroupValue;
     }
 
     /**
-     * Get Cost ratio, to two decimal points 
-     * @return RealTotalCostRatio Cost ratio, to two decimal points
+     * Get Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * @return TotalCost Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
      */
-    public String getRealTotalCostRatio() {
-        return this.RealTotalCostRatio;
+    public String getTotalCost() {
+        return this.TotalCost;
     }
 
     /**
-     * Set Cost ratio, to two decimal points
-     * @param RealTotalCostRatio Cost ratio, to two decimal points
+     * Set Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
+     * @param TotalCost Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
      */
-    public void setRealTotalCostRatio(String RealTotalCostRatio) {
-        this.RealTotalCostRatio = RealTotalCostRatio;
+    public void setTotalCost(String TotalCost) {
+        this.TotalCost = TotalCost;
     }
 
     /**
@@ -221,53 +214,37 @@ public class ActionSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Billing month, e.g. `2019-08` 
-     * @return BillMonth Billing month, e.g. `2019-08`
+     * Get Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Business Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
      */
-    public String getBillMonth() {
-        return this.BillMonth;
+    public BusinessSummaryInfo [] getBusiness() {
+        return this.Business;
     }
 
     /**
-     * Set Billing month, e.g. `2019-08`
-     * @param BillMonth Billing month, e.g. `2019-08`
+     * Set Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Business Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
      */
-    public void setBillMonth(String BillMonth) {
-        this.BillMonth = BillMonth;
+    public void setBusiness(BusinessSummaryInfo [] Business) {
+        this.Business = Business;
     }
 
-    /**
-     * Get The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter. 
-     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     */
-    public String getTotalCost() {
-        return this.TotalCost;
-    }
-
-    /**
-     * Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     * @param TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     */
-    public void setTotalCost(String TotalCost) {
-        this.TotalCost = TotalCost;
-    }
-
-    public ActionSummaryOverviewItem() {
+    public SummaryDetail() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ActionSummaryOverviewItem(ActionSummaryOverviewItem source) {
-        if (source.ActionType != null) {
-            this.ActionType = new String(source.ActionType);
+    public SummaryDetail(SummaryDetail source) {
+        if (source.GroupKey != null) {
+            this.GroupKey = new String(source.GroupKey);
         }
-        if (source.ActionTypeName != null) {
-            this.ActionTypeName = new String(source.ActionTypeName);
+        if (source.GroupValue != null) {
+            this.GroupValue = new String(source.GroupValue);
         }
-        if (source.RealTotalCostRatio != null) {
-            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
         }
         if (source.RealTotalCost != null) {
             this.RealTotalCost = new String(source.RealTotalCost);
@@ -284,11 +261,11 @@ public class ActionSummaryOverviewItem extends AbstractModel{
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
-        if (source.BillMonth != null) {
-            this.BillMonth = new String(source.BillMonth);
-        }
-        if (source.TotalCost != null) {
-            this.TotalCost = new String(source.TotalCost);
+        if (source.Business != null) {
+            this.Business = new BusinessSummaryInfo[source.Business.length];
+            for (int i = 0; i < source.Business.length; i++) {
+                this.Business[i] = new BusinessSummaryInfo(source.Business[i]);
+            }
         }
     }
 
@@ -297,16 +274,15 @@ public class ActionSummaryOverviewItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
-        this.setParamSimple(map, prefix + "ActionTypeName", this.ActionTypeName);
-        this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+        this.setParamSimple(map, prefix + "GroupKey", this.GroupKey);
+        this.setParamSimple(map, prefix + "GroupValue", this.GroupValue);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
-        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamArrayObj(map, prefix + "Business.", this.Business);
 
     }
 }

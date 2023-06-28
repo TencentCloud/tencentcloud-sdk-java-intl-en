@@ -9,7 +9,7 @@ public enum CarErrorCode {
     // Processing timed out.
      FAILEDOPERATION_PROCESSTIMEOUT("FailedOperation.ProcessTimeout"),
      
-    // Too frequent access.
+    // The request for the current `UserId` is being processed. Try again later.
      FAILEDOPERATION_SLOWDOWN("FailedOperation.SlowDown"),
      
     // Internal error.

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBusinessDBInstancesResponse extends AbstractModel{
+public class CreateCloudDBInstancesResponse extends AbstractModel{
 
     /**
     * Order name
@@ -28,20 +28,6 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
     @SerializedName("DealName")
     @Expose
     private String DealName;
-
-    /**
-    * Process ID Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("FlowId")
-    @Expose
-    private Long FlowId;
-
-    /**
-    * IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("InstanceIdSet")
-    @Expose
-    private String [] InstanceIdSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -67,38 +53,6 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Get Process ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FlowId Process ID Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getFlowId() {
-        return this.FlowId;
-    }
-
-    /**
-     * Set Process ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FlowId Process ID Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
-     * Get IDs of instances Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIdSet IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String [] getInstanceIdSet() {
-        return this.InstanceIdSet;
-    }
-
-    /**
-     * Set IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIdSet IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setInstanceIdSet(String [] InstanceIdSet) {
-        this.InstanceIdSet = InstanceIdSet;
-    }
-
-    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -114,25 +68,16 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBusinessDBInstancesResponse() {
+    public CreateCloudDBInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBusinessDBInstancesResponse(CreateBusinessDBInstancesResponse source) {
+    public CreateCloudDBInstancesResponse(CreateCloudDBInstancesResponse source) {
         if (source.DealName != null) {
             this.DealName = new String(source.DealName);
-        }
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
-        }
-        if (source.InstanceIdSet != null) {
-            this.InstanceIdSet = new String[source.InstanceIdSet.length];
-            for (int i = 0; i < source.InstanceIdSet.length; i++) {
-                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
-            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -145,8 +90,6 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

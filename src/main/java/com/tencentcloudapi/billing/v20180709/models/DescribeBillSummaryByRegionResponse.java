@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBillSummaryByRegionResponse extends AbstractModel{
 
     /**
-    * Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+    * Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
     */
     @SerializedName("Ready")
     @Expose
@@ -45,16 +45,16 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Indicates whether or not the data is ready. 0 = not ready, 1 = ready. 
-     * @return Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+     * Get Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again. 
+     * @return Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
-     * @param Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+     * Set Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+     * @param Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;

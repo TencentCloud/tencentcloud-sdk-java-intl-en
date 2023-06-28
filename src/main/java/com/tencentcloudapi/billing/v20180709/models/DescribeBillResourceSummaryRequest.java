@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBillResourceSummaryRequest extends AbstractModel{
 
     /**
-    * Offset
+    * Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
     */
     @SerializedName("Offset")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+    * Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
     */
     @SerializedName("Month")
     @Expose
@@ -107,16 +107,23 @@ Note: To query the product codes used in the current month, call <a href="https:
     private String BusinessCode;
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+    * 
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+     * Get Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on. 
+     * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
+     * @param Offset Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -139,16 +146,16 @@ Note: To query the product codes used in the current month, call <a href="https:
     }
 
     /**
-     * Get Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available. 
-     * @return Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+     * Get Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched. 
+     * @return Month Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
-     * @param Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+     * Set Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+     * @param Month Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
      */
     public void setMonth(String Month) {
         this.Month = Month;
@@ -334,6 +341,22 @@ Note: To query the product codes used in the current month, call <a href="https:
         this.BusinessCode = BusinessCode;
     }
 
+    /**
+     * Get  
+     * @return PayerUin 
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 
+     * @param PayerUin 
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
     public DescribeBillResourceSummaryRequest() {
     }
 
@@ -369,6 +392,9 @@ Note: To query the product codes used in the current month, call <a href="https:
         if (source.BusinessCode != null) {
             this.BusinessCode = new String(source.BusinessCode);
         }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -385,6 +411,7 @@ Note: To query the product codes used in the current month, call <a href="https:
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

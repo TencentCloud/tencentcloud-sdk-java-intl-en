@@ -168,6 +168,9 @@ public enum SqlserverErrorCode {
     // Incorrect database permission settings.
      INVALIDPARAMETERVALUE_PRIVILEGEISILLEGAL("InvalidParameterValue.PrivilegeIsIllegal"),
      
+    // Read-only group name contains invalid characters.
+     INVALIDPARAMETERVALUE_ROGROUPNAMEISILLEGAL("InvalidParameterValue.RoGroupNameIsIllegal"),
+     
     // Invalid security group ID.
      INVALIDPARAMETERVALUE_SECURITYGROUPIDISILLEGAL("InvalidParameterValue.SecurityGroupIdIsIllegal"),
      

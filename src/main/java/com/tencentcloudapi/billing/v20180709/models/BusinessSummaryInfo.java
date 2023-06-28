@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BusinessSummaryOverviewItem extends AbstractModel{
+public class BusinessSummaryInfo extends AbstractModel{
 
     /**
-    * Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Product code
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -37,11 +37,12 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     private String BusinessCodeName;
 
     /**
-    * Cost ratio, to two decimal points
+    * Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("RealTotalCostRatio")
+    @SerializedName("TotalCost")
     @Expose
-    private String RealTotalCostRatio;
+    private String TotalCost;
 
     /**
     * Total amount after discount
@@ -72,37 +73,23 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     private String VoucherPayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit.
+    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * Billing month, e.g. `2019-08`
-    */
-    @SerializedName("BillMonth")
-    @Expose
-    private String BillMonth;
-
-    /**
-    * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-    */
-    @SerializedName("TotalCost")
-    @Expose
-    private String TotalCost;
-
-    /**
-     * Get Product code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Product code 
+     * @return BusinessCode Product code
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Product code
+     * @param BusinessCode Product code
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
@@ -125,19 +112,23 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Cost ratio, to two decimal points 
-     * @return RealTotalCostRatio Cost ratio, to two decimal points
+     * Get Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getRealTotalCostRatio() {
-        return this.RealTotalCostRatio;
+    public String getTotalCost() {
+        return this.TotalCost;
     }
 
     /**
-     * Set Cost ratio, to two decimal points
-     * @param RealTotalCostRatio Cost ratio, to two decimal points
+     * Set Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setRealTotalCostRatio(String RealTotalCostRatio) {
-        this.RealTotalCostRatio = RealTotalCostRatio;
+    public void setTotalCost(String TotalCost) {
+        this.TotalCost = TotalCost;
     }
 
     /**
@@ -205,69 +196,37 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
-    /**
-     * Get Billing month, e.g. `2019-08` 
-     * @return BillMonth Billing month, e.g. `2019-08`
-     */
-    public String getBillMonth() {
-        return this.BillMonth;
-    }
-
-    /**
-     * Set Billing month, e.g. `2019-08`
-     * @param BillMonth Billing month, e.g. `2019-08`
-     */
-    public void setBillMonth(String BillMonth) {
-        this.BillMonth = BillMonth;
-    }
-
-    /**
-     * Get The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter. 
-     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     */
-    public String getTotalCost() {
-        return this.TotalCost;
-    }
-
-    /**
-     * Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     * @param TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     */
-    public void setTotalCost(String TotalCost) {
-        this.TotalCost = TotalCost;
-    }
-
-    public BusinessSummaryOverviewItem() {
+    public BusinessSummaryInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public BusinessSummaryOverviewItem(BusinessSummaryOverviewItem source) {
+    public BusinessSummaryInfo(BusinessSummaryInfo source) {
         if (source.BusinessCode != null) {
             this.BusinessCode = new String(source.BusinessCode);
         }
         if (source.BusinessCodeName != null) {
             this.BusinessCodeName = new String(source.BusinessCodeName);
         }
-        if (source.RealTotalCostRatio != null) {
-            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
         }
         if (source.RealTotalCost != null) {
             this.RealTotalCost = new String(source.RealTotalCost);
@@ -284,12 +243,6 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
-        if (source.BillMonth != null) {
-            this.BillMonth = new String(source.BillMonth);
-        }
-        if (source.TotalCost != null) {
-            this.TotalCost = new String(source.TotalCost);
-        }
     }
 
 
@@ -299,14 +252,12 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
-        this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
-        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

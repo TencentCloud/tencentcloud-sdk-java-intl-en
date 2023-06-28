@@ -23,25 +23,18 @@ import java.util.HashMap;
 public class PayModeSummaryOverviewItem extends AbstractModel{
 
     /**
-    * Billing mode
+    * Billing mode code
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * Billing mode name
+    * Billing mode,  which can be monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
-
-    /**
-    * Actual cost
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
 
     /**
     * Cost ratio, to two decimal points
@@ -51,32 +44,39 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-    * Detailed summary of purchases by transaction type
+    * Total amount after discount
     */
-    @SerializedName("Detail")
+    @SerializedName("RealTotalCost")
     @Expose
-    private ActionSummaryOverviewItem [] Detail;
+    private String RealTotalCost;
 
     /**
-    * Cash amount
+    * Cash credit:  The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Trial credit amount
+    * Free credit:  The amount paid by the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher amount
+    * Voucher payment:  The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
+
+    /**
+    * Commission credit:  The amount paid by the user’s commission credit.
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -86,58 +86,42 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     private String TotalCost;
 
     /**
-    * Payment by commission credits
+    * Detailed summary of costs by transaction type
     */
-    @SerializedName("TransferPayAmount")
+    @SerializedName("Detail")
     @Expose
-    private String TransferPayAmount;
+    private ActionSummaryOverviewItem [] Detail;
 
     /**
-     * Get Billing mode 
-     * @return PayMode Billing mode
+     * Get Billing mode code 
+     * @return PayMode Billing mode code
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode
-     * @param PayMode Billing mode
+     * Set Billing mode code
+     * @param PayMode Billing mode code
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Billing mode name 
-     * @return PayModeName Billing mode name
+     * Get Billing mode,  which can be monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode name
-     * @param PayModeName Billing mode name
+     * Set Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
-    }
-
-    /**
-     * Get Actual cost 
-     * @return RealTotalCost Actual cost
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set Actual cost
-     * @param RealTotalCost Actual cost
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -157,67 +141,83 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Detailed summary of purchases by transaction type 
-     * @return Detail Detailed summary of purchases by transaction type
+     * Get Total amount after discount 
+     * @return RealTotalCost Total amount after discount
      */
-    public ActionSummaryOverviewItem [] getDetail() {
-        return this.Detail;
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
     }
 
     /**
-     * Set Detailed summary of purchases by transaction type
-     * @param Detail Detailed summary of purchases by transaction type
+     * Set Total amount after discount
+     * @param RealTotalCost Total amount after discount
      */
-    public void setDetail(ActionSummaryOverviewItem [] Detail) {
-        this.Detail = Detail;
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get Cash amount 
-     * @return CashPayAmount Cash amount
+     * Get Cash credit:  The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash amount
-     * @param CashPayAmount Cash amount
+     * Set Cash credit:  The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Trial credit amount 
-     * @return IncentivePayAmount Trial credit amount
+     * Get Free credit:  The amount paid by the user’s free credit 
+     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Trial credit amount
-     * @param IncentivePayAmount Trial credit amount
+     * Set Free credit:  The amount paid by the user’s free credit
+     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher amount 
-     * @return VoucherPayAmount Voucher amount
+     * Get Voucher payment:  The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher amount
-     * @param VoucherPayAmount Voucher amount
+     * Set Voucher payment:  The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get Commission credit:  The amount paid by the user’s commission credit. 
+     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Commission credit:  The amount paid by the user’s commission credit.
+     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -237,19 +237,19 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Payment by commission credits 
-     * @return TransferPayAmount Payment by commission credits
+     * Get Detailed summary of costs by transaction type 
+     * @return Detail Detailed summary of costs by transaction type
      */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
+    public ActionSummaryOverviewItem [] getDetail() {
+        return this.Detail;
     }
 
     /**
-     * Set Payment by commission credits
-     * @param TransferPayAmount Payment by commission credits
+     * Set Detailed summary of costs by transaction type
+     * @param Detail Detailed summary of costs by transaction type
      */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
+    public void setDetail(ActionSummaryOverviewItem [] Detail) {
+        this.Detail = Detail;
     }
 
     public PayModeSummaryOverviewItem() {
@@ -266,17 +266,11 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
         if (source.PayModeName != null) {
             this.PayModeName = new String(source.PayModeName);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
         }
-        if (source.Detail != null) {
-            this.Detail = new ActionSummaryOverviewItem[source.Detail.length];
-            for (int i = 0; i < source.Detail.length; i++) {
-                this.Detail[i] = new ActionSummaryOverviewItem(source.Detail[i]);
-            }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -287,11 +281,17 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
         if (source.VoucherPayAmount != null) {
             this.VoucherPayAmount = new String(source.VoucherPayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
-        if (source.TransferPayAmount != null) {
-            this.TransferPayAmount = new String(source.TransferPayAmount);
+        if (source.Detail != null) {
+            this.Detail = new ActionSummaryOverviewItem[source.Detail.length];
+            for (int i = 0; i < source.Detail.length; i++) {
+                this.Detail[i] = new ActionSummaryOverviewItem(source.Detail[i]);
+            }
         }
     }
 
@@ -302,14 +302,14 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "PayModeName", this.PayModeName);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-        this.setParamArrayObj(map, prefix + "Detail.", this.Detail);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamArrayObj(map, prefix + "Detail.", this.Detail);
 
     }
 }

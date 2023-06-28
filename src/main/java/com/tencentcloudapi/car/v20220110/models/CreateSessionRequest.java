@@ -37,7 +37,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String UserIp;
 
     /**
-    * The client-side session data, which is obtained from the SDK.
+    * The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
     */
     @SerializedName("ClientSession")
     @Expose
@@ -51,6 +51,32 @@ Empty string (default): Keep the application running on the cloud only when ther
     @SerializedName("RunMode")
     @Expose
     private String RunMode;
+
+    /**
+    * Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+    */
+    @SerializedName("ApplicationParameters")
+    @Expose
+    private String ApplicationParameters;
+
+    /**
+    * The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+    */
+    @SerializedName("HostUserId")
+    @Expose
+    private String HostUserId;
+
+    /**
+    * The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
 
     /**
      * Get The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application. 
@@ -85,16 +111,16 @@ Empty string (default): Keep the application running on the cloud only when ther
     }
 
     /**
-     * Get The client-side session data, which is obtained from the SDK. 
-     * @return ClientSession The client-side session data, which is obtained from the SDK.
+     * Get The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null. 
+     * @return ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
      */
     public String getClientSession() {
         return this.ClientSession;
     }
 
     /**
-     * Set The client-side session data, which is obtained from the SDK.
-     * @param ClientSession The client-side session data, which is obtained from the SDK.
+     * Set The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+     * @param ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
      */
     public void setClientSession(String ClientSession) {
         this.ClientSession = ClientSession;
@@ -124,6 +150,74 @@ Empty string (default): Keep the application running on the cloud only when ther
         this.RunMode = RunMode;
     }
 
+    /**
+     * Get Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid. 
+     * @return ApplicationParameters Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+     */
+    public String getApplicationParameters() {
+        return this.ApplicationParameters;
+    }
+
+    /**
+     * Set Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+     * @param ApplicationParameters Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+     */
+    public void setApplicationParameters(String ApplicationParameters) {
+        this.ApplicationParameters = ApplicationParameters;
+    }
+
+    /**
+     * Get The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`. 
+     * @return HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     */
+    public String getHostUserId() {
+        return this.HostUserId;
+    }
+
+    /**
+     * Set The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     * @param HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     */
+    public void setHostUserId(String HostUserId) {
+        this.HostUserId = HostUserId;
+    }
+
+    /**
+     * Get The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application 
+     * @return Role The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     * @param Role The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
     public CreateSessionRequest() {
     }
 
@@ -144,6 +238,15 @@ Empty string (default): Keep the application running on the cloud only when ther
         if (source.RunMode != null) {
             this.RunMode = new String(source.RunMode);
         }
+        if (source.ApplicationParameters != null) {
+            this.ApplicationParameters = new String(source.ApplicationParameters);
+        }
+        if (source.HostUserId != null) {
+            this.HostUserId = new String(source.HostUserId);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -155,6 +258,9 @@ Empty string (default): Keep the application running on the cloud only when ther
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "ClientSession", this.ClientSession);
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);
+        this.setParamSimple(map, prefix + "ApplicationParameters", this.ApplicationParameters);
+        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

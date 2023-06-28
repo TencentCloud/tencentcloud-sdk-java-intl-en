@@ -30,8 +30,7 @@ public class DescribeBillResourceSummaryResponse extends AbstractModel{
     private BillResourceSummary [] ResourceSummarySet;
 
     /**
-    * Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+    * Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
@@ -61,20 +60,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found. 
-     * @return Total Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+     * Get Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained. 
+     * @return Total Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
-     * @param Total Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+     * Set Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
+     * @param Total Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

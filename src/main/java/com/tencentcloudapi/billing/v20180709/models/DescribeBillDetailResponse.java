@@ -30,12 +30,19 @@ public class DescribeBillDetailResponse extends AbstractModel{
     private BillDetail [] DetailSet;
 
     /**
-    * Total number of records
-Note: This field may return null, indicating that no valid value was found.
+    * 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
+
+    /**
+    * Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -61,23 +68,39 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Total number of records
-Note: This field may return null, indicating that no valid value was found. 
-     * @return Total Total number of records
-Note: This field may return null, indicating that no valid value was found.
+     * Get 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Total 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of records
-Note: This field may return null, indicating that no valid value was found.
-     * @param Total Total number of records
-Note: This field may return null, indicating that no valid value was found.
+     * Set 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Total 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
+    }
+
+    /**
+     * Get Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Context Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Context Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
     }
 
     /**
@@ -113,6 +136,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +151,7 @@ Note: This field may return null, indicating that no valid value was found.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

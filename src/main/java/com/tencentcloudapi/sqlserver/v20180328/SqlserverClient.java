@@ -179,6 +179,46 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a high-availability instance of cloud disk edition.
+     * @param req CreateCloudDBInstancesRequest
+     * @return CreateCloudDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudDBInstancesResponse CreateCloudDBInstances(CreateCloudDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add a read-only replica instance of cloud disk edition.
+     * @param req CreateCloudReadOnlyDBInstancesRequest
+     * @return CreateCloudReadOnlyDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstances(CreateCloudReadOnlyDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudReadOnlyDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a database.
      * @param req CreateDBRequest
      * @return CreateDBResponse

@@ -148,6 +148,20 @@ Note: To query the product codes used in the current month, call <a href="https:
     private String BusinessCode;
 
     /**
+    * Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
+
+    /**
+    * 
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
      * Get Offset 
      * @return Offset Offset
      */
@@ -491,6 +505,38 @@ Note: To query the product codes used in the current month, call <a href="https:
         this.BusinessCode = BusinessCode;
     }
 
+    /**
+     * Get Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries. 
+     * @return Context Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+     * @param Context Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
+    }
+
+    /**
+     * Get  
+     * @return PayerUin 
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 
+     * @param PayerUin 
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
     public DescribeBillDetailRequest() {
     }
 
@@ -538,6 +584,12 @@ Note: To query the product codes used in the current month, call <a href="https:
         if (source.BusinessCode != null) {
             this.BusinessCode = new String(source.BusinessCode);
         }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -558,6 +610,8 @@ Note: To query the product codes used in the current month, call <a href="https:
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

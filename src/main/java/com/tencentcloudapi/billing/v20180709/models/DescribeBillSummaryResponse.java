@@ -20,22 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillSummaryByPayModeResponse extends AbstractModel{
+public class DescribeBillSummaryResponse extends AbstractModel{
 
     /**
-    * Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+    * Indicates whether the data is ready. `0`: Not ready. `1`: Ready.  If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * Detailed cost distribution for all billing modes
-Note: This field may return null, indicating that no valid value was found.
+    * Detailed summary of costs by multiple dimensions
     */
-    @SerializedName("SummaryOverview")
+    @SerializedName("SummaryDetail")
     @Expose
-    private PayModeSummaryOverviewItem [] SummaryOverview;
+    private SummaryDetail [] SummaryDetail;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +44,35 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again. 
-     * @return Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+     * Get Indicates whether the data is ready. `0`: Not ready. `1`: Ready.  If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again. 
+     * @return Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready.  If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
-     * @param Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+     * Set Indicates whether the data is ready. `0`: Not ready. `1`: Ready.  If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+     * @param Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready.  If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get Detailed cost distribution for all billing modes
-Note: This field may return null, indicating that no valid value was found. 
-     * @return SummaryOverview Detailed cost distribution for all billing modes
-Note: This field may return null, indicating that no valid value was found.
+     * Get Detailed summary of costs by multiple dimensions 
+     * @return SummaryDetail Detailed summary of costs by multiple dimensions
      */
-    public PayModeSummaryOverviewItem [] getSummaryOverview() {
-        return this.SummaryOverview;
+    public SummaryDetail [] getSummaryDetail() {
+        return this.SummaryDetail;
     }
 
     /**
-     * Set Detailed cost distribution for all billing modes
-Note: This field may return null, indicating that no valid value was found.
-     * @param SummaryOverview Detailed cost distribution for all billing modes
-Note: This field may return null, indicating that no valid value was found.
+     * Set Detailed summary of costs by multiple dimensions
+     * @param SummaryDetail Detailed summary of costs by multiple dimensions
      */
-    public void setSummaryOverview(PayModeSummaryOverviewItem [] SummaryOverview) {
-        this.SummaryOverview = SummaryOverview;
+    public void setSummaryDetail(SummaryDetail [] SummaryDetail) {
+        this.SummaryDetail = SummaryDetail;
     }
 
     /**
@@ -96,21 +91,21 @@ Note: This field may return null, indicating that no valid value was found.
         this.RequestId = RequestId;
     }
 
-    public DescribeBillSummaryByPayModeResponse() {
+    public DescribeBillSummaryResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBillSummaryByPayModeResponse(DescribeBillSummaryByPayModeResponse source) {
+    public DescribeBillSummaryResponse(DescribeBillSummaryResponse source) {
         if (source.Ready != null) {
             this.Ready = new Long(source.Ready);
         }
-        if (source.SummaryOverview != null) {
-            this.SummaryOverview = new PayModeSummaryOverviewItem[source.SummaryOverview.length];
-            for (int i = 0; i < source.SummaryOverview.length; i++) {
-                this.SummaryOverview[i] = new PayModeSummaryOverviewItem(source.SummaryOverview[i]);
+        if (source.SummaryDetail != null) {
+            this.SummaryDetail = new SummaryDetail[source.SummaryDetail.length];
+            for (int i = 0; i < source.SummaryDetail.length; i++) {
+                this.SummaryDetail[i] = new SummaryDetail(source.SummaryDetail[i]);
             }
         }
         if (source.RequestId != null) {
@@ -124,7 +119,7 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ready", this.Ready);
-        this.setParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
+        this.setParamArrayObj(map, prefix + "SummaryDetail.", this.SummaryDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
