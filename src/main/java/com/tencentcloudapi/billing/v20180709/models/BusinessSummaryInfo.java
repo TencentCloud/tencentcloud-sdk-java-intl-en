@@ -30,14 +30,14 @@ public class BusinessSummaryInfo extends AbstractModel{
     private String BusinessCode;
 
     /**
-    * Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+    * Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+    * Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCost")
@@ -52,28 +52,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RealTotalCost;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit
+    * Free credit: The amount paid with the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher payment:  The voucher deduction amount
+    * Voucher payment: The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -96,25 +96,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM. 
-     * @return BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
+     * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
-     * @param BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+     * @param BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * Get Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * @return TotalCost Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTotalCost() {
@@ -122,9 +122,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * Set Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * @param TotalCost Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCost(String TotalCost) {
@@ -148,64 +148,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Get Free credit: The amount paid with the user’s free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Set Free credit: The amount paid with the user’s free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Get Voucher payment: The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Set Voucher payment: The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

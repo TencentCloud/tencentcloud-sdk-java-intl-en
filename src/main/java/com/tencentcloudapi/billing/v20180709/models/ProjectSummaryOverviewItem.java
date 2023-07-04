@@ -30,7 +30,7 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
     private String ProjectId;
 
     /**
-    * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+    * Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
     */
     @SerializedName("ProjectName")
     @Expose
@@ -51,28 +51,28 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
     private String RealTotalCost;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit
+    * Free credit: The amount paid with the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher payment:  The voucher deduction amount
+    * Voucher payment: The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit.
+    * Commission credit: The amount paid with the user’s commission credit.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -109,16 +109,16 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project. 
-     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * Get Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project. 
+     * @return ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-     * @param ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @param ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
@@ -157,64 +157,64 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Get Free credit: The amount paid with the user’s free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Set Free credit: The amount paid with the user’s free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Get Voucher payment: The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Set Voucher payment: The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * Get Commission credit: The amount paid with the user’s commission credit. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * Set Commission credit: The amount paid with the user’s commission credit.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

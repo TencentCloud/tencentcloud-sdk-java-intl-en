@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class BillDetailComponent extends AbstractModel{
 
     /**
-    * Component type:  The component type of a product or service purchased, such as  CVM instance components including  CPU and memory.
+    * Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
     */
     @SerializedName("ComponentCodeName")
     @Expose
     private String ComponentCodeName;
 
     /**
-    * Component name:  The specific component of a product or service purchased
+    * Component name: The specific component of a product or service purchased
     */
     @SerializedName("ItemCodeName")
     @Expose
     private String ItemCodeName;
 
     /**
-    * Component list price:  The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
+    * Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
     */
     @SerializedName("SinglePrice")
     @Expose
@@ -51,49 +51,63 @@ public class BillDetailComponent extends AbstractModel{
     private String SpecifiedPrice;
 
     /**
-    * Component price measurement unit:  The unit of measurement for a component price, which is composed of  USD, usage unit, and duration unit.
+    * Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit.
     */
     @SerializedName("PriceUnit")
     @Expose
     private String PriceUnit;
 
     /**
-    * Component usage:  The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
+    * Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
     */
     @SerializedName("UsedAmount")
     @Expose
     private String UsedAmount;
 
     /**
-    * Component usage unit:  The unit of measurement for component usage
+    * Component usage unit: The unit of measurement for component usage
     */
     @SerializedName("UsedAmountUnit")
     @Expose
     private String UsedAmountUnit;
 
     /**
-    * Usage duration:  The resource usage duration
+    * 
+    */
+    @SerializedName("RealTotalMeasure")
+    @Expose
+    private String RealTotalMeasure;
+
+    /**
+    * 
+    */
+    @SerializedName("DeductedMeasure")
+    @Expose
+    private String DeductedMeasure;
+
+    /**
+    * Usage duration: The resource usage duration
     */
     @SerializedName("TimeSpan")
     @Expose
     private String TimeSpan;
 
     /**
-    * Duration unit:  The unit of measurement for usage duration
+    * Duration unit: The unit of measurement for usage duration
     */
     @SerializedName("TimeUnitName")
     @Expose
     private String TimeUnitName;
 
     /**
-    * Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+    * Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
     */
     @SerializedName("Cost")
     @Expose
     private String Cost;
 
     /**
-    * Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+    * Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
     */
     @SerializedName("Discount")
     @Expose
@@ -107,153 +121,153 @@ public class BillDetailComponent extends AbstractModel{
     private String ReduceType;
 
     /**
-    * Total amount after discount:   Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
+    * Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
     */
     @SerializedName("RealCost")
     @Expose
     private String RealCost;
 
     /**
-    * Voucher payment:  The voucher deduction amount
+    * Voucher payment: The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit
+    * Free credit: The amount paid with the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * Component type code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Component type code. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemCode")
     @Expose
     private String ItemCode;
 
     /**
-    * Component name code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Component name code. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ComponentCode")
     @Expose
     private String ComponentCode;
 
     /**
-    * Component contracted price:  The contracted unit price of a component, which is "List price x Discount". Note:  This field may return null, indicating that no valid values can be obtained.
+    * Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContractPrice")
     @Expose
     private String ContractPrice;
 
     /**
-    * Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * RI deduction (duration):  The usage duration deducted by RI. Note:  This field may return null, indicating that no valid values can be obtained.
+    * RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RiTimeSpan")
     @Expose
     private String RiTimeSpan;
 
     /**
-    * RI deduction (cost):  The amount deducted from the original cost by RI. Note:  This field may return null, indicating that no valid values can be obtained.
+    * RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalCostWithRI")
     @Expose
     private String OriginalCostWithRI;
 
     /**
-    * Savings plan deduction rate:  The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SPDeductionRate")
     @Expose
     private String SPDeductionRate;
 
     /**
-    * Cost deduction by SP. This parameter has been deprecated. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SPDeduction")
     @Expose
     private String SPDeduction;
 
     /**
-    * SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note:  This field may return null, indicating that no valid values can be obtained.
+    * SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalCostWithSP")
     @Expose
     private String OriginalCostWithSP;
 
     /**
-    * Blended discount multiplier:  The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note:  This field may return null, indicating that no valid values can be obtained.
+    * Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BlendedDiscount")
     @Expose
     private String BlendedDiscount;
 
     /**
-     * Get Component type:  The component type of a product or service purchased, such as  CVM instance components including  CPU and memory. 
-     * @return ComponentCodeName Component type:  The component type of a product or service purchased, such as  CVM instance components including  CPU and memory.
+     * Get Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory. 
+     * @return ComponentCodeName Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
      */
     public String getComponentCodeName() {
         return this.ComponentCodeName;
     }
 
     /**
-     * Set Component type:  The component type of a product or service purchased, such as  CVM instance components including  CPU and memory.
-     * @param ComponentCodeName Component type:  The component type of a product or service purchased, such as  CVM instance components including  CPU and memory.
+     * Set Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
+     * @param ComponentCodeName Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
      */
     public void setComponentCodeName(String ComponentCodeName) {
         this.ComponentCodeName = ComponentCodeName;
     }
 
     /**
-     * Get Component name:  The specific component of a product or service purchased 
-     * @return ItemCodeName Component name:  The specific component of a product or service purchased
+     * Get Component name: The specific component of a product or service purchased 
+     * @return ItemCodeName Component name: The specific component of a product or service purchased
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
     }
 
     /**
-     * Set Component name:  The specific component of a product or service purchased
-     * @param ItemCodeName Component name:  The specific component of a product or service purchased
+     * Set Component name: The specific component of a product or service purchased
+     * @param ItemCodeName Component name: The specific component of a product or service purchased
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
     }
 
     /**
-     * Get Component list price:  The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default. 
-     * @return SinglePrice Component list price:  The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
+     * Get Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default. 
+     * @return SinglePrice Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
      */
     public String getSinglePrice() {
         return this.SinglePrice;
     }
 
     /**
-     * Set Component list price:  The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
-     * @param SinglePrice Component list price:  The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
+     * Set Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
+     * @param SinglePrice Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
      */
     public void setSinglePrice(String SinglePrice) {
         this.SinglePrice = SinglePrice;
@@ -280,112 +294,144 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get Component price measurement unit:  The unit of measurement for a component price, which is composed of  USD, usage unit, and duration unit. 
-     * @return PriceUnit Component price measurement unit:  The unit of measurement for a component price, which is composed of  USD, usage unit, and duration unit.
+     * Get Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit. 
+     * @return PriceUnit Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit.
      */
     public String getPriceUnit() {
         return this.PriceUnit;
     }
 
     /**
-     * Set Component price measurement unit:  The unit of measurement for a component price, which is composed of  USD, usage unit, and duration unit.
-     * @param PriceUnit Component price measurement unit:  The unit of measurement for a component price, which is composed of  USD, usage unit, and duration unit.
+     * Set Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit.
+     * @param PriceUnit Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit.
      */
     public void setPriceUnit(String PriceUnit) {
         this.PriceUnit = PriceUnit;
     }
 
     /**
-     * Get Component usage:  The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)". 
-     * @return UsedAmount Component usage:  The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
+     * Get Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)". 
+     * @return UsedAmount Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
      */
     public String getUsedAmount() {
         return this.UsedAmount;
     }
 
     /**
-     * Set Component usage:  The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
-     * @param UsedAmount Component usage:  The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
+     * Set Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
+     * @param UsedAmount Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
      */
     public void setUsedAmount(String UsedAmount) {
         this.UsedAmount = UsedAmount;
     }
 
     /**
-     * Get Component usage unit:  The unit of measurement for component usage 
-     * @return UsedAmountUnit Component usage unit:  The unit of measurement for component usage
+     * Get Component usage unit: The unit of measurement for component usage 
+     * @return UsedAmountUnit Component usage unit: The unit of measurement for component usage
      */
     public String getUsedAmountUnit() {
         return this.UsedAmountUnit;
     }
 
     /**
-     * Set Component usage unit:  The unit of measurement for component usage
-     * @param UsedAmountUnit Component usage unit:  The unit of measurement for component usage
+     * Set Component usage unit: The unit of measurement for component usage
+     * @param UsedAmountUnit Component usage unit: The unit of measurement for component usage
      */
     public void setUsedAmountUnit(String UsedAmountUnit) {
         this.UsedAmountUnit = UsedAmountUnit;
     }
 
     /**
-     * Get Usage duration:  The resource usage duration 
-     * @return TimeSpan Usage duration:  The resource usage duration
+     * Get  
+     * @return RealTotalMeasure 
+     */
+    public String getRealTotalMeasure() {
+        return this.RealTotalMeasure;
+    }
+
+    /**
+     * Set 
+     * @param RealTotalMeasure 
+     */
+    public void setRealTotalMeasure(String RealTotalMeasure) {
+        this.RealTotalMeasure = RealTotalMeasure;
+    }
+
+    /**
+     * Get  
+     * @return DeductedMeasure 
+     */
+    public String getDeductedMeasure() {
+        return this.DeductedMeasure;
+    }
+
+    /**
+     * Set 
+     * @param DeductedMeasure 
+     */
+    public void setDeductedMeasure(String DeductedMeasure) {
+        this.DeductedMeasure = DeductedMeasure;
+    }
+
+    /**
+     * Get Usage duration: The resource usage duration 
+     * @return TimeSpan Usage duration: The resource usage duration
      */
     public String getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Usage duration:  The resource usage duration
-     * @param TimeSpan Usage duration:  The resource usage duration
+     * Set Usage duration: The resource usage duration
+     * @param TimeSpan Usage duration: The resource usage duration
      */
     public void setTimeSpan(String TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Duration unit:  The unit of measurement for usage duration 
-     * @return TimeUnitName Duration unit:  The unit of measurement for usage duration
+     * Get Duration unit: The unit of measurement for usage duration 
+     * @return TimeUnitName Duration unit: The unit of measurement for usage duration
      */
     public String getTimeUnitName() {
         return this.TimeUnitName;
     }
 
     /**
-     * Set Duration unit:  The unit of measurement for usage duration
-     * @param TimeUnitName Duration unit:  The unit of measurement for usage duration
+     * Set Duration unit: The unit of measurement for usage duration
+     * @param TimeUnitName Duration unit: The unit of measurement for usage duration
      */
     public void setTimeUnitName(String TimeUnitName) {
         this.TimeUnitName = TimeUnitName;
     }
 
     /**
-     * Get Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default. 
-     * @return Cost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Get Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default. 
+     * @return Cost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
      */
     public String getCost() {
         return this.Cost;
     }
 
     /**
-     * Set Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
-     * @param Cost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Set Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * @param Cost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
      */
     public void setCost(String Cost) {
         this.Cost = Cost;
     }
 
     /**
-     * Get Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default. 
-     * @return Discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Get Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default. 
+     * @return Discount Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
-     * @param Discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Set Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * @param Discount Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
@@ -408,200 +454,200 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get Total amount after discount:   Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier 
-     * @return RealCost Total amount after discount:   Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
+     * Get Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier 
+     * @return RealCost Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
      */
     public String getRealCost() {
         return this.RealCost;
     }
 
     /**
-     * Set Total amount after discount:   Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
-     * @param RealCost Total amount after discount:   Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
+     * Set Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
+     * @param RealCost Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
      */
     public void setRealCost(String RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Get Voucher payment: The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Set Voucher payment: The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Get Free credit: The amount paid with the user’s free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Set Free credit: The amount paid with the user’s free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get Component type code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return ItemCode Component type code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Component type code. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ItemCode Component type code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getItemCode() {
         return this.ItemCode;
     }
 
     /**
-     * Set Component type code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param ItemCode Component type code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Component type code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ItemCode Component type code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get Component name code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentCode Component name code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Component name code. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ComponentCode Component name code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set Component name code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentCode Component name code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Component name code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ComponentCode Component name code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get Component contracted price:  The contracted unit price of a component, which is "List price x Discount". Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return ContractPrice Component contracted price:  The contracted unit price of a component, which is "List price x Discount". Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContractPrice Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContractPrice() {
         return this.ContractPrice;
     }
 
     /**
-     * Set Component contracted price:  The contracted unit price of a component, which is "List price x Discount". Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param ContractPrice Component contracted price:  The contracted unit price of a component, which is "List price x Discount". Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContractPrice Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContractPrice(String ContractPrice) {
         this.ContractPrice = ContractPrice;
     }
 
     /**
-     * Get Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get RI deduction (duration):  The usage duration deducted by RI. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return RiTimeSpan RI deduction (duration):  The usage duration deducted by RI. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RiTimeSpan RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRiTimeSpan() {
         return this.RiTimeSpan;
     }
 
     /**
-     * Set RI deduction (duration):  The usage duration deducted by RI. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param RiTimeSpan RI deduction (duration):  The usage duration deducted by RI. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RiTimeSpan RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRiTimeSpan(String RiTimeSpan) {
         this.RiTimeSpan = RiTimeSpan;
     }
 
     /**
-     * Get RI deduction (cost):  The amount deducted from the original cost by RI. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginalCostWithRI() {
         return this.OriginalCostWithRI;
     }
 
     /**
-     * Set RI deduction (cost):  The amount deducted from the original cost by RI. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginalCostWithRI(String OriginalCostWithRI) {
         this.OriginalCostWithRI = OriginalCostWithRI;
     }
 
     /**
-     * Get Savings plan deduction rate:  The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return SPDeductionRate Savings plan deduction rate:  The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SPDeductionRate Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSPDeductionRate() {
         return this.SPDeductionRate;
     }
 
     /**
-     * Set Savings plan deduction rate:  The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param SPDeductionRate Savings plan deduction rate:  The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SPDeductionRate Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSPDeductionRate(String SPDeductionRate) {
         this.SPDeductionRate = SPDeductionRate;
     }
 
     /**
-     * Get Cost deduction by SP. This parameter has been deprecated. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return SPDeduction Cost deduction by SP. This parameter has been deprecated. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SPDeduction Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -610,8 +656,8 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set Cost deduction by SP. This parameter has been deprecated. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param SPDeduction Cost deduction by SP. This parameter has been deprecated. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SPDeduction Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -620,32 +666,32 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginalCostWithSP() {
         return this.OriginalCostWithSP;
     }
 
     /**
-     * Set SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginalCostWithSP(String OriginalCostWithSP) {
         this.OriginalCostWithSP = OriginalCostWithSP;
     }
 
     /**
-     * Get Blended discount multiplier:  The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return BlendedDiscount Blended discount multiplier:  The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BlendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBlendedDiscount() {
         return this.BlendedDiscount;
     }
 
     /**
-     * Set Blended discount multiplier:  The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param BlendedDiscount Blended discount multiplier:  The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BlendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBlendedDiscount(String BlendedDiscount) {
         this.BlendedDiscount = BlendedDiscount;
@@ -679,6 +725,12 @@ public class BillDetailComponent extends AbstractModel{
         }
         if (source.UsedAmountUnit != null) {
             this.UsedAmountUnit = new String(source.UsedAmountUnit);
+        }
+        if (source.RealTotalMeasure != null) {
+            this.RealTotalMeasure = new String(source.RealTotalMeasure);
+        }
+        if (source.DeductedMeasure != null) {
+            this.DeductedMeasure = new String(source.DeductedMeasure);
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new String(source.TimeSpan);
@@ -754,6 +806,8 @@ public class BillDetailComponent extends AbstractModel{
         this.setParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
         this.setParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
         this.setParamSimple(map, prefix + "UsedAmountUnit", this.UsedAmountUnit);
+        this.setParamSimple(map, prefix + "RealTotalMeasure", this.RealTotalMeasure);
+        this.setParamSimple(map, prefix + "DeductedMeasure", this.DeductedMeasure);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnitName", this.TimeUnitName);
         this.setParamSimple(map, prefix + "Cost", this.Cost);

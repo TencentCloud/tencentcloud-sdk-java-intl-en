@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SummaryDetail extends AbstractModel{
 
     /**
-    * Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupKey")
     @Expose
     private String GroupKey;
 
     /**
-    * Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupValue")
     @Expose
@@ -51,67 +51,67 @@ public class SummaryDetail extends AbstractModel{
     private String RealTotalCost;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit
+    * Free credit: The amount paid with the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher payment:  The voucher deduction amount
+    * Voucher payment: The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Business")
     @Expose
     private BusinessSummaryInfo [] Business;
 
     /**
-     * Get Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupKey Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupKey Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupKey() {
         return this.GroupKey;
     }
 
     /**
-     * Set Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param GroupKey Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupKey Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupKey(String GroupKey) {
         this.GroupKey = GroupKey;
     }
 
     /**
-     * Get Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupValue Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupValue Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupValue() {
         return this.GroupValue;
     }
 
     /**
-     * Set Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param GroupValue Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupValue Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupValue(String GroupValue) {
         this.GroupValue = GroupValue;
@@ -150,80 +150,80 @@ public class SummaryDetail extends AbstractModel{
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Get Free credit: The amount paid with the user’s free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Set Free credit: The amount paid with the user’s free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Get Voucher payment: The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Set Voucher payment: The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Business Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Business Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BusinessSummaryInfo [] getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Business Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Business Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBusiness(BusinessSummaryInfo [] Business) {
         this.Business = Business;

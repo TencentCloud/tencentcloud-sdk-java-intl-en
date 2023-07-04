@@ -30,7 +30,7 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     private String PayMode;
 
     /**
-    * Billing mode,  which can be monthly subscription or pay-as-you-go.
+    * Billing mode, which can be monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
@@ -51,28 +51,28 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     private String RealTotalCost;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user’s cash balance
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit
+    * Free credit: The amount paid with the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher payment:  The voucher deduction amount
+    * Voucher payment: The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit.
+    * Commission credit: The amount paid with the user’s commission credit.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -109,16 +109,16 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Billing mode,  which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode, which can be monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode,  which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
@@ -157,64 +157,64 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user’s cash balance 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash balance
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user’s cash balance
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash balance
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Get Free credit: The amount paid with the user’s free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Set Free credit: The amount paid with the user’s free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Get Voucher payment: The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Set Voucher payment: The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * Get Commission credit: The amount paid with the user’s commission credit. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * Set Commission credit: The amount paid with the user’s commission credit.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

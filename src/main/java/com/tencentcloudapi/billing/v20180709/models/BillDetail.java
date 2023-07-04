@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class BillDetail extends AbstractModel{
 
     /**
-    * Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+    * Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+    * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * Billing mode,  which can be monthly subscription or pay-as-you-go.
+    * Billing mode, which can be monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+    * Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Region:  The region to which a resource belongs, such as South China (Guangzhou).
+    * Region: The region to which a resource belongs, such as South China (Guangzhou).
     */
     @SerializedName("RegionName")
     @Expose
@@ -65,14 +65,14 @@ public class BillDetail extends AbstractModel{
     private String ZoneName;
 
     /**
-    * Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
+    * Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+    * Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
     */
     @SerializedName("ResourceName")
     @Expose
@@ -86,35 +86,35 @@ public class BillDetail extends AbstractModel{
     private String ActionTypeName;
 
     /**
-    * Order ID:  The order number for a monthly subscription purchase
+    * Order ID: The order number for a monthly subscription purchase
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * Transaction ID:  The bill number for a deducted payment
+    * Transaction ID: The bill number for a deducted payment
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * Transaction time:  The time at which a payment was deducted
+    * Transaction time: The time at which a payment was deducted
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * Usage start time:  The time at which product or service usage starts
+    * Usage start time: The time at which product or service usage starts
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * Usage end time:  The time at which product or service usage ends
+    * Usage end time: The time at which product or service usage ends
     */
     @SerializedName("FeeEndTime")
     @Expose
@@ -128,56 +128,56 @@ public class BillDetail extends AbstractModel{
     private BillDetailComponent [] ComponentSet;
 
     /**
-    * Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+    * Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * Owner account ID:  The account ID of the actual resource user
+    * Owner account ID: The account ID of the actual resource user
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * Operator account ID:  The account or role ID of the operator who purchases or activates a resource
+    * Operator account ID: The account or role ID of the operator who purchases or activates a resource
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Tag information. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private BillTagInfo [] Tags;
 
     /**
-    * Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Product code. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * Subproduct code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Transaction type code. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * Region ID. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Region ID. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegionId")
     @Expose
@@ -199,80 +199,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] PriceInfo;
 
     /**
-     * Get Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM. 
-     * @return BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
+     * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
-     * @param BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+     * @param BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1. 
-     * @return ProductCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+     * Get Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1. 
+     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
-     * @param ProductCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+     * Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @param ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get Billing mode,  which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode, which can be monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode,  which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project. 
-     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * Get Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project. 
+     * @return ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-     * @param ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @param ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Region:  The region to which a resource belongs, such as South China (Guangzhou). 
-     * @return RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
+     * Get Region: The region to which a resource belongs, such as South China (Guangzhou). 
+     * @return RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region:  The region to which a resource belongs, such as South China (Guangzhou).
-     * @param RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
+     * Set Region: The region to which a resource belongs, such as South China (Guangzhou).
+     * @param RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
@@ -295,32 +295,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products. 
-     * @return ResourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
+     * Get Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products. 
+     * @return ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
-     * @param ResourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
+     * Set Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
+     * @param ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default. 
-     * @return ResourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * Get Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default. 
+     * @return ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
-     * @param ResourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * @param ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
@@ -343,80 +343,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Order ID:  The order number for a monthly subscription purchase 
-     * @return OrderId Order ID:  The order number for a monthly subscription purchase
+     * Get Order ID: The order number for a monthly subscription purchase 
+     * @return OrderId Order ID: The order number for a monthly subscription purchase
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set Order ID:  The order number for a monthly subscription purchase
-     * @param OrderId Order ID:  The order number for a monthly subscription purchase
+     * Set Order ID: The order number for a monthly subscription purchase
+     * @param OrderId Order ID: The order number for a monthly subscription purchase
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get Transaction ID:  The bill number for a deducted payment 
-     * @return BillId Transaction ID:  The bill number for a deducted payment
+     * Get Transaction ID: The bill number for a deducted payment 
+     * @return BillId Transaction ID: The bill number for a deducted payment
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set Transaction ID:  The bill number for a deducted payment
-     * @param BillId Transaction ID:  The bill number for a deducted payment
+     * Set Transaction ID: The bill number for a deducted payment
+     * @param BillId Transaction ID: The bill number for a deducted payment
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get Transaction time:  The time at which a payment was deducted 
-     * @return PayTime Transaction time:  The time at which a payment was deducted
+     * Get Transaction time: The time at which a payment was deducted 
+     * @return PayTime Transaction time: The time at which a payment was deducted
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set Transaction time:  The time at which a payment was deducted
-     * @param PayTime Transaction time:  The time at which a payment was deducted
+     * Set Transaction time: The time at which a payment was deducted
+     * @param PayTime Transaction time: The time at which a payment was deducted
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get Usage start time:  The time at which product or service usage starts 
-     * @return FeeBeginTime Usage start time:  The time at which product or service usage starts
+     * Get Usage start time: The time at which product or service usage starts 
+     * @return FeeBeginTime Usage start time: The time at which product or service usage starts
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set Usage start time:  The time at which product or service usage starts
-     * @param FeeBeginTime Usage start time:  The time at which product or service usage starts
+     * Set Usage start time: The time at which product or service usage starts
+     * @param FeeBeginTime Usage start time: The time at which product or service usage starts
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get Usage end time:  The time at which product or service usage ends 
-     * @return FeeEndTime Usage end time:  The time at which product or service usage ends
+     * Get Usage end time: The time at which product or service usage ends 
+     * @return FeeEndTime Usage end time: The time at which product or service usage ends
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set Usage end time:  The time at which product or service usage ends
-     * @param FeeEndTime Usage end time:  The time at which product or service usage ends
+     * Set Usage end time: The time at which product or service usage ends
+     * @param FeeEndTime Usage end time: The time at which product or service usage ends
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
@@ -439,128 +439,128 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user. 
-     * @return PayerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * Get Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user. 
+     * @return PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-     * @param PayerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * Set Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * @param PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get Owner account ID:  The account ID of the actual resource user 
-     * @return OwnerUin Owner account ID:  The account ID of the actual resource user
+     * Get Owner account ID: The account ID of the actual resource user 
+     * @return OwnerUin Owner account ID: The account ID of the actual resource user
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set Owner account ID:  The account ID of the actual resource user
-     * @param OwnerUin Owner account ID:  The account ID of the actual resource user
+     * Set Owner account ID: The account ID of the actual resource user
+     * @param OwnerUin Owner account ID: The account ID of the actual resource user
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Operator account ID:  The account or role ID of the operator who purchases or activates a resource 
-     * @return OperateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource
+     * Get Operator account ID: The account or role ID of the operator who purchases or activates a resource 
+     * @return OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set Operator account ID:  The account or role ID of the operator who purchases or activates a resource
-     * @param OperateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource
+     * Set Operator account ID: The account or role ID of the operator who purchases or activates a resource
+     * @param OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get Tag information. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Tag information. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Product code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Product code. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get Subproduct code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductCode Subproduct code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Subproduct code. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProductCode Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Subproduct code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param ProductCode Subproduct code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProductCode Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Transaction type code. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionType Transaction type code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type code. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ActionType Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Transaction type code. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param ActionType Transaction type code. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ActionType Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Region ID. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionId Region ID. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Region ID. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RegionId Region ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param RegionId Region ID. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RegionId Region ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

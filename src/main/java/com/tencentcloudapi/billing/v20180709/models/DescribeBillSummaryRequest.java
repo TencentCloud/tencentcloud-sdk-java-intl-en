@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBillSummaryRequest extends AbstractModel{
 
     /**
-    * Bill month in the format of "2023-04"
+    * Bill month in the format of "yyyy-mm"
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+    * Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
     */
     @SerializedName("GroupType")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeBillSummaryRequest extends AbstractModel{
     private String [] TagKey;
 
     /**
-     * Get Bill month in the format of "2023-04" 
-     * @return Month Bill month in the format of "2023-04"
+     * Get Bill month in the format of "yyyy-mm" 
+     * @return Month Bill month in the format of "yyyy-mm"
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Bill month in the format of "2023-04"
-     * @param Month Bill month in the format of "2023-04"
+     * Set Bill month in the format of "yyyy-mm"
+     * @param Month Bill month in the format of "yyyy-mm"
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag` 
-     * @return GroupType Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+     * Get Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag` 
+     * @return GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
-     * @param GroupType Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+     * Set Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+     * @param GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;

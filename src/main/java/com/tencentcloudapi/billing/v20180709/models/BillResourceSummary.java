@@ -23,126 +23,126 @@ import java.util.HashMap;
 public class BillResourceSummary extends AbstractModel{
 
     /**
-    * Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+    * Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+    * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * Billing mode,  which can be monthly subscription or pay-as-you-go.
+    * Billing mode, which can be monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+    * Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Region:  The region to which a resource belongs, such as South China (Guangzhou).
+    * Region: The region to which a resource belongs, such as South China (Guangzhou).
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+    * Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+    * Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+    * Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+    * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * Order ID:  The order number for a monthly subscription purchase
+    * Order ID: The order number for a monthly subscription purchase
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * Transaction time:  The time at which a payment was deducted
+    * Transaction time: The time at which a payment was deducted
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * Usage start time:  The time at which product or service usage starts
+    * Usage start time: The time at which product or service usage starts
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * Usage end time:  The time at which product or service usage ends
+    * Usage end time: The time at which product or service usage ends
     */
     @SerializedName("FeeEndTime")
     @Expose
     private String FeeEndTime;
 
     /**
-    * Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+    * Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
     */
     @SerializedName("ConfigDesc")
     @Expose
     private String ConfigDesc;
 
     /**
-    * Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+    * Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
     */
     @SerializedName("ExtendField1")
     @Expose
     private String ExtendField1;
 
     /**
-    * Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+    * Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
     */
     @SerializedName("ExtendField2")
     @Expose
     private String ExtendField2;
 
     /**
-    * Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+    * Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-    * Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+    * Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
     */
     @SerializedName("Discount")
     @Expose
@@ -163,77 +163,77 @@ public class BillResourceSummary extends AbstractModel{
     private String RealTotalCost;
 
     /**
-    * Voucher payment:  The voucher deduction amount
+    * Voucher payment: The voucher deduction amount
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user’s cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit
+    * Free credit: The amount paid with the user’s free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+    * Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
     */
     @SerializedName("ExtendField3")
     @Expose
     private String ExtendField3;
 
     /**
-    * Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+    * Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
     */
     @SerializedName("ExtendField4")
     @Expose
     private String ExtendField4;
 
     /**
-    * Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+    * Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
     */
     @SerializedName("ExtendField5")
     @Expose
     private String ExtendField5;
 
     /**
-    * Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Tag information. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private BillTagInfo [] Tags;
 
     /**
-    * Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+    * Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * Owner account ID:  The account ID of the actual resource user
+    * Owner account ID: The account ID of the actual resource user
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+    * Operator account ID: The account or role ID of the operator who purchases or activates a resource.
     */
     @SerializedName("OperateUin")
     @Expose
@@ -261,14 +261,14 @@ public class BillResourceSummary extends AbstractModel{
     private Long RegionId;
 
     /**
-    * Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+    * Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * RI deduction (cost):  The amount deducted from the original cost by RI	
+    * RI deduction (cost): The amount deducted from the original cost by RI	
     */
     @SerializedName("OriginalCostWithRI")
     @Expose
@@ -282,295 +282,295 @@ public class BillResourceSummary extends AbstractModel{
     private String SPDeduction;
 
     /**
-    * SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+    * SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
     */
     @SerializedName("OriginalCostWithSP")
     @Expose
     private String OriginalCostWithSP;
 
     /**
-     * Get Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM. 
-     * @return BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
+     * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
-     * @param BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+     * @param BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1. 
-     * @return ProductCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+     * Get Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1. 
+     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
-     * @param ProductCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+     * Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @param ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get Billing mode,  which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode, which can be monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode,  which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project. 
-     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * Get Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project. 
+     * @return ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-     * @param ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @param ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Region:  The region to which a resource belongs, such as South China (Guangzhou). 
-     * @return RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
+     * Get Region: The region to which a resource belongs, such as South China (Guangzhou). 
+     * @return RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region:  The region to which a resource belongs, such as South China (Guangzhou).
-     * @param RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
+     * Set Region: The region to which a resource belongs, such as South China (Guangzhou).
+     * @param RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3. 
-     * @return ZoneName Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+     * Get Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3. 
+     * @return ZoneName Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
-     * @param ZoneName Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+     * Set Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+     * @param ZoneName Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	 
-     * @return ResourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+     * Get Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	 
+     * @return ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
-     * @param ResourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+     * Set Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+     * @param ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default. 
-     * @return ResourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * Get Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default. 
+     * @return ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
-     * @param ResourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * @param ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
-     * @return ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Get Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
+     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @param ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get Order ID:  The order number for a monthly subscription purchase 
-     * @return OrderId Order ID:  The order number for a monthly subscription purchase
+     * Get Order ID: The order number for a monthly subscription purchase 
+     * @return OrderId Order ID: The order number for a monthly subscription purchase
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set Order ID:  The order number for a monthly subscription purchase
-     * @param OrderId Order ID:  The order number for a monthly subscription purchase
+     * Set Order ID: The order number for a monthly subscription purchase
+     * @param OrderId Order ID: The order number for a monthly subscription purchase
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get Transaction time:  The time at which a payment was deducted 
-     * @return PayTime Transaction time:  The time at which a payment was deducted
+     * Get Transaction time: The time at which a payment was deducted 
+     * @return PayTime Transaction time: The time at which a payment was deducted
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set Transaction time:  The time at which a payment was deducted
-     * @param PayTime Transaction time:  The time at which a payment was deducted
+     * Set Transaction time: The time at which a payment was deducted
+     * @param PayTime Transaction time: The time at which a payment was deducted
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get Usage start time:  The time at which product or service usage starts 
-     * @return FeeBeginTime Usage start time:  The time at which product or service usage starts
+     * Get Usage start time: The time at which product or service usage starts 
+     * @return FeeBeginTime Usage start time: The time at which product or service usage starts
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set Usage start time:  The time at which product or service usage starts
-     * @param FeeBeginTime Usage start time:  The time at which product or service usage starts
+     * Set Usage start time: The time at which product or service usage starts
+     * @param FeeBeginTime Usage start time: The time at which product or service usage starts
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get Usage end time:  The time at which product or service usage ends 
-     * @return FeeEndTime Usage end time:  The time at which product or service usage ends
+     * Get Usage end time: The time at which product or service usage ends 
+     * @return FeeEndTime Usage end time: The time at which product or service usage ends
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set Usage end time:  The time at which product or service usage ends
-     * @param FeeEndTime Usage end time:  The time at which product or service usage ends
+     * Set Usage end time: The time at which product or service usage ends
+     * @param FeeEndTime Usage end time: The time at which product or service usage ends
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only. 
-     * @return ConfigDesc Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+     * Get Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only. 
+     * @return ConfigDesc Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
      */
     public String getConfigDesc() {
         return this.ConfigDesc;
     }
 
     /**
-     * Set Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
-     * @param ConfigDesc Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+     * Set Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
+     * @param ConfigDesc Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
      */
     public void setConfigDesc(String ConfigDesc) {
         this.ConfigDesc = ConfigDesc;
     }
 
     /**
-     * Get Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only. 
-     * @return ExtendField1 Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Get Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only. 
+     * @return ExtendField1 Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public String getExtendField1() {
         return this.ExtendField1;
     }
 
     /**
-     * Set Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param ExtendField1 Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Set Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param ExtendField1 Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public void setExtendField1(String ExtendField1) {
         this.ExtendField1 = ExtendField1;
     }
 
     /**
-     * Get Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only. 
-     * @return ExtendField2 Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Get Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only. 
+     * @return ExtendField2 Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public String getExtendField2() {
         return this.ExtendField2;
     }
 
     /**
-     * Set Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param ExtendField2 Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Set Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param ExtendField2 Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public void setExtendField2(String ExtendField2) {
         this.ExtendField2 = ExtendField2;
     }
 
     /**
-     * Get Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default. 
-     * @return TotalCost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Get Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default. 
+     * @return TotalCost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
-     * @param TotalCost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Set Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
+     * @param TotalCost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default. 
-     * @return Discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Get Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default. 
+     * @return Discount Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
-     * @param Discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * Set Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
+     * @param Discount Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
@@ -609,176 +609,176 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Get Voucher payment: The voucher deduction amount 
+     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * Set Voucher payment: The voucher deduction amount
+     * @param VoucherPayAmount Voucher payment: The voucher deduction amount
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user’s cash account 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user’s cash account
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Get Free credit: The amount paid with the user’s free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * Set Free credit: The amount paid with the user’s free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only. 
-     * @return ExtendField3 Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Get Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only. 
+     * @return ExtendField3 Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public String getExtendField3() {
         return this.ExtendField3;
     }
 
     /**
-     * Set Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param ExtendField3 Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Set Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param ExtendField3 Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public void setExtendField3(String ExtendField3) {
         this.ExtendField3 = ExtendField3;
     }
 
     /**
-     * Get Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only. 
-     * @return ExtendField4 Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Get Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only. 
+     * @return ExtendField4 Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public String getExtendField4() {
         return this.ExtendField4;
     }
 
     /**
-     * Set Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param ExtendField4 Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Set Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param ExtendField4 Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public void setExtendField4(String ExtendField4) {
         this.ExtendField4 = ExtendField4;
     }
 
     /**
-     * Get Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only. 
-     * @return ExtendField5 Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Get Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only. 
+     * @return ExtendField5 Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public String getExtendField5() {
         return this.ExtendField5;
     }
 
     /**
-     * Set Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param ExtendField5 Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * Set Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param ExtendField5 Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public void setExtendField5(String ExtendField5) {
         this.ExtendField5 = ExtendField5;
     }
 
     /**
-     * Get Tag information. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Tag information. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user. 
-     * @return PayerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * Get Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user. 
+     * @return PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-     * @param PayerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * Set Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * @param PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get Owner account ID:  The account ID of the actual resource user 
-     * @return OwnerUin Owner account ID:  The account ID of the actual resource user
+     * Get Owner account ID: The account ID of the actual resource user 
+     * @return OwnerUin Owner account ID: The account ID of the actual resource user
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set Owner account ID:  The account ID of the actual resource user
-     * @param OwnerUin Owner account ID:  The account ID of the actual resource user
+     * Set Owner account ID: The account ID of the actual resource user
+     * @param OwnerUin Owner account ID: The account ID of the actual resource user
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Operator account ID:  The account or role ID of the operator who purchases or activates a resource. 
-     * @return OperateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+     * Get Operator account ID: The account or role ID of the operator who purchases or activates a resource. 
+     * @return OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
-     * @param OperateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+     * Set Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+     * @param OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
@@ -833,32 +833,32 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
-     * Get Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. 
-     * @return InstanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+     * Get Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. 
+     * @return InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
-     * @param InstanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+     * Set Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+     * @param InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get RI deduction (cost):  The amount deducted from the original cost by RI	 
-     * @return OriginalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI	
+     * Get RI deduction (cost): The amount deducted from the original cost by RI	 
+     * @return OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI	
      */
     public String getOriginalCostWithRI() {
         return this.OriginalCostWithRI;
     }
 
     /**
-     * Set RI deduction (cost):  The amount deducted from the original cost by RI	
-     * @param OriginalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI	
+     * Set RI deduction (cost): The amount deducted from the original cost by RI	
+     * @param OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI	
      */
     public void setOriginalCostWithRI(String OriginalCostWithRI) {
         this.OriginalCostWithRI = OriginalCostWithRI;
@@ -885,16 +885,16 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
-     * Get SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	 
-     * @return OriginalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+     * Get SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	 
+     * @return OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
      */
     public String getOriginalCostWithSP() {
         return this.OriginalCostWithSP;
     }
 
     /**
-     * Set SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
-     * @param OriginalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+     * Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+     * @param OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
      */
     public void setOriginalCostWithSP(String OriginalCostWithSP) {
         this.OriginalCostWithSP = OriginalCostWithSP;

@@ -37,7 +37,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+    * Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched.
     */
     @SerializedName("Month")
     @Expose
@@ -146,16 +146,16 @@ Note: To query the product codes used in the current month, call <a href="https:
     }
 
     /**
-     * Get Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched. 
-     * @return Month Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+     * Get Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched. 
+     * @return Month Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
-     * @param Month Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+     * Set Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched.
+     * @param Month Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched.
      */
     public void setMonth(String Month) {
         this.Month = Month;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SummaryTotal extends AbstractModel{
 
     /**
-    * Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -38,16 +38,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String TotalCost;
 
     /**
-     * Get Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;

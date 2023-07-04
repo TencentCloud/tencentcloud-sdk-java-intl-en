@@ -39,35 +39,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RealTotalCostRatio;
 
     /**
-    * Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -122,80 +122,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
