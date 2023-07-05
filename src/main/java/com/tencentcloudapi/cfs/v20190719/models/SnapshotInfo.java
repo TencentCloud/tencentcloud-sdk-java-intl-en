@@ -114,6 +114,14 @@ public class SnapshotInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SnapshotType")
+    @Expose
+    private String SnapshotType;
+
+    /**
      * Get Snapshot creation time 
      * @return CreationTime Snapshot creation time
      */
@@ -321,6 +329,26 @@ public class SnapshotInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SnapshotType Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSnapshotType() {
+        return this.SnapshotType;
+    }
+
+    /**
+     * Set Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SnapshotType Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSnapshotType(String SnapshotType) {
+        this.SnapshotType = SnapshotType;
+    }
+
     public SnapshotInfo() {
     }
 
@@ -371,6 +399,9 @@ public class SnapshotInfo extends AbstractModel{
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.SnapshotType != null) {
+            this.SnapshotType = new String(source.SnapshotType);
+        }
     }
 
 
@@ -391,6 +422,7 @@ public class SnapshotInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
 
     }
 }

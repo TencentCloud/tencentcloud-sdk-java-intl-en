@@ -51,7 +51,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long AliveDays;
 
     /**
-    * The specific day (day 1 to day 31) of the month on which to create a snapshot.
+    * The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
     */
     @SerializedName("DayOfMonth")
     @Expose
@@ -129,16 +129,16 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get The specific day (day 1 to day 31) of the month on which to create a snapshot. 
-     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     * Get The specific day (day 1 to day 31) of the month on which to automatically create a snapshot. 
+     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set The specific day (day 1 to day 31) of the month on which to create a snapshot.
-     * @param DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     * Set The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+     * @param DayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;

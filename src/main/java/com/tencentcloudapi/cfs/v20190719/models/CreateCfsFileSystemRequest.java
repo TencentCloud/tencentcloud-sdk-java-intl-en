@@ -30,14 +30,14 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+    * Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
     */
     @SerializedName("NetInterface")
     @Expose
     private String NetInterface;
 
     /**
-    * Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+    * Permission group ID
     */
     @SerializedName("PGroupId")
     @Expose
@@ -51,7 +51,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String Protocol;
 
     /**
-    * Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+    * Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
     */
     @SerializedName("StorageType")
     @Expose
@@ -137,32 +137,32 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended. 
-     * @return NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+     * Get Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one. 
+     * @return NetInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
      */
     public String getNetInterface() {
         return this.NetInterface;
     }
 
     /**
-     * Set Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
-     * @param NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+     * Set Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+     * @param NetInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
      */
     public void setNetInterface(String NetInterface) {
         this.NetInterface = NetInterface;
     }
 
     /**
-     * Get Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`. 
-     * @return PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+     * Get Permission group ID 
+     * @return PGroupId Permission group ID
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
-     * @param PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+     * Set Permission group ID
+     * @param PGroupId Permission group ID
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
@@ -185,16 +185,16 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo) 
-     * @return StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+     * Get Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`. 
+     * @return StorageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
-     * @param StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+     * Set Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+     * @param StorageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

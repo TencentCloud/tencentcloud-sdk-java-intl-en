@@ -20,46 +20,72 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TieringDetailInfo extends AbstractModel{
+public class BucketInfo extends AbstractModel{
 
     /**
-    * STANDARD_IA storage usage
+    * Bucket name
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("TieringSizeInBytes")
+    @SerializedName("Region")
     @Expose
-    private Long TieringSizeInBytes;
+    private String Region;
 
     /**
-     * Get STANDARD_IA storage usage
+     * Get Bucket name 
+     * @return Name Bucket name
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Bucket name
+     * @param Name Bucket name
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Bucket region
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TieringSizeInBytes STANDARD_IA storage usage
+     * @return Region Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Long getTieringSizeInBytes() {
-        return this.TieringSizeInBytes;
+    public String getRegion() {
+        return this.Region;
     }
 
     /**
-     * Set STANDARD_IA storage usage
+     * Set Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TieringSizeInBytes STANDARD_IA storage usage
+     * @param Region Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setTieringSizeInBytes(Long TieringSizeInBytes) {
-        this.TieringSizeInBytes = TieringSizeInBytes;
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
-    public TieringDetailInfo() {
+    public BucketInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TieringDetailInfo(TieringDetailInfo source) {
-        if (source.TieringSizeInBytes != null) {
-            this.TieringSizeInBytes = new Long(source.TieringSizeInBytes);
+    public BucketInfo(BucketInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
     }
 
@@ -68,7 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TieringSizeInBytes", this.TieringSizeInBytes);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

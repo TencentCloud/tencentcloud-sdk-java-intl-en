@@ -44,7 +44,13 @@ public class FileSystemInfo extends AbstractModel{
     private String FileSystemId;
 
     /**
-    * File system status
+    * File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
     */
     @SerializedName("LifeCycleState")
     @Expose
@@ -226,16 +232,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get File system status 
-     * @return LifeCycleState File system status
+     * Get File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading 
+     * @return LifeCycleState File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set File system status
-     * @param LifeCycleState File system status
+     * Set File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
+     * @param LifeCycleState File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;

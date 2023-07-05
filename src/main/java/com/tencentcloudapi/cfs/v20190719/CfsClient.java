@@ -159,6 +159,27 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a migration task.
+To use this API, submit a ticket for us to add you to the allowlist.
+     * @param req CreateMigrationTaskRequest
+     * @return CreateMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMigrationTaskResponse CreateMigrationTask(CreateMigrationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMigrationTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMigrationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMigrationTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a scheduled snapshot policy.
      * @param req DeleteAutoSnapshotPolicyRequest
      * @return DeleteAutoSnapshotPolicyResponse
@@ -259,6 +280,27 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a migration task.
+To use this API, submit a ticket for us to add you to the allowlist.
+     * @param req DeleteMigrationTaskRequest
+     * @return DeleteMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMigrationTaskResponse DeleteMigrationTask(DeleteMigrationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMigrationTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMigrationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteMigrationTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a mount target.
      * @param req DeleteMountTargetRequest
      * @return DeleteMountTargetResponse
@@ -311,6 +353,27 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableZoneInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAvailableZoneInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of data source buckets.
+To use this API, submit a ticket for us to add you to the allowlist.
+     * @param req DescribeBucketListRequest
+     * @return DescribeBucketListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBucketListResponse DescribeBucketList(DescribeBucketListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBucketListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBucketListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBucketList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -459,6 +522,27 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the list of migration tasks.
+To use this API, submit a ticket for us to add you to the allowlist.
+     * @param req DescribeMigrationTasksRequest
+     * @return DescribeMigrationTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigrationTasksResponse DescribeMigrationTasks(DescribeMigrationTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMigrationTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMigrationTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMigrationTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the mount targets of a file system.
      * @param req DescribeMountTargetsRequest
      * @return DescribeMountTargetsResponse
@@ -499,6 +583,46 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the scaling policy of a file system.
+     * @param req ModifyFileSystemAutoScaleUpRuleRequest
+     * @return ModifyFileSystemAutoScaleUpRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(ModifyFileSystemAutoScaleUpRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyFileSystemAutoScaleUpRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to scale up a Turbo file system.
+     * @param req ScaleUpFileSystemRequest
+     * @return ScaleUpFileSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleUpFileSystemResponse ScaleUpFileSystem(ScaleUpFileSystemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleUpFileSystemResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleUpFileSystemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleUpFileSystem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to activate the CFS service.
      * @param req SignUpCfsServiceRequest
      * @return SignUpCfsServiceResponse
@@ -511,6 +635,27 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SignUpCfsServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SignUpCfsService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop a migration task.
+To use this API, submit a ticket for us to add you to the allowlist.
+     * @param req StopMigrationTaskRequest
+     * @return StopMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopMigrationTaskResponse StopMigrationTask(StopMigrationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopMigrationTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopMigrationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopMigrationTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

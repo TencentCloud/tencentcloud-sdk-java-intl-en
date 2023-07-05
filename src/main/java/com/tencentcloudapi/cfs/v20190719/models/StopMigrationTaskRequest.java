@@ -20,46 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TieringDetailInfo extends AbstractModel{
+public class StopMigrationTaskRequest extends AbstractModel{
 
     /**
-    * STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Migration task name
     */
-    @SerializedName("TieringSizeInBytes")
+    @SerializedName("TaskId")
     @Expose
-    private Long TieringSizeInBytes;
+    private String TaskId;
 
     /**
-     * Get STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Migration task name 
+     * @return TaskId Migration task name
      */
-    public Long getTieringSizeInBytes() {
-        return this.TieringSizeInBytes;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Migration task name
+     * @param TaskId Migration task name
      */
-    public void setTieringSizeInBytes(Long TieringSizeInBytes) {
-        this.TieringSizeInBytes = TieringSizeInBytes;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
-    public TieringDetailInfo() {
+    public StopMigrationTaskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TieringDetailInfo(TieringDetailInfo source) {
-        if (source.TieringSizeInBytes != null) {
-            this.TieringSizeInBytes = new Long(source.TieringSizeInBytes);
+    public StopMigrationTaskRequest(StopMigrationTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
     }
 
@@ -68,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TieringSizeInBytes", this.TieringSizeInBytes);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }
