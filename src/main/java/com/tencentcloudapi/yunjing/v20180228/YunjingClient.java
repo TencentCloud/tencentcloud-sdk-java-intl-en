@@ -29,7 +29,7 @@ public class YunjingClient extends AbstractClient{
     private static String endpoint = "yunjing.tencentcloudapi.com";
     private static String service = "yunjing";
     private static String version = "2018-02-28";
-
+    
     public YunjingClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class YunjingClient extends AbstractClient{
     public AddLoginWhiteListResponse AddLoginWhiteList(AddLoginWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLoginWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLoginWhiteListResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class YunjingClient extends AbstractClient{
     public AddMachineTagResponse AddMachineTag(AddMachineTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddMachineTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddMachineTagResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class YunjingClient extends AbstractClient{
     public CloseProVersionResponse CloseProVersion(CloseProVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseProVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseProVersionResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class YunjingClient extends AbstractClient{
     public CreateOpenPortTaskResponse CreateOpenPortTask(CreateOpenPortTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenPortTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenPortTaskResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class YunjingClient extends AbstractClient{
     public CreateProcessTaskResponse CreateProcessTask(CreateProcessTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProcessTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProcessTaskResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class YunjingClient extends AbstractClient{
     public CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(CreateUsualLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUsualLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUsualLoginPlacesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteBruteAttacksResponse DeleteBruteAttacks(DeleteBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBruteAttacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBruteAttacksResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteLoginWhiteListResponse DeleteLoginWhiteList(DeleteLoginWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLoginWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLoginWhiteListResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteMachineResponse DeleteMachine(DeleteMachineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMachineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMachineResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteMachineTagResponse DeleteMachineTag(DeleteMachineTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMachineTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMachineTagResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteMaliciousRequestsResponse DeleteMaliciousRequests(DeleteMaliciousRequestsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMaliciousRequestsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMaliciousRequestsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteMalwaresResponse DeleteMalwares(DeleteMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMalwaresResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteNonlocalLoginPlacesResponse DeleteNonlocalLoginPlaces(DeleteNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNonlocalLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNonlocalLoginPlacesResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class YunjingClient extends AbstractClient{
     public DeleteUsualLoginPlacesResponse DeleteUsualLoginPlaces(DeleteUsualLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsualLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsualLoginPlacesResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeAccountStatisticsResponse DescribeAccountStatistics(DescribeAccountStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountStatisticsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeAgentVulsResponse DescribeAgentVuls(DescribeAgentVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentVulsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentVulsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeAlarmAttributeResponse DescribeAlarmAttribute(DescribeAlarmAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmAttributeResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeBruteAttacksResponse DescribeBruteAttacks(DescribeBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBruteAttacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBruteAttacksResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeComponentInfoResponse DescribeComponentInfo(DescribeComponentInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentInfoResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeComponentStatisticsResponse DescribeComponentStatistics(DescribeComponentStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentStatisticsResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeComponentsResponse DescribeComponents(DescribeComponentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentsResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeHistoryAccountsResponse DescribeHistoryAccounts(DescribeHistoryAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHistoryAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHistoryAccountsResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeImpactedHostsResponse DescribeImpactedHosts(DescribeImpactedHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImpactedHostsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImpactedHostsResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeLoginWhiteListResponse DescribeLoginWhiteList(DescribeLoginWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLoginWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLoginWhiteListResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeMachineInfoResponse DescribeMachineInfo(DescribeMachineInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMachineInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMachineInfoResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeMachinesResponse DescribeMachines(DescribeMachinesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMachinesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMachinesResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeMaliciousRequestsResponse DescribeMaliciousRequests(DescribeMaliciousRequestsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMaliciousRequestsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMaliciousRequestsResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeMalwaresResponse DescribeMalwares(DescribeMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMalwaresResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeNonlocalLoginPlacesResponse DescribeNonlocalLoginPlaces(DescribeNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNonlocalLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNonlocalLoginPlacesResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(DescribeOpenPortStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOpenPortStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOpenPortStatisticsResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeOpenPortTaskStatusResponse DescribeOpenPortTaskStatus(DescribeOpenPortTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOpenPortTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOpenPortTaskStatusResponse>>() {
                 }.getType();
@@ -688,6 +720,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeOpenPortsResponse DescribeOpenPorts(DescribeOpenPortsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOpenPortsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOpenPortsResponse>>() {
                 }.getType();
@@ -708,6 +741,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeOverviewStatisticsResponse DescribeOverviewStatistics(DescribeOverviewStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewStatisticsResponse>>() {
                 }.getType();
@@ -728,6 +762,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeProVersionInfoResponse DescribeProVersionInfo(DescribeProVersionInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProVersionInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProVersionInfoResponse>>() {
                 }.getType();
@@ -748,6 +783,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeProcessStatisticsResponse DescribeProcessStatistics(DescribeProcessStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcessStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessStatisticsResponse>>() {
                 }.getType();
@@ -768,6 +804,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeProcessTaskStatusResponse DescribeProcessTaskStatus(DescribeProcessTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcessTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessTaskStatusResponse>>() {
                 }.getType();
@@ -788,6 +825,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeProcessesResponse DescribeProcesses(DescribeProcessesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcessesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessesResponse>>() {
                 }.getType();
@@ -808,6 +846,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeSecurityDynamicsResponse DescribeSecurityDynamics(DescribeSecurityDynamicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityDynamicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityDynamicsResponse>>() {
                 }.getType();
@@ -828,6 +867,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeSecurityTrendsResponse DescribeSecurityTrends(DescribeSecurityTrendsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityTrendsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityTrendsResponse>>() {
                 }.getType();
@@ -848,6 +888,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeTagMachinesResponse DescribeTagMachines(DescribeTagMachinesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagMachinesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagMachinesResponse>>() {
                 }.getType();
@@ -868,6 +909,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeTagsResponse DescribeTags(DescribeTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagsResponse>>() {
                 }.getType();
@@ -888,6 +930,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeUsualLoginPlacesResponse DescribeUsualLoginPlaces(DescribeUsualLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsualLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsualLoginPlacesResponse>>() {
                 }.getType();
@@ -908,6 +951,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeVulInfoResponse DescribeVulInfo(DescribeVulInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulInfoResponse>>() {
                 }.getType();
@@ -929,6 +973,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeVulScanResultResponse DescribeVulScanResult(DescribeVulScanResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulScanResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulScanResultResponse>>() {
                 }.getType();
@@ -949,6 +994,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeVulsResponse DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsResponse>>() {
                 }.getType();
@@ -969,6 +1015,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeWeeklyReportBruteAttacksResponse DescribeWeeklyReportBruteAttacks(DescribeWeeklyReportBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse>>() {
                 }.getType();
@@ -989,6 +1036,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeWeeklyReportInfoResponse DescribeWeeklyReportInfo(DescribeWeeklyReportInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportInfoResponse>>() {
                 }.getType();
@@ -1009,6 +1057,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeWeeklyReportMalwaresResponse DescribeWeeklyReportMalwares(DescribeWeeklyReportMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportMalwaresResponse>>() {
                 }.getType();
@@ -1029,6 +1078,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeWeeklyReportNonlocalLoginPlacesResponse DescribeWeeklyReportNonlocalLoginPlaces(DescribeWeeklyReportNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse>>() {
                 }.getType();
@@ -1050,6 +1100,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeWeeklyReportVulsResponse DescribeWeeklyReportVuls(DescribeWeeklyReportVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportVulsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportVulsResponse>>() {
                 }.getType();
@@ -1070,6 +1121,7 @@ public class YunjingClient extends AbstractClient{
     public DescribeWeeklyReportsResponse DescribeWeeklyReports(DescribeWeeklyReportsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportsResponse>>() {
                 }.getType();
@@ -1090,6 +1142,7 @@ public class YunjingClient extends AbstractClient{
     public EditTagsResponse EditTags(EditTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EditTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EditTagsResponse>>() {
                 }.getType();
@@ -1110,6 +1163,7 @@ public class YunjingClient extends AbstractClient{
     public ExportBruteAttacksResponse ExportBruteAttacks(ExportBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportBruteAttacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportBruteAttacksResponse>>() {
                 }.getType();
@@ -1130,6 +1184,7 @@ public class YunjingClient extends AbstractClient{
     public ExportMaliciousRequestsResponse ExportMaliciousRequests(ExportMaliciousRequestsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportMaliciousRequestsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportMaliciousRequestsResponse>>() {
                 }.getType();
@@ -1150,6 +1205,7 @@ public class YunjingClient extends AbstractClient{
     public ExportMalwaresResponse ExportMalwares(ExportMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportMalwaresResponse>>() {
                 }.getType();
@@ -1170,6 +1226,7 @@ public class YunjingClient extends AbstractClient{
     public ExportNonlocalLoginPlacesResponse ExportNonlocalLoginPlaces(ExportNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportNonlocalLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportNonlocalLoginPlacesResponse>>() {
                 }.getType();
@@ -1190,6 +1247,7 @@ public class YunjingClient extends AbstractClient{
     public IgnoreImpactedHostsResponse IgnoreImpactedHosts(IgnoreImpactedHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IgnoreImpactedHostsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IgnoreImpactedHostsResponse>>() {
                 }.getType();
@@ -1210,6 +1268,7 @@ public class YunjingClient extends AbstractClient{
     public MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(MisAlarmNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MisAlarmNonlocalLoginPlacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MisAlarmNonlocalLoginPlacesResponse>>() {
                 }.getType();
@@ -1230,6 +1289,7 @@ public class YunjingClient extends AbstractClient{
     public ModifyAlarmAttributeResponse ModifyAlarmAttribute(ModifyAlarmAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmAttributeResponse>>() {
                 }.getType();
@@ -1250,6 +1310,7 @@ public class YunjingClient extends AbstractClient{
     public ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(ModifyAutoOpenProVersionConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoOpenProVersionConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoOpenProVersionConfigResponse>>() {
                 }.getType();
@@ -1270,6 +1331,7 @@ public class YunjingClient extends AbstractClient{
     public ModifyLoginWhiteListResponse ModifyLoginWhiteList(ModifyLoginWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoginWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoginWhiteListResponse>>() {
                 }.getType();
@@ -1290,6 +1352,7 @@ public class YunjingClient extends AbstractClient{
     public ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProVersionRenewFlagResponse>>() {
                 }.getType();
@@ -1310,6 +1373,7 @@ public class YunjingClient extends AbstractClient{
     public OpenProVersionResponse OpenProVersion(OpenProVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenProVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenProVersionResponse>>() {
                 }.getType();
@@ -1330,6 +1394,7 @@ public class YunjingClient extends AbstractClient{
     public RecoverMalwaresResponse RecoverMalwares(RecoverMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecoverMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecoverMalwaresResponse>>() {
                 }.getType();
@@ -1350,6 +1415,7 @@ public class YunjingClient extends AbstractClient{
     public RescanImpactedHostResponse RescanImpactedHost(RescanImpactedHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RescanImpactedHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RescanImpactedHostResponse>>() {
                 }.getType();
@@ -1370,6 +1436,7 @@ public class YunjingClient extends AbstractClient{
     public SeparateMalwaresResponse SeparateMalwares(SeparateMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SeparateMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SeparateMalwaresResponse>>() {
                 }.getType();
@@ -1390,6 +1457,7 @@ public class YunjingClient extends AbstractClient{
     public TrustMaliciousRequestResponse TrustMaliciousRequest(TrustMaliciousRequestRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrustMaliciousRequestResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TrustMaliciousRequestResponse>>() {
                 }.getType();
@@ -1410,6 +1478,7 @@ public class YunjingClient extends AbstractClient{
     public TrustMalwaresResponse TrustMalwares(TrustMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrustMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TrustMalwaresResponse>>() {
                 }.getType();
@@ -1430,6 +1499,7 @@ public class YunjingClient extends AbstractClient{
     public UntrustMaliciousRequestResponse UntrustMaliciousRequest(UntrustMaliciousRequestRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UntrustMaliciousRequestResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UntrustMaliciousRequestResponse>>() {
                 }.getType();
@@ -1450,6 +1520,7 @@ public class YunjingClient extends AbstractClient{
     public UntrustMalwaresResponse UntrustMalwares(UntrustMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UntrustMalwaresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UntrustMalwaresResponse>>() {
                 }.getType();

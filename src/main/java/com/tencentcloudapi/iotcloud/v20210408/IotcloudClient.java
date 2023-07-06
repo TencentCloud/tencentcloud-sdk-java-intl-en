@@ -29,7 +29,7 @@ public class IotcloudClient extends AbstractClient{
     private static String endpoint = "iotcloud.tencentcloudapi.com";
     private static String service = "iotcloud";
     private static String version = "2021-04-08";
-
+    
     public IotcloudClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IotcloudClient extends AbstractClient{
     public CreateDeviceResponse CreateDevice(CreateDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class IotcloudClient extends AbstractClient{
     public CreatePrivateCAResponse CreatePrivateCA(CreatePrivateCARequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrivateCAResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrivateCAResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class IotcloudClient extends AbstractClient{
     public CreateProductResponse CreateProduct(CreateProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProductResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class IotcloudClient extends AbstractClient{
     public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class IotcloudClient extends AbstractClient{
     public DeleteDeviceShadowResponse DeleteDeviceShadow(DeleteDeviceShadowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceShadowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceShadowResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class IotcloudClient extends AbstractClient{
     public DeletePrivateCAResponse DeletePrivateCA(DeletePrivateCARequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrivateCAResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrivateCAResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class IotcloudClient extends AbstractClient{
     public DeleteProductResponse DeleteProduct(DeleteProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProductResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribeDeviceResponse DescribeDevice(DescribeDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribePrivateCAResponse DescribePrivateCA(DescribePrivateCARequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateCAResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateCAResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribePrivateCABindedProductsResponse DescribePrivateCABindedProducts(DescribePrivateCABindedProductsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateCABindedProductsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateCABindedProductsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribePrivateCAsResponse DescribePrivateCAs(DescribePrivateCAsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateCAsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateCAsResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribeProductResponse DescribeProduct(DescribeProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribeProductCAResponse DescribeProductCA(DescribeProductCARequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductCAResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductCAResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class IotcloudClient extends AbstractClient{
     public DescribeProductsResponse DescribeProducts(DescribeProductsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class IotcloudClient extends AbstractClient{
     public SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(SetProductsForbiddenStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetProductsForbiddenStatusResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class IotcloudClient extends AbstractClient{
     public UpdateDeviceLogLevelResponse UpdateDeviceLogLevel(UpdateDeviceLogLevelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDeviceLogLevelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDeviceLogLevelResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class IotcloudClient extends AbstractClient{
     public UpdateDevicesEnableStateResponse UpdateDevicesEnableState(UpdateDevicesEnableStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDevicesEnableStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDevicesEnableStateResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class IotcloudClient extends AbstractClient{
     public UpdatePrivateCAResponse UpdatePrivateCA(UpdatePrivateCARequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdatePrivateCAResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdatePrivateCAResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class IotcloudClient extends AbstractClient{
     public UpdateProductDynamicRegisterResponse UpdateProductDynamicRegister(UpdateProductDynamicRegisterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProductDynamicRegisterResponse>>() {
                 }.getType();

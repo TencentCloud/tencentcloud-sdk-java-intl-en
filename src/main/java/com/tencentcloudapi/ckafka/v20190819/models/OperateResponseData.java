@@ -31,6 +31,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long FlowId;
 
     /**
+    * RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteDTO")
+    @Expose
+    private RouteDTO RouteDTO;
+
+    /**
      * Get FlowId11
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return FlowId FlowId11
@@ -50,6 +57,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.FlowId = FlowId;
     }
 
+    /**
+     * Get RouteIdDto Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RouteDTO getRouteDTO() {
+        return this.RouteDTO;
+    }
+
+    /**
+     * Set RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRouteDTO(RouteDTO RouteDTO) {
+        this.RouteDTO = RouteDTO;
+    }
+
     public OperateResponseData() {
     }
 
@@ -61,6 +84,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.RouteDTO != null) {
+            this.RouteDTO = new RouteDTO(source.RouteDTO);
+        }
     }
 
 
@@ -69,6 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamObj(map, prefix + "RouteDTO.", this.RouteDTO);
 
     }
 }

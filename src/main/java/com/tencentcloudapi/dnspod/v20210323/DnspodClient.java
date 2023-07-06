@@ -29,7 +29,7 @@ public class DnspodClient extends AbstractClient{
     private static String endpoint = "dnspod.tencentcloudapi.com";
     private static String service = "dnspod";
     private static String version = "2021-03-23";
-
+    
     public DnspodClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DnspodClient extends AbstractClient{
     public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DnspodClient extends AbstractClient{
     public CreateDomainAliasResponse CreateDomainAlias(CreateDomainAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainAliasResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DnspodClient extends AbstractClient{
     public CreateDomainBatchResponse CreateDomainBatch(CreateDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainBatchResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DnspodClient extends AbstractClient{
     public CreateDomainGroupResponse CreateDomainGroup(CreateDomainGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainGroupResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DnspodClient extends AbstractClient{
     public CreateRecordResponse CreateRecord(CreateRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DnspodClient extends AbstractClient{
     public CreateRecordBatchResponse CreateRecordBatch(CreateRecordBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordBatchResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class DnspodClient extends AbstractClient{
     public CreateRecordGroupResponse CreateRecordGroup(CreateRecordGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordGroupResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class DnspodClient extends AbstractClient{
     public DeleteDomainResponse DeleteDomain(DeleteDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class DnspodClient extends AbstractClient{
     public DeleteDomainAliasResponse DeleteDomainAlias(DeleteDomainAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainAliasResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class DnspodClient extends AbstractClient{
     public DeleteDomainBatchResponse DeleteDomainBatch(DeleteDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainBatchResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class DnspodClient extends AbstractClient{
     public DeleteRecordResponse DeleteRecord(DeleteRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class DnspodClient extends AbstractClient{
     public DeleteRecordGroupResponse DeleteRecordGroup(DeleteRecordGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordGroupResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class DnspodClient extends AbstractClient{
     public DeleteShareDomainResponse DeleteShareDomain(DeleteShareDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteShareDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteShareDomainResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainResponse DescribeDomain(DescribeDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainAliasListResponse DescribeDomainAliasList(DescribeDomainAliasListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainAliasListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainAliasListResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainGroupListResponse DescribeDomainGroupList(DescribeDomainGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainGroupListResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainListResponse DescribeDomainList(DescribeDomainListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainListResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainLogListResponse DescribeDomainLogList(DescribeDomainLogListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainLogListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainLogListResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainPurviewResponse DescribeDomainPurview(DescribeDomainPurviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainPurviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainPurviewResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainShareInfoResponse DescribeDomainShareInfo(DescribeDomainShareInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainShareInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainShareInfoResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeRecordResponse DescribeRecord(DescribeRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeRecordGroupListResponse DescribeRecordGroupList(DescribeRecordGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordGroupListResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeRecordLineListResponse DescribeRecordLineList(DescribeRecordLineListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordLineListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordLineListResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeRecordListResponse DescribeRecordList(DescribeRecordListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordListResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeRecordTypeResponse DescribeRecordType(DescribeRecordTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordTypeResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class DnspodClient extends AbstractClient{
     public DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalytics(DescribeSubdomainAnalyticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubdomainAnalyticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubdomainAnalyticsResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyDomainLockResponse ModifyDomainLock(ModifyDomainLockRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainLockResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainLockResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyDomainOwnerResponse ModifyDomainOwner(ModifyDomainOwnerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainOwnerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainOwnerResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyDomainRemarkResponse ModifyDomainRemark(ModifyDomainRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainRemarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainRemarkResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyDomainStatusResponse ModifyDomainStatus(ModifyDomainStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainStatusResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyDomainUnlockResponse ModifyDomainUnlock(ModifyDomainUnlockRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainUnlockResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainUnlockResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyRecordResponse ModifyRecord(ModifyRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyRecordBatchResponse ModifyRecordBatch(ModifyRecordBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordBatchResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyRecordGroupResponse ModifyRecordGroup(ModifyRecordGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordGroupResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyRecordRemarkResponse ModifyRecordRemark(ModifyRecordRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordRemarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordRemarkResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyRecordStatusResponse ModifyRecordStatus(ModifyRecordStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordStatusResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class DnspodClient extends AbstractClient{
     public ModifyRecordToGroupResponse ModifyRecordToGroup(ModifyRecordToGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordToGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordToGroupResponse>>() {
                 }.getType();

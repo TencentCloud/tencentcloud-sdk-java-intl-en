@@ -29,7 +29,7 @@ public class CamClient extends AbstractClient{
     private static String endpoint = "cam.tencentcloudapi.com";
     private static String service = "cam";
     private static String version = "2019-01-16";
-
+    
     public CamClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CamClient extends AbstractClient{
     public AddUserResponse AddUser(AddUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUserResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CamClient extends AbstractClient{
     public AddUserToGroupResponse AddUserToGroup(AddUserToGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUserToGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUserToGroupResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CamClient extends AbstractClient{
     public AttachGroupPolicyResponse AttachGroupPolicy(AttachGroupPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachGroupPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachGroupPolicyResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CamClient extends AbstractClient{
     public AttachRolePolicyResponse AttachRolePolicy(AttachRolePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachRolePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachRolePolicyResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CamClient extends AbstractClient{
     public AttachUserPolicyResponse AttachUserPolicy(AttachUserPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachUserPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachUserPolicyResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CamClient extends AbstractClient{
     public ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(ConsumeCustomMFATokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ConsumeCustomMFATokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ConsumeCustomMFATokenResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CamClient extends AbstractClient{
     public CreateAccessKeyResponse CreateAccessKey(CreateAccessKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccessKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccessKeyResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CamClient extends AbstractClient{
     public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CamClient extends AbstractClient{
     public CreateOIDCConfigResponse CreateOIDCConfig(CreateOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOIDCConfigResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CamClient extends AbstractClient{
     public CreatePolicyResponse CreatePolicy(CreatePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePolicyResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CamClient extends AbstractClient{
     public CreatePolicyVersionResponse CreatePolicyVersion(CreatePolicyVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePolicyVersionResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CamClient extends AbstractClient{
     public CreateRoleResponse CreateRole(CreateRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoleResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CamClient extends AbstractClient{
     public CreateSAMLProviderResponse CreateSAMLProvider(CreateSAMLProviderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSAMLProviderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSAMLProviderResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CamClient extends AbstractClient{
     public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServiceLinkedRoleResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CamClient extends AbstractClient{
     public CreateUserOIDCConfigResponse CreateUserOIDCConfig(CreateUserOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserOIDCConfigResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CamClient extends AbstractClient{
     public CreateUserSAMLConfigResponse CreateUserSAMLConfig(CreateUserSAMLConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserSAMLConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserSAMLConfigResponse>>() {
                 }.getType();
@@ -368,6 +384,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteAccessKeyResponse DeleteAccessKey(DeleteAccessKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccessKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccessKeyResponse>>() {
                 }.getType();
@@ -388,6 +405,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
                 }.getType();
@@ -408,6 +426,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteOIDCConfigResponse DeleteOIDCConfig(DeleteOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOIDCConfigResponse>>() {
                 }.getType();
@@ -428,6 +447,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeletePolicyResponse DeletePolicy(DeletePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePolicyResponse>>() {
                 }.getType();
@@ -448,6 +468,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeletePolicyVersionResponse DeletePolicyVersion(DeletePolicyVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePolicyVersionResponse>>() {
                 }.getType();
@@ -468,6 +489,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteRoleResponse DeleteRole(DeleteRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRoleResponse>>() {
                 }.getType();
@@ -488,6 +510,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteRolePermissionsBoundaryResponse DeleteRolePermissionsBoundary(DeleteRolePermissionsBoundaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRolePermissionsBoundaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRolePermissionsBoundaryResponse>>() {
                 }.getType();
@@ -508,6 +531,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteSAMLProviderResponse DeleteSAMLProvider(DeleteSAMLProviderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSAMLProviderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSAMLProviderResponse>>() {
                 }.getType();
@@ -528,6 +552,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(DeleteServiceLinkedRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceLinkedRoleResponse>>() {
                 }.getType();
@@ -548,6 +573,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
                 }.getType();
@@ -568,6 +594,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(DeleteUserPermissionsBoundaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserPermissionsBoundaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>() {
                 }.getType();
@@ -588,6 +615,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeOIDCConfigResponse DescribeOIDCConfig(DescribeOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOIDCConfigResponse>>() {
                 }.getType();
@@ -608,6 +636,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeRoleListResponse DescribeRoleList(DescribeRoleListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoleListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoleListResponse>>() {
                 }.getType();
@@ -628,6 +657,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(DescribeSafeAuthFlagCollRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSafeAuthFlagCollResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagCollResponse>>() {
                 }.getType();
@@ -648,6 +678,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(DescribeSafeAuthFlagIntlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSafeAuthFlagIntlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagIntlResponse>>() {
                 }.getType();
@@ -668,6 +699,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeSubAccountsResponse DescribeSubAccounts(DescribeSubAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubAccountsResponse>>() {
                 }.getType();
@@ -688,6 +720,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeUserOIDCConfigResponse DescribeUserOIDCConfig(DescribeUserOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserOIDCConfigResponse>>() {
                 }.getType();
@@ -708,6 +741,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(DescribeUserSAMLConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserSAMLConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserSAMLConfigResponse>>() {
                 }.getType();
@@ -728,6 +762,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DetachGroupPolicyResponse DetachGroupPolicy(DetachGroupPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachGroupPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachGroupPolicyResponse>>() {
                 }.getType();
@@ -748,6 +783,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DetachRolePolicyResponse DetachRolePolicy(DetachRolePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachRolePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachRolePolicyResponse>>() {
                 }.getType();
@@ -768,6 +804,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DetachUserPolicyResponse DetachUserPolicy(DetachUserPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachUserPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachUserPolicyResponse>>() {
                 }.getType();
@@ -788,6 +825,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public DisableUserSSOResponse DisableUserSSO(DisableUserSSORequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableUserSSOResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableUserSSOResponse>>() {
                 }.getType();
@@ -808,6 +846,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetAccountSummaryResponse GetAccountSummary(GetAccountSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAccountSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAccountSummaryResponse>>() {
                 }.getType();
@@ -828,6 +867,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(GetCustomMFATokenInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCustomMFATokenInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCustomMFATokenInfoResponse>>() {
                 }.getType();
@@ -848,6 +888,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetGroupResponse GetGroup(GetGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetGroupResponse>>() {
                 }.getType();
@@ -868,6 +909,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetPolicyResponse GetPolicy(GetPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPolicyResponse>>() {
                 }.getType();
@@ -888,6 +930,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetPolicyVersionResponse GetPolicyVersion(GetPolicyVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPolicyVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPolicyVersionResponse>>() {
                 }.getType();
@@ -908,6 +951,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetRoleResponse GetRole(GetRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoleResponse>>() {
                 }.getType();
@@ -928,6 +972,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetSAMLProviderResponse GetSAMLProvider(GetSAMLProviderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSAMLProviderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSAMLProviderResponse>>() {
                 }.getType();
@@ -948,6 +993,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetSecurityLastUsedResponse GetSecurityLastUsed(GetSecurityLastUsedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSecurityLastUsedResponse>>() {
                 }.getType();
@@ -968,6 +1014,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>() {
                 }.getType();
@@ -988,6 +1035,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetUserResponse GetUser(GetUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetUserResponse>>() {
                 }.getType();
@@ -1008,6 +1056,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public GetUserAppIdResponse GetUserAppId(GetUserAppIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetUserAppIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetUserAppIdResponse>>() {
                 }.getType();
@@ -1028,6 +1077,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListAccessKeysResponse ListAccessKeys(ListAccessKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAccessKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAccessKeysResponse>>() {
                 }.getType();
@@ -1048,6 +1098,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(ListAttachedGroupPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAttachedGroupPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAttachedGroupPoliciesResponse>>() {
                 }.getType();
@@ -1068,6 +1119,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListAttachedRolePoliciesResponse ListAttachedRolePolicies(ListAttachedRolePoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAttachedRolePoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAttachedRolePoliciesResponse>>() {
                 }.getType();
@@ -1088,6 +1140,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(ListAttachedUserAllPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>() {
                 }.getType();
@@ -1108,6 +1161,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListAttachedUserPoliciesResponse ListAttachedUserPolicies(ListAttachedUserPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAttachedUserPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAttachedUserPoliciesResponse>>() {
                 }.getType();
@@ -1128,6 +1182,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListCollaboratorsResponse ListCollaborators(ListCollaboratorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListCollaboratorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListCollaboratorsResponse>>() {
                 }.getType();
@@ -1148,6 +1203,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListEntitiesForPolicyResponse ListEntitiesForPolicy(ListEntitiesForPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEntitiesForPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEntitiesForPolicyResponse>>() {
                 }.getType();
@@ -1168,6 +1224,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListGroupsResponse ListGroups(ListGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListGroupsResponse>>() {
                 }.getType();
@@ -1188,6 +1245,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListGroupsForUserResponse ListGroupsForUser(ListGroupsForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListGroupsForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListGroupsForUserResponse>>() {
                 }.getType();
@@ -1208,6 +1266,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListPoliciesResponse ListPolicies(ListPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListPoliciesResponse>>() {
                 }.getType();
@@ -1228,6 +1287,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListPolicyVersionsResponse ListPolicyVersions(ListPolicyVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListPolicyVersionsResponse>>() {
                 }.getType();
@@ -1248,6 +1308,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListSAMLProvidersResponse ListSAMLProviders(ListSAMLProvidersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListSAMLProvidersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListSAMLProvidersResponse>>() {
                 }.getType();
@@ -1268,6 +1329,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListUsersResponse ListUsers(ListUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUsersResponse>>() {
                 }.getType();
@@ -1288,6 +1350,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public ListUsersForGroupResponse ListUsersForGroup(ListUsersForGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUsersForGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUsersForGroupResponse>>() {
                 }.getType();
@@ -1308,6 +1371,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public PutRolePermissionsBoundaryResponse PutRolePermissionsBoundary(PutRolePermissionsBoundaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutRolePermissionsBoundaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutRolePermissionsBoundaryResponse>>() {
                 }.getType();
@@ -1328,6 +1392,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public PutUserPermissionsBoundaryResponse PutUserPermissionsBoundary(PutUserPermissionsBoundaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutUserPermissionsBoundaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutUserPermissionsBoundaryResponse>>() {
                 }.getType();
@@ -1348,6 +1413,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public RemoveUserFromGroupResponse RemoveUserFromGroup(RemoveUserFromGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveUserFromGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveUserFromGroupResponse>>() {
                 }.getType();
@@ -1368,6 +1434,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(SetDefaultPolicyVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetDefaultPolicyVersionResponse>>() {
                 }.getType();
@@ -1388,6 +1455,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public SetMfaFlagResponse SetMfaFlag(SetMfaFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetMfaFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetMfaFlagResponse>>() {
                 }.getType();
@@ -1408,6 +1476,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public TagRoleResponse TagRole(TagRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TagRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TagRoleResponse>>() {
                 }.getType();
@@ -1428,6 +1497,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public UntagRoleResponse UntagRole(UntagRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UntagRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UntagRoleResponse>>() {
                 }.getType();
@@ -1448,6 +1518,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public UpdateAccessKeyResponse UpdateAccessKey(UpdateAccessKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAccessKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAccessKeyResponse>>() {
                 }.getType();
@@ -1468,6 +1539,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(UpdateAssumeRolePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAssumeRolePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAssumeRolePolicyResponse>>() {
                 }.getType();
@@ -1488,6 +1560,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public UpdateGroupResponse UpdateGroup(UpdateGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGroupResponse>>() {
                 }.getType();
@@ -1508,6 +1581,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public UpdateOIDCConfigResponse UpdateOIDCConfig(UpdateOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateOIDCConfigResponse>>() {
                 }.getType();
@@ -1529,6 +1603,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdatePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdatePolicyResponse>>() {
                 }.getType();
@@ -1549,6 +1624,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(UpdateRoleConsoleLoginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRoleConsoleLoginResponse>>() {
                 }.getType();
@@ -1569,6 +1645,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdateRoleDescriptionResponse UpdateRoleDescription(UpdateRoleDescriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRoleDescriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRoleDescriptionResponse>>() {
                 }.getType();
@@ -1589,6 +1666,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdateSAMLProviderResponse UpdateSAMLProvider(UpdateSAMLProviderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateSAMLProviderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateSAMLProviderResponse>>() {
                 }.getType();
@@ -1609,6 +1687,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdateUserResponse UpdateUser(UpdateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateUserResponse>>() {
                 }.getType();
@@ -1629,6 +1708,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdateUserOIDCConfigResponse UpdateUserOIDCConfig(UpdateUserOIDCConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateUserOIDCConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateUserOIDCConfigResponse>>() {
                 }.getType();
@@ -1649,6 +1729,7 @@ This API will update the default version of an existing policy instead of creati
     public UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(UpdateUserSAMLConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateUserSAMLConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateUserSAMLConfigResponse>>() {
                 }.getType();

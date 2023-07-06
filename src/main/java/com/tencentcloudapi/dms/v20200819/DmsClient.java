@@ -29,7 +29,7 @@ public class DmsClient extends AbstractClient{
     private static String endpoint = "dms.tencentcloudapi.com";
     private static String service = "dms";
     private static String version = "2020-08-19";
-
+    
     public DmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DmsClient extends AbstractClient{
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendEmailResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DmsClient extends AbstractClient{
     public SendTemplatedEmailResponse SendTemplatedEmail(SendTemplatedEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendTemplatedEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendTemplatedEmailResponse>>() {
                 }.getType();

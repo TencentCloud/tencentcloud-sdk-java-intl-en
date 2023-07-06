@@ -29,7 +29,7 @@ public class CaptchaClient extends AbstractClient{
     private static String endpoint = "captcha.tencentcloudapi.com";
     private static String service = "captcha";
     private static String version = "2019-07-22";
-
+    
     public CaptchaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CaptchaClient extends AbstractClient{
     public DescribeCaptchaResultResponse DescribeCaptchaResult(DescribeCaptchaResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCaptchaResultResponse>>() {
                 }.getType();

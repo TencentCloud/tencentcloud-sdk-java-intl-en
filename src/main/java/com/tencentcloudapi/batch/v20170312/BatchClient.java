@@ -29,7 +29,7 @@ public class BatchClient extends AbstractClient{
     private static String endpoint = "batch.tencentcloudapi.com";
     private static String service = "batch";
     private static String version = "2017-03-12";
-
+    
     public BatchClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -53,6 +53,7 @@ For instances added to the compute environment, their UserData will be reset, an
     public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
                 }.getType();
@@ -73,6 +74,7 @@ For instances added to the compute environment, their UserData will be reset, an
     public CreateComputeEnvResponse CreateComputeEnv(CreateComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateComputeEnvResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateComputeEnvResponse>>() {
                 }.getType();
@@ -93,6 +95,7 @@ For instances added to the compute environment, their UserData will be reset, an
     public CreateTaskTemplateResponse CreateTaskTemplate(CreateTaskTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskTemplateResponse>>() {
                 }.getType();
@@ -113,6 +116,7 @@ For instances added to the compute environment, their UserData will be reset, an
     public DeleteComputeEnvResponse DeleteComputeEnv(DeleteComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteComputeEnvResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteComputeEnvResponse>>() {
                 }.getType();
@@ -135,6 +139,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
                 }.getType();
@@ -155,6 +160,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DeleteTaskTemplatesResponse DeleteTaskTemplates(DeleteTaskTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskTemplatesResponse>>() {
                 }.getType();
@@ -175,6 +181,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeAvailableCvmInstanceTypesResponse DescribeAvailableCvmInstanceTypes(DescribeAvailableCvmInstanceTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse>>() {
                 }.getType();
@@ -195,6 +202,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeComputeEnvResponse DescribeComputeEnv(DescribeComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvResponse>>() {
                 }.getType();
@@ -215,6 +223,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeComputeEnvActivitiesResponse DescribeComputeEnvActivities(DescribeComputeEnvActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvActivitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvActivitiesResponse>>() {
                 }.getType();
@@ -235,6 +244,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfo(DescribeComputeEnvCreateInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvCreateInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfoResponse>>() {
                 }.getType();
@@ -255,6 +265,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(DescribeComputeEnvCreateInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvCreateInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfosResponse>>() {
                 }.getType();
@@ -275,6 +286,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeComputeEnvsResponse DescribeComputeEnvs(DescribeComputeEnvsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvsResponse>>() {
                 }.getType();
@@ -295,6 +307,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(DescribeCvmZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse>>() {
                 }.getType();
@@ -315,6 +328,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeInstanceCategoriesResponse DescribeInstanceCategories(DescribeInstanceCategoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceCategoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceCategoriesResponse>>() {
                 }.getType();
@@ -335,6 +349,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobResponse>>() {
                 }.getType();
@@ -355,6 +370,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobSubmitInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobSubmitInfoResponse>>() {
                 }.getType();
@@ -375,6 +391,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobsResponse>>() {
                 }.getType();
@@ -395,6 +412,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
                 }.getType();
@@ -415,6 +433,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeTaskLogsResponse DescribeTaskLogs(DescribeTaskLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskLogsResponse>>() {
                 }.getType();
@@ -435,6 +454,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DescribeTaskTemplatesResponse DescribeTaskTemplates(DescribeTaskTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskTemplatesResponse>>() {
                 }.getType();
@@ -455,6 +475,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
                 }.getType();
@@ -475,6 +496,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public ModifyComputeEnvResponse ModifyComputeEnv(ModifyComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyComputeEnvResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyComputeEnvResponse>>() {
                 }.getType();
@@ -495,6 +517,7 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     public ModifyTaskTemplateResponse ModifyTaskTemplate(ModifyTaskTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskTemplateResponse>>() {
                 }.getType();
@@ -516,6 +539,7 @@ Job retry is supported only if a job is in the "FAILED" state. After the retry o
     public RetryJobsResponse RetryJobs(RetryJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RetryJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RetryJobsResponse>>() {
                 }.getType();
@@ -537,6 +561,7 @@ Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABN
     public TerminateComputeNodeResponse TerminateComputeNode(TerminateComputeNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateComputeNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateComputeNodeResponse>>() {
                 }.getType();
@@ -557,6 +582,7 @@ Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABN
     public TerminateComputeNodesResponse TerminateComputeNodes(TerminateComputeNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateComputeNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateComputeNodesResponse>>() {
                 }.getType();
@@ -579,6 +605,7 @@ Job termination is an asynchronous process, and the time it takes to complete th
     public TerminateJobResponse TerminateJob(TerminateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateJobResponse>>() {
                 }.getType();
@@ -603,6 +630,7 @@ Job termination is an asynchronous process, and the time it takes to complete th
     public TerminateTaskInstanceResponse TerminateTaskInstance(TerminateTaskInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateTaskInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateTaskInstanceResponse>>() {
                 }.getType();

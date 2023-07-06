@@ -29,7 +29,7 @@ public class MpsClient extends AbstractClient{
     private static String endpoint = "mps.tencentcloudapi.com";
     private static String service = "mps";
     private static String version = "2019-06-12";
-
+    
     public MpsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MpsClient extends AbstractClient{
     public CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAIAnalysisTemplateResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MpsClient extends AbstractClient{
     public CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAIRecognitionTemplateResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MpsClient extends AbstractClient{
     public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MpsClient extends AbstractClient{
     public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(CreateAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAnimatedGraphicsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MpsClient extends AbstractClient{
     public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContentReviewTemplateResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MpsClient extends AbstractClient{
     public CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(CreateImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageSpriteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageSpriteTemplateResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MpsClient extends AbstractClient{
     public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonSampleResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class MpsClient extends AbstractClient{
     public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSampleSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSampleSnapshotTemplateResponse>>() {
                 }.getType();
@@ -218,6 +226,7 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
     public CreateScheduleResponse CreateSchedule(CreateScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScheduleResponse>>() {
                 }.getType();
@@ -238,6 +247,7 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
     public CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(CreateSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
@@ -258,6 +268,7 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
     public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTranscodeTemplateResponse>>() {
                 }.getType();
@@ -278,6 +289,7 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
     public CreateWatermarkTemplateResponse CreateWatermarkTemplate(CreateWatermarkTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWatermarkTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWatermarkTemplateResponse>>() {
                 }.getType();
@@ -298,6 +310,7 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
     public CreateWordSamplesResponse CreateWordSamples(CreateWordSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWordSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWordSamplesResponse>>() {
                 }.getType();
@@ -329,6 +342,7 @@ Note: A workflow is disabled upon creation. You need to manually enable it.
     public CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkflowResponse>>() {
                 }.getType();
@@ -351,6 +365,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>() {
                 }.getType();
@@ -371,6 +386,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>() {
                 }.getType();
@@ -391,6 +407,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>() {
                 }.getType();
@@ -411,6 +428,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
@@ -431,6 +449,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
@@ -451,6 +470,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImageSpriteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImageSpriteTemplateResponse>>() {
                 }.getType();
@@ -471,6 +491,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonSampleResponse>>() {
                 }.getType();
@@ -491,6 +512,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(DeleteSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSampleSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>() {
                 }.getType();
@@ -511,6 +533,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScheduleResponse>>() {
                 }.getType();
@@ -531,6 +554,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
@@ -551,6 +575,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTranscodeTemplateResponse>>() {
                 }.getType();
@@ -571,6 +596,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(DeleteWatermarkTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWatermarkTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWatermarkTemplateResponse>>() {
                 }.getType();
@@ -591,6 +617,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteWordSamplesResponse DeleteWordSamples(DeleteWordSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWordSamplesResponse>>() {
                 }.getType();
@@ -611,6 +638,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteWorkflowResponse DeleteWorkflow(DeleteWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWorkflowResponse>>() {
                 }.getType();
@@ -631,6 +659,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>() {
                 }.getType();
@@ -651,6 +680,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>() {
                 }.getType();
@@ -671,6 +701,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>() {
                 }.getType();
@@ -691,6 +722,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
                 }.getType();
@@ -711,6 +743,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContentReviewTemplatesResponse>>() {
                 }.getType();
@@ -731,6 +764,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageSpriteTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>() {
                 }.getType();
@@ -751,6 +785,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeMediaMetaDataResponse DescribeMediaMetaData(DescribeMediaMetaDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaMetaDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaMetaDataResponse>>() {
                 }.getType();
@@ -771,6 +806,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonSamplesResponse>>() {
                 }.getType();
@@ -791,6 +827,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(DescribeSampleSnapshotTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleSnapshotTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>() {
                 }.getType();
@@ -811,6 +848,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSchedulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSchedulesResponse>>() {
                 }.getType();
@@ -831,6 +869,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>() {
                 }.getType();
@@ -851,6 +890,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
@@ -873,6 +913,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -893,6 +934,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTranscodeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
                 }.getType();
@@ -913,6 +955,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(DescribeWatermarkTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWatermarkTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWatermarkTemplatesResponse>>() {
                 }.getType();
@@ -933,6 +976,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWordSamplesResponse>>() {
                 }.getType();
@@ -953,6 +997,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeWorkflowsResponse DescribeWorkflows(DescribeWorkflowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkflowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkflowsResponse>>() {
                 }.getType();
@@ -973,6 +1018,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DisableScheduleResponse DisableSchedule(DisableScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableScheduleResponse>>() {
                 }.getType();
@@ -993,6 +1039,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DisableWorkflowResponse DisableWorkflow(DisableWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableWorkflowResponse>>() {
                 }.getType();
@@ -1017,6 +1064,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EditMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
                 }.getType();
@@ -1037,6 +1085,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public EnableScheduleResponse EnableSchedule(EnableScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableScheduleResponse>>() {
                 }.getType();
@@ -1057,6 +1106,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public EnableWorkflowResponse EnableWorkflow(EnableWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableWorkflowResponse>>() {
                 }.getType();
@@ -1077,6 +1127,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
                 }.getType();
@@ -1097,6 +1148,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public ManageTaskResponse ManageTask(ManageTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ManageTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ManageTaskResponse>>() {
                 }.getType();
@@ -1119,6 +1171,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>() {
                 }.getType();
@@ -1139,6 +1192,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>() {
                 }.getType();
@@ -1159,6 +1213,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>() {
                 }.getType();
@@ -1179,6 +1234,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
@@ -1199,6 +1255,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
                 }.getType();
@@ -1219,6 +1276,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyImageSpriteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyImageSpriteTemplateResponse>>() {
                 }.getType();
@@ -1239,6 +1297,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
                 }.getType();
@@ -1259,6 +1318,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(ModifySampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySampleSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>() {
                 }.getType();
@@ -1279,6 +1339,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyScheduleResponse>>() {
                 }.getType();
@@ -1299,6 +1360,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
@@ -1319,6 +1381,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTranscodeTemplateResponse>>() {
                 }.getType();
@@ -1339,6 +1402,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(ModifyWatermarkTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWatermarkTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWatermarkTemplateResponse>>() {
                 }.getType();
@@ -1359,6 +1423,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyWordSampleResponse ModifyWordSample(ModifyWordSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWordSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWordSampleResponse>>() {
                 }.getType();
@@ -1380,6 +1445,7 @@ Instead of initiating a video processing task, this API is used to help generate
     public ParseLiveStreamProcessNotificationResponse ParseLiveStreamProcessNotification(ParseLiveStreamProcessNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ParseLiveStreamProcessNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ParseLiveStreamProcessNotificationResponse>>() {
                 }.getType();
@@ -1401,6 +1467,7 @@ Instead of initiating a video processing task, this API is used to help generate
     public ParseNotificationResponse ParseNotification(ParseNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ParseNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ParseNotificationResponse>>() {
                 }.getType();
@@ -1426,6 +1493,7 @@ Live stream processing notifications are written into the specified CMQ queue in
     public ProcessLiveStreamResponse ProcessLiveStream(ProcessLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ProcessLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ProcessLiveStreamResponse>>() {
                 }.getType();
@@ -1455,6 +1523,7 @@ Live stream processing notifications are written into the specified CMQ queue in
     public ProcessMediaResponse ProcessMedia(ProcessMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ProcessMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ProcessMediaResponse>>() {
                 }.getType();
@@ -1475,6 +1544,7 @@ Live stream processing notifications are written into the specified CMQ queue in
     public ResetWorkflowResponse ResetWorkflow(ResetWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetWorkflowResponse>>() {
                 }.getType();

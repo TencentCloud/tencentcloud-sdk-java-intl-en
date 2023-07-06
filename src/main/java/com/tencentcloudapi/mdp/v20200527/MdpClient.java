@@ -29,7 +29,7 @@ public class MdpClient extends AbstractClient{
     private static String endpoint = "mdp.tencentcloudapi.com";
     private static String service = "mdp";
     private static String version = "2020-05-27";
-
+    
     public MdpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MdpClient extends AbstractClient{
     public BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannel(BindNewLVBDomainWithChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindNewLVBDomainWithChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindNewLVBDomainWithChannelResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MdpClient extends AbstractClient{
     public CreateStreamPackageChannelResponse CreateStreamPackageChannel(CreateStreamPackageChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamPackageChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamPackageChannelResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MdpClient extends AbstractClient{
     public CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(CreateStreamPackageChannelEndpointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamPackageChannelEndpointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamPackageChannelEndpointResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MdpClient extends AbstractClient{
     public DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(DeleteStreamPackageChannelEndpointsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MdpClient extends AbstractClient{
     public DeleteStreamPackageChannelsResponse DeleteStreamPackageChannels(DeleteStreamPackageChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamPackageChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamPackageChannelsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MdpClient extends AbstractClient{
     public DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(DescribeStreamPackageChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPackageChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPackageChannelResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MdpClient extends AbstractClient{
     public DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(DescribeStreamPackageChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPackageChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPackageChannelsResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class MdpClient extends AbstractClient{
     public ModifyStreamPackageChannelResponse ModifyStreamPackageChannel(ModifyStreamPackageChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamPackageChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamPackageChannelResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class MdpClient extends AbstractClient{
     public ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpoint(ModifyStreamPackageChannelEndpointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamPackageChannelEndpointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamPackageChannelEndpointResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class MdpClient extends AbstractClient{
     public ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(ModifyStreamPackageChannelInputAuthInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class MdpClient extends AbstractClient{
     public UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannel(UnbindCdnDomainWithChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindCdnDomainWithChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindCdnDomainWithChannelResponse>>() {
                 }.getType();

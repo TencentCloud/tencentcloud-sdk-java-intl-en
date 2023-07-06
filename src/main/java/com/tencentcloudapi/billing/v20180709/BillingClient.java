@@ -29,7 +29,7 @@ public class BillingClient extends AbstractClient{
     private static String endpoint = "billing.tencentcloudapi.com";
     private static String service = "billing";
     private static String version = "2018-07-09";
-
+    
     public BillingClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BillingClient extends AbstractClient{
     public DescribeAccountBalanceResponse DescribeAccountBalance(DescribeAccountBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountBalanceResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillDetailResponse DescribeBillDetail(DescribeBillDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillDetailResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillResourceSummaryResponse DescribeBillResourceSummary(DescribeBillResourceSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillResourceSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillResourceSummaryResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillSummaryResponse DescribeBillSummary(DescribeBillSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProductResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillSummaryByProjectResponse DescribeBillSummaryByProject(DescribeBillSummaryByProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillSummaryByProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProjectResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByRegionResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(DescribeBillSummaryByTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillSummaryByTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByTagResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeVoucherInfoResponse DescribeVoucherInfo(DescribeVoucherInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVoucherInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVoucherInfoResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(DescribeVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVoucherUsageDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVoucherUsageDetailsResponse>>() {
                 }.getType();

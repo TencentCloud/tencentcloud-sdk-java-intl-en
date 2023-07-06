@@ -29,7 +29,7 @@ public class CiamClient extends AbstractClient{
     private static String endpoint = "ciam.tencentcloudapi.com";
     private static String service = "ciam";
     private static String version = "2021-04-20";
-
+    
     public CiamClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CiamClient extends AbstractClient{
     public ListUserGroupsResponse ListUserGroups(ListUserGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUserGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUserGroupsResponse>>() {
                 }.getType();

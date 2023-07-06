@@ -29,7 +29,7 @@ public class FaceidClient extends AbstractClient{
     private static String endpoint = "faceid.tencentcloudapi.com";
     private static String service = "faceid";
     private static String version = "2018-03-01";
-
+    
     public FaceidClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class FaceidClient extends AbstractClient{
     public ApplyLivenessTokenResponse ApplyLivenessToken(ApplyLivenessTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyLivenessTokenResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class FaceidClient extends AbstractClient{
     public ApplySdkVerificationTokenResponse ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplySdkVerificationTokenResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class FaceidClient extends AbstractClient{
     public ApplyWebVerificationTokenResponse ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyWebVerificationTokenResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ The data will be stored in a COS bucket in the region specified by the parameter
     public CreateUploadUrlResponse CreateUploadUrl(CreateUploadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUploadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUploadUrlResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ The image and the data generated with the SDK must be stored in COS, and the reg
     public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>() {
                 }.getType();
@@ -150,6 +155,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GenerateReflectSequenceResponse GenerateReflectSequence(GenerateReflectSequenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateReflectSequenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateReflectSequenceResponse>>() {
                 }.getType();
@@ -170,6 +176,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GetFaceIdResultIntlResponse GetFaceIdResultIntl(GetFaceIdResultIntlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFaceIdResultIntlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFaceIdResultIntlResponse>>() {
                 }.getType();
@@ -190,6 +197,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GetFaceIdTokenIntlResponse GetFaceIdTokenIntl(GetFaceIdTokenIntlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFaceIdTokenIntlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFaceIdTokenIntlResponse>>() {
                 }.getType();
@@ -210,6 +218,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GetLivenessResultResponse GetLivenessResult(GetLivenessResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLivenessResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLivenessResultResponse>>() {
                 }.getType();
@@ -230,6 +239,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GetSdkVerificationResultResponse GetSdkVerificationResult(GetSdkVerificationResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSdkVerificationResultResponse>>() {
                 }.getType();
@@ -250,6 +260,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GetWebVerificationResultResponse GetWebVerificationResult(GetWebVerificationResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ This API on the legacy version will continue to serve existing users but will be
     public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessCompareResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessCompareResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ This API on the legacy version will continue to serve existing users but will be
     public VideoLivenessCompareResponse VideoLivenessCompare(VideoLivenessCompareRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VideoLivenessCompareResponse>>() {
                 }.getType();

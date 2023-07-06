@@ -29,7 +29,7 @@ public class TmtClient extends AbstractClient{
     private static String endpoint = "tmt.tencentcloudapi.com";
     private static String service = "tmt";
     private static String version = "2018-03-21";
-
+    
     public TmtClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ Note: We recommend that you simplify your development with the SDK integration m
     public TextTranslateResponse TextTranslate(TextTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextTranslateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextTranslateResponse>>() {
                 }.getType();

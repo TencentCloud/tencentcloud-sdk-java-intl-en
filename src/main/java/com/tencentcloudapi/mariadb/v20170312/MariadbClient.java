@@ -29,7 +29,7 @@ public class MariadbClient extends AbstractClient{
     private static String endpoint = "mariadb.tencentcloudapi.com";
     private static String service = "mariadb";
     private static String version = "2017-03-12";
-
+    
     public MariadbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MariadbClient extends AbstractClient{
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MariadbClient extends AbstractClient{
     public CancelDcnJobResponse CancelDcnJob(CancelDcnJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelDcnJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelDcnJobResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MariadbClient extends AbstractClient{
     public CloneAccountResponse CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloneAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloneAccountResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MariadbClient extends AbstractClient{
     public CloseDBExtranetAccessResponse CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseDBExtranetAccessResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ Note: accounts with the same username but different hosts are different accounts
     public CopyAccountPrivilegesResponse CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyAccountPrivilegesResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ Note: accounts with the same username but different hosts are different accounts
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ Note: accounts with the same username but different hosts are different accounts
     public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ Note: accounts with the same username but different hosts are different accounts
     public CreateHourDBInstanceResponse CreateHourDBInstance(CreateHourDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHourDBInstanceResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ Note: accounts with the same username but different hosts are different accounts
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ Note: Accounts with the same username but different hosts are different accounts
     public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ Note: Accounts with the same username but different hosts are different accounts
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ Note: Accounts with the same username but different hosts are different accounts
     public DescribeBackupFilesResponse DescribeBackupFiles(DescribeBackupFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ Note: Accounts with the same username but different hosts are different accounts
     public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBEncryptAttributesResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ Note: Accounts with the same username but different hosts are different accounts
     public DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceDetailResponse>>() {
                 }.getType();
@@ -330,6 +344,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
@@ -350,6 +365,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDBLogFilesResponse DescribeDBLogFiles(DescribeDBLogFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBLogFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBLogFilesResponse>>() {
                 }.getType();
@@ -370,6 +386,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDBParametersResponse DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBParametersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBParametersResponse>>() {
                 }.getType();
@@ -390,6 +407,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
                 }.getType();
@@ -410,6 +428,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDBSlowLogsResponse DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSlowLogsResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDatabaseObjectsResponse DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabaseObjectsResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabaseTableResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeDcnDetailResponse DescribeDcnDetail(DescribeDcnDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDcnDetailResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileDownloadUrlResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
                 }.getType();
@@ -550,6 +575,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>() {
                 }.getType();
@@ -570,6 +596,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
                 }.getType();
@@ -590,6 +617,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribePriceResponse DescribePrice(DescribePriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePriceResponse>>() {
                 }.getType();
@@ -610,6 +638,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
@@ -630,6 +659,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DestroyDBInstanceResponse DestroyDBInstance(DestroyDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyDBInstanceResponse>>() {
                 }.getType();
@@ -650,6 +680,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DestroyHourDBInstanceResponse DestroyHourDBInstance(DestroyHourDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyHourDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyHourDBInstanceResponse>>() {
                 }.getType();
@@ -670,6 +701,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -691,6 +723,7 @@ Note: accounts with the same username but different hosts are different accounts
     public GrantAccountPrivilegesResponse GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GrantAccountPrivilegesResponse>>() {
                 }.getType();
@@ -711,6 +744,7 @@ Note: accounts with the same username but different hosts are different accounts
     public IsolateDBInstanceResponse IsolateDBInstance(IsolateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateDBInstanceResponse>>() {
                 }.getType();
@@ -731,6 +765,7 @@ Note: accounts with the same username but different hosts are different accounts
     public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>() {
                 }.getType();
@@ -751,6 +786,7 @@ Note: accounts with the same username but different hosts are different accounts
     public KillSessionResponse KillSession(KillSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KillSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KillSessionResponse>>() {
                 }.getType();
@@ -772,6 +808,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
@@ -792,6 +829,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegesResponse>>() {
                 }.getType();
@@ -812,6 +850,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBEncryptAttributesResponse>>() {
                 }.getType();
@@ -832,6 +871,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyDBInstancesProjectResponse ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
                 }.getType();
@@ -852,6 +892,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyDBParametersResponse ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBParametersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBParametersResponse>>() {
                 }.getType();
@@ -872,6 +913,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyDBSyncModeResponse ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
                 }.getType();
@@ -892,6 +934,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceNetworkResponse>>() {
                 }.getType();
@@ -912,6 +955,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyInstanceVipResponse ModifyInstanceVip(ModifyInstanceVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceVipResponse>>() {
                 }.getType();
@@ -932,6 +976,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifyInstanceVportResponse ModifyInstanceVport(ModifyInstanceVportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceVportResponse>>() {
                 }.getType();
@@ -952,6 +997,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ModifySyncTaskAttributeResponse ModifySyncTaskAttribute(ModifySyncTaskAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySyncTaskAttributeResponse>>() {
                 }.getType();
@@ -973,6 +1019,7 @@ Note: accounts with the same username but different hosts are different accounts
     public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
@@ -993,6 +1040,7 @@ Note: accounts with the same username but different hosts are different accounts
     public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>() {
                 }.getType();
@@ -1013,6 +1061,7 @@ Note: accounts with the same username but different hosts are different accounts
     public UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstance(UpgradeDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>() {
                 }.getType();

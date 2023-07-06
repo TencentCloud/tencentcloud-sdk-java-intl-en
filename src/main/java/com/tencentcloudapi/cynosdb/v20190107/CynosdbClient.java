@@ -29,7 +29,7 @@ public class CynosdbClient extends AbstractClient{
     private static String endpoint = "cynosdb.tencentcloudapi.com";
     private static String service = "cynosdb";
     private static String version = "2019-01-07";
-
+    
     public CynosdbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CynosdbClient extends AbstractClient{
     public ActivateInstanceResponse ActivateInstance(ActivateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ActivateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ActivateInstanceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CynosdbClient extends AbstractClient{
     public AddClusterSlaveZoneResponse AddClusterSlaveZone(AddClusterSlaveZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddClusterSlaveZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddClusterSlaveZoneResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CynosdbClient extends AbstractClient{
     public AddInstancesResponse AddInstances(AddInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddInstancesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CynosdbClient extends AbstractClient{
     public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseAuditServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseAuditServiceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CynosdbClient extends AbstractClient{
     public CreateAccountsResponse CreateAccounts(CreateAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CynosdbClient extends AbstractClient{
     public CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAuditRuleTemplateResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CynosdbClient extends AbstractClient{
     public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CynosdbClient extends AbstractClient{
     public CreateClustersResponse CreateClusters(CreateClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClustersResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CynosdbClient extends AbstractClient{
     public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CynosdbClient extends AbstractClient{
     public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIds(DescribeAuditRuleWithInstanceIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBackupConfigResponse DescribeBackupConfig(DescribeBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupConfigResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(DescribeBackupDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadUrlResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBackupListResponse DescribeBackupList(DescribeBackupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupListResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(DescribeBinlogDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBinlogDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBinlogDownloadUrlResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBinlogSaveDaysResponse DescribeBinlogSaveDays(DescribeBinlogSaveDaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBinlogSaveDaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBinlogSaveDaysResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBinlogsResponse DescribeBinlogs(DescribeBinlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBinlogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBinlogsResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClusterDetailResponse DescribeClusterDetail(DescribeClusterDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterDetailResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrps(DescribeClusterInstanceGrpsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterInstanceGrpsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstanceGrpsResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClusterParamsResponse DescribeClusterParams(DescribeClusterParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterParamsResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeInstanceDetailResponse DescribeInstanceDetail(DescribeInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDetailResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueries(DescribeInstanceSlowQueriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceSlowQueriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceSlowQueriesResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeInstanceSpecsResponse DescribeInstanceSpecs(DescribeInstanceSpecsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceSpecsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceSpecsResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeMaintainPeriodResponse DescribeMaintainPeriod(DescribeMaintainPeriodRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMaintainPeriodResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMaintainPeriodResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeParamTemplatesResponse DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeResourcesByDealNameResponse DescribeResourcesByDealName(DescribeResourcesByDealNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourcesByDealNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourcesByDealNameResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(DescribeRollbackTimeRangeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRollbackTimeRangeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackTimeRangeResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeRollbackTimeValidityResponse DescribeRollbackTimeValidity(DescribeRollbackTimeValidityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRollbackTimeValidityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackTimeValidityResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class CynosdbClient extends AbstractClient{
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class CynosdbClient extends AbstractClient{
     public ExportInstanceSlowQueriesResponse ExportInstanceSlowQueries(ExportInstanceSlowQueriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportInstanceSlowQueriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportInstanceSlowQueriesResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class CynosdbClient extends AbstractClient{
     public InquirePriceCreateResponse InquirePriceCreate(InquirePriceCreateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceCreateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceCreateResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class CynosdbClient extends AbstractClient{
     public InquirePriceRenewResponse InquirePriceRenew(InquirePriceRenewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceRenewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceRenewResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class CynosdbClient extends AbstractClient{
     public IsolateClusterResponse IsolateCluster(IsolateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateClusterResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class CynosdbClient extends AbstractClient{
     public IsolateInstanceResponse IsolateInstance(IsolateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateInstanceResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAuditServiceResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyBackupConfigResponse ModifyBackupConfig(ModifyBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupConfigResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyBackupNameResponse ModifyBackupName(ModifyBackupNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupNameResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterNameResponse ModifyClusterName(ModifyClusterNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterNameResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterParamResponse ModifyClusterParam(ModifyClusterParamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterParamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterParamResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterSlaveZoneResponse ModifyClusterSlaveZone(ModifyClusterSlaveZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterSlaveZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterSlaveZoneResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceNameResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyMaintainPeriodConfigResponse ModifyMaintainPeriodConfig(ModifyMaintainPeriodConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMaintainPeriodConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMaintainPeriodConfigResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class CynosdbClient extends AbstractClient{
     public ModifyVipVportResponse ModifyVipVport(ModifyVipVportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVipVportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVipVportResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class CynosdbClient extends AbstractClient{
     public OfflineClusterResponse OfflineCluster(OfflineClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineClusterResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class CynosdbClient extends AbstractClient{
     public OfflineInstanceResponse OfflineInstance(OfflineInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineInstanceResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class CynosdbClient extends AbstractClient{
     public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenAuditServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenAuditServiceResponse>>() {
                 }.getType();
@@ -1147,6 +1202,7 @@ public class CynosdbClient extends AbstractClient{
     public PauseServerlessResponse PauseServerless(PauseServerlessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PauseServerlessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PauseServerlessResponse>>() {
                 }.getType();
@@ -1167,6 +1223,7 @@ public class CynosdbClient extends AbstractClient{
     public RemoveClusterSlaveZoneResponse RemoveClusterSlaveZone(RemoveClusterSlaveZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveClusterSlaveZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveClusterSlaveZoneResponse>>() {
                 }.getType();
@@ -1187,6 +1244,7 @@ public class CynosdbClient extends AbstractClient{
     public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
@@ -1207,6 +1265,7 @@ public class CynosdbClient extends AbstractClient{
     public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartInstanceResponse>>() {
                 }.getType();
@@ -1227,6 +1286,7 @@ public class CynosdbClient extends AbstractClient{
     public ResumeServerlessResponse ResumeServerless(ResumeServerlessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeServerlessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeServerlessResponse>>() {
                 }.getType();
@@ -1247,6 +1307,7 @@ public class CynosdbClient extends AbstractClient{
     public SearchClusterDatabasesResponse SearchClusterDatabases(SearchClusterDatabasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchClusterDatabasesResponse>>() {
                 }.getType();
@@ -1267,6 +1328,7 @@ public class CynosdbClient extends AbstractClient{
     public SearchClusterTablesResponse SearchClusterTables(SearchClusterTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchClusterTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchClusterTablesResponse>>() {
                 }.getType();
@@ -1287,6 +1349,7 @@ public class CynosdbClient extends AbstractClient{
     public SetRenewFlagResponse SetRenewFlag(SetRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetRenewFlagResponse>>() {
                 }.getType();
@@ -1307,6 +1370,7 @@ public class CynosdbClient extends AbstractClient{
     public SwitchClusterVpcResponse SwitchClusterVpc(SwitchClusterVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchClusterVpcResponse>>() {
                 }.getType();
@@ -1327,6 +1391,7 @@ public class CynosdbClient extends AbstractClient{
     public SwitchClusterZoneResponse SwitchClusterZone(SwitchClusterZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchClusterZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchClusterZoneResponse>>() {
                 }.getType();
@@ -1347,6 +1412,7 @@ public class CynosdbClient extends AbstractClient{
     public SwitchProxyVpcResponse SwitchProxyVpc(SwitchProxyVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchProxyVpcResponse>>() {
                 }.getType();
@@ -1367,6 +1433,7 @@ public class CynosdbClient extends AbstractClient{
     public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
                 }.getType();

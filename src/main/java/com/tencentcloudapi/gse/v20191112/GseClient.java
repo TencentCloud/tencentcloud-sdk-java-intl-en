@@ -29,7 +29,7 @@ public class GseClient extends AbstractClient{
     private static String endpoint = "gse.tencentcloudapi.com";
     private static String service = "gse";
     private static String version = "2019-11-12";
-
+    
     public GseClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GseClient extends AbstractClient{
     public CopyFleetResponse CopyFleet(CopyFleetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyFleetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyFleetResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class GseClient extends AbstractClient{
     public CreateGameServerSessionResponse CreateGameServerSession(CreateGameServerSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGameServerSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGameServerSessionResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class GseClient extends AbstractClient{
     public DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(DeleteTimerScalingPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTimerScalingPolicyResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class GseClient extends AbstractClient{
     public DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(DescribeGameServerSessionDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGameServerSessionDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGameServerSessionDetailsResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class GseClient extends AbstractClient{
     public DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(DescribeGameServerSessionPlacementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGameServerSessionPlacementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGameServerSessionPlacementResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class GseClient extends AbstractClient{
     public DescribeGameServerSessionsResponse DescribeGameServerSessions(DescribeGameServerSessionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGameServerSessionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGameServerSessionsResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class GseClient extends AbstractClient{
     public DescribeInstanceTypesResponse DescribeInstanceTypes(DescribeInstanceTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceTypesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceTypesResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class GseClient extends AbstractClient{
     public DescribePlayerSessionsResponse DescribePlayerSessions(DescribePlayerSessionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePlayerSessionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePlayerSessionsResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ public class GseClient extends AbstractClient{
     public DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(DescribeTimerScalingPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ public class GseClient extends AbstractClient{
     public EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(EndGameServerSessionAndProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EndGameServerSessionAndProcessResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class GseClient extends AbstractClient{
     public GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(GetGameServerSessionLogUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetGameServerSessionLogUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetGameServerSessionLogUrlResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class GseClient extends AbstractClient{
     public GetInstanceAccessResponse GetInstanceAccess(GetInstanceAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetInstanceAccessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetInstanceAccessResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class GseClient extends AbstractClient{
     public JoinGameServerSessionResponse JoinGameServerSession(JoinGameServerSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<JoinGameServerSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<JoinGameServerSessionResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ public class GseClient extends AbstractClient{
     public JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(JoinGameServerSessionBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<JoinGameServerSessionBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<JoinGameServerSessionBatchResponse>>() {
                 }.getType();
@@ -332,6 +346,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public PutTimerScalingPolicyResponse PutTimerScalingPolicy(PutTimerScalingPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutTimerScalingPolicyResponse>>() {
                 }.getType();
@@ -352,6 +367,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public SearchGameServerSessionsResponse SearchGameServerSessions(SearchGameServerSessionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchGameServerSessionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchGameServerSessionsResponse>>() {
                 }.getType();
@@ -375,6 +391,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public SetServerReservedResponse SetServerReserved(SetServerReservedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetServerReservedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetServerReservedResponse>>() {
                 }.getType();
@@ -395,6 +412,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(StartGameServerSessionPlacementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartGameServerSessionPlacementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartGameServerSessionPlacementResponse>>() {
                 }.getType();
@@ -415,6 +433,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(StopGameServerSessionPlacementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopGameServerSessionPlacementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopGameServerSessionPlacementResponse>>() {
                 }.getType();
@@ -435,6 +454,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(UpdateBucketAccelerateOptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateBucketAccelerateOptResponse>>() {
                 }.getType();
@@ -455,6 +475,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public UpdateBucketCORSOptResponse UpdateBucketCORSOpt(UpdateBucketCORSOptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateBucketCORSOptResponse>>() {
                 }.getType();
@@ -475,6 +496,7 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
     public UpdateGameServerSessionResponse UpdateGameServerSession(UpdateGameServerSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGameServerSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGameServerSessionResponse>>() {
                 }.getType();

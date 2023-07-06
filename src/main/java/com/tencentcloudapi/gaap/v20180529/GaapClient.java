@@ -29,7 +29,7 @@ public class GaapClient extends AbstractClient{
     private static String endpoint = "gaap.tencentcloudapi.com";
     private static String service = "gaap";
     private static String version = "2018-05-29";
-
+    
     public GaapClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GaapClient extends AbstractClient{
     public AddRealServersResponse AddRealServers(AddRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddRealServersResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public BindListenerRealServersResponse BindListenerRealServers(BindListenerRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindListenerRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindListenerRealServersResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public BindRuleRealServersResponse BindRuleRealServers(BindRuleRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRuleRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRuleRealServersResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public CheckProxyCreateResponse CheckProxyCreate(CheckProxyCreateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckProxyCreateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckProxyCreateResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public CloseProxiesResponse CloseProxies(CloseProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseProxiesResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public CloseProxyGroupResponse CloseProxyGroup(CloseProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseProxyGroupResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public CloseSecurityPolicyResponse CloseSecurityPolicy(CloseSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseSecurityPolicyResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public CreateCertificateResponse CreateCertificate(CreateCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCertificateResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     public CreateCustomHeaderResponse CreateCustomHeader(CreateCustomHeaderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomHeaderResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ This API only supports connections of version 3.0.
     public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ This API only supports connections of version 3.0.
     public CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(CreateDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainErrorPageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainErrorPageInfoResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ This API only supports connections of version 3.0.
     public CreateHTTPListenerResponse CreateHTTPListener(CreateHTTPListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHTTPListenerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHTTPListenerResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ This API only supports connections of version 3.0.
     public CreateHTTPSListenerResponse CreateHTTPSListener(CreateHTTPSListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHTTPSListenerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHTTPSListenerResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ This API only supports connections of version 3.0.
     public CreateProxyResponse CreateProxy(CreateProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProxyResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ This API only supports connections of version 3.0.
     public CreateProxyGroupResponse CreateProxyGroup(CreateProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProxyGroupResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ This API only supports connections of version 3.0.
     public CreateProxyGroupDomainResponse CreateProxyGroupDomain(CreateProxyGroupDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProxyGroupDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProxyGroupDomainResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ This API only supports connections of version 3.0.
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ This API only supports connections of version 3.0.
     public CreateSecurityPolicyResponse CreateSecurityPolicy(CreateSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSecurityPolicyResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ This API only supports connections of version 3.0.
     public CreateSecurityRulesResponse CreateSecurityRules(CreateSecurityRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSecurityRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSecurityRulesResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ This API only supports connections of version 3.0.
     public CreateTCPListenersResponse CreateTCPListeners(CreateTCPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTCPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTCPListenersResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ This API only supports connections of version 3.0.
     public CreateUDPListenersResponse CreateUDPListeners(CreateUDPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUDPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUDPListenersResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ This API only supports connections of version 3.0.
     public DeleteCertificateResponse DeleteCertificate(DeleteCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCertificateResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ This API only supports connections of version 3.0.
     public DeleteDomainResponse DeleteDomain(DeleteDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainResponse>>() {
                 }.getType();
@@ -509,6 +532,7 @@ This API only supports connections of version 3.0.
     public DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(DeleteDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainErrorPageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainErrorPageInfoResponse>>() {
                 }.getType();
@@ -529,6 +553,7 @@ This API only supports connections of version 3.0.
     public DeleteListenersResponse DeleteListeners(DeleteListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteListenersResponse>>() {
                 }.getType();
@@ -549,6 +574,7 @@ This API only supports connections of version 3.0.
     public DeleteProxyGroupResponse DeleteProxyGroup(DeleteProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProxyGroupResponse>>() {
                 }.getType();
@@ -569,6 +595,7 @@ This API only supports connections of version 3.0.
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
@@ -589,6 +616,7 @@ This API only supports connections of version 3.0.
     public DeleteSecurityPolicyResponse DeleteSecurityPolicy(DeleteSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
                 }.getType();
@@ -609,6 +637,7 @@ This API only supports connections of version 3.0.
     public DeleteSecurityRulesResponse DeleteSecurityRules(DeleteSecurityRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSecurityRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityRulesResponse>>() {
                 }.getType();
@@ -629,6 +658,7 @@ This API only supports connections of version 3.0.
     public DescribeAccessRegionsResponse DescribeAccessRegions(DescribeAccessRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessRegionsResponse>>() {
                 }.getType();
@@ -649,6 +679,7 @@ This API only supports connections of version 3.0.
     public DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(DescribeAccessRegionsByDestRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessRegionsByDestRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessRegionsByDestRegionResponse>>() {
                 }.getType();
@@ -669,6 +700,7 @@ This API only supports connections of version 3.0.
     public DescribeBlackHeaderResponse DescribeBlackHeader(DescribeBlackHeaderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBlackHeaderResponse>>() {
                 }.getType();
@@ -689,6 +721,7 @@ This API only supports connections of version 3.0.
     public DescribeCertificateDetailResponse DescribeCertificateDetail(DescribeCertificateDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateDetailResponse>>() {
                 }.getType();
@@ -709,6 +742,7 @@ This API only supports connections of version 3.0.
     public DescribeCertificatesResponse DescribeCertificates(DescribeCertificatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificatesResponse>>() {
                 }.getType();
@@ -729,6 +763,7 @@ This API only supports connections of version 3.0.
     public DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(DescribeCountryAreaMappingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCountryAreaMappingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCountryAreaMappingResponse>>() {
                 }.getType();
@@ -749,6 +784,7 @@ This API only supports connections of version 3.0.
     public DescribeCustomHeaderResponse DescribeCustomHeader(DescribeCustomHeaderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomHeaderResponse>>() {
                 }.getType();
@@ -769,6 +805,7 @@ This API only supports connections of version 3.0.
     public DescribeDestRegionsResponse DescribeDestRegions(DescribeDestRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDestRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDestRegionsResponse>>() {
                 }.getType();
@@ -789,6 +826,7 @@ This API only supports connections of version 3.0.
     public DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(DescribeDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainErrorPageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoResponse>>() {
                 }.getType();
@@ -809,6 +847,7 @@ This API only supports connections of version 3.0.
     public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>() {
                 }.getType();
@@ -829,6 +868,7 @@ This API only supports connections of version 3.0.
     public DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(DescribeGroupAndStatisticsProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupAndStatisticsProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupAndStatisticsProxyResponse>>() {
                 }.getType();
@@ -849,6 +889,7 @@ This API only supports connections of version 3.0.
     public DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(DescribeGroupDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupDomainConfigResponse>>() {
                 }.getType();
@@ -869,6 +910,7 @@ This API only supports connections of version 3.0.
     public DescribeHTTPListenersResponse DescribeHTTPListeners(DescribeHTTPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHTTPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHTTPListenersResponse>>() {
                 }.getType();
@@ -889,6 +931,7 @@ This API only supports connections of version 3.0.
     public DescribeHTTPSListenersResponse DescribeHTTPSListeners(DescribeHTTPSListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHTTPSListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHTTPSListenersResponse>>() {
                 }.getType();
@@ -909,6 +952,7 @@ This API only supports connections of version 3.0.
     public DescribeListenerRealServersResponse DescribeListenerRealServers(DescribeListenerRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListenerRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListenerRealServersResponse>>() {
                 }.getType();
@@ -929,6 +973,7 @@ This API only supports connections of version 3.0.
     public DescribeListenerStatisticsResponse DescribeListenerStatistics(DescribeListenerStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListenerStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListenerStatisticsResponse>>() {
                 }.getType();
@@ -949,6 +994,7 @@ This API only supports connections of version 3.0.
     public DescribeProxiesResponse DescribeProxies(DescribeProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxiesResponse>>() {
                 }.getType();
@@ -969,6 +1015,7 @@ This API only supports connections of version 3.0.
     public DescribeProxiesStatusResponse DescribeProxiesStatus(DescribeProxiesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxiesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxiesStatusResponse>>() {
                 }.getType();
@@ -989,6 +1036,7 @@ This API only supports connections of version 3.0.
     public DescribeProxyAndStatisticsListenersResponse DescribeProxyAndStatisticsListeners(DescribeProxyAndStatisticsListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyAndStatisticsListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyAndStatisticsListenersResponse>>() {
                 }.getType();
@@ -1009,6 +1057,7 @@ This API only supports connections of version 3.0.
     public DescribeProxyDetailResponse DescribeProxyDetail(DescribeProxyDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyDetailResponse>>() {
                 }.getType();
@@ -1029,6 +1078,7 @@ This API only supports connections of version 3.0.
     public DescribeProxyGroupDetailsResponse DescribeProxyGroupDetails(DescribeProxyGroupDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyGroupDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyGroupDetailsResponse>>() {
                 }.getType();
@@ -1049,6 +1099,7 @@ This API only supports connections of version 3.0.
     public DescribeProxyGroupListResponse DescribeProxyGroupList(DescribeProxyGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyGroupListResponse>>() {
                 }.getType();
@@ -1069,6 +1120,7 @@ This API only supports connections of version 3.0.
     public DescribeProxyGroupStatisticsResponse DescribeProxyGroupStatistics(DescribeProxyGroupStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyGroupStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyGroupStatisticsResponse>>() {
                 }.getType();
@@ -1089,6 +1141,7 @@ This API only supports connections of version 3.0.
     public DescribeProxyStatisticsResponse DescribeProxyStatistics(DescribeProxyStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyStatisticsResponse>>() {
                 }.getType();
@@ -1109,6 +1162,7 @@ This API only supports connections of version 3.0.
     public DescribeRealServerStatisticsResponse DescribeRealServerStatistics(DescribeRealServerStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealServerStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealServerStatisticsResponse>>() {
                 }.getType();
@@ -1129,6 +1183,7 @@ This API only supports connections of version 3.0.
     public DescribeRealServersResponse DescribeRealServers(DescribeRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealServersResponse>>() {
                 }.getType();
@@ -1149,6 +1204,7 @@ This API only supports connections of version 3.0.
     public DescribeRealServersStatusResponse DescribeRealServersStatus(DescribeRealServersStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealServersStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealServersStatusResponse>>() {
                 }.getType();
@@ -1169,6 +1225,7 @@ This API only supports connections of version 3.0.
     public DescribeRegionAndPriceResponse DescribeRegionAndPrice(DescribeRegionAndPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionAndPriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionAndPriceResponse>>() {
                 }.getType();
@@ -1189,6 +1246,7 @@ This API only supports connections of version 3.0.
     public DescribeResourcesByTagResponse DescribeResourcesByTag(DescribeResourcesByTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourcesByTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourcesByTagResponse>>() {
                 }.getType();
@@ -1209,6 +1267,7 @@ This API only supports connections of version 3.0.
     public DescribeRuleRealServersResponse DescribeRuleRealServers(DescribeRuleRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleRealServersResponse>>() {
                 }.getType();
@@ -1229,6 +1288,7 @@ This API only supports connections of version 3.0.
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
                 }.getType();
@@ -1249,6 +1309,7 @@ This API only supports connections of version 3.0.
     public DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(DescribeRulesByRuleIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesByRuleIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesByRuleIdsResponse>>() {
                 }.getType();
@@ -1269,6 +1330,7 @@ This API only supports connections of version 3.0.
     public DescribeSecurityPolicyDetailResponse DescribeSecurityPolicyDetail(DescribeSecurityPolicyDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyDetailResponse>>() {
                 }.getType();
@@ -1289,6 +1351,7 @@ This API only supports connections of version 3.0.
     public DescribeSecurityRulesResponse DescribeSecurityRules(DescribeSecurityRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityRulesResponse>>() {
                 }.getType();
@@ -1309,6 +1372,7 @@ This API only supports connections of version 3.0.
     public DescribeTCPListenersResponse DescribeTCPListeners(DescribeTCPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTCPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTCPListenersResponse>>() {
                 }.getType();
@@ -1329,6 +1393,7 @@ This API only supports connections of version 3.0.
     public DescribeUDPListenersResponse DescribeUDPListeners(DescribeUDPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUDPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUDPListenersResponse>>() {
                 }.getType();
@@ -1349,6 +1414,7 @@ This API only supports connections of version 3.0.
     public DestroyProxiesResponse DestroyProxies(DestroyProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyProxiesResponse>>() {
                 }.getType();
@@ -1369,6 +1435,7 @@ This API only supports connections of version 3.0.
     public InquiryPriceCreateProxyResponse InquiryPriceCreateProxy(InquiryPriceCreateProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateProxyResponse>>() {
                 }.getType();
@@ -1389,6 +1456,7 @@ This API only supports connections of version 3.0.
     public ModifyCertificateResponse ModifyCertificate(ModifyCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateResponse>>() {
                 }.getType();
@@ -1409,6 +1477,7 @@ This API only supports connections of version 3.0.
     public ModifyCertificateAttributesResponse ModifyCertificateAttributes(ModifyCertificateAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCertificateAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateAttributesResponse>>() {
                 }.getType();
@@ -1429,6 +1498,7 @@ This API only supports connections of version 3.0.
     public ModifyDomainResponse ModifyDomain(ModifyDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainResponse>>() {
                 }.getType();
@@ -1449,6 +1519,7 @@ This API only supports connections of version 3.0.
     public ModifyGroupDomainConfigResponse ModifyGroupDomainConfig(ModifyGroupDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupDomainConfigResponse>>() {
                 }.getType();
@@ -1470,6 +1541,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyHTTPListenerAttributeResponse ModifyHTTPListenerAttribute(ModifyHTTPListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHTTPListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHTTPListenerAttributeResponse>>() {
                 }.getType();
@@ -1490,6 +1562,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyHTTPSListenerAttributeResponse ModifyHTTPSListenerAttribute(ModifyHTTPSListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHTTPSListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHTTPSListenerAttributeResponse>>() {
                 }.getType();
@@ -1510,6 +1583,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyProxiesAttributeResponse ModifyProxiesAttribute(ModifyProxiesAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxiesAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxiesAttributeResponse>>() {
                 }.getType();
@@ -1530,6 +1604,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyProxiesProjectResponse ModifyProxiesProject(ModifyProxiesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxiesProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxiesProjectResponse>>() {
                 }.getType();
@@ -1550,6 +1625,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyProxyConfigurationResponse ModifyProxyConfiguration(ModifyProxyConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxyConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxyConfigurationResponse>>() {
                 }.getType();
@@ -1570,6 +1646,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyProxyGroupAttributeResponse ModifyProxyGroupAttribute(ModifyProxyGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxyGroupAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxyGroupAttributeResponse>>() {
                 }.getType();
@@ -1590,6 +1667,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyRealServerNameResponse ModifyRealServerName(ModifyRealServerNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRealServerNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRealServerNameResponse>>() {
                 }.getType();
@@ -1610,6 +1688,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyRuleAttributeResponse ModifyRuleAttribute(ModifyRuleAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleAttributeResponse>>() {
                 }.getType();
@@ -1630,6 +1709,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifySecurityRuleResponse ModifySecurityRule(ModifySecurityRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySecurityRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySecurityRuleResponse>>() {
                 }.getType();
@@ -1650,6 +1730,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyTCPListenerAttributeResponse ModifyTCPListenerAttribute(ModifyTCPListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTCPListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTCPListenerAttributeResponse>>() {
                 }.getType();
@@ -1670,6 +1751,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public ModifyUDPListenerAttributeResponse ModifyUDPListenerAttribute(ModifyUDPListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUDPListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUDPListenerAttributeResponse>>() {
                 }.getType();
@@ -1690,6 +1772,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public OpenProxiesResponse OpenProxies(OpenProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenProxiesResponse>>() {
                 }.getType();
@@ -1710,6 +1793,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public OpenProxyGroupResponse OpenProxyGroup(OpenProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenProxyGroupResponse>>() {
                 }.getType();
@@ -1730,6 +1814,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public OpenSecurityPolicyResponse OpenSecurityPolicy(OpenSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenSecurityPolicyResponse>>() {
                 }.getType();
@@ -1750,6 +1835,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public RemoveRealServersResponse RemoveRealServers(RemoveRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveRealServersResponse>>() {
                 }.getType();
@@ -1770,6 +1856,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     public SetAuthenticationResponse SetAuthentication(SetAuthenticationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAuthenticationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAuthenticationResponse>>() {
                 }.getType();

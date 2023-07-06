@@ -29,7 +29,7 @@ public class CvmClient extends AbstractClient{
     private static String endpoint = "cvm.tencentcloudapi.com";
     private static String service = "cvm";
     private static String version = "2017-03-12";
-
+    
     public CvmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class CvmClient extends AbstractClient{
     public AllocateHostsResponse AllocateHosts(AllocateHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AllocateHostsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AllocateHostsResponse>>() {
                 }.getType();
@@ -73,6 +74,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public AssociateInstancesKeyPairsResponse AssociateInstancesKeyPairs(AssociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateInstancesKeyPairsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateInstancesKeyPairsResponse>>() {
                 }.getType();
@@ -93,6 +95,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -113,6 +116,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(ConfigureChcAssistVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ConfigureChcAssistVpcResponse>>() {
                 }.getType();
@@ -133,6 +137,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(ConfigureChcDeployVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ConfigureChcDeployVpcResponse>>() {
                 }.getType();
@@ -153,6 +158,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(CreateDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDisasterRecoverGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDisasterRecoverGroupResponse>>() {
                 }.getType();
@@ -173,6 +179,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public CreateImageResponse CreateImage(CreateImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageResponse>>() {
                 }.getType();
@@ -198,6 +205,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public CreateKeyPairResponse CreateKeyPair(CreateKeyPairRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateKeyPairResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateKeyPairResponse>>() {
                 }.getType();
@@ -218,6 +226,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersion(CreateLaunchTemplateVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateVersionResponse>>() {
                 }.getType();
@@ -238,6 +247,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(DeleteDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDisasterRecoverGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDisasterRecoverGroupsResponse>>() {
                 }.getType();
@@ -262,6 +272,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DeleteImagesResponse DeleteImages(DeleteImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImagesResponse>>() {
                 }.getType();
@@ -285,6 +296,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DeleteKeyPairsResponse DeleteKeyPairs(DeleteKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteKeyPairsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteKeyPairsResponse>>() {
                 }.getType();
@@ -305,6 +317,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DeleteLaunchTemplateResponse DeleteLaunchTemplate(DeleteLaunchTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateResponse>>() {
                 }.getType();
@@ -325,6 +338,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersions(DeleteLaunchTemplateVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>() {
                 }.getType();
@@ -345,6 +359,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeChcDeniedActionsResponse DescribeChcDeniedActions(DescribeChcDeniedActionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChcDeniedActionsResponse>>() {
                 }.getType();
@@ -368,6 +383,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeChcHostsResponse DescribeChcHosts(DescribeChcHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChcHostsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChcHostsResponse>>() {
                 }.getType();
@@ -388,6 +404,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(DescribeDisasterRecoverGroupQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse>>() {
                 }.getType();
@@ -408,6 +425,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(DescribeDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisasterRecoverGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupsResponse>>() {
                 }.getType();
@@ -428,6 +446,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeHostsResponse DescribeHosts(DescribeHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHostsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHostsResponse>>() {
                 }.getType();
@@ -448,6 +467,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeImageQuotaResponse DescribeImageQuota(DescribeImageQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageQuotaResponse>>() {
                 }.getType();
@@ -468,6 +488,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeImageSharePermissionResponse DescribeImageSharePermission(DescribeImageSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageSharePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageSharePermissionResponse>>() {
                 }.getType();
@@ -491,6 +512,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
                 }.getType();
@@ -511,6 +533,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeImportImageOsResponse DescribeImportImageOs(DescribeImportImageOsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImportImageOsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImportImageOsResponse>>() {
                 }.getType();
@@ -531,6 +554,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeInstanceFamilyConfigsResponse DescribeInstanceFamilyConfigs(DescribeInstanceFamilyConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceFamilyConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceFamilyConfigsResponse>>() {
                 }.getType();
@@ -554,6 +578,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -576,6 +601,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(DescribeInstancesOperationLimitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesOperationLimitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesOperationLimitResponse>>() {
                 }.getType();
@@ -599,6 +625,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeInstancesStatusResponse DescribeInstancesStatus(DescribeInstancesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesStatusResponse>>() {
                 }.getType();
@@ -619,6 +646,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeInternetChargeTypeConfigsResponse DescribeInternetChargeTypeConfigs(DescribeInternetChargeTypeConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInternetChargeTypeConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInternetChargeTypeConfigsResponse>>() {
                 }.getType();
@@ -641,6 +669,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeKeyPairsResponse DescribeKeyPairs(DescribeKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeyPairsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeyPairsResponse>>() {
                 }.getType();
@@ -661,6 +690,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersions(DescribeLaunchTemplateVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>() {
                 }.getType();
@@ -681,6 +711,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeLaunchTemplatesResponse DescribeLaunchTemplates(DescribeLaunchTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplatesResponse>>() {
                 }.getType();
@@ -701,6 +732,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -721,6 +753,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>() {
                 }.getType();
@@ -741,6 +774,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReservedInstancesOfferingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>() {
                 }.getType();
@@ -761,6 +795,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneInstanceConfigInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneInstanceConfigInfosResponse>>() {
                 }.getType();
@@ -781,6 +816,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
                 }.getType();
@@ -806,6 +842,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>() {
                 }.getType();
@@ -826,6 +863,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -846,6 +884,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ExportImagesResponse ExportImages(ExportImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportImagesResponse>>() {
                 }.getType();
@@ -866,6 +905,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ImportImageResponse ImportImage(ImportImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportImageResponse>>() {
                 }.getType();
@@ -890,6 +930,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ImportKeyPairResponse ImportKeyPair(ImportKeyPairRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportKeyPairResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportKeyPairResponse>>() {
                 }.getType();
@@ -910,6 +951,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>() {
                 }.getType();
@@ -934,6 +976,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public InquiryPriceResetInstanceResponse InquiryPriceResetInstance(InquiryPriceResetInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResetInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstanceResponse>>() {
                 }.getType();
@@ -957,6 +1000,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public InquiryPriceResetInstancesInternetMaxBandwidthResponse InquiryPriceResetInstancesInternetMaxBandwidth(InquiryPriceResetInstancesInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResetInstancesInternetMaxBandwidthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstancesInternetMaxBandwidthResponse>>() {
                 }.getType();
@@ -980,6 +1024,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public InquiryPriceResetInstancesTypeResponse InquiryPriceResetInstancesType(InquiryPriceResetInstancesTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResetInstancesTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstancesTypeResponse>>() {
                 }.getType();
@@ -1003,6 +1048,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public InquiryPriceResizeInstanceDisksResponse InquiryPriceResizeInstanceDisks(InquiryPriceResizeInstanceDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResizeInstanceDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeInstanceDisksResponse>>() {
                 }.getType();
@@ -1023,6 +1069,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public InquiryPriceRunInstancesResponse InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRunInstancesResponse>>() {
                 }.getType();
@@ -1043,6 +1090,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyChcAttributeResponse ModifyChcAttribute(ModifyChcAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyChcAttributeResponse>>() {
                 }.getType();
@@ -1063,6 +1111,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyDisasterRecoverGroupAttributeResponse ModifyDisasterRecoverGroupAttribute(ModifyDisasterRecoverGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse>>() {
                 }.getType();
@@ -1083,6 +1132,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyHostsAttributeResponse ModifyHostsAttribute(ModifyHostsAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHostsAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsAttributeResponse>>() {
                 }.getType();
@@ -1105,6 +1155,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyImageAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyImageAttributeResponse>>() {
                 }.getType();
@@ -1131,6 +1182,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyImageSharePermissionResponse ModifyImageSharePermission(ModifyImageSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyImageSharePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyImageSharePermissionResponse>>() {
                 }.getType();
@@ -1157,6 +1209,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyInstancesAttributeResponse ModifyInstancesAttribute(ModifyInstancesAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesAttributeResponse>>() {
                 }.getType();
@@ -1182,6 +1235,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyInstancesProjectResponse ModifyInstancesProject(ModifyInstancesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesProjectResponse>>() {
                 }.getType();
@@ -1205,6 +1259,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyInstancesVpcAttributeResponse ModifyInstancesVpcAttribute(ModifyInstancesVpcAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesVpcAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesVpcAttributeResponse>>() {
                 }.getType();
@@ -1229,6 +1284,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyKeyPairAttributeResponse ModifyKeyPairAttribute(ModifyKeyPairAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyKeyPairAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
                 }.getType();
@@ -1249,6 +1305,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersion(ModifyLaunchTemplateDefaultVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>() {
                 }.getType();
@@ -1269,6 +1326,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PurchaseReservedInstancesOfferingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PurchaseReservedInstancesOfferingResponse>>() {
                 }.getType();
@@ -1294,6 +1352,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public RebootInstancesResponse RebootInstances(RebootInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RebootInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
                 }.getType();
@@ -1314,6 +1373,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public RemoveChcAssistVpcResponse RemoveChcAssistVpc(RemoveChcAssistVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveChcAssistVpcResponse>>() {
                 }.getType();
@@ -1334,6 +1394,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public RemoveChcDeployVpcResponse RemoveChcDeployVpc(RemoveChcDeployVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveChcDeployVpcResponse>>() {
                 }.getType();
@@ -1361,6 +1422,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ResetInstanceResponse ResetInstance(ResetInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstanceResponse>>() {
                 }.getType();
@@ -1384,6 +1446,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ResetInstancesInternetMaxBandwidthResponse ResetInstancesInternetMaxBandwidth(ResetInstancesInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstancesInternetMaxBandwidthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesInternetMaxBandwidthResponse>>() {
                 }.getType();
@@ -1409,6 +1472,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ResetInstancesPasswordResponse ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesPasswordResponse>>() {
                 }.getType();
@@ -1431,6 +1495,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ResetInstancesTypeResponse ResetInstancesType(ResetInstancesTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstancesTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesTypeResponse>>() {
                 }.getType();
@@ -1455,6 +1520,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ResizeInstanceDisksResponse ResizeInstanceDisks(ResizeInstanceDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResizeInstanceDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResizeInstanceDisksResponse>>() {
                 }.getType();
@@ -1480,6 +1546,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public RunInstancesResponse RunInstances(RunInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunInstancesResponse>>() {
                 }.getType();
@@ -1504,6 +1571,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public StartInstancesResponse StartInstances(StartInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartInstancesResponse>>() {
                 }.getType();
@@ -1529,6 +1597,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public StopInstancesResponse StopInstances(StopInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopInstancesResponse>>() {
                 }.getType();
@@ -1553,6 +1622,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public SyncImagesResponse SyncImages(SyncImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncImagesResponse>>() {
                 }.getType();
@@ -1578,6 +1648,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     public TerminateInstancesResponse TerminateInstances(TerminateInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateInstancesResponse>>() {
                 }.getType();

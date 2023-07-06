@@ -29,7 +29,7 @@ public class MdlClient extends AbstractClient{
     private static String endpoint = "mdl.tencentcloudapi.com";
     private static String service = "mdl";
     private static String version = "2020-03-26";
-
+    
     public MdlClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MdlClient extends AbstractClient{
     public CreateStreamLiveChannelResponse CreateStreamLiveChannel(CreateStreamLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLiveChannelResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MdlClient extends AbstractClient{
     public CreateStreamLiveInputResponse CreateStreamLiveInput(CreateStreamLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLiveInputResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLiveInputResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MdlClient extends AbstractClient{
     public CreateStreamLiveInputSecurityGroupResponse CreateStreamLiveInputSecurityGroup(CreateStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MdlClient extends AbstractClient{
     public CreateStreamLivePlanResponse CreateStreamLivePlan(CreateStreamLivePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLivePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLivePlanResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MdlClient extends AbstractClient{
     public CreateStreamLiveWatermarkResponse CreateStreamLiveWatermark(CreateStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLiveWatermarkResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MdlClient extends AbstractClient{
     public DeleteStreamLiveChannelResponse DeleteStreamLiveChannel(DeleteStreamLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveChannelResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MdlClient extends AbstractClient{
     public DeleteStreamLiveInputResponse DeleteStreamLiveInput(DeleteStreamLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLiveInputResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveInputResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class MdlClient extends AbstractClient{
     public DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(DeleteStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class MdlClient extends AbstractClient{
     public DeleteStreamLivePlanResponse DeleteStreamLivePlan(DeleteStreamLivePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLivePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLivePlanResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class MdlClient extends AbstractClient{
     public DeleteStreamLiveWatermarkResponse DeleteStreamLiveWatermark(DeleteStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveWatermarkResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveChannelResponse DescribeStreamLiveChannel(DescribeStreamLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlerts(DescribeStreamLiveChannelAlertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveChannelAlertsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelAlertsResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatistics(DescribeStreamLiveChannelInputStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveChannelLogsResponse DescribeStreamLiveChannelLogs(DescribeStreamLiveChannelLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveChannelLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelLogsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveChannelOutputStatisticsResponse DescribeStreamLiveChannelOutputStatistics(DescribeStreamLiveChannelOutputStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveChannelsResponse DescribeStreamLiveChannels(DescribeStreamLiveChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveInputResponse DescribeStreamLiveInput(DescribeStreamLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveInputResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveInputSecurityGroupResponse DescribeStreamLiveInputSecurityGroup(DescribeStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveInputSecurityGroupsResponse DescribeStreamLiveInputSecurityGroups(DescribeStreamLiveInputSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveInputsResponse DescribeStreamLiveInputs(DescribeStreamLiveInputsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveInputsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLivePlansResponse DescribeStreamLivePlans(DescribeStreamLivePlansRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLivePlansResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLivePlansResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveRegionsResponse DescribeStreamLiveRegions(DescribeStreamLiveRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveRegionsResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveTranscodeDetailResponse DescribeStreamLiveTranscodeDetail(DescribeStreamLiveTranscodeDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermark(DescribeStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveWatermarkResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(DescribeStreamLiveWatermarksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLiveWatermarksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveWatermarksResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class MdlClient extends AbstractClient{
     public ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(ModifyStreamLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveChannelResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class MdlClient extends AbstractClient{
     public ModifyStreamLiveInputResponse ModifyStreamLiveInput(ModifyStreamLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLiveInputResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveInputResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class MdlClient extends AbstractClient{
     public ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(ModifyStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class MdlClient extends AbstractClient{
     public ModifyStreamLiveWatermarkResponse ModifyStreamLiveWatermark(ModifyStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveWatermarkResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class MdlClient extends AbstractClient{
     public QueryInputStreamStateResponse QueryInputStreamState(QueryInputStreamStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryInputStreamStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryInputStreamStateResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class MdlClient extends AbstractClient{
     public StartStreamLiveChannelResponse StartStreamLiveChannel(StartStreamLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartStreamLiveChannelResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class MdlClient extends AbstractClient{
     public StopStreamLiveChannelResponse StopStreamLiveChannel(StopStreamLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopStreamLiveChannelResponse>>() {
                 }.getType();

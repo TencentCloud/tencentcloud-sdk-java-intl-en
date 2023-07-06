@@ -29,7 +29,7 @@ public class TdidClient extends AbstractClient{
     private static String endpoint = "tdid.tencentcloudapi.com";
     private static String service = "tdid";
     private static String version = "2021-05-19";
-
+    
     public TdidClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class TdidClient extends AbstractClient{
     public AddLabelResponse AddLabel(AddLabelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLabelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLabelResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class TdidClient extends AbstractClient{
     public CancelAuthorityIssuerResponse CancelAuthorityIssuer(CancelAuthorityIssuerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelAuthorityIssuerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelAuthorityIssuerResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class TdidClient extends AbstractClient{
     public CheckChainResponse CheckChain(CheckChainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckChainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckChainResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class TdidClient extends AbstractClient{
     public CheckDidDeployResponse CheckDidDeploy(CheckDidDeployRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckDidDeployResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckDidDeployResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class TdidClient extends AbstractClient{
     public CreateCredentialResponse CreateCredential(CreateCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCredentialResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class TdidClient extends AbstractClient{
     public CreateDidServiceResponse CreateDidService(CreateDidServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDidServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDidServiceResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class TdidClient extends AbstractClient{
     public CreateLabelResponse CreateLabel(CreateLabelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLabelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLabelResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class TdidClient extends AbstractClient{
     public CreateSelectiveCredentialResponse CreateSelectiveCredential(CreateSelectiveCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSelectiveCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSelectiveCredentialResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class TdidClient extends AbstractClient{
     public CreateTDidResponse CreateTDid(CreateTDidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTDidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTDidResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class TdidClient extends AbstractClient{
     public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTDidByPrivateKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTDidByPrivateKeyResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class TdidClient extends AbstractClient{
     public CreateTDidByPublicKeyResponse CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTDidByPublicKeyResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class TdidClient extends AbstractClient{
     public DeployByNameResponse DeployByName(DeployByNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeployByNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeployByNameResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class TdidClient extends AbstractClient{
     public DownCptResponse DownCpt(DownCptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownCptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownCptResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class TdidClient extends AbstractClient{
     public EnableHashResponse EnableHash(EnableHashRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableHashResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableHashResponse>>() {
                 }.getType();
@@ -330,6 +344,7 @@ This API is used to get the DID details of the current organization.
     public GetAgencyTDidResponse GetAgencyTDid(GetAgencyTDidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAgencyTDidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAgencyTDidResponse>>() {
                 }.getType();
@@ -350,6 +365,7 @@ This API is used to get the DID details of the current organization.
     public GetAuthoritiesListResponse GetAuthoritiesList(GetAuthoritiesListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAuthoritiesListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAuthoritiesListResponse>>() {
                 }.getType();
@@ -370,6 +386,7 @@ This API is used to get the DID details of the current organization.
     public GetAuthorityIssuerResponse GetAuthorityIssuer(GetAuthorityIssuerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAuthorityIssuerResponse>>() {
                 }.getType();
@@ -390,6 +407,7 @@ This API is used to get the DID details of the current organization.
     public GetConsortiumClusterListResponse GetConsortiumClusterList(GetConsortiumClusterListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetConsortiumClusterListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetConsortiumClusterListResponse>>() {
                 }.getType();
@@ -410,6 +428,7 @@ This API is used to get the DID details of the current organization.
     public GetConsortiumListResponse GetConsortiumList(GetConsortiumListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetConsortiumListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetConsortiumListResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ This API is used to get the DID details of the current organization.
     public GetCptInfoResponse GetCptInfo(GetCptInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCptInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCptInfoResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ This API is used to get the DID details of the current organization.
     public GetCptListResponse GetCptList(GetCptListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCptListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCptListResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ This API is used to get the DID details of the current organization.
     public GetCredentialCptRankResponse GetCredentialCptRank(GetCredentialCptRankRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCredentialCptRankResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCredentialCptRankResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ This API is used to get the DID details of the current organization.
     public GetCredentialIssueRankResponse GetCredentialIssueRank(GetCredentialIssueRankRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCredentialIssueRankResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCredentialIssueRankResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ This API is used to get the DID details of the current organization.
     public GetCredentialIssueTrendResponse GetCredentialIssueTrend(GetCredentialIssueTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCredentialIssueTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCredentialIssueTrendResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ This API is used to get the DID details of the current organization.
     public GetCredentialStatusResponse GetCredentialStatus(GetCredentialStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCredentialStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCredentialStatusResponse>>() {
                 }.getType();
@@ -551,6 +576,7 @@ This API is used to get the DID details of the current organization.
     public GetDataPanelResponse GetDataPanel(GetDataPanelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDataPanelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDataPanelResponse>>() {
                 }.getType();
@@ -572,6 +598,7 @@ This API is used to get the DID details of the current organization.
     public GetDeployInfoResponse GetDeployInfo(GetDeployInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDeployInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDeployInfoResponse>>() {
                 }.getType();
@@ -592,6 +619,7 @@ This API is used to get the DID details of the current organization.
     public GetDeployListResponse GetDeployList(GetDeployListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDeployListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDeployListResponse>>() {
                 }.getType();
@@ -612,6 +640,7 @@ This API is used to get the DID details of the current organization.
     public GetDidClusterDetailResponse GetDidClusterDetail(GetDidClusterDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidClusterDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidClusterDetailResponse>>() {
                 }.getType();
@@ -632,6 +661,7 @@ This API is used to get the DID details of the current organization.
     public GetDidClusterListResponse GetDidClusterList(GetDidClusterListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidClusterListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidClusterListResponse>>() {
                 }.getType();
@@ -652,6 +682,7 @@ This API is used to get the DID details of the current organization.
     public GetDidDetailResponse GetDidDetail(GetDidDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidDetailResponse>>() {
                 }.getType();
@@ -673,6 +704,7 @@ This API is used to get the DID details of the current organization.
     public GetDidDocumentResponse GetDidDocument(GetDidDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidDocumentResponse>>() {
                 }.getType();
@@ -693,6 +725,7 @@ This API is used to get the DID details of the current organization.
     public GetDidListResponse GetDidList(GetDidListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidListResponse>>() {
                 }.getType();
@@ -713,6 +746,7 @@ This API is used to get the DID details of the current organization.
     public GetDidRegisterTrendResponse GetDidRegisterTrend(GetDidRegisterTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidRegisterTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidRegisterTrendResponse>>() {
                 }.getType();
@@ -733,6 +767,7 @@ This API is used to get the DID details of the current organization.
     public GetDidServiceDetailResponse GetDidServiceDetail(GetDidServiceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidServiceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidServiceDetailResponse>>() {
                 }.getType();
@@ -753,6 +788,7 @@ This API is used to get the DID details of the current organization.
     public GetDidServiceListResponse GetDidServiceList(GetDidServiceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidServiceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidServiceListResponse>>() {
                 }.getType();
@@ -773,6 +809,7 @@ This API is used to get the DID details of the current organization.
     public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetGroupListResponse>>() {
                 }.getType();
@@ -793,6 +830,7 @@ This API is used to get the DID details of the current organization.
     public GetLabelListResponse GetLabelList(GetLabelListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLabelListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLabelListResponse>>() {
                 }.getType();
@@ -813,6 +851,7 @@ This API is used to get the DID details of the current organization.
     public GetPolicyListResponse GetPolicyList(GetPolicyListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPolicyListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPolicyListResponse>>() {
                 }.getType();
@@ -833,6 +872,7 @@ This API is used to get the DID details of the current organization.
     public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPublicKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
                 }.getType();
@@ -853,6 +893,7 @@ This API is used to get the DID details of the current organization.
     public QueryPolicyResponse QueryPolicy(QueryPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryPolicyResponse>>() {
                 }.getType();
@@ -873,6 +914,7 @@ This API is used to get the DID details of the current organization.
     public RecognizeAuthorityIssuerResponse RecognizeAuthorityIssuer(RecognizeAuthorityIssuerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeAuthorityIssuerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeAuthorityIssuerResponse>>() {
                 }.getType();
@@ -893,6 +935,7 @@ This API is used to get the DID details of the current organization.
     public RegisterClaimPolicyResponse RegisterClaimPolicy(RegisterClaimPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterClaimPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterClaimPolicyResponse>>() {
                 }.getType();
@@ -913,6 +956,7 @@ This API is used to get the DID details of the current organization.
     public RegisterCptResponse RegisterCpt(RegisterCptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterCptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterCptResponse>>() {
                 }.getType();
@@ -933,6 +977,7 @@ This API is used to get the DID details of the current organization.
     public RegisterIssuerResponse RegisterIssuer(RegisterIssuerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterIssuerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterIssuerResponse>>() {
                 }.getType();
@@ -953,6 +998,7 @@ This API is used to get the DID details of the current organization.
     public RemoveHashResponse RemoveHash(RemoveHashRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveHashResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveHashResponse>>() {
                 }.getType();
@@ -973,6 +1019,7 @@ This API is used to get the DID details of the current organization.
     public SetCredentialStatusResponse SetCredentialStatus(SetCredentialStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetCredentialStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetCredentialStatusResponse>>() {
                 }.getType();
@@ -993,6 +1040,7 @@ This API is used to get the DID details of the current organization.
     public VerifyCredentialResponse VerifyCredential(VerifyCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyCredentialResponse>>() {
                 }.getType();

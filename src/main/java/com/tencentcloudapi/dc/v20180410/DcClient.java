@@ -29,7 +29,7 @@ public class DcClient extends AbstractClient{
     private static String endpoint = "dc.tencentcloudapi.com";
     private static String service = "dc";
     private static String version = "2018-04-10";
-
+    
     public DcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DcClient extends AbstractClient{
     public AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AcceptDirectConnectTunnelResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DcClient extends AbstractClient{
     public ApplyInternetAddressResponse ApplyInternetAddress(ApplyInternetAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyInternetAddressResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ If there is any connection in arrears under your account, you cannot apply for m
     public CreateDirectConnectResponse CreateDirectConnect(CreateDirectConnectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDirectConnectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDirectConnectResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ If there is any connection in arrears under your account, you cannot apply for m
     public CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDirectConnectTunnelResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ Only connected connections can be deleted.
     public DeleteDirectConnectResponse DeleteDirectConnect(DeleteDirectConnectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ Only connected connections can be deleted.
     public DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectTunnelResponse>>() {
                 }.getType();
@@ -172,6 +178,7 @@ Only connected connections can be deleted.
     public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessPointsResponse>>() {
                 }.getType();
@@ -192,6 +199,7 @@ Only connected connections can be deleted.
     public DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>() {
                 }.getType();
@@ -212,6 +220,7 @@ Only connected connections can be deleted.
     public DescribeDirectConnectsResponse DescribeDirectConnects(DescribeDirectConnectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectsResponse>>() {
                 }.getType();
@@ -232,6 +241,7 @@ Only connected connections can be deleted.
     public DescribeInternetAddressResponse DescribeInternetAddress(DescribeInternetAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressResponse>>() {
                 }.getType();
@@ -252,6 +262,7 @@ Only connected connections can be deleted.
     public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressQuotaResponse>>() {
                 }.getType();
@@ -272,6 +283,7 @@ Only connected connections can be deleted.
     public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>() {
                 }.getType();
@@ -292,6 +304,7 @@ Only connected connections can be deleted.
     public DisableInternetAddressResponse DisableInternetAddress(DisableInternetAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableInternetAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableInternetAddressResponse>>() {
                 }.getType();
@@ -312,6 +325,7 @@ Only connected connections can be deleted.
     public EnableInternetAddressResponse EnableInternetAddress(EnableInternetAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableInternetAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableInternetAddressResponse>>() {
                 }.getType();
@@ -332,6 +346,7 @@ Only connected connections can be deleted.
     public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectAttributeResponse>>() {
                 }.getType();
@@ -352,6 +367,7 @@ Only connected connections can be deleted.
     public ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>() {
                 }.getType();
@@ -372,6 +388,7 @@ Only connected connections can be deleted.
     public RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RejectDirectConnectTunnelResponse>>() {
                 }.getType();
@@ -392,6 +409,7 @@ Only connected connections can be deleted.
     public ReleaseInternetAddressResponse ReleaseInternetAddress(ReleaseInternetAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseInternetAddressResponse>>() {
                 }.getType();

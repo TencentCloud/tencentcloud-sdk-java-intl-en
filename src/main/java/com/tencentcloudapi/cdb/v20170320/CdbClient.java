@@ -29,7 +29,7 @@ public class CdbClient extends AbstractClient{
     private static String endpoint = "cdb.tencentcloudapi.com";
     private static String service = "cdb";
     private static String version = "2017-03-20";
-
+    
     public CdbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CdbClient extends AbstractClient{
     public AddTimeWindowResponse AddTimeWindow(AddTimeWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddTimeWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddTimeWindowResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CdbClient extends AbstractClient{
     public AdjustCdbProxyResponse AdjustCdbProxy(AdjustCdbProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AdjustCdbProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AdjustCdbProxyResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CdbClient extends AbstractClient{
     public AdjustCdbProxyAddressResponse AdjustCdbProxyAddress(AdjustCdbProxyAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AdjustCdbProxyAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AdjustCdbProxyAddressResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CdbClient extends AbstractClient{
     public AnalyzeAuditLogsResponse AnalyzeAuditLogs(AnalyzeAuditLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AnalyzeAuditLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AnalyzeAuditLogsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CdbClient extends AbstractClient{
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CdbClient extends AbstractClient{
     public BalanceRoGroupLoadResponse BalanceRoGroupLoad(BalanceRoGroupLoadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BalanceRoGroupLoadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BalanceRoGroupLoadResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CdbClient extends AbstractClient{
     public CloseCDBProxyResponse CloseCDBProxy(CloseCDBProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseCDBProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseCDBProxyResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CdbClient extends AbstractClient{
     public CloseCdbProxyAddressResponse CloseCdbProxyAddress(CloseCdbProxyAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseCdbProxyAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseCdbProxyAddressResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CdbClient extends AbstractClient{
     public CloseWanServiceResponse CloseWanService(CloseWanServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseWanServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseWanServiceResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CdbClient extends AbstractClient{
     public CreateAccountsResponse CreateAccounts(CreateAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CdbClient extends AbstractClient{
     public CreateAuditPolicyResponse CreateAuditPolicy(CreateAuditPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAuditPolicyResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CdbClient extends AbstractClient{
     public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CdbClient extends AbstractClient{
     public CreateCdbProxyResponse CreateCdbProxy(CreateCdbProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCdbProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCdbProxyResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CdbClient extends AbstractClient{
     public CreateCdbProxyAddressResponse CreateCdbProxyAddress(CreateCdbProxyAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCdbProxyAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCdbProxyAddressResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CdbClient extends AbstractClient{
     public CreateCloneInstanceResponse CreateCloneInstance(CreateCloneInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloneInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloneInstanceResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ Note that the files for a data import task must be uploaded to Tencent Cloud in 
     public CreateDBImportJobResponse CreateDBImportJob(CreateDBImportJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBImportJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBImportJobResponse>>() {
                 }.getType();
@@ -378,6 +394,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceResponse>>() {
                 }.getType();
@@ -406,6 +423,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public CreateDBInstanceHourResponse CreateDBInstanceHour(CreateDBInstanceHourRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceHourResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
                 }.getType();
@@ -426,6 +444,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public CreateParamTemplateResponse CreateParamTemplate(CreateParamTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateParamTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
                 }.getType();
@@ -446,6 +465,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public CreateRoInstanceIpResponse CreateRoInstanceIp(CreateRoInstanceIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoInstanceIpResponse>>() {
                 }.getType();
@@ -466,6 +486,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DeleteAccountsResponse DeleteAccounts(DeleteAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountsResponse>>() {
                 }.getType();
@@ -486,6 +507,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupResponse>>() {
                 }.getType();
@@ -506,6 +528,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
                 }.getType();
@@ -526,6 +549,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DeleteTimeWindowResponse DeleteTimeWindow(DeleteTimeWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTimeWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTimeWindowResponse>>() {
                 }.getType();
@@ -546,6 +570,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
                 }.getType();
@@ -566,6 +591,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
@@ -586,6 +612,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
                 }.getType();
@@ -606,6 +633,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeAuditPoliciesResponse DescribeAuditPolicies(DescribeAuditPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditPoliciesResponse>>() {
                 }.getType();
@@ -626,6 +654,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeAuditRulesResponse DescribeAuditRules(DescribeAuditRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditRulesResponse>>() {
                 }.getType();
@@ -646,6 +675,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupConfigResponse DescribeBackupConfig(DescribeBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupConfigResponse>>() {
                 }.getType();
@@ -666,6 +696,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupDecryptionKeyResponse DescribeBackupDecryptionKey(DescribeBackupDecryptionKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupDecryptionKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupDecryptionKeyResponse>>() {
                 }.getType();
@@ -686,6 +717,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>() {
                 }.getType();
@@ -706,6 +738,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatus(DescribeBackupEncryptionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>() {
                 }.getType();
@@ -726,6 +759,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupOverviewResponse>>() {
                 }.getType();
@@ -746,6 +780,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupSummariesResponse DescribeBackupSummaries(DescribeBackupSummariesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupSummariesResponse>>() {
                 }.getType();
@@ -766,6 +801,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
                 }.getType();
@@ -786,6 +822,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(DescribeBinlogBackupOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBinlogBackupOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBinlogBackupOverviewResponse>>() {
                 }.getType();
@@ -806,6 +843,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeBinlogsResponse DescribeBinlogs(DescribeBinlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBinlogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBinlogsResponse>>() {
                 }.getType();
@@ -830,6 +868,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeCDBProxyResponse DescribeCDBProxy(DescribeCDBProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCDBProxyResponse>>() {
                 }.getType();
@@ -850,6 +889,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeCdbProxyInfoResponse DescribeCdbProxyInfo(DescribeCdbProxyInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCdbProxyInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCdbProxyInfoResponse>>() {
                 }.getType();
@@ -870,6 +910,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(DescribeCdbZoneConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCdbZoneConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCdbZoneConfigResponse>>() {
                 }.getType();
@@ -890,6 +931,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeCloneListResponse DescribeCloneList(DescribeCloneListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloneListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloneListResponse>>() {
                 }.getType();
@@ -910,6 +952,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBFeaturesResponse DescribeDBFeatures(DescribeDBFeaturesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBFeaturesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBFeaturesResponse>>() {
                 }.getType();
@@ -930,6 +973,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBImportRecordsResponse DescribeDBImportRecords(DescribeDBImportRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBImportRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBImportRecordsResponse>>() {
                 }.getType();
@@ -950,6 +994,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(DescribeDBInstanceCharsetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceCharsetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceCharsetResponse>>() {
                 }.getType();
@@ -970,6 +1015,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBInstanceConfigResponse DescribeDBInstanceConfig(DescribeDBInstanceConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceConfigResponse>>() {
                 }.getType();
@@ -990,6 +1036,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBInstanceGTIDResponse DescribeDBInstanceGTID(DescribeDBInstanceGTIDRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceGTIDResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceGTIDResponse>>() {
                 }.getType();
@@ -1010,6 +1057,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBInstanceInfoResponse DescribeDBInstanceInfo(DescribeDBInstanceInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceInfoResponse>>() {
                 }.getType();
@@ -1030,6 +1078,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBInstanceRebootTimeResponse DescribeDBInstanceRebootTime(DescribeDBInstanceRebootTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceRebootTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceRebootTimeResponse>>() {
                 }.getType();
@@ -1050,6 +1099,7 @@ This API is used to query database proxy. It will be deprecated and replaced by 
     public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
@@ -1072,6 +1122,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDBPriceResponse DescribeDBPrice(DescribeDBPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBPriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBPriceResponse>>() {
                 }.getType();
@@ -1092,6 +1143,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
                 }.getType();
@@ -1112,6 +1164,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDBSwitchRecordsResponse DescribeDBSwitchRecords(DescribeDBSwitchRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSwitchRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSwitchRecordsResponse>>() {
                 }.getType();
@@ -1132,6 +1185,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDataBackupOverviewResponse DescribeDataBackupOverview(DescribeDataBackupOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataBackupOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataBackupOverviewResponse>>() {
                 }.getType();
@@ -1152,6 +1206,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
                 }.getType();
@@ -1172,6 +1227,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDefaultParamsResponse DescribeDefaultParams(DescribeDefaultParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDefaultParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDefaultParamsResponse>>() {
                 }.getType();
@@ -1192,6 +1248,7 @@ Note: To query prices in a specific region, you need to use the access point of 
     public DescribeDeviceMonitorInfoResponse DescribeDeviceMonitorInfo(DescribeDeviceMonitorInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceMonitorInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceMonitorInfoResponse>>() {
                 }.getType();
@@ -1213,6 +1270,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeErrorLogDataResponse DescribeErrorLogData(DescribeErrorLogDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeErrorLogDataResponse>>() {
                 }.getType();
@@ -1233,6 +1291,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
                 }.getType();
@@ -1253,6 +1312,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
                 }.getType();
@@ -1273,6 +1333,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeLocalBinlogConfigResponse DescribeLocalBinlogConfig(DescribeLocalBinlogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLocalBinlogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLocalBinlogConfigResponse>>() {
                 }.getType();
@@ -1293,6 +1354,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeParamTemplateInfoResponse>>() {
                 }.getType();
@@ -1313,6 +1375,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeParamTemplatesResponse DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
                 }.getType();
@@ -1333,6 +1396,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
@@ -1357,6 +1421,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeProxyConnectionPoolConfResponse DescribeProxyConnectionPoolConf(DescribeProxyConnectionPoolConfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>() {
                 }.getType();
@@ -1377,6 +1442,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeProxyCustomConfResponse DescribeProxyCustomConf(DescribeProxyCustomConfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyCustomConfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyCustomConfResponse>>() {
                 }.getType();
@@ -1397,6 +1463,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeProxySupportParamResponse DescribeProxySupportParam(DescribeProxySupportParamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxySupportParamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxySupportParamResponse>>() {
                 }.getType();
@@ -1417,6 +1484,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfig(DescribeRemoteBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRemoteBackupConfigResponse>>() {
                 }.getType();
@@ -1437,6 +1505,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeRoGroupsResponse DescribeRoGroups(DescribeRoGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoGroupsResponse>>() {
                 }.getType();
@@ -1457,6 +1526,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeRoMinScaleResponse DescribeRoMinScale(DescribeRoMinScaleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoMinScaleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoMinScaleResponse>>() {
                 }.getType();
@@ -1477,6 +1547,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeRollbackRangeTimeResponse DescribeRollbackRangeTime(DescribeRollbackRangeTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRollbackRangeTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackRangeTimeResponse>>() {
                 }.getType();
@@ -1497,6 +1568,7 @@ This API is used to query the connection pool configuration of a database proxy.
     public DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetail(DescribeRollbackTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackTaskDetailResponse>>() {
                 }.getType();
@@ -1518,6 +1590,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeSlowLogDataResponse DescribeSlowLogData(DescribeSlowLogDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogDataResponse>>() {
                 }.getType();
@@ -1538,6 +1611,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
                 }.getType();
@@ -1558,6 +1632,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeSupportedPrivilegesResponse DescribeSupportedPrivileges(DescribeSupportedPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSupportedPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSupportedPrivilegesResponse>>() {
                 }.getType();
@@ -1578,6 +1653,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTablesResponse>>() {
                 }.getType();
@@ -1598,6 +1674,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeTagsOfInstanceIdsResponse DescribeTagsOfInstanceIds(DescribeTagsOfInstanceIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagsOfInstanceIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagsOfInstanceIdsResponse>>() {
                 }.getType();
@@ -1618,6 +1695,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -1638,6 +1716,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeTimeWindowResponse DescribeTimeWindow(DescribeTimeWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimeWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimeWindowResponse>>() {
                 }.getType();
@@ -1658,6 +1737,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DescribeUploadedFilesResponse DescribeUploadedFiles(DescribeUploadedFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUploadedFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadedFilesResponse>>() {
                 }.getType();
@@ -1678,6 +1758,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -1702,6 +1783,7 @@ This API is used to initialize a TencentDB instance, including initial password,
     public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
                 }.getType();
@@ -1722,6 +1804,7 @@ This API is used to initialize a TencentDB instance, including initial password,
     public IsolateDBInstanceResponse IsolateDBInstance(IsolateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateDBInstanceResponse>>() {
                 }.getType();
@@ -1742,6 +1825,7 @@ This API is used to initialize a TencentDB instance, including initial password,
     public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
@@ -1762,6 +1846,7 @@ This API is used to initialize a TencentDB instance, including initial password,
     public ModifyAccountMaxUserConnectionsResponse ModifyAccountMaxUserConnections(ModifyAccountMaxUserConnectionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>() {
                 }.getType();
@@ -1782,6 +1867,7 @@ This API is used to initialize a TencentDB instance, including initial password,
     public ModifyAccountPasswordResponse ModifyAccountPassword(ModifyAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountPasswordResponse>>() {
                 }.getType();
@@ -1805,6 +1891,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegesResponse>>() {
                 }.getType();
@@ -1825,6 +1912,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoRenewFlagResponse>>() {
                 }.getType();
@@ -1845,6 +1933,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyBackupConfigResponse ModifyBackupConfig(ModifyBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupConfigResponse>>() {
                 }.getType();
@@ -1865,6 +1954,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
                 }.getType();
@@ -1885,6 +1975,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatus(ModifyBackupEncryptionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>() {
                 }.getType();
@@ -1909,6 +2000,7 @@ This API is used to configure the connection pool of database proxy. The support
     public ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPool(ModifyCDBProxyConnectionPoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>() {
                 }.getType();
@@ -1933,6 +2025,7 @@ This API is used to modify the description of a database proxy.
     public ModifyCDBProxyDescResponse ModifyCDBProxyDesc(ModifyCDBProxyDescRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyDescResponse>>() {
                 }.getType();
@@ -1957,6 +2050,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPort(ModifyCDBProxyVipVPortRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>() {
                 }.getType();
@@ -1977,6 +2071,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyCdbProxyAddressDescResponse ModifyCdbProxyAddressDesc(ModifyCdbProxyAddressDescRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCdbProxyAddressDescResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCdbProxyAddressDescResponse>>() {
                 }.getType();
@@ -1997,6 +2092,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyCdbProxyAddressVipAndVPortResponse ModifyCdbProxyAddressVipAndVPort(ModifyCdbProxyAddressVipAndVPortRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCdbProxyAddressVipAndVPortResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCdbProxyAddressVipAndVPortResponse>>() {
                 }.getType();
@@ -2017,6 +2113,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyCdbProxyParamResponse ModifyCdbProxyParam(ModifyCdbProxyParamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCdbProxyParamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCdbProxyParamResponse>>() {
                 }.getType();
@@ -2037,6 +2134,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
                 }.getType();
@@ -2057,6 +2155,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyDBInstanceProjectResponse ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceProjectResponse>>() {
                 }.getType();
@@ -2077,6 +2176,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
                 }.getType();
@@ -2097,6 +2197,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVport(ModifyDBInstanceVipVportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceVipVportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceVipVportResponse>>() {
                 }.getType();
@@ -2117,6 +2218,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyInstanceParamResponse ModifyInstanceParam(ModifyInstanceParamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamResponse>>() {
                 }.getType();
@@ -2137,6 +2239,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexity(ModifyInstancePasswordComplexityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>() {
                 }.getType();
@@ -2157,6 +2260,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyInstanceTagResponse ModifyInstanceTag(ModifyInstanceTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceTagResponse>>() {
                 }.getType();
@@ -2177,6 +2281,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyLocalBinlogConfigResponse ModifyLocalBinlogConfig(ModifyLocalBinlogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLocalBinlogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLocalBinlogConfigResponse>>() {
                 }.getType();
@@ -2197,6 +2302,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpId(ModifyNameOrDescByDpIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNameOrDescByDpIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNameOrDescByDpIdResponse>>() {
                 }.getType();
@@ -2217,6 +2323,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyParamTemplateResponse ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
@@ -2237,6 +2344,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyRemoteBackupConfigResponse ModifyRemoteBackupConfig(ModifyRemoteBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRemoteBackupConfigResponse>>() {
                 }.getType();
@@ -2257,6 +2365,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyRoGroupInfoResponse ModifyRoGroupInfo(ModifyRoGroupInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoGroupInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoGroupInfoResponse>>() {
                 }.getType();
@@ -2277,6 +2386,7 @@ This API is used to modify the VIP or the port of a database proxy.
     public ModifyTimeWindowResponse ModifyTimeWindow(ModifyTimeWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTimeWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTimeWindowResponse>>() {
                 }.getType();
@@ -2301,6 +2411,7 @@ Note that once an instance is deactivated, its resources and data will not be re
     public OfflineIsolatedInstancesResponse OfflineIsolatedInstances(OfflineIsolatedInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineIsolatedInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineIsolatedInstancesResponse>>() {
                 }.getType();
@@ -2321,6 +2432,7 @@ Note that once an instance is deactivated, its resources and data will not be re
     public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenAuditServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenAuditServiceResponse>>() {
                 }.getType();
@@ -2351,6 +2463,7 @@ This API calling may take up to 10 seconds, causing the client to time out. If i
     public OpenDBInstanceEncryptionResponse OpenDBInstanceEncryption(OpenDBInstanceEncryptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenDBInstanceEncryptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenDBInstanceEncryptionResponse>>() {
                 }.getType();
@@ -2371,6 +2484,7 @@ This API calling may take up to 10 seconds, causing the client to time out. If i
     public OpenDBInstanceGTIDResponse OpenDBInstanceGTID(OpenDBInstanceGTIDRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenDBInstanceGTIDResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenDBInstanceGTIDResponse>>() {
                 }.getType();
@@ -2393,6 +2507,7 @@ Note that before enabling public network access, you need to first [initialize t
     public OpenWanServiceResponse OpenWanService(OpenWanServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenWanServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenWanServiceResponse>>() {
                 }.getType();
@@ -2417,6 +2532,7 @@ This API is used to query the proxy details.
     public QueryCDBProxyResponse QueryCDBProxy(QueryCDBProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCDBProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCDBProxyResponse>>() {
                 }.getType();
@@ -2437,6 +2553,7 @@ This API is used to query the proxy details.
     public ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstances(ReleaseIsolatedDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseIsolatedDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>() {
                 }.getType();
@@ -2457,6 +2574,7 @@ This API is used to query the proxy details.
     public ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(ReloadBalanceProxyNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReloadBalanceProxyNodeResponse>>() {
                 }.getType();
@@ -2477,6 +2595,7 @@ This API is used to query the proxy details.
     public RenewDBInstanceResponse RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDBInstanceResponse>>() {
                 }.getType();
@@ -2497,6 +2616,7 @@ This API is used to query the proxy details.
     public ResetRootAccountResponse ResetRootAccount(ResetRootAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetRootAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetRootAccountResponse>>() {
                 }.getType();
@@ -2521,6 +2641,7 @@ Note:
     public RestartDBInstancesResponse RestartDBInstances(RestartDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstancesResponse>>() {
                 }.getType();
@@ -2541,6 +2662,7 @@ Note:
     public StartBatchRollbackResponse StartBatchRollback(StartBatchRollbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartBatchRollbackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartBatchRollbackResponse>>() {
                 }.getType();
@@ -2561,6 +2683,7 @@ Note:
     public StartReplicationResponse StartReplication(StartReplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartReplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartReplicationResponse>>() {
                 }.getType();
@@ -2581,6 +2704,7 @@ Note:
     public StopDBImportJobResponse StopDBImportJob(StopDBImportJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopDBImportJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopDBImportJobResponse>>() {
                 }.getType();
@@ -2601,6 +2725,7 @@ Note:
     public StopReplicationResponse StopReplication(StopReplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopReplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopReplicationResponse>>() {
                 }.getType();
@@ -2621,6 +2746,7 @@ Note:
     public StopRollbackResponse StopRollback(StopRollbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopRollbackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopRollbackResponse>>() {
                 }.getType();
@@ -2641,6 +2767,7 @@ Note:
     public SwitchCDBProxyResponse SwitchCDBProxy(SwitchCDBProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchCDBProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchCDBProxyResponse>>() {
                 }.getType();
@@ -2661,6 +2788,7 @@ Note:
     public SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(SwitchDBInstanceMasterSlaveRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>() {
                 }.getType();
@@ -2681,6 +2809,7 @@ Note:
     public SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(SwitchDrInstanceToMasterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchDrInstanceToMasterResponse>>() {
                 }.getType();
@@ -2701,6 +2830,7 @@ Note:
     public SwitchForUpgradeResponse SwitchForUpgrade(SwitchForUpgradeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchForUpgradeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchForUpgradeResponse>>() {
                 }.getType();
@@ -2721,6 +2851,7 @@ Note:
     public UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersion(UpgradeCDBProxyVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeCDBProxyVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeCDBProxyVersionResponse>>() {
                 }.getType();
@@ -2741,6 +2872,7 @@ Note:
     public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
                 }.getType();
@@ -2761,6 +2893,7 @@ Note:
     public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersion(UpgradeDBInstanceEngineVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceEngineVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceEngineVersionResponse>>() {
                 }.getType();

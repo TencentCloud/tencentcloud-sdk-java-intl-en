@@ -29,7 +29,7 @@ public class OrganizationClient extends AbstractClient{
     private static String endpoint = "organization.tencentcloudapi.com";
     private static String service = "organization";
     private static String version = "2021-03-31";
-
+    
     public OrganizationClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class OrganizationClient extends AbstractClient{
     public AddOrganizationNodeResponse AddOrganizationNode(AddOrganizationNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddOrganizationNodeResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class OrganizationClient extends AbstractClient{
     public BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccount(BindOrganizationMemberAuthAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindOrganizationMemberAuthAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindOrganizationMemberAuthAccountResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class OrganizationClient extends AbstractClient{
     public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(CancelOrganizationMemberAuthAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelOrganizationMemberAuthAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelOrganizationMemberAuthAccountResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class OrganizationClient extends AbstractClient{
     public CreateOrganizationMemberResponse CreateOrganizationMember(CreateOrganizationMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrganizationMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrganizationMemberResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class OrganizationClient extends AbstractClient{
     public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrganizationMemberPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class OrganizationClient extends AbstractClient{
     public DeleteOrganizationMembersResponse DeleteOrganizationMembers(DeleteOrganizationMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMembersResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class OrganizationClient extends AbstractClient{
     public DeleteOrganizationNodesResponse DeleteOrganizationNodes(DeleteOrganizationNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOrganizationNodesResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationResponse DescribeOrganization(DescribeOrganizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationMemberAuthAccountsResponse DescribeOrganizationMemberAuthAccounts(DescribeOrganizationMemberAuthAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationMemberAuthIdentitiesResponse DescribeOrganizationMemberAuthIdentities(DescribeOrganizationMemberAuthIdentitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationMemberPoliciesResponse DescribeOrganizationMemberPolicies(DescribeOrganizationMemberPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationMemberPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMemberPoliciesResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationMembersResponse DescribeOrganizationMembers(DescribeOrganizationMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationMembersResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationNodesResponse DescribeOrganizationNodes(DescribeOrganizationNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationNodesResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class OrganizationClient extends AbstractClient{
     public ListOrganizationIdentityResponse ListOrganizationIdentity(ListOrganizationIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListOrganizationIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListOrganizationIdentityResponse>>() {
                 }.getType();
@@ -328,6 +342,7 @@ public class OrganizationClient extends AbstractClient{
     public MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembers(MoveOrganizationNodeMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MoveOrganizationNodeMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MoveOrganizationNodeMembersResponse>>() {
                 }.getType();
@@ -348,6 +363,7 @@ public class OrganizationClient extends AbstractClient{
     public UpdateOrganizationNodeResponse UpdateOrganizationNode(UpdateOrganizationNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateOrganizationNodeResponse>>() {
                 }.getType();

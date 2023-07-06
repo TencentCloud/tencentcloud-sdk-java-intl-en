@@ -29,7 +29,7 @@ public class DomainClient extends AbstractClient{
     private static String endpoint = "domain.tencentcloudapi.com";
     private static String service = "domain";
     private static String version = "2018-08-08";
-
+    
     public DomainClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DomainClient extends AbstractClient{
     public BatchModifyIntlDomainDNSResponse BatchModifyIntlDomainDNS(BatchModifyIntlDomainDNSRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchModifyIntlDomainDNSResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchModifyIntlDomainDNSResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DomainClient extends AbstractClient{
     public BatchModifyIntlDomainInfoResponse BatchModifyIntlDomainInfo(BatchModifyIntlDomainInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchModifyIntlDomainInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchModifyIntlDomainInfoResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DomainClient extends AbstractClient{
     public CheckIntlDomainNewResponse CheckIntlDomainNew(CheckIntlDomainNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckIntlDomainNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckIntlDomainNewResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DomainClient extends AbstractClient{
     public CreateIntlDomainBatchResponse CreateIntlDomainBatch(CreateIntlDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntlDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntlDomainBatchResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DomainClient extends AbstractClient{
     public CreateIntlPhoneEmailResponse CreateIntlPhoneEmail(CreateIntlPhoneEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntlPhoneEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntlPhoneEmailResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DomainClient extends AbstractClient{
     public CreateIntlTemplateResponse CreateIntlTemplate(CreateIntlTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntlTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntlTemplateResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class DomainClient extends AbstractClient{
     public DeleteIntlPhoneEmailResponse DeleteIntlPhoneEmail(DeleteIntlPhoneEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntlPhoneEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntlPhoneEmailResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class DomainClient extends AbstractClient{
     public DeleteIntlTemplateResponse DeleteIntlTemplate(DeleteIntlTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntlTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntlTemplateResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlBatchDetailStatusResponse DescribeIntlBatchDetailStatus(DescribeIntlBatchDetailStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlBatchDetailStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlBatchDetailStatusResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlBatchOperationLogsResponse DescribeIntlBatchOperationLogs(DescribeIntlBatchOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlBatchOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlBatchOperationLogsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlDomainResponse DescribeIntlDomain(DescribeIntlDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlDomainResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlDomainBatchDetailsResponse DescribeIntlDomainBatchDetails(DescribeIntlDomainBatchDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlDomainBatchDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlDomainBatchDetailsResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlDomainListResponse DescribeIntlDomainList(DescribeIntlDomainListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlDomainListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlDomainListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlDomainPriceNewListResponse DescribeIntlDomainPriceNewList(DescribeIntlDomainPriceNewListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlDomainPriceNewListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlDomainPriceNewListResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlPhoneEmailListResponse DescribeIntlPhoneEmailList(DescribeIntlPhoneEmailListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlPhoneEmailListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlPhoneEmailListResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlTemplateResponse DescribeIntlTemplate(DescribeIntlTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlTemplateResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class DomainClient extends AbstractClient{
     public DescribeIntlTemplateListResponse DescribeIntlTemplateList(DescribeIntlTemplateListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntlTemplateListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntlTemplateListResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class DomainClient extends AbstractClient{
     public ModifyOwnerIntlBatchResponse ModifyOwnerIntlBatch(ModifyOwnerIntlBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyOwnerIntlBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyOwnerIntlBatchResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class DomainClient extends AbstractClient{
     public RenewIntlDomainBatchResponse RenewIntlDomainBatch(RenewIntlDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewIntlDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewIntlDomainBatchResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class DomainClient extends AbstractClient{
     public SendIntlPhoneEmailCodeResponse SendIntlPhoneEmailCode(SendIntlPhoneEmailCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendIntlPhoneEmailCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendIntlPhoneEmailCodeResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class DomainClient extends AbstractClient{
     public SetIntlDomainAutoRenewResponse SetIntlDomainAutoRenew(SetIntlDomainAutoRenewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetIntlDomainAutoRenewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetIntlDomainAutoRenewResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class DomainClient extends AbstractClient{
     public TransferInIntlDomainBatchResponse TransferInIntlDomainBatch(TransferInIntlDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransferInIntlDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransferInIntlDomainBatchResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class DomainClient extends AbstractClient{
     public TransferProhibitionIntlBatchResponse TransferProhibitionIntlBatch(TransferProhibitionIntlBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransferProhibitionIntlBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransferProhibitionIntlBatchResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class DomainClient extends AbstractClient{
     public UpdateProhibitionIntlBatchResponse UpdateProhibitionIntlBatch(UpdateProhibitionIntlBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProhibitionIntlBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProhibitionIntlBatchResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class TeoClient extends AbstractClient{
     private static String endpoint = "teo.tencentcloudapi.com";
     private static String service = "teo";
     private static String version = "2022-01-06";
-
+    
     public TeoClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TeoClient extends AbstractClient{
     public CheckCertificateResponse CheckCertificate(CheckCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckCertificateResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TeoClient extends AbstractClient{
     public CreateApplicationProxyResponse CreateApplicationProxy(CreateApplicationProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TeoClient extends AbstractClient{
     public CreateApplicationProxyRuleResponse CreateApplicationProxyRule(CreateApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationProxyRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyRuleResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TeoClient extends AbstractClient{
     public CreateApplicationProxyRulesResponse CreateApplicationProxyRules(CreateApplicationProxyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationProxyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyRulesResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TeoClient extends AbstractClient{
     public CreateCustomErrorPageResponse CreateCustomErrorPage(CreateCustomErrorPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomErrorPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomErrorPageResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TeoClient extends AbstractClient{
     public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDnsRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDnsRecordResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TeoClient extends AbstractClient{
     public CreateLoadBalancingResponse CreateLoadBalancing(CreateLoadBalancingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLoadBalancingResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TeoClient extends AbstractClient{
     public CreateOriginGroupResponse CreateOriginGroup(CreateOriginGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOriginGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOriginGroupResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TeoClient extends AbstractClient{
     public CreatePrefetchTaskResponse CreatePrefetchTask(CreatePrefetchTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrefetchTaskResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TeoClient extends AbstractClient{
     public CreatePurgeTaskResponse CreatePurgeTask(CreatePurgeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePurgeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePurgeTaskResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TeoClient extends AbstractClient{
     public CreateZoneResponse CreateZone(CreateZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateZoneResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TeoClient extends AbstractClient{
     public DeleteApplicationProxyResponse DeleteApplicationProxy(DeleteApplicationProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApplicationProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TeoClient extends AbstractClient{
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApplicationProxyRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyRuleResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TeoClient extends AbstractClient{
     public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDnsRecordsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TeoClient extends AbstractClient{
     public DeleteLoadBalancingResponse DeleteLoadBalancing(DeleteLoadBalancingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancingResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TeoClient extends AbstractClient{
     public DeleteOriginGroupResponse DeleteOriginGroup(DeleteOriginGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOriginGroupResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TeoClient extends AbstractClient{
     public DeleteZoneResponse DeleteZone(DeleteZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteZoneResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TeoClient extends AbstractClient{
     public DescribeApplicationProxyResponse DescribeApplicationProxy(DescribeApplicationProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationProxyResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TeoClient extends AbstractClient{
     public DescribeApplicationProxyDetailResponse DescribeApplicationProxyDetail(DescribeApplicationProxyDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationProxyDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationProxyDetailResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TeoClient extends AbstractClient{
     public DescribeBotLogResponse DescribeBotLog(DescribeBotLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBotLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBotLogResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TeoClient extends AbstractClient{
     public DescribeBotManagedRulesResponse DescribeBotManagedRules(DescribeBotManagedRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBotManagedRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBotManagedRulesResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TeoClient extends AbstractClient{
     public DescribeCnameStatusResponse DescribeCnameStatus(DescribeCnameStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCnameStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCnameStatusResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDoSPolicyResponse DescribeDDoSPolicy(DescribeDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSPolicyResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDosAttackDataResponse DescribeDDosAttackData(DescribeDDosAttackDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDosAttackDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackDataResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDosAttackEventResponse DescribeDDosAttackEvent(DescribeDDosAttackEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDosAttackEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackEventResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDosAttackEventDetailResponse DescribeDDosAttackEventDetail(DescribeDDosAttackEventDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDosAttackEventDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackEventDetailResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDosAttackSourceEventResponse DescribeDDosAttackSourceEvent(DescribeDDosAttackSourceEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDosAttackSourceEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackSourceEventResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDosAttackTopDataResponse DescribeDDosAttackTopData(DescribeDDosAttackTopDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDosAttackTopDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDosAttackTopDataResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEvent(DescribeDDosMajorAttackEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDosMajorAttackEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDosMajorAttackEventResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDefaultCertificatesResponse DescribeDefaultCertificates(DescribeDefaultCertificatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDefaultCertificatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDefaultCertificatesResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDnsDataResponse DescribeDnsData(DescribeDnsDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDnsDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDnsDataResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDnsRecordsResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class TeoClient extends AbstractClient{
     public DescribeDnssecResponse DescribeDnssec(DescribeDnssecRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDnssecResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDnssecResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class TeoClient extends AbstractClient{
     public DescribeHostsCertificateResponse DescribeHostsCertificate(DescribeHostsCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHostsCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHostsCertificateResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class TeoClient extends AbstractClient{
     public DescribeHostsSettingResponse DescribeHostsSetting(DescribeHostsSettingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHostsSettingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHostsSettingResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class TeoClient extends AbstractClient{
     public DescribeIdentificationResponse DescribeIdentification(DescribeIdentificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIdentificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIdentificationResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class TeoClient extends AbstractClient{
     public DescribeLoadBalancingResponse DescribeLoadBalancing(DescribeLoadBalancingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancingResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class TeoClient extends AbstractClient{
     public DescribeLoadBalancingDetailResponse DescribeLoadBalancingDetail(DescribeLoadBalancingDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLoadBalancingDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancingDetailResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class TeoClient extends AbstractClient{
     public DescribeOriginGroupResponse DescribeOriginGroup(DescribeOriginGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOriginGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOriginGroupResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class TeoClient extends AbstractClient{
     public DescribeOriginGroupDetailResponse DescribeOriginGroupDetail(DescribeOriginGroupDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOriginGroupDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOriginGroupDetailResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class TeoClient extends AbstractClient{
     public DescribeOverviewL7DataResponse DescribeOverviewL7Data(DescribeOverviewL7DataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewL7DataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewL7DataResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class TeoClient extends AbstractClient{
     public DescribePrefetchTasksResponse DescribePrefetchTasks(DescribePrefetchTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrefetchTasksResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class TeoClient extends AbstractClient{
     public DescribePurgeTasksResponse DescribePurgeTasks(DescribePurgeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class TeoClient extends AbstractClient{
     public DescribeSecurityPolicyResponse DescribeSecurityPolicy(DescribeSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class TeoClient extends AbstractClient{
     public DescribeSecurityPolicyListResponse DescribeSecurityPolicyList(DescribeSecurityPolicyListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyListResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class TeoClient extends AbstractClient{
     public DescribeSecurityPolicyManagedRulesResponse DescribeSecurityPolicyManagedRules(DescribeSecurityPolicyManagedRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class TeoClient extends AbstractClient{
     public DescribeSecurityPolicyManagedRulesIdResponse DescribeSecurityPolicyManagedRulesId(DescribeSecurityPolicyManagedRulesIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class TeoClient extends AbstractClient{
     public DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegions(DescribeSecurityPolicyRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyRegionsResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class TeoClient extends AbstractClient{
     public DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(DescribeSecurityPortraitRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class TeoClient extends AbstractClient{
     public DescribeTimingL4DataResponse DescribeTimingL4Data(DescribeTimingL4DataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimingL4DataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimingL4DataResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class TeoClient extends AbstractClient{
     public DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(DescribeTimingL7AnalysisDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimingL7AnalysisDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimingL7AnalysisDataResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class TeoClient extends AbstractClient{
     public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(DescribeTimingL7CacheDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimingL7CacheDataResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class TeoClient extends AbstractClient{
     public DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(DescribeTopL7AnalysisDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopL7AnalysisDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class TeoClient extends AbstractClient{
     public DescribeTopL7CacheDataResponse DescribeTopL7CacheData(DescribeTopL7CacheDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopL7CacheDataResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEvents(DescribeWebManagedRulesAttackEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse>>() {
                 }.getType();
@@ -1147,6 +1202,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebManagedRulesDataResponse DescribeWebManagedRulesData(DescribeWebManagedRulesDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebManagedRulesDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesDataResponse>>() {
                 }.getType();
@@ -1167,6 +1223,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLog(DescribeWebManagedRulesLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebManagedRulesLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesLogResponse>>() {
                 }.getType();
@@ -1187,6 +1244,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopData(DescribeWebManagedRulesTopDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebManagedRulesTopDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebManagedRulesTopDataResponse>>() {
                 }.getType();
@@ -1207,6 +1265,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebProtectionAttackEventsResponse DescribeWebProtectionAttackEvents(DescribeWebProtectionAttackEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebProtectionAttackEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebProtectionAttackEventsResponse>>() {
                 }.getType();
@@ -1227,6 +1286,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebProtectionDataResponse DescribeWebProtectionData(DescribeWebProtectionDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebProtectionDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebProtectionDataResponse>>() {
                 }.getType();
@@ -1247,6 +1307,7 @@ public class TeoClient extends AbstractClient{
     public DescribeWebProtectionLogResponse DescribeWebProtectionLog(DescribeWebProtectionLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWebProtectionLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWebProtectionLogResponse>>() {
                 }.getType();
@@ -1267,6 +1328,7 @@ public class TeoClient extends AbstractClient{
     public DescribeZoneDDoSPolicyResponse DescribeZoneDDoSPolicy(DescribeZoneDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneDDoSPolicyResponse>>() {
                 }.getType();
@@ -1287,6 +1349,7 @@ public class TeoClient extends AbstractClient{
     public DescribeZoneDetailsResponse DescribeZoneDetails(DescribeZoneDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneDetailsResponse>>() {
                 }.getType();
@@ -1307,6 +1370,7 @@ public class TeoClient extends AbstractClient{
     public DescribeZoneSettingResponse DescribeZoneSetting(DescribeZoneSettingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneSettingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneSettingResponse>>() {
                 }.getType();
@@ -1327,6 +1391,7 @@ public class TeoClient extends AbstractClient{
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
                 }.getType();
@@ -1347,6 +1412,7 @@ public class TeoClient extends AbstractClient{
     public DownloadL7LogsResponse DownloadL7Logs(DownloadL7LogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadL7LogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadL7LogsResponse>>() {
                 }.getType();
@@ -1367,6 +1433,7 @@ public class TeoClient extends AbstractClient{
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IdentifyZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IdentifyZoneResponse>>() {
                 }.getType();
@@ -1387,6 +1454,7 @@ public class TeoClient extends AbstractClient{
     public ImportDnsRecordsResponse ImportDnsRecords(ImportDnsRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportDnsRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportDnsRecordsResponse>>() {
                 }.getType();
@@ -1407,6 +1475,7 @@ public class TeoClient extends AbstractClient{
     public ModifyApplicationProxyResponse ModifyApplicationProxy(ModifyApplicationProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyResponse>>() {
                 }.getType();
@@ -1427,6 +1496,7 @@ public class TeoClient extends AbstractClient{
     public ModifyApplicationProxyRuleResponse ModifyApplicationProxyRule(ModifyApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationProxyRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyRuleResponse>>() {
                 }.getType();
@@ -1447,6 +1517,7 @@ public class TeoClient extends AbstractClient{
     public ModifyApplicationProxyRuleStatusResponse ModifyApplicationProxyRuleStatus(ModifyApplicationProxyRuleStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationProxyRuleStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyRuleStatusResponse>>() {
                 }.getType();
@@ -1467,6 +1538,7 @@ public class TeoClient extends AbstractClient{
     public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(ModifyApplicationProxyStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationProxyStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyStatusResponse>>() {
                 }.getType();
@@ -1487,6 +1559,7 @@ public class TeoClient extends AbstractClient{
     public ModifyDDoSPolicyResponse ModifyDDoSPolicy(ModifyDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSPolicyResponse>>() {
                 }.getType();
@@ -1507,6 +1580,7 @@ public class TeoClient extends AbstractClient{
     public ModifyDDoSPolicyHostResponse ModifyDDoSPolicyHost(ModifyDDoSPolicyHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSPolicyHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSPolicyHostResponse>>() {
                 }.getType();
@@ -1527,6 +1601,7 @@ public class TeoClient extends AbstractClient{
     public ModifyDefaultCertificateResponse ModifyDefaultCertificate(ModifyDefaultCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDefaultCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDefaultCertificateResponse>>() {
                 }.getType();
@@ -1547,6 +1622,7 @@ public class TeoClient extends AbstractClient{
     public ModifyDnsRecordResponse ModifyDnsRecord(ModifyDnsRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDnsRecordResponse>>() {
                 }.getType();
@@ -1567,6 +1643,7 @@ public class TeoClient extends AbstractClient{
     public ModifyDnssecResponse ModifyDnssec(ModifyDnssecRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDnssecResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDnssecResponse>>() {
                 }.getType();
@@ -1587,6 +1664,7 @@ public class TeoClient extends AbstractClient{
     public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHostsCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsCertificateResponse>>() {
                 }.getType();
@@ -1607,6 +1685,7 @@ public class TeoClient extends AbstractClient{
     public ModifyLoadBalancingResponse ModifyLoadBalancing(ModifyLoadBalancingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingResponse>>() {
                 }.getType();
@@ -1627,6 +1706,7 @@ public class TeoClient extends AbstractClient{
     public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingStatusResponse>>() {
                 }.getType();
@@ -1647,6 +1727,7 @@ public class TeoClient extends AbstractClient{
     public ModifyOriginGroupResponse ModifyOriginGroup(ModifyOriginGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyOriginGroupResponse>>() {
                 }.getType();
@@ -1667,6 +1748,7 @@ public class TeoClient extends AbstractClient{
     public ModifySecurityPolicyResponse ModifySecurityPolicy(ModifySecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySecurityPolicyResponse>>() {
                 }.getType();
@@ -1687,6 +1769,7 @@ public class TeoClient extends AbstractClient{
     public ModifyZoneResponse ModifyZone(ModifyZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyZoneResponse>>() {
                 }.getType();
@@ -1707,6 +1790,7 @@ public class TeoClient extends AbstractClient{
     public ModifyZoneCnameSpeedUpResponse ModifyZoneCnameSpeedUp(ModifyZoneCnameSpeedUpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyZoneCnameSpeedUpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyZoneCnameSpeedUpResponse>>() {
                 }.getType();
@@ -1727,6 +1811,7 @@ public class TeoClient extends AbstractClient{
     public ModifyZoneSettingResponse ModifyZoneSetting(ModifyZoneSettingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyZoneSettingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyZoneSettingResponse>>() {
                 }.getType();
@@ -1747,6 +1832,7 @@ public class TeoClient extends AbstractClient{
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyZoneStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyZoneStatusResponse>>() {
                 }.getType();
@@ -1767,6 +1853,7 @@ public class TeoClient extends AbstractClient{
     public ReclaimZoneResponse ReclaimZone(ReclaimZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReclaimZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReclaimZoneResponse>>() {
                 }.getType();
@@ -1787,6 +1874,7 @@ public class TeoClient extends AbstractClient{
     public ScanDnsRecordsResponse ScanDnsRecords(ScanDnsRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScanDnsRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScanDnsRecordsResponse>>() {
                 }.getType();

@@ -58,6 +58,27 @@ public class EventSettingsResp extends AbstractModel{
     private EventSettingsDestinationResp [] Destinations;
 
     /**
+    * SCTE-35 configuration information.
+    */
+    @SerializedName("SCTE35SegmentationDescriptor")
+    @Expose
+    private SegmentationDescriptorRespInfo [] SCTE35SegmentationDescriptor;
+
+    /**
+    * A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+    */
+    @SerializedName("SpliceEventID")
+    @Expose
+    private Long SpliceEventID;
+
+    /**
+    * The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+    */
+    @SerializedName("SpliceDuration")
+    @Expose
+    private String SpliceDuration;
+
+    /**
      * Get Only `INPUT_SWITCH` is supported currently. 
      * @return EventType Only `INPUT_SWITCH` is supported currently.
      */
@@ -137,6 +158,54 @@ public class EventSettingsResp extends AbstractModel{
         this.Destinations = Destinations;
     }
 
+    /**
+     * Get SCTE-35 configuration information. 
+     * @return SCTE35SegmentationDescriptor SCTE-35 configuration information.
+     */
+    public SegmentationDescriptorRespInfo [] getSCTE35SegmentationDescriptor() {
+        return this.SCTE35SegmentationDescriptor;
+    }
+
+    /**
+     * Set SCTE-35 configuration information.
+     * @param SCTE35SegmentationDescriptor SCTE-35 configuration information.
+     */
+    public void setSCTE35SegmentationDescriptor(SegmentationDescriptorRespInfo [] SCTE35SegmentationDescriptor) {
+        this.SCTE35SegmentationDescriptor = SCTE35SegmentationDescriptor;
+    }
+
+    /**
+     * Get A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time. 
+     * @return SpliceEventID A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+     */
+    public Long getSpliceEventID() {
+        return this.SpliceEventID;
+    }
+
+    /**
+     * Set A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+     * @param SpliceEventID A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+     */
+    public void setSpliceEventID(Long SpliceEventID) {
+        this.SpliceEventID = SpliceEventID;
+    }
+
+    /**
+     * Get The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time. 
+     * @return SpliceDuration The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+     */
+    public String getSpliceDuration() {
+        return this.SpliceDuration;
+    }
+
+    /**
+     * Set The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+     * @param SpliceDuration The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+     */
+    public void setSpliceDuration(String SpliceDuration) {
+        this.SpliceDuration = SpliceDuration;
+    }
+
     public EventSettingsResp() {
     }
 
@@ -163,6 +232,18 @@ public class EventSettingsResp extends AbstractModel{
                 this.Destinations[i] = new EventSettingsDestinationResp(source.Destinations[i]);
             }
         }
+        if (source.SCTE35SegmentationDescriptor != null) {
+            this.SCTE35SegmentationDescriptor = new SegmentationDescriptorRespInfo[source.SCTE35SegmentationDescriptor.length];
+            for (int i = 0; i < source.SCTE35SegmentationDescriptor.length; i++) {
+                this.SCTE35SegmentationDescriptor[i] = new SegmentationDescriptorRespInfo(source.SCTE35SegmentationDescriptor[i]);
+            }
+        }
+        if (source.SpliceEventID != null) {
+            this.SpliceEventID = new Long(source.SpliceEventID);
+        }
+        if (source.SpliceDuration != null) {
+            this.SpliceDuration = new String(source.SpliceDuration);
+        }
     }
 
 
@@ -175,6 +256,9 @@ public class EventSettingsResp extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
         this.setParamSimple(map, prefix + "ManifestName", this.ManifestName);
         this.setParamArrayObj(map, prefix + "Destinations.", this.Destinations);
+        this.setParamArrayObj(map, prefix + "SCTE35SegmentationDescriptor.", this.SCTE35SegmentationDescriptor);
+        this.setParamSimple(map, prefix + "SpliceEventID", this.SpliceEventID);
+        this.setParamSimple(map, prefix + "SpliceDuration", this.SpliceDuration);
 
     }
 }

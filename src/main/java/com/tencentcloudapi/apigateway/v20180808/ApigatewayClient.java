@@ -29,7 +29,7 @@ public class ApigatewayClient extends AbstractClient{
     private static String endpoint = "apigateway.tencentcloudapi.com";
     private static String service = "apigateway";
     private static String version = "2018-08-08";
-
+    
     public ApigatewayClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ApigatewayClient extends AbstractClient{
     public AttachPluginResponse AttachPlugin(AttachPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachPluginResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ApigatewayClient extends AbstractClient{
     public BindApiAppResponse BindApiApp(BindApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindApiAppResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ Currently, a usage plan can be bound to an API; however, under the same service,
     public BindEnvironmentResponse BindEnvironment(BindEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindEnvironmentResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ Currently, a usage plan can be bound to an API; however, under the same service,
     public BindIPStrategyResponse BindIPStrategy(BindIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindIPStrategyResponse>>() {
                 }.getType();
@@ -130,6 +134,7 @@ You can bind a key to a usage plan and bind the usage plan to an environment whe
     public BindSecretIdsResponse BindSecretIds(BindSecretIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindSecretIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindSecretIdsResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public BindSubDomainResponse BindSubDomain(BindSubDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindSubDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindSubDomainResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public BuildAPIDocResponse BuildAPIDoc(BuildAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BuildAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BuildAPIDocResponse>>() {
                 }.getType();
@@ -191,6 +198,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public CreateAPIDocResponse CreateAPIDoc(CreateAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAPIDocResponse>>() {
                 }.getType();
@@ -211,6 +219,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public CreateApiResponse CreateApi(CreateApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public CreateApiAppResponse CreateApiApp(CreateApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiAppResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiKeyResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public CreateIPStrategyResponse CreateIPStrategy(CreateIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIPStrategyResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ Each service in API Gateway provides a default domain name for users to call. If
     public CreatePluginResponse CreatePlugin(CreatePluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePluginResponse>>() {
                 }.getType();
@@ -312,6 +325,7 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
     public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServiceResponse>>() {
                 }.getType();
@@ -332,6 +346,7 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
     public CreateUpstreamResponse CreateUpstream(CreateUpstreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUpstreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUpstreamResponse>>() {
                 }.getType();
@@ -353,6 +368,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public CreateUsagePlanResponse CreateUsagePlan(CreateUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUsagePlanResponse>>() {
                 }.getType();
@@ -373,6 +389,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeleteAPIDocResponse DeleteAPIDoc(DeleteAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAPIDocResponse>>() {
                 }.getType();
@@ -393,6 +410,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeleteApiResponse DeleteApi(DeleteApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiResponse>>() {
                 }.getType();
@@ -413,6 +431,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeleteApiAppResponse DeleteApiApp(DeleteApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiAppResponse>>() {
                 }.getType();
@@ -433,6 +452,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiKeyResponse>>() {
                 }.getType();
@@ -453,6 +473,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeleteIPStrategyResponse DeleteIPStrategy(DeleteIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIPStrategyResponse>>() {
                 }.getType();
@@ -473,6 +494,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePluginResponse>>() {
                 }.getType();
@@ -493,6 +515,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceResponse>>() {
                 }.getType();
@@ -514,6 +537,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
     public DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(DeleteServiceSubDomainMappingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceSubDomainMappingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>() {
                 }.getType();
@@ -534,6 +558,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
     public DeleteUpstreamResponse DeleteUpstream(DeleteUpstreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUpstreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUpstreamResponse>>() {
                 }.getType();
@@ -554,6 +579,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
     public DeleteUsagePlanResponse DeleteUsagePlan(DeleteUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsagePlanResponse>>() {
                 }.getType();
@@ -576,6 +602,7 @@ This operation will also be denied if the current environment has not been publi
     public DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(DemoteServiceUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DemoteServiceUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DemoteServiceUsagePlanResponse>>() {
                 }.getType();
@@ -596,6 +623,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeAPIDocDetailResponse DescribeAPIDocDetail(DescribeAPIDocDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAPIDocDetailResponse>>() {
                 }.getType();
@@ -616,6 +644,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeAPIDocsResponse DescribeAPIDocs(DescribeAPIDocsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
                 }.getType();
@@ -636,6 +665,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeAllPluginApisResponse DescribeAllPluginApis(DescribeAllPluginApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllPluginApisResponse>>() {
                 }.getType();
@@ -656,6 +686,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiResponse DescribeApi(DescribeApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiResponse>>() {
                 }.getType();
@@ -676,6 +707,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiAppResponse DescribeApiApp(DescribeApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiAppResponse>>() {
                 }.getType();
@@ -696,6 +728,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>() {
                 }.getType();
@@ -716,6 +749,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiAppsStatusResponse DescribeApiAppsStatus(DescribeApiAppsStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiAppsStatusResponse>>() {
                 }.getType();
@@ -736,6 +770,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>() {
                 }.getType();
@@ -756,6 +791,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(DescribeApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -776,6 +812,7 @@ This operation will also be denied if the current environment has not been publi
     public DescribeApiForApiAppResponse DescribeApiForApiApp(DescribeApiForApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiForApiAppResponse>>() {
                 }.getType();
@@ -797,6 +834,7 @@ After creating an API key, you can query its details by using this API.
     public DescribeApiKeyResponse DescribeApiKey(DescribeApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiKeyResponse>>() {
                 }.getType();
@@ -818,6 +856,7 @@ After creating an API key, you can query its details by using this API.
     public DescribeApiKeysStatusResponse DescribeApiKeysStatus(DescribeApiKeysStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiKeysStatusResponse>>() {
                 }.getType();
@@ -839,6 +878,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeApiUsagePlanResponse DescribeApiUsagePlan(DescribeApiUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiUsagePlanResponse>>() {
                 }.getType();
@@ -859,6 +899,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeApisStatusResponse DescribeApisStatus(DescribeApisStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApisStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApisStatusResponse>>() {
                 }.getType();
@@ -879,6 +920,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeIPStrategyResponse DescribeIPStrategy(DescribeIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyResponse>>() {
                 }.getType();
@@ -899,6 +941,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(DescribeIPStrategyApisStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>() {
                 }.getType();
@@ -919,6 +962,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStrategysStatusResponse>>() {
                 }.getType();
@@ -939,6 +983,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeLogSearchResponse DescribeLogSearch(DescribeLogSearchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogSearchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogSearchResponse>>() {
                 }.getType();
@@ -959,6 +1004,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribePluginResponse DescribePlugin(DescribePluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginResponse>>() {
                 }.getType();
@@ -979,6 +1025,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribePluginApisResponse DescribePluginApis(DescribePluginApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginApisResponse>>() {
                 }.getType();
@@ -999,6 +1046,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribePluginsByApiResponse DescribePluginsByApi(DescribePluginsByApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginsByApiResponse>>() {
                 }.getType();
@@ -1019,6 +1067,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeServiceResponse DescribeService(DescribeServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceResponse>>() {
                 }.getType();
@@ -1039,6 +1088,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(DescribeServiceEnvironmentListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceEnvironmentListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentListResponse>>() {
                 }.getType();
@@ -1060,6 +1110,7 @@ A service can only be used when it is published to an environment after creation
     public DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(DescribeServiceEnvironmentReleaseHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse>>() {
                 }.getType();
@@ -1080,6 +1131,7 @@ A service can only be used when it is published to an environment after creation
     public DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(DescribeServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -1100,6 +1152,7 @@ A service can only be used when it is published to an environment after creation
     public DescribeServiceForApiAppResponse DescribeServiceForApiApp(DescribeServiceForApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceForApiAppResponse>>() {
                 }.getType();
@@ -1121,6 +1174,7 @@ A service is generally published on several versions. This API can be used to qu
     public DescribeServiceReleaseVersionResponse DescribeServiceReleaseVersion(DescribeServiceReleaseVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceReleaseVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceReleaseVersionResponse>>() {
                 }.getType();
@@ -1142,6 +1196,7 @@ In API Gateway, you can bind a custom domain name to a service and map its paths
     public DescribeServiceSubDomainMappingsResponse DescribeServiceSubDomainMappings(DescribeServiceSubDomainMappingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceSubDomainMappingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainMappingsResponse>>() {
                 }.getType();
@@ -1163,6 +1218,7 @@ In API Gateway, you can bind custom domain names to a service for service call. 
     public DescribeServiceSubDomainsResponse DescribeServiceSubDomains(DescribeServiceSubDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceSubDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainsResponse>>() {
                 }.getType();
@@ -1184,6 +1240,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(DescribeServiceUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceUsagePlanResponse>>() {
                 }.getType();
@@ -1204,6 +1261,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeServicesStatusResponse DescribeServicesStatus(DescribeServicesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServicesStatusResponse>>() {
                 }.getType();
@@ -1224,6 +1282,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUpstreamBindApisResponse>>() {
                 }.getType();
@@ -1244,6 +1303,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeUpstreamsResponse DescribeUpstreams(DescribeUpstreamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUpstreamsResponse>>() {
                 }.getType();
@@ -1264,6 +1324,7 @@ To make authentication and throttling for a service take effect, you need to bin
     public DescribeUsagePlanResponse DescribeUsagePlan(DescribeUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanResponse>>() {
                 }.getType();
@@ -1285,6 +1346,7 @@ After binding a usage plan to environments, you can use this API to query all se
     public DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(DescribeUsagePlanEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlanEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanEnvironmentsResponse>>() {
                 }.getType();
@@ -1306,6 +1368,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(DescribeUsagePlanSecretIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlanSecretIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanSecretIdsResponse>>() {
                 }.getType();
@@ -1326,6 +1389,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(DescribeUsagePlansStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlansStatusResponse>>() {
                 }.getType();
@@ -1346,6 +1410,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public DetachPluginResponse DetachPlugin(DetachPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachPluginResponse>>() {
                 }.getType();
@@ -1366,6 +1431,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public DisableApiKeyResponse DisableApiKey(DisableApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableApiKeyResponse>>() {
                 }.getType();
@@ -1386,6 +1452,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public EnableApiKeyResponse EnableApiKey(EnableApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableApiKeyResponse>>() {
                 }.getType();
@@ -1406,6 +1473,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public GenerateApiDocumentResponse GenerateApiDocument(GenerateApiDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateApiDocumentResponse>>() {
                 }.getType();
@@ -1426,6 +1494,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ImportOpenApiResponse ImportOpenApi(ImportOpenApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportOpenApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportOpenApiResponse>>() {
                 }.getType();
@@ -1446,6 +1515,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyAPIDocResponse ModifyAPIDoc(ModifyAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAPIDocResponse>>() {
                 }.getType();
@@ -1466,6 +1536,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyApiResponse ModifyApi(ModifyApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiResponse>>() {
                 }.getType();
@@ -1486,6 +1557,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyApiAppResponse ModifyApiApp(ModifyApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiAppResponse>>() {
                 }.getType();
@@ -1506,6 +1578,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(ModifyApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -1526,6 +1599,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyApiIncrementResponse ModifyApiIncrement(ModifyApiIncrementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiIncrementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiIncrementResponse>>() {
                 }.getType();
@@ -1546,6 +1620,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyIPStrategyResponse ModifyIPStrategy(ModifyIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIPStrategyResponse>>() {
                 }.getType();
@@ -1566,6 +1641,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPluginResponse>>() {
                 }.getType();
@@ -1586,6 +1662,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyServiceResponse ModifyService(ModifyServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyServiceResponse>>() {
                 }.getType();
@@ -1606,6 +1683,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(ModifyServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyServiceEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyServiceEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -1626,6 +1704,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifySubDomainResponse ModifySubDomain(ModifySubDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubDomainResponse>>() {
                 }.getType();
@@ -1646,6 +1725,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyUpstreamResponse ModifyUpstream(ModifyUpstreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUpstreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUpstreamResponse>>() {
                 }.getType();
@@ -1666,6 +1746,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     public ModifyUsagePlanResponse ModifyUsagePlan(ModifyUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUsagePlanResponse>>() {
                 }.getType();
@@ -1687,6 +1768,7 @@ An API Gateway service can only be called when it is published to an environment
     public ReleaseServiceResponse ReleaseService(ReleaseServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseServiceResponse>>() {
                 }.getType();
@@ -1707,6 +1789,7 @@ An API Gateway service can only be called when it is published to an environment
     public ResetAPIDocPasswordResponse ResetAPIDocPassword(ResetAPIDocPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAPIDocPasswordResponse>>() {
                 }.getType();
@@ -1727,6 +1810,7 @@ An API Gateway service can only be called when it is published to an environment
     public UnBindEnvironmentResponse UnBindEnvironment(UnBindEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindEnvironmentResponse>>() {
                 }.getType();
@@ -1747,6 +1831,7 @@ An API Gateway service can only be called when it is published to an environment
     public UnBindIPStrategyResponse UnBindIPStrategy(UnBindIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindIPStrategyResponse>>() {
                 }.getType();
@@ -1767,6 +1852,7 @@ An API Gateway service can only be called when it is published to an environment
     public UnBindSecretIdsResponse UnBindSecretIds(UnBindSecretIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindSecretIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindSecretIdsResponse>>() {
                 }.getType();
@@ -1788,6 +1874,7 @@ After binding a custom domain name to a service by using API Gateway, you can us
     public UnBindSubDomainResponse UnBindSubDomain(UnBindSubDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindSubDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindSubDomainResponse>>() {
                 }.getType();
@@ -1809,6 +1896,7 @@ Only after a service is published to an environment can its APIs be called. You 
     public UnReleaseServiceResponse UnReleaseService(UnReleaseServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnReleaseServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnReleaseServiceResponse>>() {
                 }.getType();
@@ -1829,6 +1917,7 @@ Only after a service is published to an environment can its APIs be called. You 
     public UnbindApiAppResponse UnbindApiApp(UnbindApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindApiAppResponse>>() {
                 }.getType();
@@ -1849,6 +1938,7 @@ Only after a service is published to an environment can its APIs be called. You 
     public UpdateApiAppKeyResponse UpdateApiAppKey(UpdateApiAppKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiAppKeyResponse>>() {
                 }.getType();
@@ -1869,6 +1959,7 @@ Only after a service is published to an environment can its APIs be called. You 
     public UpdateApiKeyResponse UpdateApiKey(UpdateApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiKeyResponse>>() {
                 }.getType();
@@ -1889,6 +1980,7 @@ Only after a service is published to an environment can its APIs be called. You 
     public UpdateServiceResponse UpdateService(UpdateServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateServiceResponse>>() {
                 }.getType();

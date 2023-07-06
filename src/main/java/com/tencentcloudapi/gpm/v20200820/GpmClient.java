@@ -29,7 +29,7 @@ public class GpmClient extends AbstractClient{
     private static String endpoint = "gpm.tencentcloudapi.com";
     private static String service = "gpm";
     private static String version = "2020-08-20";
-
+    
     public GpmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GpmClient extends AbstractClient{
     public CancelMatchingResponse CancelMatching(CancelMatchingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelMatchingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelMatchingResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class GpmClient extends AbstractClient{
     public CreateMatchResponse CreateMatch(CreateMatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMatchResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class GpmClient extends AbstractClient{
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class GpmClient extends AbstractClient{
     public DeleteMatchResponse DeleteMatch(DeleteMatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMatchResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class GpmClient extends AbstractClient{
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class GpmClient extends AbstractClient{
     public DescribeDataResponse DescribeData(DescribeDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class GpmClient extends AbstractClient{
     public DescribeMatchResponse DescribeMatch(DescribeMatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMatchResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class GpmClient extends AbstractClient{
     public DescribeMatchCodesResponse DescribeMatchCodes(DescribeMatchCodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMatchCodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMatchCodesResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class GpmClient extends AbstractClient{
     public DescribeMatchesResponse DescribeMatches(DescribeMatchesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMatchesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMatchesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class GpmClient extends AbstractClient{
     public DescribeMatchingProgressResponse DescribeMatchingProgress(DescribeMatchingProgressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMatchingProgressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMatchingProgressResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class GpmClient extends AbstractClient{
     public DescribeRuleResponse DescribeRule(DescribeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class GpmClient extends AbstractClient{
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class GpmClient extends AbstractClient{
     public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTokenResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class GpmClient extends AbstractClient{
     public ModifyMatchResponse ModifyMatch(ModifyMatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMatchResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class GpmClient extends AbstractClient{
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class GpmClient extends AbstractClient{
     public ModifyTokenResponse ModifyToken(ModifyTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTokenResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class GpmClient extends AbstractClient{
     public StartMatchingResponse StartMatching(StartMatchingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMatchingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMatchingResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class GpmClient extends AbstractClient{
     public StartMatchingBackfillResponse StartMatchingBackfill(StartMatchingBackfillRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMatchingBackfillResponse>>() {
                 }.getType();

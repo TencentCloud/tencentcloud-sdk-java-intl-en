@@ -29,7 +29,7 @@ public class VodClient extends AbstractClient{
     private static String endpoint = "vod.tencentcloudapi.com";
     private static String service = "vod";
     private static String version = "2018-07-17";
-
+    
     public VodClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class VodClient extends AbstractClient{
     public ApplyUploadResponse ApplyUpload(ApplyUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyUploadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyUploadResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class VodClient extends AbstractClient{
     public AttachMediaSubtitlesResponse AttachMediaSubtitles(AttachMediaSubtitlesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachMediaSubtitlesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachMediaSubtitlesResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class VodClient extends AbstractClient{
     public CloneCDNDomainResponse CloneCDNDomain(CloneCDNDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloneCDNDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloneCDNDomainResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class VodClient extends AbstractClient{
     public CommitUploadResponse CommitUpload(CommitUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitUploadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitUploadResponse>>() {
                 }.getType();
@@ -139,6 +143,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public ComposeMediaResponse ComposeMedia(ComposeMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ComposeMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ComposeMediaResponse>>() {
                 }.getType();
@@ -161,6 +166,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public ConfirmEventsResponse ConfirmEvents(ConfirmEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ConfirmEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ConfirmEventsResponse>>() {
                 }.getType();
@@ -181,6 +187,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAIAnalysisTemplateResponse>>() {
                 }.getType();
@@ -201,6 +208,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAIRecognitionTemplateResponse>>() {
                 }.getType();
@@ -221,6 +229,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>() {
                 }.getType();
@@ -241,6 +250,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(CreateAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAnimatedGraphicsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
@@ -261,6 +271,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public CreateCDNDomainResponse CreateCDNDomain(CreateCDNDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCDNDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCDNDomainResponse>>() {
                 }.getType();
@@ -284,6 +295,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     public CreateClassResponse CreateClass(CreateClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClassResponse>>() {
                 }.getType();
@@ -305,6 +317,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContentReviewTemplateResponse>>() {
                 }.getType();
@@ -325,6 +338,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(CreateImageProcessingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageProcessingTemplateResponse>>() {
                 }.getType();
@@ -345,6 +359,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(CreateImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageSpriteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageSpriteTemplateResponse>>() {
                 }.getType();
@@ -365,6 +380,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonSampleResponse>>() {
                 }.getType();
@@ -385,6 +401,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreateProcedureTemplateResponse CreateProcedureTemplate(CreateProcedureTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProcedureTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProcedureTemplateResponse>>() {
                 }.getType();
@@ -405,6 +422,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplate(CreateRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRebuildMediaTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRebuildMediaTemplateResponse>>() {
                 }.getType();
@@ -426,6 +444,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     public CreateReviewTemplateResponse CreateReviewTemplate(CreateReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReviewTemplateResponse>>() {
                 }.getType();
@@ -448,6 +467,7 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
     public CreateRoundPlayResponse CreateRoundPlay(CreateRoundPlayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoundPlayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoundPlayResponse>>() {
                 }.getType();
@@ -468,6 +488,7 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
     public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSampleSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSampleSnapshotTemplateResponse>>() {
                 }.getType();
@@ -488,6 +509,7 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
     public CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(CreateSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
@@ -510,6 +532,7 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
     public CreateStorageRegionResponse CreateStorageRegion(CreateStorageRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStorageRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStorageRegionResponse>>() {
                 }.getType();
@@ -530,6 +553,7 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
     public CreateSubAppIdResponse CreateSubAppId(CreateSubAppIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubAppIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubAppIdResponse>>() {
                 }.getType();
@@ -551,6 +575,7 @@ This API is used to create a player configuration. Up to 100 configurations can 
     public CreateSuperPlayerConfigResponse CreateSuperPlayerConfig(CreateSuperPlayerConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSuperPlayerConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSuperPlayerConfigResponse>>() {
                 }.getType();
@@ -571,6 +596,7 @@ This API is used to create a player configuration. Up to 100 configurations can 
     public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTranscodeTemplateResponse>>() {
                 }.getType();
@@ -592,6 +618,7 @@ This API is used to create a player configuration. Up to 100 configurations can 
     public CreateVodDomainResponse CreateVodDomain(CreateVodDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVodDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVodDomainResponse>>() {
                 }.getType();
@@ -612,6 +639,7 @@ This API is used to create a player configuration. Up to 100 configurations can 
     public CreateWatermarkTemplateResponse CreateWatermarkTemplate(CreateWatermarkTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWatermarkTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWatermarkTemplateResponse>>() {
                 }.getType();
@@ -632,6 +660,7 @@ This API is used to create a player configuration. Up to 100 configurations can 
     public CreateWordSamplesResponse CreateWordSamples(CreateWordSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWordSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWordSamplesResponse>>() {
                 }.getType();
@@ -654,6 +683,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>() {
                 }.getType();
@@ -674,6 +704,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>() {
                 }.getType();
@@ -694,6 +725,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>() {
                 }.getType();
@@ -714,6 +746,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
@@ -734,6 +767,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteCDNDomainResponse DeleteCDNDomain(DeleteCDNDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCDNDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCDNDomainResponse>>() {
                 }.getType();
@@ -755,6 +789,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteClassResponse DeleteClass(DeleteClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClassResponse>>() {
                 }.getType();
@@ -776,6 +811,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
@@ -796,6 +832,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(DeleteImageProcessingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImageProcessingTemplateResponse>>() {
                 }.getType();
@@ -816,6 +853,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImageSpriteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImageSpriteTemplateResponse>>() {
                 }.getType();
@@ -838,6 +876,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteMediaResponse DeleteMedia(DeleteMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
                 }.getType();
@@ -858,6 +897,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonSampleResponse>>() {
                 }.getType();
@@ -878,6 +918,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteProcedureTemplateResponse DeleteProcedureTemplate(DeleteProcedureTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProcedureTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProcedureTemplateResponse>>() {
                 }.getType();
@@ -898,6 +939,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(DeleteRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRebuildMediaTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRebuildMediaTemplateResponse>>() {
                 }.getType();
@@ -919,6 +961,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteReviewTemplateResponse DeleteReviewTemplate(DeleteReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteReviewTemplateResponse>>() {
                 }.getType();
@@ -939,6 +982,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteRoundPlayResponse DeleteRoundPlay(DeleteRoundPlayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRoundPlayResponse>>() {
                 }.getType();
@@ -959,6 +1003,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(DeleteSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSampleSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>() {
                 }.getType();
@@ -979,6 +1024,7 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
@@ -1001,6 +1047,7 @@ This API is used to delete a player configuration.
     public DeleteSuperPlayerConfigResponse DeleteSuperPlayerConfig(DeleteSuperPlayerConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSuperPlayerConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSuperPlayerConfigResponse>>() {
                 }.getType();
@@ -1021,6 +1068,7 @@ This API is used to delete a player configuration.
     public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTranscodeTemplateResponse>>() {
                 }.getType();
@@ -1042,6 +1090,7 @@ This API is used to delete a player configuration.
     public DeleteVodDomainResponse DeleteVodDomain(DeleteVodDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVodDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVodDomainResponse>>() {
                 }.getType();
@@ -1062,6 +1111,7 @@ This API is used to delete a player configuration.
     public DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(DeleteWatermarkTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWatermarkTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWatermarkTemplateResponse>>() {
                 }.getType();
@@ -1082,6 +1132,7 @@ This API is used to delete a player configuration.
     public DeleteWordSamplesResponse DeleteWordSamples(DeleteWordSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWordSamplesResponse>>() {
                 }.getType();
@@ -1102,6 +1153,7 @@ This API is used to delete a player configuration.
     public DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>() {
                 }.getType();
@@ -1122,6 +1174,7 @@ This API is used to delete a player configuration.
     public DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>() {
                 }.getType();
@@ -1142,6 +1195,7 @@ This API is used to delete a player configuration.
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>() {
                 }.getType();
@@ -1162,6 +1216,7 @@ This API is used to delete a player configuration.
     public DescribeAllClassResponse DescribeAllClass(DescribeAllClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllClassResponse>>() {
                 }.getType();
@@ -1182,6 +1237,7 @@ This API is used to delete a player configuration.
     public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
                 }.getType();
@@ -1202,6 +1258,7 @@ This API is used to delete a player configuration.
     public DescribeCDNDomainsResponse DescribeCDNDomains(DescribeCDNDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCDNDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCDNDomainsResponse>>() {
                 }.getType();
@@ -1225,6 +1282,7 @@ This API is used to delete a player configuration.
     public DescribeCDNStatDetailsResponse DescribeCDNStatDetails(DescribeCDNStatDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCDNStatDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCDNStatDetailsResponse>>() {
                 }.getType();
@@ -1249,6 +1307,7 @@ This API is used to delete a player configuration.
     public DescribeCDNUsageDataResponse DescribeCDNUsageData(DescribeCDNUsageDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCDNUsageDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCDNUsageDataResponse>>() {
                 }.getType();
@@ -1272,6 +1331,7 @@ This API is used to delete a player configuration.
     public DescribeCdnLogsResponse DescribeCdnLogs(DescribeCdnLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCdnLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCdnLogsResponse>>() {
                 }.getType();
@@ -1296,6 +1356,7 @@ This API is used to delete a player configuration.
     public DescribeClientUploadAccelerationUsageDataResponse DescribeClientUploadAccelerationUsageData(DescribeClientUploadAccelerationUsageDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse>>() {
                 }.getType();
@@ -1317,6 +1378,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContentReviewTemplatesResponse>>() {
                 }.getType();
@@ -1344,6 +1406,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(DescribeDailyPlayStatFileListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDailyPlayStatFileListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDailyPlayStatFileListResponse>>() {
                 }.getType();
@@ -1364,6 +1427,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeDrmKeyProviderInfoResponse DescribeDrmKeyProviderInfo(DescribeDrmKeyProviderInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDrmKeyProviderInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>() {
                 }.getType();
@@ -1386,6 +1450,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeFileAttributesResponse DescribeFileAttributes(DescribeFileAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileAttributesResponse>>() {
                 }.getType();
@@ -1406,6 +1471,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(DescribeImageProcessingTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>() {
                 }.getType();
@@ -1430,6 +1496,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(DescribeImageReviewUsageDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageReviewUsageDataResponse>>() {
                 }.getType();
@@ -1450,6 +1517,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageSpriteTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>() {
                 }.getType();
@@ -1474,6 +1542,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeLicenseUsageDataResponse DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLicenseUsageDataResponse>>() {
                 }.getType();
@@ -1505,6 +1574,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeMediaInfosResponse DescribeMediaInfos(DescribeMediaInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaInfosResponse>>() {
                 }.getType();
@@ -1528,6 +1598,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(DescribeMediaPlayStatDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaPlayStatDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaPlayStatDetailsResponse>>() {
                 }.getType();
@@ -1550,6 +1621,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(DescribeMediaProcessUsageDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaProcessUsageDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessUsageDataResponse>>() {
                 }.getType();
@@ -1570,6 +1642,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonSamplesResponse>>() {
                 }.getType();
@@ -1590,6 +1663,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeProcedureTemplatesResponse DescribeProcedureTemplates(DescribeProcedureTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcedureTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcedureTemplatesResponse>>() {
                 }.getType();
@@ -1610,6 +1684,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplates(DescribeRebuildMediaTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRebuildMediaTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRebuildMediaTemplatesResponse>>() {
                 }.getType();
@@ -1635,6 +1710,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeReviewDetailsResponse DescribeReviewDetails(DescribeReviewDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReviewDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
                 }.getType();
@@ -1656,6 +1732,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeReviewTemplatesResponse DescribeReviewTemplates(DescribeReviewTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReviewTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReviewTemplatesResponse>>() {
                 }.getType();
@@ -1676,6 +1753,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeRoundPlaysResponse DescribeRoundPlays(DescribeRoundPlaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoundPlaysResponse>>() {
                 }.getType();
@@ -1696,6 +1774,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(DescribeSampleSnapshotTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleSnapshotTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>() {
                 }.getType();
@@ -1716,6 +1795,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>() {
                 }.getType();
@@ -1736,6 +1816,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeStorageDataResponse DescribeStorageData(DescribeStorageDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStorageDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStorageDataResponse>>() {
                 }.getType();
@@ -1759,6 +1840,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeStorageDetailsResponse DescribeStorageDetails(DescribeStorageDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStorageDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStorageDetailsResponse>>() {
                 }.getType();
@@ -1782,6 +1864,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeStorageRegionsResponse DescribeStorageRegions(DescribeStorageRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStorageRegionsResponse>>() {
                 }.getType();
@@ -1802,6 +1885,7 @@ This API returns the video content duration for intelligent recognition in secon
     public DescribeSubAppIdsResponse DescribeSubAppIds(DescribeSubAppIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubAppIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubAppIdsResponse>>() {
                 }.getType();
@@ -1823,6 +1907,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeSuperPlayerConfigsResponse DescribeSuperPlayerConfigs(DescribeSuperPlayerConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSuperPlayerConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSuperPlayerConfigsResponse>>() {
                 }.getType();
@@ -1843,6 +1928,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
@@ -1865,6 +1951,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -1885,6 +1972,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTranscodeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
                 }.getType();
@@ -1905,6 +1993,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeVodDomainsResponse DescribeVodDomains(DescribeVodDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVodDomainsResponse>>() {
                 }.getType();
@@ -1925,6 +2014,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(DescribeWatermarkTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWatermarkTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWatermarkTemplatesResponse>>() {
                 }.getType();
@@ -1945,6 +2035,7 @@ This API is used to query player configurations. It supports pagination.
     public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWordSamplesResponse>>() {
                 }.getType();
@@ -1965,6 +2056,7 @@ This API is used to query player configurations. It supports pagination.
     public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
                 }.getType();
@@ -1985,6 +2077,7 @@ This API is used to query player configurations. It supports pagination.
     public ExtractTraceWatermarkResponse ExtractTraceWatermark(ExtractTraceWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExtractTraceWatermarkResponse>>() {
                 }.getType();
@@ -2006,6 +2099,7 @@ This API is used to query player configurations. It supports pagination.
     public ForbidMediaDistributionResponse ForbidMediaDistribution(ForbidMediaDistributionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidMediaDistributionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidMediaDistributionResponse>>() {
                 }.getType();
@@ -2049,6 +2143,7 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
     public LiveRealTimeClipResponse LiveRealTimeClip(LiveRealTimeClipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LiveRealTimeClipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LiveRealTimeClipResponse>>() {
                 }.getType();
@@ -2069,6 +2164,7 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
     public ManageTaskResponse ManageTask(ManageTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ManageTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ManageTaskResponse>>() {
                 }.getType();
@@ -2091,6 +2187,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>() {
                 }.getType();
@@ -2111,6 +2208,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>() {
                 }.getType();
@@ -2131,6 +2229,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>() {
                 }.getType();
@@ -2151,6 +2250,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse>>() {
                 }.getType();
@@ -2171,6 +2271,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyCDNDomainConfigResponse ModifyCDNDomainConfig(ModifyCDNDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCDNDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCDNDomainConfigResponse>>() {
                 }.getType();
@@ -2191,6 +2292,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyClassResponse ModifyClass(ModifyClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClassResponse>>() {
                 }.getType();
@@ -2212,6 +2314,7 @@ This API is used to modify a custom audio/video moderation template.
     public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
                 }.getType();
@@ -2232,6 +2335,7 @@ This API is used to modify a custom audio/video moderation template.
     public ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegion(ModifyDefaultStorageRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDefaultStorageRegionResponse>>() {
                 }.getType();
@@ -2252,6 +2356,7 @@ This API is used to modify a custom audio/video moderation template.
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyImageSpriteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyImageSpriteTemplateResponse>>() {
                 }.getType();
@@ -2272,6 +2377,7 @@ This API is used to modify a custom audio/video moderation template.
     public ModifyMediaInfoResponse ModifyMediaInfo(ModifyMediaInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMediaInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
                 }.getType();
@@ -2304,6 +2410,7 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     public ModifyMediaStorageClassResponse ModifyMediaStorageClass(ModifyMediaStorageClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaStorageClassResponse>>() {
                 }.getType();
@@ -2324,6 +2431,7 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
                 }.getType();
@@ -2344,6 +2452,7 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     public ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplate(ModifyRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRebuildMediaTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRebuildMediaTemplateResponse>>() {
                 }.getType();
@@ -2365,6 +2474,7 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     public ModifyReviewTemplateResponse ModifyReviewTemplate(ModifyReviewTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyReviewTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyReviewTemplateResponse>>() {
                 }.getType();
@@ -2386,6 +2496,7 @@ The modification will only take effect for new playback requests. For ongoing pl
     public ModifyRoundPlayResponse ModifyRoundPlay(ModifyRoundPlayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoundPlayResponse>>() {
                 }.getType();
@@ -2406,6 +2517,7 @@ The modification will only take effect for new playback requests. For ongoing pl
     public ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(ModifySampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySampleSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>() {
                 }.getType();
@@ -2426,6 +2538,7 @@ The modification will only take effect for new playback requests. For ongoing pl
     public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
@@ -2446,6 +2559,7 @@ The modification will only take effect for new playback requests. For ongoing pl
     public ModifySubAppIdInfoResponse ModifySubAppIdInfo(ModifySubAppIdInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubAppIdInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubAppIdInfoResponse>>() {
                 }.getType();
@@ -2466,6 +2580,7 @@ The modification will only take effect for new playback requests. For ongoing pl
     public ModifySubAppIdStatusResponse ModifySubAppIdStatus(ModifySubAppIdStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubAppIdStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubAppIdStatusResponse>>() {
                 }.getType();
@@ -2487,6 +2602,7 @@ This API is used to modify a player configuration.
     public ModifySuperPlayerConfigResponse ModifySuperPlayerConfig(ModifySuperPlayerConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySuperPlayerConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySuperPlayerConfigResponse>>() {
                 }.getType();
@@ -2507,6 +2623,7 @@ This API is used to modify a player configuration.
     public ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTranscodeTemplateResponse>>() {
                 }.getType();
@@ -2528,6 +2645,7 @@ This API is used to modify a player configuration.
     public ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(ModifyVodDomainAccelerateConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVodDomainAccelerateConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVodDomainAccelerateConfigResponse>>() {
                 }.getType();
@@ -2549,6 +2667,7 @@ This API is used to modify a player configuration.
     public ModifyVodDomainConfigResponse ModifyVodDomainConfig(ModifyVodDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVodDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVodDomainConfigResponse>>() {
                 }.getType();
@@ -2569,6 +2688,7 @@ This API is used to modify a player configuration.
     public ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(ModifyWatermarkTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWatermarkTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWatermarkTemplateResponse>>() {
                 }.getType();
@@ -2589,6 +2709,7 @@ This API is used to modify a player configuration.
     public ModifyWordSampleResponse ModifyWordSample(ModifyWordSampleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWordSampleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWordSampleResponse>>() {
                 }.getType();
@@ -2609,6 +2730,7 @@ This API is used to modify a player configuration.
     public ParseStreamingManifestResponse ParseStreamingManifest(ParseStreamingManifestRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ParseStreamingManifestResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ParseStreamingManifestResponse>>() {
                 }.getType();
@@ -2634,6 +2756,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public ProcessMediaByProcedureResponse ProcessMediaByProcedure(ProcessMediaByProcedureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ProcessMediaByProcedureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ProcessMediaByProcedureResponse>>() {
                 }.getType();
@@ -2654,6 +2777,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public ProcessMediaByUrlResponse ProcessMediaByUrl(ProcessMediaByUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ProcessMediaByUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ProcessMediaByUrlResponse>>() {
                 }.getType();
@@ -2679,6 +2803,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public PullEventsResponse PullEvents(PullEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PullEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PullEventsResponse>>() {
                 }.getType();
@@ -2699,6 +2824,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public PullUploadResponse PullUpload(PullUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PullUploadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PullUploadResponse>>() {
                 }.getType();
@@ -2722,6 +2848,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public PushUrlCacheResponse PushUrlCache(PushUrlCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PushUrlCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PushUrlCacheResponse>>() {
                 }.getType();
@@ -2742,6 +2869,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public RebuildMediaResponse RebuildMedia(RebuildMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RebuildMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RebuildMediaResponse>>() {
                 }.getType();
@@ -2762,6 +2890,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public RebuildMediaByTemplateResponse RebuildMediaByTemplate(RebuildMediaByTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RebuildMediaByTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RebuildMediaByTemplateResponse>>() {
                 }.getType();
@@ -2785,6 +2914,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public RefreshUrlCacheResponse RefreshUrlCache(RefreshUrlCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefreshUrlCacheResponse>>() {
                 }.getType();
@@ -2805,6 +2935,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public RemoveWatermarkResponse RemoveWatermark(RemoveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveWatermarkResponse>>() {
                 }.getType();
@@ -2825,6 +2956,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public ResetProcedureTemplateResponse ResetProcedureTemplate(ResetProcedureTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetProcedureTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetProcedureTemplateResponse>>() {
                 }.getType();
@@ -2845,6 +2977,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
     public RestoreMediaResponse RestoreMedia(RestoreMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestoreMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestoreMediaResponse>>() {
                 }.getType();
@@ -2867,6 +3000,7 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
     public ReviewAudioVideoResponse ReviewAudioVideo(ReviewAudioVideoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReviewAudioVideoResponse>>() {
                 }.getType();
@@ -2887,6 +3021,7 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
     public ReviewImageResponse ReviewImage(ReviewImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReviewImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReviewImageResponse>>() {
                 }.getType();
@@ -2943,6 +3078,7 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
     public SearchMediaResponse SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchMediaResponse>>() {
                 }.getType();
@@ -2963,6 +3099,7 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
     public SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(SetDrmKeyProviderInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetDrmKeyProviderInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetDrmKeyProviderInfoResponse>>() {
                 }.getType();
@@ -3005,6 +3142,7 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
     public SimpleHlsClipResponse SimpleHlsClip(SimpleHlsClipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SimpleHlsClipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SimpleHlsClipResponse>>() {
                 }.getType();
@@ -3025,6 +3163,7 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
     public StartCDNDomainResponse StartCDNDomain(StartCDNDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartCDNDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartCDNDomainResponse>>() {
                 }.getType();

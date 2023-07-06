@@ -29,7 +29,7 @@ public class TrtcClient extends AbstractClient{
     private static String endpoint = "trtc.tencentcloudapi.com";
     private static String service = "trtc";
     private static String version = "2019-07-22";
-
+    
     public TrtcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -58,6 +58,7 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
     public CreateCloudRecordingResponse CreateCloudRecording(CreateCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudRecordingResponse>>() {
                 }.getType();
@@ -78,6 +79,7 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
     public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCloudRecordingResponse>>() {
                 }.getType();
@@ -101,6 +103,7 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
     public DescribeCallDetailInfoResponse DescribeCallDetailInfo(DescribeCallDetailInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallDetailInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallDetailInfoResponse>>() {
                 }.getType();
@@ -122,6 +125,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeCloudRecordingResponse DescribeCloudRecording(DescribeCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudRecordingResponse>>() {
                 }.getType();
@@ -147,6 +151,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(DescribeMixTranscodingUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMixTranscodingUsageResponse>>() {
                 }.getType();
@@ -172,6 +177,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeRecordingUsageResponse DescribeRecordingUsage(DescribeRecordingUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordingUsageResponse>>() {
                 }.getType();
@@ -197,6 +203,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeRelayUsageResponse DescribeRelayUsage(DescribeRelayUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRelayUsageResponse>>() {
                 }.getType();
@@ -220,6 +227,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomInfoResponse>>() {
                 }.getType();
@@ -240,6 +248,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeScaleInfoResponse DescribeScaleInfo(DescribeScaleInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScaleInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScaleInfoResponse>>() {
                 }.getType();
@@ -263,6 +272,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(DescribeTrtcRoomUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrtcRoomUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcRoomUsageResponse>>() {
                 }.getType();
@@ -288,6 +298,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeTrtcUsageResponse DescribeTrtcUsage(DescribeTrtcUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcUsageResponse>>() {
                 }.getType();
@@ -312,6 +323,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public DescribeUnusualEventResponse DescribeUnusualEvent(DescribeUnusualEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnusualEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnusualEventResponse>>() {
                 }.getType();
@@ -335,6 +347,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public DescribeUserEventResponse DescribeUserEvent(DescribeUserEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserEventResponse>>() {
                 }.getType();
@@ -358,6 +371,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
                 }.getType();
@@ -378,6 +392,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public DismissRoomResponse DismissRoom(DismissRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DismissRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
                 }.getType();
@@ -398,6 +413,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(DismissRoomByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DismissRoomByStrRoomIdResponse>>() {
                 }.getType();
@@ -418,6 +434,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public ModifyCloudRecordingResponse ModifyCloudRecording(ModifyCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCloudRecordingResponse>>() {
                 }.getType();
@@ -438,6 +455,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public RemoveUserResponse RemoveUser(RemoveUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveUserResponse>>() {
                 }.getType();
@@ -458,6 +476,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(RemoveUserByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveUserByStrRoomIdResponse>>() {
                 }.getType();
@@ -478,6 +497,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public SetUserBlockedResponse SetUserBlocked(SetUserBlockedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetUserBlockedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetUserBlockedResponse>>() {
                 }.getType();
@@ -498,6 +518,7 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public SetUserBlockedByStrRoomIdResponse SetUserBlockedByStrRoomId(SetUserBlockedByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetUserBlockedByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetUserBlockedByStrRoomIdResponse>>() {
                 }.getType();
@@ -539,6 +560,7 @@ Others:
     public StartPublishCdnStreamResponse StartPublishCdnStream(StartPublishCdnStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartPublishCdnStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartPublishCdnStreamResponse>>() {
                 }.getType();
@@ -559,6 +581,7 @@ Others:
     public StopPublishCdnStreamResponse StopPublishCdnStream(StopPublishCdnStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopPublishCdnStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopPublishCdnStreamResponse>>() {
                 }.getType();
@@ -580,6 +603,7 @@ Note: For details about how to use this API, see the `StartPublishCdnStream` doc
     public UpdatePublishCdnStreamResponse UpdatePublishCdnStream(UpdatePublishCdnStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdatePublishCdnStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdatePublishCdnStreamResponse>>() {
                 }.getType();

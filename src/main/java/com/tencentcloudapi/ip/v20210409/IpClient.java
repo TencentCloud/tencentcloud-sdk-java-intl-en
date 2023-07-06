@@ -29,7 +29,7 @@ public class IpClient extends AbstractClient{
     private static String endpoint = "ip.tencentcloudapi.com";
     private static String service = "ip";
     private static String version = "2021-04-09";
-
+    
     public IpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class IpClient extends AbstractClient{
     public AllocateCustomerCreditResponse AllocateCustomerCredit(AllocateCustomerCreditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AllocateCustomerCreditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AllocateCustomerCreditResponse>>() {
                 }.getType();
@@ -75,6 +76,7 @@ Notes:<br>
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
                 }.getType();
@@ -95,6 +97,7 @@ Notes:<br>
     public GetCountryCodesResponse GetCountryCodes(GetCountryCodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCountryCodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCountryCodesResponse>>() {
                 }.getType();
@@ -115,6 +118,7 @@ Notes:<br>
     public QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(QueryCreditAllocationHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCreditAllocationHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCreditAllocationHistoryResponse>>() {
                 }.getType();
@@ -135,6 +139,7 @@ Notes:<br>
     public QueryCustomersCreditResponse QueryCustomersCredit(QueryCustomersCreditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCustomersCreditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCustomersCreditResponse>>() {
                 }.getType();
@@ -155,6 +160,7 @@ Notes:<br>
     public QueryPartnerCreditResponse QueryPartnerCredit(QueryPartnerCreditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryPartnerCreditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryPartnerCreditResponse>>() {
                 }.getType();

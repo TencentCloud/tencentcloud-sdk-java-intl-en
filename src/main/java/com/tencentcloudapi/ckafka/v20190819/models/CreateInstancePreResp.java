@@ -45,8 +45,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private CreateInstancePreData Data;
 
     /**
-    * Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeleteRouteTimestamp")
     @Expose
@@ -105,21 +104,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return DeleteRouteTimestamp Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeleteRouteTimestamp Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
     }
 
     /**
-     * Set Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param DeleteRouteTimestamp Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeleteRouteTimestamp Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }

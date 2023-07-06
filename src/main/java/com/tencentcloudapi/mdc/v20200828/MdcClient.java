@@ -29,7 +29,7 @@ public class MdcClient extends AbstractClient{
     private static String endpoint = "mdc.tencentcloudapi.com";
     private static String service = "mdc";
     private static String version = "2020-08-28";
-
+    
     public MdcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MdcClient extends AbstractClient{
     public CreateStreamLinkFlowResponse CreateStreamLinkFlow(CreateStreamLinkFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLinkFlowResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MdcClient extends AbstractClient{
     public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(CreateStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStreamLinkOutputInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStreamLinkOutputInfoResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MdcClient extends AbstractClient{
     public DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(DeleteStreamLinkFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLinkFlowResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MdcClient extends AbstractClient{
     public DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(DeleteStreamLinkOutputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStreamLinkOutputResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLinkOutputResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(DescribeStreamLinkFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(DescribeStreamLinkFlowLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowLogsResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(DescribeStreamLinkFlowMediaStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatus(DescribeStreamLinkFlowRealtimeStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatistics(DescribeStreamLinkFlowSRTStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatistics(DescribeStreamLinkFlowStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(DescribeStreamLinkFlowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkFlowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowsResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class MdcClient extends AbstractClient{
     public DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(DescribeStreamLinkRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamLinkRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkRegionsResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class MdcClient extends AbstractClient{
     public ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(ModifyStreamLinkFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkFlowResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ public class MdcClient extends AbstractClient{
     public ModifyStreamLinkInputResponse ModifyStreamLinkInput(ModifyStreamLinkInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLinkInputResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkInputResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class MdcClient extends AbstractClient{
     public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(ModifyStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyStreamLinkOutputInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkOutputInfoResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class MdcClient extends AbstractClient{
     public StartStreamLinkFlowResponse StartStreamLinkFlow(StartStreamLinkFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartStreamLinkFlowResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class MdcClient extends AbstractClient{
     public StopStreamLinkFlowResponse StopStreamLinkFlow(StopStreamLinkFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopStreamLinkFlowResponse>>() {
                 }.getType();

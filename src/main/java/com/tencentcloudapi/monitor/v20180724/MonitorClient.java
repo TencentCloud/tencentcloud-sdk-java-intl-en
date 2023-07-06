@@ -29,7 +29,7 @@ public class MonitorClient extends AbstractClient{
     private static String endpoint = "monitor.tencentcloudapi.com";
     private static String service = "monitor";
     private static String version = "2018-07-24";
-
+    
     public MonitorClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MonitorClient extends AbstractClient{
     public BindPrometheusManagedGrafanaResponse BindPrometheusManagedGrafana(BindPrometheusManagedGrafanaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindPrometheusManagedGrafanaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindPrometheusManagedGrafanaResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MonitorClient extends AbstractClient{
     public BindingPolicyObjectResponse BindingPolicyObject(BindingPolicyObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindingPolicyObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindingPolicyObjectResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MonitorClient extends AbstractClient{
     public CheckIsPrometheusNewUserResponse CheckIsPrometheusNewUser(CheckIsPrometheusNewUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckIsPrometheusNewUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckIsPrometheusNewUserResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MonitorClient extends AbstractClient{
     public CleanGrafanaInstanceResponse CleanGrafanaInstance(CleanGrafanaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CleanGrafanaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CleanGrafanaInstanceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MonitorClient extends AbstractClient{
     public CreateAlarmNoticeResponse CreateAlarmNotice(CreateAlarmNoticeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAlarmNoticeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAlarmNoticeResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MonitorClient extends AbstractClient{
     public CreateAlarmPolicyResponse CreateAlarmPolicy(CreateAlarmPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAlarmPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAlarmPolicyResponse>>() {
                 }.getType();
@@ -169,6 +175,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateAlertRuleResponse CreateAlertRule(CreateAlertRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAlertRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAlertRuleResponse>>() {
                 }.getType();
@@ -189,6 +196,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateExporterIntegrationResponse CreateExporterIntegration(CreateExporterIntegrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateExporterIntegrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateExporterIntegrationResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateGrafanaInstanceResponse CreateGrafanaInstance(CreateGrafanaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGrafanaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGrafanaInstanceResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateGrafanaIntegrationResponse CreateGrafanaIntegration(CreateGrafanaIntegrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGrafanaIntegrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGrafanaIntegrationResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(CreateGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGrafanaNotificationChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePolicyGroupResponse CreatePolicyGroup(CreatePolicyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePolicyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePolicyGroupResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusAgentResponse CreatePrometheusAgent(CreatePrometheusAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusAgentResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(CreatePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusClusterAgentResponse CreatePrometheusClusterAgent(CreatePrometheusClusterAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusClusterAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusClusterAgentResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusConfigResponse CreatePrometheusConfig(CreatePrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusConfigResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusGlobalNotificationResponse CreatePrometheusGlobalNotification(CreatePrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusGlobalNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusGlobalNotificationResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusMultiTenantInstancePostPayModeResponse CreatePrometheusMultiTenantInstancePostPayMode(CreatePrometheusMultiTenantInstancePostPayModeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusRecordRuleYamlResponse CreatePrometheusRecordRuleYaml(CreatePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusScrapeJobResponse CreatePrometheusScrapeJob(CreatePrometheusScrapeJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusScrapeJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusScrapeJobResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreatePrometheusTempResponse CreatePrometheusTemp(CreatePrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusTempResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateRecordingRuleResponse CreateRecordingRule(CreateRecordingRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordingRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordingRuleResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateSSOAccountResponse CreateSSOAccount(CreateSSOAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSSOAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSSOAccountResponse>>() {
                 }.getType();
@@ -511,6 +534,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public CreateServiceDiscoveryResponse CreateServiceDiscovery(CreateServiceDiscoveryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServiceDiscoveryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServiceDiscoveryResponse>>() {
                 }.getType();
@@ -531,6 +555,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteAlarmNoticesResponse DeleteAlarmNotices(DeleteAlarmNoticesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAlarmNoticesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAlarmNoticesResponse>>() {
                 }.getType();
@@ -551,6 +576,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteAlarmPolicyResponse DeleteAlarmPolicy(DeleteAlarmPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAlarmPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAlarmPolicyResponse>>() {
                 }.getType();
@@ -571,6 +597,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteAlertRulesResponse DeleteAlertRules(DeleteAlertRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAlertRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAlertRulesResponse>>() {
                 }.getType();
@@ -591,6 +618,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteExporterIntegrationResponse DeleteExporterIntegration(DeleteExporterIntegrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteExporterIntegrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteExporterIntegrationResponse>>() {
                 }.getType();
@@ -611,6 +639,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteGrafanaInstanceResponse DeleteGrafanaInstance(DeleteGrafanaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGrafanaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGrafanaInstanceResponse>>() {
                 }.getType();
@@ -631,6 +660,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(DeleteGrafanaIntegrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGrafanaIntegrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGrafanaIntegrationResponse>>() {
                 }.getType();
@@ -651,6 +681,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(DeleteGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGrafanaNotificationChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>() {
                 }.getType();
@@ -671,6 +702,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePolicyGroupResponse DeletePolicyGroup(DeletePolicyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePolicyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePolicyGroupResponse>>() {
                 }.getType();
@@ -691,6 +723,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(DeletePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -711,6 +744,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(DeletePrometheusClusterAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusClusterAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusClusterAgentResponse>>() {
                 }.getType();
@@ -731,6 +765,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusConfigResponse DeletePrometheusConfig(DeletePrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusConfigResponse>>() {
                 }.getType();
@@ -751,6 +786,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusRecordRuleYamlResponse DeletePrometheusRecordRuleYaml(DeletePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -771,6 +807,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusScrapeJobsResponse DeletePrometheusScrapeJobs(DeletePrometheusScrapeJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusScrapeJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusScrapeJobsResponse>>() {
                 }.getType();
@@ -791,6 +828,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusTempResponse DeletePrometheusTemp(DeletePrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempResponse>>() {
                 }.getType();
@@ -811,6 +849,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePrometheusTempSyncResponse DeletePrometheusTempSync(DeletePrometheusTempSyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusTempSyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempSyncResponse>>() {
                 }.getType();
@@ -831,6 +870,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteRecordingRulesResponse DeleteRecordingRules(DeleteRecordingRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordingRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordingRulesResponse>>() {
                 }.getType();
@@ -851,6 +891,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeleteSSOAccountResponse DeleteSSOAccount(DeleteSSOAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSSOAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSSOAccountResponse>>() {
                 }.getType();
@@ -871,6 +912,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DescribeAccidentEventListResponse DescribeAccidentEventList(DescribeAccidentEventListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccidentEventListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccidentEventListResponse>>() {
                 }.getType();
@@ -891,6 +933,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DescribeAlarmEventsResponse DescribeAlarmEvents(DescribeAlarmEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmEventsResponse>>() {
                 }.getType();
@@ -913,6 +956,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmHistoriesResponse DescribeAlarmHistories(DescribeAlarmHistoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmHistoriesResponse>>() {
                 }.getType();
@@ -933,6 +977,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmMetricsResponse DescribeAlarmMetrics(DescribeAlarmMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmMetricsResponse>>() {
                 }.getType();
@@ -953,6 +998,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmNoticeResponse DescribeAlarmNotice(DescribeAlarmNoticeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmNoticeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeResponse>>() {
                 }.getType();
@@ -973,6 +1019,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacks(DescribeAlarmNoticeCallbacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmNoticeCallbacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeCallbacksResponse>>() {
                 }.getType();
@@ -993,6 +1040,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmNoticesResponse DescribeAlarmNotices(DescribeAlarmNoticesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmNoticesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticesResponse>>() {
                 }.getType();
@@ -1013,6 +1061,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmPoliciesResponse DescribeAlarmPolicies(DescribeAlarmPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmPoliciesResponse>>() {
                 }.getType();
@@ -1033,6 +1082,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlarmPolicyResponse DescribeAlarmPolicy(DescribeAlarmPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmPolicyResponse>>() {
                 }.getType();
@@ -1053,6 +1103,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAlertRulesResponse DescribeAlertRules(DescribeAlertRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlertRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlertRulesResponse>>() {
                 }.getType();
@@ -1073,6 +1124,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeAllNamespacesResponse DescribeAllNamespaces(DescribeAllNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllNamespacesResponse>>() {
                 }.getType();
@@ -1093,6 +1145,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeBaseMetricsResponse DescribeBaseMetrics(DescribeBaseMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBaseMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBaseMetricsResponse>>() {
                 }.getType();
@@ -1113,6 +1166,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeBasicAlarmListResponse DescribeBasicAlarmList(DescribeBasicAlarmListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBasicAlarmListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicAlarmListResponse>>() {
                 }.getType();
@@ -1133,6 +1187,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeBindingPolicyObjectListResponse DescribeBindingPolicyObjectList(DescribeBindingPolicyObjectListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBindingPolicyObjectListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>() {
                 }.getType();
@@ -1153,6 +1208,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeConditionsTemplateListResponse DescribeConditionsTemplateList(DescribeConditionsTemplateListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConditionsTemplateListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConditionsTemplateListResponse>>() {
                 }.getType();
@@ -1173,6 +1229,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeDNSConfigResponse DescribeDNSConfig(DescribeDNSConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDNSConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDNSConfigResponse>>() {
                 }.getType();
@@ -1193,6 +1250,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeExporterIntegrationsResponse DescribeExporterIntegrations(DescribeExporterIntegrationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExporterIntegrationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExporterIntegrationsResponse>>() {
                 }.getType();
@@ -1213,6 +1271,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaChannelsResponse DescribeGrafanaChannels(DescribeGrafanaChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaChannelsResponse>>() {
                 }.getType();
@@ -1233,6 +1292,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaConfigResponse DescribeGrafanaConfig(DescribeGrafanaConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaConfigResponse>>() {
                 }.getType();
@@ -1253,6 +1313,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaEnvironmentsResponse DescribeGrafanaEnvironments(DescribeGrafanaEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>() {
                 }.getType();
@@ -1273,6 +1334,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaInstancesResponse DescribeGrafanaInstances(DescribeGrafanaInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaInstancesResponse>>() {
                 }.getType();
@@ -1293,6 +1355,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaIntegrationsResponse DescribeGrafanaIntegrations(DescribeGrafanaIntegrationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaIntegrationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>() {
                 }.getType();
@@ -1313,6 +1376,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannels(DescribeGrafanaNotificationChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaNotificationChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>() {
                 }.getType();
@@ -1333,6 +1397,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteList(DescribeGrafanaWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGrafanaWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGrafanaWhiteListResponse>>() {
                 }.getType();
@@ -1353,6 +1418,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeInstalledPluginsResponse DescribeInstalledPlugins(DescribeInstalledPluginsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstalledPluginsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstalledPluginsResponse>>() {
                 }.getType();
@@ -1373,6 +1439,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeMonitorTypesResponse DescribeMonitorTypes(DescribeMonitorTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMonitorTypesResponse>>() {
                 }.getType();
@@ -1393,6 +1460,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePolicyConditionListResponse DescribePolicyConditionList(DescribePolicyConditionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePolicyConditionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyConditionListResponse>>() {
                 }.getType();
@@ -1413,6 +1481,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePolicyGroupInfoResponse DescribePolicyGroupInfo(DescribePolicyGroupInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePolicyGroupInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupInfoResponse>>() {
                 }.getType();
@@ -1433,6 +1502,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePolicyGroupListResponse DescribePolicyGroupList(DescribePolicyGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePolicyGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupListResponse>>() {
                 }.getType();
@@ -1453,6 +1523,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeProductEventListResponse DescribeProductEventList(DescribeProductEventListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductEventListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductEventListResponse>>() {
                 }.getType();
@@ -1473,6 +1544,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(DescribePrometheusAgentInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAgentInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>() {
                 }.getType();
@@ -1493,6 +1565,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusAgentsResponse DescribePrometheusAgents(DescribePrometheusAgentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAgentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentsResponse>>() {
                 }.getType();
@@ -1513,6 +1586,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(DescribePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -1533,6 +1607,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(DescribePrometheusClusterAgentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusClusterAgentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusClusterAgentsResponse>>() {
                 }.getType();
@@ -1553,6 +1628,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusConfigResponse DescribePrometheusConfig(DescribePrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusConfigResponse>>() {
                 }.getType();
@@ -1573,6 +1649,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusGlobalConfigResponse DescribePrometheusGlobalConfig(DescribePrometheusGlobalConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusGlobalConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalConfigResponse>>() {
                 }.getType();
@@ -1593,6 +1670,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotification(DescribePrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusGlobalNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalNotificationResponse>>() {
                 }.getType();
@@ -1613,6 +1691,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusInstanceDetailResponse DescribePrometheusInstanceDetail(DescribePrometheusInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceDetailResponse>>() {
                 }.getType();
@@ -1633,6 +1712,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusInstanceInitStatusResponse DescribePrometheusInstanceInitStatus(DescribePrometheusInstanceInitStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstanceInitStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceInitStatusResponse>>() {
                 }.getType();
@@ -1653,6 +1733,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsage(DescribePrometheusInstanceUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>() {
                 }.getType();
@@ -1677,6 +1758,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusInstancesResponse DescribePrometheusInstances(DescribePrometheusInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesResponse>>() {
                 }.getType();
@@ -1697,6 +1779,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(DescribePrometheusInstancesOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstancesOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesOverviewResponse>>() {
                 }.getType();
@@ -1717,6 +1800,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(DescribePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -1737,6 +1821,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(DescribePrometheusRecordRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusRecordRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRulesResponse>>() {
                 }.getType();
@@ -1757,6 +1842,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(DescribePrometheusScrapeJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusScrapeJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>() {
                 }.getType();
@@ -1777,6 +1863,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusTargetsTMPResponse DescribePrometheusTargetsTMP(DescribePrometheusTargetsTMPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTargetsTMPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTargetsTMPResponse>>() {
                 }.getType();
@@ -1797,6 +1884,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusTempResponse DescribePrometheusTemp(DescribePrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempResponse>>() {
                 }.getType();
@@ -1817,6 +1905,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusTempSyncResponse DescribePrometheusTempSync(DescribePrometheusTempSyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTempSyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempSyncResponse>>() {
                 }.getType();
@@ -1837,6 +1926,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusZonesResponse DescribePrometheusZones(DescribePrometheusZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusZonesResponse>>() {
                 }.getType();
@@ -1857,6 +1947,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeRecordingRulesResponse DescribeRecordingRules(DescribeRecordingRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordingRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordingRulesResponse>>() {
                 }.getType();
@@ -1877,6 +1968,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeSSOAccountResponse DescribeSSOAccount(DescribeSSOAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSSOAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSSOAccountResponse>>() {
                 }.getType();
@@ -1899,6 +1991,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeServiceDiscoveryResponse DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceDiscoveryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceDiscoveryResponse>>() {
                 }.getType();
@@ -1919,6 +2012,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeStatisticDataResponse DescribeStatisticData(DescribeStatisticDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStatisticDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStatisticDataResponse>>() {
                 }.getType();
@@ -1939,6 +2033,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DestroyPrometheusInstanceResponse DestroyPrometheusInstance(DestroyPrometheusInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyPrometheusInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyPrometheusInstanceResponse>>() {
                 }.getType();
@@ -1959,6 +2054,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public EnableGrafanaInternetResponse EnableGrafanaInternet(EnableGrafanaInternetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableGrafanaInternetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableGrafanaInternetResponse>>() {
                 }.getType();
@@ -1979,6 +2075,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public EnableGrafanaSSOResponse EnableGrafanaSSO(EnableGrafanaSSORequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableGrafanaSSOResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableGrafanaSSOResponse>>() {
                 }.getType();
@@ -1999,6 +2096,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public EnableSSOCamCheckResponse EnableSSOCamCheck(EnableSSOCamCheckRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableSSOCamCheckResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableSSOCamCheckResponse>>() {
                 }.getType();
@@ -2023,6 +2121,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public GetMonitorDataResponse GetMonitorData(GetMonitorDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetMonitorDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetMonitorDataResponse>>() {
                 }.getType();
@@ -2043,6 +2142,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public GetPrometheusAgentManagementCommandResponse GetPrometheusAgentManagementCommand(GetPrometheusAgentManagementCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPrometheusAgentManagementCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>() {
                 }.getType();
@@ -2063,6 +2163,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public InstallPluginsResponse InstallPlugins(InstallPluginsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstallPluginsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InstallPluginsResponse>>() {
                 }.getType();
@@ -2083,6 +2184,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmNoticeResponse ModifyAlarmNotice(ModifyAlarmNoticeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmNoticeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmNoticeResponse>>() {
                 }.getType();
@@ -2103,6 +2205,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyCondition(ModifyAlarmPolicyConditionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmPolicyConditionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyConditionResponse>>() {
                 }.getType();
@@ -2123,6 +2226,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmPolicyInfoResponse ModifyAlarmPolicyInfo(ModifyAlarmPolicyInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmPolicyInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyInfoResponse>>() {
                 }.getType();
@@ -2143,6 +2247,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmPolicyNoticeResponse ModifyAlarmPolicyNotice(ModifyAlarmPolicyNoticeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmPolicyNoticeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyNoticeResponse>>() {
                 }.getType();
@@ -2163,6 +2268,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmPolicyStatusResponse ModifyAlarmPolicyStatus(ModifyAlarmPolicyStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmPolicyStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyStatusResponse>>() {
                 }.getType();
@@ -2183,6 +2289,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmPolicyTasksResponse ModifyAlarmPolicyTasks(ModifyAlarmPolicyTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmPolicyTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyTasksResponse>>() {
                 }.getType();
@@ -2203,6 +2310,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyAlarmReceiversResponse ModifyAlarmReceivers(ModifyAlarmReceiversRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmReceiversResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmReceiversResponse>>() {
                 }.getType();
@@ -2223,6 +2331,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyGrafanaInstanceResponse ModifyGrafanaInstance(ModifyGrafanaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGrafanaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGrafanaInstanceResponse>>() {
                 }.getType();
@@ -2243,6 +2352,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPolicyGroupResponse ModifyPolicyGroup(ModifyPolicyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPolicyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPolicyGroupResponse>>() {
                 }.getType();
@@ -2263,6 +2373,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusAgentExternalLabelsResponse ModifyPrometheusAgentExternalLabels(ModifyPrometheusAgentExternalLabelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse>>() {
                 }.getType();
@@ -2283,6 +2394,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(ModifyPrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -2303,6 +2415,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusConfigResponse ModifyPrometheusConfig(ModifyPrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusConfigResponse>>() {
                 }.getType();
@@ -2323,6 +2436,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotification(ModifyPrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusGlobalNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusGlobalNotificationResponse>>() {
                 }.getType();
@@ -2343,6 +2457,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusInstanceAttributesResponse ModifyPrometheusInstanceAttributes(ModifyPrometheusInstanceAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusInstanceAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusInstanceAttributesResponse>>() {
                 }.getType();
@@ -2363,6 +2478,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(ModifyPrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -2383,6 +2499,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     public ModifyPrometheusTempResponse ModifyPrometheusTemp(ModifyPrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusTempResponse>>() {
                 }.getType();
@@ -2413,6 +2530,7 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
     public PutMonitorDataResponse PutMonitorData(PutMonitorDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutMonitorDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutMonitorDataResponse>>() {
                 }.getType();
@@ -2433,6 +2551,7 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
     public ResumeGrafanaInstanceResponse ResumeGrafanaInstance(ResumeGrafanaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeGrafanaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeGrafanaInstanceResponse>>() {
                 }.getType();
@@ -2453,6 +2572,7 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
     public RunPrometheusInstanceResponse RunPrometheusInstance(RunPrometheusInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunPrometheusInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunPrometheusInstanceResponse>>() {
                 }.getType();
@@ -2473,6 +2593,7 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
     public SendCustomAlarmMsgResponse SendCustomAlarmMsg(SendCustomAlarmMsgRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendCustomAlarmMsgResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendCustomAlarmMsgResponse>>() {
                 }.getType();
@@ -2494,6 +2615,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicy(SetDefaultAlarmPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetDefaultAlarmPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetDefaultAlarmPolicyResponse>>() {
                 }.getType();
@@ -2514,6 +2636,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public SyncPrometheusTempResponse SyncPrometheusTemp(SyncPrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncPrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTempResponse>>() {
                 }.getType();
@@ -2534,6 +2657,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public TerminatePrometheusInstancesResponse TerminatePrometheusInstances(TerminatePrometheusInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminatePrometheusInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminatePrometheusInstancesResponse>>() {
                 }.getType();
@@ -2554,6 +2678,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public UnBindingAllPolicyObjectResponse UnBindingAllPolicyObject(UnBindingAllPolicyObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindingAllPolicyObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindingAllPolicyObjectResponse>>() {
                 }.getType();
@@ -2574,6 +2699,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public UnBindingPolicyObjectResponse UnBindingPolicyObject(UnBindingPolicyObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindingPolicyObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindingPolicyObjectResponse>>() {
                 }.getType();
@@ -2594,6 +2720,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public UnbindPrometheusManagedGrafanaResponse UnbindPrometheusManagedGrafana(UnbindPrometheusManagedGrafanaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindPrometheusManagedGrafanaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindPrometheusManagedGrafanaResponse>>() {
                 }.getType();
@@ -2614,6 +2741,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public UninstallGrafanaDashboardResponse UninstallGrafanaDashboard(UninstallGrafanaDashboardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UninstallGrafanaDashboardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UninstallGrafanaDashboardResponse>>() {
                 }.getType();
@@ -2634,6 +2762,7 @@ Alarm policies in the same type under the project will be set as non-default.
     public UninstallGrafanaPluginsResponse UninstallGrafanaPlugins(UninstallGrafanaPluginsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UninstallGrafanaPluginsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UninstallGrafanaPluginsResponse>>() {
                 }.getType();
@@ -2656,6 +2785,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateAlertRuleResponse UpdateAlertRule(UpdateAlertRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAlertRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAlertRuleResponse>>() {
                 }.getType();
@@ -2676,6 +2806,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateAlertRuleStateResponse UpdateAlertRuleState(UpdateAlertRuleStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAlertRuleStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAlertRuleStateResponse>>() {
                 }.getType();
@@ -2696,6 +2827,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateDNSConfigResponse UpdateDNSConfig(UpdateDNSConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDNSConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDNSConfigResponse>>() {
                 }.getType();
@@ -2716,6 +2848,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateExporterIntegrationResponse UpdateExporterIntegration(UpdateExporterIntegrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateExporterIntegrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateExporterIntegrationResponse>>() {
                 }.getType();
@@ -2736,6 +2869,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateGrafanaConfigResponse UpdateGrafanaConfig(UpdateGrafanaConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGrafanaConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGrafanaConfigResponse>>() {
                 }.getType();
@@ -2756,6 +2890,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateGrafanaEnvironmentsResponse UpdateGrafanaEnvironments(UpdateGrafanaEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGrafanaEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>() {
                 }.getType();
@@ -2776,6 +2911,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateGrafanaIntegrationResponse UpdateGrafanaIntegration(UpdateGrafanaIntegrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGrafanaIntegrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGrafanaIntegrationResponse>>() {
                 }.getType();
@@ -2796,6 +2932,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannel(UpdateGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGrafanaNotificationChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>() {
                 }.getType();
@@ -2816,6 +2953,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(UpdateGrafanaWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGrafanaWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGrafanaWhiteListResponse>>() {
                 }.getType();
@@ -2836,6 +2974,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(UpdatePrometheusAgentStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdatePrometheusAgentStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdatePrometheusAgentStatusResponse>>() {
                 }.getType();
@@ -2856,6 +2995,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdatePrometheusScrapeJobResponse UpdatePrometheusScrapeJob(UpdatePrometheusScrapeJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdatePrometheusScrapeJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdatePrometheusScrapeJobResponse>>() {
                 }.getType();
@@ -2876,6 +3016,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateRecordingRuleResponse UpdateRecordingRule(UpdateRecordingRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRecordingRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRecordingRuleResponse>>() {
                 }.getType();
@@ -2896,6 +3037,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateSSOAccountResponse UpdateSSOAccount(UpdateSSOAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateSSOAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateSSOAccountResponse>>() {
                 }.getType();
@@ -2916,6 +3058,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpgradeGrafanaDashboardResponse UpgradeGrafanaDashboard(UpgradeGrafanaDashboardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeGrafanaDashboardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeGrafanaDashboardResponse>>() {
                 }.getType();
@@ -2936,6 +3079,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpgradeGrafanaInstanceResponse UpgradeGrafanaInstance(UpgradeGrafanaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeGrafanaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeGrafanaInstanceResponse>>() {
                 }.getType();

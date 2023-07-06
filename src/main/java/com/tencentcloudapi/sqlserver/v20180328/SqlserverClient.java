@@ -29,7 +29,7 @@ public class SqlserverClient extends AbstractClient{
     private static String endpoint = "sqlserver.tencentcloudapi.com";
     private static String service = "sqlserver";
     private static String version = "2018-03-28";
-
+    
     public SqlserverClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SqlserverClient extends AbstractClient{
     public CloneDBResponse CloneDB(CloneDBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloneDBResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloneDBResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SqlserverClient extends AbstractClient{
     public CloseInterCommunicationResponse CloseInterCommunication(CloseInterCommunicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseInterCommunicationResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateBackupMigrationResponse CreateBackupMigration(CreateBackupMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupMigrationResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateBusinessDBInstancesResponse CreateBusinessDBInstances(CreateBusinessDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBusinessDBInstancesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFile(CreateBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateCloudDBInstancesResponse CreateCloudDBInstances(CreateCloudDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudDBInstancesResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstances(CreateCloudReadOnlyDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateDBResponse CreateDB(CreateDBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateIncrementalMigrationResponse CreateIncrementalMigration(CreateIncrementalMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIncrementalMigrationResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class SqlserverClient extends AbstractClient{
     public CreateMigrationResponse CreateMigration(CreateMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrationResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class SqlserverClient extends AbstractClient{
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class SqlserverClient extends AbstractClient{
     public DeleteBackupMigrationResponse DeleteBackupMigration(DeleteBackupMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupMigrationResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class SqlserverClient extends AbstractClient{
     public DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(DeleteBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class SqlserverClient extends AbstractClient{
     public DeleteDBResponse DeleteDB(DeleteDBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDBResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDBResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class SqlserverClient extends AbstractClient{
     public DeleteIncrementalMigrationResponse DeleteIncrementalMigration(DeleteIncrementalMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIncrementalMigrationResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class SqlserverClient extends AbstractClient{
     public DeleteMigrationResponse DeleteMigration(DeleteMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrationResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBackupCommandResponse DescribeBackupCommand(DescribeBackupCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupCommandResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBackupFilesResponse DescribeBackupFiles(DescribeBackupFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBackupMigrationResponse DescribeBackupMigration(DescribeBackupMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupMigrationResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBackupUploadSizeResponse DescribeBackupUploadSize(DescribeBackupUploadSizeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupUploadSizeResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFile(DescribeBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBCharsetsResponse DescribeDBCharsets(DescribeDBCharsetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBCharsetsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBInstanceInterResponse DescribeDBInstanceInter(DescribeDBInstanceInterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceInterResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBInstancesAttributeResponse DescribeDBInstancesAttribute(DescribeDBInstancesAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesAttributeResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBsResponse DescribeDBs(DescribeDBsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBsResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBsNormalResponse DescribeDBsNormal(DescribeDBsNormalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBsNormalResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeFlowStatusResponse DescribeFlowStatus(DescribeFlowStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowStatusResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeIncrementalMigrationResponse DescribeIncrementalMigration(DescribeIncrementalMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIncrementalMigrationResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeMigrationDetailResponse DescribeMigrationDetail(DescribeMigrationDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationDetailResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeMigrationsResponse DescribeMigrations(DescribeMigrationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationsResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeProductConfigResponse DescribeProductConfig(DescribeProductConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductConfigResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeRollbackTimeResponse DescribeRollbackTime(DescribeRollbackTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRollbackTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackTimeResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeSlowlogsResponse DescribeSlowlogs(DescribeSlowlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSlowlogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowlogsResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(DescribeUploadBackupInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadBackupInfoResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeXEventsResponse DescribeXEvents(DescribeXEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeXEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeXEventsResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class SqlserverClient extends AbstractClient{
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class SqlserverClient extends AbstractClient{
     public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class SqlserverClient extends AbstractClient{
     public InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyAccountPrivilegeResponse ModifyAccountPrivilege(ModifyAccountPrivilegeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountPrivilegeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegeResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyAccountRemarkResponse ModifyAccountRemark(ModifyAccountRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountRemarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyBackupMigrationResponse ModifyBackupMigration(ModifyBackupMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupMigrationResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyBackupStrategyResponse ModifyBackupStrategy(ModifyBackupStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupStrategyResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNetworkResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceProjectResponse ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceProjectResponse>>() {
                 }.getType();
@@ -1147,6 +1202,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBNameResponse ModifyDBName(ModifyDBNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBNameResponse>>() {
                 }.getType();
@@ -1167,6 +1223,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBRemarkResponse ModifyDBRemark(ModifyDBRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBRemarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBRemarkResponse>>() {
                 }.getType();
@@ -1187,6 +1244,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDatabaseCDCResponse ModifyDatabaseCDC(ModifyDatabaseCDCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDatabaseCDCResponse>>() {
                 }.getType();
@@ -1207,6 +1265,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDatabaseCTResponse ModifyDatabaseCT(ModifyDatabaseCTRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDatabaseCTResponse>>() {
                 }.getType();
@@ -1227,6 +1286,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDatabaseMdfResponse ModifyDatabaseMdf(ModifyDatabaseMdfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDatabaseMdfResponse>>() {
                 }.getType();
@@ -1247,6 +1307,7 @@ public class SqlserverClient extends AbstractClient{
     public ModifyIncrementalMigrationResponse ModifyIncrementalMigration(ModifyIncrementalMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIncrementalMigrationResponse>>() {
                 }.getType();
@@ -1269,6 +1330,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public ModifyInstanceParamResponse ModifyInstanceParam(ModifyInstanceParamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamResponse>>() {
                 }.getType();
@@ -1289,6 +1351,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public ModifyMigrationResponse ModifyMigration(ModifyMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationResponse>>() {
                 }.getType();
@@ -1309,6 +1372,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public OpenInterCommunicationResponse OpenInterCommunication(OpenInterCommunicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenInterCommunicationResponse>>() {
                 }.getType();
@@ -1329,6 +1393,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public RecycleDBInstanceResponse RecycleDBInstance(RecycleDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecycleDBInstanceResponse>>() {
                 }.getType();
@@ -1349,6 +1414,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
@@ -1369,6 +1435,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstanceResponse>>() {
                 }.getType();
@@ -1389,6 +1456,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestoreInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestoreInstanceResponse>>() {
                 }.getType();
@@ -1409,6 +1477,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public RollbackInstanceResponse RollbackInstance(RollbackInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RollbackInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RollbackInstanceResponse>>() {
                 }.getType();
@@ -1429,6 +1498,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public RunMigrationResponse RunMigration(RunMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunMigrationResponse>>() {
                 }.getType();
@@ -1449,6 +1519,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public StartBackupMigrationResponse StartBackupMigration(StartBackupMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartBackupMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartBackupMigrationResponse>>() {
                 }.getType();
@@ -1469,6 +1540,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public StartIncrementalMigrationResponse StartIncrementalMigration(StartIncrementalMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartIncrementalMigrationResponse>>() {
                 }.getType();
@@ -1489,6 +1561,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public StartInstanceXEventResponse StartInstanceXEvent(StartInstanceXEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartInstanceXEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartInstanceXEventResponse>>() {
                 }.getType();
@@ -1509,6 +1582,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public TerminateDBInstanceResponse TerminateDBInstance(TerminateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDBInstanceResponse>>() {
                 }.getType();
@@ -1529,6 +1603,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
                 }.getType();

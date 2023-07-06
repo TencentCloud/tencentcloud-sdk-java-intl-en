@@ -29,7 +29,7 @@ public class CbsClient extends AbstractClient{
     private static String endpoint = "cbs.tencentcloudapi.com";
     private static String service = "cbs";
     private static String version = "2017-03-12";
-
+    
     public CbsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class CbsClient extends AbstractClient{
     public ApplyDiskBackupResponse ApplyDiskBackup(ApplyDiskBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyDiskBackupResponse>>() {
                 }.getType();
@@ -75,6 +76,7 @@ public class CbsClient extends AbstractClient{
     public ApplySnapshotResponse ApplySnapshot(ApplySnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplySnapshotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplySnapshotResponse>>() {
                 }.getType();
@@ -98,6 +100,7 @@ public class CbsClient extends AbstractClient{
     public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachDisksResponse>>() {
                 }.getType();
@@ -121,6 +124,7 @@ public class CbsClient extends AbstractClient{
     public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -144,6 +148,7 @@ public class CbsClient extends AbstractClient{
     public CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(CopySnapshotCrossRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopySnapshotCrossRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopySnapshotCrossRegionsResponse>>() {
                 }.getType();
@@ -167,6 +172,7 @@ public class CbsClient extends AbstractClient{
     public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -187,6 +193,7 @@ public class CbsClient extends AbstractClient{
     public CreateDiskBackupResponse CreateDiskBackup(CreateDiskBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDiskBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDiskBackupResponse>>() {
                 }.getType();
@@ -210,6 +217,7 @@ public class CbsClient extends AbstractClient{
     public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDisksResponse>>() {
                 }.getType();
@@ -234,6 +242,7 @@ public class CbsClient extends AbstractClient{
     public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSnapshotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSnapshotResponse>>() {
                 }.getType();
@@ -256,6 +265,7 @@ public class CbsClient extends AbstractClient{
     public DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(DeleteAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAutoSnapshotPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAutoSnapshotPoliciesResponse>>() {
                 }.getType();
@@ -276,6 +286,7 @@ public class CbsClient extends AbstractClient{
     public DeleteDiskBackupsResponse DeleteDiskBackups(DeleteDiskBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDiskBackupsResponse>>() {
                 }.getType();
@@ -299,6 +310,7 @@ public class CbsClient extends AbstractClient{
     public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
                 }.getType();
@@ -322,6 +334,7 @@ public class CbsClient extends AbstractClient{
     public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>() {
                 }.getType();
@@ -342,6 +355,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDiskAssociatedAutoSnapshotPolicyResponse DescribeDiskAssociatedAutoSnapshotPolicy(DescribeDiskAssociatedAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -365,6 +379,7 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
     public DescribeDiskBackupsResponse DescribeDiskBackups(DescribeDiskBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskBackupsResponse>>() {
                 }.getType();
@@ -385,6 +400,7 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
     public DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(DescribeDiskConfigQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskConfigQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskConfigQuotaResponse>>() {
                 }.getType();
@@ -409,6 +425,7 @@ This API is used to query the operation logs of a cloud disk. It will be disused
     public DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskOperationLogsResponse>>() {
                 }.getType();
@@ -432,6 +449,7 @@ This API is used to query the operation logs of a cloud disk. It will be disused
     public DescribeDisksResponse DescribeDisks(DescribeDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisksResponse>>() {
                 }.getType();
@@ -454,6 +472,7 @@ This API is used to query the operation logs of a cloud disk. It will be disused
     public DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesDiskNumResponse>>() {
                 }.getType();
@@ -479,6 +498,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
                 }.getType();
@@ -499,6 +519,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(DescribeSnapshotSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotSharePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotSharePermissionResponse>>() {
                 }.getType();
@@ -522,6 +543,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotsResponse>>() {
                 }.getType();
@@ -545,6 +567,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public DetachDisksResponse DetachDisks(DetachDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachDisksResponse>>() {
                 }.getType();
@@ -565,6 +588,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public GetSnapOverviewResponse GetSnapOverview(GetSnapOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSnapOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSnapOverviewResponse>>() {
                 }.getType();
@@ -589,6 +613,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public InitializeDisksResponse InitializeDisks(InitializeDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitializeDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InitializeDisksResponse>>() {
                 }.getType();
@@ -609,6 +634,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(InquirePriceModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse>>() {
                 }.getType();
@@ -629,6 +655,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>() {
                 }.getType();
@@ -651,6 +678,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(InquiryPriceCreateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDisksResponse>>() {
                 }.getType();
@@ -671,6 +699,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(InquiryPriceResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResizeDiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeDiskResponse>>() {
                 }.getType();
@@ -694,6 +723,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(ModifyAutoSnapshotPolicyAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse>>() {
                 }.getType();
@@ -716,6 +746,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public ModifyDiskAttributesResponse ModifyDiskAttributes(ModifyDiskAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
                 }.getType();
@@ -736,6 +767,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(ModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskBackupQuotaResponse>>() {
                 }.getType();
@@ -758,6 +790,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(ModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>() {
                 }.getType();
@@ -781,6 +814,7 @@ This API is used to query the operation logs of a snapshot. It will be disused s
     public ModifySnapshotAttributeResponse ModifySnapshotAttribute(ModifySnapshotAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotAttributeResponse>>() {
                 }.getType();
@@ -807,6 +841,7 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
     public ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermission(ModifySnapshotsSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotsSharePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotsSharePermissionResponse>>() {
                 }.getType();
@@ -829,6 +864,7 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
     public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResizeDiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResizeDiskResponse>>() {
                 }.getType();
@@ -853,6 +889,7 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
     public TerminateDisksResponse TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDisksResponse>>() {
                 }.getType();
@@ -876,6 +913,7 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
     public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>() {
                 }.getType();

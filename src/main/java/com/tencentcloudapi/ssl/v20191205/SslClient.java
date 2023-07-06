@@ -29,7 +29,7 @@ public class SslClient extends AbstractClient{
     private static String endpoint = "ssl.tencentcloudapi.com";
     private static String service = "ssl";
     private static String version = "2019-12-05";
-
+    
     public SslClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SslClient extends AbstractClient{
     public ApplyCertificateResponse ApplyCertificate(ApplyCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyCertificateResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SslClient extends AbstractClient{
     public CancelCertificateOrderResponse CancelCertificateOrder(CancelCertificateOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelCertificateOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelCertificateOrderResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SslClient extends AbstractClient{
     public CommitCertificateInformationResponse CommitCertificateInformation(CommitCertificateInformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitCertificateInformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitCertificateInformationResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SslClient extends AbstractClient{
     public DeleteCertificateResponse DeleteCertificate(DeleteCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCertificateResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class SslClient extends AbstractClient{
     public DescribeCertificateResponse DescribeCertificate(DescribeCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class SslClient extends AbstractClient{
     public DescribeCertificateDetailResponse DescribeCertificateDetail(DescribeCertificateDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateDetailResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class SslClient extends AbstractClient{
     public DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogs(DescribeCertificateOperateLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificateOperateLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateOperateLogsResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class SslClient extends AbstractClient{
     public DescribeCertificatesResponse DescribeCertificates(DescribeCertificatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificatesResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class SslClient extends AbstractClient{
     public DownloadCertificateResponse DownloadCertificate(DownloadCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadCertificateResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class SslClient extends AbstractClient{
     public ModifyCertificateAliasResponse ModifyCertificateAlias(ModifyCertificateAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCertificateAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateAliasResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class SslClient extends AbstractClient{
     public ModifyCertificateProjectResponse ModifyCertificateProject(ModifyCertificateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCertificateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateProjectResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class SslClient extends AbstractClient{
     public ReplaceCertificateResponse ReplaceCertificate(ReplaceCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReplaceCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReplaceCertificateResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class SslClient extends AbstractClient{
     public SubmitCertificateInformationResponse SubmitCertificateInformation(SubmitCertificateInformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitCertificateInformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitCertificateInformationResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class SslClient extends AbstractClient{
     public UploadCertificateResponse UploadCertificate(UploadCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadCertificateResponse>>() {
                 }.getType();

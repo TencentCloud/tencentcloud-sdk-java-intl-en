@@ -29,7 +29,7 @@ public class GmeClient extends AbstractClient{
     private static String endpoint = "gme.tencentcloudapi.com";
     private static String service = "gme";
     private static String version = "2018-07-11";
-
+    
     public GmeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GmeClient extends AbstractClient{
     public CreateAppResponse CreateApp(CreateAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAppResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class GmeClient extends AbstractClient{
     public DeleteRoomMemberResponse DeleteRoomMember(DeleteRoomMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRoomMemberResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class GmeClient extends AbstractClient{
     public DescribeAppStatisticsResponse DescribeAppStatistics(DescribeAppStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppStatisticsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class GmeClient extends AbstractClient{
     public DescribeApplicationDataResponse DescribeApplicationData(DescribeApplicationDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationDataResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class GmeClient extends AbstractClient{
     public DescribeRecordInfoResponse DescribeRecordInfo(DescribeRecordInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordInfoResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class GmeClient extends AbstractClient{
     public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class GmeClient extends AbstractClient{
     public ModifyAppStatusResponse ModifyAppStatus(ModifyAppStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAppStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAppStatusResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class GmeClient extends AbstractClient{
     public ModifyRecordInfoResponse ModifyRecordInfo(ModifyRecordInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordInfoResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class GmeClient extends AbstractClient{
     public StartRecordResponse StartRecord(StartRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartRecordResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class GmeClient extends AbstractClient{
     public StopRecordResponse StopRecord(StopRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopRecordResponse>>() {
                 }.getType();

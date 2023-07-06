@@ -29,7 +29,7 @@ public class DtsClient extends AbstractClient{
     private static String endpoint = "dts.tencentcloudapi.com";
     private static String service = "dts";
     private static String version = "2018-03-30";
-
+    
     public DtsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DtsClient extends AbstractClient{
     public ActivateSubscribeResponse ActivateSubscribe(ActivateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ActivateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ActivateSubscribeResponse>>() {
                 }.getType();
@@ -70,6 +71,7 @@ If the task status queried through the (DescribeMigrateJobs) API is ready (statu
     public CompleteMigrateJobResponse CompleteMigrateJob(CompleteMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CompleteMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CompleteMigrateJobResponse>>() {
                 }.getType();
@@ -94,6 +96,7 @@ For a finance zone link, use the domain name https://dts.ap-shenzhen-fsi.tencent
     public CreateMigrateCheckJobResponse CreateMigrateCheckJob(CreateMigrateCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrateCheckJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateCheckJobResponse>>() {
                 }.getType();
@@ -116,6 +119,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public CreateMigrateJobResponse CreateMigrateJob(CreateMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateJobResponse>>() {
                 }.getType();
@@ -136,6 +140,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubscribeResponse>>() {
                 }.getType();
@@ -156,6 +161,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public DeleteMigrateJobResponse DeleteMigrateJob(DeleteMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrateJobResponse>>() {
                 }.getType();
@@ -176,6 +182,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
                 }.getType();
@@ -198,6 +205,7 @@ If the check fails, the reason can be queried. Please modify the migration confi
     public DescribeMigrateCheckJobResponse DescribeMigrateCheckJob(DescribeMigrateCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrateCheckJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateCheckJobResponse>>() {
                 }.getType();
@@ -219,6 +227,7 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     public DescribeMigrateJobsResponse DescribeMigrateJobs(DescribeMigrateJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrateJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateJobsResponse>>() {
                 }.getType();
@@ -239,6 +248,7 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     public DescribeRegionConfResponse DescribeRegionConf(DescribeRegionConfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionConfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionConfResponse>>() {
                 }.getType();
@@ -259,6 +269,7 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     public DescribeSubscribeConfResponse DescribeSubscribeConf(DescribeSubscribeConfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscribeConfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscribeConfResponse>>() {
                 }.getType();
@@ -279,6 +290,7 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     public DescribeSubscribesResponse DescribeSubscribes(DescribeSubscribesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscribesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscribesResponse>>() {
                 }.getType();
@@ -299,6 +311,7 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     public IsolateSubscribeResponse IsolateSubscribe(IsolateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateSubscribeResponse>>() {
                 }.getType();
@@ -322,6 +335,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public ModifyMigrateJobResponse ModifyMigrateJob(ModifyMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrateJobResponse>>() {
                 }.getType();
@@ -342,6 +356,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public ModifySubscribeConsumeTimeResponse ModifySubscribeConsumeTime(ModifySubscribeConsumeTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeConsumeTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>() {
                 }.getType();
@@ -362,6 +377,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public ModifySubscribeNameResponse ModifySubscribeName(ModifySubscribeNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeNameResponse>>() {
                 }.getType();
@@ -382,6 +398,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public ModifySubscribeObjectsResponse ModifySubscribeObjects(ModifySubscribeObjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeObjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeObjectsResponse>>() {
                 }.getType();
@@ -402,6 +419,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public ModifySubscribeVipVportResponse ModifySubscribeVipVport(ModifySubscribeVipVportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeVipVportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeVipVportResponse>>() {
                 }.getType();
@@ -422,6 +440,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public OfflineIsolatedSubscribeResponse OfflineIsolatedSubscribe(OfflineIsolatedSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineIsolatedSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineIsolatedSubscribeResponse>>() {
                 }.getType();
@@ -442,6 +461,7 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     public ResetSubscribeResponse ResetSubscribe(ResetSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetSubscribeResponse>>() {
                 }.getType();
@@ -463,6 +483,7 @@ Before calling this API, be sure to use the CreateMigrateCheckJob API to check t
     public StartMigrateJobResponse StartMigrateJob(StartMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMigrateJobResponse>>() {
                 }.getType();
@@ -484,6 +505,7 @@ During migration, this API can be used to cancel migration if the task status qu
     public StopMigrateJobResponse StopMigrateJob(StopMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
                 }.getType();

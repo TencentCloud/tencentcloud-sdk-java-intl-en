@@ -29,7 +29,7 @@ public class TtsClient extends AbstractClient{
     private static String endpoint = "tts.tencentcloudapi.com";
     private static String service = "tts";
     private static String version = "2019-08-23";
-
+    
     public TtsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ Default API request rate limit: 20 requests/sec.
     public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToVoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
                 }.getType();

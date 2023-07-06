@@ -29,7 +29,7 @@ public class EmrClient extends AbstractClient{
     private static String endpoint = "emr.tencentcloudapi.com";
     private static String service = "emr";
     private static String version = "2019-01-03";
-
+    
     public EmrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ This API is used to add user lists (user management).
     public AddUsersForUserManagerResponse AddUsersForUserManager(AddUsersForUserManagerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUsersForUserManagerResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ This API is used to add user lists (user management).
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ This API is used to add user lists (user management).
     public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ This API is used to add user lists (user management).
     public DescribeClusterNodesResponse DescribeClusterNodes(DescribeClusterNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterNodesResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ This API is used to add user lists (user management).
     public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ This API is used to add user lists (user management).
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ This API is used to add user lists (user management).
     public DescribeInstancesListResponse DescribeInstancesList(DescribeInstancesListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesListResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ This API is used to add user lists (user management).
     public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceScheduleResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public DescribeUsersForUserManagerResponse DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsersForUserManagerResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceScheduleConfigResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public ModifyResourceSchedulerResponse ModifyResourceScheduler(ModifyResourceSchedulerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public ScaleOutClusterResponse ScaleOutCluster(ScaleOutClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutClusterResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(StartStopServiceOrMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartStopServiceOrMonitorResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public TerminateClusterNodesResponse TerminateClusterNodes(TerminateClusterNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateClusterNodesResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateInstanceResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public TerminateTasksResponse TerminateTasks(TerminateTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateTasksResponse>>() {
                 }.getType();

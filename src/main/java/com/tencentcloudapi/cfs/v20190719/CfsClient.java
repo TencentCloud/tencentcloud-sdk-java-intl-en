@@ -29,7 +29,7 @@ public class CfsClient extends AbstractClient{
     private static String endpoint = "cfs.tencentcloudapi.com";
     private static String service = "cfs";
     private static String version = "2019-07-19";
-
+    
     public CfsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CfsClient extends AbstractClient{
     public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CfsClient extends AbstractClient{
     public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CfsClient extends AbstractClient{
     public CreateCfsFileSystemResponse CreateCfsFileSystem(CreateCfsFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCfsFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCfsFileSystemResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CfsClient extends AbstractClient{
     public CreateCfsPGroupResponse CreateCfsPGroup(CreateCfsPGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCfsPGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCfsPGroupResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CfsClient extends AbstractClient{
     public CreateCfsRuleResponse CreateCfsRule(CreateCfsRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCfsRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCfsRuleResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CfsClient extends AbstractClient{
     public CreateCfsSnapshotResponse CreateCfsSnapshot(CreateCfsSnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCfsSnapshotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCfsSnapshotResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public CreateMigrationTaskResponse CreateMigrationTask(CreateMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrationTaskResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteCfsFileSystemResponse DeleteCfsFileSystem(DeleteCfsFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCfsFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCfsFileSystemResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteCfsPGroupResponse DeleteCfsPGroup(DeleteCfsPGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCfsPGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCfsPGroupResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteCfsRuleResponse DeleteCfsRule(DeleteCfsRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCfsRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCfsRuleResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteCfsSnapshotResponse DeleteCfsSnapshot(DeleteCfsSnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCfsSnapshotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCfsSnapshotResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteMigrationTaskResponse DeleteMigrationTask(DeleteMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrationTaskResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteMountTargetResponse DeleteMountTarget(DeleteMountTargetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMountTargetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMountTargetResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(DescribeAvailableZoneInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableZoneInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableZoneInfoResponse>>() {
                 }.getType();
@@ -370,6 +386,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeBucketListResponse DescribeBucketList(DescribeBucketListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBucketListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBucketListResponse>>() {
                 }.getType();
@@ -390,6 +407,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClients(DescribeCfsFileSystemClientsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>() {
                 }.getType();
@@ -410,6 +428,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsFileSystemsResponse DescribeCfsFileSystems(DescribeCfsFileSystemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsFileSystemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsFileSystemsResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsPGroupsResponse DescribeCfsPGroups(DescribeCfsPGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsPGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsPGroupsResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsRulesResponse DescribeCfsRules(DescribeCfsRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsRulesResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsServiceStatusResponse DescribeCfsServiceStatus(DescribeCfsServiceStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsServiceStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsServiceStatusResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsSnapshotOverviewResponse DescribeCfsSnapshotOverview(DescribeCfsSnapshotOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsSnapshotOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsSnapshotOverviewResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeCfsSnapshotsResponse DescribeCfsSnapshots(DescribeCfsSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCfsSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCfsSnapshotsResponse>>() {
                 }.getType();
@@ -531,6 +555,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeMigrationTasksResponse DescribeMigrationTasks(DescribeMigrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationTasksResponse>>() {
                 }.getType();
@@ -551,6 +576,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeMountTargetsResponse DescribeMountTargets(DescribeMountTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMountTargetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMountTargetsResponse>>() {
                 }.getType();
@@ -571,6 +597,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
                 }.getType();
@@ -591,6 +618,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(ModifyFileSystemAutoScaleUpRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>() {
                 }.getType();
@@ -611,6 +639,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public ScaleUpFileSystemResponse ScaleUpFileSystem(ScaleUpFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleUpFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleUpFileSystemResponse>>() {
                 }.getType();
@@ -631,6 +660,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public SignUpCfsServiceResponse SignUpCfsService(SignUpCfsServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SignUpCfsServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SignUpCfsServiceResponse>>() {
                 }.getType();
@@ -652,6 +682,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public StopMigrationTaskResponse StopMigrationTask(StopMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMigrationTaskResponse>>() {
                 }.getType();
@@ -672,6 +703,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -692,6 +724,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateAutoSnapshotPolicyResponse UpdateAutoSnapshotPolicy(UpdateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -712,6 +745,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateCfsFileSystemNameResponse UpdateCfsFileSystemName(UpdateCfsFileSystemNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCfsFileSystemNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsFileSystemNameResponse>>() {
                 }.getType();
@@ -732,6 +766,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateCfsFileSystemPGroupResponse UpdateCfsFileSystemPGroup(UpdateCfsFileSystemPGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCfsFileSystemPGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsFileSystemPGroupResponse>>() {
                 }.getType();
@@ -752,6 +787,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateCfsFileSystemSizeLimitResponse UpdateCfsFileSystemSizeLimit(UpdateCfsFileSystemSizeLimitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCfsFileSystemSizeLimitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsFileSystemSizeLimitResponse>>() {
                 }.getType();
@@ -772,6 +808,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateCfsPGroupResponse UpdateCfsPGroup(UpdateCfsPGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCfsPGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsPGroupResponse>>() {
                 }.getType();
@@ -792,6 +829,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateCfsRuleResponse UpdateCfsRule(UpdateCfsRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCfsRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsRuleResponse>>() {
                 }.getType();
@@ -812,6 +850,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public UpdateCfsSnapshotAttributeResponse UpdateCfsSnapshotAttribute(UpdateCfsSnapshotAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCfsSnapshotAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsSnapshotAttributeResponse>>() {
                 }.getType();

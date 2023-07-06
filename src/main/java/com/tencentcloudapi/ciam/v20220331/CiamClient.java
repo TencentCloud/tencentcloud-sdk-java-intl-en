@@ -29,7 +29,7 @@ public class CiamClient extends AbstractClient{
     private static String endpoint = "ciam.tencentcloudapi.com";
     private static String service = "ciam";
     private static String version = "2022-03-31";
-
+    
     public CiamClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CiamClient extends AbstractClient{
     public CreateApiImportUserJobResponse CreateApiImportUserJob(CreateApiImportUserJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiImportUserJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiImportUserJobResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CiamClient extends AbstractClient{
     public CreateFileExportUserJobResponse CreateFileExportUserJob(CreateFileExportUserJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFileExportUserJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFileExportUserJobResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CiamClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CiamClient extends AbstractClient{
     public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsersResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CiamClient extends AbstractClient{
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CiamClient extends AbstractClient{
     public DescribeUserByIdResponse DescribeUserById(DescribeUserByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserByIdResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CiamClient extends AbstractClient{
     public LinkAccountResponse LinkAccount(LinkAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LinkAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LinkAccountResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CiamClient extends AbstractClient{
     public ListJobsResponse ListJobs(ListJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListJobsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CiamClient extends AbstractClient{
     public ListLogMessageByConditionResponse ListLogMessageByCondition(ListLogMessageByConditionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListLogMessageByConditionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListLogMessageByConditionResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CiamClient extends AbstractClient{
     public ListUserResponse ListUser(ListUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUserResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CiamClient extends AbstractClient{
     public ListUserByPropertyResponse ListUserByProperty(ListUserByPropertyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUserByPropertyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUserByPropertyResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CiamClient extends AbstractClient{
     public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CiamClient extends AbstractClient{
     public SetPasswordResponse SetPassword(SetPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetPasswordResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CiamClient extends AbstractClient{
     public UpdateUserResponse UpdateUser(UpdateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateUserResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CiamClient extends AbstractClient{
     public UpdateUserStatusResponse UpdateUserStatus(UpdateUserStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateUserStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateUserStatusResponse>>() {
                 }.getType();

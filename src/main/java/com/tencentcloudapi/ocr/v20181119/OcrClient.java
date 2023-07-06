@@ -29,7 +29,7 @@ public class OcrClient extends AbstractClient{
     private static String endpoint = "ocr.tencentcloudapi.com";
     private static String service = "ocr";
     private static String version = "2018-11-19";
-
+    
     public OcrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ This API is not fully available for the time being. For more information, please
     public BankCardOCRResponse BankCardOCR(BankCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BankCardOCRResponse>>() {
                 }.getType();
@@ -75,6 +76,7 @@ This API is not fully available for the time being. For more information, please
     public GeneralAccurateOCRResponse GeneralAccurateOCR(GeneralAccurateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralAccurateOCRResponse>>() {
                 }.getType();
@@ -101,6 +103,7 @@ This API is not fully available for the time being. For more information, please
     public GeneralBasicOCRResponse GeneralBasicOCR(GeneralBasicOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralBasicOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralBasicOCRResponse>>() {
                 }.getType();
@@ -124,6 +127,7 @@ This API is not fully available for the time being. For more information, please
     public HKIDCardOCRResponse HKIDCardOCR(HKIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<HKIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<HKIDCardOCRResponse>>() {
                 }.getType();
@@ -146,6 +150,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public HmtResidentPermitOCRResponse HmtResidentPermitOCR(HmtResidentPermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<HmtResidentPermitOCRResponse>>() {
                 }.getType();
@@ -213,6 +218,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public IDCardOCRResponse IDCardOCR(IDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IDCardOCRResponse>>() {
                 }.getType();
@@ -235,6 +241,7 @@ A maximum of 10 requests can be initiated per second for this API.
     public LicensePlateOCRResponse LicensePlateOCR(LicensePlateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LicensePlateOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LicensePlateOCRResponse>>() {
                 }.getType();
@@ -257,6 +264,7 @@ This API is not fully available for the time being. For more information, contac
     public MLIDCardOCRResponse MLIDCardOCR(MLIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MLIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MLIDCardOCRResponse>>() {
                 }.getType();
@@ -279,6 +287,7 @@ This API is not fully available for the time being. For more information, please
     public MLIDPassportOCRResponse MLIDPassportOCR(MLIDPassportOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MLIDPassportOCRResponse>>() {
                 }.getType();
@@ -301,6 +310,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public MainlandPermitOCRResponse MainlandPermitOCR(MainlandPermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MainlandPermitOCRResponse>>() {
                 }.getType();
@@ -323,6 +333,7 @@ A maximum of 10 requests can be initiated per second for this API.
     public PermitOCRResponse PermitOCR(PermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PermitOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PermitOCRResponse>>() {
                 }.getType();
@@ -469,6 +480,7 @@ The invoice/ticket subtype (SubType), subtype description (TypeDescription), and
     public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeGeneralInvoiceResponse>>() {
                 }.getType();
@@ -491,6 +503,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>() {
                 }.getType();
@@ -511,6 +524,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>() {
                 }.getType();
@@ -531,6 +545,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>() {
                 }.getType();
@@ -551,6 +566,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>() {
                 }.getType();
@@ -571,6 +587,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>() {
                 }.getType();
@@ -591,6 +608,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>() {
                 }.getType();
@@ -611,6 +629,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>() {
                 }.getType();
@@ -633,6 +652,7 @@ The API request rate is limited to 20 requests/sec by default.
     public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>() {
                 }.getType();
@@ -655,6 +675,7 @@ A maximum of 2 requests can be initiated per second for this API.
     public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeTableAccurateOCRResponse>>() {
                 }.getType();
@@ -678,6 +699,7 @@ A maximum of 10 requests can be initiated per second for this API.
     public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>() {
                 }.getType();
@@ -700,6 +722,7 @@ A maximum of 5 requests can be initiated per second for this API.
     public SealOCRResponse SealOCR(SealOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SealOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SealOCRResponse>>() {
                 }.getType();
@@ -722,6 +745,7 @@ A maximum of 10 requests can be initiated per second for this API.
     public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SmartStructuralOCRV2Response>>() {
                 }.getType();
@@ -744,6 +768,7 @@ This API is not fully available for the time being. For more information, please
     public TableOCRResponse TableOCR(TableOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TableOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TableOCRResponse>>() {
                 }.getType();
@@ -764,6 +789,7 @@ This API is not fully available for the time being. For more information, please
     public VinOCRResponse VinOCR(VinOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VinOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VinOCRResponse>>() {
                 }.getType();

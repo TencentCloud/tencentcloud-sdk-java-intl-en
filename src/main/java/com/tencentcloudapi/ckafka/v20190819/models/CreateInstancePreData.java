@@ -39,12 +39,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] DealNames;
 
     /**
-    * Instance ID.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DealNameInstanceIdMapping")
+    @Expose
+    private DealInstanceDTO [] DealNameInstanceIdMapping;
 
     /**
      * Get The value returned by `CreateInstancePre` is 0, which is fixed and cannot be used as the query condition of `CheckTaskStatus`. It is only used to ensure the consistency with the backend data structure.
@@ -87,23 +93,35 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instance ID.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DealNameInstanceIdMapping Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DealInstanceDTO [] getDealNameInstanceIdMapping() {
+        return this.DealNameInstanceIdMapping;
+    }
+
+    /**
+     * Set Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DealNameInstanceIdMapping Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDealNameInstanceIdMapping(DealInstanceDTO [] DealNameInstanceIdMapping) {
+        this.DealNameInstanceIdMapping = DealNameInstanceIdMapping;
     }
 
     public CreateInstancePreData() {
@@ -126,6 +144,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.DealNameInstanceIdMapping != null) {
+            this.DealNameInstanceIdMapping = new DealInstanceDTO[source.DealNameInstanceIdMapping.length];
+            for (int i = 0; i < source.DealNameInstanceIdMapping.length; i++) {
+                this.DealNameInstanceIdMapping[i] = new DealInstanceDTO(source.DealNameInstanceIdMapping[i]);
+            }
+        }
     }
 
 
@@ -136,6 +160,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
 
     }
 }

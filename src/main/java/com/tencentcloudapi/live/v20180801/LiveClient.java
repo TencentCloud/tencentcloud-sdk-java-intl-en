@@ -29,7 +29,7 @@ public class LiveClient extends AbstractClient{
     private static String endpoint = "live.tencentcloudapi.com";
     private static String service = "live";
     private static String version = "2018-08-01";
-
+    
     public LiveClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
     public AddDelayLiveStreamResponse AddDelayLiveStream(AddDelayLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDelayLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDelayLiveStreamResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
     public AddLiveDomainResponse AddLiveDomain(AddLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLiveDomainResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
     public AddLiveWatermarkResponse AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLiveWatermarkResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
     public AuthenticateDomainOwnerResponse AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AuthenticateDomainOwnerResponse>>() {
                 }.getType();
@@ -130,6 +134,7 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
     public CancelCommonMixStreamResponse CancelCommonMixStream(CancelCommonMixStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelCommonMixStreamResponse>>() {
                 }.getType();
@@ -152,6 +157,7 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
     public CreateCommonMixStreamResponse CreateCommonMixStream(CreateCommonMixStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCommonMixStreamResponse>>() {
                 }.getType();
@@ -173,6 +179,7 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
     public CreateLiveCallbackRuleResponse CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCallbackRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackRuleResponse>>() {
                 }.getType();
@@ -195,6 +202,7 @@ Note: You need to specify at least one callback URL.
     public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -222,6 +230,7 @@ Notes:
     public CreateLivePullStreamTaskResponse CreateLivePullStreamTask(CreateLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -257,6 +266,7 @@ Notes:
     public CreateLiveRecordResponse CreateLiveRecord(CreateLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordResponse>>() {
                 }.getType();
@@ -278,6 +288,7 @@ Notes:
     public CreateLiveRecordRuleResponse CreateLiveRecordRule(CreateLiveRecordRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordRuleResponse>>() {
                 }.getType();
@@ -299,6 +310,7 @@ Notes:
     public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -321,6 +333,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveSnapshotRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotRuleResponse>>() {
                 }.getType();
@@ -342,6 +355,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -363,6 +377,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRule(CreateLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>() {
                 }.getType();
@@ -383,6 +398,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplate(CreateLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>() {
                 }.getType();
@@ -404,6 +420,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(CreateLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTranscodeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeRuleResponse>>() {
                 }.getType();
@@ -425,6 +442,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -445,6 +463,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveWatermarkRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveWatermarkRuleResponse>>() {
                 }.getType();
@@ -474,6 +493,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateRecordTaskResponse CreateRecordTask(CreateRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordTaskResponse>>() {
                 }.getType();
@@ -500,6 +520,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public CreateScreenshotTaskResponse CreateScreenshotTask(CreateScreenshotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScreenshotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScreenshotTaskResponse>>() {
                 }.getType();
@@ -520,6 +541,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCallbackRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackRuleResponse>>() {
                 }.getType();
@@ -540,6 +562,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -560,6 +583,7 @@ Note: only one screencapturing template can be associated with one domain name.
     public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
                 }.getType();
@@ -583,6 +607,7 @@ Notes:
     public DeleteLivePullStreamTaskResponse DeleteLivePullStreamTask(DeleteLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -603,6 +628,7 @@ Notes:
     public DeleteLiveRecordResponse DeleteLiveRecord(DeleteLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordResponse>>() {
                 }.getType();
@@ -623,6 +649,7 @@ Notes:
     public DeleteLiveRecordRuleResponse DeleteLiveRecordRule(DeleteLiveRecordRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordRuleResponse>>() {
                 }.getType();
@@ -643,6 +670,7 @@ Notes:
     public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -663,6 +691,7 @@ Notes:
     public DeleteLiveSnapshotRuleResponse DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveSnapshotRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotRuleResponse>>() {
                 }.getType();
@@ -683,6 +712,7 @@ Notes:
     public DeleteLiveSnapshotTemplateResponse DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -703,6 +733,7 @@ Notes:
     public DeleteLiveTimeShiftRuleResponse DeleteLiveTimeShiftRule(DeleteLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>() {
                 }.getType();
@@ -723,6 +754,7 @@ Notes:
     public DeleteLiveTimeShiftTemplateResponse DeleteLiveTimeShiftTemplate(DeleteLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>() {
                 }.getType();
@@ -744,6 +776,7 @@ Notes:
     public DeleteLiveTranscodeRuleResponse DeleteLiveTranscodeRule(DeleteLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTranscodeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeRuleResponse>>() {
                 }.getType();
@@ -764,6 +797,7 @@ Notes:
     public DeleteLiveTranscodeTemplateResponse DeleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -784,6 +818,7 @@ Notes:
     public DeleteLiveWatermarkResponse DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkResponse>>() {
                 }.getType();
@@ -804,6 +839,7 @@ Notes:
     public DeleteLiveWatermarkRuleResponse DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveWatermarkRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>() {
                 }.getType();
@@ -824,6 +860,7 @@ Notes:
     public DeleteRecordTaskResponse DeleteRecordTask(DeleteRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
                 }.getType();
@@ -844,6 +881,7 @@ Notes:
     public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
                 }.getType();
@@ -864,6 +902,7 @@ Notes:
     public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>() {
                 }.getType();
@@ -884,6 +923,7 @@ Notes:
     public DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(DescribeConcurrentRecordStreamNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>() {
                 }.getType();
@@ -904,6 +944,7 @@ Notes:
     public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeliverBandwidthListResponse>>() {
                 }.getType();
@@ -924,6 +965,7 @@ Notes:
     public DescribeGroupProIspPlayInfoListResponse DescribeGroupProIspPlayInfoList(DescribeGroupProIspPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>() {
                 }.getType();
@@ -945,6 +987,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoList(DescribeHttpStatusInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHttpStatusInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHttpStatusInfoListResponse>>() {
                 }.getType();
@@ -965,6 +1008,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveCallbackRulesResponse DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackRulesResponse>>() {
                 }.getType();
@@ -985,6 +1029,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveCallbackTemplateResponse DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -1005,6 +1050,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplatesResponse>>() {
                 }.getType();
@@ -1025,6 +1071,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveCertResponse DescribeLiveCert(DescribeLiveCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCertResponse>>() {
                 }.getType();
@@ -1045,6 +1092,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveCertsResponse DescribeLiveCerts(DescribeLiveCertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCertsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCertsResponse>>() {
                 }.getType();
@@ -1065,6 +1113,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(DescribeLiveDelayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDelayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDelayInfoListResponse>>() {
                 }.getType();
@@ -1085,6 +1134,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveDomainResponse DescribeLiveDomain(DescribeLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainResponse>>() {
                 }.getType();
@@ -1105,6 +1155,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveDomainCertResponse DescribeLiveDomainCert(DescribeLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
                 }.getType();
@@ -1125,6 +1176,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
     public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>() {
                 }.getType();
@@ -1146,6 +1198,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainRefererResponse>>() {
                 }.getType();
@@ -1166,6 +1219,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainsResponse>>() {
                 }.getType();
@@ -1188,6 +1242,7 @@ Note: this API is used for query only and should not be relied too much upon in 
     public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveForbidStreamListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveForbidStreamListResponse>>() {
                 }.getType();
@@ -1208,6 +1263,7 @@ Note: this API is used for query only and should not be relied too much upon in 
     public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePlayAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>() {
                 }.getType();
@@ -1229,6 +1285,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasks(DescribeLivePullStreamTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePullStreamTasksResponse>>() {
                 }.getType();
@@ -1249,6 +1306,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLivePushAuthKeyResponse DescribeLivePushAuthKey(DescribeLivePushAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePushAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePushAuthKeyResponse>>() {
                 }.getType();
@@ -1269,6 +1327,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLiveRecordRulesResponse DescribeLiveRecordRules(DescribeLiveRecordRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordRulesResponse>>() {
                 }.getType();
@@ -1289,6 +1348,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLiveRecordTemplateResponse DescribeLiveRecordTemplate(DescribeLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -1309,6 +1369,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplatesResponse>>() {
                 }.getType();
@@ -1329,6 +1390,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotRulesResponse>>() {
                 }.getType();
@@ -1349,6 +1411,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -1369,6 +1432,7 @@ The tasks returned are sorted by last updated time in descending order.
     public DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>() {
                 }.getType();
@@ -1393,6 +1457,7 @@ Notes:
     public DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(DescribeLiveStreamEventListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamEventListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamEventListResponse>>() {
                 }.getType();
@@ -1418,6 +1483,7 @@ Notes:
     public DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamOnlineListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamOnlineListResponse>>() {
                 }.getType();
@@ -1439,6 +1505,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     public DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(DescribeLiveStreamPublishedListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamPublishedListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPublishedListResponse>>() {
                 }.getType();
@@ -1459,6 +1526,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     public DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(DescribeLiveStreamPushInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamPushInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPushInfoListResponse>>() {
                 }.getType();
@@ -1488,6 +1556,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveStreamStateResponse DescribeLiveStreamState(DescribeLiveStreamStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamStateResponse>>() {
                 }.getType();
@@ -1508,6 +1577,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(DescribeLiveTimeShiftBillInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>() {
                 }.getType();
@@ -1528,6 +1598,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRules(DescribeLiveTimeShiftRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>() {
                 }.getType();
@@ -1548,6 +1619,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplates(DescribeLiveTimeShiftTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>() {
                 }.getType();
@@ -1568,6 +1640,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(DescribeLiveTranscodeDetailInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse>>() {
                 }.getType();
@@ -1588,6 +1661,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(DescribeLiveTranscodeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeRulesResponse>>() {
                 }.getType();
@@ -1608,6 +1682,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(DescribeLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -1628,6 +1703,7 @@ This API allows you to query the status of a stream in real time. Given external
     public DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(DescribeLiveTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplatesResponse>>() {
                 }.getType();
@@ -1651,6 +1727,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>() {
                 }.getType();
@@ -1671,6 +1748,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeLiveWatermarkResponse DescribeLiveWatermark(DescribeLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkResponse>>() {
                 }.getType();
@@ -1691,6 +1769,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarkRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkRulesResponse>>() {
                 }.getType();
@@ -1711,6 +1790,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeLiveWatermarksResponse DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
                 }.getType();
@@ -1733,6 +1813,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(DescribePlayErrorCodeDetailInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse>>() {
                 }.getType();
@@ -1753,6 +1834,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(DescribePlayErrorCodeSumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse>>() {
                 }.getType();
@@ -1773,6 +1855,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(DescribeProvinceIspPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProvinceIspPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProvinceIspPlayInfoListResponse>>() {
                 }.getType();
@@ -1793,6 +1876,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(DescribeScreenShotSheetNumListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScreenShotSheetNumListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScreenShotSheetNumListResponse>>() {
                 }.getType();
@@ -1813,6 +1897,7 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>() {
                 }.getType();
@@ -1834,6 +1919,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
                 }.getType();
@@ -1854,6 +1940,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
                 }.getType();
@@ -1874,6 +1961,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>() {
                 }.getType();
@@ -1894,6 +1982,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftStreamListResponse>>() {
                 }.getType();
@@ -1914,6 +2003,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeTopClientIpSumInfoListResponse DescribeTopClientIpSumInfoList(DescribeTopClientIpSumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopClientIpSumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>() {
                 }.getType();
@@ -1934,6 +2024,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTaskNumResponse>>() {
                 }.getType();
@@ -1954,6 +2045,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeUploadStreamNumsResponse DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadStreamNumsResponse>>() {
                 }.getType();
@@ -1974,6 +2066,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(DescribeVisitTopSumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVisitTopSumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>() {
                 }.getType();
@@ -1995,6 +2088,7 @@ Note: If you call this API to pause an inactive stream, the request will be cons
     public DropLiveStreamResponse DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DropLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
                 }.getType();
@@ -2015,6 +2109,7 @@ Note: If you call this API to pause an inactive stream, the request will be cons
     public EnableLiveDomainResponse EnableLiveDomain(EnableLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableLiveDomainResponse>>() {
                 }.getType();
@@ -2035,6 +2130,7 @@ Note: If you call this API to pause an inactive stream, the request will be cons
     public ForbidLiveDomainResponse ForbidLiveDomain(ForbidLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidLiveDomainResponse>>() {
                 }.getType();
@@ -2059,6 +2155,7 @@ Note:
     public ForbidLiveStreamResponse ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidLiveStreamResponse>>() {
                 }.getType();
@@ -2079,6 +2176,7 @@ Note:
     public ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -2100,6 +2198,7 @@ If a self-owned certificate is used, it will be automatically uploaded to Tencen
     public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>() {
                 }.getType();
@@ -2121,6 +2220,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainRefererResponse>>() {
                 }.getType();
@@ -2141,6 +2241,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(ModifyLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePlayAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>() {
                 }.getType();
@@ -2161,6 +2262,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLivePlayDomainResponse ModifyLivePlayDomain(ModifyLivePlayDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayDomainResponse>>() {
                 }.getType();
@@ -2183,6 +2285,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLivePullStreamTaskResponse ModifyLivePullStreamTask(ModifyLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -2203,6 +2306,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(ModifyLivePushAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePushAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePushAuthKeyResponse>>() {
                 }.getType();
@@ -2223,6 +2327,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -2243,6 +2348,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -2263,6 +2369,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(ModifyLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>() {
                 }.getType();
@@ -2283,6 +2390,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(ModifyLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -2303,6 +2411,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ResumeDelayLiveStreamResponse ResumeDelayLiveStream(ResumeDelayLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeDelayLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeDelayLiveStreamResponse>>() {
                 }.getType();
@@ -2323,6 +2432,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeLiveStreamResponse>>() {
                 }.getType();
@@ -2343,6 +2453,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public StopLiveRecordResponse StopLiveRecord(StopLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopLiveRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
                 }.getType();
@@ -2363,6 +2474,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public StopRecordTaskResponse StopRecordTask(StopRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopRecordTaskResponse>>() {
                 }.getType();
@@ -2383,6 +2495,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public UnBindLiveDomainCertResponse UnBindLiveDomainCert(UnBindLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindLiveDomainCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindLiveDomainCertResponse>>() {
                 }.getType();
@@ -2403,6 +2516,7 @@ Referer information is included in HTTP requests. After you enable referer confi
     public UpdateLiveWatermarkResponse UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateLiveWatermarkResponse>>() {
                 }.getType();

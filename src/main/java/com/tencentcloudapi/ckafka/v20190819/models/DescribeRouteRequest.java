@@ -30,6 +30,13 @@ public class DescribeRouteRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Route ID
+    */
+    @SerializedName("RouteId")
+    @Expose
+    private Long RouteId;
+
+    /**
      * Get Unique instance ID 
      * @return InstanceId Unique instance ID
      */
@@ -45,6 +52,22 @@ public class DescribeRouteRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Route ID 
+     * @return RouteId Route ID
+     */
+    public Long getRouteId() {
+        return this.RouteId;
+    }
+
+    /**
+     * Set Route ID
+     * @param RouteId Route ID
+     */
+    public void setRouteId(Long RouteId) {
+        this.RouteId = RouteId;
+    }
+
     public DescribeRouteRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeRouteRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.RouteId != null) {
+            this.RouteId = new Long(source.RouteId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeRouteRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "RouteId", this.RouteId);
 
     }
 }

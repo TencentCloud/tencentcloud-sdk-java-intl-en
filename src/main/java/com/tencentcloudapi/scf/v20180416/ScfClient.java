@@ -29,7 +29,7 @@ public class ScfClient extends AbstractClient{
     private static String endpoint = "scf.tencentcloudapi.com";
     private static String service = "scf";
     private static String version = "2018-04-16";
-
+    
     public ScfClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -53,6 +53,7 @@ You can manually configure the function after replication as required.
     public CopyFunctionResponse CopyFunction(CopyFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyFunctionResponse>>() {
                 }.getType();
@@ -74,6 +75,7 @@ An alias must point to a master version and can point to an additional version a
     public CreateAliasResponse CreateAlias(CreateAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAliasResponse>>() {
                 }.getType();
@@ -94,6 +96,7 @@ An alias must point to a master version and can point to an additional version a
     public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNamespaceResponse>>() {
                 }.getType();
@@ -114,6 +117,7 @@ An alias must point to a master version and can point to an additional version a
     public CreateTriggerResponse CreateTrigger(CreateTriggerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTriggerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTriggerResponse>>() {
                 }.getType();
@@ -134,6 +138,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteAliasResponse DeleteAlias(DeleteAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAliasResponse>>() {
                 }.getType();
@@ -154,6 +159,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFunctionResponse>>() {
                 }.getType();
@@ -174,6 +180,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteLayerVersionResponse DeleteLayerVersion(DeleteLayerVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLayerVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLayerVersionResponse>>() {
                 }.getType();
@@ -194,6 +201,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
                 }.getType();
@@ -214,6 +222,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(DeleteProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -234,6 +243,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(DeleteReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteReservedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -254,6 +264,7 @@ An alias must point to a master version and can point to an additional version a
     public DeleteTriggerResponse DeleteTrigger(DeleteTriggerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTriggerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTriggerResponse>>() {
                 }.getType();
@@ -274,6 +285,7 @@ An alias must point to a master version and can point to an additional version a
     public GetAccountResponse GetAccount(GetAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAccountResponse>>() {
                 }.getType();
@@ -294,6 +306,7 @@ An alias must point to a master version and can point to an additional version a
     public GetAliasResponse GetAlias(GetAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAliasResponse>>() {
                 }.getType();
@@ -314,6 +327,7 @@ An alias must point to a master version and can point to an additional version a
     public GetAsyncEventStatusResponse GetAsyncEventStatus(GetAsyncEventStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAsyncEventStatusResponse>>() {
                 }.getType();
@@ -334,6 +348,7 @@ An alias must point to a master version and can point to an additional version a
     public GetFunctionAddressResponse GetFunctionAddress(GetFunctionAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionAddressResponse>>() {
                 }.getType();
@@ -354,6 +369,7 @@ An alias must point to a master version and can point to an additional version a
     public GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>() {
                 }.getType();
@@ -374,6 +390,7 @@ An alias must point to a master version and can point to an additional version a
     public GetFunctionLogsResponse GetFunctionLogs(GetFunctionLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionLogsResponse>>() {
                 }.getType();
@@ -394,6 +411,7 @@ An alias must point to a master version and can point to an additional version a
     public GetLayerVersionResponse GetLayerVersion(GetLayerVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLayerVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
                 }.getType();
@@ -414,6 +432,7 @@ An alias must point to a master version and can point to an additional version a
     public GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(GetProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetProvisionedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -434,6 +453,7 @@ An alias must point to a master version and can point to an additional version a
     public GetRequestStatusResponse GetRequestStatus(GetRequestStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRequestStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRequestStatusResponse>>() {
                 }.getType();
@@ -454,6 +474,7 @@ An alias must point to a master version and can point to an additional version a
     public GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(GetReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetReservedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetReservedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -474,6 +495,7 @@ An alias must point to a master version and can point to an additional version a
     public InvokeResponse Invoke(InvokeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
@@ -494,6 +516,7 @@ An alias must point to a master version and can point to an additional version a
     public InvokeFunctionResponse InvokeFunction(InvokeFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeFunctionResponse>>() {
                 }.getType();
@@ -514,6 +537,7 @@ An alias must point to a master version and can point to an additional version a
     public ListAliasesResponse ListAliases(ListAliasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAliasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAliasesResponse>>() {
                 }.getType();
@@ -534,6 +558,7 @@ An alias must point to a master version and can point to an additional version a
     public ListAsyncEventsResponse ListAsyncEvents(ListAsyncEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAsyncEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAsyncEventsResponse>>() {
                 }.getType();
@@ -554,6 +579,7 @@ An alias must point to a master version and can point to an additional version a
     public ListFunctionsResponse ListFunctions(ListFunctionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListFunctionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListFunctionsResponse>>() {
                 }.getType();
@@ -574,6 +600,7 @@ An alias must point to a master version and can point to an additional version a
     public ListLayerVersionsResponse ListLayerVersions(ListLayerVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListLayerVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListLayerVersionsResponse>>() {
                 }.getType();
@@ -594,6 +621,7 @@ An alias must point to a master version and can point to an additional version a
     public ListLayersResponse ListLayers(ListLayersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListLayersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListLayersResponse>>() {
                 }.getType();
@@ -614,6 +642,7 @@ An alias must point to a master version and can point to an additional version a
     public ListNamespacesResponse ListNamespaces(ListNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListNamespacesResponse>>() {
                 }.getType();
@@ -634,6 +663,7 @@ An alias must point to a master version and can point to an additional version a
     public ListTriggersResponse ListTriggers(ListTriggersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListTriggersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListTriggersResponse>>() {
                 }.getType();
@@ -654,6 +684,7 @@ An alias must point to a master version and can point to an additional version a
     public ListVersionByFunctionResponse ListVersionByFunction(ListVersionByFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListVersionByFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListVersionByFunctionResponse>>() {
                 }.getType();
@@ -674,6 +705,7 @@ An alias must point to a master version and can point to an additional version a
     public PublishLayerVersionResponse PublishLayerVersion(PublishLayerVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishLayerVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishLayerVersionResponse>>() {
                 }.getType();
@@ -694,6 +726,7 @@ An alias must point to a master version and can point to an additional version a
     public PublishVersionResponse PublishVersion(PublishVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
                 }.getType();
@@ -714,6 +747,7 @@ An alias must point to a master version and can point to an additional version a
     public PutProvisionedConcurrencyConfigResponse PutProvisionedConcurrencyConfig(PutProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutProvisionedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -734,6 +768,7 @@ An alias must point to a master version and can point to an additional version a
     public PutReservedConcurrencyConfigResponse PutReservedConcurrencyConfig(PutReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutReservedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutReservedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -754,6 +789,7 @@ An alias must point to a master version and can point to an additional version a
     public PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfig(PutTotalConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutTotalConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutTotalConcurrencyConfigResponse>>() {
                 }.getType();
@@ -774,6 +810,7 @@ An alias must point to a master version and can point to an additional version a
     public TerminateAsyncEventResponse TerminateAsyncEvent(TerminateAsyncEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateAsyncEventResponse>>() {
                 }.getType();
@@ -794,6 +831,7 @@ An alias must point to a master version and can point to an additional version a
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
                 }.getType();
@@ -814,6 +852,7 @@ An alias must point to a master version and can point to an additional version a
     public UpdateFunctionCodeResponse UpdateFunctionCode(UpdateFunctionCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionCodeResponse>>() {
                 }.getType();
@@ -834,6 +873,7 @@ An alias must point to a master version and can point to an additional version a
     public UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>() {
                 }.getType();
@@ -854,6 +894,7 @@ An alias must point to a master version and can point to an additional version a
     public UpdateNamespaceResponse UpdateNamespace(UpdateNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateNamespaceResponse>>() {
                 }.getType();
@@ -874,6 +915,7 @@ An alias must point to a master version and can point to an additional version a
     public UpdateTriggerStatusResponse UpdateTriggerStatus(UpdateTriggerStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTriggerStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTriggerStatusResponse>>() {
                 }.getType();

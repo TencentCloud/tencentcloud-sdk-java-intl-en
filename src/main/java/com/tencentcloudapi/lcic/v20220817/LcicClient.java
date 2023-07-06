@@ -29,7 +29,7 @@ public class LcicClient extends AbstractClient{
     private static String endpoint = "lcic.tencentcloudapi.com";
     private static String service = "lcic";
     private static String version = "2022-08-17";
-
+    
     public LcicClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public AddGroupMemberResponse AddGroupMember(AddGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddGroupMemberResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchAddGroupMemberResponse BatchAddGroupMember(BatchAddGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchAddGroupMemberResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembers(BatchCreateGroupWithMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchCreateGroupWithMembersResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchCreateRoomResponse BatchCreateRoom(BatchCreateRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchCreateRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchCreateRoomResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchDeleteGroupMemberResponse BatchDeleteGroupMember(BatchDeleteGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteGroupMemberResponse>>() {
                 }.getType();
@@ -152,6 +157,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchDeleteRecordResponse BatchDeleteRecord(BatchDeleteRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteRecordResponse>>() {
                 }.getType();
@@ -172,6 +178,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchDescribeDocumentResponse BatchDescribeDocument(BatchDescribeDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDescribeDocumentResponse>>() {
                 }.getType();
@@ -193,6 +200,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BatchRegisterResponse BatchRegister(BatchRegisterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchRegisterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchRegisterResponse>>() {
                 }.getType();
@@ -213,6 +221,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public BindDocumentToRoomResponse BindDocumentToRoom(BindDocumentToRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindDocumentToRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindDocumentToRoomResponse>>() {
                 }.getType();
@@ -233,6 +242,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public CreateDocumentResponse CreateDocument(CreateDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDocumentResponse>>() {
                 }.getType();
@@ -254,6 +264,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public CreateGroupWithMembersResponse CreateGroupWithMembers(CreateGroupWithMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupWithMembersResponse>>() {
                 }.getType();
@@ -275,6 +286,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(CreateGroupWithSubGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupWithSubGroupResponse>>() {
                 }.getType();
@@ -296,6 +308,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public CreateRoomResponse CreateRoom(CreateRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoomResponse>>() {
                 }.getType();
@@ -316,6 +329,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public CreateSupervisorResponse CreateSupervisor(CreateSupervisorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSupervisorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSupervisorResponse>>() {
                 }.getType();
@@ -336,6 +350,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteAppCustomContentResponse DeleteAppCustomContent(DeleteAppCustomContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAppCustomContentResponse>>() {
                 }.getType();
@@ -357,6 +372,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteDocumentResponse DeleteDocument(DeleteDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDocumentResponse>>() {
                 }.getType();
@@ -378,6 +394,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
                 }.getType();
@@ -399,6 +416,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteGroupMemberResponse DeleteGroupMember(DeleteGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupMemberResponse>>() {
                 }.getType();
@@ -420,6 +438,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteRecordResponse DeleteRecord(DeleteRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
                 }.getType();
@@ -440,6 +459,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteRoomResponse DeleteRoom(DeleteRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRoomResponse>>() {
                 }.getType();
@@ -460,6 +480,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DeleteSupervisorResponse DeleteSupervisor(DeleteSupervisorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSupervisorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSupervisorResponse>>() {
                 }.getType();
@@ -480,6 +501,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeAnswerListResponse DescribeAnswerList(DescribeAnswerListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAnswerListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAnswerListResponse>>() {
                 }.getType();
@@ -501,6 +523,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeCurrentMemberListResponse DescribeCurrentMemberList(DescribeCurrentMemberListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCurrentMemberListResponse>>() {
                 }.getType();
@@ -521,6 +544,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeDeveloperResponse DescribeDeveloper(DescribeDeveloperRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeveloperResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeveloperResponse>>() {
                 }.getType();
@@ -542,6 +566,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeDocumentResponse DescribeDocument(DescribeDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
                 }.getType();
@@ -566,6 +591,7 @@ This API is used to query courseware. It has been deprecated. Please use `BatchD
     public DescribeDocumentsResponse DescribeDocuments(DescribeDocumentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDocumentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentsResponse>>() {
                 }.getType();
@@ -587,6 +613,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(DescribeDocumentsByRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentsByRoomResponse>>() {
                 }.getType();
@@ -608,6 +635,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
                 }.getType();
@@ -629,6 +657,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeGroupListResponse DescribeGroupList(DescribeGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupListResponse>>() {
                 }.getType();
@@ -650,6 +679,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeGroupMemberListResponse DescribeGroupMemberList(DescribeGroupMemberListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupMemberListResponse>>() {
                 }.getType();
@@ -670,6 +700,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeQuestionListResponse DescribeQuestionList(DescribeQuestionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQuestionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQuestionListResponse>>() {
                 }.getType();
@@ -691,6 +722,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeRoomResponse DescribeRoom(DescribeRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomResponse>>() {
                 }.getType();
@@ -712,6 +744,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeRoomStatisticsResponse DescribeRoomStatistics(DescribeRoomStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomStatisticsResponse>>() {
                 }.getType();
@@ -733,6 +766,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(DescribeSdkAppIdUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSdkAppIdUsersResponse>>() {
                 }.getType();
@@ -753,6 +787,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeSupervisorsResponse DescribeSupervisors(DescribeSupervisorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSupervisorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSupervisorsResponse>>() {
                 }.getType();
@@ -773,6 +808,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
@@ -793,6 +829,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public EndRoomResponse EndRoom(EndRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EndRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EndRoomResponse>>() {
                 }.getType();
@@ -813,6 +850,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public GetRoomEventResponse GetRoomEvent(GetRoomEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoomEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoomEventResponse>>() {
                 }.getType();
@@ -833,6 +871,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public GetRoomMessageResponse GetRoomMessage(GetRoomMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoomMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoomMessageResponse>>() {
                 }.getType();
@@ -853,6 +892,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public GetRoomsResponse GetRooms(GetRoomsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoomsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoomsResponse>>() {
                 }.getType();
@@ -874,6 +914,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public GetWatermarkResponse GetWatermark(GetWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetWatermarkResponse>>() {
                 }.getType();
@@ -894,6 +935,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public KickUserFromRoomResponse KickUserFromRoom(KickUserFromRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KickUserFromRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KickUserFromRoomResponse>>() {
                 }.getType();
@@ -914,6 +956,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public LoginOriginIdResponse LoginOriginId(LoginOriginIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LoginOriginIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LoginOriginIdResponse>>() {
                 }.getType();
@@ -934,6 +977,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public LoginUserResponse LoginUser(LoginUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LoginUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LoginUserResponse>>() {
                 }.getType();
@@ -955,6 +999,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public ModifyAppResponse ModifyApp(ModifyAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAppResponse>>() {
                 }.getType();
@@ -976,6 +1021,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
                 }.getType();
@@ -997,6 +1043,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
                 }.getType();
@@ -1018,6 +1065,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public ModifyUserProfileResponse ModifyUserProfile(ModifyUserProfileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserProfileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserProfileResponse>>() {
                 }.getType();
@@ -1038,6 +1086,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public RegisterUserResponse RegisterUser(RegisterUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterUserResponse>>() {
                 }.getType();
@@ -1058,6 +1107,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public SetAppCustomContentResponse SetAppCustomContent(SetAppCustomContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAppCustomContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
                 }.getType();
@@ -1079,6 +1129,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public SetWatermarkResponse SetWatermark(SetWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
                 }.getType();
@@ -1099,6 +1150,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public StartRoomResponse StartRoom(StartRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartRoomResponse>>() {
                 }.getType();
@@ -1119,6 +1171,7 @@ A maximum of 20 requests can be initiated per second for this API.
     public UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(UnbindDocumentFromRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindDocumentFromRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindDocumentFromRoomResponse>>() {
                 }.getType();
