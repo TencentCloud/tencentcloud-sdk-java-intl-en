@@ -102,6 +102,27 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *This API is used to purchase a certificate.
+     * @param req CreateCertificateRequest
+     * @return CreateCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCertificateResponse CreateCertificate(CreateCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCertificateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a certificate.
      * @param req DeleteCertificateRequest
      * @return DeleteCertificateResponse
@@ -325,6 +346,27 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UploadCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upload the confirmation letter for a certificate.
+     * @param req UploadConfirmLetterRequest
+     * @return UploadConfirmLetterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadConfirmLetterResponse UploadConfirmLetter(UploadConfirmLetterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadConfirmLetterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadConfirmLetter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

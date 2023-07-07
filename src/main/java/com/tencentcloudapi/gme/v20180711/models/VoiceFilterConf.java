@@ -30,6 +30,14 @@ public class VoiceFilterConf extends AbstractModel{
     private String Status;
 
     /**
+    * Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SceneInfos")
+    @Expose
+    private SceneInfo [] SceneInfos;
+
+    /**
      * Get Phrase Filtering status. Valid values: `open`, `close`. 
      * @return Status Phrase Filtering status. Valid values: `open`, `close`.
      */
@@ -45,6 +53,26 @@ public class VoiceFilterConf extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SceneInfos Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public SceneInfo [] getSceneInfos() {
+        return this.SceneInfos;
+    }
+
+    /**
+     * Set Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SceneInfos Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSceneInfos(SceneInfo [] SceneInfos) {
+        this.SceneInfos = SceneInfos;
+    }
+
     public VoiceFilterConf() {
     }
 
@@ -56,6 +84,12 @@ public class VoiceFilterConf extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SceneInfos != null) {
+            this.SceneInfos = new SceneInfo[source.SceneInfos.length];
+            for (int i = 0; i < source.SceneInfos.length; i++) {
+                this.SceneInfos[i] = new SceneInfo(source.SceneInfos[i]);
+            }
+        }
     }
 
 
@@ -64,6 +98,7 @@ public class VoiceFilterConf extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "SceneInfos.", this.SceneInfos);
 
     }
 }

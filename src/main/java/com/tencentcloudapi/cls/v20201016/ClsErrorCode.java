@@ -201,6 +201,9 @@ public enum ClsErrorCode {
     // The topic is bound to a function for shipping.
      OPERATIONDENIED_TOPICHASDELIVERFUNCTION("OperationDenied.TopicHasDeliverFunction"),
      
+    // Unable to delete this topic because an external data source is configured for it.
+     OPERATIONDENIED_TOPICHASEXTERNALDATASOURCECONFIG("OperationDenied.TopicHasExternalDatasourceConfig"),
+     
     // The topic is bound to the `scheduleSql` job.
      OPERATIONDENIED_TOPICHASSCHEDULESQLTASK("OperationDenied.TopicHasScheduleSqlTask"),
      

@@ -100,6 +100,13 @@ public class CynosdbInstance extends AbstractModel{
     private String StatusDesc;
 
     /**
+    * Instance type, which is used to indicate whether it is a serverless instance.
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
     * Database type
     */
     @SerializedName("DbType")
@@ -383,6 +390,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private InstanceNetInfo [] InstanceNetInfo;
 
     /**
+    * Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourcePackages")
+    @Expose
+    private ResourcePackage [] ResourcePackages;
+
+    /**
      * Get User `Uin` 
      * @return Uin User `Uin`
      */
@@ -556,6 +570,22 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * Get Instance type, which is used to indicate whether it is a serverless instance. 
+     * @return DbMode Instance type, which is used to indicate whether it is a serverless instance.
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Instance type, which is used to indicate whether it is a serverless instance.
+     * @param DbMode Instance type, which is used to indicate whether it is a serverless instance.
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
     }
 
     /**
@@ -1222,6 +1252,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.InstanceNetInfo = InstanceNetInfo;
     }
 
+    /**
+     * Get Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ResourcePackage [] getResourcePackages() {
+        return this.ResourcePackages;
+    }
+
+    /**
+     * Set Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourcePackages(ResourcePackage [] ResourcePackages) {
+        this.ResourcePackages = ResourcePackages;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1262,6 +1308,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         }
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
         }
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
@@ -1392,6 +1441,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.InstanceNetInfo[i] = new InstanceNetInfo(source.InstanceNetInfo[i]);
             }
         }
+        if (source.ResourcePackages != null) {
+            this.ResourcePackages = new ResourcePackage[source.ResourcePackages.length];
+            for (int i = 0; i < source.ResourcePackages.length; i++) {
+                this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
+            }
+        }
     }
 
 
@@ -1410,6 +1465,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -1449,6 +1505,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
         this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
+        this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
 
     }
 }

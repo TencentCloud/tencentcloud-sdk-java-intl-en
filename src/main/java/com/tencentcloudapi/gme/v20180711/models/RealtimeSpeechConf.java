@@ -30,7 +30,7 @@ public class RealtimeSpeechConf extends AbstractModel{
     private String Status;
 
     /**
-    * Voice Chat sound quality. Valid value: `high`.
+    * Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
     */
     @SerializedName("Quality")
     @Expose
@@ -53,16 +53,16 @@ public class RealtimeSpeechConf extends AbstractModel{
     }
 
     /**
-     * Get Voice Chat sound quality. Valid value: `high`. 
-     * @return Quality Voice Chat sound quality. Valid value: `high`.
+     * Get Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD). 
+     * @return Quality Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
      */
     public String getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set Voice Chat sound quality. Valid value: `high`.
-     * @param Quality Voice Chat sound quality. Valid value: `high`.
+     * Set Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
+     * @param Quality Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
      */
     public void setQuality(String Quality) {
         this.Quality = Quality;

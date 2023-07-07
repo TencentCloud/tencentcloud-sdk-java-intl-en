@@ -37,14 +37,16 @@ public class CreateAppRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * List of engines to be supported. All values are selected by default.
+    * List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
     */
     @SerializedName("EngineList")
     @Expose
     private String [] EngineList;
 
     /**
-    * Service region list. All values are selected by default.
+    * List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
     */
     @SerializedName("RegionList")
     @Expose
@@ -58,7 +60,7 @@ public class CreateAppRequest extends AbstractModel{
     private RealtimeSpeechConf RealtimeSpeechConf;
 
     /**
-    * Configuration information of Voice Message Service
+    * Configuration information of Voice Messaging
     */
     @SerializedName("VoiceMessageConf")
     @Expose
@@ -70,6 +72,13 @@ public class CreateAppRequest extends AbstractModel{
     @SerializedName("VoiceFilterConf")
     @Expose
     private VoiceFilterConf VoiceFilterConf;
+
+    /**
+    * Configuration information of Speech-to-Text
+    */
+    @SerializedName("AsrConf")
+    @Expose
+    private AsrConf AsrConf;
 
     /**
     * List of tags to be added
@@ -111,32 +120,40 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get List of engines to be supported. All values are selected by default. 
-     * @return EngineList List of engines to be supported. All values are selected by default.
+     * Get List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default. 
+     * @return EngineList List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
      */
     public String [] getEngineList() {
         return this.EngineList;
     }
 
     /**
-     * Set List of engines to be supported. All values are selected by default.
-     * @param EngineList List of engines to be supported. All values are selected by default.
+     * Set List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
+     * @param EngineList List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
      */
     public void setEngineList(String [] EngineList) {
         this.EngineList = EngineList;
     }
 
     /**
-     * Get Service region list. All values are selected by default. 
-     * @return RegionList Service region list. All values are selected by default.
+     * Get List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default. 
+     * @return RegionList List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set Service region list. All values are selected by default.
-     * @param RegionList Service region list. All values are selected by default.
+     * Set List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
+     * @param RegionList List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;
@@ -159,16 +176,16 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get Configuration information of Voice Message Service 
-     * @return VoiceMessageConf Configuration information of Voice Message Service
+     * Get Configuration information of Voice Messaging 
+     * @return VoiceMessageConf Configuration information of Voice Messaging
      */
     public VoiceMessageConf getVoiceMessageConf() {
         return this.VoiceMessageConf;
     }
 
     /**
-     * Set Configuration information of Voice Message Service
-     * @param VoiceMessageConf Configuration information of Voice Message Service
+     * Set Configuration information of Voice Messaging
+     * @param VoiceMessageConf Configuration information of Voice Messaging
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
         this.VoiceMessageConf = VoiceMessageConf;
@@ -188,6 +205,22 @@ public class CreateAppRequest extends AbstractModel{
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
         this.VoiceFilterConf = VoiceFilterConf;
+    }
+
+    /**
+     * Get Configuration information of Speech-to-Text 
+     * @return AsrConf Configuration information of Speech-to-Text
+     */
+    public AsrConf getAsrConf() {
+        return this.AsrConf;
+    }
+
+    /**
+     * Set Configuration information of Speech-to-Text
+     * @param AsrConf Configuration information of Speech-to-Text
+     */
+    public void setAsrConf(AsrConf AsrConf) {
+        this.AsrConf = AsrConf;
     }
 
     /**
@@ -241,6 +274,9 @@ public class CreateAppRequest extends AbstractModel{
         if (source.VoiceFilterConf != null) {
             this.VoiceFilterConf = new VoiceFilterConf(source.VoiceFilterConf);
         }
+        if (source.AsrConf != null) {
+            this.AsrConf = new AsrConf(source.AsrConf);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -261,6 +297,7 @@ public class CreateAppRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
         this.setParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
         this.setParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+        this.setParamObj(map, prefix + "AsrConf.", this.AsrConf);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

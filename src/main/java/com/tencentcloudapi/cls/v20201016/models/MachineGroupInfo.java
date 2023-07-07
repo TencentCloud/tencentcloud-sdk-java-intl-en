@@ -91,6 +91,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean ServiceLogging;
 
     /**
+    * Metadata information list of a machine group
+    */
+    @SerializedName("MetaTags")
+    @Expose
+    private MetaTagInfo [] MetaTags;
+
+    /**
      * Get Machine group ID 
      * @return GroupId Machine group ID
      */
@@ -254,6 +261,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ServiceLogging = ServiceLogging;
     }
 
+    /**
+     * Get Metadata information list of a machine group 
+     * @return MetaTags Metadata information list of a machine group
+     */
+    public MetaTagInfo [] getMetaTags() {
+        return this.MetaTags;
+    }
+
+    /**
+     * Set Metadata information list of a machine group
+     * @param MetaTags Metadata information list of a machine group
+     */
+    public void setMetaTags(MetaTagInfo [] MetaTags) {
+        this.MetaTags = MetaTags;
+    }
+
     public MachineGroupInfo() {
     }
 
@@ -292,6 +315,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ServiceLogging != null) {
             this.ServiceLogging = new Boolean(source.ServiceLogging);
         }
+        if (source.MetaTags != null) {
+            this.MetaTags = new MetaTagInfo[source.MetaTags.length];
+            for (int i = 0; i < source.MetaTags.length; i++) {
+                this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+        this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
 
     }
 }

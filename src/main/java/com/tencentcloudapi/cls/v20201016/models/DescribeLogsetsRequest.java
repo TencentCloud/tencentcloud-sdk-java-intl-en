@@ -23,37 +23,27 @@ import java.util.HashMap;
 public class DescribeLogsetsRequest extends AbstractModel{
 
     /**
-    * <br><li> logsetName
+    * logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -74,136 +64,96 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     private Long Limit;
 
     /**
-     * Get <br><li> logsetName
+     * Get logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
+Each request can have up to 10 `Filters` and 5 `Filter.Values`. 
+     * @return Filters logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Required: no
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. 
-     * @return Filters <br><li> logsetName
-
-Filter by **logset name**.
-Type: String
-
-Required: no
-
-<br><li> logsetId
-
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <br><li> logsetName
+     * Set logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+     * @param Filters logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Required: no
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-     * @param Filters <br><li> logsetName
-
-Filter by **logset name**.
-Type: String
-
-Required: no
-
-<br><li> logsetId
-
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -23,27 +23,20 @@ import java.util.HashMap;
 public class DescribeConfigsRequest extends AbstractModel{
 
     /**
-    * <br><li> configName
+    * configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     */
@@ -66,50 +59,36 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     private Long Limit;
 
     /**
-     * Get <br><li> configName
+     * Get configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`. 
-     * @return Filters <br><li> configName
+     * @return Filters configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
      */
@@ -118,50 +97,36 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     }
 
     /**
-     * Set <br><li> configName
+     * Set configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-     * @param Filters <br><li> configName
+     * @param Filters configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
      */

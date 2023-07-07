@@ -79,6 +79,13 @@ public class ModifyMachineGroupRequest extends AbstractModel{
     private Boolean ServiceLogging;
 
     /**
+    * Metadata information list of a machine group
+    */
+    @SerializedName("MetaTags")
+    @Expose
+    private MetaTagInfo [] MetaTags;
+
+    /**
      * Get Machine group ID 
      * @return GroupId Machine group ID
      */
@@ -206,6 +213,22 @@ public class ModifyMachineGroupRequest extends AbstractModel{
         this.ServiceLogging = ServiceLogging;
     }
 
+    /**
+     * Get Metadata information list of a machine group 
+     * @return MetaTags Metadata information list of a machine group
+     */
+    public MetaTagInfo [] getMetaTags() {
+        return this.MetaTags;
+    }
+
+    /**
+     * Set Metadata information list of a machine group
+     * @param MetaTags Metadata information list of a machine group
+     */
+    public void setMetaTags(MetaTagInfo [] MetaTags) {
+        this.MetaTags = MetaTags;
+    }
+
     public ModifyMachineGroupRequest() {
     }
 
@@ -241,6 +264,12 @@ public class ModifyMachineGroupRequest extends AbstractModel{
         if (source.ServiceLogging != null) {
             this.ServiceLogging = new Boolean(source.ServiceLogging);
         }
+        if (source.MetaTags != null) {
+            this.MetaTags = new MetaTagInfo[source.MetaTags.length];
+            for (int i = 0; i < source.MetaTags.length; i++) {
+                this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
+            }
+        }
     }
 
 
@@ -256,6 +285,7 @@ public class ModifyMachineGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+        this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
 
     }
 }

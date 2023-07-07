@@ -23,37 +23,27 @@ import java.util.HashMap;
 public class DescribeMachineGroupsRequest extends AbstractModel{
 
     /**
-    * <br><li> machineGroupName
+    * machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Filter by **machine group name**.
-Type: String
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> machineGroupId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **machine group ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -74,136 +64,96 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     private Long Limit;
 
     /**
-     * Get <br><li> machineGroupName
+     * Get machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Filter by **machine group name**.
-Type: String
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> machineGroupId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **machine group ID**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`. 
+     * @return Filters machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Required: no
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. 
-     * @return Filters <br><li> machineGroupName
-
-Filter by **machine group name**.
-Type: String
-
-Required: no
-
-<br><li> machineGroupId
-
-Filter by **machine group ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <br><li> machineGroupName
+     * Set machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Filter by **machine group name**.
-Type: String
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> machineGroupId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **machine group ID**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+     * @param Filters machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Required: no
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-     * @param Filters <br><li> machineGroupName
-
-Filter by **machine group name**.
-Type: String
-
-Required: no
-
-<br><li> machineGroupId
-
-Filter by **machine group ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

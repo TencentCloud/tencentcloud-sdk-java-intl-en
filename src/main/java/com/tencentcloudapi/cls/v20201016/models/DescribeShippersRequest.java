@@ -23,29 +23,11 @@ import java.util.HashMap;
 public class DescribeShippersRequest extends AbstractModel{
 
     /**
-    * <br><li> shipperName
+    * - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Filter by **shipping rule name**.
-Type: String
-
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -66,104 +48,32 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     private Long Limit;
 
     /**
-     * Get <br><li> shipperName
+     * Get - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Filter by **shipping rule name**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`. 
+     * @return Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. 
-     * @return Filters <br><li> shipperName
-
-Filter by **shipping rule name**.
-Type: String
-
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <br><li> shipperName
+     * Set - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Filter by **shipping rule name**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+     * @param Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-     * @param Filters <br><li> shipperName
-
-Filter by **shipping rule name**.
-Type: String
-
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

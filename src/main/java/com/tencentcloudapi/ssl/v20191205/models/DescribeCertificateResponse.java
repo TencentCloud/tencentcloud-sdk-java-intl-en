@@ -279,6 +279,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Tags [] Tags;
 
     /**
+    * All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CAEncryptAlgorithms")
+    @Expose
+    private String [] CAEncryptAlgorithms;
+
+    /**
+    * All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CACommonNames")
+    @Expose
+    private String [] CACommonNames;
+
+    /**
+    * All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CAEndTimes")
+    @Expose
+    private String [] CAEndTimes;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -926,6 +950,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CAEncryptAlgorithms All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getCAEncryptAlgorithms() {
+        return this.CAEncryptAlgorithms;
+    }
+
+    /**
+     * Set All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CAEncryptAlgorithms All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCAEncryptAlgorithms(String [] CAEncryptAlgorithms) {
+        this.CAEncryptAlgorithms = CAEncryptAlgorithms;
+    }
+
+    /**
+     * Get All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CACommonNames All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getCACommonNames() {
+        return this.CACommonNames;
+    }
+
+    /**
+     * Set All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CACommonNames All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCACommonNames(String [] CACommonNames) {
+        this.CACommonNames = CACommonNames;
+    }
+
+    /**
+     * Get All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CAEndTimes All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getCAEndTimes() {
+        return this.CAEndTimes;
+    }
+
+    /**
+     * Set All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CAEndTimes All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCAEndTimes(String [] CAEndTimes) {
+        this.CAEndTimes = CAEndTimes;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1051,6 +1135,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.CAEncryptAlgorithms != null) {
+            this.CAEncryptAlgorithms = new String[source.CAEncryptAlgorithms.length];
+            for (int i = 0; i < source.CAEncryptAlgorithms.length; i++) {
+                this.CAEncryptAlgorithms[i] = new String(source.CAEncryptAlgorithms[i]);
+            }
+        }
+        if (source.CACommonNames != null) {
+            this.CACommonNames = new String[source.CACommonNames.length];
+            for (int i = 0; i < source.CACommonNames.length; i++) {
+                this.CACommonNames[i] = new String(source.CACommonNames[i]);
+            }
+        }
+        if (source.CAEndTimes != null) {
+            this.CAEndTimes = new String[source.CAEndTimes.length];
+            for (int i = 0; i < source.CAEndTimes.length; i++) {
+                this.CAEndTimes[i] = new String(source.CAEndTimes[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1093,6 +1195,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+        this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+        this.setParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

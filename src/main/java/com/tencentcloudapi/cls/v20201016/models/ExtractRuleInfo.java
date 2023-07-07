@@ -148,6 +148,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ParseProtocol;
 
     /**
+    * Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+    */
+    @SerializedName("MetadataType")
+    @Expose
+    private Long MetadataType;
+
+    /**
+    * Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PathRegex")
+    @Expose
+    private String PathRegex;
+
+    /**
+    * User-defined metadata, which is required when `MetadataType` is set to `2`.
+    */
+    @SerializedName("MetaTags")
+    @Expose
+    private MetaTagInfo [] MetaTags;
+
+    /**
      * Get Time field key name. `time_key` and `time_format` must appear in pairs
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
@@ -467,6 +493,74 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ParseProtocol = ParseProtocol;
     }
 
+    /**
+     * Get Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata. 
+     * @return MetadataType Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+     */
+    public Long getMetadataType() {
+        return this.MetadataType;
+    }
+
+    /**
+     * Set Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+     * @param MetadataType Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+     */
+    public void setMetadataType(Long MetadataType) {
+        this.MetadataType = MetadataType;
+    }
+
+    /**
+     * Get Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPathRegex() {
+        return this.PathRegex;
+    }
+
+    /**
+     * Set Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPathRegex(String PathRegex) {
+        this.PathRegex = PathRegex;
+    }
+
+    /**
+     * Get User-defined metadata, which is required when `MetadataType` is set to `2`. 
+     * @return MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+     */
+    public MetaTagInfo [] getMetaTags() {
+        return this.MetaTags;
+    }
+
+    /**
+     * Set User-defined metadata, which is required when `MetadataType` is set to `2`.
+     * @param MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+     */
+    public void setMetaTags(MetaTagInfo [] MetaTags) {
+        this.MetaTags = MetaTags;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -526,6 +620,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ParseProtocol != null) {
             this.ParseProtocol = new String(source.ParseProtocol);
         }
+        if (source.MetadataType != null) {
+            this.MetadataType = new Long(source.MetadataType);
+        }
+        if (source.PathRegex != null) {
+            this.PathRegex = new String(source.PathRegex);
+        }
+        if (source.MetaTags != null) {
+            this.MetaTags = new MetaTagInfo[source.MetaTags.length];
+            for (int i = 0; i < source.MetaTags.length; i++) {
+                this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
+            }
+        }
     }
 
 
@@ -548,6 +654,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
+        this.setParamSimple(map, prefix + "MetadataType", this.MetadataType);
+        this.setParamSimple(map, prefix + "PathRegex", this.PathRegex);
+        this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
 
     }
 }

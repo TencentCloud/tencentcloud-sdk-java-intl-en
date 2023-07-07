@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListOrganizationIdentityRequest extends AbstractModel{
 
     /**
-    * Offset.
+    * Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number of returned results. Maximum value: `50`.
+    * The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
     */
     @SerializedName("Limit")
     @Expose
@@ -51,32 +51,39 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
     private Long IdentityId;
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+    * Identity type.  Valid values: `1` (Preset), `2` (Custom).
+    */
+    @SerializedName("IdentityType")
+    @Expose
+    private Long IdentityType;
+
+    /**
+     * Get Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`. 
+     * @return Offset Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
+     * @param Offset Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number of returned results. Maximum value: `50`. 
-     * @return Limit Maximum number of returned results. Maximum value: `50`.
+     * Get The limit for the number of query results.  Value range:  1-50.  Default value:  `10`. 
+     * @return Limit The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of returned results. Maximum value: `50`.
-     * @param Limit Maximum number of returned results. Maximum value: `50`.
+     * Set The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
+     * @param Limit The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -114,6 +121,22 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
         this.IdentityId = IdentityId;
     }
 
+    /**
+     * Get Identity type.  Valid values: `1` (Preset), `2` (Custom). 
+     * @return IdentityType Identity type.  Valid values: `1` (Preset), `2` (Custom).
+     */
+    public Long getIdentityType() {
+        return this.IdentityType;
+    }
+
+    /**
+     * Set Identity type.  Valid values: `1` (Preset), `2` (Custom).
+     * @param IdentityType Identity type.  Valid values: `1` (Preset), `2` (Custom).
+     */
+    public void setIdentityType(Long IdentityType) {
+        this.IdentityType = IdentityType;
+    }
+
     public ListOrganizationIdentityRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
         if (source.IdentityId != null) {
             this.IdentityId = new Long(source.IdentityId);
         }
+        if (source.IdentityType != null) {
+            this.IdentityType = new Long(source.IdentityType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamSimple(map, prefix + "IdentityId", this.IdentityId);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
 
     }
 }

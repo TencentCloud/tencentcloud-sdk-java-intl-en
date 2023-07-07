@@ -140,6 +140,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long ProjectStatus;
 
     /**
+    * Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessPoint")
+    @Expose
+    private String AccessPoint;
+
+    /**
      * Get Project name 
      * @return Name Project name
      */
@@ -415,6 +423,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ProjectStatus = ProjectStatus;
     }
 
+    /**
+     * Get Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return AccessPoint Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAccessPoint() {
+        return this.AccessPoint;
+    }
+
+    /**
+     * Set Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param AccessPoint Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccessPoint(String AccessPoint) {
+        this.AccessPoint = AccessPoint;
+    }
+
     public RumProject() {
     }
 
@@ -471,6 +499,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ProjectStatus != null) {
             this.ProjectStatus = new Long(source.ProjectStatus);
         }
+        if (source.AccessPoint != null) {
+            this.AccessPoint = new String(source.AccessPoint);
+        }
     }
 
 
@@ -494,6 +525,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "IsStar", this.IsStar);
         this.setParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
+        this.setParamSimple(map, prefix + "AccessPoint", this.AccessPoint);
 
     }
 }

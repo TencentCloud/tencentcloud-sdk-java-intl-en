@@ -125,6 +125,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long FilenameMode;
 
     /**
+    * Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Float Progress;
+
+    /**
+    * Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemainTime")
+    @Expose
+    private Long RemainTime;
+
+    /**
+    * Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HistoryStatus")
+    @Expose
+    private Long HistoryStatus;
+
+    /**
      * Get Shipping rule ID 
      * @return ShipperId Shipping rule ID
      */
@@ -364,6 +409,126 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.FilenameMode = FilenameMode;
     }
 
+    /**
+     * Get Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StartTime Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StartTime Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EndTime End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EndTime End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProgress(Float Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
+     * Get Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRemainTime() {
+        return this.RemainTime;
+    }
+
+    /**
+     * Set Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRemainTime(Long RemainTime) {
+        this.RemainTime = RemainTime;
+    }
+
+    /**
+     * Get Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HistoryStatus Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getHistoryStatus() {
+        return this.HistoryStatus;
+    }
+
+    /**
+     * Set Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HistoryStatus Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHistoryStatus(Long HistoryStatus) {
+        this.HistoryStatus = HistoryStatus;
+    }
+
     public ShipperInfo() {
     }
 
@@ -417,6 +582,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FilenameMode != null) {
             this.FilenameMode = new Long(source.FilenameMode);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Float(source.Progress);
+        }
+        if (source.RemainTime != null) {
+            this.RemainTime = new Long(source.RemainTime);
+        }
+        if (source.HistoryStatus != null) {
+            this.HistoryStatus = new Long(source.HistoryStatus);
+        }
     }
 
 
@@ -438,6 +618,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "RemainTime", this.RemainTime);
+        this.setParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
 
     }
 }

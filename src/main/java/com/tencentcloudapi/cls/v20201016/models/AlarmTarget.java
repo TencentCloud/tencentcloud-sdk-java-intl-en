@@ -65,6 +65,15 @@ public class AlarmTarget extends AbstractModel{
     private String LogsetId;
 
     /**
+    * Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get Log topic ID 
      * @return TopicId Log topic ID
      */
@@ -160,6 +169,30 @@ public class AlarmTarget extends AbstractModel{
         this.LogsetId = LogsetId;
     }
 
+    /**
+     * Get Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>. 
+     * @return SyntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+     * @param SyntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public AlarmTarget() {
     }
 
@@ -186,6 +219,9 @@ public class AlarmTarget extends AbstractModel{
         if (source.LogsetId != null) {
             this.LogsetId = new String(source.LogsetId);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -199,6 +235,7 @@ public class AlarmTarget extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

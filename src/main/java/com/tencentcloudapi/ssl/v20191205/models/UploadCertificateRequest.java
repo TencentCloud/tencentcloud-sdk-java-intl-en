@@ -37,7 +37,7 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificatePrivateKey;
 
     /**
-    * Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+    * Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
     */
     @SerializedName("CertificateType")
     @Expose
@@ -104,16 +104,16 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR. 
-     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+     * Get Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR` 
+     * @return CertificateType Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
-     * @param CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+     * Set Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
+     * @param CertificateType Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;

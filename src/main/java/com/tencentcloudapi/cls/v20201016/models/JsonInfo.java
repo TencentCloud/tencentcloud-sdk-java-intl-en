@@ -38,6 +38,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] MetaFields;
 
     /**
+    * JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("JsonType")
+    @Expose
+    private Long JsonType;
+
+    /**
      * Get Enablement flag 
      * @return EnableTag Enablement flag
      */
@@ -73,6 +81,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MetaFields = MetaFields;
     }
 
+    /**
+     * Get JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getJsonType() {
+        return this.JsonType;
+    }
+
+    /**
+     * Set JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setJsonType(Long JsonType) {
+        this.JsonType = JsonType;
+    }
+
     public JsonInfo() {
     }
 
@@ -90,6 +118,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.MetaFields[i] = new String(source.MetaFields[i]);
             }
         }
+        if (source.JsonType != null) {
+            this.JsonType = new Long(source.JsonType);
+        }
     }
 
 
@@ -99,6 +130,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableTag", this.EnableTag);
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+        this.setParamSimple(map, prefix + "JsonType", this.JsonType);
 
     }
 }

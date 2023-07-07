@@ -23,39 +23,28 @@ import java.util.HashMap;
 public class DescribeAlarmsRequest extends AbstractModel{
 
     /**
-    * <br><li> name
+    * name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Filter by **alarm policy name**
-Type: string
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-Required: no
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-<br><li> alarmId
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Filter by **alarm policy ID**
-Type: string
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic ID**
-
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -76,144 +65,100 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
     private Long Limit;
 
     /**
-     * Get <br><li> name
+     * Get name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Filter by **alarm policy name**
-Type: string
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-Required: no
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-<br><li> alarmId
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Filter by **alarm policy ID**
-Type: string
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`. 
+     * @return Filters name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Required: no
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-<br><li> topicId
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-Filter by **log topic ID**
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`. 
-     * @return Filters <br><li> name
-
-Filter by **alarm policy name**
-Type: string
-
-Required: no
-
-<br><li> alarmId
-
-Filter by **alarm policy ID**
-Type: string
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic ID**
-
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <br><li> name
+     * Set name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Filter by **alarm policy name**
-Type: string
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-Required: no
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-<br><li> alarmId
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Filter by **alarm policy ID**
-Type: string
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+     * @param Filters name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Required: no
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-<br><li> topicId
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-Filter by **log topic ID**
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
-     * @param Filters <br><li> name
-
-Filter by **alarm policy name**
-Type: string
-
-Required: no
-
-<br><li> alarmId
-
-Filter by **alarm policy ID**
-Type: string
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic ID**
-
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

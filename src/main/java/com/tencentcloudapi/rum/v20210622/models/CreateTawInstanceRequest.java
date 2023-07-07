@@ -100,6 +100,13 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private Long ResourcePackageNum;
 
     /**
+    * Instance type. `1`: Web; `2`: Application
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get Region ID (at least greater than 0) 
      * @return AreaId Region ID (at least greater than 0)
      */
@@ -275,6 +282,22 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.ResourcePackageNum = ResourcePackageNum;
     }
 
+    /**
+     * Get Instance type. `1`: Web; `2`: Application 
+     * @return InstanceType Instance type. `1`: Web; `2`: Application
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. `1`: Web; `2`: Application
+     * @param InstanceType Instance type. `1`: Web; `2`: Application
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -319,6 +342,9 @@ public class CreateTawInstanceRequest extends AbstractModel{
         if (source.ResourcePackageNum != null) {
             this.ResourcePackageNum = new Long(source.ResourcePackageNum);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
         this.setParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
         this.setParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

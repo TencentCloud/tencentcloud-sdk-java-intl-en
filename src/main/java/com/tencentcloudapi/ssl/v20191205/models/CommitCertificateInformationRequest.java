@@ -30,6 +30,13 @@ public class CommitCertificateInformationRequest extends AbstractModel{
     private String CertificateId;
 
     /**
+    * Domain validation method
+    */
+    @SerializedName("VerifyType")
+    @Expose
+    private String VerifyType;
+
+    /**
      * Get Certificate ID 
      * @return CertificateId Certificate ID
      */
@@ -45,6 +52,22 @@ public class CommitCertificateInformationRequest extends AbstractModel{
         this.CertificateId = CertificateId;
     }
 
+    /**
+     * Get Domain validation method 
+     * @return VerifyType Domain validation method
+     */
+    public String getVerifyType() {
+        return this.VerifyType;
+    }
+
+    /**
+     * Set Domain validation method
+     * @param VerifyType Domain validation method
+     */
+    public void setVerifyType(String VerifyType) {
+        this.VerifyType = VerifyType;
+    }
+
     public CommitCertificateInformationRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CommitCertificateInformationRequest extends AbstractModel{
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
+        if (source.VerifyType != null) {
+            this.VerifyType = new String(source.VerifyType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CommitCertificateInformationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
+        this.setParamSimple(map, prefix + "VerifyType", this.VerifyType);
 
     }
 }

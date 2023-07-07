@@ -100,6 +100,20 @@ public class CreateShipperRequest extends AbstractModel{
     private Long FilenameMode;
 
     /**
+    * Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
      * Get ID of the log topic to which the shipping rule to be created belongs 
      * @return TopicId ID of the log topic to which the shipping rule to be created belongs
      */
@@ -275,6 +289,38 @@ public class CreateShipperRequest extends AbstractModel{
         this.FilenameMode = FilenameMode;
     }
 
+    /**
+     * Get Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task. 
+     * @return StartTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+     * @param StartTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping. 
+     * @return EndTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+     * @param EndTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public CreateShipperRequest() {
     }
 
@@ -319,6 +365,12 @@ public class CreateShipperRequest extends AbstractModel{
         if (source.FilenameMode != null) {
             this.FilenameMode = new Long(source.FilenameMode);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
     }
 
 
@@ -337,6 +389,8 @@ public class CreateShipperRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

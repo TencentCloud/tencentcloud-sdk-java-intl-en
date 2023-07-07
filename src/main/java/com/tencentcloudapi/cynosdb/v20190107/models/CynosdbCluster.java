@@ -362,6 +362,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Ability Ability;
 
     /**
+    * Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourcePackages")
+    @Expose
+    private ResourcePackage [] ResourcePackages;
+
+    /**
      * Get Cluster status. Valid values are as follows:
 creating
 running
@@ -1213,6 +1220,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Ability = Ability;
     }
 
+    /**
+     * Get Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourcePackages Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ResourcePackage [] getResourcePackages() {
+        return this.ResourcePackages;
+    }
+
+    /**
+     * Set Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourcePackages Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourcePackages(ResourcePackage [] ResourcePackages) {
+        this.ResourcePackages = ResourcePackages;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -1359,6 +1382,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Ability != null) {
             this.Ability = new Ability(source.Ability);
         }
+        if (source.ResourcePackages != null) {
+            this.ResourcePackages = new ResourcePackage[source.ResourcePackages.length];
+            for (int i = 0; i < source.ResourcePackages.length; i++) {
+                this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
+            }
+        }
     }
 
 
@@ -1408,6 +1437,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamObj(map, prefix + "Ability.", this.Ability);
+        this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
 
     }
 }

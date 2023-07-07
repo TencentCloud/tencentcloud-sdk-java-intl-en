@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateCosRechargeResponse extends AbstractModel{
 
     /**
+    * cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Id cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Id cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +81,9 @@ public class CreateCosRechargeResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateCosRechargeResponse(CreateCosRechargeResponse source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateCosRechargeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

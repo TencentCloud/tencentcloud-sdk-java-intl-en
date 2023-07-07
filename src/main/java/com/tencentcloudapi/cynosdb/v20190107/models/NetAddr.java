@@ -103,6 +103,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String WanStatus;
 
     /**
+    * Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
      * Get Private network IP
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Vip Private network IP
@@ -302,6 +309,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.WanStatus = WanStatus;
     }
 
+    /**
+     * Get Instance group ID Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
     public NetAddr() {
     }
 
@@ -340,6 +363,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.WanStatus != null) {
             this.WanStatus = new String(source.WanStatus);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
     }
 
 
@@ -357,6 +383,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "WanIP", this.WanIP);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }
