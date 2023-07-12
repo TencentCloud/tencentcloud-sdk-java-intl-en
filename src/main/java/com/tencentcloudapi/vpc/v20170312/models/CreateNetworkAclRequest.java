@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateNetworkAclRequest extends AbstractModel{
 
     /**
-    * VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+    * VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
     */
     @SerializedName("VpcId")
     @Expose
@@ -51,16 +51,16 @@ public class CreateNetworkAclRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API. 
-     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+     * Get VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API. 
+     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
-     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+     * Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

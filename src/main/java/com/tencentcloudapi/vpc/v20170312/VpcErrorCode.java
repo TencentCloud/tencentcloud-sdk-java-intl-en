@@ -123,11 +123,11 @@ public enum VpcErrorCode {
     // This IP address is not a CalcIP (device IP).
      INVALIDPARAMETERVALUE_ADDRESSNOTCALCIP("InvalidParameterValue.AddressNotCalcIP"),
      
-    // This IP is not an EIP.
-     INVALIDPARAMETERVALUE_ADDRESSNOTEIP("InvalidParameterValue.AddressNotEIP"),
-     
     // Unable to find the address.
      INVALIDPARAMETERVALUE_ADDRESSNOTFOUND("InvalidParameterValue.AddressNotFound"),
+     
+    // 
+     INVALIDPARAMETERVALUE_ADDRESSTYPECONFLICT("InvalidParameterValue.AddressTypeConflict"),
      
     // The bandwidth exceeds the limit.
      INVALIDPARAMETERVALUE_BANDWIDTHOUTOFRANGE("InvalidParameterValue.BandwidthOutOfRange"),
@@ -249,7 +249,7 @@ public enum VpcErrorCode {
     // The private IP of the DNAT translation rule must be an IP used by the ENI of the virtual machine.
      INVALIDPARAMETERVALUE_NATGATEWAYDNATRULEPIPNEEDVM("InvalidParameterValue.NatGatewayDnatRulePipNeedVm"),
      
-    // 
+    // The DNAT rule of the NAT gateway to add already exists.
      INVALIDPARAMETERVALUE_NATGATEWAYDNATRULEREPEATED("InvalidParameterValue.NatGatewayDnatRuleRepeated"),
      
     // The SNAT forwarding rule of the NAT gateway does not exist.
@@ -302,6 +302,9 @@ public enum VpcErrorCode {
      
     // The resource does not support this operation.
      INVALIDPARAMETERVALUE_RESOURCENOTSUPPORT("InvalidParameterValue.ResourceNotSupport"),
+     
+    // 
+     INVALIDPARAMETERVALUE_STOPCHARGINGINSTANCEINUSE("InvalidParameterValue.StopChargingInstanceInUse"),
      
     // Subnet CIDR conflict.
      INVALIDPARAMETERVALUE_SUBNETCONFLICT("InvalidParameterValue.SubnetConflict"),
@@ -426,6 +429,9 @@ public enum VpcErrorCode {
     // Exceeded the upper limit of the bandwidth package quota.
      LIMITEXCEEDED_BANDWIDTHPACKAGEQUOTA("LimitExceeded.BandwidthPackageQuota"),
      
+    // 
+     LIMITEXCEEDED_BANDWIDTHPACKAGERESOURCEQUOTA("LimitExceeded.BandwidthPackageResourceQuota"),
+     
     // Run out of the chances to change the IP.
      LIMITEXCEEDED_CHANGEADDRESSQUOTA("LimitExceeded.ChangeAddressQuota"),
      
@@ -549,11 +555,14 @@ public enum VpcErrorCode {
     // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // 
+    // This account is not supported.
      UNSUPPORTEDOPERATION_ACCOUNTNOTSUPPORTED("UnsupportedOperation.AccountNotSupported"),
      
     // The port does not exist.
      UNSUPPORTEDOPERATION_ACTIONNOTFOUND("UnsupportedOperation.ActionNotFound"),
+     
+    // 
+     UNSUPPORTEDOPERATION_ADDRESSIPNOTSUPPORTINSTANCE("UnsupportedOperation.AddressIpNotSupportInstance"),
      
     // This operation is not supported by the IP address status.
      UNSUPPORTEDOPERATION_ADDRESSSTATUSNOTPERMIT("UnsupportedOperation.AddressStatusNotPermit"),
@@ -564,7 +573,7 @@ public enum VpcErrorCode {
     // The APPId doesn't exist.
      UNSUPPORTEDOPERATION_APPIDNOTFOUND("UnsupportedOperation.AppIdNotFound"),
      
-    // 
+    // The NAT gateway route already exists in another VPC added to the CCN instance.
      UNSUPPORTEDOPERATION_ASSOCIATEDVPCOFCCNHADNATROUTE("UnsupportedOperation.AssociatedVpcOfCcnHadNatRoute"),
      
     // The EIP is already bound to a CVM.
@@ -609,7 +618,7 @@ public enum VpcErrorCode {
     // The instance has already been bound to the VPC.
      UNSUPPORTEDOPERATION_CLASSICINSTANCEIDALREADYEXISTS("UnsupportedOperation.ClassicInstanceIdAlreadyExists"),
      
-    // 
+    // Reached the upper limit of security group policies of the load balancer.
      UNSUPPORTEDOPERATION_CLBPOLICYEXCEEDLIMIT("UnsupportedOperation.ClbPolicyExceedLimit"),
      
     // Public network CLB does not support this policy.
@@ -639,7 +648,7 @@ public enum VpcErrorCode {
     // The specified routing policy cannot be re-published to CCN. Please first withdraw it from CCN.
      UNSUPPORTEDOPERATION_DISABLEDNOTIFYCCN("UnsupportedOperation.DisabledNotifyCcn"),
      
-    // 
+    // To create a DPDK NAT flow log, the collection type must be `All`.
      UNSUPPORTEDOPERATION_DPDKNATFLOWLOGONLYSUPPORTALLTRAFFICTYPE("UnsupportedOperation.DpdkNatFlowLogOnlySupportAllTrafficType"),
      
     // The security group policies are repeated.
@@ -659,6 +668,9 @@ public enum VpcErrorCode {
      
     // The endpoint service itself cannot be set as the endpoint.
      UNSUPPORTEDOPERATION_ENDPOINTSERVICE("UnsupportedOperation.EndPointService"),
+     
+    // 
+     UNSUPPORTEDOPERATION_FLOWLOGINSTANCEEXISTED("UnsupportedOperation.FlowLogInstanceExisted"),
      
     // Unable to create a flow log: the current ENI is bound with a KO model.
      UNSUPPORTEDOPERATION_FLOWLOGSNOTSUPPORTKOINSTANCEENI("UnsupportedOperation.FlowLogsNotSupportKoInstanceEni"),
@@ -855,6 +867,9 @@ public enum VpcErrorCode {
     // The relayed ENI does not support this operation.
      UNSUPPORTEDOPERATION_SUBENINOTSUPPORTTRUNKING("UnsupportedOperation.SubEniNotSupportTrunking"),
      
+    // 
+     UNSUPPORTEDOPERATION_SUBNETNOTEXISTS("UnsupportedOperation.SubnetNotExists"),
+     
     // System route. Operation is prohibited.
      UNSUPPORTEDOPERATION_SYSTEMROUTE("UnsupportedOperation.SystemRoute"),
      
@@ -906,7 +921,7 @@ public enum VpcErrorCode {
     // The resources are not in the same VPC.
      UNSUPPORTEDOPERATION_VPCMISMATCH("UnsupportedOperation.VpcMismatch"),
      
-    // 
+    // Operation failed: The tunnel is not available now.
      UNSUPPORTEDOPERATION_VPNCONNINVALIDSTATE("UnsupportedOperation.VpnConnInvalidState"),
      
     // 

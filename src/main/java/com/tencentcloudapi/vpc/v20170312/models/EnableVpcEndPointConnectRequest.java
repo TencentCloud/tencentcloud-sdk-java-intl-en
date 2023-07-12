@@ -38,6 +38,7 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
 
     /**
     * Whether to accept the request of connecting with an endpoint
+
     */
     @SerializedName("AcceptFlag")
     @Expose
@@ -76,8 +77,10 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to accept the request of connecting with an endpoint 
+     * Get Whether to accept the request of connecting with an endpoint
+ 
      * @return AcceptFlag Whether to accept the request of connecting with an endpoint
+
      */
     public Boolean getAcceptFlag() {
         return this.AcceptFlag;
@@ -85,7 +88,9 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
 
     /**
      * Set Whether to accept the request of connecting with an endpoint
+
      * @param AcceptFlag Whether to accept the request of connecting with an endpoint
+
      */
     public void setAcceptFlag(Boolean AcceptFlag) {
         this.AcceptFlag = AcceptFlag;

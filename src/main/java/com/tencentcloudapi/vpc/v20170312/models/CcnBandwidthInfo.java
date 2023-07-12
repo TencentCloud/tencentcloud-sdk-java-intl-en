@@ -79,6 +79,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String MarketId;
 
     /**
+    * The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found. 
      * @return CcnId The CCN ID that the bandwidth belongs to.
@@ -218,6 +226,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.MarketId = MarketId;
     }
 
+    /**
+     * Get The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TagSet The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TagSet The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public CcnBandwidthInfo() {
     }
 
@@ -247,6 +275,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.MarketId != null) {
             this.MarketId = new String(source.MarketId);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -261,6 +295,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
         this.setParamSimple(map, prefix + "MarketId", this.MarketId);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

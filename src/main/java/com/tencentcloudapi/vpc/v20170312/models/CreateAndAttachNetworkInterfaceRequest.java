@@ -58,7 +58,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-    * The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+    * The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
@@ -180,16 +180,16 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota. 
-     * @return SecondaryPrivateIpAddressCount The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+     * Get The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota. 
+     * @return SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
      */
     public Long getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * Set The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
-     * @param SecondaryPrivateIpAddressCount The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+     * Set The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
+     * @param SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
      */
     public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;

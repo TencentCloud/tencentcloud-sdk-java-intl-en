@@ -24,7 +24,7 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel{
 
     /**
     * The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CcnBandwidthSet")
     @Expose
@@ -47,9 +47,9 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * Get The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CcnBandwidthInfo [] getCcnBandwidthSet() {
         return this.CcnBandwidthSet;
@@ -57,9 +57,9 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * Set The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCcnBandwidthSet(CcnBandwidthInfo [] CcnBandwidthSet) {
         this.CcnBandwidthSet = CcnBandwidthSet;

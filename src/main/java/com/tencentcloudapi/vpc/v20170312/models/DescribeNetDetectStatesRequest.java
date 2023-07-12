@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
-    * The array of network detection instance `IDs`, such as [`netd-12345678`].
+    * The array of network probe IDs, such as [`netd-12345678`].
     */
     @SerializedName("NetDetectIds")
     @Expose
@@ -31,7 +31,7 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
     * Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get The array of network detection instance `IDs`, such as [`netd-12345678`]. 
-     * @return NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+     * Get The array of network probe IDs, such as [`netd-12345678`]. 
+     * @return NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
      */
     public String [] getNetDetectIds() {
         return this.NetDetectIds;
     }
 
     /**
-     * Set The array of network detection instance `IDs`, such as [`netd-12345678`].
-     * @param NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+     * Set The array of network probe IDs, such as [`netd-12345678`].
+     * @param NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
      */
     public void setNetDetectIds(String [] NetDetectIds) {
         this.NetDetectIds = NetDetectIds;
@@ -69,9 +69,9 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
      * Get Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li> 
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li> 
      * @return Filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -79,9 +79,9 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
      * Set Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
      * @param Filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -46,14 +46,14 @@ public class GetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private String SortedBy;
 
     /**
-    * The offset.
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The returned quantity.
+    * Quantity of returned items
     */
     @SerializedName("Limit")
     @Expose
@@ -123,32 +123,32 @@ public class GetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     }
 
     /**
-     * Get The offset. 
-     * @return Offset The offset.
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The offset.
-     * @param Offset The offset.
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The returned quantity. 
-     * @return Limit The returned quantity.
+     * Get Quantity of returned items 
+     * @return Limit Quantity of returned items
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The returned quantity.
-     * @param Limit The returned quantity.
+     * Set Quantity of returned items
+     * @param Limit Quantity of returned items
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -58,7 +58,7 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * The description of the flow log instance
+    * The description of the flow log.
     */
     @SerializedName("FlowLogDescription")
     @Expose
@@ -72,7 +72,7 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String CloudLogId;
 
     /**
-    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
     */
     @SerializedName("Tags")
     @Expose
@@ -180,16 +180,16 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get The description of the flow log instance 
-     * @return FlowLogDescription The description of the flow log instance
+     * Get The description of the flow log. 
+     * @return FlowLogDescription The description of the flow log.
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set The description of the flow log instance
-     * @param FlowLogDescription The description of the flow log instance
+     * Set The description of the flow log.
+     * @param FlowLogDescription The description of the flow log.
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;
@@ -212,16 +212,16 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}] 
-     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
-     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

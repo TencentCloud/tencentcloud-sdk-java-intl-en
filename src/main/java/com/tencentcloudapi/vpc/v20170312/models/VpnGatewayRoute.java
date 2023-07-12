@@ -72,14 +72,14 @@ public class VpnGatewayRoute extends AbstractModel{
     private String Type;
 
     /**
-    * Creation time
+    * The creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
+    * The update time.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -198,32 +198,32 @@ public class VpnGatewayRoute extends AbstractModel{
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get The creation time. 
+     * @return CreateTime The creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set The creation time.
+     * @param CreateTime The creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get The update time. 
+     * @return UpdateTime The update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set The update time.
+     * @param UpdateTime The update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

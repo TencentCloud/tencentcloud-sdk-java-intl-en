@@ -40,7 +40,7 @@ public class DescribeCustomerGatewaysRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+    * Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
     */
     @SerializedName("Offset")
     @Expose
@@ -98,16 +98,16 @@ public class DescribeCustomerGatewaysRequest extends AbstractModel{
     }
 
     /**
-     * Get The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction. 
-     * @return Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+     * Get Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1). 
+     * @return Offset Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
-     * @param Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+     * Set Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+     * @param Offset Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

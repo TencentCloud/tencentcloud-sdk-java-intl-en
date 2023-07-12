@@ -677,15 +677,15 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API is used to create a default VPC.
+     *This API is used to create a VPC with default settings.
 
-The default VPC is suitable for getting started with and launching public instances, and it can be used like any other VPCs. To create a standard VPC, for which you need to specify a VPC name, VPC IP range, subnet IP range, and subnet availability zone, use the regular CreateVpc API.
+To create a VPC with custom settings, such as VPC name, IP range, subnet IP range, and subnet availability zone, use `CreateVpc` instead.
 
-Under normal circumstances, this API may not create a default VPC. It depends on the network attributes (DescribeAccountAttributes) of your account.
-* If both basic network and VPC are supported, the returned VpcId is 0.
+This API may not create a default VPC. It depends on the network attributes (`DescribeAccountAttributes`) of your account.
+* If both basic network and VPC are supported, the returned `VpcId` is 0.
 * If only VPC is supported, the default VPC information is returned.
 
-You can also use the Force parameter to forcibly return a default VPC.
+You can also use the `Force` parameter to forcibly return a default VPC.
      * @param req CreateDefaultVpcRequest
      * @return CreateDefaultVpcResponse
      * @throws TencentCloudSDKException
@@ -769,7 +769,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateHaVip) is used to create a highly available virtual IP (HAVIP)
+     *This API is used to create a highly available virtual IP (HAVIP).
      * @param req CreateHaVipRequest
      * @return CreateHaVipResponse
      * @throws TencentCloudSDKException
@@ -875,7 +875,7 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
     }
 
     /**
-     *This API is used to create a network detection instance.
+     *This API is used to create a network probe.
      * @param req CreateNetDetectRequest
      * @return CreateNetDetectResponse
      * @throws TencentCloudSDKException
@@ -1676,7 +1676,7 @@ When a NAT gateway is deleted, all routes containing this gateway are deleted au
     }
 
     /**
-     *This API (DeleteNetDetect) is used to delete a network detection instance.
+     *This API is used to delete a network probe.
      * @param req DeleteNetDetectRequest
      * @return DeleteNetDetectResponse
      * @throws TencentCloudSDKException
@@ -2067,7 +2067,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API is used to delete routes of a VPN gateway.
+     *This API is used to delete routes of a VPN gateway. 
      * @param req DeleteVpnGatewayRoutesRequest
      * @return DeleteVpnGatewayRoutesResponse
      * @throws TencentCloudSDKException
@@ -2619,6 +2619,7 @@ A service provider can query all review requests created by any `APPID` under it
 
     /**
      *This API is used to obtain the download link of an IP location database.
+<font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
      * @param req DescribeIpGeolocationDatabaseUrlRequest
      * @return DescribeIpGeolocationDatabaseUrlResponse
      * @throws TencentCloudSDKException
@@ -2640,7 +2641,7 @@ A service provider can query all review requests created by any `APPID` under it
 
     /**
      *This API is used to query the location and network information of one or more IP addresses.
-This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+<font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
      * @param req DescribeIpGeolocationInfosRequest
      * @return DescribeIpGeolocationInfosResponse
      * @throws TencentCloudSDKException
@@ -3441,7 +3442,7 @@ This API is used to query only the information of IP addresses that are already 
     }
 
     /**
-     *This API (DescribeVpnGatewayCcnRoutes) is used to query VPN gateway-based CCN routes.
+     *This API is used to query VPN gateway-based CCN routes.
      * @param req DescribeVpnGatewayCcnRoutesRequest
      * @return DescribeVpnGatewayCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -3462,7 +3463,7 @@ This API is used to query only the information of IP addresses that are already 
     }
 
     /**
-     *This API is used to query destination routes of a route-based VPN gateway.
+     *This API is used to query VPN gateway routes.
      * @param req DescribeVpnGatewayRoutesRequest
      * @return DescribeVpnGatewayRoutesResponse
      * @throws TencentCloudSDKException
@@ -3806,7 +3807,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
+     *This API is used to download VPN tunnel configurations.
      * @param req DownloadCustomerGatewayConfigurationRequest
      * @return DownloadCustomerGatewayConfigurationResponse
      * @throws TencentCloudSDKException
@@ -4949,7 +4950,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (ModifyVpnGatewayCcnRoutes) is used to modify VPN gateway-based CCN routes.
+     *This API is used to modify VPN gateway-based CCN routes.
      * @param req ModifyVpnGatewayCcnRoutesRequest
      * @return ModifyVpnGatewayCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -4970,7 +4971,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API is used to modify the route status of a VPN gateway.
+     *This API is used to modify VPN gateway routes.
      * @param req ModifyVpnGatewayRoutesRequest
      * @return ModifyVpnGatewayRoutesResponse
      * @throws TencentCloudSDKException
@@ -5184,6 +5185,28 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to batch modify security group policies.
+Policies to modify must be in the same direction. `PolicyIndex` must be specified.
+     * @param req ReplaceSecurityGroupPoliciesRequest
+     * @return ReplaceSecurityGroupPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceSecurityGroupPoliciesResponse ReplaceSecurityGroupPolicies(ReplaceSecurityGroupPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceSecurityGroupPoliciesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceSecurityGroupPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReplaceSecurityGroupPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ReplaceSecurityGroupPolicy) is used to replace a single security group policy (SecurityGroupPolicy).
 Only one policy in a single direction can be replaced in each request, and the PolicyIndex parameter must be specified.
      * @param req ReplaceSecurityGroupPolicyRequest
@@ -5376,7 +5399,7 @@ Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-accoun
     }
 
     /**
-     *This API is used to specify whether to enable auto-renewal for the VPN gateway.
+     *This API is used set the auto-renewal configuration of a VPN gateway.
      * @param req SetVpnGatewaysRenewFlagRequest
      * @return SetVpnGatewaysRenewFlagResponse
      * @throws TencentCloudSDKException

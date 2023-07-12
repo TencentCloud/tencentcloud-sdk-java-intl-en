@@ -107,9 +107,9 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+    * Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -315,24 +315,24 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li> 
-     * @return Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * Get Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li> 
+     * @return Filters Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
      */
     public Filter getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
-     * @param Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * Set Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * @param Filters Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;

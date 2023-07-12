@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeNetDetectsRequest extends AbstractModel{
 
     /**
-    * The array of network detection instance `IDs`, such as [`netd-12345678`].
+    * The array of network probe IDs, such as [`netd-12345678`].
     */
     @SerializedName("NetDetectIds")
     @Expose
@@ -55,16 +55,16 @@ public class DescribeNetDetectsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get The array of network detection instance `IDs`, such as [`netd-12345678`]. 
-     * @return NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+     * Get The array of network probe IDs, such as [`netd-12345678`]. 
+     * @return NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
      */
     public String [] getNetDetectIds() {
         return this.NetDetectIds;
     }
 
     /**
-     * Set The array of network detection instance `IDs`, such as [`netd-12345678`].
-     * @param NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+     * Set The array of network probe IDs, such as [`netd-12345678`].
+     * @param NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
      */
     public void setNetDetectIds(String [] NetDetectIds) {
         this.NetDetectIds = NetDetectIds;

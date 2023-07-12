@@ -20,41 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNetDetectRequest extends AbstractModel{
+public class ReplaceSecurityGroupPoliciesResponse extends AbstractModel{
 
     /**
-    * ID of a network probe, such as `netd-12345678`.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("NetDetectId")
+    @SerializedName("RequestId")
     @Expose
-    private String NetDetectId;
+    private String RequestId;
 
     /**
-     * Get ID of a network probe, such as `netd-12345678`. 
-     * @return NetDetectId ID of a network probe, such as `netd-12345678`.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getNetDetectId() {
-        return this.NetDetectId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set ID of a network probe, such as `netd-12345678`.
-     * @param NetDetectId ID of a network probe, such as `netd-12345678`.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setNetDetectId(String NetDetectId) {
-        this.NetDetectId = NetDetectId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DeleteNetDetectRequest() {
+    public ReplaceSecurityGroupPoliciesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteNetDetectRequest(DeleteNetDetectRequest source) {
-        if (source.NetDetectId != null) {
-            this.NetDetectId = new String(source.NetDetectId);
+    public ReplaceSecurityGroupPoliciesResponse(ReplaceSecurityGroupPoliciesResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteNetDetectRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NetDetectId", this.NetDetectId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

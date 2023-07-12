@@ -30,6 +30,14 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
     private VpnGatewayRoute [] Routes;
 
     /**
+    * 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
      */
     public void setRoutes(VpnGatewayRoute [] Routes) {
         this.Routes = Routes;
+    }
+
+    /**
+     * Get 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -82,6 +110,9 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
                 this.Routes[i] = new VpnGatewayRoute(source.Routes[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +124,7 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

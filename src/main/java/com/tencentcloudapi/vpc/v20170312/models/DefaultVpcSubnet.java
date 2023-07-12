@@ -23,49 +23,118 @@ import java.util.HashMap;
 public class DefaultVpcSubnet extends AbstractModel{
 
     /**
-    * Default VpcId
+    * Default VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Default SubnetId
+    * Default subnet ID
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get Default VpcId 
-     * @return VpcId Default VpcId
+    * Default VPC name
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
+    * Default subnet name
+    */
+    @SerializedName("SubnetName")
+    @Expose
+    private String SubnetName;
+
+    /**
+    * Default subnet IP range
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
+     * Get Default VPC ID 
+     * @return VpcId Default VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Default VpcId
-     * @param VpcId Default VpcId
+     * Set Default VPC ID
+     * @param VpcId Default VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Default SubnetId 
-     * @return SubnetId Default SubnetId
+     * Get Default subnet ID 
+     * @return SubnetId Default subnet ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Default SubnetId
-     * @param SubnetId Default SubnetId
+     * Set Default subnet ID
+     * @param SubnetId Default subnet ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get Default VPC name 
+     * @return VpcName Default VPC name
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set Default VPC name
+     * @param VpcName Default VPC name
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
+     * Get Default subnet name 
+     * @return SubnetName Default subnet name
+     */
+    public String getSubnetName() {
+        return this.SubnetName;
+    }
+
+    /**
+     * Set Default subnet name
+     * @param SubnetName Default subnet name
+     */
+    public void setSubnetName(String SubnetName) {
+        this.SubnetName = SubnetName;
+    }
+
+    /**
+     * Get Default subnet IP range 
+     * @return CidrBlock Default subnet IP range
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set Default subnet IP range
+     * @param CidrBlock Default subnet IP range
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
     }
 
     public DefaultVpcSubnet() {
@@ -82,6 +151,15 @@ public class DefaultVpcSubnet extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
     }
 
 
@@ -91,6 +169,9 @@ public class DefaultVpcSubnet extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
 
     }
 }

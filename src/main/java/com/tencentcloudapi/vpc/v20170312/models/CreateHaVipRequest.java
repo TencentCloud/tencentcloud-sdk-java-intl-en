@@ -51,6 +51,13 @@ public class CreateHaVipRequest extends AbstractModel{
     private String Vip;
 
     /**
+    * The ID of the ENI associated with the HAVIP.
+    */
+    @SerializedName("NetworkInterfaceId")
+    @Expose
+    private String NetworkInterfaceId;
+
+    /**
      * Get The `ID` of the VPC to which the `HAVIP` belongs. 
      * @return VpcId The `ID` of the VPC to which the `HAVIP` belongs.
      */
@@ -114,6 +121,22 @@ public class CreateHaVipRequest extends AbstractModel{
         this.Vip = Vip;
     }
 
+    /**
+     * Get The ID of the ENI associated with the HAVIP. 
+     * @return NetworkInterfaceId The ID of the ENI associated with the HAVIP.
+     */
+    public String getNetworkInterfaceId() {
+        return this.NetworkInterfaceId;
+    }
+
+    /**
+     * Set The ID of the ENI associated with the HAVIP.
+     * @param NetworkInterfaceId The ID of the ENI associated with the HAVIP.
+     */
+    public void setNetworkInterfaceId(String NetworkInterfaceId) {
+        this.NetworkInterfaceId = NetworkInterfaceId;
+    }
+
     public CreateHaVipRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateHaVipRequest extends AbstractModel{
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateHaVipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "HaVipName", this.HaVipName);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
 
     }
 }

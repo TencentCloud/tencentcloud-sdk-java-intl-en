@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateNetDetectRequest extends AbstractModel{
 
     /**
-    * The `ID` of a `VPC` instance, such as `vpc-12345678`.
+    * The ID of a VPC instance, such as `vpc-12345678`.
     */
     @SerializedName("VpcId")
     @Expose
@@ -53,24 +53,26 @@ public class CreateNetDetectRequest extends AbstractModel{
     /**
     * Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
     */
     @SerializedName("NextHopType")
     @Expose
     private String NextHopType;
 
     /**
-    * Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+    * ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
     */
     @SerializedName("NextHopDestination")
     @Expose
@@ -84,16 +86,16 @@ If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `cc
     private String NetDetectDescription;
 
     /**
-     * Get The `ID` of a `VPC` instance, such as `vpc-12345678`. 
-     * @return VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * Get The ID of a VPC instance, such as `vpc-12345678`. 
+     * @return VpcId The ID of a VPC instance, such as `vpc-12345678`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The `ID` of a `VPC` instance, such as `vpc-12345678`.
-     * @param VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * Set The ID of a VPC instance, such as `vpc-12345678`.
+     * @param VpcId The ID of a VPC instance, such as `vpc-12345678`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -150,18 +152,20 @@ If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `cc
     /**
      * Get Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway. 
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop. 
      * @return NextHopType Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
      */
     public String getNextHopType() {
         return this.NextHopType;
@@ -170,58 +174,64 @@ If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `cc
     /**
      * Set Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
      * @param NextHopType Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
      */
     public void setNextHopType(String NextHopType) {
         this.NextHopType = NextHopType;
     }
 
     /**
-     * Get Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`. 
-     * @return NextHopDestination Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+     * Get ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop. 
+     * @return NextHopDestination ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
      */
     public String getNextHopDestination() {
         return this.NextHopDestination;
     }
 
     /**
-     * Set Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
-     * @param NextHopDestination Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+     * Set ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
+     * @param NextHopDestination ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
      */
     public void setNextHopDestination(String NextHopDestination) {
         this.NextHopDestination = NextHopDestination;

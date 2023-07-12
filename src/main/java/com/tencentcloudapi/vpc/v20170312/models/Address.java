@@ -169,6 +169,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Tag [] TagSet;
 
     /**
+    * The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeadlineDate")
+    @Expose
+    private String DeadlineDate;
+
+    /**
+    * The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 
+    */
+    @SerializedName("AntiDDoSPackageId")
+    @Expose
+    private String AntiDDoSPackageId;
+
+    /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
      * @return AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
@@ -524,6 +547,62 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TagSet = TagSet;
     }
 
+    /**
+     * Get The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DeadlineDate The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDeadlineDate() {
+        return this.DeadlineDate;
+    }
+
+    /**
+     * Set The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DeadlineDate The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDeadlineDate(String DeadlineDate) {
+        this.DeadlineDate = DeadlineDate;
+    }
+
+    /**
+     * Get The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return InstanceType The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param InstanceType The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get  
+     * @return AntiDDoSPackageId 
+     */
+    public String getAntiDDoSPackageId() {
+        return this.AntiDDoSPackageId;
+    }
+
+    /**
+     * Set 
+     * @param AntiDDoSPackageId 
+     */
+    public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
+        this.AntiDDoSPackageId = AntiDDoSPackageId;
+    }
+
     public Address() {
     }
 
@@ -592,6 +671,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.DeadlineDate != null) {
+            this.DeadlineDate = new String(source.DeadlineDate);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.AntiDDoSPackageId != null) {
+            this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
+        }
     }
 
 
@@ -618,6 +706,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeVpnGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
-    * The ID of the VPN gateway instance.
+    * Instance ID of the VPN gateway
     */
     @SerializedName("VpnGatewayId")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeVpnGatewayCcnRoutesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get The ID of the VPN gateway instance. 
-     * @return VpnGatewayId The ID of the VPN gateway instance.
+     * Get Instance ID of the VPN gateway 
+     * @return VpnGatewayId Instance ID of the VPN gateway
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set The ID of the VPN gateway instance.
-     * @param VpnGatewayId The ID of the VPN gateway instance.
+     * Set Instance ID of the VPN gateway
+     * @param VpnGatewayId Instance ID of the VPN gateway
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
