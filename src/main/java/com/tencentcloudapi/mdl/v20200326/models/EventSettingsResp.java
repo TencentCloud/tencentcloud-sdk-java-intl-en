@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EventSettingsResp extends AbstractModel{
 
     /**
-    * Only `INPUT_SWITCH` is supported currently.
+    * Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
     */
     @SerializedName("EventType")
     @Expose
@@ -79,16 +79,16 @@ public class EventSettingsResp extends AbstractModel{
     private String SpliceDuration;
 
     /**
-     * Get Only `INPUT_SWITCH` is supported currently. 
-     * @return EventType Only `INPUT_SWITCH` is supported currently.
+     * Get Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. 
+     * @return EventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Only `INPUT_SWITCH` is supported currently.
-     * @param EventType Only `INPUT_SWITCH` is supported currently.
+     * Set Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
+     * @param EventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
