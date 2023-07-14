@@ -692,6 +692,27 @@ This API only supports connections of version 3.0.
     }
 
     /**
+     *This API is used to get a request signature that can prevent parameter tampering in the process of triggering orders, getting quotes, or activating subscription services.
+     * @param req DescribeAuthSignatureRequest
+     * @return DescribeAuthSignatureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthSignatureResponse DescribeAuthSignature(DescribeAuthSignatureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuthSignatureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuthSignature");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query names of blocked custom headers.
      * @param req DescribeBlackHeaderRequest
      * @return DescribeBlackHeaderResponse

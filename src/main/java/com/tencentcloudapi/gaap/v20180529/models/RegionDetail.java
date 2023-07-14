@@ -76,6 +76,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long FeatureBitmap;
 
     /**
+    * Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SupportFeature")
+    @Expose
+    private SupportFeature SupportFeature;
+
+    /**
      * Get Region ID 
      * @return RegionId Region ID
      */
@@ -215,6 +223,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.FeatureBitmap = FeatureBitmap;
     }
 
+    /**
+     * Get Network support 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SupportFeature Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SupportFeature getSupportFeature() {
+        return this.SupportFeature;
+    }
+
+    /**
+     * Set Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SupportFeature Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSupportFeature(SupportFeature SupportFeature) {
+        this.SupportFeature = SupportFeature;
+    }
+
     public RegionDetail() {
     }
 
@@ -241,6 +269,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.FeatureBitmap != null) {
             this.FeatureBitmap = new Long(source.FeatureBitmap);
         }
+        if (source.SupportFeature != null) {
+            this.SupportFeature = new SupportFeature(source.SupportFeature);
+        }
     }
 
 
@@ -254,6 +285,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
         this.setParamSimple(map, prefix + "IDCType", this.IDCType);
         this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+        this.setParamObj(map, prefix + "SupportFeature.", this.SupportFeature);
 
     }
 }
