@@ -24,14 +24,17 @@ public class ProductEventList extends AbstractModel{
 
     /**
     * Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("EventList")
     @Expose
     private EventDetail [] EventList;
 
     /**
-     * Get Detailed event information. 
+     * Get Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained. 
      * @return EventList Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public EventDetail [] getEventList() {
         return this.EventList;
@@ -39,7 +42,9 @@ public class ProductEventList extends AbstractModel{
 
     /**
      * Set Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
      * @param EventList Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setEventList(EventDetail [] EventList) {
         this.EventList = EventList;

@@ -194,6 +194,48 @@ Notes:<br>
     }
 
     /**
+     *This API is used to query the customer information.
+     * @param req DescribeCustomerInfoRequest
+     * @return DescribeCustomerInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerInfoResponse DescribeCustomerInfo(DescribeCustomerInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomerInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomerInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomerInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of customer UINs.
+     * @param req DescribeCustomerUinRequest
+     * @return DescribeCustomerUinResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerUinResponse DescribeCustomerUin(DescribeCustomerUinRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomerUinResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomerUinResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomerUin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain country/region codes.
      * @param req GetCountryCodesRequest
      * @return GetCountryCodesResponse
@@ -207,6 +249,27 @@ Notes:<br>
                 Type type = new TypeToken<JsonResponseModel<GetCountryCodesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetCountryCodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the account verification status.
+     * @param req QueryAccountVerificationStatusRequest
+     * @return QueryAccountVerificationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAccountVerificationStatusResponse QueryAccountVerificationStatus(QueryAccountVerificationStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAccountVerificationStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAccountVerificationStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryAccountVerificationStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -249,6 +312,27 @@ Notes:<br>
                 Type type = new TypeToken<JsonResponseModel<QueryCreditByUinListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryCreditByUinList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query customer credits.
+     * @param req QueryCreditQuotaRequest
+     * @return QueryCreditQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCreditQuotaResponse QueryCreditQuota(QueryCreditQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCreditQuotaResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCreditQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCreditQuota");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

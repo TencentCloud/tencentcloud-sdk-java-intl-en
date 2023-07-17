@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class EventDetail extends AbstractModel{
 
     /**
-    * Product ID
+    * Product ID.
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * Product name
+    * Product name.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Region ID
+    * Region ID.
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * Region name
+    * Region name.
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * Event start time
+    * Event start time.
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,87 +65,87 @@ public class EventDetail extends AbstractModel{
     private String EndTime;
 
     /**
-    * Current status: Normally, Informational, Degradation
+    * Current status: Normally, Informational, Degradation.
     */
     @SerializedName("CurrentStatus")
     @Expose
     private String CurrentStatus;
 
     /**
-     * Get Product ID 
-     * @return ProductId Product ID
+     * Get Product ID. 
+     * @return ProductId Product ID.
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set Product ID
-     * @param ProductId Product ID
+     * Set Product ID.
+     * @param ProductId Product ID.
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get Product name 
-     * @return ProductName Product name
+     * Get Product name. 
+     * @return ProductName Product name.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product name
-     * @param ProductName Product name
+     * Set Product name.
+     * @param ProductName Product name.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Region ID 
-     * @return RegionId Region ID
+     * Get Region ID. 
+     * @return RegionId Region ID.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID
-     * @param RegionId Region ID
+     * Set Region ID.
+     * @param RegionId Region ID.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Region name 
-     * @return RegionName Region name
+     * Get Region name. 
+     * @return RegionName Region name.
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region name
-     * @param RegionName Region name
+     * Set Region name.
+     * @param RegionName Region name.
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get Event start time 
-     * @return StartTime Event start time
+     * Get Event start time. 
+     * @return StartTime Event start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Event start time
-     * @param StartTime Event start time
+     * Set Event start time.
+     * @param StartTime Event start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -168,16 +168,16 @@ public class EventDetail extends AbstractModel{
     }
 
     /**
-     * Get Current status: Normally, Informational, Degradation 
-     * @return CurrentStatus Current status: Normally, Informational, Degradation
+     * Get Current status: Normally, Informational, Degradation. 
+     * @return CurrentStatus Current status: Normally, Informational, Degradation.
      */
     public String getCurrentStatus() {
         return this.CurrentStatus;
     }
 
     /**
-     * Set Current status: Normally, Informational, Degradation
-     * @param CurrentStatus Current status: Normally, Informational, Degradation
+     * Set Current status: Normally, Informational, Degradation.
+     * @param CurrentStatus Current status: Normally, Informational, Degradation.
      */
     public void setCurrentStatus(String CurrentStatus) {
         this.CurrentStatus = CurrentStatus;

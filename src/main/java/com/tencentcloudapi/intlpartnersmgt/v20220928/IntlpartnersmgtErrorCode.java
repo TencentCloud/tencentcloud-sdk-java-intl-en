@@ -9,8 +9,14 @@ public enum IntlpartnersmgtErrorCode {
     // FailedOperation.MailIsRegistered
      FAILEDOPERATION_MAILISREGISTERED("FailedOperation.MailIsRegistered"),
      
+    // Invalid UIN
+     FAILEDOPERATION_UININVALID("FailedOperation.UinInvalid"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
+     
+    // Invalid parameter
+     INVALIDPARAMETER("InvalidParameter"),
      
     // InvalidParameter.AccountTypeContentIncorrect
      INVALIDPARAMETER_ACCOUNTTYPECONTENTINCORRECT("InvalidParameter.AccountTypeContentIncorrect"),
@@ -66,6 +72,9 @@ public enum IntlpartnersmgtErrorCode {
     // InvalidParameterValue.PhoneNumEmpty
      INVALIDPARAMETERVALUE_PHONENUMEMPTY("InvalidParameterValue.PhoneNumEmpty"),
      
+    // Missing parameter
+     MISSINGPARAMETER("MissingParameter"),
+     
     // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
@@ -82,7 +91,10 @@ public enum IntlpartnersmgtErrorCode {
      UNAUTHORIZEDOPERATION_NOTCUSTOMERUIN("UnauthorizedOperation.NotCustomerUin"),
      
     // The current user doesn’t have permission for the operation.
-     UNAUTHORIZEDOPERATION_UINNOAUTH("UnauthorizedOperation.UinNoAuth");
+     UNAUTHORIZEDOPERATION_UINNOAUTH("UnauthorizedOperation.UinNoAuth"),
+     
+    // Unknown parameter
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private IntlpartnersmgtErrorCode (String value){
