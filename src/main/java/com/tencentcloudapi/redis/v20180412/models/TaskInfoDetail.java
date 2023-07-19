@@ -23,252 +23,252 @@ import java.util.HashMap;
 public class TaskInfoDetail extends AbstractModel{
 
     /**
-    * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * Start time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Task type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * End time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Task status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return TaskId Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param TaskId Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Start time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return StartTime Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param StartTime Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskType Task type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return TaskType Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskType Task type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param TaskType Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceName Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceName Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Project ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return ProjectId Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param ProjectId Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Task progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Progress Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Progress Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get End time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return EndTime Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param EndTime Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Task status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Result Task status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set Task status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Result Task status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setResult(Long Result) {
         this.Result = Result;

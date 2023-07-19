@@ -23,99 +23,69 @@ import java.util.HashMap;
 public class KillMasterGroupRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+    * A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Node information of a single-AZ deployed instance
+    * Shard ID of a sharded cluster
     */
     @SerializedName("ShardIds")
     @Expose
     private Long [] ShardIds;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 
-     * @return Password 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * Get A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/). 
+     * @return Password A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-     * @param Password 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * Set A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+     * @param Password A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Node information of a single-AZ deployed instance 
-     * @return ShardIds Node information of a single-AZ deployed instance
+     * Get Shard ID of a sharded cluster 
+     * @return ShardIds Shard ID of a sharded cluster
      */
     public Long [] getShardIds() {
         return this.ShardIds;
     }
 
     /**
-     * Set Node information of a single-AZ deployed instance
-     * @param ShardIds Node information of a single-AZ deployed instance
+     * Set Shard ID of a sharded cluster
+     * @param ShardIds Shard ID of a sharded cluster
      */
     public void setShardIds(Long [] ShardIds) {
         this.ShardIds = ShardIds;

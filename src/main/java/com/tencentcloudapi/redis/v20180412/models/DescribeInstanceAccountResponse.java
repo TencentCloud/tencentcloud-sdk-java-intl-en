@@ -23,16 +23,16 @@ import java.util.HashMap;
 public class DescribeInstanceAccountResponse extends AbstractModel{
 
     /**
-    * Account details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-    * Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -46,40 +46,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Account details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Accounts Account details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Account details 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Accounts Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Account details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Accounts Account details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Accounts Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

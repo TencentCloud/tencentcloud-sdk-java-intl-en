@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class ModifyAutoBackupConfigRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,23 +45,27 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String TimePeriod;
 
     /**
-    * Automatic backup type. `1`: Scheduled rollback.
+    * Automatic backup type.  Valid value:  `1` (scheduled backup).
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -99,16 +104,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Automatic backup type. `1`: Scheduled rollback. 
-     * @return AutoBackupType Automatic backup type. `1`: Scheduled rollback.
+     * Get Automatic backup type.  Valid value:  `1` (scheduled backup). 
+     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Automatic backup type. `1`: Scheduled rollback.
-     * @param AutoBackupType Automatic backup type. `1`: Scheduled rollback.
+     * Set Automatic backup type.  Valid value:  `1` (scheduled backup).
+     * @param AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;

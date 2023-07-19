@@ -30,28 +30,28 @@ public class InstanceClusterNode extends AbstractModel{
     private String Name;
 
     /**
-    * ID of the runtime node of the instance
+    * ID of the runtime node of an instance
     */
     @SerializedName("RunId")
     @Expose
     private String RunId;
 
     /**
-    * Cluster role. 0: master; 1: replica
+    * Cluster role. Valid values:  - `0` (master) - `1` (replica)
     */
     @SerializedName("Role")
     @Expose
     private Long Role;
 
     /**
-    * Node status. 0: readwrite; 1: read; 2: backup
+    * Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Service status. 0: down; 1: on
+    * Service status. Valid values: `0` (down), `1` (on).
     */
     @SerializedName("Connected")
     @Expose
@@ -72,7 +72,7 @@ public class InstanceClusterNode extends AbstractModel{
     private String DownTime;
 
     /**
-    * Distribution of node slots
+    * Node slot distribution range
     */
     @SerializedName("Slots")
     @Expose
@@ -86,14 +86,14 @@ public class InstanceClusterNode extends AbstractModel{
     private Long Keys;
 
     /**
-    * Node QPS
+    * Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * Node QPS slope
+    * QPS slope of a node
     */
     @SerializedName("QpsSlope")
     @Expose
@@ -130,64 +130,64 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get ID of the runtime node of the instance 
-     * @return RunId ID of the runtime node of the instance
+     * Get ID of the runtime node of an instance 
+     * @return RunId ID of the runtime node of an instance
      */
     public String getRunId() {
         return this.RunId;
     }
 
     /**
-     * Set ID of the runtime node of the instance
-     * @param RunId ID of the runtime node of the instance
+     * Set ID of the runtime node of an instance
+     * @param RunId ID of the runtime node of an instance
      */
     public void setRunId(String RunId) {
         this.RunId = RunId;
     }
 
     /**
-     * Get Cluster role. 0: master; 1: replica 
-     * @return Role Cluster role. 0: master; 1: replica
+     * Get Cluster role. Valid values:  - `0` (master) - `1` (replica) 
+     * @return Role Cluster role. Valid values:  - `0` (master) - `1` (replica)
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set Cluster role. 0: master; 1: replica
-     * @param Role Cluster role. 0: master; 1: replica
+     * Set Cluster role. Valid values:  - `0` (master) - `1` (replica)
+     * @param Role Cluster role. Valid values:  - `0` (master) - `1` (replica)
      */
     public void setRole(Long Role) {
         this.Role = Role;
     }
 
     /**
-     * Get Node status. 0: readwrite; 1: read; 2: backup 
-     * @return Status Node status. 0: readwrite; 1: read; 2: backup
+     * Get Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup) 
+     * @return Status Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Node status. 0: readwrite; 1: read; 2: backup
-     * @param Status Node status. 0: readwrite; 1: read; 2: backup
+     * Set Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
+     * @param Status Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Service status. 0: down; 1: on 
-     * @return Connected Service status. 0: down; 1: on
+     * Get Service status. Valid values: `0` (down), `1` (on). 
+     * @return Connected Service status. Valid values: `0` (down), `1` (on).
      */
     public Long getConnected() {
         return this.Connected;
     }
 
     /**
-     * Set Service status. 0: down; 1: on
-     * @param Connected Service status. 0: down; 1: on
+     * Set Service status. Valid values: `0` (down), `1` (on).
+     * @param Connected Service status. Valid values: `0` (down), `1` (on).
      */
     public void setConnected(Long Connected) {
         this.Connected = Connected;
@@ -226,16 +226,16 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get Distribution of node slots 
-     * @return Slots Distribution of node slots
+     * Get Node slot distribution range 
+     * @return Slots Node slot distribution range
      */
     public String getSlots() {
         return this.Slots;
     }
 
     /**
-     * Set Distribution of node slots
-     * @param Slots Distribution of node slots
+     * Set Node slot distribution range
+     * @param Slots Node slot distribution range
      */
     public void setSlots(String Slots) {
         this.Slots = Slots;
@@ -258,32 +258,32 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get Node QPS 
-     * @return Qps Node QPS
+     * Get Node QPS Number of executions per second on sharded nodes Unit: Counts/sec 
+     * @return Qps Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Node QPS
-     * @param Qps Node QPS
+     * Set Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
+     * @param Qps Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get Node QPS slope 
-     * @return QpsSlope Node QPS slope
+     * Get QPS slope of a node 
+     * @return QpsSlope QPS slope of a node
      */
     public Float getQpsSlope() {
         return this.QpsSlope;
     }
 
     /**
-     * Set Node QPS slope
-     * @param QpsSlope Node QPS slope
+     * Set QPS slope of a node
+     * @param QpsSlope QPS slope of a node
      */
     public void setQpsSlope(Float QpsSlope) {
         this.QpsSlope = QpsSlope;

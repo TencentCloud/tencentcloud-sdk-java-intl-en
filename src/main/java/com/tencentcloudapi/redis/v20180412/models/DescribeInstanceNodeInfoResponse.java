@@ -30,38 +30,38 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     private Long ProxyCount;
 
     /**
-    * Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Proxy")
     @Expose
     private ProxyNodes [] Proxy;
 
     /**
-    * The number of redis nodes
+    * The number of Redis nodes
     */
     @SerializedName("RedisCount")
     @Expose
     private Long RedisCount;
 
     /**
-    * Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Redis")
     @Expose
     private RedisNodes [] Redis;
 
     /**
-    * The number of tendis nodes
+    * This parameter has been disused.
     */
     @SerializedName("TendisCount")
     @Expose
     private Long TendisCount;
 
     /**
-    * Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tendis")
     @Expose
@@ -91,92 +91,92 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Proxy Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Proxy Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public ProxyNodes [] getProxy() {
         return this.Proxy;
     }
 
     /**
-     * Set Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Proxy Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Proxy Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setProxy(ProxyNodes [] Proxy) {
         this.Proxy = Proxy;
     }
 
     /**
-     * Get The number of redis nodes 
-     * @return RedisCount The number of redis nodes
+     * Get The number of Redis nodes 
+     * @return RedisCount The number of Redis nodes
      */
     public Long getRedisCount() {
         return this.RedisCount;
     }
 
     /**
-     * Set The number of redis nodes
-     * @param RedisCount The number of redis nodes
+     * Set The number of Redis nodes
+     * @param RedisCount The number of Redis nodes
      */
     public void setRedisCount(Long RedisCount) {
         this.RedisCount = RedisCount;
     }
 
     /**
-     * Get Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Redis Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Redis Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public RedisNodes [] getRedis() {
         return this.Redis;
     }
 
     /**
-     * Set Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Redis Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Redis Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setRedis(RedisNodes [] Redis) {
         this.Redis = Redis;
     }
 
     /**
-     * Get The number of tendis nodes 
-     * @return TendisCount The number of tendis nodes
+     * Get This parameter has been disused. 
+     * @return TendisCount This parameter has been disused.
      */
     public Long getTendisCount() {
         return this.TendisCount;
     }
 
     /**
-     * Set The number of tendis nodes
-     * @param TendisCount The number of tendis nodes
+     * Set This parameter has been disused.
+     * @param TendisCount This parameter has been disused.
      */
     public void setTendisCount(Long TendisCount) {
         this.TendisCount = TendisCount;
     }
 
     /**
-     * Get Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Tendis Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained. 
+     * @return Tendis This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public TendisNodes [] getTendis() {
         return this.Tendis;
     }
 
     /**
-     * Set Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Tendis Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param Tendis This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public void setTendis(TendisNodes [] Tendis) {
         this.Tendis = Tendis;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SecurityGroupsInboundAndOutbound extends AbstractModel{
 
     /**
-    * Action to be executed
+    * Identify whether the IP and port for accessing the database are allowed
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * IP addresses
+    * IP address for accessing the database
     */
     @SerializedName("Ip")
     @Expose
@@ -51,32 +51,32 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel{
     private String Proto;
 
     /**
-     * Get Action to be executed 
-     * @return Action Action to be executed
+     * Get Identify whether the IP and port for accessing the database are allowed 
+     * @return Action Identify whether the IP and port for accessing the database are allowed
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action to be executed
-     * @param Action Action to be executed
+     * Set Identify whether the IP and port for accessing the database are allowed
+     * @param Action Identify whether the IP and port for accessing the database are allowed
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get IP addresses 
-     * @return Ip IP addresses
+     * Get IP address for accessing the database 
+     * @return Ip IP address for accessing the database
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP addresses
-     * @param Ip IP addresses
+     * Set IP address for accessing the database
+     * @param Ip IP address for accessing the database
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

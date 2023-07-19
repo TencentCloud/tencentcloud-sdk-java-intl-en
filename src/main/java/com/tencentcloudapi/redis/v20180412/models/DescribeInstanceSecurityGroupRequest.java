@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeInstanceSecurityGroupRequest extends AbstractModel{
 
     /**
-    * List of instances
+    * List of instance IDs,  such as "crs-f2ho5rsz\n".
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get List of instances 
-     * @return InstanceIds List of instances
+     * Get List of instance IDs,  such as "crs-f2ho5rsz\n". 
+     * @return InstanceIds List of instance IDs,  such as "crs-f2ho5rsz\n".
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instances
-     * @param InstanceIds List of instances
+     * Set List of instance IDs,  such as "crs-f2ho5rsz\n".
+     * @param InstanceIds List of instance IDs,  such as "crs-f2ho5rsz\n".
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

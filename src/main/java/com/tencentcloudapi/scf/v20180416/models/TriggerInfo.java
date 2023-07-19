@@ -108,6 +108,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String TriggerAttribute;
 
     /**
+    * Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get Whether to enable 
      * @return Enable Whether to enable
      */
@@ -258,7 +266,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Minimum resource ID of trigger 
      * @return ResourceId Minimum resource ID of trigger
+     * @deprecated
      */
+    @Deprecated
     public String getResourceId() {
         return this.ResourceId;
     }
@@ -266,7 +276,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Minimum resource ID of trigger
      * @param ResourceId Minimum resource ID of trigger
+     * @deprecated
      */
+    @Deprecated
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
@@ -274,7 +286,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Trigger-Function binding status 
      * @return BindStatus Trigger-Function binding status
+     * @deprecated
      */
+    @Deprecated
     public String getBindStatus() {
         return this.BindStatus;
     }
@@ -282,7 +296,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Trigger-Function binding status
      * @param BindStatus Trigger-Function binding status
+     * @deprecated
      */
+    @Deprecated
     public void setBindStatus(String BindStatus) {
         this.BindStatus = BindStatus;
     }
@@ -290,7 +306,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console 
      * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @deprecated
      */
+    @Deprecated
     public String getTriggerAttribute() {
         return this.TriggerAttribute;
     }
@@ -298,9 +316,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
      * @param TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @deprecated
      */
+    @Deprecated
     public void setTriggerAttribute(String TriggerAttribute) {
         this.TriggerAttribute = TriggerAttribute;
+    }
+
+    /**
+     * Get Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Description Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Description Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public TriggerInfo() {
@@ -347,6 +387,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TriggerAttribute != null) {
             this.TriggerAttribute = new String(source.TriggerAttribute);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -366,6 +409,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class RedisNode extends AbstractModel{
 
     /**
-    * Number of keys on the node
+    * Number of keys on Redis nodes
     */
     @SerializedName("Keys")
     @Expose
     private Long Keys;
 
     /**
-    * Distribution of node slots
+    * Slot distribution range for Redis node.  Value range:  0-5460.
     */
     @SerializedName("Slot")
     @Expose
     private String Slot;
 
     /**
-    * Node ID
+    * Node sequence ID
     */
     @SerializedName("NodeId")
     @Expose
@@ -58,48 +58,48 @@ public class RedisNode extends AbstractModel{
     private String Role;
 
     /**
-     * Get Number of keys on the node 
-     * @return Keys Number of keys on the node
+     * Get Number of keys on Redis nodes 
+     * @return Keys Number of keys on Redis nodes
      */
     public Long getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Number of keys on the node
-     * @param Keys Number of keys on the node
+     * Set Number of keys on Redis nodes
+     * @param Keys Number of keys on Redis nodes
      */
     public void setKeys(Long Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get Distribution of node slots 
-     * @return Slot Distribution of node slots
+     * Get Slot distribution range for Redis node.  Value range:  0-5460. 
+     * @return Slot Slot distribution range for Redis node.  Value range:  0-5460.
      */
     public String getSlot() {
         return this.Slot;
     }
 
     /**
-     * Set Distribution of node slots
-     * @param Slot Distribution of node slots
+     * Set Slot distribution range for Redis node.  Value range:  0-5460.
+     * @param Slot Slot distribution range for Redis node.  Value range:  0-5460.
      */
     public void setSlot(String Slot) {
         this.Slot = Slot;
     }
 
     /**
-     * Get Node ID 
-     * @return NodeId Node ID
+     * Get Node sequence ID 
+     * @return NodeId Node sequence ID
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Node ID
-     * @param NodeId Node ID
+     * Set Node sequence ID
+     * @param NodeId Node sequence ID
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;

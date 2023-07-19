@@ -65,7 +65,8 @@ public class PublishVersionResponse extends AbstractModel{
     private Long Timeout;
 
     /**
-    * Function running environment
+    * Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Runtime")
     @Expose
@@ -183,15 +184,19 @@ public class PublishVersionResponse extends AbstractModel{
 
     /**
      * Get Function running environment 
-     * @return Runtime Function running environment
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Runtime Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Function running environment
-     * @param Runtime Function running environment
+     * Set Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Runtime Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;

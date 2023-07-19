@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeInstanceShardsRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Whether to filter out the replica node information
+    * Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
     */
     @SerializedName("FilterSlave")
     @Expose
     private Boolean FilterSlave;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Whether to filter out the replica node information 
-     * @return FilterSlave Whether to filter out the replica node information
+     * Get Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no). 
+     * @return FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
      */
     public Boolean getFilterSlave() {
         return this.FilterSlave;
     }
 
     /**
-     * Set Whether to filter out the replica node information
-     * @param FilterSlave Whether to filter out the replica node information
+     * Set Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+     * @param FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
      */
     public void setFilterSlave(Boolean FilterSlave) {
         this.FilterSlave = FilterSlave;

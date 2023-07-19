@@ -102,6 +102,9 @@ public enum ScfErrorCode {
     // You cannot publish a version in the current function state. Please try again when the state is normal.
      FAILEDOPERATION_PUBLISHVERSION("FailedOperation.PublishVersion"),
      
+    // 
+     FAILEDOPERATION_QUERYERROR("FailedOperation.QueryError"),
+     
     // The value of ReservedExceedTotal exceeds the limit.
      FAILEDOPERATION_RESERVEDEXCEEDTOTAL("FailedOperation.ReservedExceedTotal"),
      
@@ -510,6 +513,9 @@ public enum ScfErrorCode {
     // This account has been isolated.
      OPERATIONDENIED_ACCOUNTISOLATE("OperationDenied.AccountIsolate"),
      
+    // 
+     OPERATIONDENIED_ACCOUNTNOTEXISTS("OperationDenied.AccountNotExists"),
+     
     // The resource is in use.
      RESOURCEINUSE("ResourceInUse"),
      
@@ -662,6 +668,9 @@ public enum ScfErrorCode {
      
     // Unsupported region.
      UNSUPPORTEDOPERATION_NOTSUPPORTREGION("UnsupportedOperation.NotSupportRegion"),
+     
+    // 
+     UNSUPPORTEDOPERATION_PUBLISHVERSION("UnsupportedOperation.PublishVersion"),
      
     // This region is not supported.
      UNSUPPORTEDOPERATION_REGION("UnsupportedOperation.Region"),

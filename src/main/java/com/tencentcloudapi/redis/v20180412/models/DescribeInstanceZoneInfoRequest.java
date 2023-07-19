@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeInstanceZoneInfoRequest extends AbstractModel{
 
     /**
-    * Instance ID, such as crs-6ubhgouj
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID, such as crs-6ubhgouj 
-     * @return InstanceId Instance ID, such as crs-6ubhgouj
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, such as crs-6ubhgouj
-     * @param InstanceId Instance ID, such as crs-6ubhgouj
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -37,7 +37,8 @@ public class Function extends AbstractModel{
     private String AddTime;
 
     /**
-    * Running
+    * Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Runtime")
     @Expose
@@ -169,16 +170,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Running 
-     * @return Runtime Running
+     * Get Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return Runtime Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Running
-     * @param Runtime Running
+     * Set Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param Runtime Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;

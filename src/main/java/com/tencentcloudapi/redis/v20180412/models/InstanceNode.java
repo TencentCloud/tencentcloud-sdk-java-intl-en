@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InstanceNode extends AbstractModel{
 
     /**
-    * Id
+    * Instance ID
     */
     @SerializedName("Id")
     @Expose
@@ -37,16 +37,16 @@ public class InstanceNode extends AbstractModel{
     private InstanceClusterNode [] InstanceClusterNode;
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get Instance ID 
+     * @return Id Instance ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set Instance ID
+     * @param Id Instance ID
      */
     public void setId(Long Id) {
         this.Id = Id;

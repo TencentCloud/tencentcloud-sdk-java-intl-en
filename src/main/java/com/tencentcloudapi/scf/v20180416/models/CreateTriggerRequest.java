@@ -79,6 +79,13 @@ public class CreateTriggerRequest extends AbstractModel{
     private String CustomArgument;
 
     /**
+    * Trigger description
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get Name of the function bound to the new trigger 
      * @return FunctionName Name of the function bound to the new trigger
      */
@@ -206,6 +213,22 @@ public class CreateTriggerRequest extends AbstractModel{
         this.CustomArgument = CustomArgument;
     }
 
+    /**
+     * Get Trigger description 
+     * @return Description Trigger description
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Trigger description
+     * @param Description Trigger description
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public CreateTriggerRequest() {
     }
 
@@ -238,6 +261,9 @@ public class CreateTriggerRequest extends AbstractModel{
         if (source.CustomArgument != null) {
             this.CustomArgument = new String(source.CustomArgument);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class CreateTriggerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

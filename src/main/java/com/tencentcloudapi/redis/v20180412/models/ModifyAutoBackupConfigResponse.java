@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAutoBackupConfigResponse extends AbstractModel{
 
     /**
-    * Automatic backup type: 1 (scheduled rollback)
+    * Automatic backup type.  Valid value:  `1` (scheduled backup).
     */
     @SerializedName("AutoBackupType")
     @Expose
@@ -37,7 +37,7 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String [] WeekDays;
 
     /**
-    * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+    * Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
     */
     @SerializedName("TimePeriod")
     @Expose
@@ -58,16 +58,16 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Automatic backup type: 1 (scheduled rollback) 
-     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
+     * Get Automatic backup type.  Valid value:  `1` (scheduled backup). 
+     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Automatic backup type: 1 (scheduled rollback)
-     * @param AutoBackupType Automatic backup type: 1 (scheduled rollback)
+     * Set Automatic backup type.  Valid value:  `1` (scheduled backup).
+     * @param AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
@@ -90,16 +90,16 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00. 
-     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+     * Get Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”. 
+     * @return TimePeriod Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
-     * @param TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+     * Set Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+     * @param TimePeriod Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;

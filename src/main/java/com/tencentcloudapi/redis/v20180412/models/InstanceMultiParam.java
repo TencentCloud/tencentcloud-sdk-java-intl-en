@@ -30,14 +30,14 @@ public class InstanceMultiParam extends AbstractModel{
     private String ParamName;
 
     /**
-    * Parameter type: Multi
+    * Parameter Type such as  `MULTI`
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * Whether restart is required after a modification is made. Valid values: true, false
+    * Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -58,21 +58,21 @@ public class InstanceMultiParam extends AbstractModel{
     private String CurrentValue;
 
     /**
-    * Parameter description
+    * Description
     */
     @SerializedName("Tips")
     @Expose
     private String Tips;
 
     /**
-    * Parameter description
+    * Description
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * Parameter status. 1: modifying; 2: modified
+    * Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
     */
     @SerializedName("Status")
     @Expose
@@ -95,32 +95,32 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get Parameter type: Multi 
-     * @return ValueType Parameter type: Multi
+     * Get Parameter Type such as  `MULTI` 
+     * @return ValueType Parameter Type such as  `MULTI`
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Parameter type: Multi
-     * @param ValueType Parameter type: Multi
+     * Set Parameter Type such as  `MULTI`
+     * @param ValueType Parameter Type such as  `MULTI`
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get Whether restart is required after a modification is made. Valid values: true, false 
-     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+     * Get Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required) 
+     * @return NeedRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether restart is required after a modification is made. Valid values: true, false
-     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+     * Set Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
+     * @param NeedRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -159,48 +159,48 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get Parameter description 
-     * @return Tips Parameter description
+     * Get Description 
+     * @return Tips Description
      */
     public String getTips() {
         return this.Tips;
     }
 
     /**
-     * Set Parameter description
-     * @param Tips Parameter description
+     * Set Description
+     * @param Tips Description
      */
     public void setTips(String Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get Parameter description 
-     * @return EnumValue Parameter description
+     * Get Description 
+     * @return EnumValue Description
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Parameter description
-     * @param EnumValue Parameter description
+     * Set Description
+     * @param EnumValue Description
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get Parameter status. 1: modifying; 2: modified 
-     * @return Status Parameter status. 1: modifying; 2: modified
+     * Get Parameter modification status. Valid values: - `1` (modifying) - `2` (modified) 
+     * @return Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Parameter status. 1: modifying; 2: modified
-     * @param Status Parameter status. 1: modifying; 2: modified
+     * Set Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+     * @param Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

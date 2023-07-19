@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeInstanceNodeInfoRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * List size
+    * List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The offset value
+    * Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get List size 
-     * @return Limit List size
+     * Get List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused. 
+     * @return Limit List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set List size
-     * @param Limit List size
+     * Set List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
+     * @param Limit List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The offset value 
-     * @return Offset The offset value
+     * Get Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused. 
+     * @return Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The offset value
-     * @param Offset The offset value
+     * Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
+     * @param Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

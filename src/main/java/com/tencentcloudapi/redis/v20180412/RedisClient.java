@@ -144,7 +144,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+     *This API is used to promote a replica node group to a master node group or a replica node to a master node for an instance.
      * @param req ChangeReplicaToMasterRequest
      * @return ChangeReplicaToMasterResponse
      * @throws TencentCloudSDKException
@@ -354,7 +354,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the backup configuration.
+     *This API is used to get the configuration rules for an automatic backup.
      * @param req DescribeAutoBackupConfigRequest
      * @return DescribeAutoBackupConfigResponse
      * @throws TencentCloudSDKException
@@ -480,7 +480,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to view instance sub-account information.
+     *This API is used to query the information of an instance sub-account.
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -732,7 +732,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query instance node information.
+     *This API is used to query the information of an instance node.
      * @param req DescribeInstanceNodeInfoRequest
      * @return DescribeInstanceNodeInfoResponse
      * @throws TencentCloudSDKException
@@ -774,7 +774,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of instance parameters.
+     *This API is used to query the parameter list of an instance.
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse
      * @throws TencentCloudSDKException
@@ -816,7 +816,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the information of Cluster Edition instance shards.
+     *This API is used to get the shard information of the instance on cluster architecture.
      * @param req DescribeInstanceShardsRequest
      * @return DescribeInstanceShardsResponse
      * @throws TencentCloudSDKException
@@ -837,7 +837,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the Redis node details.
+     *This API is used to query the details of a Redis node.
      * @param req DescribeInstanceZoneInfoRequest
      * @return DescribeInstanceZoneInfoResponse
      * @throws TencentCloudSDKException
@@ -1110,7 +1110,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of tasks.
+     *This API is used to query the task list information of a specified instance.
      * @param req DescribeTaskListRequest
      * @return DescribeTaskListResponse
      * @throws TencentCloudSDKException
@@ -1299,7 +1299,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to perform a failure simulation.
+     *This API is used to simulate the failure.
      * @param req KillMasterGroupRequest
      * @return KillMasterGroupResponse
      * @throws TencentCloudSDKException
@@ -1362,7 +1362,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to configure automatic backup.
+     *This API is used to set the configuration for an automatic backup.
      * @param req ModifyAutoBackupConfigRequest
      * @return ModifyAutoBackupConfigResponse
      * @throws TencentCloudSDKException

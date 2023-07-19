@@ -23,35 +23,36 @@ import java.util.HashMap;
 public class DescribeProxySlowLogRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start time
+    * Start time of slow query
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time
+    * End time of slow query
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Slow query threshold in milliseconds
+    * Slow query threshold  in milliseconds
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * Maximum number of results returned per page
+    * Number of results per page.  Default value: `20`. Value range: [20,1000].
     */
     @SerializedName("Limit")
     @Expose
@@ -65,80 +66,84 @@ public class DescribeProxySlowLogRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start time 
-     * @return BeginTime Start time
+     * Get Start time of slow query 
+     * @return BeginTime Start time of slow query
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time
-     * @param BeginTime Start time
+     * Set Start time of slow query
+     * @param BeginTime Start time of slow query
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time of slow query 
+     * @return EndTime End time of slow query
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time of slow query
+     * @param EndTime End time of slow query
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Slow query threshold in milliseconds 
-     * @return MinQueryTime Slow query threshold in milliseconds
+     * Get Slow query threshold  in milliseconds 
+     * @return MinQueryTime Slow query threshold  in milliseconds
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set Slow query threshold in milliseconds
-     * @param MinQueryTime Slow query threshold in milliseconds
+     * Set Slow query threshold  in milliseconds
+     * @param MinQueryTime Slow query threshold  in milliseconds
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get Maximum number of results returned per page 
-     * @return Limit Maximum number of results returned per page
+     * Get Number of results per page.  Default value: `20`. Value range: [20,1000]. 
+     * @return Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of results returned per page
-     * @param Limit Maximum number of results returned per page
+     * Set Number of results per page.  Default value: `20`. Value range: [20,1000].
+     * @param Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

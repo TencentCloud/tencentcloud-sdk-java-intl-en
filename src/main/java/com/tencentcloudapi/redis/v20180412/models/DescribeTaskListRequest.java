@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTaskListRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,56 +37,56 @@ public class DescribeTaskListRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+    * Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit` (rounded down automatically).
+    * Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Project ID
+    * Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * Task type
+    * Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
     */
     @SerializedName("TaskTypes")
     @Expose
     private String [] TaskTypes;
 
     /**
-    * Start time
+    * Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time
+    * End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Task status
+    * This parameter is only for internal use and can be ignored.
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long [] TaskStatus;
 
     /**
-    * Task status
+    * Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
     */
     @SerializedName("Result")
     @Expose
@@ -100,23 +100,23 @@ public class DescribeTaskListRequest extends AbstractModel{
     private Long [] OperatorUin;
 
     /**
-    * Operator Uin
+    * Operator account ID or UIN
     */
     @SerializedName("OperateUin")
     @Expose
     private String [] OperateUin;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -139,128 +139,128 @@ public class DescribeTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum number of results returned per page. Default value: 20. Maximum value: 100. 
-     * @return Limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+     * Get Number of taskss returned per page.  Default value: `20`. Maximum value: `100`. 
+     * @return Limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of results returned per page. Default value: 20. Maximum value: 100.
-     * @param Limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+     * Set Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
+     * @param Limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` (rounded down automatically). 
-     * @return Offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+     * Get Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). 
+     * @return Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit` (rounded down automatically).
-     * @param Offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+     * Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @param Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectIds Project ID
+     * Get Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID. 
+     * @return ProjectIds Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectIds Project ID
+     * Set Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+     * @param ProjectIds Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get Task type 
-     * @return TaskTypes Task type
+     * Get Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance. 
+     * @return TaskTypes Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
      */
     public String [] getTaskTypes() {
         return this.TaskTypes;
     }
 
     /**
-     * Set Task type
-     * @param TaskTypes Task type
+     * Set Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+     * @param TaskTypes Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
      */
     public void setTaskTypes(String [] TaskTypes) {
         this.TaskTypes = TaskTypes;
     }
 
     /**
-     * Get Start time 
-     * @return BeginTime Start time
+     * Get Start time for executing a task,  in the format of  “2020-10-12 00:00:00”. 
+     * @return BeginTime Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time
-     * @param BeginTime Start time
+     * Set Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+     * @param BeginTime Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time for executing a task,  in the format of  “2021-12-30 20:59:35”. 
+     * @return EndTime End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+     * @param EndTime End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Task status 
-     * @return TaskStatus Task status
+     * Get This parameter is only for internal use and can be ignored. 
+     * @return TaskStatus This parameter is only for internal use and can be ignored.
      */
     public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Task status
-     * @param TaskStatus Task status
+     * Set This parameter is only for internal use and can be ignored.
+     * @param TaskStatus This parameter is only for internal use and can be ignored.
      */
     public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Task status 
-     * @return Result Task status
+     * Get Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+     * @return Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
      */
     public Long [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set Task status
-     * @param Result Task status
+     * Set Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
+     * @param Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
      */
     public void setResult(Long [] Result) {
         this.Result = Result;
@@ -283,16 +283,16 @@ public class DescribeTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get Operator Uin 
-     * @return OperateUin Operator Uin
+     * Get Operator account ID or UIN 
+     * @return OperateUin Operator account ID or UIN
      */
     public String [] getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set Operator Uin
-     * @param OperateUin Operator Uin
+     * Set Operator account ID or UIN
+     * @param OperateUin Operator account ID or UIN
      */
     public void setOperateUin(String [] OperateUin) {
         this.OperateUin = OperateUin;

@@ -107,6 +107,13 @@ public class Trigger extends AbstractModel{
     private String Qualifier;
 
     /**
+    * Trigger description
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get Latest modification time of the trigger 
      * @return ModTime Latest modification time of the trigger
      */
@@ -237,7 +244,9 @@ public class Trigger extends AbstractModel{
     /**
      * Get Minimum resource ID of trigger 
      * @return ResourceId Minimum resource ID of trigger
+     * @deprecated
      */
+    @Deprecated
     public String getResourceId() {
         return this.ResourceId;
     }
@@ -245,7 +254,9 @@ public class Trigger extends AbstractModel{
     /**
      * Set Minimum resource ID of trigger
      * @param ResourceId Minimum resource ID of trigger
+     * @deprecated
      */
+    @Deprecated
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
@@ -253,7 +264,9 @@ public class Trigger extends AbstractModel{
     /**
      * Get Trigger-Function binding status 
      * @return BindStatus Trigger-Function binding status
+     * @deprecated
      */
+    @Deprecated
     public String getBindStatus() {
         return this.BindStatus;
     }
@@ -261,7 +274,9 @@ public class Trigger extends AbstractModel{
     /**
      * Set Trigger-Function binding status
      * @param BindStatus Trigger-Function binding status
+     * @deprecated
      */
+    @Deprecated
     public void setBindStatus(String BindStatus) {
         this.BindStatus = BindStatus;
     }
@@ -269,7 +284,9 @@ public class Trigger extends AbstractModel{
     /**
      * Get Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console 
      * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @deprecated
      */
+    @Deprecated
     public String getTriggerAttribute() {
         return this.TriggerAttribute;
     }
@@ -277,7 +294,9 @@ public class Trigger extends AbstractModel{
     /**
      * Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
      * @param TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @deprecated
      */
+    @Deprecated
     public void setTriggerAttribute(String TriggerAttribute) {
         this.TriggerAttribute = TriggerAttribute;
     }
@@ -296,6 +315,22 @@ public class Trigger extends AbstractModel{
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
+    }
+
+    /**
+     * Get Trigger description 
+     * @return Description Trigger description
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Trigger description
+     * @param Description Trigger description
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public Trigger() {
@@ -342,6 +377,9 @@ public class Trigger extends AbstractModel{
         if (source.Qualifier != null) {
             this.Qualifier = new String(source.Qualifier);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -361,6 +399,7 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

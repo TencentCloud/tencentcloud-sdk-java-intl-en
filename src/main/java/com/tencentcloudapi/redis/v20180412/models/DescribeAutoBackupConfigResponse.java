@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeAutoBackupConfigResponse extends AbstractModel{
 
     /**
-    * Backup type. Automatic backup type: 1 (scheduled rollback)
+    * This parameter is retained due to compatibility and can be ignored.
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-    * Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+    * Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * Time period.
+    * Time period for backup task initialization
     */
     @SerializedName("TimePeriod")
     @Expose
     private String TimePeriod;
 
     /**
-    * Number of days to retain full backup files
+    * Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
     */
     @SerializedName("BackupStorageDays")
     @Expose
     private Long BackupStorageDays;
 
     /**
-    * Number of days to retain Tendis binlog backup files
+    * This parameter has been disused.
     */
     @SerializedName("BinlogStorageDays")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Backup type. Automatic backup type: 1 (scheduled rollback) 
-     * @return AutoBackupType Backup type. Automatic backup type: 1 (scheduled rollback)
+     * Get This parameter is retained due to compatibility and can be ignored. 
+     * @return AutoBackupType This parameter is retained due to compatibility and can be ignored.
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Backup type. Automatic backup type: 1 (scheduled rollback)
-     * @param AutoBackupType Backup type. Automatic backup type: 1 (scheduled rollback)
+     * Set This parameter is retained due to compatibility and can be ignored.
+     * @param AutoBackupType This parameter is retained due to compatibility and can be ignored.
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
     }
 
     /**
-     * Get Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. 
-     * @return WeekDays Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+     * Get Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. 
+     * @return WeekDays Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
-     * @param WeekDays Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+     * Set Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * @param WeekDays Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get Time period. 
-     * @return TimePeriod Time period.
+     * Get Time period for backup task initialization 
+     * @return TimePeriod Time period for backup task initialization
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set Time period.
-     * @param TimePeriod Time period.
+     * Set Time period for backup task initialization
+     * @param TimePeriod Time period for backup task initialization
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;
     }
 
     /**
-     * Get Number of days to retain full backup files 
-     * @return BackupStorageDays Number of days to retain full backup files
+     * Get Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. 
+     * @return BackupStorageDays Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set Number of days to retain full backup files
-     * @param BackupStorageDays Number of days to retain full backup files
+     * Set Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
+     * @param BackupStorageDays Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;
     }
 
     /**
-     * Get Number of days to retain Tendis binlog backup files 
-     * @return BinlogStorageDays Number of days to retain Tendis binlog backup files
+     * Get This parameter has been disused. 
+     * @return BinlogStorageDays This parameter has been disused.
      */
     public Long getBinlogStorageDays() {
         return this.BinlogStorageDays;
     }
 
     /**
-     * Set Number of days to retain Tendis binlog backup files
-     * @param BinlogStorageDays Number of days to retain Tendis binlog backup files
+     * Set This parameter has been disused.
+     * @param BinlogStorageDays This parameter has been disused.
      */
     public void setBinlogStorageDays(Long BinlogStorageDays) {
         this.BinlogStorageDays = BinlogStorageDays;

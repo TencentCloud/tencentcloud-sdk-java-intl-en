@@ -30,30 +30,21 @@ public class RedisBackupSet extends AbstractModel{
     private String StartTime;
 
     /**
-    * Backup ID
+    * Backup task ID
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-    * Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+    * Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+    * Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
     */
     @SerializedName("Status")
     @Expose
@@ -67,10 +58,7 @@ public class RedisBackupSet extends AbstractModel{
     private String Remark;
 
     /**
-    * Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+    * Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
     */
     @SerializedName("Locked")
     @Expose
@@ -159,84 +147,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Backup ID 
-     * @return BackupId Backup ID
+     * Get Backup task ID 
+     * @return BackupId Backup task ID
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup ID
-     * @param BackupId Backup ID
+     * Set Backup task ID
+     * @param BackupId Backup task ID
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system. 
-     * @return BackupType Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+     * Get Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user. 
+     * @return BackupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
-     * @param BackupType Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+     * Set Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+     * @param BackupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully. 
-     * @return Status Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+     * Get Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully. 
+     * @return Status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
-     * @param Status Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+     * Set Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+     * @param Status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -259,28 +211,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked. 
-     * @return Locked Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+     * Get Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes) 
+     * @return Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
      */
     public Long getLocked() {
         return this.Locked;
     }
 
     /**
-     * Set Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
-     * @param Locked Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+     * Set Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+     * @param Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;

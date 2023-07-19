@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ManualBackupInstanceRequest extends AbstractModel{
 
     /**
-    * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Backup remarks
+    * Remarks for manual backup task
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Retention time in days. 0 indicates the default retention time.
+    * Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
     */
     @SerializedName("StorageDays")
     @Expose
     private Long StorageDays;
 
     /**
-     * Get ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API. 
-     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Backup remarks 
-     * @return Remark Backup remarks
+     * Get Remarks for manual backup task 
+     * @return Remark Remarks for manual backup task
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Backup remarks
-     * @param Remark Backup remarks
+     * Set Remarks for manual backup task
+     * @param Remark Remarks for manual backup task
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Retention time in days. 0 indicates the default retention time. 
-     * @return StorageDays Retention time in days. 0 indicates the default retention time.
+     * Get Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days. 
+     * @return StorageDays Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
      */
     public Long getStorageDays() {
         return this.StorageDays;
     }
 
     /**
-     * Set Retention time in days. 0 indicates the default retention time.
-     * @param StorageDays Retention time in days. 0 indicates the default retention time.
+     * Set Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
+     * @param StorageDays Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
      */
     public void setStorageDays(Long StorageDays) {
         this.StorageDays = StorageDays;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceShardsResponse extends AbstractModel{
 
     /**
-    * Information list of instance shards
+    * List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
     */
     @SerializedName("InstanceShards")
     @Expose
     private InstanceClusterShard [] InstanceShards;
 
     /**
-    * Total number of instance shard nodes
+    * Number of instance shard nodes
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeInstanceShardsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Information list of instance shards 
-     * @return InstanceShards Information list of instance shards
+     * Get List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope. 
+     * @return InstanceShards List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
      */
     public InstanceClusterShard [] getInstanceShards() {
         return this.InstanceShards;
     }
 
     /**
-     * Set Information list of instance shards
-     * @param InstanceShards Information list of instance shards
+     * Set List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
+     * @param InstanceShards List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
      */
     public void setInstanceShards(InstanceClusterShard [] InstanceShards) {
         this.InstanceShards = InstanceShards;
     }
 
     /**
-     * Get Total number of instance shard nodes 
-     * @return TotalCount Total number of instance shard nodes
+     * Get Number of instance shard nodes 
+     * @return TotalCount Number of instance shard nodes
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of instance shard nodes
-     * @param TotalCount Total number of instance shard nodes
+     * Set Number of instance shard nodes
+     * @param TotalCount Number of instance shard nodes
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

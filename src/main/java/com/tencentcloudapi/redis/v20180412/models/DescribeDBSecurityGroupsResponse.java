@@ -30,14 +30,14 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
-    * Private IP for which the security group takes effect
+    * Private IPv4 address of an instance
     */
     @SerializedName("VIP")
     @Expose
     private String VIP;
 
     /**
-    * Private port for which the security group takes effect
+    * Private network port
     */
     @SerializedName("VPort")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
-     * Get Private IP for which the security group takes effect 
-     * @return VIP Private IP for which the security group takes effect
+     * Get Private IPv4 address of an instance 
+     * @return VIP Private IPv4 address of an instance
      */
     public String getVIP() {
         return this.VIP;
     }
 
     /**
-     * Set Private IP for which the security group takes effect
-     * @param VIP Private IP for which the security group takes effect
+     * Set Private IPv4 address of an instance
+     * @param VIP Private IPv4 address of an instance
      */
     public void setVIP(String VIP) {
         this.VIP = VIP;
     }
 
     /**
-     * Get Private port for which the security group takes effect 
-     * @return VPort Private port for which the security group takes effect
+     * Get Private network port 
+     * @return VPort Private network port
      */
     public String getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set Private port for which the security group takes effect
-     * @param VPort Private port for which the security group takes effect
+     * Set Private network port
+     * @param VPort Private network port
      */
     public void setVPort(String VPort) {
         this.VPort = VPort;

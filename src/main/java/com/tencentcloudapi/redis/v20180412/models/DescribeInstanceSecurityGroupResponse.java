@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
 
     /**
-    * Security group information of the instance
+    * Security group information of an instance
     */
     @SerializedName("InstanceSecurityGroupsDetail")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group information of the instance 
-     * @return InstanceSecurityGroupsDetail Security group information of the instance
+     * Get Security group information of an instance 
+     * @return InstanceSecurityGroupsDetail Security group information of an instance
      */
     public InstanceSecurityGroupDetail [] getInstanceSecurityGroupsDetail() {
         return this.InstanceSecurityGroupsDetail;
     }
 
     /**
-     * Set Security group information of the instance
-     * @param InstanceSecurityGroupsDetail Security group information of the instance
+     * Set Security group information of an instance
+     * @param InstanceSecurityGroupsDetail Security group information of an instance
      */
     public void setInstanceSecurityGroupsDetail(InstanceSecurityGroupDetail [] InstanceSecurityGroupsDetail) {
         this.InstanceSecurityGroupsDetail = InstanceSecurityGroupsDetail;

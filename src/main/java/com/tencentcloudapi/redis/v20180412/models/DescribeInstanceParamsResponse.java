@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceParamsResponse extends AbstractModel{
 
     /**
-    * Number of instance parameters
+    * Total number of the parameter lists
     */
     @SerializedName("TotalCount")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of instance parameters 
-     * @return TotalCount Number of instance parameters
+     * Get Total number of the parameter lists 
+     * @return TotalCount Total number of the parameter lists
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of instance parameters
-     * @param TotalCount Number of instance parameters
+     * Set Total number of the parameter lists
+     * @param TotalCount Total number of the parameter lists
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

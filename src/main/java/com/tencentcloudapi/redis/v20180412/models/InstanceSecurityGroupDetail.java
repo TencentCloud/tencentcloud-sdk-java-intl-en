@@ -30,7 +30,7 @@ public class InstanceSecurityGroupDetail extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Security group information
+    * Security group information, which includes  security group ID, name, outbound and inbound rules.
     */
     @SerializedName("SecurityGroupDetails")
     @Expose
@@ -53,16 +53,16 @@ public class InstanceSecurityGroupDetail extends AbstractModel{
     }
 
     /**
-     * Get Security group information 
-     * @return SecurityGroupDetails Security group information
+     * Get Security group information, which includes  security group ID, name, outbound and inbound rules. 
+     * @return SecurityGroupDetails Security group information, which includes  security group ID, name, outbound and inbound rules.
      */
     public SecurityGroupDetail [] getSecurityGroupDetails() {
         return this.SecurityGroupDetails;
     }
 
     /**
-     * Set Security group information
-     * @param SecurityGroupDetails Security group information
+     * Set Security group information, which includes  security group ID, name, outbound and inbound rules.
+     * @param SecurityGroupDetails Security group information, which includes  security group ID, name, outbound and inbound rules.
      */
     public void setSecurityGroupDetails(SecurityGroupDetail [] SecurityGroupDetails) {
         this.SecurityGroupDetails = SecurityGroupDetails;

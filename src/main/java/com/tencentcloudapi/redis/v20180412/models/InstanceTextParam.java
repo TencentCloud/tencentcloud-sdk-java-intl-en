@@ -30,14 +30,14 @@ public class InstanceTextParam extends AbstractModel{
     private String ParamName;
 
     /**
-    * Parameter type: Text
+    * Parameter type such as  `Text`.
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * Whether restart is required after a modification is made. Valid values: true, false
+    * Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -58,21 +58,21 @@ public class InstanceTextParam extends AbstractModel{
     private String CurrentValue;
 
     /**
-    * Parameter description
+    * Description
     */
     @SerializedName("Tips")
     @Expose
     private String Tips;
 
     /**
-    * Valid values of the parameter
+    * Acceptable values of the parameter
     */
     @SerializedName("TextValue")
     @Expose
     private String [] TextValue;
 
     /**
-    * Parameter status. 1: modifying; 2: modified
+    * Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
     */
     @SerializedName("Status")
     @Expose
@@ -95,32 +95,32 @@ public class InstanceTextParam extends AbstractModel{
     }
 
     /**
-     * Get Parameter type: Text 
-     * @return ValueType Parameter type: Text
+     * Get Parameter type such as  `Text`. 
+     * @return ValueType Parameter type such as  `Text`.
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Parameter type: Text
-     * @param ValueType Parameter type: Text
+     * Set Parameter type such as  `Text`.
+     * @param ValueType Parameter type such as  `Text`.
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get Whether restart is required after a modification is made. Valid values: true, false 
-     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+     * Get Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required) 
+     * @return NeedRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether restart is required after a modification is made. Valid values: true, false
-     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+     * Set Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
+     * @param NeedRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -159,48 +159,48 @@ public class InstanceTextParam extends AbstractModel{
     }
 
     /**
-     * Get Parameter description 
-     * @return Tips Parameter description
+     * Get Description 
+     * @return Tips Description
      */
     public String getTips() {
         return this.Tips;
     }
 
     /**
-     * Set Parameter description
-     * @param Tips Parameter description
+     * Set Description
+     * @param Tips Description
      */
     public void setTips(String Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get Valid values of the parameter 
-     * @return TextValue Valid values of the parameter
+     * Get Acceptable values of the parameter 
+     * @return TextValue Acceptable values of the parameter
      */
     public String [] getTextValue() {
         return this.TextValue;
     }
 
     /**
-     * Set Valid values of the parameter
-     * @param TextValue Valid values of the parameter
+     * Set Acceptable values of the parameter
+     * @param TextValue Acceptable values of the parameter
      */
     public void setTextValue(String [] TextValue) {
         this.TextValue = TextValue;
     }
 
     /**
-     * Get Parameter status. 1: modifying; 2: modified 
-     * @return Status Parameter status. 1: modifying; 2: modified
+     * Get Parameter modification status. Valid values: - `1` (modifying) - `2` (modified) 
+     * @return Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Parameter status. 1: modifying; 2: modified
-     * @param Status Parameter status. 1: modifying; 2: modified
+     * Set Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+     * @param Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

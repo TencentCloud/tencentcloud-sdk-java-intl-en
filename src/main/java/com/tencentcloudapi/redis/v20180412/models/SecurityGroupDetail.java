@@ -30,7 +30,7 @@ public class SecurityGroupDetail extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Creation time
+    * Security group creation time
     */
     @SerializedName("CreateTime")
     @Expose
@@ -58,7 +58,7 @@ public class SecurityGroupDetail extends AbstractModel{
     private String SecurityGroupRemark;
 
     /**
-    * Security group inbound rule
+    * Inbound rules of the security group, which control the access source to the database.
     */
     @SerializedName("InboundRule")
     @Expose
@@ -88,16 +88,16 @@ public class SecurityGroupDetail extends AbstractModel{
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Security group creation time 
+     * @return CreateTime Security group creation time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Security group creation time
+     * @param CreateTime Security group creation time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -152,16 +152,16 @@ public class SecurityGroupDetail extends AbstractModel{
     }
 
     /**
-     * Get Security group inbound rule 
-     * @return InboundRule Security group inbound rule
+     * Get Inbound rules of the security group, which control the access source to the database. 
+     * @return InboundRule Inbound rules of the security group, which control the access source to the database.
      */
     public SecurityGroupsInboundAndOutbound [] getInboundRule() {
         return this.InboundRule;
     }
 
     /**
-     * Set Security group inbound rule
-     * @param InboundRule Security group inbound rule
+     * Set Inbound rules of the security group, which control the access source to the database.
+     * @param InboundRule Inbound rules of the security group, which control the access source to the database.
      */
     public void setInboundRule(SecurityGroupsInboundAndOutbound [] InboundRule) {
         this.InboundRule = InboundRule;

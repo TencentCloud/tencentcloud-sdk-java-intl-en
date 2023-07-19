@@ -23,42 +23,43 @@ import java.util.HashMap;
 public class DescribeSlowLogRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The start time
+    * Start time for prequerying a slow log
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * The end time
+    * End time for prequerying a slow log
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The average execution time threshold of slow query in ms.
+    * The average execution time threshold of slow query  in microseconds
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * Number of slow queries displayed per page. Default value: `20`.
+    * Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Slow query offset, which is an integral multiple of `Limit`.
+    * Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
     */
     @SerializedName("Offset")
     @Expose
@@ -72,96 +73,100 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private String Role;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ 
+     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The start time 
-     * @return BeginTime The start time
+     * Get Start time for prequerying a slow log 
+     * @return BeginTime Start time for prequerying a slow log
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set The start time
-     * @param BeginTime The start time
+     * Set Start time for prequerying a slow log
+     * @param BeginTime Start time for prequerying a slow log
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get The end time 
-     * @return EndTime The end time
+     * Get End time for prequerying a slow log 
+     * @return EndTime End time for prequerying a slow log
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time
-     * @param EndTime The end time
+     * Set End time for prequerying a slow log
+     * @param EndTime End time for prequerying a slow log
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The average execution time threshold of slow query in ms. 
-     * @return MinQueryTime The average execution time threshold of slow query in ms.
+     * Get The average execution time threshold of slow query  in microseconds 
+     * @return MinQueryTime The average execution time threshold of slow query  in microseconds
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set The average execution time threshold of slow query in ms.
-     * @param MinQueryTime The average execution time threshold of slow query in ms.
+     * Set The average execution time threshold of slow query  in microseconds
+     * @param MinQueryTime The average execution time threshold of slow query  in microseconds
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get Number of slow queries displayed per page. Default value: `20`. 
-     * @return Limit Number of slow queries displayed per page. Default value: `20`.
+     * Get Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000]. 
+     * @return Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of slow queries displayed per page. Default value: `20`.
-     * @param Limit Number of slow queries displayed per page. Default value: `20`.
+     * Set Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+     * @param Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Slow query offset, which is an integral multiple of `Limit`. 
-     * @return Offset Slow query offset, which is an integral multiple of `Limit`.
+     * Get Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). 
+     * @return Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Slow query offset, which is an integral multiple of `Limit`.
-     * @param Offset Slow query offset, which is an integral multiple of `Limit`.
+     * Set Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @param Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
