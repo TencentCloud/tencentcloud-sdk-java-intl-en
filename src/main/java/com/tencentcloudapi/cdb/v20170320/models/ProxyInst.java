@@ -37,11 +37,11 @@ public class ProxyInst extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Instance type Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceType")
     @Expose
-    private String InstanceType;
+    private Long InstanceType;
 
     /**
     * Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
@@ -104,18 +104,18 @@ public class ProxyInst extends AbstractModel{
     }
 
     /**
-     * Get Instance type Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Instance type Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getInstanceType() {
+    public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Instance type Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setInstanceType(String InstanceType) {
+    public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -198,7 +198,7 @@ public class ProxyInst extends AbstractModel{
             this.InstanceName = new String(source.InstanceName);
         }
         if (source.InstanceType != null) {
-            this.InstanceType = new String(source.InstanceType);
+            this.InstanceType = new Long(source.InstanceType);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);

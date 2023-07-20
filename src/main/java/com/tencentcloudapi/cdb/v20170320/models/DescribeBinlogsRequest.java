@@ -44,14 +44,14 @@ public class DescribeBinlogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Earliest Binlog start time in the format of  2016-03-17 02:10:37
+    * The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
     */
     @SerializedName("MinStartTime")
     @Expose
     private String MinStartTime;
 
     /**
-    * Latest binlog start time in the format of  2016-03-17 02:10:37
+    * The latest start time of binlog  in the format of 2016-03-17 02:10:37.
     */
     @SerializedName("MaxStartTime")
     @Expose
@@ -106,32 +106,32 @@ public class DescribeBinlogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Earliest Binlog start time in the format of  2016-03-17 02:10:37 
-     * @return MinStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
+     * Get The earliest start time of binlog  in the format of 2016-03-17 02:10:37. 
+     * @return MinStartTime The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     public String getMinStartTime() {
         return this.MinStartTime;
     }
 
     /**
-     * Set Earliest Binlog start time in the format of  2016-03-17 02:10:37
-     * @param MinStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
+     * Set The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
+     * @param MinStartTime The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     public void setMinStartTime(String MinStartTime) {
         this.MinStartTime = MinStartTime;
     }
 
     /**
-     * Get Latest binlog start time in the format of  2016-03-17 02:10:37 
-     * @return MaxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+     * Get The latest start time of binlog  in the format of 2016-03-17 02:10:37. 
+     * @return MaxStartTime The latest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     public String getMaxStartTime() {
         return this.MaxStartTime;
     }
 
     /**
-     * Set Latest binlog start time in the format of  2016-03-17 02:10:37
-     * @param MaxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+     * Set The latest start time of binlog  in the format of 2016-03-17 02:10:37.
+     * @param MaxStartTime The latest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     public void setMaxStartTime(String MaxStartTime) {
         this.MaxStartTime = MaxStartTime;

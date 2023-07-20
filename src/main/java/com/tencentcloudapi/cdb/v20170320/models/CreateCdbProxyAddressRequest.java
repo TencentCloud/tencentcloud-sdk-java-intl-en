@@ -142,7 +142,7 @@ public class CreateCdbProxyAddressRequest extends AbstractModel{
     private String [] SecurityGroup;
 
     /**
-    * 
+    * Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
     */
     @SerializedName("ConnectionPoolType")
     @Expose
@@ -421,16 +421,16 @@ public class CreateCdbProxyAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ConnectionPoolType 
+     * Get Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level). 
+     * @return ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 
-     * @param ConnectionPoolType 
+     * Set Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+     * @param ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;

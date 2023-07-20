@@ -99,6 +99,9 @@ public enum CdbErrorCode {
     // The IP has been occupied.
      FAILEDOPERATION_VPCIPINUSEERROR("FailedOperation.VpcIpInUseError"),
      
+    // The IP doesn’t exist in the subnet.
+     FAILEDOPERATION_VPCIPNOTINSUBNETERROR("FailedOperation.VpcIpNotInSubnetError"),
+     
     // An internal error occurred.
      INTERNALERROR("InternalError"),
      
@@ -407,6 +410,9 @@ public enum CdbErrorCode {
      
     // The host information of the local root account cannot be modified.
      OPERATIONDENIED_NOTSUPPORTMODIFYLOCALROOTHOSTERROR("OperationDenied.NotSupportModifyLocalRootHostError"),
+     
+    // Operation denied
+     OPERATIONDENIED_OPERATIONDENIEDERROR("OperationDenied.OperationDeniedError"),
      
     // There are other orders being submitted. Please try again later.
      OPERATIONDENIED_OTHERODERINPROCESS("OperationDenied.OtherOderInProcess"),

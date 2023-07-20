@@ -436,6 +436,27 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     }
 
     /**
+     *This API is used to create a database in a TencentDB instance.
+     * @param req CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDatabaseResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDatabaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDatabase");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
@@ -1967,7 +1988,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
-     *This API is used to set the default encryption status of an instance backup. 
+     *This API is used to set the encryption status of an instance backup.
      * @param req ModifyBackupEncryptionStatusRequest
      * @return ModifyBackupEncryptionStatusResponse
      * @throws TencentCloudSDKException
