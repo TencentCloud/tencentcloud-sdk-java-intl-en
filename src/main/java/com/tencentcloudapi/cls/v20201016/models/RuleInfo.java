@@ -48,7 +48,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DynamicIndex")
     @Expose
@@ -116,9 +118,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public DynamicIndex getDynamicIndex() {
         return this.DynamicIndex;
@@ -126,9 +132,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDynamicIndex(DynamicIndex DynamicIndex) {
         this.DynamicIndex = DynamicIndex;

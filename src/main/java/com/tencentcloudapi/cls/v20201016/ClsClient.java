@@ -81,6 +81,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to check whether the Kafka service cluster is accessible.
+     * @param req CheckRechargeKafkaServerRequest
+     * @return CheckRechargeKafkaServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckRechargeKafkaServerResponse CheckRechargeKafkaServer(CheckRechargeKafkaServerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckRechargeKafkaServerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckRechargeKafkaServerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckRechargeKafkaServer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable Kafka consumption.
      * @param req CloseKafkaConsumerRequest
      * @return CloseKafkaConsumerResponse
@@ -207,6 +228,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a data processing task.
+     * @param req CreateDataTransformRequest
+     * @return CreateDataTransformResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataTransformResponse CreateDataTransform(CreateDataTransformRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDataTransformResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDataTransformResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDataTransform");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
      * @param req CreateExportRequest
      * @return CreateExportResponse
@@ -241,6 +283,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a Kafka data subscription task.
+     * @param req CreateKafkaRechargeRequest
+     * @return CreateKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKafkaRechargeResponse CreateKafkaRecharge(CreateKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -438,6 +501,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a data processing task.
+     * @param req DeleteDataTransformRequest
+     * @return DeleteDataTransformResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataTransformResponse DeleteDataTransform(DeleteDataTransformRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDataTransformResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDataTransformResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDataTransform");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a log download task.
      * @param req DeleteExportRequest
      * @return DeleteExportResponse
@@ -472,6 +556,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a Kafka data subscription task.
+     * @param req DeleteKafkaRechargeRequest
+     * @return DeleteKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteKafkaRechargeResponse DeleteKafkaRecharge(DeleteKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -543,7 +648,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a shipping rule.
+     *This API is used to delete a COS shipping task.
      * @param req DeleteShipperRequest
      * @return DeleteShipperResponse
      * @throws TencentCloudSDKException
@@ -732,6 +837,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the basic information of data processing tasks.
+     * @param req DescribeDataTransformInfoRequest
+     * @return DescribeDataTransformInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataTransformInfoResponse DescribeDataTransformInfo(DescribeDataTransformInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataTransformInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataTransformInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataTransformInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of log download tasks.
      * @param req DescribeExportsRequest
      * @return DescribeExportsResponse
@@ -766,6 +892,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of Kafka data subscription tasks.
+     * @param req DescribeKafkaRechargesRequest
+     * @return DescribeKafkaRechargesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaRechargesResponse DescribeKafkaRecharges(DescribeKafkaRechargesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKafkaRechargesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKafkaRechargesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKafkaRecharges");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1131,6 +1278,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a data processing task.
+     * @param req ModifyDataTransformRequest
+     * @return ModifyDataTransformResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataTransformResponse ModifyDataTransform(ModifyDataTransformRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataTransformResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataTransformResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataTransform");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the index configuration. It is subject to the default request frequency limit, and the number of concurrent requests to the same log topic cannot exceed 1, i.e., the index configuration of only one log topic can be modified at a time.
 
      * @param req ModifyIndexRequest
@@ -1145,6 +1313,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a Kafka data subscription task.
+     * @param req ModifyKafkaRechargeRequest
+     * @return ModifyKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKafkaRechargeResponse ModifyKafkaRecharge(ModifyKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1250,6 +1439,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenKafkaConsumerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenKafkaConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to preview the logs of Kafka data subscription tasks.
+     * @param req PreviewKafkaRechargeRequest
+     * @return PreviewKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public PreviewKafkaRechargeResponse PreviewKafkaRecharge(PreviewKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PreviewKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<PreviewKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PreviewKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

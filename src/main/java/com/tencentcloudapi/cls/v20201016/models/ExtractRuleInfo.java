@@ -63,8 +63,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String BeginRegex;
 
     /**
-    * Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Keys")
     @Expose
@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MetadataType;
 
     /**
-    * Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+    * Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PathRegex")
@@ -274,20 +274,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;
@@ -526,9 +526,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+     * Get Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+     * @return PathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPathRegex() {
@@ -536,9 +536,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+     * Set Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+     * @param PathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPathRegex(String PathRegex) {

@@ -65,7 +65,7 @@ public class ModifyShipperRequest extends AbstractModel{
     private Long Interval;
 
     /**
-    * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+    * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
     */
     @SerializedName("MaxSize")
     @Expose
@@ -203,16 +203,16 @@ public class ModifyShipperRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256 
-     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+     * Get Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256 
+     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
-     * @param MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+     * Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+     * @param MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

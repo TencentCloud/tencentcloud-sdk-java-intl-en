@@ -87,6 +87,12 @@ public enum ClsErrorCode {
     // Invalid `Content`.
      INVALIDPARAMETER_CONTENT("InvalidParameter.Content"),
      
+    // There is a data processing task conflict.
+     INVALIDPARAMETER_DATAFROMTASKCONFLICT("InvalidParameter.DataFromTaskConflict"),
+     
+    // The data processing task does not exist.
+     INVALIDPARAMETER_DATAFROMTASKNOTEXIST("InvalidParameter.DataFromTaskNotExist"),
+     
     // The unique key of database conflicts.
      INVALIDPARAMETER_DBDUPLICATION("InvalidParameter.DbDuplication"),
      
@@ -98,6 +104,9 @@ public enum ClsErrorCode {
      
     // An index rule already exists for the specified log topic.
      INVALIDPARAMETER_INDEXCONFLICT("InvalidParameter.IndexConflict"),
+     
+    // The data processing statement is invalid.
+     INVALIDPARAMETER_INVALIDETLCONTENT("InvalidParameter.InvalidEtlContent"),
      
     // The same logset already exists.
      INVALIDPARAMETER_LOGSETCONFLICT("InvalidParameter.LogsetConflict"),

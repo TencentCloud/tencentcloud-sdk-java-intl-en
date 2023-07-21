@@ -46,7 +46,8 @@ Queries all logs using * or an empty string
     private String Query;
 
     /**
-    * ID of the log topic to be searched
+    * - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
     */
     @SerializedName("TopicId")
     @Expose
@@ -113,6 +114,15 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
     private Long SyntaxRule;
 
     /**
+    * - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+    */
+    @SerializedName("Topics")
+    @Expose
+    private MultiTopicSearchInformation [] Topics;
+
+    /**
      * Get Start time of the log to be searched, which is a Unix timestamp in milliseconds 
      * @return From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
@@ -169,16 +179,20 @@ Queries all logs using * or an empty string
     }
 
     /**
-     * Get ID of the log topic to be searched 
-     * @return TopicId ID of the log topic to be searched
+     * Get - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter. 
+     * @return TopicId - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the log topic to be searched
-     * @param TopicId ID of the log topic to be searched
+     * Set - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
+     * @param TopicId - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -352,6 +366,30 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
         this.SyntaxRule = SyntaxRule;
     }
 
+    /**
+     * Get - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`. 
+     * @return Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     */
+    public MultiTopicSearchInformation [] getTopics() {
+        return this.Topics;
+    }
+
+    /**
+     * Set - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     * @param Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     */
+    public void setTopics(MultiTopicSearchInformation [] Topics) {
+        this.Topics = Topics;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -390,6 +428,12 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.Topics != null) {
+            this.Topics = new MultiTopicSearchInformation[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new MultiTopicSearchInformation(source.Topics[i]);
+            }
+        }
     }
 
 
@@ -407,6 +451,7 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
 
     }
 }

@@ -37,6 +37,13 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
     private Long Compression;
 
     /**
+    * Kafka consumer data format
+    */
+    @SerializedName("ConsumerContent")
+    @Expose
+    private KafkaConsumerContent ConsumerContent;
+
+    /**
      * Get `TopicId` created by the CLS console 
      * @return FromTopicId `TopicId` created by the CLS console
      */
@@ -68,6 +75,22 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
         this.Compression = Compression;
     }
 
+    /**
+     * Get Kafka consumer data format 
+     * @return ConsumerContent Kafka consumer data format
+     */
+    public KafkaConsumerContent getConsumerContent() {
+        return this.ConsumerContent;
+    }
+
+    /**
+     * Set Kafka consumer data format
+     * @param ConsumerContent Kafka consumer data format
+     */
+    public void setConsumerContent(KafkaConsumerContent ConsumerContent) {
+        this.ConsumerContent = ConsumerContent;
+    }
+
     public OpenKafkaConsumerRequest() {
     }
 
@@ -82,6 +105,9 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
         if (source.Compression != null) {
             this.Compression = new Long(source.Compression);
         }
+        if (source.ConsumerContent != null) {
+            this.ConsumerContent = new KafkaConsumerContent(source.ConsumerContent);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
+        this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
 
     }
 }
