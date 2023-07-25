@@ -309,6 +309,12 @@ public enum LiveErrorCode {
     // The gifted Tencent Cloud domain name has expired.
      INVALIDPARAMETER_CLOUDDOMAINISSTOP("InvalidParameter.CloudDomainIsStop"),
      
+    // 
+     INVALIDPARAMETER_CONFINUSED("InvalidParameter.ConfInUsed"),
+     
+    // 
+     INVALIDPARAMETER_CONFNOTFOUND("InvalidParameter.ConfNotFound"),
+     
     // The certificate is in use.
      INVALIDPARAMETER_CRTDATEINUSING("InvalidParameter.CrtDateInUsing"),
      
@@ -369,6 +375,12 @@ public enum LiveErrorCode {
     // Invalid layer parameter.
      INVALIDPARAMETER_INVALIDLAYERPARAM("InvalidParameter.InvalidLayerParam"),
      
+    // 
+     INVALIDPARAMETER_INVALIDMIXINPUTPARAM("InvalidParameter.InvalidMixInputParam"),
+     
+    // 
+     INVALIDPARAMETER_INVALIDOUTPUTPARAM("InvalidParameter.InvalidOutputParam"),
+     
     // The output stream ID is already used.
      INVALIDPARAMETER_INVALIDOUTPUTSTREAMID("InvalidParameter.InvalidOutputStreamID"),
      
@@ -404,6 +416,12 @@ public enum LiveErrorCode {
      
     // Other errors.
      INVALIDPARAMETER_OTHERERROR("InvalidParameter.OtherError"),
+     
+    // 
+     INVALIDPARAMETER_PROCESSORALREADYEXIST("InvalidParameter.ProcessorAlreadyExist"),
+     
+    // 
+     INVALIDPARAMETER_RULENOTFOUND("InvalidParameter.RuleNotFound"),
      
     // The output stream of the same session has changed.
      INVALIDPARAMETER_SESSIONOUTPUTSTREAMCHANGED("InvalidParameter.SessionOutputStreamChanged"),
@@ -464,6 +482,9 @@ public enum LiveErrorCode {
      
     // The domain name does not exist or is not matched.
      RESOURCENOTFOUND_DOMAINNOTEXIST("ResourceNotFound.DomainNotExist"),
+     
+    // 
+     RESOURCENOTFOUND_EMPTYDATA("ResourceNotFound.EmptyData"),
      
     // You are blocked.
      RESOURCENOTFOUND_FORBIDSERVICE("ResourceNotFound.ForbidService"),
