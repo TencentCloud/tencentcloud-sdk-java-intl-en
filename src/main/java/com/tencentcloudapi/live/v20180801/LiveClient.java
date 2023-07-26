@@ -1868,6 +1868,30 @@ If the start time and end time are not on the same day or if the data of specifi
     }
 
     /**
+     *This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 
+- Prerequisites: 
+1. This API is only used to query recording tasks created by the CreateRecordTask interface. 
+2. It cannot retrieve recording tasks that have been deleted by the DeleteRecordTask interface or tasks that have expired (platform retains for 3 months).
+     * @param req DescribeRecordTaskRequest
+     * @return DescribeRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordTaskResponse DescribeRecordTask(DescribeRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *The API is used to query the number of screenshots as an LVB value-added service.
      * @param req DescribeScreenShotSheetNumListRequest
      * @return DescribeScreenShotSheetNumListResponse

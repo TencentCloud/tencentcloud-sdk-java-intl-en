@@ -89,6 +89,27 @@ Notes:<br>
     }
 
     /**
+     *This API is used to query the customer bill details.
+     * @param req DescribeBillDetailRequest
+     * @return DescribeBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillDetailResponse DescribeBillDetail(DescribeBillDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain the total amount of customer bills by payment mode.
      * @param req DescribeBillSummaryByPayModeRequest
      * @return DescribeBillSummaryByPayModeResponse
