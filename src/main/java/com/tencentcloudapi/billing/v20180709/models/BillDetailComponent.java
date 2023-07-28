@@ -72,14 +72,14 @@ public class BillDetailComponent extends AbstractModel{
     private String UsedAmountUnit;
 
     /**
-    * 
+    * Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RealTotalMeasure")
     @Expose
     private String RealTotalMeasure;
 
     /**
-    * 
+    * Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeductedMeasure")
     @Expose
@@ -342,32 +342,32 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return RealTotalMeasure 
+     * Get Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRealTotalMeasure() {
         return this.RealTotalMeasure;
     }
 
     /**
-     * Set 
-     * @param RealTotalMeasure 
+     * Set Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRealTotalMeasure(String RealTotalMeasure) {
         this.RealTotalMeasure = RealTotalMeasure;
     }
 
     /**
-     * Get  
-     * @return DeductedMeasure 
+     * Get Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDeductedMeasure() {
         return this.DeductedMeasure;
     }
 
     /**
-     * Set 
-     * @param DeductedMeasure 
+     * Set Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDeductedMeasure(String DeductedMeasure) {
         this.DeductedMeasure = DeductedMeasure;

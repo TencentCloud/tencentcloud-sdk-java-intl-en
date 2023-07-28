@@ -51,6 +51,13 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
     private String SubtitleFormat;
 
     /**
+    * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+    */
+    @SerializedName("SrcLanguage")
+    @Expose
+    private String SrcLanguage;
+
+    /**
      * Get Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li> 
@@ -126,6 +133,22 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         this.SubtitleFormat = SubtitleFormat;
     }
 
+    /**
+     * Get Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy). 
+     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     */
+    public String getSrcLanguage() {
+        return this.SrcLanguage;
+    }
+
+    /**
+     * Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * @param SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     */
+    public void setSrcLanguage(String SrcLanguage) {
+        this.SrcLanguage = SrcLanguage;
+    }
+
     public AsrFullTextConfigureInfo() {
     }
 
@@ -146,6 +169,9 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
+        if (source.SrcLanguage != null) {
+            this.SrcLanguage = new String(source.SrcLanguage);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+        this.setParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
 
     }
 }

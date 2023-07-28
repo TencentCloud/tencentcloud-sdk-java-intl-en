@@ -49,6 +49,13 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     private String SubtitleFormat;
 
     /**
+    * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+    */
+    @SerializedName("SrcLanguage")
+    @Expose
+    private String SrcLanguage;
+
+    /**
      * Get Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li> 
@@ -116,6 +123,22 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         this.SubtitleFormat = SubtitleFormat;
     }
 
+    /**
+     * Get Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li> 
+     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     */
+    public String getSrcLanguage() {
+        return this.SrcLanguage;
+    }
+
+    /**
+     * Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     * @param SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     */
+    public void setSrcLanguage(String SrcLanguage) {
+        this.SrcLanguage = SrcLanguage;
+    }
+
     public AsrFullTextConfigureInfoForUpdate() {
     }
 
@@ -133,6 +156,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
+        if (source.SrcLanguage != null) {
+            this.SrcLanguage = new String(source.SrcLanguage);
+        }
     }
 
 
@@ -143,6 +169,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+        this.setParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
 
     }
 }

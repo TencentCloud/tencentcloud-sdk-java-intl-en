@@ -155,7 +155,7 @@ Note: To query the product codes used in the current month, call <a href="https:
     private String Context;
 
     /**
-    * 
+    * The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
     */
     @SerializedName("PayerUin")
     @Expose
@@ -522,16 +522,16 @@ Note: To query the product codes used in the current month, call <a href="https:
     }
 
     /**
-     * Get  
-     * @return PayerUin 
+     * Get The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID. 
+     * @return PayerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 
-     * @param PayerUin 
+     * Set The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+     * @param PayerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;

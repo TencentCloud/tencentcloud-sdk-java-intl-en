@@ -27,7 +27,7 @@ public enum BillingErrorCode {
     // Gateway error.
      INTERNALERROR_GATEWAYERROR("InternalError.GatewayError"),
      
-    // 
+    // Undefined exception.
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
     // Invalid parameter.
