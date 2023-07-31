@@ -45,6 +45,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private ResourceAvailability [] AvailabilitySet;
 
     /**
+    * ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TypeSet")
+    @Expose
+    private TypeInfo [] TypeSet;
+
+    /**
      * Get Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`. 
      * @return Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
      */
@@ -96,6 +104,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.AvailabilitySet = AvailabilitySet;
     }
 
+    /**
+     * Get ISP Type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TypeSet ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TypeInfo [] getTypeSet() {
+        return this.TypeSet;
+    }
+
+    /**
+     * Set ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TypeSet ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTypeSet(TypeInfo [] TypeSet) {
+        this.TypeSet = TypeSet;
+    }
+
     public Resource() {
     }
 
@@ -119,6 +147,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.AvailabilitySet[i] = new ResourceAvailability(source.AvailabilitySet[i]);
             }
         }
+        if (source.TypeSet != null) {
+            this.TypeSet = new TypeInfo[source.TypeSet.length];
+            for (int i = 0; i < source.TypeSet.length; i++) {
+                this.TypeSet[i] = new TypeInfo(source.TypeSet[i]);
+            }
+        }
     }
 
 
@@ -129,6 +163,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
+        this.setParamArrayObj(map, prefix + "TypeSet.", this.TypeSet);
 
     }
 }

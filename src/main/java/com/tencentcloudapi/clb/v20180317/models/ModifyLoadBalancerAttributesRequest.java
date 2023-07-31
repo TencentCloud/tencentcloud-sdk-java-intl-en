@@ -72,6 +72,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private Boolean DeleteProtect;
 
     /**
+    * Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+    */
+    @SerializedName("ModifyClassicDomain")
+    @Expose
+    private Boolean ModifyClassicDomain;
+
+    /**
      * Get Unique CLB ID 
      * @return LoadBalancerId Unique CLB ID
      */
@@ -183,6 +190,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.DeleteProtect = DeleteProtect;
     }
 
+    /**
+     * Get Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated.  
+     * @return ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+     */
+    public Boolean getModifyClassicDomain() {
+        return this.ModifyClassicDomain;
+    }
+
+    /**
+     * Set Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+     * @param ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+     */
+    public void setModifyClassicDomain(Boolean ModifyClassicDomain) {
+        this.ModifyClassicDomain = ModifyClassicDomain;
+    }
+
     public ModifyLoadBalancerAttributesRequest() {
     }
 
@@ -212,6 +235,9 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         if (source.DeleteProtect != null) {
             this.DeleteProtect = new Boolean(source.DeleteProtect);
         }
+        if (source.ModifyClassicDomain != null) {
+            this.ModifyClassicDomain = new Boolean(source.ModifyClassicDomain);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+        this.setParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
 
     }
 }

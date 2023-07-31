@@ -80,14 +80,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String ForwardType;
 
     /**
-    * TRPC callee server route, which is required when `ForwardType` is "TRPC".
+    * TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC calling service API, which is required when `ForwardType` is "TRPC".
+    * TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
     */
     @SerializedName("TrpcFunc")
     @Expose
@@ -226,32 +226,32 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get TRPC callee server route, which is required when `ForwardType` is "TRPC". 
-     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
+     * Get TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage. 
+     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC callee server route, which is required when `ForwardType` is "TRPC".
-     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
+     * Set TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC calling service API, which is required when `ForwardType` is "TRPC". 
-     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
+     * Get TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage. 
+     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC calling service API, which is required when `ForwardType` is "TRPC".
-     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
+     * Set TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;

@@ -156,16 +156,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String WafDomainId;
 
     /**
-    * TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TrpcFunc")
     @Expose
@@ -512,40 +512,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;

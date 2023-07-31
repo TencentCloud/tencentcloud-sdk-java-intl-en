@@ -96,7 +96,7 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     private String ZoneId;
 
     /**
-    * CLB network billing mode. This parameter is applicable only to public network CLB instances.
+    * It only works on LCU-supported instances on private networks and all instances on public networks.
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -141,8 +141,8 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     /**
     * Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
-<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+<ul><li>The default specification is Super Large 1.
+<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
     */
     @SerializedName("SlaType")
     @Expose
@@ -197,6 +197,13 @@ Note: The traffic only goes to the secondary AZ when the primary AZ is unavailab
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
     private Boolean LoadBalancerPassToTarget;
+
+    /**
+    * Upgrades to domain name-based CLB
+    */
+    @SerializedName("DynamicVip")
+    @Expose
+    private Boolean DynamicVip;
 
     /**
      * Get CLB instance network type:
@@ -371,16 +378,16 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     }
 
     /**
-     * Get CLB network billing mode. This parameter is applicable only to public network CLB instances. 
-     * @return InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
+     * Get It only works on LCU-supported instances on private networks and all instances on public networks. 
+     * @return InternetAccessible It only works on LCU-supported instances on private networks and all instances on public networks.
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set CLB network billing mode. This parameter is applicable only to public network CLB instances.
-     * @param InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
+     * Set It only works on LCU-supported instances on private networks and all instances on public networks.
+     * @param InternetAccessible It only works on LCU-supported instances on private networks and all instances on public networks.
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
@@ -473,12 +480,12 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     /**
      * Get Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
-<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul> 
+<ul><li>The default specification is Super Large 1.
+<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul> 
      * @return SlaType Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
-<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+<ul><li>The default specification is Super Large 1.
+<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
      */
     public String getSlaType() {
         return this.SlaType;
@@ -487,12 +494,12 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     /**
      * Set Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
-<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+<ul><li>The default specification is Super Large 1.
+<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
      * @param SlaType Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
-<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+<ul><li>The default specification is Super Large 1.
+<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
@@ -614,6 +621,22 @@ Note: The traffic only goes to the secondary AZ when the primary AZ is unavailab
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    /**
+     * Get Upgrades to domain name-based CLB 
+     * @return DynamicVip Upgrades to domain name-based CLB
+     */
+    public Boolean getDynamicVip() {
+        return this.DynamicVip;
+    }
+
+    /**
+     * Set Upgrades to domain name-based CLB
+     * @param DynamicVip Upgrades to domain name-based CLB
+     */
+    public void setDynamicVip(Boolean DynamicVip) {
+        this.DynamicVip = DynamicVip;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -700,6 +723,9 @@ Note: The traffic only goes to the secondary AZ when the primary AZ is unavailab
         if (source.LoadBalancerPassToTarget != null) {
             this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
         }
+        if (source.DynamicVip != null) {
+            this.DynamicVip = new Boolean(source.DynamicVip);
+        }
     }
 
 
@@ -731,6 +757,7 @@ Note: The traffic only goes to the secondary AZ when the primary AZ is unavailab
         this.setParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
 
     }
 }

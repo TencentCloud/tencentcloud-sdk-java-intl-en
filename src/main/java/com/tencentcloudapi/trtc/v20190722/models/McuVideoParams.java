@@ -65,6 +65,13 @@ Grey: 0x999999
     private McuWaterMarkParams [] WaterMarkList;
 
     /**
+    * Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+    */
+    @SerializedName("BackgroundRenderMode")
+    @Expose
+    private Long BackgroundRenderMode;
+
+    /**
      * Get The video encoding parameters. 
      * @return VideoEncode The video encoding parameters.
      */
@@ -172,6 +179,22 @@ Grey: 0x999999
         this.WaterMarkList = WaterMarkList;
     }
 
+    /**
+     * Get Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling. 
+     * @return BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     */
+    public Long getBackgroundRenderMode() {
+        return this.BackgroundRenderMode;
+    }
+
+    /**
+     * Set Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     * @param BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     */
+    public void setBackgroundRenderMode(Long BackgroundRenderMode) {
+        this.BackgroundRenderMode = BackgroundRenderMode;
+    }
+
     public McuVideoParams() {
     }
 
@@ -198,6 +221,9 @@ Grey: 0x999999
                 this.WaterMarkList[i] = new McuWaterMarkParams(source.WaterMarkList[i]);
             }
         }
+        if (source.BackgroundRenderMode != null) {
+            this.BackgroundRenderMode = new Long(source.BackgroundRenderMode);
+        }
     }
 
 
@@ -210,6 +236,7 @@ Grey: 0x999999
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         this.setParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+        this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
 
     }
 }

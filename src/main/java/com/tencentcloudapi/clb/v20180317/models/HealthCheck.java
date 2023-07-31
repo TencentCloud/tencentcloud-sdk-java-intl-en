@@ -38,7 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TimeOut;
 
     /**
-    * Health check interval in seconds. Value range: 5-300. Default value: 5.
+    * Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IntervalTime")
@@ -195,9 +196,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check interval in seconds. Value range: 5-300. Default value: 5.
+     * Get Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IntervalTime Health check interval in seconds. Value range: 5-300. Default value: 5.
+     * @return IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIntervalTime() {
@@ -205,9 +208,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Health check interval in seconds. Value range: 5-300. Default value: 5.
+     * Set Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IntervalTime Health check interval in seconds. Value range: 5-300. Default value: 5.
+     * @param IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIntervalTime(Long IntervalTime) {

@@ -100,6 +100,13 @@ Grey: `0x999999`
     private McuCustomCrop CustomCrop;
 
     /**
+    * The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+    */
+    @SerializedName("BackgroundRenderMode")
+    @Expose
+    private Long BackgroundRenderMode;
+
+    /**
      * Get The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence. 
      * @return UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
      */
@@ -287,6 +294,22 @@ Grey: `0x999999`
         this.CustomCrop = CustomCrop;
     }
 
+    /**
+     * Get The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3. 
+     * @return BackgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     */
+    public Long getBackgroundRenderMode() {
+        return this.BackgroundRenderMode;
+    }
+
+    /**
+     * Set The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     * @param BackgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     */
+    public void setBackgroundRenderMode(Long BackgroundRenderMode) {
+        this.BackgroundRenderMode = BackgroundRenderMode;
+    }
+
     public McuLayout() {
     }
 
@@ -325,6 +348,9 @@ Grey: `0x999999`
         if (source.CustomCrop != null) {
             this.CustomCrop = new McuCustomCrop(source.CustomCrop);
         }
+        if (source.BackgroundRenderMode != null) {
+            this.BackgroundRenderMode = new Long(source.BackgroundRenderMode);
+        }
     }
 
 
@@ -342,6 +368,7 @@ Grey: `0x999999`
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         this.setParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
+        this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
 
     }
 }
