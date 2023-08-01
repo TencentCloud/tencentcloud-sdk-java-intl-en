@@ -38,7 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TimeOut;
 
     /**
-    * Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+    * Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -196,10 +196,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+     * Get Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+     * @return IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -208,10 +208,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+     * Set Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+     * @param IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
