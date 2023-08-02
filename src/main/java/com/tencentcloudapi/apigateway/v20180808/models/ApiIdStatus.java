@@ -38,6 +38,7 @@ public class ApiIdStatus extends AbstractModel{
 
     /**
     * API description
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApiDesc")
     @Expose
@@ -192,8 +193,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API description 
+     * Get API description
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ApiDesc API description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApiDesc() {
         return this.ApiDesc;
@@ -201,7 +204,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set API description
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApiDesc API description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApiDesc(String ApiDesc) {
         this.ApiDesc = ApiDesc;
@@ -436,7 +441,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String [] getRelationBuniessApiIds() {
         return this.RelationBuniessApiIds;
     }
@@ -446,7 +453,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setRelationBuniessApiIds(String [] RelationBuniessApiIds) {
         this.RelationBuniessApiIds = RelationBuniessApiIds;
     }

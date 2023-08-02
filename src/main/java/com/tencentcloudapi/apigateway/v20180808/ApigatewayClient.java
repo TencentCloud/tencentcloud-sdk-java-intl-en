@@ -1465,27 +1465,6 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
-     * @param req GenerateApiDocumentRequest
-     * @return GenerateApiDocumentResponse
-     * @throws TencentCloudSDKException
-     */
-    public GenerateApiDocumentResponse GenerateApiDocument(GenerateApiDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GenerateApiDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GenerateApiDocument");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to import an OpenAPI to API gateway. 
      * @param req ImportOpenApiRequest
      * @return ImportOpenApiResponse
@@ -1972,7 +1951,7 @@ Only after a service is published to an environment can its APIs be called. You 
     }
 
     /**
-     *This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+     *u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
      * @param req UpdateServiceRequest
      * @return UpdateServiceResponse
      * @throws TencentCloudSDKException

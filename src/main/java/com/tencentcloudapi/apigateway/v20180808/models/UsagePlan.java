@@ -44,7 +44,8 @@ public class UsagePlan extends AbstractModel{
     private String UsagePlanName;
 
     /**
-    * Usage plan description.
+    * Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UsagePlanDesc")
     @Expose
@@ -121,15 +122,19 @@ public class UsagePlan extends AbstractModel{
 
     /**
      * Get Usage plan description. 
-     * @return UsagePlanDesc Usage plan description.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UsagePlanDesc Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUsagePlanDesc() {
         return this.UsagePlanDesc;
     }
 
     /**
-     * Set Usage plan description.
-     * @param UsagePlanDesc Usage plan description.
+     * Set Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UsagePlanDesc Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUsagePlanDesc(String UsagePlanDesc) {
         this.UsagePlanDesc = UsagePlanDesc;

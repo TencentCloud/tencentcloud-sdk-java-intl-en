@@ -24,6 +24,12 @@ public enum ApigatewayErrorCode {
     // The API is being manipulated. Please try again later.
      FAILEDOPERATION_APIINOPERATION("FailedOperation.ApiInOperation"),
      
+    // 
+     FAILEDOPERATION_BACKENDDOMAINERROR("FailedOperation.BackendDomainError"),
+     
+    // 
+     FAILEDOPERATION_CAMEXCEPTION("FailedOperation.CamException"),
+     
     // An error occurred while binding a certificate.
      FAILEDOPERATION_CERTIFICATEIDBINDERROR("FailedOperation.CertificateIdBindError"),
      
@@ -99,9 +105,6 @@ public enum ApigatewayErrorCode {
     // The domain name format is incorrect.
      FAILEDOPERATION_FORMATERROR("FailedOperation.FormatError"),
      
-    // Failed to generate the API documentation.
-     FAILEDOPERATION_GENERATEAPIDOCUMENTERROR("FailedOperation.GenerateApiDocumentError"),
-     
     // Failed to get the role. Please make sure that relevant API Gateway service APIs have been authorized.
      FAILEDOPERATION_GETROLEERROR("FailedOperation.GetRoleError"),
      
@@ -150,6 +153,9 @@ public enum ApigatewayErrorCode {
     // API Gateway internal request error. Please try again later. If the problem persists, please contact the smart customer service or submit a ticket.
      INTERNALERROR_APIGWEXCEPTION("InternalError.ApigwException"),
      
+    // 
+     INTERNALERROR_CAMEXCEPTION("InternalError.CamException"),
+     
     // CAuth internal request error. Please try again later. If the problem persists, please submit a ticket.
      INTERNALERROR_CAUTHEXCEPTION("InternalError.CauthException"),
      
@@ -158,6 +164,9 @@ public enum ApigatewayErrorCode {
      
     // OSS internal request error. Please try again. If the problem persists, please contact the smart customer service or submit a ticket.
      INTERNALERROR_OSSEXCEPTION("InternalError.OssException"),
+     
+    // 
+     INTERNALERROR_RETURNABLEEXCEPTION("InternalError.ReturnableException"),
      
     // SCF internal request error. Please try again. If the problem persists, please contact the smart customer service or submit a ticket.
      INTERNALERROR_SCFEXCEPTION("InternalError.ScfException"),
@@ -224,9 +233,6 @@ public enum ApigatewayErrorCode {
      
     // The parameter value is incorrect.
      INVALIDPARAMETERVALUE_INVALIDFILTERNOTSUPPORTEDNAME("InvalidParameterValue.InvalidFilterNotSupportedName"),
-     
-    // The `GenLanguage` parameter value is incorrect.
-     INVALIDPARAMETERVALUE_INVALIDGENLANGUAGE("InvalidParameterValue.InvalidGenLanguage"),
      
     // The value of the backend address parameter is incorrect.
      INVALIDPARAMETERVALUE_INVALIDIPADDRESS("InvalidParameterValue.InvalidIPAddress"),
@@ -432,14 +438,23 @@ public enum ApigatewayErrorCode {
     // The key has already been bound to a usage plan.
      UNSUPPORTEDOPERATION_ALREADYBINDUSAGEPLAN("UnsupportedOperation.AlreadyBindUsagePlan"),
      
+    // 
+     UNSUPPORTEDOPERATION_APILISTNOTEMPTY("UnsupportedOperation.ApiListNotEmpty"),
+     
     // The current plugin cannot be bound.
      UNSUPPORTEDOPERATION_ATTACHPLUGIN("UnsupportedOperation.AttachPlugin"),
      
     // You are using the basic edition and only one API can be created.
      UNSUPPORTEDOPERATION_BASICSERVICENOMOREAPI("UnsupportedOperation.BasicServiceNoMoreApi"),
      
+    // 
+     UNSUPPORTEDOPERATION_BASICSERVICENOTALLOWATTACHPLUGIN("UnsupportedOperation.BasicServiceNotAllowAttachPlugin"),
+     
     // Invalid log query period
      UNSUPPORTEDOPERATION_CLSSEARCHTIME("UnsupportedOperation.ClsSearchTime"),
+     
+    // 
+     UNSUPPORTEDOPERATION_EXISTINGONLINEENVIRONMENT("UnsupportedOperation.ExistingOnlineEnvironment"),
      
     // Cannot force HTTPS when the protocol is HTTP.
      UNSUPPORTEDOPERATION_FORCEHTTPS("UnsupportedOperation.ForceHttps"),
@@ -471,6 +486,9 @@ public enum ApigatewayErrorCode {
     // Network types cannot be reduced.
      UNSUPPORTEDOPERATION_REDUCENETTYPES("UnsupportedOperation.ReduceNetTypes"),
      
+    // 
+     UNSUPPORTEDOPERATION_REQUESTPOSTERROR("UnsupportedOperation.RequestPostError"),
+     
     // The resource has been associated. Please disassociate it first.
      UNSUPPORTEDOPERATION_RESOURCEASSOCIATED("UnsupportedOperation.ResourceAssociated"),
      
@@ -480,8 +498,14 @@ public enum ApigatewayErrorCode {
     // The resource is not associated.
      UNSUPPORTEDOPERATION_RESOURCEUNASSOCIATED("UnsupportedOperation.ResourceUnassociated"),
      
+    // 
+     UNSUPPORTEDOPERATION_TAGSNOTEMPTY("UnsupportedOperation.TagsNotEmpty"),
+     
     // The current `Uin` is not in the manual key allowlist.
      UNSUPPORTEDOPERATION_UINNOTINWHITELIST("UnsupportedOperation.UinNotInWhiteList"),
+     
+    // 
+     UNSUPPORTEDOPERATION_UNPACKERROR("UnsupportedOperation.UnpackError"),
      
     // The key has already been bound to a usage plan.
      UNSUPPORTEDOPERATION_UNSUPPORTEDBINDAPIKEY("UnsupportedOperation.UnsupportedBindApiKey"),

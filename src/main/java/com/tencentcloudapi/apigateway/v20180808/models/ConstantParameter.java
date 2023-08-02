@@ -23,92 +23,112 @@ import java.util.HashMap;
 public class ConstantParameter extends AbstractModel{
 
     /**
-    * Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+    * Constant parameter name This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+    * Constant parameter description This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+    * Constant paramter location This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Position")
     @Expose
     private String Position;
 
     /**
-    * Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+    * Default value of the constant parameter This is only applicable when `ServiceType` is `HTTP`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-     * Get Constant parameter name, which is used only if `ServiceType` is `HTTP`. 
-     * @return Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+     * Get Constant parameter name This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Name Constant parameter name This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Constant parameter name, which is used only if `ServiceType` is `HTTP`.
-     * @param Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+     * Set Constant parameter name This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Name Constant parameter name This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Constant parameter description, which is used only if `ServiceType` is `HTTP`. 
-     * @return Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+     * Get Constant parameter description This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Desc Constant parameter description This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Constant parameter description, which is used only if `ServiceType` is `HTTP`.
-     * @param Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+     * Set Constant parameter description This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Desc Constant parameter description This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Constant parameter position, which is used only if `ServiceType` is `HTTP`. 
-     * @return Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+     * Get Constant paramter location This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Position Constant paramter location This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPosition() {
         return this.Position;
     }
 
     /**
-     * Set Constant parameter position, which is used only if `ServiceType` is `HTTP`.
-     * @param Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+     * Set Constant paramter location This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Position Constant paramter location This is only applicable when `ServiceType` is `HTTP`.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPosition(String Position) {
         this.Position = Position;
     }
 
     /**
-     * Get Default value of constant parameter, which is used only if `ServiceType` is `HTTP`. 
-     * @return DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+     * Get Default value of the constant parameter This is only applicable when `ServiceType` is `HTTP`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DefaultValue Default value of the constant parameter This is only applicable when `ServiceType` is `HTTP`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
-     * @param DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+     * Set Default value of the constant parameter This is only applicable when `ServiceType` is `HTTP`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DefaultValue Default value of the constant parameter This is only applicable when `ServiceType` is `HTTP`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
