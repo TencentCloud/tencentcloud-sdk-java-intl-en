@@ -168,14 +168,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AliasZoneName;
 
     /**
-    * Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
     */
     @SerializedName("IsFake")
     @Expose
     private Long IsFake;
+
+    /**
+    * Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+    */
+    @SerializedName("LockStatus")
+    @Expose
+    private String LockStatus;
 
     /**
      * Get The site ID. 
@@ -542,31 +548,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IsFake Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li> 
+     * @return IsFake Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
      */
     public Long getIsFake() {
         return this.IsFake;
     }
 
     /**
-     * Set Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IsFake Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
+     * @param IsFake Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
      */
     public void setIsFake(Long IsFake) {
         this.IsFake = IsFake;
+    }
+
+    /**
+     * Get Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li> 
+     * @return LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     */
+    public String getLockStatus() {
+        return this.LockStatus;
+    }
+
+    /**
+     * Set Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     * @param LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     */
+    public void setLockStatus(String LockStatus) {
+        this.LockStatus = LockStatus;
     }
 
     public Zone() {
@@ -649,6 +667,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.IsFake != null) {
             this.IsFake = new Long(source.IsFake);
         }
+        if (source.LockStatus != null) {
+            this.LockStatus = new String(source.LockStatus);
+        }
     }
 
 
@@ -675,6 +696,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         this.setParamSimple(map, prefix + "IsFake", this.IsFake);
+        this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
 
     }
 }

@@ -164,6 +164,13 @@ This field indicates the unique ID of the subdomain name.
     private ApplicationProxyRule [] ApplicationProxyRules;
 
     /**
+    * Cross-MLC-border acceleration.
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
      * Get The site ID. 
      * @return ZoneId The site ID.
      */
@@ -523,6 +530,22 @@ This field indicates the unique ID of the subdomain name.
         this.ApplicationProxyRules = ApplicationProxyRules;
     }
 
+    /**
+     * Get Cross-MLC-border acceleration. 
+     * @return AccelerateMainland Cross-MLC-border acceleration.
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set Cross-MLC-border acceleration.
+     * @param AccelerateMainland Cross-MLC-border acceleration.
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
+    }
+
     public ApplicationProxy() {
     }
 
@@ -588,6 +611,9 @@ This field indicates the unique ID of the subdomain name.
                 this.ApplicationProxyRules[i] = new ApplicationProxyRule(source.ApplicationProxyRules[i]);
             }
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -612,6 +638,7 @@ This field indicates the unique ID of the subdomain name.
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

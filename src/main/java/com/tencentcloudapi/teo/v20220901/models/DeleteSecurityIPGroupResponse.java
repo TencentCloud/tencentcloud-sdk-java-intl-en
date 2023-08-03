@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSpeedTestingRequest extends AbstractModel{
+public class DeleteSecurityIPGroupResponse extends AbstractModel{
 
     /**
-    * The site ID.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("ZoneId")
+    @SerializedName("RequestId")
     @Expose
-    private String ZoneId;
+    private String RequestId;
 
     /**
-    * The subdomain name to test.
-    */
-    @SerializedName("Host")
-    @Expose
-    private String Host;
-
-    /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getZoneId() {
-        return this.ZoneId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    /**
-     * Get The subdomain name to test. 
-     * @return Host The subdomain name to test.
-     */
-    public String getHost() {
-        return this.Host;
-    }
-
-    /**
-     * Set The subdomain name to test.
-     * @param Host The subdomain name to test.
-     */
-    public void setHost(String Host) {
-        this.Host = Host;
-    }
-
-    public CreateSpeedTestingRequest() {
+    public DeleteSecurityIPGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSpeedTestingRequest(CreateSpeedTestingRequest source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
-        }
-        if (source.Host != null) {
-            this.Host = new String(source.Host);
+    public DeleteSecurityIPGroupResponse(DeleteSecurityIPGroupResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -89,8 +63,7 @@ public class CreateSpeedTestingRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -23,15 +23,14 @@ import java.util.HashMap;
 public class BotExtendAction extends AbstractModel{
 
     /**
-    * The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+    * Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
     */
     @SerializedName("Action")
     @Expose
@@ -46,48 +45,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long Percent;
 
     /**
-     * Get The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li> 
-     * @return Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * Get Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li> 
+     * @return Action Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
-     * @param Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * Set Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
+     * @param Action Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;

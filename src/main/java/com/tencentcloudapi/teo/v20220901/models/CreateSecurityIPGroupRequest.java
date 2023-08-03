@@ -20,41 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateOriginProtectionIPWhitelistResponse extends AbstractModel{
+public class CreateSecurityIPGroupRequest extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Site ID.
     */
-    @SerializedName("RequestId")
+    @SerializedName("ZoneId")
     @Expose
-    private String RequestId;
+    private String ZoneId;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * IP group information.
+    */
+    @SerializedName("IPGroup")
+    @Expose
+    private IPGroup IPGroup;
+
+    /**
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
-    public UpdateOriginProtectionIPWhitelistResponse() {
+    /**
+     * Get IP group information. 
+     * @return IPGroup IP group information.
+     */
+    public IPGroup getIPGroup() {
+        return this.IPGroup;
+    }
+
+    /**
+     * Set IP group information.
+     * @param IPGroup IP group information.
+     */
+    public void setIPGroup(IPGroup IPGroup) {
+        this.IPGroup = IPGroup;
+    }
+
+    public CreateSecurityIPGroupRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateOriginProtectionIPWhitelistResponse(UpdateOriginProtectionIPWhitelistResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public CreateSecurityIPGroupRequest(CreateSecurityIPGroupRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.IPGroup != null) {
+            this.IPGroup = new IPGroup(source.IPGroup);
         }
     }
 
@@ -63,7 +89,8 @@ public class UpdateOriginProtectionIPWhitelistResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamObj(map, prefix + "IPGroup.", this.IPGroup);
 
     }
 }

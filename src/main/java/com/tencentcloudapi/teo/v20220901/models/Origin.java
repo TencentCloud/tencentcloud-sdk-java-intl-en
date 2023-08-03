@@ -50,10 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String OriginPullProtocol;
 
     /**
-    * Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CosPrivateAccess")
     @Expose
@@ -132,28 +132,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCosPrivateAccess() {
         return this.CosPrivateAccess;
     }
 
     /**
-     * Set Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCosPrivateAccess(String CosPrivateAccess) {
         this.CosPrivateAccess = CosPrivateAccess;

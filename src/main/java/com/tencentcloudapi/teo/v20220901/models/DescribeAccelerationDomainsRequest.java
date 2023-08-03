@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsRequest extends AbstractModel{
 
     /**
-    * Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+    * ID of the site related with the accelerated domain name.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -85,16 +85,16 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel{
     private String Order;
 
     /**
-     * Get Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned. 
-     * @return ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+     * Get ID of the site related with the accelerated domain name. 
+     * @return ZoneId ID of the site related with the accelerated domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
-     * @param ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+     * Set ID of the site related with the accelerated domain name.
+     * @param ZoneId ID of the site related with the accelerated domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

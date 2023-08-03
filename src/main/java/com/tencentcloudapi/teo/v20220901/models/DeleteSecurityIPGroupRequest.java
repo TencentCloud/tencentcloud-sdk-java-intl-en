@@ -20,41 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReclaimZoneRequest extends AbstractModel{
+public class DeleteSecurityIPGroupRequest extends AbstractModel{
 
     /**
-    * The site name.
+    * Site ID.
     */
-    @SerializedName("ZoneName")
+    @SerializedName("ZoneId")
     @Expose
-    private String ZoneName;
+    private String ZoneId;
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+    * IP group ID.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
-    public String getZoneName() {
-        return this.ZoneName;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
-    public void setZoneName(String ZoneName) {
-        this.ZoneName = ZoneName;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
-    public ReclaimZoneRequest() {
+    /**
+     * Get IP group ID. 
+     * @return GroupId IP group ID.
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set IP group ID.
+     * @param GroupId IP group ID.
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    public DeleteSecurityIPGroupRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReclaimZoneRequest(ReclaimZoneRequest source) {
-        if (source.ZoneName != null) {
-            this.ZoneName = new String(source.ZoneName);
+    public DeleteSecurityIPGroupRequest(DeleteSecurityIPGroupRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
         }
     }
 
@@ -63,7 +89,8 @@ public class ReclaimZoneRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

@@ -32,8 +32,8 @@ public class ClientIpCountry extends AbstractModel{
     private String Switch;
 
     /**
-    * Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+    * Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
     */
     @SerializedName("HeaderName")
     @Expose
@@ -64,20 +64,20 @@ If it is left empty, the default value `EO-Client-IPCountry` will be used.
     }
 
     /**
-     * Get Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used. 
-     * @return HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+     * Get Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified. 
+     * @return HeaderName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
-     * @param HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+     * Set Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
+     * @param HeaderName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;

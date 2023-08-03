@@ -30,8 +30,9 @@ public class CreatePrefetchTaskRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
+    * Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
     */
     @SerializedName("Targets")
     @Expose
@@ -68,20 +69,24 @@ http://www.example.com/example.txt
     }
 
     /**
-     * Get List of resources to be pre-warmed, for example:
+     * Get Resources to be pre-warmed, for example: 
 http://www.example.com/example.txt 
-     * @return Targets List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). 
+     * @return Targets Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
-     * @param Targets List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
+     * Set Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @param Targets Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

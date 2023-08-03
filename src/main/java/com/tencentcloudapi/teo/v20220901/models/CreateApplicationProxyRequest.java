@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class CreateApplicationProxyRequest extends AbstractModel{
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+    * Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
     */
     @SerializedName("ProxyName")
     @Expose
@@ -82,8 +82,8 @@ If not specified, this field uses the default value 600.
     private Long SessionPersistTime;
 
     /**
-    * The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+    * Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
     */
     @SerializedName("Ipv6")
     @Expose
@@ -98,36 +98,43 @@ If this field is not specified, an application proxy rule will not be created.
     private ApplicationProxyRule [] ApplicationProxyRules;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+    * Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance. 
-     * @return ProxyName When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+     * Get Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`. 
+     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
-     * @param ProxyName When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+     * Set Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+     * @param ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -250,20 +257,20 @@ If not specified, this field uses the default value 600.
     }
 
     /**
-     * Get The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled. 
-     * @return Ipv6 The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+     * Get Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified. 
+     * @return Ipv6 Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
-     * @param Ipv6 The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+     * Set Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
+     * @param Ipv6 Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
@@ -287,6 +294,22 @@ If this field is not specified, an application proxy rule will not be created.
      */
     public void setApplicationProxyRules(ApplicationProxyRule [] ApplicationProxyRules) {
         this.ApplicationProxyRules = ApplicationProxyRules;
+    }
+
+    /**
+     * Get Cross-MLC-border acceleration. It is disabled if this parameter is not specified. 
+     * @return AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     * @param AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
     }
 
     public CreateApplicationProxyRequest() {
@@ -327,6 +350,9 @@ If this field is not specified, an application proxy rule will not be created.
                 this.ApplicationProxyRules[i] = new ApplicationProxyRule(source.ApplicationProxyRules[i]);
             }
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -343,6 +369,7 @@ If this field is not specified, an application proxy rule will not be created.
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

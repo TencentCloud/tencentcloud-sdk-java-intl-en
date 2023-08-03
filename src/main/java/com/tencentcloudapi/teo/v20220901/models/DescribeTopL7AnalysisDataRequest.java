@@ -37,27 +37,27 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * The metric to query. Values: 
-<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
-<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
-<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
-<li>`l7Flow_outFlux_url`: Traffic by URL</li>
-<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
-<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
-<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
-<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
-<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
-<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
-<li>`l7Flow_request_country`: Requests by country/region</li>
-<li>`l7Flow_request_statusCode`: Requests by status code</li>
-<li>`l7Flow_request_domain`: Requests by domain name</li>
-<li>`l7Flow_request_url`: Requests by URL</li>
-<li>`l7Flow_request_resourceType`: Requests by resource type</li>
-<li>`l7Flow_request_sip`: Requests by client IP</li>
-<li>`l7Flow_request_referer`: Requests by referer</li>
-<li>`l7Flow_request_ua_device`: Requests by device</li>
-<li>`l7Flow_request_ua_browser`: Requests by browser</li>
-<li>`l7Flow_request_us_os`: Requests by operating system</li>
+    * Metrics to query. Valid values: 
+<li>`l7Flow_outFlux_country`: Query traffic by country/region;</li>
+<li>`l7Flow_outFlux_statusCode`: Query traffic by status code;</li>
+<li>`l7Flow_outFlux_domain`: Query traffic by domain;</li>
+<li>`l7Flow_outFlux_url`: Query traffic by URL;</li>
+<li>`l7Flow_outFlux_resourceType`: Query traffic by resource type;</li>
+<li>`l7Flow_outFlux_sip`: Query traffic by source IP;</li>
+<li>`l7Flow_outFlux_referers`: Query traffic by refer information;</li>
+<li>`l7Flow_outFlux_ua_device`: Query traffic by device;</li>
+<li>`l7Flow_outFlux_ua_browser`: Query traffic by browser;</li>
+<li>`l7Flow_outFlux_us_os`: Query traffic by OS;</li>
+<li>`l7Flow_request_country`: Query requests by country/region;</li>
+<li>`l7Flow_request_statusCode`: Query requests by status code;</li>
+<li>`l7Flow_request_domain`: Query requests by domain;</li>
+<li>`l7Flow_request_url`: Query requests by URL;</li>
+<li>`l7Flow_request_resourceType`: Query requests by resource type;</li>
+<li>`l7Flow_request_sip`: Query requests by source IP;</li>
+<li>`l7Flow_request_referer`: Query requests by refer information;</li>
+<li>`l7Flow_request_ua_device`: Query requests by device;</li>
+<li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
+<li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
     */
     @SerializedName("MetricName")
@@ -156,49 +156,49 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
     }
 
     /**
-     * Get The metric to query. Values: 
-<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
-<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
-<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
-<li>`l7Flow_outFlux_url`: Traffic by URL</li>
-<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
-<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
-<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
-<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
-<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
-<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
-<li>`l7Flow_request_country`: Requests by country/region</li>
-<li>`l7Flow_request_statusCode`: Requests by status code</li>
-<li>`l7Flow_request_domain`: Requests by domain name</li>
-<li>`l7Flow_request_url`: Requests by URL</li>
-<li>`l7Flow_request_resourceType`: Requests by resource type</li>
-<li>`l7Flow_request_sip`: Requests by client IP</li>
-<li>`l7Flow_request_referer`: Requests by referer</li>
-<li>`l7Flow_request_ua_device`: Requests by device</li>
-<li>`l7Flow_request_ua_browser`: Requests by browser</li>
-<li>`l7Flow_request_us_os`: Requests by operating system</li>
+     * Get Metrics to query. Valid values: 
+<li>`l7Flow_outFlux_country`: Query traffic by country/region;</li>
+<li>`l7Flow_outFlux_statusCode`: Query traffic by status code;</li>
+<li>`l7Flow_outFlux_domain`: Query traffic by domain;</li>
+<li>`l7Flow_outFlux_url`: Query traffic by URL;</li>
+<li>`l7Flow_outFlux_resourceType`: Query traffic by resource type;</li>
+<li>`l7Flow_outFlux_sip`: Query traffic by source IP;</li>
+<li>`l7Flow_outFlux_referers`: Query traffic by refer information;</li>
+<li>`l7Flow_outFlux_ua_device`: Query traffic by device;</li>
+<li>`l7Flow_outFlux_ua_browser`: Query traffic by browser;</li>
+<li>`l7Flow_outFlux_us_os`: Query traffic by OS;</li>
+<li>`l7Flow_request_country`: Query requests by country/region;</li>
+<li>`l7Flow_request_statusCode`: Query requests by status code;</li>
+<li>`l7Flow_request_domain`: Query requests by domain;</li>
+<li>`l7Flow_request_url`: Query requests by URL;</li>
+<li>`l7Flow_request_resourceType`: Query requests by resource type;</li>
+<li>`l7Flow_request_sip`: Query requests by source IP;</li>
+<li>`l7Flow_request_referer`: Query requests by refer information;</li>
+<li>`l7Flow_request_ua_device`: Query requests by device;</li>
+<li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
+<li>`l7Flow_request_us_os`: Query requests by OS.</li>
  
-     * @return MetricName The metric to query. Values: 
-<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
-<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
-<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
-<li>`l7Flow_outFlux_url`: Traffic by URL</li>
-<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
-<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
-<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
-<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
-<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
-<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
-<li>`l7Flow_request_country`: Requests by country/region</li>
-<li>`l7Flow_request_statusCode`: Requests by status code</li>
-<li>`l7Flow_request_domain`: Requests by domain name</li>
-<li>`l7Flow_request_url`: Requests by URL</li>
-<li>`l7Flow_request_resourceType`: Requests by resource type</li>
-<li>`l7Flow_request_sip`: Requests by client IP</li>
-<li>`l7Flow_request_referer`: Requests by referer</li>
-<li>`l7Flow_request_ua_device`: Requests by device</li>
-<li>`l7Flow_request_ua_browser`: Requests by browser</li>
-<li>`l7Flow_request_us_os`: Requests by operating system</li>
+     * @return MetricName Metrics to query. Valid values: 
+<li>`l7Flow_outFlux_country`: Query traffic by country/region;</li>
+<li>`l7Flow_outFlux_statusCode`: Query traffic by status code;</li>
+<li>`l7Flow_outFlux_domain`: Query traffic by domain;</li>
+<li>`l7Flow_outFlux_url`: Query traffic by URL;</li>
+<li>`l7Flow_outFlux_resourceType`: Query traffic by resource type;</li>
+<li>`l7Flow_outFlux_sip`: Query traffic by source IP;</li>
+<li>`l7Flow_outFlux_referers`: Query traffic by refer information;</li>
+<li>`l7Flow_outFlux_ua_device`: Query traffic by device;</li>
+<li>`l7Flow_outFlux_ua_browser`: Query traffic by browser;</li>
+<li>`l7Flow_outFlux_us_os`: Query traffic by OS;</li>
+<li>`l7Flow_request_country`: Query requests by country/region;</li>
+<li>`l7Flow_request_statusCode`: Query requests by status code;</li>
+<li>`l7Flow_request_domain`: Query requests by domain;</li>
+<li>`l7Flow_request_url`: Query requests by URL;</li>
+<li>`l7Flow_request_resourceType`: Query requests by resource type;</li>
+<li>`l7Flow_request_sip`: Query requests by source IP;</li>
+<li>`l7Flow_request_referer`: Query requests by refer information;</li>
+<li>`l7Flow_request_ua_device`: Query requests by device;</li>
+<li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
+<li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
      */
     public String getMetricName() {
@@ -206,49 +206,49 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
     }
 
     /**
-     * Set The metric to query. Values: 
-<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
-<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
-<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
-<li>`l7Flow_outFlux_url`: Traffic by URL</li>
-<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
-<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
-<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
-<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
-<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
-<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
-<li>`l7Flow_request_country`: Requests by country/region</li>
-<li>`l7Flow_request_statusCode`: Requests by status code</li>
-<li>`l7Flow_request_domain`: Requests by domain name</li>
-<li>`l7Flow_request_url`: Requests by URL</li>
-<li>`l7Flow_request_resourceType`: Requests by resource type</li>
-<li>`l7Flow_request_sip`: Requests by client IP</li>
-<li>`l7Flow_request_referer`: Requests by referer</li>
-<li>`l7Flow_request_ua_device`: Requests by device</li>
-<li>`l7Flow_request_ua_browser`: Requests by browser</li>
-<li>`l7Flow_request_us_os`: Requests by operating system</li>
+     * Set Metrics to query. Valid values: 
+<li>`l7Flow_outFlux_country`: Query traffic by country/region;</li>
+<li>`l7Flow_outFlux_statusCode`: Query traffic by status code;</li>
+<li>`l7Flow_outFlux_domain`: Query traffic by domain;</li>
+<li>`l7Flow_outFlux_url`: Query traffic by URL;</li>
+<li>`l7Flow_outFlux_resourceType`: Query traffic by resource type;</li>
+<li>`l7Flow_outFlux_sip`: Query traffic by source IP;</li>
+<li>`l7Flow_outFlux_referers`: Query traffic by refer information;</li>
+<li>`l7Flow_outFlux_ua_device`: Query traffic by device;</li>
+<li>`l7Flow_outFlux_ua_browser`: Query traffic by browser;</li>
+<li>`l7Flow_outFlux_us_os`: Query traffic by OS;</li>
+<li>`l7Flow_request_country`: Query requests by country/region;</li>
+<li>`l7Flow_request_statusCode`: Query requests by status code;</li>
+<li>`l7Flow_request_domain`: Query requests by domain;</li>
+<li>`l7Flow_request_url`: Query requests by URL;</li>
+<li>`l7Flow_request_resourceType`: Query requests by resource type;</li>
+<li>`l7Flow_request_sip`: Query requests by source IP;</li>
+<li>`l7Flow_request_referer`: Query requests by refer information;</li>
+<li>`l7Flow_request_ua_device`: Query requests by device;</li>
+<li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
+<li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
-     * @param MetricName The metric to query. Values: 
-<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
-<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
-<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
-<li>`l7Flow_outFlux_url`: Traffic by URL</li>
-<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
-<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
-<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
-<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
-<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
-<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
-<li>`l7Flow_request_country`: Requests by country/region</li>
-<li>`l7Flow_request_statusCode`: Requests by status code</li>
-<li>`l7Flow_request_domain`: Requests by domain name</li>
-<li>`l7Flow_request_url`: Requests by URL</li>
-<li>`l7Flow_request_resourceType`: Requests by resource type</li>
-<li>`l7Flow_request_sip`: Requests by client IP</li>
-<li>`l7Flow_request_referer`: Requests by referer</li>
-<li>`l7Flow_request_ua_device`: Requests by device</li>
-<li>`l7Flow_request_ua_browser`: Requests by browser</li>
-<li>`l7Flow_request_us_os`: Requests by operating system</li>
+     * @param MetricName Metrics to query. Valid values: 
+<li>`l7Flow_outFlux_country`: Query traffic by country/region;</li>
+<li>`l7Flow_outFlux_statusCode`: Query traffic by status code;</li>
+<li>`l7Flow_outFlux_domain`: Query traffic by domain;</li>
+<li>`l7Flow_outFlux_url`: Query traffic by URL;</li>
+<li>`l7Flow_outFlux_resourceType`: Query traffic by resource type;</li>
+<li>`l7Flow_outFlux_sip`: Query traffic by source IP;</li>
+<li>`l7Flow_outFlux_referers`: Query traffic by refer information;</li>
+<li>`l7Flow_outFlux_ua_device`: Query traffic by device;</li>
+<li>`l7Flow_outFlux_ua_browser`: Query traffic by browser;</li>
+<li>`l7Flow_outFlux_us_os`: Query traffic by OS;</li>
+<li>`l7Flow_request_country`: Query requests by country/region;</li>
+<li>`l7Flow_request_statusCode`: Query requests by status code;</li>
+<li>`l7Flow_request_domain`: Query requests by domain;</li>
+<li>`l7Flow_request_url`: Query requests by URL;</li>
+<li>`l7Flow_request_resourceType`: Query requests by resource type;</li>
+<li>`l7Flow_request_sip`: Query requests by source IP;</li>
+<li>`l7Flow_request_referer`: Query requests by refer information;</li>
+<li>`l7Flow_request_ua_device`: Query requests by device;</li>
+<li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
+<li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
      */
     public void setMetricName(String MetricName) {

@@ -20,51 +20,96 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpstreamHttp2 extends AbstractModel{
+public class StandardDebug extends AbstractModel{
 
     /**
-    * Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li> 
-     * @return Switch Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+    * 
+    */
+    @SerializedName("AllowClientIPList")
+    @Expose
+    private String [] AllowClientIPList;
+
+    /**
+    * 
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param Switch Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
-    public UpstreamHttp2() {
+    /**
+     * Get  
+     * @return AllowClientIPList 
+     */
+    public String [] getAllowClientIPList() {
+        return this.AllowClientIPList;
+    }
+
+    /**
+     * Set 
+     * @param AllowClientIPList 
+     */
+    public void setAllowClientIPList(String [] AllowClientIPList) {
+        this.AllowClientIPList = AllowClientIPList;
+    }
+
+    /**
+     * Get  
+     * @return ExpireTime 
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 
+     * @param ExpireTime 
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    public StandardDebug() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpstreamHttp2(UpstreamHttp2 source) {
+    public StandardDebug(StandardDebug source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
+        }
+        if (source.AllowClientIPList != null) {
+            this.AllowClientIPList = new String[source.AllowClientIPList.length];
+            for (int i = 0; i < source.AllowClientIPList.length; i++) {
+                this.AllowClientIPList[i] = new String(source.AllowClientIPList[i]);
+            }
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
         }
     }
 
@@ -74,6 +119,8 @@ public class UpstreamHttp2 extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "AllowClientIPList.", this.AllowClientIPList);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

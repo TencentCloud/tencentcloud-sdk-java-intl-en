@@ -32,8 +32,8 @@ public class Hsts extends AbstractModel{
     private String Switch;
 
     /**
-    * The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxAge")
     @Expose
@@ -84,20 +84,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxAge MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxAge MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;

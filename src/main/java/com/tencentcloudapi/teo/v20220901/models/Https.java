@@ -43,12 +43,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OcspStapling;
 
     /**
-    * TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TlsVersion")
     @Expose
@@ -148,36 +148,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TlsVersion TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TlsVersion TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getTlsVersion() {
         return this.TlsVersion;
     }
 
     /**
-     * Set TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TlsVersion TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TlsVersion TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTlsVersion(String [] TlsVersion) {
         this.TlsVersion = TlsVersion;

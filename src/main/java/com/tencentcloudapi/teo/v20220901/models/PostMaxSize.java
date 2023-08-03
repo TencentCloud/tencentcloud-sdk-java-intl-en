@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class PostMaxSize extends AbstractModel{
 
     /**
-    * Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -40,24 +40,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxSize;
 
     /**
-     * Get Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li> 
+     * @return Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+     * @param Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

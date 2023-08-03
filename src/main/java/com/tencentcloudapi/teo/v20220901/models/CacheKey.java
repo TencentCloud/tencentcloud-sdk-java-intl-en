@@ -43,8 +43,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IgnoreCase;
 
     /**
-    * Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("QueryString")
     @Expose
@@ -107,20 +107,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QueryString Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return QueryString Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public QueryString getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QueryString Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param QueryString Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setQueryString(QueryString QueryString) {
         this.QueryString = QueryString;

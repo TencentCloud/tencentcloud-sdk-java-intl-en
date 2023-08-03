@@ -23,22 +23,22 @@ import java.util.HashMap;
 public class ModifyApplicationProxyRequest extends AbstractModel{
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+    * Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
     */
     @SerializedName("ProxyName")
     @Expose
@@ -62,59 +62,66 @@ The original configuration will apply if this field is not specified.
     private String ProxyType;
 
     /**
-    * The IPv6 access configuration. The original configuration will apply if this field is not specified.
+    * IPv6 access configuration. The original configuration will apply if it is not specified.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+    * Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`. 
-     * @return ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+     * Get Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`. 
+     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-     * @param ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+     * Set Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+     * @param ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -165,19 +172,35 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The IPv6 access configuration. The original configuration will apply if this field is not specified. 
-     * @return Ipv6 The IPv6 access configuration. The original configuration will apply if this field is not specified.
+     * Get IPv6 access configuration. The original configuration will apply if it is not specified. 
+     * @return Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set The IPv6 access configuration. The original configuration will apply if this field is not specified.
-     * @param Ipv6 The IPv6 access configuration. The original configuration will apply if this field is not specified.
+     * Set IPv6 access configuration. The original configuration will apply if it is not specified.
+     * @param Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
+    }
+
+    /**
+     * Get Cross-MLC-border acceleration. The original configuration will apply if it is not specified. 
+     * @return AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     * @param AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
     }
 
     public ModifyApplicationProxyRequest() {
@@ -206,6 +229,9 @@ The original configuration will apply if this field is not specified.
         if (source.Ipv6 != null) {
             this.Ipv6 = new Ipv6(source.Ipv6);
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -219,6 +245,7 @@ The original configuration will apply if this field is not specified.
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

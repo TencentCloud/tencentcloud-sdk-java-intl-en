@@ -191,11 +191,19 @@ Note: This field may return `null`, indicating that no valid value was found.
     private ImageOptimize ImageOptimize;
 
     /**
-    * 
+    * Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private AccelerateMainland AccelerateMainland;
+
+    /**
+    * 
+    */
+    @SerializedName("StandardDebug")
+    @Expose
+    private StandardDebug StandardDebug;
 
     /**
      * Get Name of the site 
@@ -618,19 +626,39 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return AccelerateMainland 
+     * Get Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AccelerateMainland Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public AccelerateMainland getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set 
-     * @param AccelerateMainland 
+     * Set Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AccelerateMainland Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;
+    }
+
+    /**
+     * Get  
+     * @return StandardDebug 
+     */
+    public StandardDebug getStandardDebug() {
+        return this.StandardDebug;
+    }
+
+    /**
+     * Set 
+     * @param StandardDebug 
+     */
+    public void setStandardDebug(StandardDebug StandardDebug) {
+        this.StandardDebug = StandardDebug;
     }
 
     public ZoneSetting() {
@@ -707,6 +735,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.AccelerateMainland != null) {
             this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
         }
+        if (source.StandardDebug != null) {
+            this.StandardDebug = new StandardDebug(source.StandardDebug);
+        }
     }
 
 
@@ -736,6 +767,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
+        this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
 
     }
 }

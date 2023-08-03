@@ -30,29 +30,37 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Mode of cache purging. Values:
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li>
+    * Purging mode. Valid values: 
+<li>`purge_url`: Purge by URL;</li>
+<li>`purge_prefix`: Purge by directory;</li>
+<li>`purge_host`: Purge by hostname;</li>
+<li>`purge_all`: Puege all cache;</li>
+<li>`purge_cache_tag`: Purge by cache tag.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Target resource to be purged, which depends on the `Type` field.
-1. When `Type = purge_host`:
-Enter the hostname, such as www.example.com and foo.bar.example.com.
-2. When `Type = purge_prefix`:
-Enter the prefix, such as http://www.example.com/example.
-3. When `Type = purge_url`:
-Enter the URL, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`:
-This field can be left empty.
-5. When `Type = purge_cache_tag`:
-Enter the cache tag, such as tag1.
+    * 
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
+    * Resource to be purged, which depends on the `Type` field. 
+1. When `Type = purge_host`: 
+Enter the hostname, such as www.example.com and foo.bar.example.com. 
+2. When `Type = purge_prefix`: 
+Enter the prefix, such as http://www.example.com/example/. 
+3. When `Type = purge_url`: 
+Enter the URL, such as https://www.example.com/example.jpg. 
+4. When `Type = purge_all`: 
+`Targets` can be left empty. 
+5. When `Type = purge_cache_tag`: 
+Enter the cache tag, such as tag1. 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
     */
     @SerializedName("Targets")
     @Expose
@@ -83,92 +91,112 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     }
 
     /**
-     * Get Mode of cache purging. Values:
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li> 
-     * @return Type Mode of cache purging. Values:
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li>
+     * Get Purging mode. Valid values: 
+<li>`purge_url`: Purge by URL;</li>
+<li>`purge_prefix`: Purge by directory;</li>
+<li>`purge_host`: Purge by hostname;</li>
+<li>`purge_all`: Puege all cache;</li>
+<li>`purge_cache_tag`: Purge by cache tag.</li> 
+     * @return Type Purging mode. Valid values: 
+<li>`purge_url`: Purge by URL;</li>
+<li>`purge_prefix`: Purge by directory;</li>
+<li>`purge_host`: Purge by hostname;</li>
+<li>`purge_all`: Puege all cache;</li>
+<li>`purge_cache_tag`: Purge by cache tag.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Mode of cache purging. Values:
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li>
-     * @param Type Mode of cache purging. Values:
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li>
+     * Set Purging mode. Valid values: 
+<li>`purge_url`: Purge by URL;</li>
+<li>`purge_prefix`: Purge by directory;</li>
+<li>`purge_host`: Purge by hostname;</li>
+<li>`purge_all`: Puege all cache;</li>
+<li>`purge_cache_tag`: Purge by cache tag.</li>
+     * @param Type Purging mode. Valid values: 
+<li>`purge_url`: Purge by URL;</li>
+<li>`purge_prefix`: Purge by directory;</li>
+<li>`purge_host`: Purge by hostname;</li>
+<li>`purge_all`: Puege all cache;</li>
+<li>`purge_cache_tag`: Purge by cache tag.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Target resource to be purged, which depends on the `Type` field.
-1. When `Type = purge_host`:
-Enter the hostname, such as www.example.com and foo.bar.example.com.
-2. When `Type = purge_prefix`:
-Enter the prefix, such as http://www.example.com/example.
-3. When `Type = purge_url`:
-Enter the URL, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`:
-This field can be left empty.
-5. When `Type = purge_cache_tag`:
+     * Get  
+     * @return Method 
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 
+     * @param Method 
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
+    }
+
+    /**
+     * Get Resource to be purged, which depends on the `Type` field. 
+1. When `Type = purge_host`: 
+Enter the hostname, such as www.example.com and foo.bar.example.com. 
+2. When `Type = purge_prefix`: 
+Enter the prefix, such as http://www.example.com/example/. 
+3. When `Type = purge_url`: 
+Enter the URL, such as https://www.example.com/example.jpg. 
+4. When `Type = purge_all`: 
+`Targets` can be left empty. 
+5. When `Type = purge_cache_tag`: 
 Enter the cache tag, such as tag1. 
-     * @return Targets Target resource to be purged, which depends on the `Type` field.
-1. When `Type = purge_host`:
-Enter the hostname, such as www.example.com and foo.bar.example.com.
-2. When `Type = purge_prefix`:
-Enter the prefix, such as http://www.example.com/example.
-3. When `Type = purge_url`:
-Enter the URL, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`:
-This field can be left empty.
-5. When `Type = purge_cache_tag`:
-Enter the cache tag, such as tag1.
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). 
+     * @return Targets Resource to be purged, which depends on the `Type` field. 
+1. When `Type = purge_host`: 
+Enter the hostname, such as www.example.com and foo.bar.example.com. 
+2. When `Type = purge_prefix`: 
+Enter the prefix, such as http://www.example.com/example/. 
+3. When `Type = purge_url`: 
+Enter the URL, such as https://www.example.com/example.jpg. 
+4. When `Type = purge_all`: 
+`Targets` can be left empty. 
+5. When `Type = purge_cache_tag`: 
+Enter the cache tag, such as tag1. 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set Target resource to be purged, which depends on the `Type` field.
-1. When `Type = purge_host`:
-Enter the hostname, such as www.example.com and foo.bar.example.com.
-2. When `Type = purge_prefix`:
-Enter the prefix, such as http://www.example.com/example.
-3. When `Type = purge_url`:
-Enter the URL, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`:
-This field can be left empty.
-5. When `Type = purge_cache_tag`:
-Enter the cache tag, such as tag1.
-     * @param Targets Target resource to be purged, which depends on the `Type` field.
-1. When `Type = purge_host`:
-Enter the hostname, such as www.example.com and foo.bar.example.com.
-2. When `Type = purge_prefix`:
-Enter the prefix, such as http://www.example.com/example.
-3. When `Type = purge_url`:
-Enter the URL, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`:
-This field can be left empty.
-5. When `Type = purge_cache_tag`:
-Enter the cache tag, such as tag1.
+     * Set Resource to be purged, which depends on the `Type` field. 
+1. When `Type = purge_host`: 
+Enter the hostname, such as www.example.com and foo.bar.example.com. 
+2. When `Type = purge_prefix`: 
+Enter the prefix, such as http://www.example.com/example/. 
+3. When `Type = purge_url`: 
+Enter the URL, such as https://www.example.com/example.jpg. 
+4. When `Type = purge_all`: 
+`Targets` can be left empty. 
+5. When `Type = purge_cache_tag`: 
+Enter the cache tag, such as tag1. 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @param Targets Resource to be purged, which depends on the `Type` field. 
+1. When `Type = purge_host`: 
+Enter the hostname, such as www.example.com and foo.bar.example.com. 
+2. When `Type = purge_prefix`: 
+Enter the prefix, such as http://www.example.com/example/. 
+3. When `Type = purge_url`: 
+Enter the URL, such as https://www.example.com/example.jpg. 
+4. When `Type = purge_all`: 
+`Targets` can be left empty. 
+5. When `Type = purge_cache_tag`: 
+Enter the cache tag, such as tag1. 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;
@@ -179,7 +207,9 @@ Enter the cache tag, such as tag1.
 Note that if it’s enabled, the purging is based on the converted URLs. 
      * @return EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEncodeUrl() {
         return this.EncodeUrl;
     }
@@ -189,7 +219,9 @@ Note that if it’s enabled, the purging is based on the converted URLs.
 Note that if it’s enabled, the purging is based on the converted URLs.
      * @param EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
+     * @deprecated
      */
+    @Deprecated
     public void setEncodeUrl(Boolean EncodeUrl) {
         this.EncodeUrl = EncodeUrl;
     }
@@ -207,6 +239,9 @@ Note that if it’s enabled, the purging is based on the converted URLs.
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
         }
         if (source.Targets != null) {
             this.Targets = new String[source.Targets.length];
@@ -226,6 +261,7 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
 

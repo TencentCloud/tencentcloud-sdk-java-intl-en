@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyZoneSettingRequest extends AbstractModel{
 
     /**
-    * The site ID to be modified.
+    * Site ID to modify.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -62,16 +62,16 @@ The original configuration will apply if this field is not specified.
     private OfflineCache OfflineCache;
 
     /**
-    * The QUIC access configuration.
-The original configuration will apply if this field is not specified.
+    * QUIC access configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
 
     /**
-    * The POST transport configuration.
-The original configuration will apply if this field is not specified.
+    * POST transport configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("PostMaxSize")
     @Expose
@@ -86,24 +86,24 @@ The original configuration will apply if this field is not specified.
     private Compression Compression;
 
     /**
-    * The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
+    * HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("UpstreamHttp2")
     @Expose
     private UpstreamHttp2 UpstreamHttp2;
 
     /**
-    * The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
+    * Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
+    * HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("Https")
     @Expose
@@ -126,16 +126,16 @@ The original configuration will apply if this field is not specified.
     private SmartRouting SmartRouting;
 
     /**
-    * The WebSocket configuration.
-The original configuration will apply if this field is not specified.
+    * WebSocket configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
 
     /**
-    * The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
+    * Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("ClientIpHeader")
     @Expose
@@ -150,40 +150,55 @@ The original configuration will apply if this field is not specified.
     private CachePrefresh CachePrefresh;
 
     /**
-    * The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
+    * Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
+    * Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("ClientIpCountry")
     @Expose
     private ClientIpCountry ClientIpCountry;
 
     /**
-    * Configuration of gRPC support
-The original configuration will apply if this field is not specified.
+    * Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
     */
     @SerializedName("Grpc")
     @Expose
     private Grpc Grpc;
 
     /**
-     * Get The site ID to be modified. 
-     * @return ZoneId The site ID to be modified.
+    * Image optimization. 
+It is disabled if this parameter is not specified.
+    */
+    @SerializedName("ImageOptimize")
+    @Expose
+    private ImageOptimize ImageOptimize;
+
+    /**
+    * 
+    */
+    @SerializedName("StandardDebug")
+    @Expose
+    private StandardDebug StandardDebug;
+
+    /**
+     * Get Site ID to modify. 
+     * @return ZoneId Site ID to modify.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID to be modified.
-     * @param ZoneId The site ID to be modified.
+     * Set Site ID to modify.
+     * @param ZoneId Site ID to modify.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -270,40 +285,40 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The QUIC access configuration.
-The original configuration will apply if this field is not specified. 
-     * @return Quic The QUIC access configuration.
-The original configuration will apply if this field is not specified.
+     * Get QUIC access configuration. 
+The original configuration will apply if it is not specified. 
+     * @return Quic QUIC access configuration. 
+The original configuration will apply if it is not specified.
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set The QUIC access configuration.
-The original configuration will apply if this field is not specified.
-     * @param Quic The QUIC access configuration.
-The original configuration will apply if this field is not specified.
+     * Set QUIC access configuration. 
+The original configuration will apply if it is not specified.
+     * @param Quic QUIC access configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get The POST transport configuration.
-The original configuration will apply if this field is not specified. 
-     * @return PostMaxSize The POST transport configuration.
-The original configuration will apply if this field is not specified.
+     * Get POST transport configuration. 
+The original configuration will apply if it is not specified. 
+     * @return PostMaxSize POST transport configuration. 
+The original configuration will apply if it is not specified.
      */
     public PostMaxSize getPostMaxSize() {
         return this.PostMaxSize;
     }
 
     /**
-     * Set The POST transport configuration.
-The original configuration will apply if this field is not specified.
-     * @param PostMaxSize The POST transport configuration.
-The original configuration will apply if this field is not specified.
+     * Set POST transport configuration. 
+The original configuration will apply if it is not specified.
+     * @param PostMaxSize POST transport configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setPostMaxSize(PostMaxSize PostMaxSize) {
         this.PostMaxSize = PostMaxSize;
@@ -330,60 +345,60 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified. 
-     * @return UpstreamHttp2 The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
+     * Get HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified. 
+     * @return UpstreamHttp2 HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
      */
     public UpstreamHttp2 getUpstreamHttp2() {
         return this.UpstreamHttp2;
     }
 
     /**
-     * Set The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
-     * @param UpstreamHttp2 The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
+     * Set HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
+     * @param UpstreamHttp2 HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setUpstreamHttp2(UpstreamHttp2 UpstreamHttp2) {
         this.UpstreamHttp2 = UpstreamHttp2;
     }
 
     /**
-     * Get The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified. 
-     * @return ForceRedirect The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
+     * Get Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified. 
+     * @return ForceRedirect Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
-     * @param ForceRedirect The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
+     * Set Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
+     * @param ForceRedirect Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified. 
-     * @return Https The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
+     * Get HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified. 
+     * @return Https HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
-     * @param Https The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
+     * Set HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
+     * @param Https HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setHttps(Https Https) {
         this.Https = Https;
@@ -430,40 +445,40 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The WebSocket configuration.
-The original configuration will apply if this field is not specified. 
-     * @return WebSocket The WebSocket configuration.
-The original configuration will apply if this field is not specified.
+     * Get WebSocket configuration. 
+The original configuration will apply if it is not specified. 
+     * @return WebSocket WebSocket configuration. 
+The original configuration will apply if it is not specified.
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
     }
 
     /**
-     * Set The WebSocket configuration.
-The original configuration will apply if this field is not specified.
-     * @param WebSocket The WebSocket configuration.
-The original configuration will apply if this field is not specified.
+     * Set WebSocket configuration. 
+The original configuration will apply if it is not specified.
+     * @param WebSocket WebSocket configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
     }
 
     /**
-     * Get The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified. 
-     * @return ClientIpHeader The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
+     * Get Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified. 
+     * @return ClientIpHeader Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
      */
     public ClientIpHeader getClientIpHeader() {
         return this.ClientIpHeader;
     }
 
     /**
-     * Set The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
-     * @param ClientIpHeader The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
+     * Set Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
+     * @param ClientIpHeader Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setClientIpHeader(ClientIpHeader ClientIpHeader) {
         this.ClientIpHeader = ClientIpHeader;
@@ -490,63 +505,99 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The IPv6 access configuration.
-The original configuration will apply if this field is not specified. 
-     * @return Ipv6 The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
+     * Get Ipv6 access configuration. 
+The original configuration will apply if it is not specified. 
+     * @return Ipv6 Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
-     * @param Ipv6 The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
+     * Set Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
+     * @param Ipv6 Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified. 
-     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
+     * Get Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified. 
+     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
      */
     public ClientIpCountry getClientIpCountry() {
         return this.ClientIpCountry;
     }
 
     /**
-     * Set Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
-     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
+     * Set Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
+     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
      */
     public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
         this.ClientIpCountry = ClientIpCountry;
     }
 
     /**
-     * Get Configuration of gRPC support
-The original configuration will apply if this field is not specified. 
-     * @return Grpc Configuration of gRPC support
-The original configuration will apply if this field is not specified.
+     * Get Configuration of gRPC support. 
+The original configuration will apply if it is not specified. 
+     * @return Grpc Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
      */
     public Grpc getGrpc() {
         return this.Grpc;
     }
 
     /**
-     * Set Configuration of gRPC support
-The original configuration will apply if this field is not specified.
-     * @param Grpc Configuration of gRPC support
-The original configuration will apply if this field is not specified.
+     * Set Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
+     * @param Grpc Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
      */
     public void setGrpc(Grpc Grpc) {
         this.Grpc = Grpc;
+    }
+
+    /**
+     * Get Image optimization. 
+It is disabled if this parameter is not specified. 
+     * @return ImageOptimize Image optimization. 
+It is disabled if this parameter is not specified.
+     */
+    public ImageOptimize getImageOptimize() {
+        return this.ImageOptimize;
+    }
+
+    /**
+     * Set Image optimization. 
+It is disabled if this parameter is not specified.
+     * @param ImageOptimize Image optimization. 
+It is disabled if this parameter is not specified.
+     */
+    public void setImageOptimize(ImageOptimize ImageOptimize) {
+        this.ImageOptimize = ImageOptimize;
+    }
+
+    /**
+     * Get  
+     * @return StandardDebug 
+     */
+    public StandardDebug getStandardDebug() {
+        return this.StandardDebug;
+    }
+
+    /**
+     * Set 
+     * @param StandardDebug 
+     */
+    public void setStandardDebug(StandardDebug StandardDebug) {
+        this.StandardDebug = StandardDebug;
     }
 
     public ModifyZoneSettingRequest() {
@@ -614,6 +665,12 @@ The original configuration will apply if this field is not specified.
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.ImageOptimize != null) {
+            this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
+        }
+        if (source.StandardDebug != null) {
+            this.StandardDebug = new StandardDebug(source.StandardDebug);
+        }
     }
 
 
@@ -640,6 +697,8 @@ The original configuration will apply if this field is not specified.
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
+        this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
 
     }
 }

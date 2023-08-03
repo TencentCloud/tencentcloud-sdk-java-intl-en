@@ -32,9 +32,9 @@ public class ClientIpHeader extends AbstractModel{
     private String Switch;
 
     /**
-    * The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HeaderName")
     @Expose
@@ -65,24 +65,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HeaderName The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return HeaderName Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HeaderName The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param HeaderName Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;

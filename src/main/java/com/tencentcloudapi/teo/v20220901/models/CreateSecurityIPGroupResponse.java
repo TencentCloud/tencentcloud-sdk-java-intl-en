@@ -20,7 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReclaimAliasDomainResponse extends AbstractModel{
+public class CreateSecurityIPGroupResponse extends AbstractModel{
+
+    /**
+    * IP group ID.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +35,22 @@ public class ReclaimAliasDomainResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get IP group ID. 
+     * @return GroupId IP group ID.
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set IP group ID.
+     * @param GroupId IP group ID.
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +68,17 @@ public class ReclaimAliasDomainResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ReclaimAliasDomainResponse() {
+    public CreateSecurityIPGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReclaimAliasDomainResponse(ReclaimAliasDomainResponse source) {
+    public CreateSecurityIPGroupResponse(CreateSecurityIPGroupResponse source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class ReclaimAliasDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
