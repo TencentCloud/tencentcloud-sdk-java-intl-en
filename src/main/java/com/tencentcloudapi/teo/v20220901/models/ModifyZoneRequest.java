@@ -30,16 +30,16 @@ public class ModifyZoneRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+    * Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The custom name servers. If this field is not specified, the default name servers will be used.
+    * The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
     */
     @SerializedName("VanityNameServers")
     @Expose
@@ -51,6 +51,23 @@ public class ModifyZoneRequest extends AbstractModel{
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
+
+    /**
+    * The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
 
     /**
      * Get The site ID. 
@@ -69,40 +86,40 @@ public class ModifyZoneRequest extends AbstractModel{
     }
 
     /**
-     * Get The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified. 
-     * @return Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+     * Get Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified. 
+     * @return Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
-     * @param Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+     * Set Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+     * @param Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The custom name servers. If this field is not specified, the default name servers will be used. 
-     * @return VanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+     * Get The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name. 
+     * @return VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
      */
     public VanityNameServers getVanityNameServers() {
         return this.VanityNameServers;
     }
 
     /**
-     * Set The custom name servers. If this field is not specified, the default name servers will be used.
-     * @param VanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+     * Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+     * @param VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
      */
     public void setVanityNameServers(VanityNameServers VanityNameServers) {
         this.VanityNameServers = VanityNameServers;
@@ -122,6 +139,50 @@ public class ModifyZoneRequest extends AbstractModel{
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;
+    }
+
+    /**
+     * Get The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name. 
+     * @return Area The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     * @param Area The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get Name of the site. This field takes effect only when the site switches from domainless access to CNAME access. 
+     * @return ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     * @param ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
     }
 
     public ModifyZoneRequest() {
@@ -144,6 +205,12 @@ public class ModifyZoneRequest extends AbstractModel{
         if (source.AliasZoneName != null) {
             this.AliasZoneName = new String(source.AliasZoneName);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
     }
 
 
@@ -155,6 +222,8 @@ public class ModifyZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

@@ -30,7 +30,7 @@ public class Groups extends AbstractModel{
     private Long AppId;
 
     /**
-    * Region ID
+    * Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -47,7 +47,6 @@ public class Groups extends AbstractModel{
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
     */
     @SerializedName("RegionId")
@@ -121,7 +120,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Region ID
+     * Get Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -138,9 +137,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan 
-     * @return RegionId Region ID
+     * @return RegionId Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -157,7 +155,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
      */
     public Long getRegionId() {
@@ -165,7 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Region ID
+     * Set Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -182,9 +179,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
-     * @param RegionId Region ID
+     * @param RegionId Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -201,7 +197,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
      */
     public void setRegionId(Long RegionId) {

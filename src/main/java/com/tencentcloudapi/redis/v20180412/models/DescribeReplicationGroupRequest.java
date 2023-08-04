@@ -37,14 +37,14 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Replication group ID
+    * ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Key words for fuzzy query, which can be set as the ID or name of a replication group.
+    * Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
     */
     @SerializedName("SearchKey")
     @Expose
@@ -83,32 +83,32 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Replication group ID 
-     * @return GroupId Replication group ID
+     * Get ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list. 
+     * @return GroupId ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID
-     * @param GroupId Replication group ID
+     * Set ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
+     * @param GroupId ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Key words for fuzzy query, which can be set as the ID or name of a replication group. 
-     * @return SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+     * Get Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list. 
+     * @return SearchKey Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Key words for fuzzy query, which can be set as the ID or name of a replication group.
-     * @param SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+     * Set Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
+     * @param SearchKey Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

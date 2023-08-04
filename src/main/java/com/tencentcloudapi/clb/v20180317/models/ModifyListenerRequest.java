@@ -51,14 +51,14 @@ public class ModifyListenerRequest extends AbstractModel{
     private Long SessionExpireTime;
 
     /**
-    * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+    * Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
     */
     @SerializedName("HealthCheck")
     @Expose
     private HealthCheck HealthCheck;
 
     /**
-    * Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+    * Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
     */
     @SerializedName("Certificate")
     @Expose
@@ -200,32 +200,32 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners. 
-     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * Get Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners. 
+     * @return HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-     * @param HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * Set Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+     * @param HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
-     * @return Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * Get Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified. 
+     * @return Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-     * @param Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * Set Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
+     * @param Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;

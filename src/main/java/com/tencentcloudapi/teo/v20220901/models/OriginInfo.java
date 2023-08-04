@@ -23,11 +23,12 @@ import java.util.HashMap;
 public class OriginInfo extends AbstractModel{
 
     /**
-    * The origin type. Values: 
+    * The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -64,32 +65,36 @@ public class OriginInfo extends AbstractModel{
     private PrivateParameter [] PrivateParameters;
 
     /**
-     * Get The origin type. Values: 
+     * Get The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li> 
-     * @return OriginType The origin type. Values: 
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li> 
+     * @return OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set The origin type. Values: 
+     * Set The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-     * @param OriginType The origin type. Values: 
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
+     * @param OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;

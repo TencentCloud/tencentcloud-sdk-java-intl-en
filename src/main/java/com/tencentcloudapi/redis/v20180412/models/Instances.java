@@ -80,7 +80,7 @@ public class Instances extends AbstractModel{
 
     /**
     * Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -304,9 +304,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
      * @return DiskSize Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -314,9 +314,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param DiskSize Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

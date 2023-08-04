@@ -62,9 +62,10 @@ public class Zone extends AbstractModel{
     private String Status;
 
     /**
-    * The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+    * Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
     */
     @SerializedName("Type")
     @Expose
@@ -280,24 +281,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li> 
-     * @return Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+     * Get Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li> 
+     * @return Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
-     * @param Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+     * Set Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
+     * @param Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
      */
     public void setType(String Type) {
         this.Type = Type;

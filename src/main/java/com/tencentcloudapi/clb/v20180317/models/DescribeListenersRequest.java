@@ -37,7 +37,7 @@ public class DescribeListenersRequest extends AbstractModel{
     private String [] ListenerIds;
 
     /**
-    * Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+    * Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
     */
     @SerializedName("Protocol")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL. 
-     * @return Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+     * Get Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`. 
+     * @return Protocol Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
-     * @param Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+     * Set Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
+     * @param Protocol Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

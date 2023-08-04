@@ -103,6 +103,25 @@ public class Resource extends AbstractModel{
     private String Area;
 
     /**
+    * The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Group")
+    @Expose
+    private String Group;
+
+    /**
+    * The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneNumber")
+    @Expose
+    private Long ZoneNumber;
+
+    /**
      * Get The resource ID. 
      * @return Id The resource ID.
      */
@@ -302,6 +321,58 @@ public class Resource extends AbstractModel{
         this.Area = Area;
     }
 
+    /**
+     * Get The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return Group The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGroup() {
+        return this.Group;
+    }
+
+    /**
+     * Set The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param Group The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGroup(String Group) {
+        this.Group = Group;
+    }
+
+    /**
+     * Get The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneNumber The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getZoneNumber() {
+        return this.ZoneNumber;
+    }
+
+    /**
+     * Set The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param ZoneNumber The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneNumber(Long ZoneNumber) {
+        this.ZoneNumber = ZoneNumber;
+    }
+
     public Resource() {
     }
 
@@ -343,6 +414,12 @@ public class Resource extends AbstractModel{
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
+        if (source.ZoneNumber != null) {
+            this.ZoneNumber = new Long(source.ZoneNumber);
+        }
     }
 
 
@@ -360,6 +437,8 @@ public class Resource extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Group", this.Group);
+        this.setParamSimple(map, prefix + "ZoneNumber", this.ZoneNumber);
 
     }
 }

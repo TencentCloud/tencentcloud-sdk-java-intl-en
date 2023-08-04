@@ -51,7 +51,7 @@ public class CreateListenerRequest extends AbstractModel{
     private String [] ListenerNames;
 
     /**
-    * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+    * Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -72,8 +72,8 @@ public class CreateListenerRequest extends AbstractModel{
     private Long SessionExpireTime;
 
     /**
-    * Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+    * Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
     */
     @SerializedName("Scheduler")
     @Expose
@@ -214,16 +214,16 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners. 
-     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * Get Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners. 
+     * @return HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-     * @param HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * Set Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+     * @param HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -262,20 +262,20 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners. 
-     * @return Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+     * Get Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners. 
+     * @return Scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
-     * @param Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+     * Set Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
+     * @param Scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

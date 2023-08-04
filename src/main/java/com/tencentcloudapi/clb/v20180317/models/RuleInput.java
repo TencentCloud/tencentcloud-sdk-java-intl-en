@@ -66,7 +66,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String Scheduler;
 
     /**
-    * Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+    * Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
     */
     @SerializedName("ForwardType")
     @Expose
@@ -229,16 +229,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage. 
-     * @return ForwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+     * Get Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`. 
+     * @return ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
-     * @param ForwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+     * Set Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+     * @param ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;

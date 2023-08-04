@@ -23,69 +23,79 @@ import java.util.HashMap;
 public class StandardDebug extends AbstractModel{
 
     /**
-    * 
+    * Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
     */
     @SerializedName("AllowClientIPList")
     @Expose
     private String [] AllowClientIPList;
 
     /**
-    * 
+    * The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li> 
+     * @return Switch Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
+     * @param Switch Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return AllowClientIPList 
+     * Get The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP 
+     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
      */
     public String [] getAllowClientIPList() {
         return this.AllowClientIPList;
     }
 
     /**
-     * Set 
-     * @param AllowClientIPList 
+     * Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @param AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
      */
     public void setAllowClientIPList(String [] AllowClientIPList) {
         this.AllowClientIPList = AllowClientIPList;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid. 
+     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+     * @param ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

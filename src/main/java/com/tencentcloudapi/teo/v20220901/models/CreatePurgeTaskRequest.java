@@ -30,37 +30,26 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+    * Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+    * List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
     */
     @SerializedName("Targets")
     @Expose
@@ -91,112 +80,68 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     }
 
     /**
-     * Get Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li> 
-     * @return Type Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+     * Get Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). 
+     * @return Type Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
-     * @param Type Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+     * Set Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+     * @param Type Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Method 
+     * Get Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`. 
+     * @return Method Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 
-     * @param Method 
+     * Set Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+     * @param Method Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). 
-     * @return Targets Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * Get List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li> 
+     * @return Targets List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
-     * @param Targets Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * Set List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
+     * @param Targets List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

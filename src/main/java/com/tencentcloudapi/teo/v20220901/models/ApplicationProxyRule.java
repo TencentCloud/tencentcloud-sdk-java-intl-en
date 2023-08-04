@@ -99,6 +99,14 @@ Note that each rule can have up to 20 ports.
     private Boolean SessionPersist;
 
     /**
+    * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SessionPersistTime")
+    @Expose
+    private Long SessionPersistTime;
+
+    /**
     * The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -316,6 +324,26 @@ Note that each rule can have up to 20 ports.
     }
 
     /**
+     * Get Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSessionPersistTime() {
+        return this.SessionPersistTime;
+    }
+
+    /**
+     * Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSessionPersistTime(Long SessionPersistTime) {
+        this.SessionPersistTime = SessionPersistTime;
+    }
+
+    /**
      * Get The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li> 
@@ -377,6 +405,9 @@ Note that each rule can have up to 20 ports.
         if (source.SessionPersist != null) {
             this.SessionPersist = new Boolean(source.SessionPersist);
         }
+        if (source.SessionPersistTime != null) {
+            this.SessionPersistTime = new Long(source.SessionPersistTime);
+        }
         if (source.OriginPort != null) {
             this.OriginPort = new String(source.OriginPort);
         }
@@ -395,6 +426,7 @@ Note that each rule can have up to 20 ports.
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
 
     }

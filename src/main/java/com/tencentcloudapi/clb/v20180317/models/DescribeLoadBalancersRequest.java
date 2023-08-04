@@ -52,7 +52,7 @@ OPEN: public network; INTERNAL: private network.
     private String LoadBalancerName;
 
     /**
-    * Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+    * The domain name that Tencent Cloud assigned for the CLB instance.
     */
     @SerializedName("Domain")
     @Expose
@@ -227,16 +227,16 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB. 
-     * @return Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+     * Get The domain name that Tencent Cloud assigned for the CLB instance. 
+     * @return Domain The domain name that Tencent Cloud assigned for the CLB instance.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
-     * @param Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+     * Set The domain name that Tencent Cloud assigned for the CLB instance.
+     * @param Domain The domain name that Tencent Cloud assigned for the CLB instance.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

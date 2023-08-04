@@ -31,8 +31,9 @@ public class CreateZoneRequest extends AbstractModel{
 
     /**
     * The access mode. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
+If not specified, this field uses the default value `full`.
     */
     @SerializedName("Type")
     @Expose
@@ -86,11 +87,13 @@ public class CreateZoneRequest extends AbstractModel{
 
     /**
      * Get The access mode. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used. 
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
+If not specified, this field uses the default value `full`. 
      * @return Type The access mode. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
+If not specified, this field uses the default value `full`.
      */
     public String getType() {
         return this.Type;
@@ -98,11 +101,13 @@ public class CreateZoneRequest extends AbstractModel{
 
     /**
      * Set The access mode. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
+If not specified, this field uses the default value `full`.
      * @param Type The access mode. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
+If not specified, this field uses the default value `full`.
      */
     public void setType(String Type) {
         this.Type = Type;

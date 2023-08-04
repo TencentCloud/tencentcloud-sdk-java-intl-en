@@ -182,7 +182,7 @@ It is disabled if this parameter is not specified.
     private ImageOptimize ImageOptimize;
 
     /**
-    * 
+    * Standard debugging configuration.
     */
     @SerializedName("StandardDebug")
     @Expose
@@ -585,16 +585,16 @@ It is disabled if this parameter is not specified.
     }
 
     /**
-     * Get  
-     * @return StandardDebug 
+     * Get Standard debugging configuration. 
+     * @return StandardDebug Standard debugging configuration.
      */
     public StandardDebug getStandardDebug() {
         return this.StandardDebug;
     }
 
     /**
-     * Set 
-     * @param StandardDebug 
+     * Set Standard debugging configuration.
+     * @param StandardDebug Standard debugging configuration.
      */
     public void setStandardDebug(StandardDebug StandardDebug) {
         this.StandardDebug = StandardDebug;

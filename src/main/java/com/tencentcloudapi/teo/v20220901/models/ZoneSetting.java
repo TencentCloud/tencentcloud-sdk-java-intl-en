@@ -199,7 +199,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private AccelerateMainland AccelerateMainland;
 
     /**
-    * 
+    * Standard debugging configuration.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StandardDebug")
     @Expose
@@ -646,16 +647,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return StandardDebug 
+     * Get Standard debugging configuration.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return StandardDebug Standard debugging configuration.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public StandardDebug getStandardDebug() {
         return this.StandardDebug;
     }
 
     /**
-     * Set 
-     * @param StandardDebug 
+     * Set Standard debugging configuration.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param StandardDebug Standard debugging configuration.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setStandardDebug(StandardDebug StandardDebug) {
         this.StandardDebug = StandardDebug;

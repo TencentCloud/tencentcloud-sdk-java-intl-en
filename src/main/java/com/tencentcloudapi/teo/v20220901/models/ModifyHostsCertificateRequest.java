@@ -45,8 +45,8 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
 
     /**
     * Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
     */
     @SerializedName("ApplyType")
     @Expose
@@ -102,11 +102,11 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
 
     /**
      * Get Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used. 
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`. 
      * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
      */
     public String getApplyType() {
         return this.ApplyType;
@@ -114,11 +114,11 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
 
     /**
      * Set Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
      * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
      */
     public void setApplyType(String ApplyType) {
         this.ApplyType = ApplyType;

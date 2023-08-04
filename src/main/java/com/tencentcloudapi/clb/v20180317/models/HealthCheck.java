@@ -80,8 +80,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpCheckPath;
 
     /**
-    * The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckDomain")
     @Expose
@@ -128,24 +128,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RecvContext;
 
     /**
-    * Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CheckType")
     @Expose
     private String CheckType;
 
     /**
-    * Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpVersion")
     @Expose
     private String HttpVersion;
 
     /**
-    * Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceIpType")
     @Expose
@@ -304,20 +304,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return HttpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckDomain() {
         return this.HttpCheckDomain;
     }
 
     /**
-     * Set The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param HttpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
         this.HttpCheckDomain = HttpCheckDomain;
@@ -424,60 +424,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckType Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return CheckType u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckType Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param CheckType u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return HttpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpVersion() {
         return this.HttpVersion;
     }
 
     /**
-     * Set Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param HttpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpVersion(String HttpVersion) {
         this.HttpVersion = HttpVersion;
     }
 
     /**
-     * Get Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return SourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public Long getSourceIpType() {
         return this.SourceIpType;
     }
 
     /**
-     * Set Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param SourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setSourceIpType(Long SourceIpType) {
         this.SourceIpType = SourceIpType;

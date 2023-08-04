@@ -15,7 +15,7 @@ public enum TeoErrorCode {
     // The site status is invalid.
      FAILEDOPERATION_INVALIDZONESTATUS("FailedOperation.InvalidZoneStatus"),
      
-    // 
+    // Operation failed.
      FAILEDOPERATION_MODIFYFAILED("FailedOperation.ModifyFailed"),
      
     // Internal error.
@@ -51,7 +51,7 @@ public enum TeoErrorCode {
     // Internal system error.
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
      
-    // 
+    // Unknown error.
      INTERNALERROR_UNKNOWERROR("InternalError.UnknowError"),
      
     // Parameter error.
@@ -60,7 +60,7 @@ public enum TeoErrorCode {
     // Too many attempts. Please try again later.
      INVALIDPARAMETER_ACTIONINPROGRESS("InvalidParameter.ActionInProgress"),
      
-    // 
+    // Cu200dhinese SM certificates are not supported for alias domain names.
      INVALIDPARAMETER_ALIASDOMAINNOTSUPPORTSMCERT("InvalidParameter.AliasDomainNotSupportSMCert"),
      
     // The query string has too many values.
@@ -177,13 +177,13 @@ public enum TeoErrorCode {
     // Invalid token authentication parameter.
      INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESIGNPARAM("InvalidParameter.InvalidAuthenticationTypeSignParam"),
      
-    // 
+    // Invalid authentication token format.
      INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPETIMEFORMAT("InvalidParameter.InvalidAuthenticationTypeTimeFormat"),
      
-    // 
+    // Invalid authentication token parameter.
      INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPETIMEPARAM("InvalidParameter.InvalidAuthenticationTypeTimeParam"),
      
-    // 
+    // Invalid third-party object storage.
      INVALIDPARAMETER_INVALIDAWSPRIVATEACCESS("InvalidParameter.InvalidAwsPrivateAccess"),
      
     // Invalid secondary origin domain.
@@ -252,13 +252,13 @@ public enum TeoErrorCode {
     // Invalid IPv6 settings.
      INVALIDPARAMETER_INVALIDIPV6SWITCH("InvalidParameter.InvalidIpv6Switch"),
      
-    // 
+    // Invalid browser cache.
      INVALIDPARAMETER_INVALIDMAXAGETIME("InvalidParameter.InvalidMaxAgeTime"),
      
     // Invalid origin server.
      INVALIDPARAMETER_INVALIDORIGIN("InvalidParameter.InvalidOrigin"),
      
-    // 
+    // The origin cannot be a private IP or loopback address.
      INVALIDPARAMETER_INVALIDORIGINIP("InvalidParameter.InvalidOriginIp"),
      
     // Invalid parameter.
@@ -270,7 +270,7 @@ public enum TeoErrorCode {
     // Invalid POST request size.
      INVALIDPARAMETER_INVALIDPOSTSIZEVALUE("InvalidParameter.InvalidPostSizeValue"),
      
-    // 
+    // AccessKeyId and SecretAccessKey u200dare required to access the third-party object storage.
      INVALIDPARAMETER_INVALIDPRIVATEACCESSPARAMS("InvalidParameter.InvalidPrivateAccessParams"),
      
     // The plan does not support QUIC.
@@ -315,10 +315,10 @@ public enum TeoErrorCode {
     // Invalid origin domain.
      INVALIDPARAMETER_INVALIDSERVERNAME("InvalidParameter.InvalidServerName"),
      
-    // 
+    // Invalid client IP or CIDR block.
      INVALIDPARAMETER_INVALIDSTANDARDDEBUGCLIENTIP("InvalidParameter.InvalidStandardDebugClientIp"),
      
-    // 
+    // The expiration time is exceeded.
      INVALIDPARAMETER_INVALIDSTANDARDDEBUGEXPIRETIMELIMIT("InvalidParameter.InvalidStandardDebugExpireTimeLimit"),
      
     // Origin-pull request configuration error: Invalid query string.
@@ -339,10 +339,10 @@ public enum TeoErrorCode {
     // Maximum parameter length exceeded.
      INVALIDPARAMETER_LENGTHEXCEEDSLIMIT("InvalidParameter.LengthExceedsLimit"),
      
-    // 
+    // Smart routing is not supported.
      INVALIDPARAMETER_MULTIPLYLAYERNOTSUPPORTSMARTROUTING("InvalidParameter.MultiplyLayerNotSupportSmartRouting"),
      
-    // 
+    // Unsupported preset variables exist.
      INVALIDPARAMETER_NOTSUPPORTTHISPRESET("InvalidParameter.NotSupportThisPreset"),
      
     // The origin address cannot be a private IP address.
@@ -435,10 +435,10 @@ public enum TeoErrorCode {
     // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-    // Please contact the sales rep to enable Cross-MLC-border acceleration.
+    // Cross-MLC-border acceleration is in beta. To join the beta, submit a ticket.
      OPERATIONDENIED_ACCELERATEMAINLANDDISABLE("OperationDenied.AccelerateMainlandDisable"),
      
-    // 
+    // Cross-MLC-border acceleration and IPv6 cannot be configured at the same time.
      OPERATIONDENIED_ACCELERATEMAINLANDIPV6CONFLICT("OperationDenied.AccelerateMainlandIpv6Conflict"),
      
     // The EdgeOne service of the site is being disabled. Please try again later.
@@ -468,7 +468,7 @@ public enum TeoErrorCode {
     // The EdgeOne service cannot be disabled for the site: A L4 proxy instance is being deployed.
      OPERATIONDENIED_L4PROXYINPROGRESSSTATUS("OperationDenied.L4ProxyInProgressStatus"),
      
-    // 
+    // Unable to disable the site: There are L4 proxy instances disabled.
      OPERATIONDENIED_L4PROXYINSTOPPINGSTATUS("OperationDenied.L4ProxyInStoppingStatus"),
      
     // Unable to operate the L4 instance when it’s not running

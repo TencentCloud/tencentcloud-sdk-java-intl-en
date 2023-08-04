@@ -102,6 +102,13 @@ The original configuration will apply if this field is not specified.
     private Boolean SessionPersist;
 
     /**
+    * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+    */
+    @SerializedName("SessionPersistTime")
+    @Expose
+    private Long SessionPersistTime;
+
+    /**
     * The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -319,6 +326,22 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
+     * Get Duration for the persistent session. The value takes effect only when `SessionPersist = true`. 
+     * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     */
+    public Long getSessionPersistTime() {
+        return this.SessionPersistTime;
+    }
+
+    /**
+     * Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     * @param SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     */
+    public void setSessionPersistTime(Long SessionPersistTime) {
+        this.SessionPersistTime = SessionPersistTime;
+    }
+
+    /**
      * Get The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li> 
@@ -383,6 +406,9 @@ The original configuration will apply if this field is not specified.
         if (source.SessionPersist != null) {
             this.SessionPersist = new Boolean(source.SessionPersist);
         }
+        if (source.SessionPersistTime != null) {
+            this.SessionPersistTime = new Long(source.SessionPersistTime);
+        }
         if (source.OriginPort != null) {
             this.OriginPort = new String(source.OriginPort);
         }
@@ -402,6 +428,7 @@ The original configuration will apply if this field is not specified.
         this.setParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
         this.setParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
 
     }

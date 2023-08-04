@@ -23,49 +23,97 @@ import java.util.HashMap;
 public class ChangeMasterInstanceRequest extends AbstractModel{
 
     /**
-    * Replication group ID
+    * Replication group ID, such as `crs-rpl-m3zt****`. It is the unique identifier automatically assigned by the system when creating a replication group. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication list.
+
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Instance ID
+    * ID of the read-only instance to be promoted to the master instance, such as `crs-xjhsdj****`. Log in to the the [TencentDB for Redis console](https://console.cloud.tencent.com/redis), and copy it in the instance list.
+
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Replication group ID 
-     * @return GroupId Replication group ID
+    * Whether to promote the read-only instance to the master instance forcibly. Valid values:
+- `true`: Yes
+- `false`: No
+    */
+    @SerializedName("ForceSwitch")
+    @Expose
+    private Boolean ForceSwitch;
+
+    /**
+     * Get Replication group ID, such as `crs-rpl-m3zt****`. It is the unique identifier automatically assigned by the system when creating a replication group. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication list.
+ 
+     * @return GroupId Replication group ID, such as `crs-rpl-m3zt****`. It is the unique identifier automatically assigned by the system when creating a replication group. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication list.
+
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID
-     * @param GroupId Replication group ID
+     * Set Replication group ID, such as `crs-rpl-m3zt****`. It is the unique identifier automatically assigned by the system when creating a replication group. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication list.
+
+     * @param GroupId Replication group ID, such as `crs-rpl-m3zt****`. It is the unique identifier automatically assigned by the system when creating a replication group. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication list.
+
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get ID of the read-only instance to be promoted to the master instance, such as `crs-xjhsdj****`. Log in to the the [TencentDB for Redis console](https://console.cloud.tencent.com/redis), and copy it in the instance list.
+
+ 
+     * @return InstanceId ID of the read-only instance to be promoted to the master instance, such as `crs-xjhsdj****`. Log in to the the [TencentDB for Redis console](https://console.cloud.tencent.com/redis), and copy it in the instance list.
+
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ID of the read-only instance to be promoted to the master instance, such as `crs-xjhsdj****`. Log in to the the [TencentDB for Redis console](https://console.cloud.tencent.com/redis), and copy it in the instance list.
+
+
+     * @param InstanceId ID of the read-only instance to be promoted to the master instance, such as `crs-xjhsdj****`. Log in to the the [TencentDB for Redis console](https://console.cloud.tencent.com/redis), and copy it in the instance list.
+
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Whether to promote the read-only instance to the master instance forcibly. Valid values:
+- `true`: Yes
+- `false`: No 
+     * @return ForceSwitch Whether to promote the read-only instance to the master instance forcibly. Valid values:
+- `true`: Yes
+- `false`: No
+     */
+    public Boolean getForceSwitch() {
+        return this.ForceSwitch;
+    }
+
+    /**
+     * Set Whether to promote the read-only instance to the master instance forcibly. Valid values:
+- `true`: Yes
+- `false`: No
+     * @param ForceSwitch Whether to promote the read-only instance to the master instance forcibly. Valid values:
+- `true`: Yes
+- `false`: No
+     */
+    public void setForceSwitch(Boolean ForceSwitch) {
+        this.ForceSwitch = ForceSwitch;
     }
 
     public ChangeMasterInstanceRequest() {
@@ -82,6 +130,9 @@ public class ChangeMasterInstanceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ForceSwitch != null) {
+            this.ForceSwitch = new Boolean(source.ForceSwitch);
+        }
     }
 
 
@@ -91,6 +142,7 @@ public class ChangeMasterInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ForceSwitch", this.ForceSwitch);
 
     }
 }

@@ -67,7 +67,7 @@ Note: if the name of the new CLB instance already exists, a default name will be
     private Long ProjectId;
 
     /**
-    * IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+    * It's only applicable to public network CLB instances. IP version. Values: `IPV4`, `IPV6` and `IPv6FullChain` (case-insensitive). Default: `IPV4`. Note: `IPV6` indicates IPv6 NAT64, while `IPv6FullChain` indicates IPv6. 
     */
     @SerializedName("AddressIPVersion")
     @Expose
@@ -103,7 +103,7 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     private InternetAccessible InternetAccessible;
 
     /**
-    * This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+    * It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`.
     */
     @SerializedName("VipIsp")
     @Expose
@@ -140,9 +140,8 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
 
     /**
     * Creates an LCU-supported instance.
-<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<ul><li>To create an LCU-supported instance, this parameter must be set to `SLA`, which indicates the Super Large 1 specification. 
+<ul><li>If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
     */
     @SerializedName("SlaType")
     @Expose
@@ -310,16 +309,16 @@ Note: if the name of the new CLB instance already exists, a default name will be
     }
 
     /**
-     * Get IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances. 
-     * @return AddressIPVersion IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     * Get It's only applicable to public network CLB instances. IP version. Values: `IPV4`, `IPV6` and `IPv6FullChain` (case-insensitive). Default: `IPV4`. Note: `IPV6` indicates IPv6 NAT64, while `IPv6FullChain` indicates IPv6.  
+     * @return AddressIPVersion It's only applicable to public network CLB instances. IP version. Values: `IPV4`, `IPV6` and `IPv6FullChain` (case-insensitive). Default: `IPV4`. Note: `IPV6` indicates IPv6 NAT64, while `IPv6FullChain` indicates IPv6. 
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * Set IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
-     * @param AddressIPVersion IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     * Set It's only applicable to public network CLB instances. IP version. Values: `IPV4`, `IPV6` and `IPv6FullChain` (case-insensitive). Default: `IPV4`. Note: `IPV6` indicates IPv6 NAT64, while `IPv6FullChain` indicates IPv6. 
+     * @param AddressIPVersion It's only applicable to public network CLB instances. IP version. Values: `IPV4`, `IPV6` and `IPv6FullChain` (case-insensitive). Default: `IPV4`. Note: `IPV6` indicates IPv6 NAT64, while `IPv6FullChain` indicates IPv6. 
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
@@ -394,16 +393,16 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     }
 
     /**
-     * Get This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode. 
-     * @return VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+     * Get It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`. 
+     * @return VipIsp It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`.
      */
     public String getVipIsp() {
         return this.VipIsp;
     }
 
     /**
-     * Set This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
-     * @param VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+     * Set It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`.
+     * @param VipIsp It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`.
      */
     public void setVipIsp(String VipIsp) {
         this.VipIsp = VipIsp;
@@ -479,13 +478,11 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
 
     /**
      * Get Creates an LCU-supported instance.
-<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul> 
+<ul><li>To create an LCU-supported instance, this parameter must be set to `SLA`, which indicates the Super Large 1 specification. 
+<ul><li>If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul> 
      * @return SlaType Creates an LCU-supported instance.
-<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<ul><li>To create an LCU-supported instance, this parameter must be set to `SLA`, which indicates the Super Large 1 specification. 
+<ul><li>If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
      */
     public String getSlaType() {
         return this.SlaType;
@@ -493,13 +490,11 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
 
     /**
      * Set Creates an LCU-supported instance.
-<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<ul><li>To create an LCU-supported instance, this parameter must be set to `SLA`, which indicates the Super Large 1 specification. 
+<ul><li>If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
      * @param SlaType Creates an LCU-supported instance.
-<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-<ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<ul><li>To create an LCU-supported instance, this parameter must be set to `SLA`, which indicates the Super Large 1 specification. 
+<ul><li>If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
