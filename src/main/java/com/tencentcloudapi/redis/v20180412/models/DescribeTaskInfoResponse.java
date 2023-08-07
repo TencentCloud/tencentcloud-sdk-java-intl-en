@@ -26,7 +26,7 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     * Task status. Valid values: 
 - `preparing`: To be run
 - `running`: Running
-- `succeed`: Succeedu200ded
+- `succeed`: Succeeded
 - `failed`: Failed
 - `Error`: Error occurred while running
     */
@@ -42,7 +42,7 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     private String StartTime;
 
     /**
-    * Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
+    * Task type, including `Create`, `Configure`, `Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
     */
     @SerializedName("TaskType")
     @Expose
@@ -56,7 +56,7 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
+    * Message returned by task execution, which will be an error message when execution fails or be empty when the status is `running `or `succeed-`.
     */
     @SerializedName("TaskMessage")
     @Expose
@@ -73,13 +73,13 @@ public class DescribeTaskInfoResponse extends AbstractModel{
      * Get Task status. Valid values: 
 - `preparing`: To be run
 - `running`: Running
-- `succeed`: Succeedu200ded
+- `succeed`: Succeeded
 - `failed`: Failed
 - `Error`: Error occurred while running 
      * @return Status Task status. Valid values: 
 - `preparing`: To be run
 - `running`: Running
-- `succeed`: Succeedu200ded
+- `succeed`: Succeeded
 - `failed`: Failed
 - `Error`: Error occurred while running
      */
@@ -91,13 +91,13 @@ public class DescribeTaskInfoResponse extends AbstractModel{
      * Set Task status. Valid values: 
 - `preparing`: To be run
 - `running`: Running
-- `succeed`: Succeedu200ded
+- `succeed`: Succeeded
 - `failed`: Failed
 - `Error`: Error occurred while running
      * @param Status Task status. Valid values: 
 - `preparing`: To be run
 - `running`: Running
-- `succeed`: Succeedu200ded
+- `succeed`: Succeeded
 - `failed`: Failed
 - `Error`: Error occurred while running
      */
@@ -122,16 +122,16 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`. 
-     * @return TaskType Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
+     * Get Task type, including `Create`, `Configure`, `Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`. 
+     * @return TaskType Task type, including `Create`, `Configure`, `Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
-     * @param TaskType Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
+     * Set Task type, including `Create`, `Configure`, `Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
+     * @param TaskType Task type, including `Create`, `Configure`, `Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -154,16 +154,16 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`. 
-     * @return TaskMessage Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
+     * Get Message returned by task execution, which will be an error message when execution fails or be empty when the status is `running `or `succeed-`. 
+     * @return TaskMessage Message returned by task execution, which will be an error message when execution fails or be empty when the status is `running `or `succeed-`.
      */
     public String getTaskMessage() {
         return this.TaskMessage;
     }
 
     /**
-     * Set Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
-     * @param TaskMessage Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
+     * Set Message returned by task execution, which will be an error message when execution fails or be empty when the status is `running `or `succeed-`.
+     * @param TaskMessage Message returned by task execution, which will be an error message when execution fails or be empty when the status is `running `or `succeed-`.
      */
     public void setTaskMessage(String TaskMessage) {
         this.TaskMessage = TaskMessage;

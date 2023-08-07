@@ -1782,7 +1782,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade the instance to a later version or u200dto upgrade the current standard architecture to the cluster architecture.
+     *This API is used to upgrade the instance to a later version or to upgrade the current standard architecture to the cluster architecture.
      * @param req UpgradeInstanceVersionRequest
      * @return UpgradeInstanceVersionResponse
      * @throws TencentCloudSDKException
