@@ -222,6 +222,9 @@ public enum AsErrorCode {
     // The value exceeds the limit.
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
+    // Target group listeners are not supported.
+     INVALIDPARAMETERVALUE_LISTENERTARGETTYPENOTSUPPORTED("InvalidParameterValue.ListenerTargetTypeNotSupported"),
+     
     // The bandwidth package ID is required.
      INVALIDPARAMETERVALUE_MISSINGBANDWIDTHPACKAGEID("InvalidParameterValue.MissingBandwidthPackageId"),
      
@@ -473,6 +476,9 @@ public enum AsErrorCode {
      
     // The specified availability zone is unavailable.
      RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable"),
+     
+    // You have not assigned the CAM role AS-QCSRole to Auto Scaling. Please go to the AS console to complete authorization first.
+     UNAUTHORIZEDOPERATION_AUTOSCALINGROLEUNAUTHORIZED("UnauthorizedOperation.AutoScalingRoleUnauthorized"),
      
     // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");

@@ -44,6 +44,15 @@ public class Advice extends AbstractModel{
     private String Solution;
 
     /**
+    * u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
      * Get Problem Description 
      * @return Problem Problem Description
      */
@@ -91,6 +100,30 @@ public class Advice extends AbstractModel{
         this.Solution = Solution;
     }
 
+    /**
+     * Get u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br> 
+     * @return Level u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
+     * @param Level u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
     public Advice() {
     }
 
@@ -108,6 +141,9 @@ public class Advice extends AbstractModel{
         if (source.Solution != null) {
             this.Solution = new String(source.Solution);
         }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
     }
 
 
@@ -118,6 +154,7 @@ public class Advice extends AbstractModel{
         this.setParamSimple(map, prefix + "Problem", this.Problem);
         this.setParamSimple(map, prefix + "Detail", this.Detail);
         this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Level", this.Level);
 
     }
 }

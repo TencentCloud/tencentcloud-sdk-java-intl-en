@@ -103,7 +103,7 @@ public class Activity extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * Information set of the instances related to the scaling activity.
+    * This parameter has been deprecated.
     */
     @SerializedName("ActivityRelatedInstanceSet")
     @Expose
@@ -136,6 +136,13 @@ public class Activity extends AbstractModel{
     @SerializedName("InvocationResultSet")
     @Expose
     private InvocationResult [] InvocationResultSet;
+
+    /**
+    * Information set of the instances related to the scaling activity.
+    */
+    @SerializedName("RelatedInstanceSet")
+    @Expose
+    private RelatedInstance [] RelatedInstanceSet;
 
     /**
      * Get Auto scaling group ID. 
@@ -338,17 +345,21 @@ public class Activity extends AbstractModel{
     }
 
     /**
-     * Get Information set of the instances related to the scaling activity. 
-     * @return ActivityRelatedInstanceSet Information set of the instances related to the scaling activity.
+     * Get This parameter has been deprecated. 
+     * @return ActivityRelatedInstanceSet This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public ActivtyRelatedInstance [] getActivityRelatedInstanceSet() {
         return this.ActivityRelatedInstanceSet;
     }
 
     /**
-     * Set Information set of the instances related to the scaling activity.
-     * @param ActivityRelatedInstanceSet Information set of the instances related to the scaling activity.
+     * Set This parameter has been deprecated.
+     * @param ActivityRelatedInstanceSet This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setActivityRelatedInstanceSet(ActivtyRelatedInstance [] ActivityRelatedInstanceSet) {
         this.ActivityRelatedInstanceSet = ActivityRelatedInstanceSet;
     }
@@ -417,6 +428,22 @@ public class Activity extends AbstractModel{
         this.InvocationResultSet = InvocationResultSet;
     }
 
+    /**
+     * Get Information set of the instances related to the scaling activity. 
+     * @return RelatedInstanceSet Information set of the instances related to the scaling activity.
+     */
+    public RelatedInstance [] getRelatedInstanceSet() {
+        return this.RelatedInstanceSet;
+    }
+
+    /**
+     * Set Information set of the instances related to the scaling activity.
+     * @param RelatedInstanceSet Information set of the instances related to the scaling activity.
+     */
+    public void setRelatedInstanceSet(RelatedInstance [] RelatedInstanceSet) {
+        this.RelatedInstanceSet = RelatedInstanceSet;
+    }
+
     public Activity() {
     }
 
@@ -482,6 +509,12 @@ public class Activity extends AbstractModel{
                 this.InvocationResultSet[i] = new InvocationResult(source.InvocationResultSet[i]);
             }
         }
+        if (source.RelatedInstanceSet != null) {
+            this.RelatedInstanceSet = new RelatedInstance[source.RelatedInstanceSet.length];
+            for (int i = 0; i < source.RelatedInstanceSet.length; i++) {
+                this.RelatedInstanceSet[i] = new RelatedInstance(source.RelatedInstanceSet[i]);
+            }
+        }
     }
 
 
@@ -504,6 +537,7 @@ public class Activity extends AbstractModel{
         this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
         this.setParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
         this.setParamArrayObj(map, prefix + "InvocationResultSet.", this.InvocationResultSet);
+        this.setParamArrayObj(map, prefix + "RelatedInstanceSet.", this.RelatedInstanceSet);
 
     }
 }
