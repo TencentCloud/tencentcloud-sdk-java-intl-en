@@ -45,6 +45,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Remark;
 
     /**
+    * Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnvironmentRoleSets")
+    @Expose
+    private EnvironmentRoleSet [] EnvironmentRoleSets;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return EnvironmentRoleSets Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public EnvironmentRoleSet [] getEnvironmentRoleSets() {
+        return this.EnvironmentRoleSets;
+    }
+
+    /**
+     * Set Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param EnvironmentRoleSets Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnvironmentRoleSets(EnvironmentRoleSet [] EnvironmentRoleSets) {
+        this.EnvironmentRoleSets = EnvironmentRoleSets;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -136,6 +164,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.EnvironmentRoleSets != null) {
+            this.EnvironmentRoleSets = new EnvironmentRoleSet[source.EnvironmentRoleSets.length];
+            for (int i = 0; i < source.EnvironmentRoleSets.length; i++) {
+                this.EnvironmentRoleSets[i] = new EnvironmentRoleSet(source.EnvironmentRoleSets[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -149,6 +183,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

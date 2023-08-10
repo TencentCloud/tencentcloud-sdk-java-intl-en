@@ -228,6 +228,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a TDMQ for RabbitMQ user.
+     * @param req CreateRabbitMQUserRequest
+     * @return CreateRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRabbitMQUserResponse CreateRabbitMQUser(CreateRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a TDMQ for RabbitMQ exclusive instance.
      * @param req CreateRabbitMQVipInstanceRequest
      * @return CreateRabbitMQVipInstanceResponse
@@ -241,6 +262,27 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a TDMQ for RabbitMQ vhost.
+     * @param req CreateRabbitMQVirtualHostRequest
+     * @return CreateRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHost(CreateRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRabbitMQVirtualHost");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -514,6 +556,69 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEnvironments");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a TDMQ for RabbitMQ user.
+     * @param req DeleteRabbitMQUserRequest
+     * @return DeleteRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQUserResponse DeleteRabbitMQUser(DeleteRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+     * @param req DeleteRabbitMQVipInstanceRequest
+     * @return DeleteRabbitMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstance(DeleteRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRabbitMQVipInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQVipInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a TDMQ for RabbitMQ vhost.
+     * @param req DeleteRabbitMQVirtualHostRequest
+     * @return DeleteRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHost(DeleteRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRabbitMQVirtualHost");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1047,6 +1152,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of TDMQ for RabbitMQ users.
+     * @param req DescribeRabbitMQUserRequest
+     * @return DescribeRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQUserResponse DescribeRabbitMQUser(DescribeRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
      * @param req DescribeRabbitMQVipInstancesRequest
      * @return DescribeRabbitMQVipInstancesResponse
@@ -1060,6 +1186,48 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRabbitMQVipInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of TDMQ for RabbitMQ vhosts.
+     * @param req DescribeRabbitMQVirtualHostRequest
+     * @return DescribeRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(DescribeRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVirtualHost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
+     * @param req DescribeRabbitMQVirtualHostListRequest
+     * @return DescribeRabbitMQVirtualHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVirtualHostListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVirtualHostListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVirtualHostList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1123,6 +1291,27 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRocketMQGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the TDMQ for RocketMQ message details.
+     * @param req DescribeRocketMQMsgRequest
+     * @return DescribeRocketMQMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQMsgResponse DescribeRocketMQMsg(DescribeRocketMQMsgRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQMsgResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQMsg");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1404,6 +1593,48 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a TDMQ for RabbitMQ user.
+     * @param req ModifyRabbitMQUserRequest
+     * @return ModifyRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRabbitMQUserResponse ModifyRabbitMQUser(ModifyRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a TDMQ for RabbitMQ vhost.
+     * @param req ModifyRabbitMQVirtualHostRequest
+     * @return ModifyRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(ModifyRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRabbitMQVirtualHost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update a RocketMQ cluster.
      * @param req ModifyRocketMQClusterRequest
      * @return ModifyRocketMQClusterResponse
@@ -1438,6 +1669,27 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRocketMQGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRocketMQGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the configurations of a TDMQ for RocketMQ exclusive instance, including the upgrade of the instance specification, node count, and storage, and the downgrade of the instance specification. After you call this API to place the order and make payments, the configuration modification will be in progress. You can query whether the modification has been completed through the `DescribeRocketMQVipInstances` API`.
+     * @param req ModifyRocketMQInstanceSpecRequest
+     * @return ModifyRocketMQInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(ModifyRocketMQInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRocketMQInstanceSpec");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1699,7 +1951,8 @@ Note: the batch message sending API in TDMQ is to package messages into a batch 
     }
 
     /**
-     *This API is used to send one message.
+     *This API is used to send a single message.
+The message cannot be sent to a persistent topic.
      * @param req SendMessagesRequest
      * @return SendMessagesResponse
      * @throws TencentCloudSDKException
@@ -1733,6 +1986,27 @@ Note: the batch message sending API in TDMQ is to package messages into a batch 
                 Type type = new TypeToken<JsonResponseModel<SendMsgResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SendMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This document is used to send a TDMQ for RocketMQ message.
+     * @param req SendRocketMQMessageRequest
+     * @return SendRocketMQMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendRocketMQMessageResponse SendRocketMQMessage(SendRocketMQMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendRocketMQMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendRocketMQMessage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

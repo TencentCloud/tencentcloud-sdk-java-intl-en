@@ -44,6 +44,13 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * Whether to enable the HTTP access over the public network
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
      * Get RocketMQ cluster ID 
      * @return ClusterId RocketMQ cluster ID
      */
@@ -91,6 +98,22 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get Whether to enable the HTTP access over the public network 
+     * @return PublicAccessEnabled Whether to enable the HTTP access over the public network
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set Whether to enable the HTTP access over the public network
+     * @param PublicAccessEnabled Whether to enable the HTTP access over the public network
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
     public ModifyRocketMQClusterRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

@@ -88,6 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RetentionPolicy RetentionPolicy;
 
     /**
+    * Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoSubscriptionCreation")
+    @Expose
+    private Boolean AutoSubscriptionCreation;
+
+    /**
      * Get Namespace name. 
      * @return EnvironmentId Namespace name.
      */
@@ -239,6 +247,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RetentionPolicy = RetentionPolicy;
     }
 
+    /**
+     * Get Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getAutoSubscriptionCreation() {
+        return this.AutoSubscriptionCreation;
+    }
+
+    /**
+     * Set Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
+        this.AutoSubscriptionCreation = AutoSubscriptionCreation;
+    }
+
     public Environment() {
     }
 
@@ -274,6 +302,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
         }
+        if (source.AutoSubscriptionCreation != null) {
+            this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
+        }
     }
 
 
@@ -290,6 +321,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
+        this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 
     }
 }

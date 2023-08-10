@@ -123,6 +123,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SpecName;
 
     /**
+    * The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxRetention")
+    @Expose
+    private Long MaxRetention;
+
+    /**
+    * The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MinRetention")
+    @Expose
+    private Long MinRetention;
+
+    /**
+    * Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Retention")
+    @Expose
+    private Long Retention;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -354,6 +378,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SpecName = SpecName;
     }
 
+    /**
+     * Get The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return MaxRetention The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxRetention() {
+        return this.MaxRetention;
+    }
+
+    /**
+     * Set The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param MaxRetention The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxRetention(Long MaxRetention) {
+        this.MaxRetention = MaxRetention;
+    }
+
+    /**
+     * Get The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return MinRetention The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMinRetention() {
+        return this.MinRetention;
+    }
+
+    /**
+     * Set The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param MinRetention The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMinRetention(Long MinRetention) {
+        this.MinRetention = MinRetention;
+    }
+
+    /**
+     * Get Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return Retention Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRetention() {
+        return this.Retention;
+    }
+
+    /**
+     * Set Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param Retention Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRetention(Long Retention) {
+        this.Retention = Retention;
+    }
+
     public RocketMQVipInstance() {
     }
 
@@ -404,6 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SpecName != null) {
             this.SpecName = new String(source.SpecName);
         }
+        if (source.MaxRetention != null) {
+            this.MaxRetention = new Long(source.MaxRetention);
+        }
+        if (source.MinRetention != null) {
+            this.MinRetention = new Long(source.MinRetention);
+        }
+        if (source.Retention != null) {
+            this.Retention = new Long(source.Retention);
+        }
     }
 
 
@@ -425,6 +518,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
+        this.setParamSimple(map, prefix + "MinRetention", this.MinRetention);
+        this.setParamSimple(map, prefix + "Retention", this.Retention);
 
     }
 }

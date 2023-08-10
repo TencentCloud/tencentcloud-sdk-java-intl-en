@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRocketMQNamespaceRequest extends AbstractModel{
+public class SendRocketMQMessageRequest extends AbstractModel{
 
     /**
     * Cluster ID
@@ -30,32 +30,39 @@ public class CreateRocketMQNamespaceRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+    * Namespace ID
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * This parameter is disused.
+    * Topic name
     */
-    @SerializedName("Ttl")
+    @SerializedName("TopicName")
     @Expose
-    private Long Ttl;
+    private String TopicName;
 
     /**
-    * This parameter is disused.
+    * Message content
     */
-    @SerializedName("RetentionTime")
+    @SerializedName("MsgBody")
     @Expose
-    private Long RetentionTime;
+    private String MsgBody;
 
     /**
-    * Remarks (up to 128 characters)
+    * Message key
     */
-    @SerializedName("Remark")
+    @SerializedName("MsgKey")
     @Expose
-    private String Remark;
+    private String MsgKey;
+
+    /**
+    * Message tag
+    */
+    @SerializedName("MsgTag")
+    @Expose
+    private String MsgTag;
 
     /**
      * Get Cluster ID 
@@ -74,91 +81,110 @@ public class CreateRocketMQNamespaceRequest extends AbstractModel{
     }
 
     /**
-     * Get Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores 
-     * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+     * Get Namespace ID 
+     * @return NamespaceId Namespace ID
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
-     * @param NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+     * Set Namespace ID
+     * @param NamespaceId Namespace ID
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get This parameter is disused. 
-     * @return Ttl This parameter is disused.
+     * Get Topic name 
+     * @return TopicName Topic name
      */
-    public Long getTtl() {
-        return this.Ttl;
+    public String getTopicName() {
+        return this.TopicName;
     }
 
     /**
-     * Set This parameter is disused.
-     * @param Ttl This parameter is disused.
+     * Set Topic name
+     * @param TopicName Topic name
      */
-    public void setTtl(Long Ttl) {
-        this.Ttl = Ttl;
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
     }
 
     /**
-     * Get This parameter is disused. 
-     * @return RetentionTime This parameter is disused.
+     * Get Message content 
+     * @return MsgBody Message content
      */
-    public Long getRetentionTime() {
-        return this.RetentionTime;
+    public String getMsgBody() {
+        return this.MsgBody;
     }
 
     /**
-     * Set This parameter is disused.
-     * @param RetentionTime This parameter is disused.
+     * Set Message content
+     * @param MsgBody Message content
      */
-    public void setRetentionTime(Long RetentionTime) {
-        this.RetentionTime = RetentionTime;
+    public void setMsgBody(String MsgBody) {
+        this.MsgBody = MsgBody;
     }
 
     /**
-     * Get Remarks (up to 128 characters) 
-     * @return Remark Remarks (up to 128 characters)
+     * Get Message key 
+     * @return MsgKey Message key
      */
-    public String getRemark() {
-        return this.Remark;
+    public String getMsgKey() {
+        return this.MsgKey;
     }
 
     /**
-     * Set Remarks (up to 128 characters)
-     * @param Remark Remarks (up to 128 characters)
+     * Set Message key
+     * @param MsgKey Message key
      */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
+    public void setMsgKey(String MsgKey) {
+        this.MsgKey = MsgKey;
     }
 
-    public CreateRocketMQNamespaceRequest() {
+    /**
+     * Get Message tag 
+     * @return MsgTag Message tag
+     */
+    public String getMsgTag() {
+        return this.MsgTag;
+    }
+
+    /**
+     * Set Message tag
+     * @param MsgTag Message tag
+     */
+    public void setMsgTag(String MsgTag) {
+        this.MsgTag = MsgTag;
+    }
+
+    public SendRocketMQMessageRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateRocketMQNamespaceRequest(CreateRocketMQNamespaceRequest source) {
+    public SendRocketMQMessageRequest(SendRocketMQMessageRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
         if (source.NamespaceId != null) {
             this.NamespaceId = new String(source.NamespaceId);
         }
-        if (source.Ttl != null) {
-            this.Ttl = new Long(source.Ttl);
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
         }
-        if (source.RetentionTime != null) {
-            this.RetentionTime = new Long(source.RetentionTime);
+        if (source.MsgBody != null) {
+            this.MsgBody = new String(source.MsgBody);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
+        if (source.MsgKey != null) {
+            this.MsgKey = new String(source.MsgKey);
+        }
+        if (source.MsgTag != null) {
+            this.MsgTag = new String(source.MsgTag);
         }
     }
 
@@ -169,9 +195,10 @@ public class CreateRocketMQNamespaceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
-        this.setParamSimple(map, prefix + "Ttl", this.Ttl);
-        this.setParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "MsgBody", this.MsgBody);
+        this.setParamSimple(map, prefix + "MsgKey", this.MsgKey);
+        this.setParamSimple(map, prefix + "MsgTag", this.MsgTag);
 
     }
 }

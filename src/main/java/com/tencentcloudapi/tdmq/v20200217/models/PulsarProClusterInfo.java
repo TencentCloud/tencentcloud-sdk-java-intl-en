@@ -80,6 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxStorage;
 
     /**
+    * Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CanEditRoute")
+    @Expose
+    private Boolean CanEditRoute;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -211,6 +219,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MaxStorage = MaxStorage;
     }
 
+    /**
+     * Get Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return CanEditRoute Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getCanEditRoute() {
+        return this.CanEditRoute;
+    }
+
+    /**
+     * Set Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param CanEditRoute Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCanEditRoute(Boolean CanEditRoute) {
+        this.CanEditRoute = CanEditRoute;
+    }
+
     public PulsarProClusterInfo() {
     }
 
@@ -246,6 +274,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MaxStorage != null) {
             this.MaxStorage = new Long(source.MaxStorage);
         }
+        if (source.CanEditRoute != null) {
+            this.CanEditRoute = new Boolean(source.CanEditRoute);
+        }
     }
 
 
@@ -261,6 +292,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
+        this.setParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
 
     }
 }

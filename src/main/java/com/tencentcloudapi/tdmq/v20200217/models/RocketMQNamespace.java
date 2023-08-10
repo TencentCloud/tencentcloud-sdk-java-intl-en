@@ -30,7 +30,7 @@ public class RocketMQNamespace extends AbstractModel{
     private String NamespaceId;
 
     /**
-    * Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+    * Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
     */
     @SerializedName("Ttl")
     @Expose
@@ -68,6 +68,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VpcEndpoint;
 
     /**
+    * Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InternalEndpoint")
+    @Expose
+    private String InternalEndpoint;
+
+    /**
      * Get Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores. 
      * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
      */
@@ -84,16 +92,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. 
-     * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+     * Get Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused. 
+     * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
-     * @param Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+     * Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+     * @param Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
@@ -175,6 +183,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VpcEndpoint = VpcEndpoint;
     }
 
+    /**
+     * Get Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return InternalEndpoint Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInternalEndpoint() {
+        return this.InternalEndpoint;
+    }
+
+    /**
+     * Set Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param InternalEndpoint Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInternalEndpoint(String InternalEndpoint) {
+        this.InternalEndpoint = InternalEndpoint;
+    }
+
     public RocketMQNamespace() {
     }
 
@@ -201,6 +229,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VpcEndpoint != null) {
             this.VpcEndpoint = new String(source.VpcEndpoint);
         }
+        if (source.InternalEndpoint != null) {
+            this.InternalEndpoint = new String(source.InternalEndpoint);
+        }
     }
 
 
@@ -214,6 +245,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
         this.setParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
+        this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
 
     }
 }

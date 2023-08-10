@@ -81,6 +81,27 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply for a BizToken before calling the web-based verification service each time. This token is required for initiating a verification process and getting the result after the verification is completed.
+     * @param req ApplyWebVerificationBizTokenIntlRequest
+     * @return ApplyWebVerificationBizTokenIntlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyWebVerificationBizTokenIntlResponse ApplyWebVerificationBizTokenIntl(ApplyWebVerificationBizTokenIntlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyWebVerificationBizTokenIntl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
      * @param req ApplyWebVerificationTokenRequest
      * @return ApplyWebVerificationTokenResponse
@@ -265,6 +286,27 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetWebVerificationResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the verification result with the corresponding BizToken after the u200dweb-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+     * @param req GetWebVerificationResultIntlRequest
+     * @return GetWebVerificationResultIntlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWebVerificationResultIntlResponse GetWebVerificationResultIntl(GetWebVerificationResultIntlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetWebVerificationResultIntlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultIntlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetWebVerificationResultIntl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

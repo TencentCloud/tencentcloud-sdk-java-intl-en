@@ -37,14 +37,14 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
     private String NamespaceId;
 
     /**
-    * Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+    * This parameter is disused.
     */
     @SerializedName("Ttl")
     @Expose
     private Long Ttl;
 
     /**
-    * Retention time for persisted messages in milliseconds
+    * This parameter is disused.
     */
     @SerializedName("RetentionTime")
     @Expose
@@ -56,6 +56,13 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * Whether to enable the public network access
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
 
     /**
      * Get Cluster ID 
@@ -90,32 +97,32 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
     }
 
     /**
-     * Get Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days 
-     * @return Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+     * Get This parameter is disused. 
+     * @return Ttl This parameter is disused.
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-     * @param Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+     * Set This parameter is disused.
+     * @param Ttl This parameter is disused.
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
     }
 
     /**
-     * Get Retention time for persisted messages in milliseconds 
-     * @return RetentionTime Retention time for persisted messages in milliseconds
+     * Get This parameter is disused. 
+     * @return RetentionTime This parameter is disused.
      */
     public Long getRetentionTime() {
         return this.RetentionTime;
     }
 
     /**
-     * Set Retention time for persisted messages in milliseconds
-     * @param RetentionTime Retention time for persisted messages in milliseconds
+     * Set This parameter is disused.
+     * @param RetentionTime This parameter is disused.
      */
     public void setRetentionTime(Long RetentionTime) {
         this.RetentionTime = RetentionTime;
@@ -135,6 +142,22 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get Whether to enable the public network access 
+     * @return PublicAccessEnabled Whether to enable the public network access
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set Whether to enable the public network access
+     * @param PublicAccessEnabled Whether to enable the public network access
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
     }
 
     public ModifyRocketMQNamespaceRequest() {
@@ -160,6 +183,9 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
         this.setParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

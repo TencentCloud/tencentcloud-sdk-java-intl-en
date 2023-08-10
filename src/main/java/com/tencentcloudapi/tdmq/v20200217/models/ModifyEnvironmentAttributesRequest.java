@@ -58,6 +58,13 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
     private RetentionPolicy RetentionPolicy;
 
     /**
+    * Whether to enable "Auto-Create Subscription"
+    */
+    @SerializedName("AutoSubscriptionCreation")
+    @Expose
+    private Boolean AutoSubscriptionCreation;
+
+    /**
      * Get Namespace name. 
      * @return EnvironmentId Namespace name.
      */
@@ -137,6 +144,22 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         this.RetentionPolicy = RetentionPolicy;
     }
 
+    /**
+     * Get Whether to enable "Auto-Create Subscription" 
+     * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+     */
+    public Boolean getAutoSubscriptionCreation() {
+        return this.AutoSubscriptionCreation;
+    }
+
+    /**
+     * Set Whether to enable "Auto-Create Subscription"
+     * @param AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+     */
+    public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
+        this.AutoSubscriptionCreation = AutoSubscriptionCreation;
+    }
+
     public ModifyEnvironmentAttributesRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
         }
+        if (source.AutoSubscriptionCreation != null) {
+            this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
+        this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 
     }
 }

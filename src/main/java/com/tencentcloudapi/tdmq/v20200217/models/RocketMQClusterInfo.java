@@ -137,6 +137,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpVpcEndpoint;
 
     /**
+    * Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InternalEndpoint")
+    @Expose
+    private String InternalEndpoint;
+
+    /**
+    * Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HttpInternalEndpoint")
+    @Expose
+    private String HttpInternalEndpoint;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -412,6 +428,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HttpVpcEndpoint = HttpVpcEndpoint;
     }
 
+    /**
+     * Get Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return InternalEndpoint Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInternalEndpoint() {
+        return this.InternalEndpoint;
+    }
+
+    /**
+     * Set Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param InternalEndpoint Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInternalEndpoint(String InternalEndpoint) {
+        this.InternalEndpoint = InternalEndpoint;
+    }
+
+    /**
+     * Get Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return HttpInternalEndpoint Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHttpInternalEndpoint() {
+        return this.HttpInternalEndpoint;
+    }
+
+    /**
+     * Set Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param HttpInternalEndpoint Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHttpInternalEndpoint(String HttpInternalEndpoint) {
+        this.HttpInternalEndpoint = HttpInternalEndpoint;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -468,6 +524,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HttpVpcEndpoint != null) {
             this.HttpVpcEndpoint = new String(source.HttpVpcEndpoint);
         }
+        if (source.InternalEndpoint != null) {
+            this.InternalEndpoint = new String(source.InternalEndpoint);
+        }
+        if (source.HttpInternalEndpoint != null) {
+            this.HttpInternalEndpoint = new String(source.HttpInternalEndpoint);
+        }
     }
 
 
@@ -490,6 +552,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
         this.setParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
+        this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
+        this.setParamSimple(map, prefix + "HttpInternalEndpoint", this.HttpInternalEndpoint);
 
     }
 }

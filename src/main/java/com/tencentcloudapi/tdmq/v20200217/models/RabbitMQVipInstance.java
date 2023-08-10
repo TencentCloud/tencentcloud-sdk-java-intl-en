@@ -131,6 +131,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExceptionInformation;
 
     /**
+    * Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private Long ClusterStatus;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -382,6 +390,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ExceptionInformation = ExceptionInformation;
     }
 
+    /**
+     * Get Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter. 
+     * @return ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     */
+    public Long getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     * @param ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     */
+    public void setClusterStatus(Long ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -435,6 +463,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ExceptionInformation != null) {
             this.ExceptionInformation = new String(source.ExceptionInformation);
         }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new Long(source.ClusterStatus);
+        }
     }
 
 
@@ -457,6 +488,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
 
     }
 }

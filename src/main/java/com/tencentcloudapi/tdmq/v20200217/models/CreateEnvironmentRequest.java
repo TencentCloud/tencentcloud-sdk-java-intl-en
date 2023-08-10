@@ -58,6 +58,13 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private RetentionPolicy RetentionPolicy;
 
     /**
+    * Whether to enable "Auto-Create Subscription"
+    */
+    @SerializedName("AutoSubscriptionCreation")
+    @Expose
+    private Boolean AutoSubscriptionCreation;
+
+    /**
      * Get Environment (namespace) name, which can contain up to 16 letters, digits, hyphens, and underscores. 
      * @return EnvironmentId Environment (namespace) name, which can contain up to 16 letters, digits, hyphens, and underscores.
      */
@@ -137,6 +144,22 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.RetentionPolicy = RetentionPolicy;
     }
 
+    /**
+     * Get Whether to enable "Auto-Create Subscription" 
+     * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+     */
+    public Boolean getAutoSubscriptionCreation() {
+        return this.AutoSubscriptionCreation;
+    }
+
+    /**
+     * Set Whether to enable "Auto-Create Subscription"
+     * @param AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+     */
+    public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
+        this.AutoSubscriptionCreation = AutoSubscriptionCreation;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
         }
+        if (source.AutoSubscriptionCreation != null) {
+            this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
+        this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 
     }
 }
