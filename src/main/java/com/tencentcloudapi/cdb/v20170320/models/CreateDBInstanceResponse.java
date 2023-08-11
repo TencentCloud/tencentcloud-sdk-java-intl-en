@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBInstanceResponse extends AbstractModel{
 
     /**
-    * Short order ID
+    * Billing sub-order ID
     */
     @SerializedName("DealIds")
     @Expose
@@ -44,16 +44,16 @@ public class CreateDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Short order ID 
-     * @return DealIds Short order ID
+     * Get Billing sub-order ID 
+     * @return DealIds Billing sub-order ID
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set Short order ID
-     * @param DealIds Short order ID
+     * Set Billing sub-order ID
+     * @param DealIds Billing sub-order ID
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;

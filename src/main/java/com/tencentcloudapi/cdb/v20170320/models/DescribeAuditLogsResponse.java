@@ -20,23 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxyConnectionPoolConfResponse extends AbstractModel{
+public class DescribeAuditLogsResponse extends AbstractModel{
 
     /**
-    * Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Number of eligible audit logs
     */
-    @SerializedName("Count")
+    @SerializedName("TotalCount")
     @Expose
-    private Long Count;
+    private Long TotalCount;
 
     /**
-    * Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("PoolConf")
+    @SerializedName("Items")
     @Expose
-    private PoolConf PoolConf;
+    private AuditLog [] Items;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +45,39 @@ Note: this field may return `null`, indicating that no valid value can be found.
     private String RequestId;
 
     /**
-     * Get Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return Count Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Number of eligible audit logs 
+     * @return TotalCount Number of eligible audit logs
      */
-    public Long getCount() {
-        return this.Count;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param Count Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Number of eligible audit logs
+     * @param TotalCount Number of eligible audit logs
      */
-    public void setCount(Long Count) {
-        this.Count = Count;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return PoolConf Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return Items Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
-    public PoolConf getPoolConf() {
-        return this.PoolConf;
+    public AuditLog [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param PoolConf Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param Items Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
-    public void setPoolConf(PoolConf PoolConf) {
-        this.PoolConf = PoolConf;
+    public void setItems(AuditLog [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -101,19 +96,22 @@ Note: this field may return `null`, indicating that no valid value can be found.
         this.RequestId = RequestId;
     }
 
-    public DescribeProxyConnectionPoolConfResponse() {
+    public DescribeAuditLogsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProxyConnectionPoolConfResponse(DescribeProxyConnectionPoolConfResponse source) {
-        if (source.Count != null) {
-            this.Count = new Long(source.Count);
+    public DescribeAuditLogsResponse(DescribeAuditLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.PoolConf != null) {
-            this.PoolConf = new PoolConf(source.PoolConf);
+        if (source.Items != null) {
+            this.Items = new AuditLog[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new AuditLog(source.Items[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +123,8 @@ Note: this field may return `null`, indicating that no valid value can be found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Count", this.Count);
-        this.setParamObj(map, prefix + "PoolConf.", this.PoolConf);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

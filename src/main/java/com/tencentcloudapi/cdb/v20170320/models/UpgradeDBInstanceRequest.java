@@ -100,7 +100,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String DeviceType;
 
     /**
-    * The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+    * The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
     */
     @SerializedName("Cpu")
     @Expose
@@ -318,16 +318,16 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value. 
-     * @return Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+     * Get The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`. 
+     * @return Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
-     * @param Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+     * Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
+     * @param Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

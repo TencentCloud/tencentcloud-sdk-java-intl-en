@@ -51,11 +51,18 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
     private AggregationCondition [] AggregationConditions;
 
     /**
-    * The result set of the audit log filtered by this condition is set as the analysis Log.
+    * This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
     */
     @SerializedName("AuditLogFilter")
     @Expose
     private AuditLogFilter AuditLogFilter;
+
+    /**
+    * The result set of the audit log filtered by this condition is set as the analysis Log.
+    */
+    @SerializedName("LogFilter")
+    @Expose
+    private InstanceAuditLogFilters [] LogFilter;
 
     /**
      * Get Instance ID 
@@ -122,19 +129,35 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get The result set of the audit log filtered by this condition is set as the analysis Log. 
-     * @return AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+     * Get This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log. 
+     * @return AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
      */
     public AuditLogFilter getAuditLogFilter() {
         return this.AuditLogFilter;
     }
 
     /**
-     * Set The result set of the audit log filtered by this condition is set as the analysis Log.
-     * @param AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+     * Set This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+     * @param AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
      */
     public void setAuditLogFilter(AuditLogFilter AuditLogFilter) {
         this.AuditLogFilter = AuditLogFilter;
+    }
+
+    /**
+     * Get The result set of the audit log filtered by this condition is set as the analysis Log. 
+     * @return LogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+     */
+    public InstanceAuditLogFilters [] getLogFilter() {
+        return this.LogFilter;
+    }
+
+    /**
+     * Set The result set of the audit log filtered by this condition is set as the analysis Log.
+     * @param LogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+     */
+    public void setLogFilter(InstanceAuditLogFilters [] LogFilter) {
+        this.LogFilter = LogFilter;
     }
 
     public AnalyzeAuditLogsRequest() {
@@ -163,6 +186,12 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
         if (source.AuditLogFilter != null) {
             this.AuditLogFilter = new AuditLogFilter(source.AuditLogFilter);
         }
+        if (source.LogFilter != null) {
+            this.LogFilter = new InstanceAuditLogFilters[source.LogFilter.length];
+            for (int i = 0; i < source.LogFilter.length; i++) {
+                this.LogFilter[i] = new InstanceAuditLogFilters(source.LogFilter[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "AggregationConditions.", this.AggregationConditions);
         this.setParamObj(map, prefix + "AuditLogFilter.", this.AuditLogFilter);
+        this.setParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
 
     }
 }
