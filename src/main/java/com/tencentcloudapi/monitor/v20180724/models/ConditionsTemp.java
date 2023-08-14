@@ -24,7 +24,7 @@ public class ConditionsTemp extends AbstractModel{
 
     /**
     * Template name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TemplateName")
     @Expose
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Template name
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
      * @return TemplateName Template name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -58,9 +58,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Template name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param TemplateName Template name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

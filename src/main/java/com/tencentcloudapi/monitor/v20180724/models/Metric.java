@@ -104,6 +104,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long ProductId;
 
     /**
+    * Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Operators")
+    @Expose
+    private Operator [] Operators;
+
+    /**
+    * Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Periods")
+    @Expose
+    private Long [] Periods;
+
+    /**
      * Get Alarm policy type 
      * @return Namespace Alarm policy type
      */
@@ -295,6 +311,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return Operators Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Operator [] getOperators() {
+        return this.Operators;
+    }
+
+    /**
+     * Set Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param Operators Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOperators(Operator [] Operators) {
+        this.Operators = Operators;
+    }
+
+    /**
+     * Get Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return Periods Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getPeriods() {
+        return this.Periods;
+    }
+
+    /**
+     * Set Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param Periods Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPeriods(Long [] Periods) {
+        this.Periods = Periods;
+    }
+
     public Metric() {
     }
 
@@ -339,6 +395,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
+        if (source.Operators != null) {
+            this.Operators = new Operator[source.Operators.length];
+            for (int i = 0; i < source.Operators.length; i++) {
+                this.Operators[i] = new Operator(source.Operators[i]);
+            }
+        }
+        if (source.Periods != null) {
+            this.Periods = new Long[source.Periods.length];
+            for (int i = 0; i < source.Periods.length; i++) {
+                this.Periods[i] = new Long(source.Periods[i]);
+            }
+        }
     }
 
 
@@ -357,6 +425,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamArrayObj(map, prefix + "Operators.", this.Operators);
+        this.setParamArraySimple(map, prefix + "Periods.", this.Periods);
 
     }
 }

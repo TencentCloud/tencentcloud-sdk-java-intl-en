@@ -209,7 +209,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
-     *This API is used to create a Grafana instance.
+     *This API is used to create a monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
      * @param req CreateGrafanaInstanceRequest
      * @return CreateGrafanaInstanceResponse
      * @throws TencentCloudSDKException
@@ -631,7 +631,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
-     *This API is used to delete a Grafana instance.
+     *This API is used to refund a monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
      * @param req DeleteGrafanaInstanceRequest
      * @return DeleteGrafanaInstanceResponse
      * @throws TencentCloudSDKException
@@ -1192,6 +1192,27 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 Type type = new TypeToken<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBindingPolicyObjectList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+     * @param req DescribeClusterAgentCreatingProgressRequest
+     * @return DescribeClusterAgentCreatingProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgress(DescribeClusterAgentCreatingProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterAgentCreatingProgressResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterAgentCreatingProgress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2512,38 +2533,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     }
 
     /**
-     *对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
-
-This API is not deprecated, but its related console features and backend services were deactivated two years ago.
-
-The default API request rate limit is 50 requests/sec.
-The default upper limit on metrics of a single tenant is 100.
-A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
-
-The reporting timestamp is the timestamp when you want to save the data. We recommend that you construct a timestamp at integer minutes.
-The time range of a timestamp is from 300 seconds before the current time to the current time.
-The data of the same IP metric/value pair must be reported by minute in chronological order.
-     * @param req PutMonitorDataRequest
-     * @return PutMonitorDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public PutMonitorDataResponse PutMonitorData(PutMonitorDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutMonitorDataResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<PutMonitorDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutMonitorData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to restore a Grafana instance.
+     *This API is used to renew a monthly subscribed TCMG instance for a month without changing the instance edition. It doesn't apply to running instances.
      * @param req ResumeGrafanaInstanceRequest
      * @return ResumeGrafanaInstanceResponse
      * @throws TencentCloudSDKException

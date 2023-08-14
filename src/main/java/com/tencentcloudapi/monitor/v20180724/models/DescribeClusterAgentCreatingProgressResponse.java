@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricDatum extends AbstractModel{
+public class DescribeClusterAgentCreatingProgressResponse extends AbstractModel{
 
     /**
-    * Metric name.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("MetricName")
+    @SerializedName("RequestId")
     @Expose
-    private String MetricName;
+    private String RequestId;
 
     /**
-    * Metric value.
-    */
-    @SerializedName("Value")
-    @Expose
-    private Long Value;
-
-    /**
-     * Get Metric name. 
-     * @return MetricName Metric name.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getMetricName() {
-        return this.MetricName;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Metric name.
-     * @param MetricName Metric name.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setMetricName(String MetricName) {
-        this.MetricName = MetricName;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    /**
-     * Get Metric value. 
-     * @return Value Metric value.
-     */
-    public Long getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set Metric value.
-     * @param Value Metric value.
-     */
-    public void setValue(Long Value) {
-        this.Value = Value;
-    }
-
-    public MetricDatum() {
+    public DescribeClusterAgentCreatingProgressResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public MetricDatum(MetricDatum source) {
-        if (source.MetricName != null) {
-            this.MetricName = new String(source.MetricName);
-        }
-        if (source.Value != null) {
-            this.Value = new Long(source.Value);
+    public DescribeClusterAgentCreatingProgressResponse(DescribeClusterAgentCreatingProgressResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -89,8 +63,7 @@ public class MetricDatum extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

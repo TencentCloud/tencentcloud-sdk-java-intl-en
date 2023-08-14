@@ -127,6 +127,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long [] Weekday;
 
     /**
+    * List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OnCallFormIDs")
+    @Expose
+    private String [] OnCallFormIDs;
+
+    /**
      * Get Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
@@ -386,6 +394,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Weekday = Weekday;
     }
 
+    /**
+     * Get List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return OnCallFormIDs List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getOnCallFormIDs() {
+        return this.OnCallFormIDs;
+    }
+
+    /**
+     * Set List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param OnCallFormIDs List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOnCallFormIDs(String [] OnCallFormIDs) {
+        this.OnCallFormIDs = OnCallFormIDs;
+    }
+
     public UserNotice() {
     }
 
@@ -448,6 +476,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.Weekday[i] = new Long(source.Weekday[i]);
             }
         }
+        if (source.OnCallFormIDs != null) {
+            this.OnCallFormIDs = new String[source.OnCallFormIDs.length];
+            for (int i = 0; i < source.OnCallFormIDs.length; i++) {
+                this.OnCallFormIDs[i] = new String(source.OnCallFormIDs[i]);
+            }
+        }
     }
 
 
@@ -468,6 +502,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
         this.setParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
         this.setParamArraySimple(map, prefix + "Weekday.", this.Weekday);
+        this.setParamArraySimple(map, prefix + "OnCallFormIDs.", this.OnCallFormIDs);
 
     }
 }

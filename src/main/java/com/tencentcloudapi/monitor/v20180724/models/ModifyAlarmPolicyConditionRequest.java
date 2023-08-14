@@ -79,7 +79,7 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
-    * Template ID, which is dedicated to TMP.
+    * Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
     */
     @SerializedName("NoticeIds")
     @Expose
@@ -235,16 +235,16 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     }
 
     /**
-     * Get Template ID, which is dedicated to TMP. 
-     * @return NoticeIds Template ID, which is dedicated to TMP.
+     * Get Template ID, which is dedicated to TencentCloud Managed Service for Prometheus. 
+     * @return NoticeIds Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set Template ID, which is dedicated to TMP.
-     * @param NoticeIds Template ID, which is dedicated to TMP.
+     * Set Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
+     * @param NoticeIds Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;

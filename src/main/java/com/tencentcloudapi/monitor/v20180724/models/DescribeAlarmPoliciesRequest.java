@@ -122,7 +122,7 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
     private Long [] ProjectIds;
 
     /**
-    * ID list of the notification template, which can be obtained by querying the notification template list.
+    * List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
     */
     @SerializedName("NoticeIds")
@@ -179,14 +179,14 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     private String [] OneClickPolicyType;
 
     /**
-    * Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+    * Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
     */
     @SerializedName("NotBindAll")
     @Expose
     private Long NotBindAll;
 
     /**
-    * Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+    * Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
     */
     @SerializedName("NotInstanceGroup")
     @Expose
@@ -198,6 +198,20 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+    */
+    @SerializedName("PromInsId")
+    @Expose
+    private String PromInsId;
+
+    /**
+    * Search by schedule
+    */
+    @SerializedName("ReceiverOnCallFormIDs")
+    @Expose
+    private String [] ReceiverOnCallFormIDs;
 
     /**
      * Get Value fixed at "monitor" 
@@ -440,9 +454,9 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
     }
 
     /**
-     * Get ID list of the notification template, which can be obtained by querying the notification template list.
+     * Get List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1). 
-     * @return NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+     * @return NoticeIds List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
      */
     public String [] getNoticeIds() {
@@ -450,9 +464,9 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     }
 
     /**
-     * Set ID list of the notification template, which can be obtained by querying the notification template list.
+     * Set List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
-     * @param NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+     * @param NoticeIds List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
      */
     public void setNoticeIds(String [] NoticeIds) {
@@ -572,32 +586,32 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     }
 
     /**
-     * Get Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No). 
-     * @return NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * Get Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No). 
+     * @return NotBindAll Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
      */
     public Long getNotBindAll() {
         return this.NotBindAll;
     }
 
     /**
-     * Set Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
-     * @param NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * Set Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * @param NotBindAll Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
      */
     public void setNotBindAll(Long NotBindAll) {
         this.NotBindAll = NotBindAll;
     }
 
     /**
-     * Get Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No). 
-     * @return NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * Get Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No). 
+     * @return NotInstanceGroup Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
      */
     public Long getNotInstanceGroup() {
         return this.NotInstanceGroup;
     }
 
     /**
-     * Set Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
-     * @param NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * Set Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * @param NotInstanceGroup Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
      */
     public void setNotInstanceGroup(Long NotInstanceGroup) {
         this.NotInstanceGroup = NotInstanceGroup;
@@ -617,6 +631,38 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy. 
+     * @return PromInsId ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+     */
+    public String getPromInsId() {
+        return this.PromInsId;
+    }
+
+    /**
+     * Set ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+     * @param PromInsId ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+     */
+    public void setPromInsId(String PromInsId) {
+        this.PromInsId = PromInsId;
+    }
+
+    /**
+     * Get Search by schedule 
+     * @return ReceiverOnCallFormIDs Search by schedule
+     */
+    public String [] getReceiverOnCallFormIDs() {
+        return this.ReceiverOnCallFormIDs;
+    }
+
+    /**
+     * Set Search by schedule
+     * @param ReceiverOnCallFormIDs Search by schedule
+     */
+    public void setReceiverOnCallFormIDs(String [] ReceiverOnCallFormIDs) {
+        this.ReceiverOnCallFormIDs = ReceiverOnCallFormIDs;
     }
 
     public DescribeAlarmPoliciesRequest() {
@@ -735,6 +781,15 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PromInsId != null) {
+            this.PromInsId = new String(source.PromInsId);
+        }
+        if (source.ReceiverOnCallFormIDs != null) {
+            this.ReceiverOnCallFormIDs = new String[source.ReceiverOnCallFormIDs.length];
+            for (int i = 0; i < source.ReceiverOnCallFormIDs.length; i++) {
+                this.ReceiverOnCallFormIDs[i] = new String(source.ReceiverOnCallFormIDs[i]);
+            }
+        }
     }
 
 
@@ -766,6 +821,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.setParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
         this.setParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PromInsId", this.PromInsId);
+        this.setParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
 
     }
 }

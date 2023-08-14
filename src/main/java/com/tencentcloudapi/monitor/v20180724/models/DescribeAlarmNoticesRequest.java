@@ -100,6 +100,13 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Schedule list
+    */
+    @SerializedName("OnCallFormIDs")
+    @Expose
+    private String [] OnCallFormIDs;
+
+    /**
      * Get Module name. Enter "monitor" here 
      * @return Module Module name. Enter "monitor" here
      */
@@ -275,6 +282,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Schedule list 
+     * @return OnCallFormIDs Schedule list
+     */
+    public String [] getOnCallFormIDs() {
+        return this.OnCallFormIDs;
+    }
+
+    /**
+     * Set Schedule list
+     * @param OnCallFormIDs Schedule list
+     */
+    public void setOnCallFormIDs(String [] OnCallFormIDs) {
+        this.OnCallFormIDs = OnCallFormIDs;
+    }
+
     public DescribeAlarmNoticesRequest() {
     }
 
@@ -328,6 +351,12 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.OnCallFormIDs != null) {
+            this.OnCallFormIDs = new String[source.OnCallFormIDs.length];
+            for (int i = 0; i < source.OnCallFormIDs.length; i++) {
+                this.OnCallFormIDs[i] = new String(source.OnCallFormIDs[i]);
+            }
+        }
     }
 
 
@@ -346,6 +375,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "OnCallFormIDs.", this.OnCallFormIDs);
 
     }
 }

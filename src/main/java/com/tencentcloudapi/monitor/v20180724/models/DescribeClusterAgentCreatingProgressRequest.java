@@ -20,42 +20,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PutMonitorDataResponse extends AbstractModel{
+public class DescribeClusterAgentCreatingProgressRequest extends AbstractModel{
 
-    /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public PutMonitorDataResponse() {
+    public DescribeClusterAgentCreatingProgressRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PutMonitorDataResponse(PutMonitorDataResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
-        }
+    public DescribeClusterAgentCreatingProgressRequest(DescribeClusterAgentCreatingProgressRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class PutMonitorDataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
