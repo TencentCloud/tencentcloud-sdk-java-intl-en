@@ -420,6 +420,9 @@ public enum EcmErrorCode {
     // The number of private images exceeds the limit.
      RESOURCEINSUFFICIENT_INVAILDPRIVATEIMAGENUM("ResourceInsufficient.InvaildPrivateImageNum"),
      
+    // 
+     RESOURCEINSUFFICIENT_PRIVATEIPQUOTANOTENOUGH("ResourceInsufficient.PrivateIPQuotaNotEnough"),
+     
     // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      
