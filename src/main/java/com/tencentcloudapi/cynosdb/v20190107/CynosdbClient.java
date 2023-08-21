@@ -165,6 +165,27 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable u200dthe database proxy.
+     * @param req CloseProxyRequest
+     * @return CloseProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseProxyResponse CloseProxy(CloseProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseProxyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable the public network.
      * @param req CloseWanRequest
      * @return CloseWanResponse
@@ -325,6 +346,48 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a database proxy.
+     * @param req CreateProxyRequest
+     * @return CreateProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProxyResponse CreateProxy(CreateProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProxyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a database proxy connection.
+     * @param req CreateProxyEndPointRequest
+     * @return CreateProxyEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProxyEndPointResponse CreateProxyEndPoint(CreateProxyEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProxyEndPointResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProxyEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProxyEndPoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1047,6 +1110,69 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of database proxies.
+     * @param req DescribeProxiesRequest
+     * @return DescribeProxiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxiesResponse DescribeProxies(DescribeProxiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxiesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxiesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of proxy nodes.
+     * @param req DescribeProxyNodesRequest
+     * @return DescribeProxyNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxyNodesResponse DescribeProxyNodes(DescribeProxyNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxyNodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxyNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxyNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the specifications of a database proxy.
+     * @param req DescribeProxySpecsRequest
+     * @return DescribeProxySpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxySpecsResponse DescribeProxySpecs(DescribeProxySpecsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxySpecsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxySpecsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxySpecs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the usage details of a resource pack.
      * @param req DescribeResourcePackageDetailRequest
      * @return DescribeResourcePackageDetailResponse
@@ -1165,6 +1291,27 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackTimeValidityResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRollbackTimeValidity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the supported database proxy versions.
+     * @param req DescribeSupportProxyVersionRequest
+     * @return DescribeSupportProxyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportProxyVersionResponse DescribeSupportProxyVersion(DescribeSupportProxyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSupportProxyVersionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSupportProxyVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSupportProxyVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1698,6 +1845,48 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the description of a database proxy.
+     * @param req ModifyProxyDescRequest
+     * @return ModifyProxyDescResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProxyDescResponse ModifyProxyDesc(ModifyProxyDescRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyProxyDescResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyProxyDescResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyProxyDesc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to configure the read/write separation of a database proxy.
+     * @param req ModifyProxyRwSplitRequest
+     * @return ModifyProxyRwSplitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProxyRwSplitResponse ModifyProxyRwSplit(ModifyProxyRwSplitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyProxyRwSplitResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyProxyRwSplitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyProxyRwSplit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to bind a resource pack to a cluster.
      * @param req ModifyResourcePackageClustersRequest
      * @return ModifyResourcePackageClustersResponse
@@ -1845,6 +2034,27 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable the access to read-only instance group.
+     * @param req OpenClusterReadOnlyInstanceGroupAccessRequest
+     * @return OpenClusterReadOnlyInstanceGroupAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(OpenClusterReadOnlyInstanceGroupAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenClusterReadOnlyInstanceGroupAccessResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenClusterReadOnlyInstanceGroupAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenClusterReadOnlyInstanceGroupAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable the dedicated access group for a read-only instance.
      * @param req OpenReadOnlyInstanceExclusiveAccessRequest
      * @return OpenReadOnlyInstanceExclusiveAccessResponse
@@ -1921,6 +2131,27 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RefundResourcePackageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RefundResourcePackage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to rebalance the load on the database proxy.
+     * @param req ReloadBalanceProxyNodeRequest
+     * @return ReloadBalanceProxyNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(ReloadBalanceProxyNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReloadBalanceProxyNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReloadBalanceProxyNode");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2194,6 +2425,48 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade the configuration of a database proxy.
+     * @param req UpgradeProxyRequest
+     * @return UpgradeProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeProxyResponse UpgradeProxy(UpgradeProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeProxyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade the version of a database proxy.
+     * @param req UpgradeProxyVersionRequest
+     * @return UpgradeProxyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeProxyVersionResponse UpgradeProxyVersion(UpgradeProxyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeProxyVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeProxyVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

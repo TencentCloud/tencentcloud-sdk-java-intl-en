@@ -37,14 +37,14 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private String EngineVersion;
 
     /**
-    * The description of a template
+    * Template description
     */
     @SerializedName("TemplateDescription")
     @Expose
     private String TemplateDescription;
 
     /**
-    * (Optional) ID of the template to be copied
+    * ID of the template to be copied
     */
     @SerializedName("TemplateId")
     @Expose
@@ -97,32 +97,32 @@ public class CreateParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get The description of a template 
-     * @return TemplateDescription The description of a template
+     * Get Template description 
+     * @return TemplateDescription Template description
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set The description of a template
-     * @param TemplateDescription The description of a template
+     * Set Template description
+     * @param TemplateDescription Template description
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;
     }
 
     /**
-     * Get (Optional) ID of the template to be copied 
-     * @return TemplateId (Optional) ID of the template to be copied
+     * Get ID of the template to be copied 
+     * @return TemplateId ID of the template to be copied
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set (Optional) ID of the template to be copied
-     * @param TemplateId (Optional) ID of the template to be copied
+     * Set ID of the template to be copied
+     * @param TemplateId ID of the template to be copied
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

@@ -30,14 +30,14 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * Template Name
+    * Template name
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * The template description
+    * Template description
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -67,32 +67,32 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Template Name 
-     * @return TemplateName Template Name
+     * Get Template name 
+     * @return TemplateName Template name
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Template Name
-     * @param TemplateName Template Name
+     * Set Template name
+     * @param TemplateName Template name
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get The template description 
-     * @return TemplateDescription The template description
+     * Get Template description 
+     * @return TemplateDescription Template description
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set The template description
-     * @param TemplateDescription The template description
+     * Set Template description
+     * @param TemplateDescription Template description
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;

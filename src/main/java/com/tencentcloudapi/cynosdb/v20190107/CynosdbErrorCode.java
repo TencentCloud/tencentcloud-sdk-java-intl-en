@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cynosdb.v20190107;
 public enum CynosdbErrorCode {
+    // Operation failed
+     FAILEDOPERATION("FailedOperation"),
+     
     // Batch query failed
      FAILEDOPERATION_BATCHGETINSTANCEERROR("FailedOperation.BatchGetInstanceError"),
      
@@ -75,7 +78,7 @@ public enum CynosdbErrorCode {
     // Failed to get the VPC.
      INTERNALERROR_GETVPCFAILED("InternalError.GetVpcFailed"),
      
-    // 
+    // Network error
      INTERNALERROR_HTTPERROR("InternalError.HttpError"),
      
     // An exception occurred while executing the HTTP request.
@@ -185,6 +188,9 @@ public enum CynosdbErrorCode {
      
     // This operation is not allowed for monthly-subscribed instances.
      INVALIDPARAMETERVALUE_PREPAYPAYMODEERROR("InvalidParameterValue.PrePayPayModeError"),
+     
+    // 
+     INVALIDPARAMETERVALUE_PROJECTIDNOTFOUND("InvalidParameterValue.ProjectIdNotFound"),
      
     // The selected region and AZ are unavailable.
      INVALIDPARAMETERVALUE_REGIONZONEUNAVAILABLE("InvalidParameterValue.RegionZoneUnavailable"),

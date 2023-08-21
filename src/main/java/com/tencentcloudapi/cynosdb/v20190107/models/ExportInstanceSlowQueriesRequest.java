@@ -86,6 +86,20 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
     private String FileType;
 
     /**
+    * Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * Sorting order. Valid values: `asc`, `desc`.
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -229,6 +243,38 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
         this.FileType = FileType;
     }
 
+    /**
+     * Get Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`. 
+     * @return OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * @param OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get Sorting order. Valid values: `asc`, `desc`. 
+     * @return OrderByType Sorting order. Valid values: `asc`, `desc`.
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set Sorting order. Valid values: `asc`, `desc`.
+     * @param OrderByType Sorting order. Valid values: `asc`, `desc`.
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public ExportInstanceSlowQueriesRequest() {
     }
 
@@ -264,6 +310,12 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
         if (source.FileType != null) {
             this.FileType = new String(source.FileType);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

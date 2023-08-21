@@ -30,7 +30,7 @@ public class PolicyRule extends AbstractModel{
     private String Action;
 
     /**
-    * Source IP or IP range, such as 192.168.0.0/16
+    * Source IP or source IP range, such as 192.168.0.0/16
     */
     @SerializedName("CidrIp")
     @Expose
@@ -95,16 +95,16 @@ public class PolicyRule extends AbstractModel{
     }
 
     /**
-     * Get Source IP or IP range, such as 192.168.0.0/16 
-     * @return CidrIp Source IP or IP range, such as 192.168.0.0/16
+     * Get Source IP or source IP range, such as 192.168.0.0/16 
+     * @return CidrIp Source IP or source IP range, such as 192.168.0.0/16
      */
     public String getCidrIp() {
         return this.CidrIp;
     }
 
     /**
-     * Set Source IP or IP range, such as 192.168.0.0/16
-     * @param CidrIp Source IP or IP range, such as 192.168.0.0/16
+     * Set Source IP or source IP range, such as 192.168.0.0/16
+     * @param CidrIp Source IP or source IP range, such as 192.168.0.0/16
      */
     public void setCidrIp(String CidrIp) {
         this.CidrIp = CidrIp;

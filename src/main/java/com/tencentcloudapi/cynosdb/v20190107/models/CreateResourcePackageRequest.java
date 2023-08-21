@@ -37,7 +37,7 @@ public class CreateResourcePackageRequest extends AbstractModel{
     private String PackageRegion;
 
     /**
-    * Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+    * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
     */
     @SerializedName("PackageType")
     @Expose
@@ -111,16 +111,16 @@ public class CreateResourcePackageRequest extends AbstractModel{
     }
 
     /**
-     * Get Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack). 
-     * @return PackageType Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * Get Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). 
+     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
-     * @param PackageType Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * @param PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;

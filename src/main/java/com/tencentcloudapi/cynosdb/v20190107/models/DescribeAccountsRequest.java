@@ -67,6 +67,13 @@ This parameter has been disused.
     private Long Offset;
 
     /**
+    * Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+    */
+    @SerializedName("AccountRegular")
+    @Expose
+    private String AccountRegular;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -170,6 +177,22 @@ This parameter has been disused.
         this.Offset = Offset;
     }
 
+    /**
+     * Get Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned. 
+     * @return AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     */
+    public String getAccountRegular() {
+        return this.AccountRegular;
+    }
+
+    /**
+     * Set Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     * @param AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     */
+    public void setAccountRegular(String AccountRegular) {
+        this.AccountRegular = AccountRegular;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -202,6 +225,9 @@ This parameter has been disused.
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.AccountRegular != null) {
+            this.AccountRegular = new String(source.AccountRegular);
+        }
     }
 
 
@@ -215,6 +241,7 @@ This parameter has been disused.
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "AccountRegular", this.AccountRegular);
 
     }
 }

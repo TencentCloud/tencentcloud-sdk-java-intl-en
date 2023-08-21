@@ -86,6 +86,37 @@ public class ClusterInstanceDetail extends AbstractModel{
     private String InstanceRole;
 
     /**
+    * Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaintainStartTime")
+    @Expose
+    private Long MaintainStartTime;
+
+    /**
+    * Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaintainDuration")
+    @Expose
+    private Long MaintainDuration;
+
+    /**
+    * Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaintainWeekDays")
+    @Expose
+    private String [] MaintainWeekDays;
+
+    /**
+    * 
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -229,6 +260,82 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.InstanceRole = InstanceRole;
     }
 
+    /**
+     * Get Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return MaintainStartTime Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaintainStartTime() {
+        return this.MaintainStartTime;
+    }
+
+    /**
+     * Set Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param MaintainStartTime Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaintainStartTime(Long MaintainStartTime) {
+        this.MaintainStartTime = MaintainStartTime;
+    }
+
+    /**
+     * Get Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return MaintainDuration Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaintainDuration() {
+        return this.MaintainDuration;
+    }
+
+    /**
+     * Set Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param MaintainDuration Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaintainDuration(Long MaintainDuration) {
+        this.MaintainDuration = MaintainDuration;
+    }
+
+    /**
+     * Get Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getMaintainWeekDays() {
+        return this.MaintainWeekDays;
+    }
+
+    /**
+     * Set Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaintainWeekDays(String [] MaintainWeekDays) {
+        this.MaintainWeekDays = MaintainWeekDays;
+    }
+
+    /**
+     * Get  
+     * @return ServerlessStatus 
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set 
+     * @param ServerlessStatus 
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -264,6 +371,21 @@ public class ClusterInstanceDetail extends AbstractModel{
         if (source.InstanceRole != null) {
             this.InstanceRole = new String(source.InstanceRole);
         }
+        if (source.MaintainStartTime != null) {
+            this.MaintainStartTime = new Long(source.MaintainStartTime);
+        }
+        if (source.MaintainDuration != null) {
+            this.MaintainDuration = new Long(source.MaintainDuration);
+        }
+        if (source.MaintainWeekDays != null) {
+            this.MaintainWeekDays = new String[source.MaintainWeekDays.length];
+            for (int i = 0; i < source.MaintainWeekDays.length; i++) {
+                this.MaintainWeekDays[i] = new String(source.MaintainWeekDays[i]);
+            }
+        }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
+        }
     }
 
 
@@ -280,6 +402,10 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceMemory", this.InstanceMemory);
         this.setParamSimple(map, prefix + "InstanceStorage", this.InstanceStorage);
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+        this.setParamSimple(map, prefix + "MaintainStartTime", this.MaintainStartTime);
+        this.setParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
+        this.setParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }
