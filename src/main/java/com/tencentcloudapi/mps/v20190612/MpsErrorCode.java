@@ -93,6 +93,9 @@ public enum MpsErrorCode {
     // Incorrect parameter value: the default template cannot be deleted.
      INVALIDPARAMETERVALUE_DELETEDEFAULTTEMPLATE("InvalidParameterValue.DeleteDefaultTemplate"),
      
+    // 
+     INVALIDPARAMETERVALUE_DESTINATIONLANGUAGE("InvalidParameterValue.DestinationLanguage"),
+     
     // Invalid switch value used to prohibit transcoding from low bitrate to high bitrate.
      INVALIDPARAMETERVALUE_DISABLEHIGHERVIDEOBITRATE("InvalidParameterValue.DisableHigherVideoBitrate"),
      
@@ -215,6 +218,9 @@ public enum MpsErrorCode {
      
     // Invalid parameter: incorrect audio channel system.
      INVALIDPARAMETERVALUE_SOUNDSYSTEM("InvalidParameterValue.SoundSystem"),
+     
+    // 
+     INVALIDPARAMETERVALUE_SOURCELANGUAGE("InvalidParameterValue.SourceLanguage"),
      
     // Source file error.
      INVALIDPARAMETERVALUE_SRCFILE("InvalidParameterValue.SrcFile"),

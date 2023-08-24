@@ -37,7 +37,7 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel{
     private String GroupDescription;
 
     /**
-    * The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+    * Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -83,16 +83,16 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get The project id is 0 by default. You can query this in the project management page of the Qcloud console. 
-     * @return ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * Get Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console. 
+     * @return ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
-     * @param ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * Set Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+     * @param ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

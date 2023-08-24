@@ -18,6 +18,9 @@ public enum VpcErrorCode {
     // Unsupported region.
      FAILEDOPERATION_INVALIDREGION("FailedOperation.InvalidRegion"),
      
+    // 
+     FAILEDOPERATION_IPTYPENOTPERMIT("FailedOperation.IpTypeNotPermit"),
+     
     // The instance's primary ENI is not found.
      FAILEDOPERATION_MASTERENINOTFOUND("FailedOperation.MasterEniNotFound"),
      
@@ -126,7 +129,7 @@ public enum VpcErrorCode {
     // Unable to find the address.
      INVALIDPARAMETERVALUE_ADDRESSNOTFOUND("InvalidParameterValue.AddressNotFound"),
      
-    // 
+    // Invalid IP address type
      INVALIDPARAMETERVALUE_ADDRESSTYPECONFLICT("InvalidParameterValue.AddressTypeConflict"),
      
     // The bandwidth exceeds the limit.
@@ -164,6 +167,9 @@ public enum VpcErrorCode {
      
     // Missing parameters.
      INVALIDPARAMETERVALUE_EMPTY("InvalidParameterValue.Empty"),
+     
+    // 
+     INVALIDPARAMETERVALUE_ILLEGAL("InvalidParameterValue.Illegal"),
      
     // The billing mode of this instance is different from that of others.
      INVALIDPARAMETERVALUE_INCONSISTENTINSTANCEINTERNETCHARGETYPE("InvalidParameterValue.InconsistentInstanceInternetChargeType"),
@@ -303,7 +309,7 @@ public enum VpcErrorCode {
     // The resource does not support this operation.
      INVALIDPARAMETERVALUE_RESOURCENOTSUPPORT("InvalidParameterValue.ResourceNotSupport"),
      
-    // 
+    // Operation failed: The instance to shut down is using the current resource. 
      INVALIDPARAMETERVALUE_STOPCHARGINGINSTANCEINUSE("InvalidParameterValue.StopChargingInstanceInUse"),
      
     // Subnet CIDR conflict.
@@ -359,6 +365,12 @@ public enum VpcErrorCode {
      
     // The traffic package ID is invalid.
      INVALIDPARAMETERVALUE_TRAFFICPACKAGEIDMALFORMED("InvalidParameterValue.TrafficPackageIdMalformed"),
+     
+    // u200dThis traffic package is not found.
+     INVALIDPARAMETERVALUE_TRAFFICPACKAGENOTFOUND("InvalidParameterValue.TrafficPackageNotFound"),
+     
+    // The specified traffic package does not support this operation. 
+     INVALIDPARAMETERVALUE_TRAFFICPACKAGENOTSUPPORTED("InvalidParameterValue.TrafficPackageNotSupported"),
      
     // This availability zone is unavailable.
      INVALIDPARAMETERVALUE_UNAVAILABLEZONE("InvalidParameterValue.UnavailableZone"),
@@ -429,7 +441,7 @@ public enum VpcErrorCode {
     // Exceeded the upper limit of the bandwidth package quota.
      LIMITEXCEEDED_BANDWIDTHPACKAGEQUOTA("LimitExceeded.BandwidthPackageQuota"),
      
-    // 
+    // Number of resources added to this bandwidth package reached the upper limit.
      LIMITEXCEEDED_BANDWIDTHPACKAGERESOURCEQUOTA("LimitExceeded.BandwidthPackageResourceQuota"),
      
     // Run out of the chances to change the IP.
@@ -561,7 +573,7 @@ public enum VpcErrorCode {
     // The port does not exist.
      UNSUPPORTEDOPERATION_ACTIONNOTFOUND("UnsupportedOperation.ActionNotFound"),
      
-    // 
+    // The IP address bound with this instance does not support this operation
      UNSUPPORTEDOPERATION_ADDRESSIPNOTSUPPORTINSTANCE("UnsupportedOperation.AddressIpNotSupportInstance"),
      
     // This operation is not supported by the IP address status.
@@ -669,7 +681,7 @@ public enum VpcErrorCode {
     // The endpoint service itself cannot be set as the endpoint.
      UNSUPPORTEDOPERATION_ENDPOINTSERVICE("UnsupportedOperation.EndPointService"),
      
-    // 
+    // u200dThere is already a flow log created for the specified ResourceId. 
      UNSUPPORTEDOPERATION_FLOWLOGINSTANCEEXISTED("UnsupportedOperation.FlowLogInstanceExisted"),
      
     // Unable to create a flow log: the current ENI is bound with a KO model.
@@ -683,6 +695,9 @@ public enum VpcErrorCode {
      
     // The configured instance does not match with the route table.
      UNSUPPORTEDOPERATION_INSTANCEANDRTBNOTMATCH("UnsupportedOperation.InstanceAndRtbNotMatch"),
+     
+    // 
+     UNSUPPORTEDOPERATION_INSTANCECDCIDNOTMATCHCCNCDCID("UnsupportedOperation.InstanceCdcIdNotMatchCcnCdcId"),
      
     // The specified instance resource does not match.
      UNSUPPORTEDOPERATION_INSTANCEMISMATCH("UnsupportedOperation.InstanceMismatch"),
@@ -734,6 +749,9 @@ public enum VpcErrorCode {
      
     // The account does not support modifying this attribute of the public IP.
      UNSUPPORTEDOPERATION_MODIFYADDRESSATTRIBUTE("UnsupportedOperation.ModifyAddressAttribute"),
+     
+    // 
+     UNSUPPORTEDOPERATION_MULTIPLEVPCNOTSUPPORTATTACHACCOUNTHASIPV6("UnsupportedOperation.MultipleVpcNotSupportAttachAccountHasIpv6"),
      
     // The resource mutual exclusion operation is being executed.
      UNSUPPORTEDOPERATION_MUTEXOPERATIONTASKRUNNING("UnsupportedOperation.MutexOperationTaskRunning"),
@@ -867,7 +885,7 @@ public enum VpcErrorCode {
     // The relayed ENI does not support this operation.
      UNSUPPORTEDOPERATION_SUBENINOTSUPPORTTRUNKING("UnsupportedOperation.SubEniNotSupportTrunking"),
      
-    // 
+    // The subnet does not exist.
      UNSUPPORTEDOPERATION_SUBNETNOTEXISTS("UnsupportedOperation.SubnetNotExists"),
      
     // System route. Operation is prohibited.

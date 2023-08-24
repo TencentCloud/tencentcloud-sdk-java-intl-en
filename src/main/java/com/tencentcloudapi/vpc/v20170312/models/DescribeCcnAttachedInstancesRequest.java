@@ -38,10 +38,10 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 
     /**
     * Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -102,15 +102,15 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 
     /**
      * Get Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li> 
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li> 
      * @return Filters Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -118,15 +118,15 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 
     /**
      * Set Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
      * @param Filters Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

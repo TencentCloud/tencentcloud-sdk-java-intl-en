@@ -20,13 +20,13 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TEHDConfigForUpdate extends AbstractModel{
+public class AddOnSubtitle extends AbstractModel{
 
     /**
-    * The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+    * The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -34,23 +34,23 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     private String Type;
 
     /**
-    * u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+    * The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
-    @SerializedName("MaxVideoBitrate")
+    @SerializedName("Subtitle")
     @Expose
-    private Long MaxVideoBitrate;
+    private MediaInputInfo Subtitle;
 
     /**
-     * Get The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+     * Get The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
-     * @return Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+     * @return Type The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -58,15 +58,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     }
 
     /**
-     * Set The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+     * Set The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-     * @param Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+     * @param Type The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
@@ -74,38 +74,38 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     }
 
     /**
-     * Get u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+     * Get The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
-     * @return MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+     * @return Subtitle The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
-    public Long getMaxVideoBitrate() {
-        return this.MaxVideoBitrate;
+    public MediaInputInfo getSubtitle() {
+        return this.Subtitle;
     }
 
     /**
-     * Set u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+     * Set The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-     * @param MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+     * @param Subtitle The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
-    public void setMaxVideoBitrate(Long MaxVideoBitrate) {
-        this.MaxVideoBitrate = MaxVideoBitrate;
+    public void setSubtitle(MediaInputInfo Subtitle) {
+        this.Subtitle = Subtitle;
     }
 
-    public TEHDConfigForUpdate() {
+    public AddOnSubtitle() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TEHDConfigForUpdate(TEHDConfigForUpdate source) {
+    public AddOnSubtitle(AddOnSubtitle source) {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
-        if (source.MaxVideoBitrate != null) {
-            this.MaxVideoBitrate = new Long(source.MaxVideoBitrate);
+        if (source.Subtitle != null) {
+            this.Subtitle = new MediaInputInfo(source.Subtitle);
         }
     }
 
@@ -115,7 +115,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
+        this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     private String BusinessType;
 
     /**
-    * ID of the instance.
+    * Service instance ID. It's corresponding to the `BusinessType`. 
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 200.
+    * Number of returned results. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get ID of the instance. 
-     * @return InstanceId ID of the instance.
+     * Get Service instance ID. It's corresponding to the `BusinessType`.  
+     * @return InstanceId Service instance ID. It's corresponding to the `BusinessType`. 
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance.
-     * @param InstanceId ID of the instance.
+     * Set Service instance ID. It's corresponding to the `BusinessType`. 
+     * @param InstanceId Service instance ID. It's corresponding to the `BusinessType`. 
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -145,16 +145,16 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 200. 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 200.
+     * Get Number of returned results. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 200.
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 200.
+     * Set Number of returned results. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -51,7 +51,7 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
     private Long PdtDuration;
 
     /**
-    * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+    * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
     */
     @SerializedName("Scheme")
     @Expose
@@ -71,6 +71,27 @@ Currently, fMP4 segments do not support DRM or time shifting.
     @SerializedName("H265PackageType")
     @Expose
     private String H265PackageType;
+
+    /**
+    * 
+    */
+    @SerializedName("LowLatency")
+    @Expose
+    private Long LowLatency;
+
+    /**
+    * 
+    */
+    @SerializedName("PartialSegmentDuration")
+    @Expose
+    private Long PartialSegmentDuration;
+
+    /**
+    * 
+    */
+    @SerializedName("PartialSegmentPlaySite")
+    @Expose
+    private Long PartialSegmentPlaySite;
 
     /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
@@ -137,16 +158,16 @@ Currently, fMP4 segments do not support DRM or time shifting.
     }
 
     /**
-     * Get Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE` 
-     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     * Get Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE. 
+     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
-     * @param Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     * Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+     * @param Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
@@ -188,6 +209,54 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.H265PackageType = H265PackageType;
     }
 
+    /**
+     * Get  
+     * @return LowLatency 
+     */
+    public Long getLowLatency() {
+        return this.LowLatency;
+    }
+
+    /**
+     * Set 
+     * @param LowLatency 
+     */
+    public void setLowLatency(Long LowLatency) {
+        this.LowLatency = LowLatency;
+    }
+
+    /**
+     * Get  
+     * @return PartialSegmentDuration 
+     */
+    public Long getPartialSegmentDuration() {
+        return this.PartialSegmentDuration;
+    }
+
+    /**
+     * Set 
+     * @param PartialSegmentDuration 
+     */
+    public void setPartialSegmentDuration(Long PartialSegmentDuration) {
+        this.PartialSegmentDuration = PartialSegmentDuration;
+    }
+
+    /**
+     * Get  
+     * @return PartialSegmentPlaySite 
+     */
+    public Long getPartialSegmentPlaySite() {
+        return this.PartialSegmentPlaySite;
+    }
+
+    /**
+     * Set 
+     * @param PartialSegmentPlaySite 
+     */
+    public void setPartialSegmentPlaySite(Long PartialSegmentPlaySite) {
+        this.PartialSegmentPlaySite = PartialSegmentPlaySite;
+    }
+
     public HlsRemuxSettingsInfo() {
     }
 
@@ -217,6 +286,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
         if (source.H265PackageType != null) {
             this.H265PackageType = new String(source.H265PackageType);
         }
+        if (source.LowLatency != null) {
+            this.LowLatency = new Long(source.LowLatency);
+        }
+        if (source.PartialSegmentDuration != null) {
+            this.PartialSegmentDuration = new Long(source.PartialSegmentDuration);
+        }
+        if (source.PartialSegmentPlaySite != null) {
+            this.PartialSegmentPlaySite = new Long(source.PartialSegmentPlaySite);
+        }
     }
 
 
@@ -231,6 +309,9 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.setParamSimple(map, prefix + "Scheme", this.Scheme);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
         this.setParamSimple(map, prefix + "H265PackageType", this.H265PackageType);
+        this.setParamSimple(map, prefix + "LowLatency", this.LowLatency);
+        this.setParamSimple(map, prefix + "PartialSegmentDuration", this.PartialSegmentDuration);
+        this.setParamSimple(map, prefix + "PartialSegmentPlaySite", this.PartialSegmentPlaySite);
 
     }
 }

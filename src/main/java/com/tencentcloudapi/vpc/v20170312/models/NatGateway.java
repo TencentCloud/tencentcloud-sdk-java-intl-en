@@ -165,6 +165,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RestrictState;
 
     /**
+    * NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NatProductVersion")
+    @Expose
+    private Long NatProductVersion;
+
+    /**
      * Get NAT gateway ID. 
      * @return NatGatewayId NAT gateway ID.
      */
@@ -504,6 +512,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RestrictState = RestrictState;
     }
 
+    /**
+     * Get NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getNatProductVersion() {
+        return this.NatProductVersion;
+    }
+
+    /**
+     * Set NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNatProductVersion(Long NatProductVersion) {
+        this.NatProductVersion = NatProductVersion;
+    }
+
     public NatGateway() {
     }
 
@@ -587,6 +615,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RestrictState != null) {
             this.RestrictState = new String(source.RestrictState);
         }
+        if (source.NatProductVersion != null) {
+            this.NatProductVersion = new Long(source.NatProductVersion);
+        }
     }
 
 
@@ -613,6 +644,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
+        this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
 
     }
 }

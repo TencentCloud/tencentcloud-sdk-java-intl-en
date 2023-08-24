@@ -217,7 +217,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Vport;
 
     /**
-    * vport for read/write separation
+    * VIP u200dand vport of the read-only instance in a cluster
     */
     @SerializedName("RoAddr")
     @Expose
@@ -849,16 +849,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get vport for read/write separation 
-     * @return RoAddr vport for read/write separation
+     * Get VIP u200dand vport of the read-only instance in a cluster 
+     * @return RoAddr VIP u200dand vport of the read-only instance in a cluster
      */
     public Addr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set vport for read/write separation
-     * @param RoAddr vport for read/write separation
+     * Set VIP u200dand vport of the read-only instance in a cluster
+     * @param RoAddr VIP u200dand vport of the read-only instance in a cluster
      */
     public void setRoAddr(Addr [] RoAddr) {
         this.RoAddr = RoAddr;

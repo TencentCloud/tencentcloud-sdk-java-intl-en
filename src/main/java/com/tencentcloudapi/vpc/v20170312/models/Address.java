@@ -185,7 +185,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String InstanceType;
 
     /**
-    * 
+    * ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
     */
     @SerializedName("AntiDDoSPackageId")
     @Expose
@@ -588,16 +588,16 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return AntiDDoSPackageId 
+     * Get ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP.  
+     * @return AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
      */
     public String getAntiDDoSPackageId() {
         return this.AntiDDoSPackageId;
     }
 
     /**
-     * Set 
-     * @param AntiDDoSPackageId 
+     * Set ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+     * @param AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
      */
     public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
         this.AntiDDoSPackageId = AntiDDoSPackageId;

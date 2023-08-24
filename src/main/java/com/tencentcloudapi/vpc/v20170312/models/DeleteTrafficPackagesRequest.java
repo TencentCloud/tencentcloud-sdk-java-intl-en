@@ -13,74 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Addr extends AbstractModel{
+public class DeleteTrafficPackagesRequest extends AbstractModel{
 
     /**
-    * IP address
+    * The unique ID array of traffic packages to delete
     */
-    @SerializedName("IP")
+    @SerializedName("TrafficPackageIds")
     @Expose
-    private String IP;
+    private String [] TrafficPackageIds;
 
     /**
-    * Port
-    */
-    @SerializedName("Port")
-    @Expose
-    private Long Port;
-
-    /**
-     * Get IP address 
-     * @return IP IP address
+     * Get The unique ID array of traffic packages to delete 
+     * @return TrafficPackageIds The unique ID array of traffic packages to delete
      */
-    public String getIP() {
-        return this.IP;
+    public String [] getTrafficPackageIds() {
+        return this.TrafficPackageIds;
     }
 
     /**
-     * Set IP address
-     * @param IP IP address
+     * Set The unique ID array of traffic packages to delete
+     * @param TrafficPackageIds The unique ID array of traffic packages to delete
      */
-    public void setIP(String IP) {
-        this.IP = IP;
+    public void setTrafficPackageIds(String [] TrafficPackageIds) {
+        this.TrafficPackageIds = TrafficPackageIds;
     }
 
-    /**
-     * Get Port 
-     * @return Port Port
-     */
-    public Long getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set Port
-     * @param Port Port
-     */
-    public void setPort(Long Port) {
-        this.Port = Port;
-    }
-
-    public Addr() {
+    public DeleteTrafficPackagesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Addr(Addr source) {
-        if (source.IP != null) {
-            this.IP = new String(source.IP);
-        }
-        if (source.Port != null) {
-            this.Port = new Long(source.Port);
+    public DeleteTrafficPackagesRequest(DeleteTrafficPackagesRequest source) {
+        if (source.TrafficPackageIds != null) {
+            this.TrafficPackageIds = new String[source.TrafficPackageIds.length];
+            for (int i = 0; i < source.TrafficPackageIds.length; i++) {
+                this.TrafficPackageIds[i] = new String(source.TrafficPackageIds[i]);
+            }
         }
     }
 
@@ -89,8 +66,7 @@ public class Addr extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IP", this.IP);
-        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamArraySimple(map, prefix + "TrafficPackageIds.", this.TrafficPackageIds);
 
     }
 }

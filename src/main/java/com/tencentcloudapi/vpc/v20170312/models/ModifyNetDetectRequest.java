@@ -58,12 +58,12 @@ public class ModifyNetDetectRequest extends AbstractModel{
     private String NextHopType;
 
     /**
-    * ID of the next-hop gateway. 
-`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+    * ID of the next-hop gateway.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 `NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
 `NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
 `NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
-`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
 `NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
 `NextHopType` = `NONEXTHOP`: No next hop.
     */
@@ -171,20 +171,20 @@ public class ModifyNetDetectRequest extends AbstractModel{
     }
 
     /**
-     * Get ID of the next-hop gateway. 
-`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+     * Get ID of the next-hop gateway.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 `NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
 `NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
 `NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
-`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
 `NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
 `NextHopType` = `NONEXTHOP`: No next hop. 
-     * @return NextHopDestination ID of the next-hop gateway. 
-`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+     * @return NextHopDestination ID of the next-hop gateway.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 `NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
 `NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
 `NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
-`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
 `NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
 `NextHopType` = `NONEXTHOP`: No next hop.
      */
@@ -193,20 +193,20 @@ public class ModifyNetDetectRequest extends AbstractModel{
     }
 
     /**
-     * Set ID of the next-hop gateway. 
-`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+     * Set ID of the next-hop gateway.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 `NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
 `NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
 `NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
-`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
 `NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
 `NextHopType` = `NONEXTHOP`: No next hop.
-     * @param NextHopDestination ID of the next-hop gateway. 
-`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+     * @param NextHopDestination ID of the next-hop gateway.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 `NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
 `NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
 `NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
-`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
 `NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
 `NextHopType` = `NONEXTHOP`: No next hop.
      */

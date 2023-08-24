@@ -66,6 +66,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SegmentObjectName;
 
     /**
+    * The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AddOnSubtitles")
+    @Expose
+    private AddOnSubtitle [] AddOnSubtitles;
+
+    /**
      * Get Adaptive bitrate streaming template ID. 
      * @return Definition Adaptive bitrate streaming template ID.
      */
@@ -165,6 +173,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SegmentObjectName = SegmentObjectName;
     }
 
+    /**
+     * Get The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public AddOnSubtitle [] getAddOnSubtitles() {
+        return this.AddOnSubtitles;
+    }
+
+    /**
+     * Set The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
+        this.AddOnSubtitles = AddOnSubtitles;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -194,6 +222,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SegmentObjectName != null) {
             this.SegmentObjectName = new String(source.SegmentObjectName);
         }
+        if (source.AddOnSubtitles != null) {
+            this.AddOnSubtitles = new AddOnSubtitle[source.AddOnSubtitles.length];
+            for (int i = 0; i < source.AddOnSubtitles.length; i++) {
+                this.AddOnSubtitles[i] = new AddOnSubtitle(source.AddOnSubtitles[i]);
+            }
+        }
     }
 
 
@@ -207,6 +241,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
+        this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
 
     }
 }

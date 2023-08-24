@@ -51,6 +51,34 @@ public class InstanceInitInfo extends AbstractModel{
     private Long InstanceCount;
 
     /**
+    * Minimum number of serverless instances. Value range: 1-15.
+    */
+    @SerializedName("MinRoCount")
+    @Expose
+    private Long MinRoCount;
+
+    /**
+    * Maximum number of serverless instances. Value range: 1-15.
+    */
+    @SerializedName("MaxRoCount")
+    @Expose
+    private Long MaxRoCount;
+
+    /**
+    * Minimum specifications for serverless instance
+    */
+    @SerializedName("MinRoCpu")
+    @Expose
+    private Float MinRoCpu;
+
+    /**
+    * Maximum specifications for serverless instance
+    */
+    @SerializedName("MaxRoCpu")
+    @Expose
+    private Float MaxRoCpu;
+
+    /**
      * Get Instance CPU 
      * @return Cpu Instance CPU
      */
@@ -114,6 +142,70 @@ public class InstanceInitInfo extends AbstractModel{
         this.InstanceCount = InstanceCount;
     }
 
+    /**
+     * Get Minimum number of serverless instances. Value range: 1-15. 
+     * @return MinRoCount Minimum number of serverless instances. Value range: 1-15.
+     */
+    public Long getMinRoCount() {
+        return this.MinRoCount;
+    }
+
+    /**
+     * Set Minimum number of serverless instances. Value range: 1-15.
+     * @param MinRoCount Minimum number of serverless instances. Value range: 1-15.
+     */
+    public void setMinRoCount(Long MinRoCount) {
+        this.MinRoCount = MinRoCount;
+    }
+
+    /**
+     * Get Maximum number of serverless instances. Value range: 1-15. 
+     * @return MaxRoCount Maximum number of serverless instances. Value range: 1-15.
+     */
+    public Long getMaxRoCount() {
+        return this.MaxRoCount;
+    }
+
+    /**
+     * Set Maximum number of serverless instances. Value range: 1-15.
+     * @param MaxRoCount Maximum number of serverless instances. Value range: 1-15.
+     */
+    public void setMaxRoCount(Long MaxRoCount) {
+        this.MaxRoCount = MaxRoCount;
+    }
+
+    /**
+     * Get Minimum specifications for serverless instance 
+     * @return MinRoCpu Minimum specifications for serverless instance
+     */
+    public Float getMinRoCpu() {
+        return this.MinRoCpu;
+    }
+
+    /**
+     * Set Minimum specifications for serverless instance
+     * @param MinRoCpu Minimum specifications for serverless instance
+     */
+    public void setMinRoCpu(Float MinRoCpu) {
+        this.MinRoCpu = MinRoCpu;
+    }
+
+    /**
+     * Get Maximum specifications for serverless instance 
+     * @return MaxRoCpu Maximum specifications for serverless instance
+     */
+    public Float getMaxRoCpu() {
+        return this.MaxRoCpu;
+    }
+
+    /**
+     * Set Maximum specifications for serverless instance
+     * @param MaxRoCpu Maximum specifications for serverless instance
+     */
+    public void setMaxRoCpu(Float MaxRoCpu) {
+        this.MaxRoCpu = MaxRoCpu;
+    }
+
     public InstanceInitInfo() {
     }
 
@@ -134,6 +226,18 @@ public class InstanceInitInfo extends AbstractModel{
         if (source.InstanceCount != null) {
             this.InstanceCount = new Long(source.InstanceCount);
         }
+        if (source.MinRoCount != null) {
+            this.MinRoCount = new Long(source.MinRoCount);
+        }
+        if (source.MaxRoCount != null) {
+            this.MaxRoCount = new Long(source.MaxRoCount);
+        }
+        if (source.MinRoCpu != null) {
+            this.MinRoCpu = new Float(source.MinRoCpu);
+        }
+        if (source.MaxRoCpu != null) {
+            this.MaxRoCpu = new Float(source.MaxRoCpu);
+        }
     }
 
 
@@ -145,6 +249,10 @@ public class InstanceInitInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
+        this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
+        this.setParamSimple(map, prefix + "MinRoCpu", this.MinRoCpu);
+        this.setParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
 
     }
 }

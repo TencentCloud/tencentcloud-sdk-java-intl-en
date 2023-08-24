@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CloneSecurityGroupRequest extends AbstractModel{
 
     /**
-    * ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+    * Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -44,7 +44,7 @@ public class CloneSecurityGroupRequest extends AbstractModel{
     private String GroupDescription;
 
     /**
-    * Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+    * Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -58,16 +58,16 @@ public class CloneSecurityGroupRequest extends AbstractModel{
     private String RemoteRegion;
 
     /**
-     * Get ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API. 
-     * @return SecurityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+     * Get Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. 
+     * @return SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
-     * @param SecurityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+     * Set Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
+     * @param SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
@@ -106,16 +106,16 @@ public class CloneSecurityGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console. 
-     * @return ProjectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+     * Get Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console. 
+     * @return ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
-     * @param ProjectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+     * Set Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+     * @param ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

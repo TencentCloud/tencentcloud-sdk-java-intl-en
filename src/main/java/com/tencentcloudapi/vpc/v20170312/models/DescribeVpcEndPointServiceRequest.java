@@ -23,10 +23,11 @@ import java.util.HashMap;
 public class DescribeVpcEndPointServiceRequest extends AbstractModel{
 
     /**
-    * Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+    * Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -47,35 +48,46 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Endpoint service ID
+    * Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
     */
     @SerializedName("EndPointServiceIds")
     @Expose
     private String [] EndPointServiceIds;
 
     /**
-     * Get Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li> 
-     * @return Filters Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+    * 
+    */
+    @SerializedName("IsListAuthorizedEndPointService")
+    @Expose
+    private Boolean IsListAuthorizedEndPointService;
+
+    /**
+     * Get Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li> 
+     * @return Filters Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
-     * @param Filters Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+     * Set Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
+     * @param Filters Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -114,19 +126,35 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Endpoint service ID 
-     * @return EndPointServiceIds Endpoint service ID
+     * Get Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in.  
+     * @return EndPointServiceIds Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
      */
     public String [] getEndPointServiceIds() {
         return this.EndPointServiceIds;
     }
 
     /**
-     * Set Endpoint service ID
-     * @param EndPointServiceIds Endpoint service ID
+     * Set Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
+     * @param EndPointServiceIds Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
      */
     public void setEndPointServiceIds(String [] EndPointServiceIds) {
         this.EndPointServiceIds = EndPointServiceIds;
+    }
+
+    /**
+     * Get  
+     * @return IsListAuthorizedEndPointService 
+     */
+    public Boolean getIsListAuthorizedEndPointService() {
+        return this.IsListAuthorizedEndPointService;
+    }
+
+    /**
+     * Set 
+     * @param IsListAuthorizedEndPointService 
+     */
+    public void setIsListAuthorizedEndPointService(Boolean IsListAuthorizedEndPointService) {
+        this.IsListAuthorizedEndPointService = IsListAuthorizedEndPointService;
     }
 
     public DescribeVpcEndPointServiceRequest() {
@@ -155,6 +183,9 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
                 this.EndPointServiceIds[i] = new String(source.EndPointServiceIds[i]);
             }
         }
+        if (source.IsListAuthorizedEndPointService != null) {
+            this.IsListAuthorizedEndPointService = new Boolean(source.IsListAuthorizedEndPointService);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "EndPointServiceIds.", this.EndPointServiceIds);
+        this.setParamSimple(map, prefix + "IsListAuthorizedEndPointService", this.IsListAuthorizedEndPointService);
 
     }
 }

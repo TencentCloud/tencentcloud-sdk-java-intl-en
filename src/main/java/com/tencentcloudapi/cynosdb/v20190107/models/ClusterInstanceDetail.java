@@ -110,7 +110,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     private String [] MaintainWeekDays;
 
     /**
-    * 
+    * Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerlessStatus")
     @Expose
@@ -321,16 +322,20 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get  
-     * @return ServerlessStatus 
+     * Get Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return ServerlessStatus Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set 
-     * @param ServerlessStatus 
+     * Set Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param ServerlessStatus Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;

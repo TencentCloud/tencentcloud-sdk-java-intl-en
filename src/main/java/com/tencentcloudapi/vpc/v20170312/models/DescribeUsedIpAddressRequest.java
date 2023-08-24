@@ -37,21 +37,21 @@ public class DescribeUsedIpAddressRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * IPs to query
+    * List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
     */
     @SerializedName("IpAddresses")
     @Expose
     private String [] IpAddresses;
 
     /**
-    * Offset
+    * The offset. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of requested objects.
+    * The number of returned results. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -90,48 +90,48 @@ public class DescribeUsedIpAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get IPs to query 
-     * @return IpAddresses IPs to query
+     * Get List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time. 
+     * @return IpAddresses List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
      */
     public String [] getIpAddresses() {
         return this.IpAddresses;
     }
 
     /**
-     * Set IPs to query
-     * @param IpAddresses IPs to query
+     * Set List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
+     * @param IpAddresses List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
      */
     public void setIpAddresses(String [] IpAddresses) {
         this.IpAddresses = IpAddresses;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get The offset. Default value: 0 
+     * @return Offset The offset. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set The offset. Default value: 0
+     * @param Offset The offset. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of requested objects. 
-     * @return Limit The number of requested objects.
+     * Get The number of returned results. Default value: 20. Maximum value: 100. 
+     * @return Limit The number of returned results. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of requested objects.
-     * @param Limit The number of requested objects.
+     * Set The number of returned results. Default value: 20. Maximum value: 100.
+     * @param Limit The number of returned results. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

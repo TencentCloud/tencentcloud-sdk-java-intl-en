@@ -30,7 +30,7 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
     private String PackageId;
 
     /**
-    * Instance ID
+    * Cluster ID
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -65,6 +65,13 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
     private String Limit;
 
     /**
+    * Instance D
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
      * Get The unique ID of a resource pack 
      * @return PackageId The unique ID of a resource pack
      */
@@ -81,16 +88,16 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID 
-     * @return ClusterIds Instance ID
+     * Get Cluster ID 
+     * @return ClusterIds Cluster ID
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set Instance ID
-     * @param ClusterIds Instance ID
+     * Set Cluster ID
+     * @param ClusterIds Cluster ID
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
@@ -160,6 +167,22 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Instance D 
+     * @return InstanceIds Instance D
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set Instance D
+     * @param InstanceIds Instance D
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
     public DescribeResourcePackageDetailRequest() {
     }
 
@@ -189,6 +212,12 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -202,6 +231,7 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

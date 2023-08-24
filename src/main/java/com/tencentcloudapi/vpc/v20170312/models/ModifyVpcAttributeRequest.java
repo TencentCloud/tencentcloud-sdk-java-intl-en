@@ -58,6 +58,13 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     private String DomainName;
 
     /**
+    * Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+    */
+    @SerializedName("EnableCdcPublish")
+    @Expose
+    private Boolean EnableCdcPublish;
+
+    /**
      * Get Security group can be named freely, but cannot exceed 60 characters. 
      * @return VpcId Security group can be named freely, but cannot exceed 60 characters.
      */
@@ -137,6 +144,22 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    /**
+     * Get Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish 
+     * @return EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+     */
+    public Boolean getEnableCdcPublish() {
+        return this.EnableCdcPublish;
+    }
+
+    /**
+     * Set Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+     * @param EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+     */
+    public void setEnableCdcPublish(Boolean EnableCdcPublish) {
+        this.EnableCdcPublish = EnableCdcPublish;
+    }
+
     public ModifyVpcAttributeRequest() {
     }
 
@@ -163,6 +186,9 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.EnableCdcPublish != null) {
+            this.EnableCdcPublish = new Boolean(source.EnableCdcPublish);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
 
     }
 }

@@ -76,7 +76,7 @@ AVAILABLE: Available
     private String State;
 
     /**
-    * IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+    * IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
     */
     @SerializedName("QosLevel")
     @Expose
@@ -211,16 +211,16 @@ AVAILABLE: Available
     }
 
     /**
-     * Get IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` 
-     * @return QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * Get IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default). 
+     * @return QosLevel IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-     * @param QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * Set IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
+     * @param QosLevel IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

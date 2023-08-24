@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractModel{
 
     /**
-    * The direct connect gateway ID.
+    * VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
     */
     @SerializedName("VpcId")
     @Expose
@@ -37,23 +37,23 @@ public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractMode
     private String NatGatewayId;
 
     /**
-    * The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+    * The direct connect gateway ID.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-     * Get The direct connect gateway ID. 
-     * @return VpcId The direct connect gateway ID.
+     * Get VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API. 
+     * @return VpcId VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The direct connect gateway ID.
-     * @param VpcId The direct connect gateway ID.
+     * Set VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
+     * @param VpcId VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -76,16 +76,16 @@ public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractMode
     }
 
     /**
-     * Get The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API. 
-     * @return DirectConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+     * Get The direct connect gateway ID. 
+     * @return DirectConnectGatewayId The direct connect gateway ID.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
-     * @param DirectConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+     * Set The direct connect gateway ID.
+     * @param DirectConnectGatewayId The direct connect gateway ID.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;

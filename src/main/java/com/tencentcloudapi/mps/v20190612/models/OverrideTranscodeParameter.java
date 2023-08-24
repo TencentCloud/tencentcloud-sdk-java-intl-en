@@ -62,7 +62,8 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * TESHD transcoding parameter.
+    * The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -70,6 +71,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
 
     /**
     * The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -82,6 +84,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("AddonAudioStream")
     @Expose
     private MediaInputInfo [] AddonAudioStream;
+
+    /**
+    * An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+    * The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AddOnSubtitles")
+    @Expose
+    private AddOnSubtitle [] AddOnSubtitles;
 
     /**
      * Get Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files. 
@@ -180,24 +198,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TESHD transcoding parameter. 
-     * @return TEHDConfig TESHD transcoding parameter.
+     * Get The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TEHDConfig The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set TESHD transcoding parameter.
-     * @param TEHDConfig TESHD transcoding parameter.
+     * Set The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TEHDConfig The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get The subtitle settings. 
+     * Get The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
      * @return SubtitleTemplate The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
@@ -205,7 +229,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param SubtitleTemplate The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
@@ -229,6 +255,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setAddonAudioStream(MediaInputInfo [] AddonAudioStream) {
         this.AddonAudioStream = AddonAudioStream;
+    }
+
+    /**
+     * Get An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return StdExtInfo An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param StdExtInfo An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
+    /**
+     * Get The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public AddOnSubtitle [] getAddOnSubtitles() {
+        return this.AddOnSubtitles;
+    }
+
+    /**
+     * Set The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
+        this.AddOnSubtitles = AddOnSubtitles;
     }
 
     public OverrideTranscodeParameter() {
@@ -266,6 +332,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AddonAudioStream[i] = new MediaInputInfo(source.AddonAudioStream[i]);
             }
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
+        if (source.AddOnSubtitles != null) {
+            this.AddOnSubtitles = new AddOnSubtitle[source.AddOnSubtitles.length];
+            for (int i = 0; i < source.AddOnSubtitles.length; i++) {
+                this.AddOnSubtitles[i] = new AddOnSubtitle(source.AddOnSubtitles[i]);
+            }
+        }
     }
 
 
@@ -281,6 +356,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         this.setParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+        this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
 
     }
 }

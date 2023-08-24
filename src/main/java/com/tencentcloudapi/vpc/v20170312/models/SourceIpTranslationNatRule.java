@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class SourceIpTranslationNatRule extends AbstractModel{
 
     /**
-    * Resource ID
+    * Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -90,36 +90,36 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String CreatedTime;
 
     /**
-     * Get Resource ID 
-     * @return ResourceId Resource ID
+     * Get Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`. 
+     * @return ResourceId Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID
-     * @param ResourceId Resource ID
+     * Set Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
+     * @param ResourceId Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceType Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceType Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

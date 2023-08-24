@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+    * Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -56,16 +56,30 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
     private String Limit;
 
     /**
-     * Get The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time. 
-     * @return SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+    * Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
+     * Get Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time. 
+     * @return SecurityGroupIds Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
-     * @param SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+     * Set Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+     * @param SecurityGroupIds Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -139,6 +153,38 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value. 
+     * @return OrderField Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+     * @param OrderField Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC` 
+     * @return OrderDirection Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+     * @param OrderDirection Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
     public DescribeSecurityGroupsRequest() {
     }
 
@@ -165,6 +211,12 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class BindInstanceInfo extends AbstractModel{
 
     /**
-    * The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,16 +45,28 @@ public class BindInstanceInfo extends AbstractModel{
     private String InstanceType;
 
     /**
-     * Get The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtendIds")
+    @Expose
+    private String [] ExtendIds;
+
+    /**
+     * Get ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -91,6 +104,26 @@ public class BindInstanceInfo extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return ExtendIds ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getExtendIds() {
+        return this.ExtendIds;
+    }
+
+    /**
+     * Set ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param ExtendIds ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExtendIds(String [] ExtendIds) {
+        this.ExtendIds = ExtendIds;
+    }
+
     public BindInstanceInfo() {
     }
 
@@ -108,6 +141,12 @@ public class BindInstanceInfo extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.ExtendIds != null) {
+            this.ExtendIds = new String[source.ExtendIds.length];
+            for (int i = 0; i < source.ExtendIds.length; i++) {
+                this.ExtendIds[i] = new String(source.ExtendIds[i]);
+            }
+        }
     }
 
 
@@ -118,6 +157,7 @@ public class BindInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "ExtendIds.", this.ExtendIds);
 
     }
 }
