@@ -71,7 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The subtitle settings.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -87,7 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * An extended field for transcoding.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -95,7 +95,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddOnSubtitles")
     @Expose
@@ -219,9 +219,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The subtitle settings.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SubtitleTemplate The subtitle settings.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
@@ -229,9 +229,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The subtitle settings.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubtitleTemplate The subtitle settings.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
@@ -259,9 +259,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get An extended field for transcoding.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return StdExtInfo An extended field for transcoding.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
@@ -269,9 +269,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set An extended field for transcoding.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param StdExtInfo An extended field for transcoding.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;
@@ -279,9 +279,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return AddOnSubtitles The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
@@ -289,9 +289,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AddOnSubtitles The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;

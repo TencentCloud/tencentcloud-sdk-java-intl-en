@@ -24,7 +24,7 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
     * The URL of the subtitles to add to the video.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
     @Expose
@@ -32,7 +32,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("StreamIndex")
     @Expose
@@ -45,7 +45,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontType")
     @Expose
@@ -53,7 +53,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontSize")
     @Expose
@@ -61,7 +61,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontColor")
     @Expose
@@ -70,9 +70,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     /**
     * The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
-<li>`1`: u200dFully opaque.</li>
+<li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontAlpha")
     @Expose
@@ -80,9 +80,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The URL of the subtitles to add to the video.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return Path The URL of the subtitles to add to the video.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getPath() {
         return this.Path;
@@ -90,9 +90,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The URL of the subtitles to add to the video.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Path The URL of the subtitles to add to the video.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
         this.Path = Path;
@@ -100,9 +100,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return StreamIndex The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getStreamIndex() {
         return this.StreamIndex;
@@ -110,9 +110,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param StreamIndex The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
@@ -125,14 +125,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return FontType The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getFontType() {
         return this.FontType;
@@ -145,14 +145,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param FontType The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;
@@ -160,9 +160,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return FontSize The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getFontSize() {
         return this.FontSize;
@@ -170,9 +170,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param FontSize The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
@@ -180,9 +180,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return FontColor The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getFontColor() {
         return this.FontColor;
@@ -190,9 +190,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param FontColor The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
@@ -201,14 +201,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     /**
      * Get The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
-<li>`1`: u200dFully opaque.</li>
+<li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return FontAlpha The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
-<li>`1`: u200dFully opaque.</li>
+<li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Float getFontAlpha() {
         return this.FontAlpha;
@@ -217,14 +217,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     /**
      * Set The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
-<li>`1`: u200dFully opaque.</li>
+<li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param FontAlpha The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
-<li>`1`: u200dFully opaque.</li>
+<li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setFontAlpha(Float FontAlpha) {
         this.FontAlpha = FontAlpha;

@@ -27,15 +27,15 @@ public class TEHDConfigForUpdate extends AbstractModel{
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    * The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
@@ -46,12 +46,12 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return Type The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -62,32 +62,32 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Type The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
-     * @return MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * Get The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-     * @param MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * Set The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

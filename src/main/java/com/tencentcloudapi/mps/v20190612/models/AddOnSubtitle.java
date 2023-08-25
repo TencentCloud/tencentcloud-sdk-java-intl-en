@@ -25,9 +25,9 @@ public class AddOnSubtitle extends AbstractModel{
     /**
     * The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -35,7 +35,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Subtitle")
     @Expose
@@ -44,14 +44,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     /**
      * Get The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -60,14 +60,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     /**
      * Set The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -75,9 +75,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return Subtitle The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public MediaInputInfo getSubtitle() {
         return this.Subtitle;
@@ -85,9 +85,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Subtitle The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setSubtitle(MediaInputInfo Subtitle) {
         this.Subtitle = Subtitle;

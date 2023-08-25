@@ -39,7 +39,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *This API is used to request concurrency quota.
+     *This API is used to request a concurrency. The timeout period of the API is 20 seconds.
      * @param req ApplyConcurrentRequest
      * @return ApplyConcurrentResponse
      * @throws TencentCloudSDKException
@@ -60,7 +60,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a session.
+     *This API is used to create a session. The timeout period of the API is 5 seconds.
      * @param req CreateSessionRequest
      * @return CreateSessionResponse
      * @throws TencentCloudSDKException
@@ -94,6 +94,48 @@ public class CarClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroySessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroySession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start stream push.
+     * @param req StartPublishStreamRequest
+     * @return StartPublishStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishStreamResponse StartPublishStream(StartPublishStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartPublishStreamResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartPublishStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartPublishStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop stream push.
+     * @param req StopPublishStreamRequest
+     * @return StopPublishStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopPublishStreamResponse StopPublishStream(StopPublishStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopPublishStreamResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopPublishStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopPublishStream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

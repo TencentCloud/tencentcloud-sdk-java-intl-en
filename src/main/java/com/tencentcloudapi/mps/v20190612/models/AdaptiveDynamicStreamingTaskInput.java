@@ -67,7 +67,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddOnSubtitles")
     @Expose
@@ -175,9 +175,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return AddOnSubtitles The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
@@ -185,9 +185,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AddOnSubtitles The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;

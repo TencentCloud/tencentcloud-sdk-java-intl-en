@@ -55,7 +55,11 @@ Empty string (default): Keep the application running on the cloud only when ther
     /**
     * Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
     */
     @SerializedName("ApplicationParameters")
     @Expose
@@ -153,10 +157,18 @@ Empty string (default): Keep the application running on the cloud only when ther
     /**
      * Get Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid. 
+ 
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`. 
      * @return ApplicationParameters Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
      */
     public String getApplicationParameters() {
         return this.ApplicationParameters;
@@ -165,10 +177,18 @@ If the user requests a prelaunch-enabled single-application project, this parame
     /**
      * Set Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
      * @param ApplicationParameters Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
      */
     public void setApplicationParameters(String ApplicationParameters) {
         this.ApplicationParameters = ApplicationParameters;
