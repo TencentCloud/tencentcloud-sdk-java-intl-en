@@ -2048,6 +2048,37 @@ This API is used to query player configurations. It supports pagination.
     }
 
     /**
+     *This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
+
+1. Clipping a file in VOD to generate a new video;
+2. Splicing multiple files in VOD to generate a new video;
+3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
+4. Directly generating a new video from a stream in VOD;
+5. Clipping a stream in VOD to generate a new video;
+6. Splicing multiple streams in VOD to generate a new video;
+7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
+
+You can also specify whether to perform a task flow for the generated new video.
+     * @param req EditMediaRequest
+     * @return EditMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EditMediaResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EditMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
      * @param req ExecuteFunctionRequest
      * @return ExecuteFunctionResponse

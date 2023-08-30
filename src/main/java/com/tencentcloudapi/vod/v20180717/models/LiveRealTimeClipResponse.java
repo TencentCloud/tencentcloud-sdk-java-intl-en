@@ -54,6 +54,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaMetaData MetaData;
 
     /**
+    * Cliped media segment info.
+    */
+    @SerializedName("SegmentSet")
+    @Expose
+    private LiveRealTimeClipMediaSegmentInfo [] SegmentSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -137,6 +144,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Cliped media segment info. 
+     * @return SegmentSet Cliped media segment info.
+     */
+    public LiveRealTimeClipMediaSegmentInfo [] getSegmentSet() {
+        return this.SegmentSet;
+    }
+
+    /**
+     * Set Cliped media segment info.
+     * @param SegmentSet Cliped media segment info.
+     */
+    public void setSegmentSet(LiveRealTimeClipMediaSegmentInfo [] SegmentSet) {
+        this.SegmentSet = SegmentSet;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -172,6 +195,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.MetaData != null) {
             this.MetaData = new MediaMetaData(source.MetaData);
         }
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new LiveRealTimeClipMediaSegmentInfo[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new LiveRealTimeClipMediaSegmentInfo(source.SegmentSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -186,6 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "VodTaskId", this.VodTaskId);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
