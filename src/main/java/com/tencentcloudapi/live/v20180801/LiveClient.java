@@ -1804,8 +1804,6 @@ If the start time and end time are not on the same day or if the data of specifi
 
     /**
      *This API is used to query the information of downstream playback error codes, i.e., the occurrences of each HTTP error code (4xx and 5xx) at a 1-minute granularity in a certain period of time.
-
-
      * @param req DescribePlayErrorCodeDetailInfoListRequest
      * @return DescribePlayErrorCodeDetailInfoListResponse
      * @throws TencentCloudSDKException

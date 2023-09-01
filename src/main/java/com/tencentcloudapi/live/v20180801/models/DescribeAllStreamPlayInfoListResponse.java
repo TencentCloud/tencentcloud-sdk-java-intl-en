@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAllStreamPlayInfoListResponse extends AbstractModel{
 
     /**
-    * The time point queried, whose value is the same as that of the corresponding request parameter.
+    * The time point queried, whose format is the same as that of the corresponding request parameter.
     */
     @SerializedName("QueryTime")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeAllStreamPlayInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The time point queried, whose value is the same as that of the corresponding request parameter. 
-     * @return QueryTime The time point queried, whose value is the same as that of the corresponding request parameter.
+     * Get The time point queried, whose format is the same as that of the corresponding request parameter. 
+     * @return QueryTime The time point queried, whose format is the same as that of the corresponding request parameter.
      */
     public String getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set The time point queried, whose value is the same as that of the corresponding request parameter.
-     * @param QueryTime The time point queried, whose value is the same as that of the corresponding request parameter.
+     * Set The time point queried, whose format is the same as that of the corresponding request parameter.
+     * @param QueryTime The time point queried, whose format is the same as that of the corresponding request parameter.
      */
     public void setQueryTime(String QueryTime) {
         this.QueryTime = QueryTime;
