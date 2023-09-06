@@ -44,6 +44,13 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
     private String PolicyVersion;
 
     /**
+    * IP range or IP address (mutually exclusive).
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
      * Get Instance ID 
      * @return RegistryId Instance ID
      */
@@ -91,6 +98,22 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
         this.PolicyVersion = PolicyVersion;
     }
 
+    /**
+     * Get IP range or IP address (mutually exclusive). 
+     * @return CidrBlock IP range or IP address (mutually exclusive).
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set IP range or IP address (mutually exclusive).
+     * @param CidrBlock IP range or IP address (mutually exclusive).
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
+    }
+
     public DeleteSecurityPolicyRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
         if (source.PolicyVersion != null) {
             this.PolicyVersion = new String(source.PolicyVersion);
         }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "PolicyIndex", this.PolicyIndex);
         this.setParamSimple(map, prefix + "PolicyVersion", this.PolicyVersion);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
 
     }
 }

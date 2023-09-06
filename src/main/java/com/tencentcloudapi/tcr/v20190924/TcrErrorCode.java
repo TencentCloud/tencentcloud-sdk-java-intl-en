@@ -6,6 +6,9 @@ public enum TcrErrorCode {
     // Operation failed
      FAILEDOPERATION("FailedOperation"),
      
+    // Database error
+     FAILEDOPERATION_DBERROR("FailedOperation.DbError"),
+     
     // Dependency exception.
      FAILEDOPERATION_DEPENDENCEERROR("FailedOperation.DependenceError"),
      
@@ -35,6 +38,9 @@ public enum TcrErrorCode {
      
     // The operation is canceled.
      FAILEDOPERATION_OPERATIONCANCEL("FailedOperation.OperationCancel"),
+     
+    // 
+     FAILEDOPERATION_PRECONDITIONFAILED("FailedOperation.PreconditionFailed"),
      
     // The transaction failed.
      FAILEDOPERATION_TRADEFAILED("FailedOperation.TradeFailed"),

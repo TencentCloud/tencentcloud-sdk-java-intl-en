@@ -74,6 +74,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
+    * Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DrmInfo")
+    @Expose
+    private DrmInfo DrmInfo;
+
+    /**
      * Get Adaptive bitrate streaming template ID. 
      * @return Definition Adaptive bitrate streaming template ID.
      */
@@ -193,6 +200,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.AddOnSubtitles = AddOnSubtitles;
     }
 
+    /**
+     * Get Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public DrmInfo getDrmInfo() {
+        return this.DrmInfo;
+    }
+
+    /**
+     * Set Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setDrmInfo(DrmInfo DrmInfo) {
+        this.DrmInfo = DrmInfo;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -228,6 +251,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 this.AddOnSubtitles[i] = new AddOnSubtitle(source.AddOnSubtitles[i]);
             }
         }
+        if (source.DrmInfo != null) {
+            this.DrmInfo = new DrmInfo(source.DrmInfo);
+        }
     }
 
 
@@ -242,6 +268,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
+        this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
 
     }
 }

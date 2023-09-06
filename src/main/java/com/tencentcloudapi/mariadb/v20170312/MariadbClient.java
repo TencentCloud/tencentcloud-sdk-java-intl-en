@@ -441,6 +441,27 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to obtain a temp u200drollback instance.
+     * @param req DescribeDBTmpInstancesRequest
+     * @return DescribeDBTmpInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBTmpInstancesResponse DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBTmpInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBTmpInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
      * @param req DescribeDatabaseObjectsRequest
      * @return DescribeDatabaseObjectsResponse

@@ -81,6 +81,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a custom account.
+     * @param req CreateCustomAccountRequest
+     * @return CreateCustomAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomAccountResponse CreateCustomAccount(CreateCustomAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an image acceleration service.
      * @param req CreateImageAccelerationServiceRequest
      * @return CreateImageAccelerationServiceResponse
@@ -291,6 +312,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a service account.
+     * @param req CreateServiceAccountRequest
+     * @return CreateServiceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServiceAccountResponse CreateServiceAccount(CreateServiceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServiceAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServiceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateServiceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a signature for an image tag.
      * @param req CreateSignatureRequest
      * @return CreateSignatureResponse
@@ -388,6 +430,27 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateWebhookTriggerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateWebhookTrigger");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a custom account.
+     * @param req DeleteCustomAccountRequest
+     * @return DeleteCustomAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomAccountResponse DeleteCustomAccount(DeleteCustomAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCustomAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -627,7 +690,9 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a public network access allowlist policy of an instance.
+     *This API is used to delete a public network access allow policy.
+
+Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes the higher priority
      * @param req DeleteSecurityPolicyRequest
      * @return DeleteSecurityPolicyResponse
      * @throws TencentCloudSDKException
@@ -640,6 +705,27 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a service account.
+     * @param req DeleteServiceAccountRequest
+     * @return DeleteServiceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServiceAccountResponse DeleteServiceAccount(DeleteServiceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteServiceAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteServiceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteServiceAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -724,6 +810,27 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeChartDownloadInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeChartDownloadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query custom accounts.
+     * @param req DescribeCustomAccountsRequest
+     * @return DescribeCustomAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomAccountsResponse DescribeCustomAccounts(DescribeCustomAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomAccountsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomAccounts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1131,6 +1238,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query service accounts.
+     * @param req DescribeServiceAccountsRequest
+     * @return DescribeServiceAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceAccountsResponse DescribeServiceAccounts(DescribeServiceAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServiceAccountsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServiceAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServiceAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query tag retention execution records.
      * @param req DescribeTagRetentionExecutionRequest
      * @return DescribeTagRetentionExecutionResponse
@@ -1320,6 +1448,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to update a custom account.
+     * @param req ModifyCustomAccountRequest
+     * @return ModifyCustomAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomAccountResponse ModifyCustomAccount(ModifyCustomAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update the tag immutability rule.
      * @param req ModifyImmutableTagRulesRequest
      * @return ModifyImmutableTagRulesResponse
@@ -1438,6 +1587,27 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update a service account.
+     * @param req ModifyServiceAccountRequest
+     * @return ModifyServiceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceAccountResponse ModifyServiceAccount(ModifyServiceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyServiceAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyServiceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyServiceAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

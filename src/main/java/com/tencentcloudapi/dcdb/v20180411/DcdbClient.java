@@ -208,6 +208,27 @@ Note: Accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to create a dedicated TDSQL cluster instance.
+     * @param req CreateDedicatedClusterDCDBInstanceRequest
+     * @return CreateDedicatedClusterDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDedicatedClusterDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a pay-as-you-go TDSQL instance.
      * @param req CreateHourDCDBInstanceRequest
      * @return CreateHourDCDBInstanceResponse
@@ -440,6 +461,27 @@ Note: Accounts with the same username but different hosts are considered as diff
     }
 
     /**
+     *This API is used to obtain u200da temp rollback instance.
+     * @param req DescribeDBTmpInstancesRequest
+     * @return DescribeDBTmpInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBTmpInstancesResponse DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBTmpInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBTmpInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the details of a TDSQL instance.
      * @param req DescribeDCDBInstanceDetailRequest
      * @return DescribeDCDBInstanceDetailResponse
@@ -664,6 +706,27 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to view the backup log retention days.
+     * @param req DescribeLogFileRetentionPeriodRequest
+     * @return DescribeLogFileRetentionPeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogFileRetentionPeriod");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1213,6 +1276,27 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TerminateDedicatedDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+     * @param req UpgradeDedicatedDCDBInstanceRequest
+     * @return UpgradeDedicatedDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstance(UpgradeDedicatedDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDedicatedDCDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -30,11 +30,21 @@ public class ModifyInstanceRequest extends AbstractModel{
     private String RegistryId;
 
     /**
-    * Instance specification
+    * Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
+
+    /**
+    * Whether to enable deletion protection. It defaults to `false`. 
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
 
     /**
      * Get Instance ID 
@@ -53,19 +63,47 @@ public class ModifyInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance specification 
-     * @return RegistryType Instance specification
+     * Get Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium` 
+     * @return RegistryType Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set Instance specification
-     * @param RegistryType Instance specification
+     * Set Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
+     * @param RegistryType Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get Whether to enable deletion protection. It defaults to `false`.  
+     * @return DeletionProtection Whether to enable deletion protection. It defaults to `false`. 
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Whether to enable deletion protection. It defaults to `false`. 
+     * @param DeletionProtection Whether to enable deletion protection. It defaults to `false`. 
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
     }
 
     public ModifyInstanceRequest() {
@@ -82,6 +120,9 @@ public class ModifyInstanceRequest extends AbstractModel{
         if (source.RegistryType != null) {
             this.RegistryType = new String(source.RegistryType);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -91,6 +132,7 @@ public class ModifyInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

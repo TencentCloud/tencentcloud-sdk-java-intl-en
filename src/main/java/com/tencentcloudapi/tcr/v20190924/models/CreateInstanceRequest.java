@@ -72,6 +72,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Boolean EnableCosMAZ;
 
     /**
+    * Whether to enable deletion protection
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get Enterprise Edition instance name 
      * @return RegistryName Enterprise Edition instance name
      */
@@ -183,6 +190,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.EnableCosMAZ = EnableCosMAZ;
     }
 
+    /**
+     * Get Whether to enable deletion protection 
+     * @return DeletionProtection Whether to enable deletion protection
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Whether to enable deletion protection
+     * @param DeletionProtection Whether to enable deletion protection
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.EnableCosMAZ != null) {
             this.EnableCosMAZ = new Boolean(source.EnableCosMAZ);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
         this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
         this.setParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

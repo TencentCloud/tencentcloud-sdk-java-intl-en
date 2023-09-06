@@ -397,7 +397,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ReservedNetResource [] ReservedNetResources;
 
     /**
-    * 
+    * Whether physical replication is supported.
     */
     @SerializedName("IsPhysicalReplicationSupported")
     @Expose
@@ -1295,16 +1295,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IsPhysicalReplicationSupported 
+     * Get Whether physical replication is supported. 
+     * @return IsPhysicalReplicationSupported Whether physical replication is supported.
      */
     public Boolean getIsPhysicalReplicationSupported() {
         return this.IsPhysicalReplicationSupported;
     }
 
     /**
-     * Set 
-     * @param IsPhysicalReplicationSupported 
+     * Set Whether physical replication is supported.
+     * @param IsPhysicalReplicationSupported Whether physical replication is supported.
      */
     public void setIsPhysicalReplicationSupported(Boolean IsPhysicalReplicationSupported) {
         this.IsPhysicalReplicationSupported = IsPhysicalReplicationSupported;
