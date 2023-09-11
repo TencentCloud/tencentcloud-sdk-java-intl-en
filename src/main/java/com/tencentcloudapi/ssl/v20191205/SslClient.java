@@ -60,6 +60,27 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *This API is used to batch delete CSRs.
+     * @param req BatchDeleteCSRRequest
+     * @return BatchDeleteCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteCSRResponse BatchDeleteCSR(BatchDeleteCSRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteCSRResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteCSRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteCSR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to cancel a certificate order.
      * @param req CancelCertificateOrderRequest
      * @return CancelCertificateOrderResponse
@@ -102,6 +123,27 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a CSR.
+     * @param req CreateCSRRequest
+     * @return CreateCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCSRResponse CreateCSR(CreateCSRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCSRResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCSRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCSR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to purchase a certificate.
      * @param req CreateCertificateRequest
      * @return CreateCertificateResponse
@@ -115,6 +157,27 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an async task for querying the cloud resources associated with a certificate. If such a task already exists under the certificate ID, the ID of this task is returned as the result. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE). You can query the result of this task using the `DescribeCertificateBindResourceTaskResult` API.
+     * @param req CreateCertificateBindResourceSyncTaskRequest
+     * @return CreateCertificateBindResourceSyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCertificateBindResourceSyncTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -144,6 +207,48 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the details of a CSR.
+     * @param req DescribeCSRRequest
+     * @return DescribeCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSRResponse DescribeCSR(DescribeCSRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCSRResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCSRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCSR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the CSR list.
+     * @param req DescribeCSRSetRequest
+     * @return DescribeCSRSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSRSetResponse DescribeCSRSet(DescribeCSRSetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCSRSetResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCSRSetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCSRSet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get certificate information.
      * @param req DescribeCertificateRequest
      * @return DescribeCertificateResponse
@@ -157,6 +262,48 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+     * @param req DescribeCertificateBindResourceTaskDetailRequest
+     * @return DescribeCertificateBindResourceTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCertificateBindResourceTaskDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+     * @param req DescribeCertificateBindResourceTaskResultRequest
+     * @return DescribeCertificateBindResourceTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCertificateBindResourceTaskResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -241,6 +388,27 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DownloadCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the information of a CSR.
+     * @param req ModifyCSRRequest
+     * @return ModifyCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCSRResponse ModifyCSR(ModifyCSRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCSRResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCSRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCSR");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

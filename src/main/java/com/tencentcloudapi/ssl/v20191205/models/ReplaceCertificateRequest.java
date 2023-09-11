@@ -65,6 +65,21 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String Reason;
 
     /**
+    * The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+    */
+    @SerializedName("CertCSREncryptAlgo")
+    @Expose
+    private String CertCSREncryptAlgo;
+
+    /**
+    * The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+    */
+    @SerializedName("CertCSRKeyParameter")
+    @Expose
+    private String CertCSRKeyParameter;
+
+    /**
      * Get Certificate ID 
      * @return CertificateId Certificate ID
      */
@@ -160,6 +175,42 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.Reason = Reason;
     }
 
+    /**
+     * Get The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`. 
+     * @return CertCSREncryptAlgo The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+     */
+    public String getCertCSREncryptAlgo() {
+        return this.CertCSREncryptAlgo;
+    }
+
+    /**
+     * Set The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+     * @param CertCSREncryptAlgo The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+     */
+    public void setCertCSREncryptAlgo(String CertCSREncryptAlgo) {
+        this.CertCSREncryptAlgo = CertCSREncryptAlgo;
+    }
+
+    /**
+     * Get The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection.  
+     * @return CertCSRKeyParameter The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+     */
+    public String getCertCSRKeyParameter() {
+        return this.CertCSRKeyParameter;
+    }
+
+    /**
+     * Set The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+     * @param CertCSRKeyParameter The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+     */
+    public void setCertCSRKeyParameter(String CertCSRKeyParameter) {
+        this.CertCSRKeyParameter = CertCSRKeyParameter;
+    }
+
     public ReplaceCertificateRequest() {
     }
 
@@ -186,6 +237,12 @@ public class ReplaceCertificateRequest extends AbstractModel{
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
+        if (source.CertCSREncryptAlgo != null) {
+            this.CertCSREncryptAlgo = new String(source.CertCSREncryptAlgo);
+        }
+        if (source.CertCSRKeyParameter != null) {
+            this.CertCSRKeyParameter = new String(source.CertCSRKeyParameter);
+        }
     }
 
 
@@ -199,6 +256,8 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CsrContent", this.CsrContent);
         this.setParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
+        this.setParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
 
     }
 }

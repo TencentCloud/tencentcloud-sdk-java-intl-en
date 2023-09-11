@@ -114,6 +114,13 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long FilterExpiring;
 
     /**
+    * Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+    */
+    @SerializedName("Hostable")
+    @Expose
+    private Long Hostable;
+
+    /**
      * Get Pagination offset, starting from 0 
      * @return Offset Pagination offset, starting from 0
      */
@@ -321,6 +328,22 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.FilterExpiring = FilterExpiring;
     }
 
+    /**
+     * Get Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no. 
+     * @return Hostable Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+     */
+    public Long getHostable() {
+        return this.Hostable;
+    }
+
+    /**
+     * Set Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+     * @param Hostable Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+     */
+    public void setHostable(Long Hostable) {
+        this.Hostable = Hostable;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -371,6 +394,9 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.FilterExpiring != null) {
             this.FilterExpiring = new Long(source.FilterExpiring);
         }
+        if (source.Hostable != null) {
+            this.Hostable = new Long(source.Hostable);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterSource", this.FilterSource);
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
         this.setParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
+        this.setParamSimple(map, prefix + "Hostable", this.Hostable);
 
     }
 }

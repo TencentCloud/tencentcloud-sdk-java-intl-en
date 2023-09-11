@@ -65,6 +65,13 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificateUse;
 
     /**
+    * The list of tags.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
     * Whether a certificate can be repeatedly uploaded.
     */
     @SerializedName("Repeatable")
@@ -168,6 +175,22 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
+     * Get The list of tags. 
+     * @return Tags The list of tags.
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set The list of tags.
+     * @param Tags The list of tags.
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get Whether a certificate can be repeatedly uploaded. 
      * @return Repeatable Whether a certificate can be repeatedly uploaded.
      */
@@ -209,6 +232,12 @@ public class UploadCertificateRequest extends AbstractModel{
         if (source.CertificateUse != null) {
             this.CertificateUse = new String(source.CertificateUse);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
         if (source.Repeatable != null) {
             this.Repeatable = new Boolean(source.Repeatable);
         }
@@ -225,6 +254,7 @@ public class UploadCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Repeatable", this.Repeatable);
 
     }

@@ -342,6 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EncryptAlgorithm;
 
     /**
+    * The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DvRevokeAuthDetail")
+    @Expose
+    private DvAuths [] DvRevokeAuthDetail;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -1145,6 +1153,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DvRevokeAuthDetail The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DvAuths [] getDvRevokeAuthDetail() {
+        return this.DvRevokeAuthDetail;
+    }
+
+    /**
+     * Set The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DvRevokeAuthDetail The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDvRevokeAuthDetail(DvAuths [] DvRevokeAuthDetail) {
+        this.DvRevokeAuthDetail = DvRevokeAuthDetail;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1294,6 +1322,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EncryptAlgorithm != null) {
             this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
         }
+        if (source.DvRevokeAuthDetail != null) {
+            this.DvRevokeAuthDetail = new DvAuths[source.DvRevokeAuthDetail.length];
+            for (int i = 0; i < source.DvRevokeAuthDetail.length; i++) {
+                this.DvRevokeAuthDetail[i] = new DvAuths(source.DvRevokeAuthDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1344,6 +1378,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
         this.setParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
         this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
+        this.setParamArrayObj(map, prefix + "DvRevokeAuthDetail.", this.DvRevokeAuthDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
