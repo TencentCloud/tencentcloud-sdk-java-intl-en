@@ -98,6 +98,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     private EventNotifySetting EventNotifySettings;
 
     /**
+    * Supplement the last video frame configuration settings.
+    */
+    @SerializedName("InputLossBehavior")
+    @Expose
+    private InputLossBehaviorInfo InputLossBehavior;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -277,6 +284,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.EventNotifySettings = EventNotifySettings;
     }
 
+    /**
+     * Get Supplement the last video frame configuration settings. 
+     * @return InputLossBehavior Supplement the last video frame configuration settings.
+     */
+    public InputLossBehaviorInfo getInputLossBehavior() {
+        return this.InputLossBehavior;
+    }
+
+    /**
+     * Set Supplement the last video frame configuration settings.
+     * @param InputLossBehavior Supplement the last video frame configuration settings.
+     */
+    public void setInputLossBehavior(InputLossBehaviorInfo InputLossBehavior) {
+        this.InputLossBehavior = InputLossBehavior;
+    }
+
     public StreamLiveChannelInfo() {
     }
 
@@ -330,6 +353,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.EventNotifySettings != null) {
             this.EventNotifySettings = new EventNotifySetting(source.EventNotifySettings);
         }
+        if (source.InputLossBehavior != null) {
+            this.InputLossBehavior = new InputLossBehaviorInfo(source.InputLossBehavior);
+        }
     }
 
 
@@ -347,6 +373,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
         this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
+        this.setParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
 
     }
 }

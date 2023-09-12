@@ -86,6 +86,13 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
     private EventNotifySetting EventNotifySettings;
 
     /**
+    * Complement the last video frame settings.
+    */
+    @SerializedName("InputLossBehavior")
+    @Expose
+    private InputLossBehaviorInfo InputLossBehavior;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -229,6 +236,22 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
         this.EventNotifySettings = EventNotifySettings;
     }
 
+    /**
+     * Get Complement the last video frame settings. 
+     * @return InputLossBehavior Complement the last video frame settings.
+     */
+    public InputLossBehaviorInfo getInputLossBehavior() {
+        return this.InputLossBehavior;
+    }
+
+    /**
+     * Set Complement the last video frame settings.
+     * @param InputLossBehavior Complement the last video frame settings.
+     */
+    public void setInputLossBehavior(InputLossBehaviorInfo InputLossBehavior) {
+        this.InputLossBehavior = InputLossBehavior;
+    }
+
     public ModifyStreamLiveChannelRequest() {
     }
 
@@ -279,6 +302,9 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
         if (source.EventNotifySettings != null) {
             this.EventNotifySettings = new EventNotifySetting(source.EventNotifySettings);
         }
+        if (source.InputLossBehavior != null) {
+            this.InputLossBehavior = new InputLossBehaviorInfo(source.InputLossBehavior);
+        }
     }
 
 
@@ -295,6 +321,7 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
         this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
+        this.setParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
 
     }
 }
