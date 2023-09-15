@@ -45,6 +45,13 @@ After the verification process is completed, the `BizToken` of this process will
     private String Extra;
 
     /**
+    * The parameter control the page configuration.
+    */
+    @SerializedName("Config")
+    @Expose
+    private WebVerificationConfigIntl Config;
+
+    /**
      * Get The Base64-encoded string (max 8 MB in size) of the photo to be compared. 
      * @return CompareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.
      */
@@ -96,6 +103,22 @@ After the verification process is completed, the `BizToken` of this process will
         this.Extra = Extra;
     }
 
+    /**
+     * Get The parameter control the page configuration. 
+     * @return Config The parameter control the page configuration.
+     */
+    public WebVerificationConfigIntl getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set The parameter control the page configuration.
+     * @param Config The parameter control the page configuration.
+     */
+    public void setConfig(WebVerificationConfigIntl Config) {
+        this.Config = Config;
+    }
+
     public ApplyWebVerificationBizTokenIntlRequest() {
     }
 
@@ -113,6 +136,9 @@ After the verification process is completed, the `BizToken` of this process will
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.Config != null) {
+            this.Config = new WebVerificationConfigIntl(source.Config);
+        }
     }
 
 
@@ -123,6 +149,7 @@ After the verification process is completed, the `BizToken` of this process will
         this.setParamSimple(map, prefix + "CompareImageBase64", this.CompareImageBase64);
         this.setParamSimple(map, prefix + "RedirectURL", this.RedirectURL);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamObj(map, prefix + "Config.", this.Config);
 
     }
 }

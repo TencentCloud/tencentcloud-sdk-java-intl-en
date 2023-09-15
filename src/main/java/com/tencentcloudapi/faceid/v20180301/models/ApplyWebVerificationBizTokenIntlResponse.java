@@ -37,6 +37,13 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
     private String BizToken;
 
     /**
+    * 
+    */
+    @SerializedName("VerificationURL")
+    @Expose
+    private String VerificationURL;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -46,7 +53,9 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
     /**
      * Get The URL of this verification process, which will be returned to the frontend of the browser for starting the process. 
      * @return VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+     * @deprecated
      */
+    @Deprecated
     public String getVerificationUrl() {
         return this.VerificationUrl;
     }
@@ -54,7 +63,9 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
     /**
      * Set The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
      * @param VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+     * @deprecated
      */
+    @Deprecated
     public void setVerificationUrl(String VerificationUrl) {
         this.VerificationUrl = VerificationUrl;
     }
@@ -73,6 +84,22 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;
+    }
+
+    /**
+     * Get  
+     * @return VerificationURL 
+     */
+    public String getVerificationURL() {
+        return this.VerificationURL;
+    }
+
+    /**
+     * Set 
+     * @param VerificationURL 
+     */
+    public void setVerificationURL(String VerificationURL) {
+        this.VerificationURL = VerificationURL;
     }
 
     /**
@@ -105,6 +132,9 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
         if (source.BizToken != null) {
             this.BizToken = new String(source.BizToken);
         }
+        if (source.VerificationURL != null) {
+            this.VerificationURL = new String(source.VerificationURL);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +147,7 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VerificationUrl", this.VerificationUrl);
         this.setParamSimple(map, prefix + "BizToken", this.BizToken);
+        this.setParamSimple(map, prefix + "VerificationURL", this.VerificationURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
