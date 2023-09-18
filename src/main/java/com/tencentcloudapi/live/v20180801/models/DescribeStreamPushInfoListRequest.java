@@ -30,14 +30,18 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+    * The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+    * The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
     */
     @SerializedName("EndTime")
     @Expose
@@ -74,32 +78,48 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. 
-     * @return StartTime The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+     * Get The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default. 
+     * @return StartTime The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
-     * @param StartTime The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+     * Set The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param StartTime The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours. 
-     * @return EndTime The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+     * Get The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default. 
+     * @return EndTime The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
-     * @param EndTime The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+     * Set The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param EndTime The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
