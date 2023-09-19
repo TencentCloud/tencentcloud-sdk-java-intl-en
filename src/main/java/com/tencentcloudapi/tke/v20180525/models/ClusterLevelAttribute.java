@@ -58,6 +58,13 @@ public class ClusterLevelAttribute extends AbstractModel{
     private Long ConfigMapCount;
 
     /**
+    * Number of ReplicaSets
+    */
+    @SerializedName("RSCount")
+    @Expose
+    private Long RSCount;
+
+    /**
     * Number of CRDs
     */
     @SerializedName("CRDCount")
@@ -160,6 +167,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Number of ReplicaSets 
+     * @return RSCount Number of ReplicaSets
+     */
+    public Long getRSCount() {
+        return this.RSCount;
+    }
+
+    /**
+     * Set Number of ReplicaSets
+     * @param RSCount Number of ReplicaSets
+     */
+    public void setRSCount(Long RSCount) {
+        this.RSCount = RSCount;
+    }
+
+    /**
      * Get Number of CRDs 
      * @return CRDCount Number of CRDs
      */
@@ -234,6 +257,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ConfigMapCount != null) {
             this.ConfigMapCount = new Long(source.ConfigMapCount);
         }
+        if (source.RSCount != null) {
+            this.RSCount = new Long(source.RSCount);
+        }
         if (source.CRDCount != null) {
             this.CRDCount = new Long(source.CRDCount);
         }
@@ -255,6 +281,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "PodCount", this.PodCount);
         this.setParamSimple(map, prefix + "ConfigMapCount", this.ConfigMapCount);
+        this.setParamSimple(map, prefix + "RSCount", this.RSCount);
         this.setParamSimple(map, prefix + "CRDCount", this.CRDCount);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "OtherCount", this.OtherCount);

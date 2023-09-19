@@ -319,6 +319,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsInherit;
 
     /**
+    * Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsSessionStarted")
+    @Expose
+    private Boolean IsSessionStarted;
+
+    /**
      * Get Spark job ID 
      * @return JobId Spark job ID
      */
@@ -1022,6 +1030,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IsInherit = IsInherit;
     }
 
+    /**
+     * Get Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsSessionStarted() {
+        return this.IsSessionStarted;
+    }
+
+    /**
+     * Set Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setIsSessionStarted(Boolean IsSessionStarted) {
+        this.IsSessionStarted = IsSessionStarted;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1150,6 +1178,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsInherit != null) {
             this.IsInherit = new Long(source.IsInherit);
         }
+        if (source.IsSessionStarted != null) {
+            this.IsSessionStarted = new Boolean(source.IsSessionStarted);
+        }
     }
 
 
@@ -1197,6 +1228,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
         this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
 
     }
 }

@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class SparkMonitorMetrics extends AbstractModel{
 
     /**
-    * 
+    * The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("ShuffleWriteBytesCos")
     @Expose
     private Long ShuffleWriteBytesCos;
 
     /**
-    * 
+    * The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("ShuffleWriteBytesTotal")
     @Expose
     private Long ShuffleWriteBytesTotal;
 
     /**
-     * Get  
-     * @return ShuffleWriteBytesCos 
+     * Get The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return ShuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public Long getShuffleWriteBytesCos() {
         return this.ShuffleWriteBytesCos;
     }
 
     /**
-     * Set 
-     * @param ShuffleWriteBytesCos 
+     * Set The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param ShuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setShuffleWriteBytesCos(Long ShuffleWriteBytesCos) {
         this.ShuffleWriteBytesCos = ShuffleWriteBytesCos;
     }
 
     /**
-     * Get  
-     * @return ShuffleWriteBytesTotal 
+     * Get The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return ShuffleWriteBytesTotal The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public Long getShuffleWriteBytesTotal() {
         return this.ShuffleWriteBytesTotal;
     }
 
     /**
-     * Set 
-     * @param ShuffleWriteBytesTotal 
+     * Set The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param ShuffleWriteBytesTotal The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setShuffleWriteBytesTotal(Long ShuffleWriteBytesTotal) {
         this.ShuffleWriteBytesTotal = ShuffleWriteBytesTotal;

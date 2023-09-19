@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CheckCnameStatusRequest extends AbstractModel{
 
     /**
-    * ID of the site.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of domain names.
+    * List of accelerated domain names.
     */
     @SerializedName("RecordNames")
     @Expose
     private String [] RecordNames;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of domain names. 
-     * @return RecordNames List of domain names.
+     * Get List of accelerated domain names. 
+     * @return RecordNames List of accelerated domain names.
      */
     public String [] getRecordNames() {
         return this.RecordNames;
     }
 
     /**
-     * Set List of domain names.
-     * @param RecordNames List of domain names.
+     * Set List of accelerated domain names.
+     * @param RecordNames List of accelerated domain names.
      */
     public void setRecordNames(String [] RecordNames) {
         this.RecordNames = RecordNames;

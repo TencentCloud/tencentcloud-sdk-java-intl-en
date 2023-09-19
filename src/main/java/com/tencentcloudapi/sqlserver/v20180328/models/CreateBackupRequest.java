@@ -37,7 +37,7 @@ public class CreateBackupRequest extends AbstractModel{
     private String [] DBNames;
 
     /**
-    * Instance ID in the format of mssql-i1z41iwd
+    * (Required) Instance ID in the format of mssql-i1z41iwd
     */
     @SerializedName("InstanceId")
     @Expose
@@ -49,6 +49,13 @@ public class CreateBackupRequest extends AbstractModel{
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
+
+    /**
+    * 
+    */
+    @SerializedName("StorageStrategy")
+    @Expose
+    private Long StorageStrategy;
 
     /**
      * Get Backup policy (0: instance backup, 1: multi-database backup) 
@@ -83,16 +90,16 @@ public class CreateBackupRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID in the format of mssql-i1z41iwd 
-     * @return InstanceId Instance ID in the format of mssql-i1z41iwd
+     * Get (Required) Instance ID in the format of mssql-i1z41iwd 
+     * @return InstanceId (Required) Instance ID in the format of mssql-i1z41iwd
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of mssql-i1z41iwd
-     * @param InstanceId Instance ID in the format of mssql-i1z41iwd
+     * Set (Required) Instance ID in the format of mssql-i1z41iwd
+     * @param InstanceId (Required) Instance ID in the format of mssql-i1z41iwd
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -112,6 +119,22 @@ public class CreateBackupRequest extends AbstractModel{
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
+    }
+
+    /**
+     * Get  
+     * @return StorageStrategy 
+     */
+    public Long getStorageStrategy() {
+        return this.StorageStrategy;
+    }
+
+    /**
+     * Set 
+     * @param StorageStrategy 
+     */
+    public void setStorageStrategy(Long StorageStrategy) {
+        this.StorageStrategy = StorageStrategy;
     }
 
     public CreateBackupRequest() {
@@ -137,6 +160,9 @@ public class CreateBackupRequest extends AbstractModel{
         if (source.BackupName != null) {
             this.BackupName = new String(source.BackupName);
         }
+        if (source.StorageStrategy != null) {
+            this.StorageStrategy = new Long(source.StorageStrategy);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class CreateBackupRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DBNames.", this.DBNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamSimple(map, prefix + "StorageStrategy", this.StorageStrategy);
 
     }
 }

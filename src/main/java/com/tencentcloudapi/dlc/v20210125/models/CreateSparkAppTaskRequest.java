@@ -30,7 +30,7 @@ public class CreateSparkAppTaskRequest extends AbstractModel{
     private String JobName;
 
     /**
-    * Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+    * The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
     */
     @SerializedName("CmdArgs")
     @Expose
@@ -53,16 +53,16 @@ public class CreateSparkAppTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get Command line parameters of the Spark job separated by space. They are generally used for periodic calls. 
-     * @return CmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+     * Get The input parameters of the Spark job, separated by space. They are generally used for periodic calls. 
+     * @return CmdArgs The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
-     * @param CmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+     * Set The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
+     * @param CmdArgs The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;

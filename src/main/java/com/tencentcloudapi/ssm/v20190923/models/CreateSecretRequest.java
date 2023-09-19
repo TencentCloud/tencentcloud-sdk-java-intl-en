@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateSecretRequest extends AbstractModel{
 
     /**
-    * Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+    * Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+    * Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
     */
     @SerializedName("VersionId")
     @Expose
@@ -51,6 +51,13 @@ public class CreateSecretRequest extends AbstractModel{
     private String KmsKeyId;
 
     /**
+    * Secret type. It defaults to `custom`.
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
+
+    /**
     * Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
     */
     @SerializedName("SecretBinary")
@@ -65,6 +72,13 @@ public class CreateSecretRequest extends AbstractModel{
     private String SecretString;
 
     /**
+    * Additional configuration of the Secret in JSON format
+    */
+    @SerializedName("AdditionalConfig")
+    @Expose
+    private String AdditionalConfig;
+
+    /**
     * List of tags.
     */
     @SerializedName("Tags")
@@ -72,32 +86,32 @@ public class CreateSecretRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. 
-     * @return SecretName Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+     * Get Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created.  
+     * @return SecretName Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
-     * @param SecretName Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+     * Set Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
+     * @param SecretName Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. 
-     * @return VersionId Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+     * Get Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default. 
+     * @return VersionId Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
-     * @param VersionId Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+     * Set Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
+     * @param VersionId Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
@@ -136,6 +150,22 @@ public class CreateSecretRequest extends AbstractModel{
     }
 
     /**
+     * Get Secret type. It defaults to `custom`. 
+     * @return SecretType Secret type. It defaults to `custom`.
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set Secret type. It defaults to `custom`.
+     * @param SecretType Secret type. It defaults to `custom`.
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
+    }
+
+    /**
      * Get Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported. 
      * @return SecretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
      */
@@ -165,6 +195,22 @@ public class CreateSecretRequest extends AbstractModel{
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;
+    }
+
+    /**
+     * Get Additional configuration of the Secret in JSON format 
+     * @return AdditionalConfig Additional configuration of the Secret in JSON format
+     */
+    public String getAdditionalConfig() {
+        return this.AdditionalConfig;
+    }
+
+    /**
+     * Set Additional configuration of the Secret in JSON format
+     * @param AdditionalConfig Additional configuration of the Secret in JSON format
+     */
+    public void setAdditionalConfig(String AdditionalConfig) {
+        this.AdditionalConfig = AdditionalConfig;
     }
 
     /**
@@ -203,11 +249,17 @@ public class CreateSecretRequest extends AbstractModel{
         if (source.KmsKeyId != null) {
             this.KmsKeyId = new String(source.KmsKeyId);
         }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
         if (source.SecretBinary != null) {
             this.SecretBinary = new String(source.SecretBinary);
         }
         if (source.SecretString != null) {
             this.SecretString = new String(source.SecretString);
+        }
+        if (source.AdditionalConfig != null) {
+            this.AdditionalConfig = new String(source.AdditionalConfig);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -226,8 +278,10 @@ public class CreateSecretRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
         this.setParamSimple(map, prefix + "SecretString", this.SecretString);
+        this.setParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

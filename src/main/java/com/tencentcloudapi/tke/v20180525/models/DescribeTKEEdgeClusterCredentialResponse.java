@@ -80,6 +80,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String GridDaemon;
 
     /**
+    * Access kins clusters over the public network
+    */
+    @SerializedName("UnitCluster")
+    @Expose
+    private String UnitCluster;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -219,6 +226,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Access kins clusters over the public network 
+     * @return UnitCluster Access kins clusters over the public network
+     */
+    public String getUnitCluster() {
+        return this.UnitCluster;
+    }
+
+    /**
+     * Set Access kins clusters over the public network
+     * @param UnitCluster Access kins clusters over the public network
+     */
+    public void setUnitCluster(String UnitCluster) {
+        this.UnitCluster = UnitCluster;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -269,6 +292,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.GridDaemon != null) {
             this.GridDaemon = new String(source.GridDaemon);
         }
+        if (source.UnitCluster != null) {
+            this.UnitCluster = new String(source.UnitCluster);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -287,6 +313,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "HealthRegion", this.HealthRegion);
         this.setParamSimple(map, prefix + "Health", this.Health);
         this.setParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
+        this.setParamSimple(map, prefix + "UnitCluster", this.UnitCluster);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

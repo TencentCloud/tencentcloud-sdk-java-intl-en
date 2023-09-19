@@ -37,14 +37,14 @@ public class DescribeXEventsRequest extends AbstractModel{
     private String EventType;
 
     /**
-    * Generation start time of an extended file
+    * Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Generation end time of an extended file
+    * Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
     */
     @SerializedName("EndTime")
     @Expose
@@ -97,32 +97,32 @@ public class DescribeXEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get Generation start time of an extended file 
-     * @return StartTime Generation start time of an extended file
+     * Get Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss. 
+     * @return StartTime Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Generation start time of an extended file
-     * @param StartTime Generation start time of an extended file
+     * Set Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+     * @param StartTime Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Generation end time of an extended file 
-     * @return EndTime Generation end time of an extended file
+     * Get Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss. 
+     * @return EndTime Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Generation end time of an extended file
-     * @param EndTime Generation end time of an extended file
+     * Set Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+     * @param EndTime Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

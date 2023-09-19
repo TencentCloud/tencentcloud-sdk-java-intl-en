@@ -58,6 +58,13 @@ public class DescribeDBsRequest extends AbstractModel{
     private String OrderByType;
 
     /**
+    * TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private String Encryption;
+
+    /**
      * Get Instance ID 
      * @return InstanceIdSet Instance ID
      */
@@ -137,6 +144,22 @@ public class DescribeDBsRequest extends AbstractModel{
         this.OrderByType = OrderByType;
     }
 
+    /**
+     * Get TDE status. Valid values: `enable` (enabled), `disable` (disabled). 
+     * @return Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     */
+    public String getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * @param Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     */
+    public void setEncryption(String Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public DescribeDBsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeDBsRequest extends AbstractModel{
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new String(source.Encryption);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeDBsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
 
     }
 }

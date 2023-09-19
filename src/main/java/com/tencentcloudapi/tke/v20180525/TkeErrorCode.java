@@ -87,6 +87,9 @@ public enum TkeErrorCode {
     // Network extension error.
      FAILEDOPERATION_NETWORKSCALEERROR("FailedOperation.NetworkScaleError"),
      
+    // The node has a secondary ENI.
+     FAILEDOPERATION_NODEEXISTSSECONDARYNETWORKINTERFACE("FailedOperation.NodeExistsSecondaryNetworkInterface"),
+     
     // The image OS is not supported.
      FAILEDOPERATION_OSNOTSUPPORT("FailedOperation.OsNotSupport"),
      

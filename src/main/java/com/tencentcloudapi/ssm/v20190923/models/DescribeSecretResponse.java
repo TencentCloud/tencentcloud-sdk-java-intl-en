@@ -144,6 +144,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TargetUin;
 
     /**
+    * Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdditionalConfig")
+    @Expose
+    private String AdditionalConfig;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -443,6 +451,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdditionalConfig Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAdditionalConfig() {
+        return this.AdditionalConfig;
+    }
+
+    /**
+     * Set Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdditionalConfig Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdditionalConfig(String AdditionalConfig) {
+        this.AdditionalConfig = AdditionalConfig;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -517,6 +545,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TargetUin != null) {
             this.TargetUin = new Long(source.TargetUin);
         }
+        if (source.AdditionalConfig != null) {
+            this.AdditionalConfig = new String(source.AdditionalConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -543,6 +574,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
+        this.setParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

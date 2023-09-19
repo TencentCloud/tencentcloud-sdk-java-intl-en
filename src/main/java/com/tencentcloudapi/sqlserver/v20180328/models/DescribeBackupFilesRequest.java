@@ -30,7 +30,7 @@ public class DescribeBackupFilesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+    * Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
     */
     @SerializedName("GroupId")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeBackupFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API 
-     * @return GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+     * Get Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported). 
+     * @return GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
-     * @param GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+     * Set Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
+     * @param GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

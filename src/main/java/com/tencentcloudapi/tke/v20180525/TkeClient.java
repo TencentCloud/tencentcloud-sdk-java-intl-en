@@ -228,7 +228,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *Create an external network access port for the managed cluster (the old way, only the external network port for the managed cluster is supported)
+     *This API is used to create a public network access port for a managed cluster. Note: This API will be disused soon. Please call `CreateClusterEndpoint` instead.
      * @param req CreateClusterEndpointVipRequest
      * @return CreateClusterEndpointVipResponse
      * @throws TencentCloudSDKException
@@ -451,6 +451,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTKEEdgeClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTKEEdgeCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an add-on.
+     * @param req DeleteAddonRequest
+     * @return DeleteAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAddonResponse DeleteAddon(DeleteAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAddonResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAddon");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -787,6 +808,48 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTKEEdgeClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTKEEdgeCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of add-ons.
+     * @param req DescribeAddonRequest
+     * @return DescribeAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddonResponse DescribeAddon(DescribeAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddonResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAddon");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query parameters of an add-on.
+     * @param req DescribeAddonValuesRequest
+     * @return DescribeAddonValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddonValuesResponse DescribeAddonValues(DescribeAddonValuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddonValuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAddonValues");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1446,6 +1509,27 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the encryption status of etcd data.
+     * @param req DescribeEncryptionStatusRequest
+     * @return DescribeEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEncryptionStatusResponse DescribeEncryptionStatus(DescribeEncryptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEncryptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEncryptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query one or more existing node and determine whether they can be added to a cluster.
      * @param req DescribeExistedInstancesRequest
      * @return DescribeExistedInstancesResponse
@@ -1740,6 +1824,27 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable encryption protection.
+     * @param req DisableEncryptionProtectionRequest
+     * @return DisableEncryptionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableEncryptionProtectionResponse DisableEncryptionProtection(DisableEncryptionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableEncryptionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableEncryptionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to drain a virtual node.
      * @param req DrainClusterVirtualNodeRequest
      * @return DrainClusterVirtualNodeResponse
@@ -1774,6 +1879,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableClusterDeletionProtectionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable encryption protection.
+     * @param req EnableEncryptionProtectionRequest
+     * @return EnableEncryptionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableEncryptionProtectionResponse EnableEncryptionProtection(EnableEncryptionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableEncryptionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableEncryptionProtection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1858,6 +1984,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetUpgradeInstanceProgressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetUpgradeInstanceProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to install an add-on on the target cluster.
+     * @param req InstallAddonRequest
+     * @return InstallAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallAddonResponse InstallAddon(InstallAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstallAddonResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstallAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstallAddon");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2131,6 +2278,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UninstallEdgeLogAgentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UninstallEdgeLogAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update parameters and version of an add-on.
+     * @param req UpdateAddonRequest
+     * @return UpdateAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAddonResponse UpdateAddon(UpdateAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAddonResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAddon");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -79,6 +79,13 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
     private Long EventSaveDays;
 
     /**
+    * TDE u200dconfiguration
+    */
+    @SerializedName("TDEConfig")
+    @Expose
+    private TDEConfigAttribute TDEConfig;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -214,6 +221,22 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
     }
 
     /**
+     * Get TDE u200dconfiguration 
+     * @return TDEConfig TDE u200dconfiguration
+     */
+    public TDEConfigAttribute getTDEConfig() {
+        return this.TDEConfig;
+    }
+
+    /**
+     * Set TDE u200dconfiguration
+     * @param TDEConfig TDE u200dconfiguration
+     */
+    public void setTDEConfig(TDEConfigAttribute TDEConfig) {
+        this.TDEConfig = TDEConfig;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -261,6 +284,9 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
         if (source.EventSaveDays != null) {
             this.EventSaveDays = new Long(source.EventSaveDays);
         }
+        if (source.TDEConfig != null) {
+            this.TDEConfig = new TDEConfigAttribute(source.TDEConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +305,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
         this.setParamSimple(map, prefix + "BlockedThreshold", this.BlockedThreshold);
         this.setParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
+        this.setParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -121,6 +121,13 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
     private String RegistryPrefix;
 
     /**
+    * u200dTags bound with the cluster
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get  
      * @return K8SVersion 
      */
@@ -344,6 +351,22 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.RegistryPrefix = RegistryPrefix;
     }
 
+    /**
+     * Get u200dTags bound with the cluster 
+     * @return TagSpecification u200dTags bound with the cluster
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set u200dTags bound with the cluster
+     * @param TagSpecification u200dTags bound with the cluster
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateTKEEdgeClusterRequest() {
     }
 
@@ -394,6 +417,9 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         if (source.RegistryPrefix != null) {
             this.RegistryPrefix = new String(source.RegistryPrefix);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -415,6 +441,7 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
         this.setParamSimple(map, prefix + "RegistryPrefix", this.RegistryPrefix);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

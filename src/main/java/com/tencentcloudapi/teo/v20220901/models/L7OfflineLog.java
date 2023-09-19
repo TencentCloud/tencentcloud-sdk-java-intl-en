@@ -23,151 +23,197 @@ import java.util.HashMap;
 public class L7OfflineLog extends AbstractModel{
 
     /**
-    * Start time of the log packaging
-    */
-    @SerializedName("LogTime")
-    @Expose
-    private Long LogTime;
-
-    /**
-    * The subdomain name.
+    * Log domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Log size, in bytes.
-    */
-    @SerializedName("Size")
-    @Expose
-    private Long Size;
-
-    /**
-    * Download address
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
-    * Log package name
-    */
-    @SerializedName("LogPacketName")
-    @Expose
-    private String LogPacketName;
-
-    /**
-    * Acceleration region. Values:
+    * Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get Start time of the log packaging 
-     * @return LogTime Start time of the log packaging
-     */
-    public Long getLogTime() {
-        return this.LogTime;
-    }
+    * Log packet name.	
+    */
+    @SerializedName("LogPacketName")
+    @Expose
+    private String LogPacketName;
 
     /**
-     * Set Start time of the log packaging
-     * @param LogTime Start time of the log packaging
-     */
-    public void setLogTime(Long LogTime) {
-        this.LogTime = LogTime;
-    }
+    * Log download address.	
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
-     * Get The subdomain name. 
-     * @return Domain The subdomain name.
+    * (Disused) Log packaging time. 
+    */
+    @SerializedName("LogTime")
+    @Expose
+    private Long LogTime;
+
+    /**
+    * Start time of log packaging.
+    */
+    @SerializedName("LogStartTime")
+    @Expose
+    private String LogStartTime;
+
+    /**
+    * End time of the log package.
+    */
+    @SerializedName("LogEndTime")
+    @Expose
+    private String LogEndTime;
+
+    /**
+    * Original log size (in bytes).
+    */
+    @SerializedName("Size")
+    @Expose
+    private Long Size;
+
+    /**
+     * Get Log domain name. 
+     * @return Domain Log domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The subdomain name.
-     * @param Domain The subdomain name.
+     * Set Log domain name.
+     * @param Domain Log domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Log size, in bytes. 
-     * @return Size Log size, in bytes.
-     */
-    public Long getSize() {
-        return this.Size;
-    }
-
-    /**
-     * Set Log size, in bytes.
-     * @param Size Log size, in bytes.
-     */
-    public void setSize(Long Size) {
-        this.Size = Size;
-    }
-
-    /**
-     * Get Download address 
-     * @return Url Download address
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set Download address
-     * @param Url Download address
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
-
-    /**
-     * Get Log package name 
-     * @return LogPacketName Log package name
-     */
-    public String getLogPacketName() {
-        return this.LogPacketName;
-    }
-
-    /**
-     * Set Log package name
-     * @param LogPacketName Log package name
-     */
-    public void setLogPacketName(String LogPacketName) {
-        this.LogPacketName = LogPacketName;
-    }
-
-    /**
-     * Get Acceleration region. Values:
+     * Get Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li> 
-     * @return Area Acceleration region. Values:
+<li>`overseas`: Global (outside the Chinese mainland). </li> 
+     * @return Area Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Acceleration region. Values:
+     * Set Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-     * @param Area Acceleration region. Values:
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * @param Area Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
      */
     public void setArea(String Area) {
         this.Area = Area;
+    }
+
+    /**
+     * Get Log packet name.	 
+     * @return LogPacketName Log packet name.	
+     */
+    public String getLogPacketName() {
+        return this.LogPacketName;
+    }
+
+    /**
+     * Set Log packet name.	
+     * @param LogPacketName Log packet name.	
+     */
+    public void setLogPacketName(String LogPacketName) {
+        this.LogPacketName = LogPacketName;
+    }
+
+    /**
+     * Get Log download address.	 
+     * @return Url Log download address.	
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Log download address.	
+     * @param Url Log download address.	
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get (Disused) Log packaging time.  
+     * @return LogTime (Disused) Log packaging time. 
+     */
+    public Long getLogTime() {
+        return this.LogTime;
+    }
+
+    /**
+     * Set (Disused) Log packaging time. 
+     * @param LogTime (Disused) Log packaging time. 
+     */
+    public void setLogTime(Long LogTime) {
+        this.LogTime = LogTime;
+    }
+
+    /**
+     * Get Start time of log packaging. 
+     * @return LogStartTime Start time of log packaging.
+     */
+    public String getLogStartTime() {
+        return this.LogStartTime;
+    }
+
+    /**
+     * Set Start time of log packaging.
+     * @param LogStartTime Start time of log packaging.
+     */
+    public void setLogStartTime(String LogStartTime) {
+        this.LogStartTime = LogStartTime;
+    }
+
+    /**
+     * Get End time of the log package. 
+     * @return LogEndTime End time of the log package.
+     */
+    public String getLogEndTime() {
+        return this.LogEndTime;
+    }
+
+    /**
+     * Set End time of the log package.
+     * @param LogEndTime End time of the log package.
+     */
+    public void setLogEndTime(String LogEndTime) {
+        this.LogEndTime = LogEndTime;
+    }
+
+    /**
+     * Get Original log size (in bytes). 
+     * @return Size Original log size (in bytes).
+     */
+    public Long getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set Original log size (in bytes).
+     * @param Size Original log size (in bytes).
+     */
+    public void setSize(Long Size) {
+        this.Size = Size;
     }
 
     public L7OfflineLog() {
@@ -178,23 +224,29 @@ public class L7OfflineLog extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public L7OfflineLog(L7OfflineLog source) {
-        if (source.LogTime != null) {
-            this.LogTime = new Long(source.LogTime);
-        }
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.Size != null) {
-            this.Size = new Long(source.Size);
-        }
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
         }
         if (source.LogPacketName != null) {
             this.LogPacketName = new String(source.LogPacketName);
         }
-        if (source.Area != null) {
-            this.Area = new String(source.Area);
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.LogTime != null) {
+            this.LogTime = new Long(source.LogTime);
+        }
+        if (source.LogStartTime != null) {
+            this.LogStartTime = new String(source.LogStartTime);
+        }
+        if (source.LogEndTime != null) {
+            this.LogEndTime = new String(source.LogEndTime);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
         }
     }
 
@@ -203,12 +255,14 @@ public class L7OfflineLog extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LogTime", this.LogTime);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "Size", this.Size);
-        this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "LogTime", this.LogTime);
+        this.setParamSimple(map, prefix + "LogStartTime", this.LogStartTime);
+        this.setParamSimple(map, prefix + "LogEndTime", this.LogEndTime);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

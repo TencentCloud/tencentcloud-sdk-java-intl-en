@@ -44,6 +44,13 @@ public class ModifyClusterVirtualNodePoolRequest extends AbstractModel{
     private String Name;
 
     /**
+    * List of security group IDs
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
     * Virtual node labels
     */
     @SerializedName("Labels")
@@ -113,6 +120,22 @@ public class ModifyClusterVirtualNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get List of security group IDs 
+     * @return SecurityGroupIds List of security group IDs
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set List of security group IDs
+     * @param SecurityGroupIds List of security group IDs
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Get Virtual node labels 
      * @return Labels Virtual node labels
      */
@@ -177,6 +200,12 @@ public class ModifyClusterVirtualNodePoolRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
         if (source.Labels != null) {
             this.Labels = new Label[source.Labels.length];
             for (int i = 0; i < source.Labels.length; i++) {
@@ -202,6 +231,7 @@ public class ModifyClusterVirtualNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);

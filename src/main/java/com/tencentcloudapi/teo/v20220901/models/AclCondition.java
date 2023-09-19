@@ -23,24 +23,25 @@ import java.util.HashMap;
 public class AclCondition extends AbstractModel{
 
     /**
-    * The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+    * Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
     */
     @SerializedName("MatchFrom")
     @Expose
@@ -84,84 +85,88 @@ public class AclCondition extends AbstractModel{
     private String MatchContent;
 
     /**
-     * Get The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li> 
-     * @return MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+     * Get Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li> 
+     * @return MatchFrom Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
      */
     public String getMatchFrom() {
         return this.MatchFrom;
     }
 
     /**
-     * Set The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
-     * @param MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+     * Set Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
+     * @param MatchFrom Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;

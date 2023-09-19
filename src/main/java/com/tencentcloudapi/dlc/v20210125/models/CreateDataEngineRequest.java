@@ -156,7 +156,7 @@ public class CreateDataEngineRequest extends AbstractModel{
     private CrontabResumeSuspendStrategy CrontabResumeSuspendStrategy;
 
     /**
-    * The type of tasks to be executed by the engine, which defaults to SQL.
+    * The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
     */
     @SerializedName("EngineExecType")
     @Expose
@@ -205,7 +205,7 @@ public class CreateDataEngineRequest extends AbstractModel{
     private String ImageVersionName;
 
     /**
-    * The name of the primary cluster.
+    * The primary cluster, which is specified when a failover cluster is created.
     */
     @SerializedName("MainClusterName")
     @Expose
@@ -347,7 +347,9 @@ public class CreateDataEngineRequest extends AbstractModel{
     /**
      * Get Whether the cluster is the default one. 
      * @return DefaultDataEngine Whether the cluster is the default one.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getDefaultDataEngine() {
         return this.DefaultDataEngine;
     }
@@ -355,7 +357,9 @@ public class CreateDataEngineRequest extends AbstractModel{
     /**
      * Set Whether the cluster is the default one.
      * @param DefaultDataEngine Whether the cluster is the default one.
+     * @deprecated
      */
+    @Deprecated
     public void setDefaultDataEngine(Boolean DefaultDataEngine) {
         this.DefaultDataEngine = DefaultDataEngine;
     }
@@ -537,16 +541,16 @@ public class CreateDataEngineRequest extends AbstractModel{
     }
 
     /**
-     * Get The type of tasks to be executed by the engine, which defaults to SQL. 
-     * @return EngineExecType The type of tasks to be executed by the engine, which defaults to SQL.
+     * Get The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`. 
+     * @return EngineExecType The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
      */
     public String getEngineExecType() {
         return this.EngineExecType;
     }
 
     /**
-     * Set The type of tasks to be executed by the engine, which defaults to SQL.
-     * @param EngineExecType The type of tasks to be executed by the engine, which defaults to SQL.
+     * Set The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
+     * @param EngineExecType The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
      */
     public void setEngineExecType(String EngineExecType) {
         this.EngineExecType = EngineExecType;
@@ -649,16 +653,16 @@ public class CreateDataEngineRequest extends AbstractModel{
     }
 
     /**
-     * Get The name of the primary cluster. 
-     * @return MainClusterName The name of the primary cluster.
+     * Get The primary cluster, which is specified when a failover cluster is created. 
+     * @return MainClusterName The primary cluster, which is specified when a failover cluster is created.
      */
     public String getMainClusterName() {
         return this.MainClusterName;
     }
 
     /**
-     * Set The name of the primary cluster.
-     * @param MainClusterName The name of the primary cluster.
+     * Set The primary cluster, which is specified when a failover cluster is created.
+     * @param MainClusterName The primary cluster, which is specified when a failover cluster is created.
      */
     public void setMainClusterName(String MainClusterName) {
         this.MainClusterName = MainClusterName;

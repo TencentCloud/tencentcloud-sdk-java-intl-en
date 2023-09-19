@@ -44,10 +44,7 @@ public class RateLimitUserRule extends AbstractModel{
     private String RuleName;
 
     /**
-    * The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+    * Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
     */
     @SerializedName("Action")
     @Expose
@@ -94,8 +91,8 @@ public class RateLimitUserRule extends AbstractModel{
     private Long RulePriority;
 
     /**
-    * The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleID")
     @Expose
@@ -119,10 +116,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
-    * The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+    * Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("FreqScope")
     @Expose
@@ -177,28 +174,16 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
     }
 
     /**
-     * Get The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li> 
-     * @return Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+     * Get Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	 
+     * @return Action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
-     * @param Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+     * Set Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+     * @param Action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -305,20 +290,20 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
     }
 
     /**
-     * Get The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return RuleID Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param RuleID Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
@@ -369,28 +354,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded. 
-     * @return FreqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     * Get Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return FreqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String [] getFreqScope() {
         return this.FreqScope;
     }
 
     /**
-     * Set The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
-     * @param FreqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     * Set Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param FreqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setFreqScope(String [] FreqScope) {
         this.FreqScope = FreqScope;

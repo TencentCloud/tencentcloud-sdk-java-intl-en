@@ -118,6 +118,13 @@ The original configuration will apply if this field is not specified.
     private String OriginPort;
 
     /**
+    * Rule tag. The original configuration will apply if it is not specified.
+    */
+    @SerializedName("RuleTag")
+    @Expose
+    private String RuleTag;
+
+    /**
      * Get The site ID. 
      * @return ZoneId The site ID.
      */
@@ -365,6 +372,22 @@ The original configuration will apply if this field is not specified.
         this.OriginPort = OriginPort;
     }
 
+    /**
+     * Get Rule tag. The original configuration will apply if it is not specified. 
+     * @return RuleTag Rule tag. The original configuration will apply if it is not specified.
+     */
+    public String getRuleTag() {
+        return this.RuleTag;
+    }
+
+    /**
+     * Set Rule tag. The original configuration will apply if it is not specified.
+     * @param RuleTag Rule tag. The original configuration will apply if it is not specified.
+     */
+    public void setRuleTag(String RuleTag) {
+        this.RuleTag = RuleTag;
+    }
+
     public ModifyApplicationProxyRuleRequest() {
     }
 
@@ -412,6 +435,9 @@ The original configuration will apply if this field is not specified.
         if (source.OriginPort != null) {
             this.OriginPort = new String(source.OriginPort);
         }
+        if (source.RuleTag != null) {
+            this.RuleTag = new String(source.RuleTag);
+        }
     }
 
 
@@ -430,6 +456,7 @@ The original configuration will apply if this field is not specified.
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
+        this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
 
     }
 }

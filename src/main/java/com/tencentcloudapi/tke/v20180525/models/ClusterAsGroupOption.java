@@ -71,16 +71,16 @@ Note: this field may return null, indicating that no valid value was found.
     private Long ScaleDownUtilizationThreshold;
 
     /**
-    * During scale-in, ignore nodes with local storage pods (default value: False)
-Note: this field may return null, indicating that no valid value was found.
+    * Do not scale in a node if it contains local storage Pods. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SkipNodesWithLocalStorage")
     @Expose
     private Boolean SkipNodesWithLocalStorage;
 
     /**
-    * During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
-Note: this field may return null, indicating that no valid value was found.
+    * Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SkipNodesWithSystemPods")
     @Expose
@@ -247,40 +247,40 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get During scale-in, ignore nodes with local storage pods (default value: False)
-Note: this field may return null, indicating that no valid value was found. 
-     * @return SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
-Note: this field may return null, indicating that no valid value was found.
+     * Get Do not scale in a node if it contains local storage Pods. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+     * @return SkipNodesWithLocalStorage Do not scale in a node if it contains local storage Pods. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getSkipNodesWithLocalStorage() {
         return this.SkipNodesWithLocalStorage;
     }
 
     /**
-     * Set During scale-in, ignore nodes with local storage pods (default value: False)
-Note: this field may return null, indicating that no valid value was found.
-     * @param SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
-Note: this field may return null, indicating that no valid value was found.
+     * Set Do not scale in a node if it contains local storage Pods. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     * @param SkipNodesWithLocalStorage Do not scale in a node if it contains local storage Pods. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSkipNodesWithLocalStorage(Boolean SkipNodesWithLocalStorage) {
         this.SkipNodesWithLocalStorage = SkipNodesWithLocalStorage;
     }
 
     /**
-     * Get During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
-Note: this field may return null, indicating that no valid value was found. 
-     * @return SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
-Note: this field may return null, indicating that no valid value was found.
+     * Get Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+     * @return SkipNodesWithSystemPods Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getSkipNodesWithSystemPods() {
         return this.SkipNodesWithSystemPods;
     }
 
     /**
-     * Set During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
-Note: this field may return null, indicating that no valid value was found.
-     * @param SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
-Note: this field may return null, indicating that no valid value was found.
+     * Set Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     * @param SkipNodesWithSystemPods Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSkipNodesWithSystemPods(Boolean SkipNodesWithSystemPods) {
         this.SkipNodesWithSystemPods = SkipNodesWithSystemPods;

@@ -116,6 +116,14 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     private String OriginPort;
 
     /**
+    * Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleTag")
+    @Expose
+    private String RuleTag;
+
+    /**
      * Get The protocol. Values:
 <li>`TCP`: TCP protocol.</li>
 <li>`UDP`: UDP protocol.</li> 
@@ -367,6 +375,26 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.OriginPort = OriginPort;
     }
 
+    /**
+     * Get Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained. 
+     * @return RuleTag Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+     */
+    public String getRuleTag() {
+        return this.RuleTag;
+    }
+
+    /**
+     * Set Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+     * @param RuleTag Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+     */
+    public void setRuleTag(String RuleTag) {
+        this.RuleTag = RuleTag;
+    }
+
     public ApplicationProxyRule() {
     }
 
@@ -411,6 +439,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.OriginPort != null) {
             this.OriginPort = new String(source.OriginPort);
         }
+        if (source.RuleTag != null) {
+            this.RuleTag = new String(source.RuleTag);
+        }
     }
 
 
@@ -428,6 +459,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
+        this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
 
     }
 }

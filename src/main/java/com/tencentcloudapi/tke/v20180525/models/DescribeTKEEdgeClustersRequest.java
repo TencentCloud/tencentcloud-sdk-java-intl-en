@@ -45,7 +45,7 @@ all clusters under the account are obtained)
     private Long Limit;
 
     /**
-    * Filter condition (only filtering by a single ClusterName is supported)
+    * Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
     */
     @SerializedName("Filters")
     @Expose
@@ -104,16 +104,16 @@ all clusters under the account are obtained)
     }
 
     /**
-     * Get Filter condition (only filtering by a single ClusterName is supported) 
-     * @return Filters Filter condition (only filtering by a single ClusterName is supported)
+     * Get Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"]. 
+     * @return Filters Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition (only filtering by a single ClusterName is supported)
-     * @param Filters Filter condition (only filtering by a single ClusterName is supported)
+     * Set Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
+     * @param Filters Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -77,7 +77,7 @@ task-kind - string (filter by task type)
     private String EndTime;
 
     /**
-    * Filter by compute resource name
+    * The data engine name for filtering.
     */
     @SerializedName("DataEngineName")
     @Expose
@@ -216,16 +216,16 @@ task-kind - string (filter by task type)
     }
 
     /**
-     * Get Filter by compute resource name 
-     * @return DataEngineName Filter by compute resource name
+     * Get The data engine name for filtering. 
+     * @return DataEngineName The data engine name for filtering.
      */
     public String getDataEngineName() {
         return this.DataEngineName;
     }
 
     /**
-     * Set Filter by compute resource name
-     * @param DataEngineName Filter by compute resource name
+     * Set The data engine name for filtering.
+     * @param DataEngineName The data engine name for filtering.
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;

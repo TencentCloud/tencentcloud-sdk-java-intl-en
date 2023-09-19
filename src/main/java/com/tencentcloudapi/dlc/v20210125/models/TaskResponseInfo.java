@@ -65,7 +65,7 @@ public class TaskResponseInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+    * The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
     */
     @SerializedName("State")
     @Expose
@@ -308,21 +308,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ExecutorMaxNumbers;
 
     /**
-    * 
+    * Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("CommonMetrics")
     @Expose
     private CommonMetrics CommonMetrics;
 
     /**
-    * 
+    * The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkMonitorMetrics")
     @Expose
     private SparkMonitorMetrics SparkMonitorMetrics;
 
     /**
-    * 
+    * The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("PrestoMonitorMetrics")
     @Expose
@@ -425,16 +428,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled). 
-     * @return State Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+     * Get The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled). 
+     * @return State The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
-     * @param State Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+     * Set The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
+     * @param State The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
      */
     public void setState(Long State) {
         this.State = State;
@@ -1025,48 +1028,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return CommonMetrics 
+     * Get Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return CommonMetrics Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public CommonMetrics getCommonMetrics() {
         return this.CommonMetrics;
     }
 
     /**
-     * Set 
-     * @param CommonMetrics 
+     * Set Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param CommonMetrics Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setCommonMetrics(CommonMetrics CommonMetrics) {
         this.CommonMetrics = CommonMetrics;
     }
 
     /**
-     * Get  
-     * @return SparkMonitorMetrics 
+     * Get The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return SparkMonitorMetrics The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public SparkMonitorMetrics getSparkMonitorMetrics() {
         return this.SparkMonitorMetrics;
     }
 
     /**
-     * Set 
-     * @param SparkMonitorMetrics 
+     * Set The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param SparkMonitorMetrics The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setSparkMonitorMetrics(SparkMonitorMetrics SparkMonitorMetrics) {
         this.SparkMonitorMetrics = SparkMonitorMetrics;
     }
 
     /**
-     * Get  
-     * @return PrestoMonitorMetrics 
+     * Get The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return PrestoMonitorMetrics The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public PrestoMonitorMetrics getPrestoMonitorMetrics() {
         return this.PrestoMonitorMetrics;
     }
 
     /**
-     * Set 
-     * @param PrestoMonitorMetrics 
+     * Set The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param PrestoMonitorMetrics The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setPrestoMonitorMetrics(PrestoMonitorMetrics PrestoMonitorMetrics) {
         this.PrestoMonitorMetrics = PrestoMonitorMetrics;

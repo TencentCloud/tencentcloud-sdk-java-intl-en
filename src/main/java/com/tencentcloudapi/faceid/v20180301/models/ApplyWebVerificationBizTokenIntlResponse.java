@@ -37,7 +37,7 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
     private String BizToken;
 
     /**
-    * 
+    * The verification URL to be opened with a browser to start the verification process.
     */
     @SerializedName("VerificationURL")
     @Expose
@@ -87,16 +87,16 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return VerificationURL 
+     * Get The verification URL to be opened with a browser to start the verification process. 
+     * @return VerificationURL The verification URL to be opened with a browser to start the verification process.
      */
     public String getVerificationURL() {
         return this.VerificationURL;
     }
 
     /**
-     * Set 
-     * @param VerificationURL 
+     * Set The verification URL to be opened with a browser to start the verification process.
+     * @param VerificationURL The verification URL to be opened with a browser to start the verification process.
      */
     public void setVerificationURL(String VerificationURL) {
         this.VerificationURL = VerificationURL;

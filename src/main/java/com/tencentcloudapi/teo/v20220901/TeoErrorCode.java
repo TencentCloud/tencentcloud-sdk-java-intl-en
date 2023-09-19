@@ -117,6 +117,9 @@ public enum TeoErrorCode {
     // Invalid parameter: The parameter has too many values.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMTOOMANYVALUES("InvalidParameter.ErrInvalidActionParamTooManyValues"),
      
+    // 
+     INVALIDPARAMETER_ERRINVALIDACTIONPARAMVALUE("InvalidParameter.ErrInvalidActionParamValue"),
+     
     // Invalid action type.
      INVALIDPARAMETER_ERRINVALIDACTIONTYPE("InvalidParameter.ErrInvalidActionType"),
      
@@ -155,6 +158,9 @@ public enum TeoErrorCode {
      
     // Invalid condition: The parameter value is 0.
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUEZEROLENGTH("InvalidParameter.ErrInvalidConditionValueZeroLength"),
+     
+    // ELSE is not supported for origin server modification.
+     INVALIDPARAMETER_ERRINVALIDELSEWHENMODIFYORIGINACTIONCONFIGURED("InvalidParameter.ErrInvalidElseWhenModifyOriginActionConfigured"),
      
     // To enable gRPC support, HTTP/2 support must be enabled as well.
      INVALIDPARAMETER_GRPCREQUIREHTTP2("InvalidParameter.GrpcRequireHttp2"),
@@ -197,6 +203,9 @@ public enum TeoErrorCode {
      
     // Invalid cache key.
      INVALIDPARAMETER_INVALIDCACHEKEY("InvalidParameter.InvalidCacheKey"),
+     
+    // 
+     INVALIDPARAMETER_INVALIDCACHEKEYCOOKIE("InvalidParameter.InvalidCacheKeyCookie"),
      
     // Cases are ignored in the cache key.
      INVALIDPARAMETER_INVALIDCACHEKEYIGNORECASE("InvalidParameter.InvalidCacheKeyIgnoreCase"),
@@ -324,6 +333,9 @@ public enum TeoErrorCode {
     // Origin-pull request configuration error: Invalid query string.
      INVALIDPARAMETER_INVALIDUPSTREAMREQUESTQUERYSTRINGVALUE("InvalidParameter.InvalidUpstreamRequestQueryStringValue"),
      
+    // Invalid URL rewrite.
+     INVALIDPARAMETER_INVALIDURLREDIRECT("InvalidParameter.InvalidUrlRedirect"),
+     
     // Invalid target host in the URL rewriting rule.
      INVALIDPARAMETER_INVALIDURLREDIRECTHOST("InvalidParameter.InvalidUrlRedirectHost"),
      
@@ -344,6 +356,9 @@ public enum TeoErrorCode {
      
     // Unsupported preset variables exist.
      INVALIDPARAMETER_NOTSUPPORTTHISPRESET("InvalidParameter.NotSupportThisPreset"),
+     
+    // The domain name is configured to forward requests to the origin directly. iSmart Acceleration must be enabled.
+     INVALIDPARAMETER_OCDIRECTORIGINREQUIRESSMARTROUTING("InvalidParameter.OCDirectOriginRequiresSmartRouting"),
      
     // The origin address cannot be a private IP address.
      INVALIDPARAMETER_ORIGINISINNERIP("InvalidParameter.OriginIsInnerIp"),
@@ -366,6 +381,9 @@ public enum TeoErrorCode {
     // Configuration parameter error.
      INVALIDPARAMETER_SETTINGINVALIDPARAM("InvalidParameter.SettingInvalidParam"),
      
+    // 
+     INVALIDPARAMETER_SPACENOTBINDORIGIN("InvalidParameter.SpaceNotBindOrigin"),
+     
     // Resource error
      INVALIDPARAMETER_TARGET("InvalidParameter.Target"),
      
@@ -380,6 +398,9 @@ public enum TeoErrorCode {
      
     // The site is already bound.
      INVALIDPARAMETER_ZONEHASBEENBOUND("InvalidParameter.ZoneHasBeenBound"),
+     
+    // 
+     INVALIDPARAMETER_ZONEISGRAYPUBLISHING("InvalidParameter.ZoneIsGrayPublishing"),
      
     // The site does not exist.
      INVALIDPARAMETER_ZONENOTFOUND("InvalidParameter.ZoneNotFound"),
@@ -408,8 +429,17 @@ public enum TeoErrorCode {
     // Incorrect DNS record name.
      INVALIDPARAMETERVALUE_INVALIDDNSNAME("InvalidParameterValue.InvalidDNSName"),
      
+    // Invalid accelerated domain name. It can contain [0-9], [A-Z], [a-z] and [-]. It cannot start or end with "-". 
+     INVALIDPARAMETERVALUE_INVALIDDOMAINNAME("InvalidParameterValue.InvalidDomainName"),
+     
     // Invalid domain name. Please check the status.
      INVALIDPARAMETERVALUE_INVALIDDOMAINSTATUS("InvalidParameterValue.InvalidDomainStatus"),
+     
+    // Incorrect DNS proxy
+     INVALIDPARAMETERVALUE_INVALIDPROXYORIGIN("InvalidParameterValue.InvalidProxyOrigin"),
+     
+    // 
+     INVALIDPARAMETERVALUE_ORIGINGROUPNOTEXISTS("InvalidParameterValue.OriginGroupNotExists"),
      
     // The site alias already exists. 
      INVALIDPARAMETERVALUE_ZONESAMEASNAME("InvalidParameterValue.ZoneSameAsName"),
@@ -441,6 +471,9 @@ public enum TeoErrorCode {
     // Cross-MLC-border acceleration and IPv6 cannot be configured at the same time.
      OPERATIONDENIED_ACCELERATEMAINLANDIPV6CONFLICT("OperationDenied.AccelerateMainlandIpv6Conflict"),
      
+    // 
+     OPERATIONDENIED_CONFIGLOCKED("OperationDenied.ConfigLocked"),
+     
     // The EdgeOne service of the site is being disabled. Please try again later.
      OPERATIONDENIED_DISABLEZONENOTCOMPLETED("OperationDenied.DisableZoneNotCompleted"),
      
@@ -452,6 +485,9 @@ public enum TeoErrorCode {
      
     // The domain name doesn't have an ICP filing number.
      OPERATIONDENIED_DOMAINNOICP("OperationDenied.DomainNoICP"),
+     
+    // Unable to modify the service area: There are domain names under the site.
+     OPERATIONDENIED_DOMAINNUMBERISNOTZERO("OperationDenied.DomainNumberIsNotZero"),
      
     // The EdgeOne service of the site is disabled. Please enable it and try again.
      OPERATIONDENIED_ERRZONEISALREADYPAUSED("OperationDenied.ErrZoneIsAlreadyPaused"),
@@ -488,6 +524,15 @@ public enum TeoErrorCode {
      
     // This operation conflicts with concurrent operations. Try again later.
      OPERATIONDENIED_RESOURCELOCKEDTEMPORARY("OperationDenied.ResourceLockedTemporary"),
+     
+    // 
+     OPERATIONDENIED_SHAREDCNAMEUNSUPPORTEDACCELERATEMAINLAND("OperationDenied.SharedCNAMEUnsupportedAccelerateMainland"),
+     
+    // 
+     OPERATIONDENIED_SHAREDCNAMEUNSUPPORTEDIPV6("OperationDenied.SharedCNAMEUnsupportedIPv6"),
+     
+    // 
+     OPERATIONDENIED_ZONEISBINDINGSHAREDCNAME("OperationDenied.ZoneIsBindingSharedCNAME"),
      
     // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),

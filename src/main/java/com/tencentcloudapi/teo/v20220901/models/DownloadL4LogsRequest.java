@@ -37,14 +37,14 @@ public class DownloadL4LogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * List of sites to be queried. All sites will be selected if this field is not specified.
+    * List of sites. This parameter is required. A `null` will be returned if it is left empty.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * List of L4 proxy IDs.
+    * List of L4 proxy instance IDs.
     */
     @SerializedName("ProxyIds")
     @Expose
@@ -97,32 +97,32 @@ public class DownloadL4LogsRequest extends AbstractModel{
     }
 
     /**
-     * Get List of sites to be queried. All sites will be selected if this field is not specified. 
-     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Get List of sites. This parameter is required. A `null` will be returned if it is left empty. 
+     * @return ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites to be queried. All sites will be selected if this field is not specified.
-     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Set List of sites. This parameter is required. A `null` will be returned if it is left empty.
+     * @param ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get List of L4 proxy IDs. 
-     * @return ProxyIds List of L4 proxy IDs.
+     * Get List of L4 proxy instance IDs. 
+     * @return ProxyIds List of L4 proxy instance IDs.
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set List of L4 proxy IDs.
-     * @param ProxyIds List of L4 proxy IDs.
+     * Set List of L4 proxy instance IDs.
+     * @param ProxyIds List of L4 proxy instance IDs.
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;

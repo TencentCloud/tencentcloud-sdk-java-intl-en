@@ -55,20 +55,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Boolean AutoFormatAndMount;
 
     /**
-    * Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-    */
-    @SerializedName("MountTarget")
-    @Expose
-    private String MountTarget;
-
-    /**
     * Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskPartition")
     @Expose
     private String DiskPartition;
+
+    /**
+    * Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("MountTarget")
+    @Expose
+    private String MountTarget;
 
     /**
      * Get Disk type
@@ -151,26 +151,6 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Mounting directory
-Note: This field may return null, indicating that no valid value was found. 
-     * @return MountTarget Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public String getMountTarget() {
-        return this.MountTarget;
-    }
-
-    /**
-     * Set Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-     * @param MountTarget Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public void setMountTarget(String MountTarget) {
-        this.MountTarget = MountTarget;
-    }
-
-    /**
      * Get Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return DiskPartition Mounted device name or partition name (only required when adding an existing node)
@@ -188,6 +168,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public void setDiskPartition(String DiskPartition) {
         this.DiskPartition = DiskPartition;
+    }
+
+    /**
+     * Get Mounting directory
+Note: This field may return null, indicating that no valid value was found. 
+     * @return MountTarget Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getMountTarget() {
+        return this.MountTarget;
+    }
+
+    /**
+     * Set Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+     * @param MountTarget Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setMountTarget(String MountTarget) {
+        this.MountTarget = MountTarget;
     }
 
     public DataDisk() {
@@ -210,11 +210,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.AutoFormatAndMount != null) {
             this.AutoFormatAndMount = new Boolean(source.AutoFormatAndMount);
         }
-        if (source.MountTarget != null) {
-            this.MountTarget = new String(source.MountTarget);
-        }
         if (source.DiskPartition != null) {
             this.DiskPartition = new String(source.DiskPartition);
+        }
+        if (source.MountTarget != null) {
+            this.MountTarget = new String(source.MountTarget);
         }
     }
 
@@ -227,8 +227,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
-        this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
         this.setParamSimple(map, prefix + "DiskPartition", this.DiskPartition);
+        this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSparkAppJobRequest extends AbstractModel{
 
     /**
-    * Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+    * The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
     */
     @SerializedName("JobId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSparkAppJobRequest extends AbstractModel{
     private String JobName;
 
     /**
-     * Get Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid. 
-     * @return JobId Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+     * Get The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used. 
+     * @return JobId The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
-     * @param JobId Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+     * Set The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
+     * @param JobId The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

@@ -72,6 +72,13 @@ public class DBDetail extends AbstractModel{
     private String InternalStatus;
 
     /**
+    * TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private String Encryption;
+
+    /**
      * Get Database name 
      * @return Name Database name
      */
@@ -183,6 +190,22 @@ public class DBDetail extends AbstractModel{
         this.InternalStatus = InternalStatus;
     }
 
+    /**
+     * Get TDE status. Valid values: `enable` (enabled), `disable` (disabled). 
+     * @return Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     */
+    public String getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * @param Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     */
+    public void setEncryption(String Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public DBDetail() {
     }
 
@@ -215,6 +238,9 @@ public class DBDetail extends AbstractModel{
         if (source.InternalStatus != null) {
             this.InternalStatus = new String(source.InternalStatus);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new String(source.Encryption);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class DBDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
         this.setParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
 
     }
 }

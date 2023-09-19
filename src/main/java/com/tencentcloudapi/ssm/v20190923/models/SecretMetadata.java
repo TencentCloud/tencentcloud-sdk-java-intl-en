@@ -146,6 +146,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long TargetUin;
 
     /**
+    * Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RotationFrequency")
+    @Expose
+    private Long RotationFrequency;
+
+    /**
+    * ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceID")
+    @Expose
+    private String ResourceID;
+
+    /**
+    * The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RotationBeginTime")
+    @Expose
+    private String RotationBeginTime;
+
+    /**
      * Get Credential name 
      * @return SecretName Credential name
      */
@@ -445,6 +469,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TargetUin = TargetUin;
     }
 
+    /**
+     * Get Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RotationFrequency Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRotationFrequency() {
+        return this.RotationFrequency;
+    }
+
+    /**
+     * Set Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RotationFrequency Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRotationFrequency(Long RotationFrequency) {
+        this.RotationFrequency = RotationFrequency;
+    }
+
+    /**
+     * Get ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceID ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getResourceID() {
+        return this.ResourceID;
+    }
+
+    /**
+     * Set ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceID ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourceID(String ResourceID) {
+        this.ResourceID = ResourceID;
+    }
+
+    /**
+     * Get The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RotationBeginTime The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRotationBeginTime() {
+        return this.RotationBeginTime;
+    }
+
+    /**
+     * Set The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RotationBeginTime The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRotationBeginTime(String RotationBeginTime) {
+        this.RotationBeginTime = RotationBeginTime;
+    }
+
     public SecretMetadata() {
     }
 
@@ -504,6 +588,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.TargetUin != null) {
             this.TargetUin = new Long(source.TargetUin);
         }
+        if (source.RotationFrequency != null) {
+            this.RotationFrequency = new Long(source.RotationFrequency);
+        }
+        if (source.ResourceID != null) {
+            this.ResourceID = new String(source.ResourceID);
+        }
+        if (source.RotationBeginTime != null) {
+            this.RotationBeginTime = new String(source.RotationBeginTime);
+        }
     }
 
 
@@ -527,6 +620,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
+        this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+        this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
+        this.setParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
 
     }
 }

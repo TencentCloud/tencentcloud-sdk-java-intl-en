@@ -109,6 +109,13 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
     private String OriginPort;
 
     /**
+    * Rule tag. This parameter is left empty by default.
+    */
+    @SerializedName("RuleTag")
+    @Expose
+    private String RuleTag;
+
+    /**
      * Get The site ID. 
      * @return ZoneId The site ID.
      */
@@ -332,6 +339,22 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
         this.OriginPort = OriginPort;
     }
 
+    /**
+     * Get Rule tag. This parameter is left empty by default. 
+     * @return RuleTag Rule tag. This parameter is left empty by default.
+     */
+    public String getRuleTag() {
+        return this.RuleTag;
+    }
+
+    /**
+     * Set Rule tag. This parameter is left empty by default.
+     * @param RuleTag Rule tag. This parameter is left empty by default.
+     */
+    public void setRuleTag(String RuleTag) {
+        this.RuleTag = RuleTag;
+    }
+
     public CreateApplicationProxyRuleRequest() {
     }
 
@@ -376,6 +399,9 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
         if (source.OriginPort != null) {
             this.OriginPort = new String(source.OriginPort);
         }
+        if (source.RuleTag != null) {
+            this.RuleTag = new String(source.RuleTag);
+        }
     }
 
 
@@ -393,6 +419,7 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
+        this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
 
     }
 }

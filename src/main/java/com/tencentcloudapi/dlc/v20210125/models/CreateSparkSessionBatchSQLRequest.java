@@ -86,11 +86,20 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     private String SessionName;
 
     /**
-    * Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+    * The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
     */
     @SerializedName("Arguments")
     @Expose
     private KVPair [] Arguments;
+
+    /**
+    * Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
 
     /**
      * Get The name of the engine for executing the Spark job. 
@@ -237,19 +246,43 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     }
 
     /**
-     * Get Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported. 
-     * @return Arguments Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+     * Get The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations. 
+     * @return Arguments The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
      */
     public KVPair [] getArguments() {
         return this.Arguments;
     }
 
     /**
-     * Set Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
-     * @param Arguments Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+     * Set The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
+     * @param Arguments The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
      */
     public void setArguments(KVPair [] Arguments) {
         this.Arguments = Arguments;
+    }
+
+    /**
+     * Get Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes. 
+     * @return IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     * @param IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
     }
 
     public CreateSparkSessionBatchSQLRequest() {
@@ -293,6 +326,9 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
                 this.Arguments[i] = new KVPair(source.Arguments[i]);
             }
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -310,6 +346,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionName", this.SessionName);
         this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

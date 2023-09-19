@@ -141,7 +141,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EdgeVersion;
 
     /**
-    * 
+    * u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -428,16 +429,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return TagSpecification 
+     * Get u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+     * @return TagSpecification u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public TagSpecification getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 
-     * @param TagSpecification 
+     * Set u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     * @param TagSpecification u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTagSpecification(TagSpecification TagSpecification) {
         this.TagSpecification = TagSpecification;

@@ -51,14 +51,14 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
     private String TaskId;
 
     /**
-    * Update start time
+    * The update start time in the format of yyyy-MM-dd HH:mm:ss.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Update end time
+    * The update end time in the format of yyyy-MM-dd HH:mm:ss.
     */
     @SerializedName("EndTime")
     @Expose
@@ -136,32 +136,32 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get Update start time 
-     * @return StartTime Update start time
+     * Get The update start time in the format of yyyy-MM-dd HH:mm:ss. 
+     * @return StartTime The update start time in the format of yyyy-MM-dd HH:mm:ss.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Update start time
-     * @param StartTime Update start time
+     * Set The update start time in the format of yyyy-MM-dd HH:mm:ss.
+     * @param StartTime The update start time in the format of yyyy-MM-dd HH:mm:ss.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Update end time 
-     * @return EndTime Update end time
+     * Get The update end time in the format of yyyy-MM-dd HH:mm:ss. 
+     * @return EndTime The update end time in the format of yyyy-MM-dd HH:mm:ss.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Update end time
-     * @param EndTime Update end time
+     * Set The update end time in the format of yyyy-MM-dd HH:mm:ss.
+     * @param EndTime The update end time in the format of yyyy-MM-dd HH:mm:ss.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

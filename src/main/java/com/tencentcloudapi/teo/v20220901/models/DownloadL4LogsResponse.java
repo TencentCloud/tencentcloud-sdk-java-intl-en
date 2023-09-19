@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class DownloadL4LogsResponse extends AbstractModel{
 
     /**
-    * The list of L4 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Data")
-    @Expose
-    private L4OfflineLog [] Data;
-
-    /**
     * Total number of query results.
     */
     @SerializedName("TotalCount")
@@ -38,31 +30,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
+    * List of L4 logs.
+    */
+    @SerializedName("Data")
+    @Expose
+    private L4OfflineLog [] Data;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get The list of L4 log data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data The list of L4 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public L4OfflineLog [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set The list of L4 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data The list of L4 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setData(L4OfflineLog [] Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get Total number of query results. 
@@ -78,6 +57,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of L4 logs. 
+     * @return Data List of L4 logs.
+     */
+    public L4OfflineLog [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set List of L4 logs.
+     * @param Data List of L4 logs.
+     */
+    public void setData(L4OfflineLog [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -104,14 +99,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DownloadL4LogsResponse(DownloadL4LogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.Data != null) {
             this.Data = new L4OfflineLog[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
                 this.Data[i] = new L4OfflineLog(source.Data[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

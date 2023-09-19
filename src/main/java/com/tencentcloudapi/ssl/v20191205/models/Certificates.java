@@ -329,6 +329,30 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long AutoRenewFlag;
 
     /**
+    * The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HostingStatus")
+    @Expose
+    private Long HostingStatus;
+
+    /**
+    * The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HostingCompleteTime")
+    @Expose
+    private String HostingCompleteTime;
+
+    /**
+    * The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HostingRenewCertId")
+    @Expose
+    private String HostingRenewCertId;
+
+    /**
      * Get User UIN
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return OwnerUin User UIN
@@ -1096,6 +1120,66 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    /**
+     * Get The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getHostingStatus() {
+        return this.HostingStatus;
+    }
+
+    /**
+     * Set The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHostingStatus(Long HostingStatus) {
+        this.HostingStatus = HostingStatus;
+    }
+
+    /**
+     * Get The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HostingCompleteTime The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHostingCompleteTime() {
+        return this.HostingCompleteTime;
+    }
+
+    /**
+     * Set The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HostingCompleteTime The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHostingCompleteTime(String HostingCompleteTime) {
+        this.HostingCompleteTime = HostingCompleteTime;
+    }
+
+    /**
+     * Get The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HostingRenewCertId The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHostingRenewCertId() {
+        return this.HostingRenewCertId;
+    }
+
+    /**
+     * Set The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HostingRenewCertId The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHostingRenewCertId(String HostingRenewCertId) {
+        this.HostingRenewCertId = HostingRenewCertId;
+    }
+
     public Certificates() {
     }
 
@@ -1236,6 +1320,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.HostingStatus != null) {
+            this.HostingStatus = new Long(source.HostingStatus);
+        }
+        if (source.HostingCompleteTime != null) {
+            this.HostingCompleteTime = new String(source.HostingCompleteTime);
+        }
+        if (source.HostingRenewCertId != null) {
+            this.HostingRenewCertId = new String(source.HostingRenewCertId);
+        }
     }
 
 
@@ -1281,6 +1374,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
         this.setParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
+        this.setParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
+        this.setParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
 
     }
 }

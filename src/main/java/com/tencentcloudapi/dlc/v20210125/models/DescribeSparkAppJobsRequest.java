@@ -37,7 +37,7 @@ public class DescribeSparkAppJobsRequest extends AbstractModel{
     private String Sorting;
 
     /**
-    * Filter by this parameter, which can be `spark-job-name`.
+    * The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
     */
     @SerializedName("Filters")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeSparkAppJobsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by this parameter, which can be `spark-job-name`. 
-     * @return Filters Filter by this parameter, which can be `spark-job-name`.
+     * Get The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search). 
+     * @return Filters The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter by this parameter, which can be `spark-job-name`.
-     * @param Filters Filter by this parameter, which can be `spark-job-name`.
+     * Set The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
+     * @param Filters The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

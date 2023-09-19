@@ -121,7 +121,7 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-    * Number of instances purchased this time. Default value: `1`.
+    * Number of read-only instances to be purchased this time. Default value: `2`.
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -415,16 +415,16 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of instances purchased this time. Default value: `1`. 
-     * @return GoodsNum Number of instances purchased this time. Default value: `1`.
+     * Get Number of read-only instances to be purchased this time. Default value: `2`. 
+     * @return GoodsNum Number of read-only instances to be purchased this time. Default value: `2`.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instances purchased this time. Default value: `1`.
-     * @param GoodsNum Number of instances purchased this time. Default value: `1`.
+     * Set Number of read-only instances to be purchased this time. Default value: `2`.
+     * @param GoodsNum Number of read-only instances to be purchased this time. Default value: `2`.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;

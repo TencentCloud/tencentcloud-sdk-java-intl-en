@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeEngineUsageInfoRequest extends AbstractModel{
 
     /**
-    * The house ID.
+    * The data engine ID.
     */
     @SerializedName("DataEngineId")
     @Expose
     private String DataEngineId;
 
     /**
-     * Get The house ID. 
-     * @return DataEngineId The house ID.
+     * Get The data engine ID. 
+     * @return DataEngineId The data engine ID.
      */
     public String getDataEngineId() {
         return this.DataEngineId;
     }
 
     /**
-     * Set The house ID.
-     * @param DataEngineId The house ID.
+     * Set The data engine ID.
+     * @param DataEngineId The data engine ID.
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;

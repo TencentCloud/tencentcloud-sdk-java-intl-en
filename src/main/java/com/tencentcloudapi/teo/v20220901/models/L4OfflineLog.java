@@ -23,156 +23,197 @@ import java.util.HashMap;
 public class L4OfflineLog extends AbstractModel{
 
     /**
-    * The start time of the log packaging.
-    */
-    @SerializedName("LogTime")
-    @Expose
-    private Long LogTime;
-
-    /**
-    * The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * L4 proxy instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The log size, in bytes.
-    */
-    @SerializedName("Size")
-    @Expose
-    private Long Size;
-
-    /**
-    * The download address.
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
-    * The log package name.
-    */
-    @SerializedName("LogPacketName")
-    @Expose
-    private String LogPacketName;
-
-    /**
-    * The acceleration region. Values:
+    * Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get The start time of the log packaging. 
-     * @return LogTime The start time of the log packaging.
-     */
-    public Long getLogTime() {
-        return this.LogTime;
-    }
+    * Log packet name.
+    */
+    @SerializedName("LogPacketName")
+    @Expose
+    private String LogPacketName;
 
     /**
-     * Set The start time of the log packaging.
-     * @param LogTime The start time of the log packaging.
-     */
-    public void setLogTime(Long LogTime) {
-        this.LogTime = LogTime;
-    }
+    * Log download address.
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
-     * Get The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyId The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * (Disused) Log packaging time. 
+    */
+    @SerializedName("LogTime")
+    @Expose
+    private Long LogTime;
+
+    /**
+    * Start time of log packaging.
+    */
+    @SerializedName("LogStartTime")
+    @Expose
+    private String LogStartTime;
+
+    /**
+    * End time of the log package.
+    */
+    @SerializedName("LogEndTime")
+    @Expose
+    private String LogEndTime;
+
+    /**
+    * Log size (in bytes).
+    */
+    @SerializedName("Size")
+    @Expose
+    private Long Size;
+
+    /**
+     * Get L4 proxy instance ID. 
+     * @return ProxyId L4 proxy instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyId The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set L4 proxy instance ID.
+     * @param ProxyId L4 proxy instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The log size, in bytes. 
-     * @return Size The log size, in bytes.
-     */
-    public Long getSize() {
-        return this.Size;
-    }
-
-    /**
-     * Set The log size, in bytes.
-     * @param Size The log size, in bytes.
-     */
-    public void setSize(Long Size) {
-        this.Size = Size;
-    }
-
-    /**
-     * Get The download address. 
-     * @return Url The download address.
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set The download address.
-     * @param Url The download address.
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
-
-    /**
-     * Get The log package name. 
-     * @return LogPacketName The log package name.
-     */
-    public String getLogPacketName() {
-        return this.LogPacketName;
-    }
-
-    /**
-     * Set The log package name.
-     * @param LogPacketName The log package name.
-     */
-    public void setLogPacketName(String LogPacketName) {
-        this.LogPacketName = LogPacketName;
-    }
-
-    /**
-     * Get The acceleration region. Values:
+     * Get Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li> 
-     * @return Area The acceleration region. Values:
+<li>`overseas`: Global (outside the Chinese mainland). </li> 
+     * @return Area Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The acceleration region. Values:
+     * Set Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-     * @param Area The acceleration region. Values:
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * @param Area Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
      */
     public void setArea(String Area) {
         this.Area = Area;
+    }
+
+    /**
+     * Get Log packet name. 
+     * @return LogPacketName Log packet name.
+     */
+    public String getLogPacketName() {
+        return this.LogPacketName;
+    }
+
+    /**
+     * Set Log packet name.
+     * @param LogPacketName Log packet name.
+     */
+    public void setLogPacketName(String LogPacketName) {
+        this.LogPacketName = LogPacketName;
+    }
+
+    /**
+     * Get Log download address. 
+     * @return Url Log download address.
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Log download address.
+     * @param Url Log download address.
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get (Disused) Log packaging time.  
+     * @return LogTime (Disused) Log packaging time. 
+     */
+    public Long getLogTime() {
+        return this.LogTime;
+    }
+
+    /**
+     * Set (Disused) Log packaging time. 
+     * @param LogTime (Disused) Log packaging time. 
+     */
+    public void setLogTime(Long LogTime) {
+        this.LogTime = LogTime;
+    }
+
+    /**
+     * Get Start time of log packaging. 
+     * @return LogStartTime Start time of log packaging.
+     */
+    public String getLogStartTime() {
+        return this.LogStartTime;
+    }
+
+    /**
+     * Set Start time of log packaging.
+     * @param LogStartTime Start time of log packaging.
+     */
+    public void setLogStartTime(String LogStartTime) {
+        this.LogStartTime = LogStartTime;
+    }
+
+    /**
+     * Get End time of the log package. 
+     * @return LogEndTime End time of the log package.
+     */
+    public String getLogEndTime() {
+        return this.LogEndTime;
+    }
+
+    /**
+     * Set End time of the log package.
+     * @param LogEndTime End time of the log package.
+     */
+    public void setLogEndTime(String LogEndTime) {
+        this.LogEndTime = LogEndTime;
+    }
+
+    /**
+     * Get Log size (in bytes). 
+     * @return Size Log size (in bytes).
+     */
+    public Long getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set Log size (in bytes).
+     * @param Size Log size (in bytes).
+     */
+    public void setSize(Long Size) {
+        this.Size = Size;
     }
 
     public L4OfflineLog() {
@@ -183,23 +224,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public L4OfflineLog(L4OfflineLog source) {
-        if (source.LogTime != null) {
-            this.LogTime = new Long(source.LogTime);
-        }
         if (source.ProxyId != null) {
             this.ProxyId = new String(source.ProxyId);
         }
-        if (source.Size != null) {
-            this.Size = new Long(source.Size);
-        }
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
         }
         if (source.LogPacketName != null) {
             this.LogPacketName = new String(source.LogPacketName);
         }
-        if (source.Area != null) {
-            this.Area = new String(source.Area);
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.LogTime != null) {
+            this.LogTime = new Long(source.LogTime);
+        }
+        if (source.LogStartTime != null) {
+            this.LogStartTime = new String(source.LogStartTime);
+        }
+        if (source.LogEndTime != null) {
+            this.LogEndTime = new String(source.LogEndTime);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
         }
     }
 
@@ -208,12 +255,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LogTime", this.LogTime);
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
-        this.setParamSimple(map, prefix + "Size", this.Size);
-        this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "LogTime", this.LogTime);
+        this.setParamSimple(map, prefix + "LogStartTime", this.LogStartTime);
+        this.setParamSimple(map, prefix + "LogEndTime", this.LogEndTime);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

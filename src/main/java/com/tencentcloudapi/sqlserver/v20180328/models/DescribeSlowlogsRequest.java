@@ -30,14 +30,14 @@ public class DescribeSlowlogsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Query start time
+    * Start time in the format of `yyyy-MM-dd HH:mm:ss`
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time
+    * End time in the format of `yyyy-MM-dd HH:mm:ss`
     */
     @SerializedName("EndTime")
     @Expose
@@ -74,32 +74,32 @@ public class DescribeSlowlogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Query start time 
-     * @return StartTime Query start time
+     * Get Start time in the format of `yyyy-MM-dd HH:mm:ss` 
+     * @return StartTime Start time in the format of `yyyy-MM-dd HH:mm:ss`
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time
-     * @param StartTime Query start time
+     * Set Start time in the format of `yyyy-MM-dd HH:mm:ss`
+     * @param StartTime Start time in the format of `yyyy-MM-dd HH:mm:ss`
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time 
-     * @return EndTime Query end time
+     * Get End time in the format of `yyyy-MM-dd HH:mm:ss` 
+     * @return EndTime End time in the format of `yyyy-MM-dd HH:mm:ss`
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time
-     * @param EndTime Query end time
+     * Set End time in the format of `yyyy-MM-dd HH:mm:ss`
+     * @param EndTime End time in the format of `yyyy-MM-dd HH:mm:ss`
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

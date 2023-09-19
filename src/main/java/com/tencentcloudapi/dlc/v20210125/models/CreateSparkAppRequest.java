@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class CreateSparkAppRequest extends AbstractModel{
 
     /**
-    * Spark application name
+    * The Spark job name.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 1: Spark JAR application; 2: Spark streaming application
+    * The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
     */
     @SerializedName("AppType")
     @Expose
     private Long AppType;
 
     /**
-    * The data engine executing the Spark job
+    * The data engine executing the Spark job.
     */
     @SerializedName("DataEngine")
     @Expose
     private String DataEngine;
 
     /**
-    * Execution entry of the Spark application
+    * The path of the Spark job package.
     */
     @SerializedName("AppFile")
     @Expose
     private String AppFile;
 
     /**
-    * Execution role ID of the Spark job
+    * The data access policy (CAM role arn).
     */
     @SerializedName("RoleArn")
     @Expose
     private Long RoleArn;
 
     /**
-    * Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+    * The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
     */
     @SerializedName("AppDriverSize")
     @Expose
     private String AppDriverSize;
 
     /**
-    * Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+    * The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
     */
     @SerializedName("AppExecutorSize")
     @Expose
@@ -86,14 +86,14 @@ public class CreateSparkAppRequest extends AbstractModel{
     private String Eni;
 
     /**
-    * Whether it is upload locally. Valid values: `cos`, `lakefs`.
+    * The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
     */
     @SerializedName("IsLocal")
     @Expose
     private String IsLocal;
 
     /**
-    * Main class of the Spark JAR job during execution
+    * The main class of the Spark job.
     */
     @SerializedName("MainClass")
     @Expose
@@ -107,77 +107,77 @@ public class CreateSparkAppRequest extends AbstractModel{
     private String AppConf;
 
     /**
-    * Whether it is upload locally. Valid values: `cos`, `lakefs`.
+    * The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
     */
     @SerializedName("IsLocalJars")
     @Expose
     private String IsLocalJars;
 
     /**
-    * Dependency JAR packages of the Spark JAR job separated by comma
+    * The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
     */
     @SerializedName("AppJars")
     @Expose
     private String AppJars;
 
     /**
-    * Whether it is upload locally. Valid values: `cos`, `lakefs`.
+    * The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
     */
     @SerializedName("IsLocalFiles")
     @Expose
     private String IsLocalFiles;
 
     /**
-    * Dependency resources of the Spark job separated by comma
+    * The dependency files of the Spark job (files other than JAR and ZIP packages) separated by comma.
     */
     @SerializedName("AppFiles")
     @Expose
     private String AppFiles;
 
     /**
-    * Command line parameters of the Spark job
+    * The input parameters of the Spark job, separated by comma.
     */
     @SerializedName("CmdArgs")
     @Expose
     private String CmdArgs;
 
     /**
-    * This parameter takes effect only for Spark flow tasks.
+    * The maximum number of retries, valid for Spark streaming tasks only.
     */
     @SerializedName("MaxRetries")
     @Expose
     private Long MaxRetries;
 
     /**
-    * Data source name
+    * The data source name.
     */
     @SerializedName("DataSource")
     @Expose
     private String DataSource;
 
     /**
-    * PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+    * The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
     */
     @SerializedName("IsLocalPythonFiles")
     @Expose
     private String IsLocalPythonFiles;
 
     /**
-    * PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+    * The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
     */
     @SerializedName("AppPythonFiles")
     @Expose
     private String AppPythonFiles;
 
     /**
-    * Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+    * The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
     */
     @SerializedName("IsLocalArchives")
     @Expose
     private String IsLocalArchives;
 
     /**
-    * Archives: Dependency resources
+    * The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
     */
     @SerializedName("AppArchives")
     @Expose
@@ -219,112 +219,119 @@ public class CreateSparkAppRequest extends AbstractModel{
     private Long IsInherit;
 
     /**
-     * Get Spark application name 
-     * @return AppName Spark application name
+    * Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+    */
+    @SerializedName("IsSessionStarted")
+    @Expose
+    private Boolean IsSessionStarted;
+
+    /**
+     * Get The Spark job name. 
+     * @return AppName The Spark job name.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Spark application name
-     * @param AppName Spark application name
+     * Set The Spark job name.
+     * @param AppName The Spark job name.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 1: Spark JAR application; 2: Spark streaming application 
-     * @return AppType 1: Spark JAR application; 2: Spark streaming application
+     * Get The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job. 
+     * @return AppType The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
      */
     public Long getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 1: Spark JAR application; 2: Spark streaming application
-     * @param AppType 1: Spark JAR application; 2: Spark streaming application
+     * Set The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
+     * @param AppType The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
      */
     public void setAppType(Long AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get The data engine executing the Spark job 
-     * @return DataEngine The data engine executing the Spark job
+     * Get The data engine executing the Spark job. 
+     * @return DataEngine The data engine executing the Spark job.
      */
     public String getDataEngine() {
         return this.DataEngine;
     }
 
     /**
-     * Set The data engine executing the Spark job
-     * @param DataEngine The data engine executing the Spark job
+     * Set The data engine executing the Spark job.
+     * @param DataEngine The data engine executing the Spark job.
      */
     public void setDataEngine(String DataEngine) {
         this.DataEngine = DataEngine;
     }
 
     /**
-     * Get Execution entry of the Spark application 
-     * @return AppFile Execution entry of the Spark application
+     * Get The path of the Spark job package. 
+     * @return AppFile The path of the Spark job package.
      */
     public String getAppFile() {
         return this.AppFile;
     }
 
     /**
-     * Set Execution entry of the Spark application
-     * @param AppFile Execution entry of the Spark application
+     * Set The path of the Spark job package.
+     * @param AppFile The path of the Spark job package.
      */
     public void setAppFile(String AppFile) {
         this.AppFile = AppFile;
     }
 
     /**
-     * Get Execution role ID of the Spark job 
-     * @return RoleArn Execution role ID of the Spark job
+     * Get The data access policy (CAM role arn). 
+     * @return RoleArn The data access policy (CAM role arn).
      */
     public Long getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set Execution role ID of the Spark job
-     * @param RoleArn Execution role ID of the Spark job
+     * Set The data access policy (CAM role arn).
+     * @param RoleArn The data access policy (CAM role arn).
      */
     public void setRoleArn(Long RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`. 
-     * @return AppDriverSize Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * Get The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs). 
+     * @return AppDriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      */
     public String getAppDriverSize() {
         return this.AppDriverSize;
     }
 
     /**
-     * Set Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-     * @param AppDriverSize Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * Set The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+     * @param AppDriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      */
     public void setAppDriverSize(String AppDriverSize) {
         this.AppDriverSize = AppDriverSize;
     }
 
     /**
-     * Get Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`. 
-     * @return AppExecutorSize Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * Get The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs). 
+     * @return AppExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      */
     public String getAppExecutorSize() {
         return this.AppExecutorSize;
     }
 
     /**
-     * Set Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-     * @param AppExecutorSize Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * Set The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+     * @param AppExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      */
     public void setAppExecutorSize(String AppExecutorSize) {
         this.AppExecutorSize = AppExecutorSize;
@@ -363,32 +370,32 @@ public class CreateSparkAppRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether it is upload locally. Valid values: `cos`, `lakefs`. 
-     * @return IsLocal Whether it is upload locally. Valid values: `cos`, `lakefs`.
+     * Get The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls). 
+     * @return IsLocal The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public String getIsLocal() {
         return this.IsLocal;
     }
 
     /**
-     * Set Whether it is upload locally. Valid values: `cos`, `lakefs`.
-     * @param IsLocal Whether it is upload locally. Valid values: `cos`, `lakefs`.
+     * Set The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param IsLocal The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public void setIsLocal(String IsLocal) {
         this.IsLocal = IsLocal;
     }
 
     /**
-     * Get Main class of the Spark JAR job during execution 
-     * @return MainClass Main class of the Spark JAR job during execution
+     * Get The main class of the Spark job. 
+     * @return MainClass The main class of the Spark job.
      */
     public String getMainClass() {
         return this.MainClass;
     }
 
     /**
-     * Set Main class of the Spark JAR job during execution
-     * @param MainClass Main class of the Spark JAR job during execution
+     * Set The main class of the Spark job.
+     * @param MainClass The main class of the Spark job.
      */
     public void setMainClass(String MainClass) {
         this.MainClass = MainClass;
@@ -411,176 +418,176 @@ public class CreateSparkAppRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether it is upload locally. Valid values: `cos`, `lakefs`. 
-     * @return IsLocalJars Whether it is upload locally. Valid values: `cos`, `lakefs`.
+     * Get The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls). 
+     * @return IsLocalJars The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public String getIsLocalJars() {
         return this.IsLocalJars;
     }
 
     /**
-     * Set Whether it is upload locally. Valid values: `cos`, `lakefs`.
-     * @param IsLocalJars Whether it is upload locally. Valid values: `cos`, `lakefs`.
+     * Set The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param IsLocalJars The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public void setIsLocalJars(String IsLocalJars) {
         this.IsLocalJars = IsLocalJars;
     }
 
     /**
-     * Get Dependency JAR packages of the Spark JAR job separated by comma 
-     * @return AppJars Dependency JAR packages of the Spark JAR job separated by comma
+     * Get The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma. 
+     * @return AppJars The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
      */
     public String getAppJars() {
         return this.AppJars;
     }
 
     /**
-     * Set Dependency JAR packages of the Spark JAR job separated by comma
-     * @param AppJars Dependency JAR packages of the Spark JAR job separated by comma
+     * Set The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
+     * @param AppJars The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
      */
     public void setAppJars(String AppJars) {
         this.AppJars = AppJars;
     }
 
     /**
-     * Get Whether it is upload locally. Valid values: `cos`, `lakefs`. 
-     * @return IsLocalFiles Whether it is upload locally. Valid values: `cos`, `lakefs`.
+     * Get The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls). 
+     * @return IsLocalFiles The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public String getIsLocalFiles() {
         return this.IsLocalFiles;
     }
 
     /**
-     * Set Whether it is upload locally. Valid values: `cos`, `lakefs`.
-     * @param IsLocalFiles Whether it is upload locally. Valid values: `cos`, `lakefs`.
+     * Set The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param IsLocalFiles The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public void setIsLocalFiles(String IsLocalFiles) {
         this.IsLocalFiles = IsLocalFiles;
     }
 
     /**
-     * Get Dependency resources of the Spark job separated by comma 
-     * @return AppFiles Dependency resources of the Spark job separated by comma
+     * Get The dependency files of the Spark job (files other than JAR and ZIP packages) separated by comma. 
+     * @return AppFiles The dependency files of the Spark job (files other than JAR and ZIP packages) separated by comma.
      */
     public String getAppFiles() {
         return this.AppFiles;
     }
 
     /**
-     * Set Dependency resources of the Spark job separated by comma
-     * @param AppFiles Dependency resources of the Spark job separated by comma
+     * Set The dependency files of the Spark job (files other than JAR and ZIP packages) separated by comma.
+     * @param AppFiles The dependency files of the Spark job (files other than JAR and ZIP packages) separated by comma.
      */
     public void setAppFiles(String AppFiles) {
         this.AppFiles = AppFiles;
     }
 
     /**
-     * Get Command line parameters of the Spark job 
-     * @return CmdArgs Command line parameters of the Spark job
+     * Get The input parameters of the Spark job, separated by comma. 
+     * @return CmdArgs The input parameters of the Spark job, separated by comma.
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set Command line parameters of the Spark job
-     * @param CmdArgs Command line parameters of the Spark job
+     * Set The input parameters of the Spark job, separated by comma.
+     * @param CmdArgs The input parameters of the Spark job, separated by comma.
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;
     }
 
     /**
-     * Get This parameter takes effect only for Spark flow tasks. 
-     * @return MaxRetries This parameter takes effect only for Spark flow tasks.
+     * Get The maximum number of retries, valid for Spark streaming tasks only. 
+     * @return MaxRetries The maximum number of retries, valid for Spark streaming tasks only.
      */
     public Long getMaxRetries() {
         return this.MaxRetries;
     }
 
     /**
-     * Set This parameter takes effect only for Spark flow tasks.
-     * @param MaxRetries This parameter takes effect only for Spark flow tasks.
+     * Set The maximum number of retries, valid for Spark streaming tasks only.
+     * @param MaxRetries The maximum number of retries, valid for Spark streaming tasks only.
      */
     public void setMaxRetries(Long MaxRetries) {
         this.MaxRetries = MaxRetries;
     }
 
     /**
-     * Get Data source name 
-     * @return DataSource Data source name
+     * Get The data source name. 
+     * @return DataSource The data source name.
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set Data source name
-     * @param DataSource Data source name
+     * Set The data source name.
+     * @param DataSource The data source name.
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;
     }
 
     /**
-     * Get PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs). 
-     * @return IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * Get The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls). 
+     * @return IsLocalPythonFiles The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public String getIsLocalPythonFiles() {
         return this.IsLocalPythonFiles;
     }
 
     /**
-     * Set PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-     * @param IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * Set The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param IsLocalPythonFiles The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public void setIsLocalPythonFiles(String IsLocalPythonFiles) {
         this.IsLocalPythonFiles = IsLocalPythonFiles;
     }
 
     /**
-     * Get PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma. 
-     * @return AppPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+     * Get The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported. 
+     * @return AppPythonFiles The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
      */
     public String getAppPythonFiles() {
         return this.AppPythonFiles;
     }
 
     /**
-     * Set PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-     * @param AppPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+     * Set The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
+     * @param AppPythonFiles The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
      */
     public void setAppPythonFiles(String AppPythonFiles) {
         this.AppPythonFiles = AppPythonFiles;
     }
 
     /**
-     * Get Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs). 
-     * @return IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * Get The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls). 
+     * @return IsLocalArchives The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public String getIsLocalArchives() {
         return this.IsLocalArchives;
     }
 
     /**
-     * Set Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-     * @param IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * Set The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param IsLocalArchives The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public void setIsLocalArchives(String IsLocalArchives) {
         this.IsLocalArchives = IsLocalArchives;
     }
 
     /**
-     * Get Archives: Dependency resources 
-     * @return AppArchives Archives: Dependency resources
+     * Get The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported. 
+     * @return AppArchives The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
      */
     public String getAppArchives() {
         return this.AppArchives;
     }
 
     /**
-     * Set Archives: Dependency resources
-     * @param AppArchives Archives: Dependency resources
+     * Set The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
+     * @param AppArchives The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
      */
     public void setAppArchives(String AppArchives) {
         this.AppArchives = AppArchives;
@@ -664,6 +671,22 @@ public class CreateSparkAppRequest extends AbstractModel{
      */
     public void setIsInherit(Long IsInherit) {
         this.IsInherit = IsInherit;
+    }
+
+    /**
+     * Get Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes. 
+     * @return IsSessionStarted Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+     */
+    public Boolean getIsSessionStarted() {
+        return this.IsSessionStarted;
+    }
+
+    /**
+     * Set Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+     * @param IsSessionStarted Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+     */
+    public void setIsSessionStarted(Boolean IsSessionStarted) {
+        this.IsSessionStarted = IsSessionStarted;
     }
 
     public CreateSparkAppRequest() {
@@ -758,6 +781,9 @@ public class CreateSparkAppRequest extends AbstractModel{
         if (source.IsInherit != null) {
             this.IsInherit = new Long(source.IsInherit);
         }
+        if (source.IsSessionStarted != null) {
+            this.IsSessionStarted = new Boolean(source.IsSessionStarted);
+        }
     }
 
 
@@ -793,6 +819,7 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
 
     }
 }

@@ -144,7 +144,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a Spark application.
+     *This API is used to create a Spark job.
      * @param req CreateSparkAppRequest
      * @return CreateSparkAppResponse
      * @throws TencentCloudSDKException
@@ -165,7 +165,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a Spark task.
+     *This API is used to start a Spark job.
      * @param req CreateSparkAppTaskRequest
      * @return CreateSparkAppTaskResponse
      * @throws TencentCloudSDKException
@@ -186,7 +186,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to submit a Spark SQL batch task.
+     *This API is used to submit a Spark SQL batch task to the job engine.
      * @param req CreateSparkSessionBatchSQLRequest
      * @return CreateSparkSessionBatchSQLResponse
      * @throws TencentCloudSDKException
@@ -207,7 +207,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
+     *This API is used to create and execute a SQL task. (`CreateTasks` is recommended.)
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -228,7 +228,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create tasks in batches.
+     *This API is used to create and execute SQL tasks in batches.
      * @param req CreateTasksRequest
      * @return CreateTasksResponse
      * @throws TencentCloudSDKException
@@ -249,7 +249,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a Spark application.
+     *This API is used to delete a Spark job.
      * @param req DeleteSparkAppRequest
      * @return DeleteSparkAppResponse
      * @throws TencentCloudSDKException
@@ -291,7 +291,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of disabled table attributes.
+     *This API is used to get the list of disabled table attributes (new).
      * @param req DescribeForbiddenTableProRequest
      * @return DescribeForbiddenTableProResponse
      * @throws TencentCloudSDKException
@@ -375,7 +375,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query a specific Spark application.
+     *u200cThis API is used to query the information of a Spark job.
      * @param req DescribeSparkAppJobRequest
      * @return DescribeSparkAppJobResponse
      * @throws TencentCloudSDKException
@@ -396,7 +396,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of Spark applications.
+     *This API is used to query the list of Spark jobs.
      * @param req DescribeSparkAppJobsRequest
      * @return DescribeSparkAppJobsResponse
      * @throws TencentCloudSDKException
@@ -417,7 +417,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of running task instances of a Spark application.
+     *This API is used to query the list of running task instances of a Spark job.
      * @param req DescribeSparkAppTasksRequest
      * @return DescribeSparkAppTasksResponse
      * @throws TencentCloudSDKException
@@ -501,6 +501,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enumerate user roles.
+     * @param req DescribeUserRolesRequest
+     * @return DescribeUserRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserRolesResponse DescribeUserRoles(DescribeUserRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserRolesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to generate SQL statements for creating a managed table.
      * @param req GenerateCreateMangedTableSqlRequest
      * @return GenerateCreateMangedTableSqlResponse
@@ -543,7 +564,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to update a Spark application.
+     *This API is used to update a Spark job.
      * @param req ModifySparkAppRequest
      * @return ModifySparkAppResponse
      * @throws TencentCloudSDKException
@@ -585,7 +606,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to suspend or resume a data engine.
+     *This API is used to suspend or start a data engine.
      * @param req SuspendResumeDataEngineRequest
      * @return SuspendResumeDataEngineResponse
      * @throws TencentCloudSDKException
