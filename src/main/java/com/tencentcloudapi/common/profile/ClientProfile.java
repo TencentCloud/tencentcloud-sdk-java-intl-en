@@ -19,87 +19,93 @@ package com.tencentcloudapi.common.profile;
 
 public class ClientProfile {
 
-  /** Signature process version 1, with HmacSHA1. */
-  public static final String SIGN_SHA1 = "HmacSHA1";
+    /**
+     * Signature process version 1, with HmacSHA1.
+     */
+    public static final String SIGN_SHA1 = "HmacSHA1";
 
-  /** Signature process version 1, with HmacSHA256. */
-  public static final String SIGN_SHA256 = "HmacSHA256";
+    /**
+     * Signature process version 1, with HmacSHA256.
+     */
+    public static final String SIGN_SHA256 = "HmacSHA256";
 
-  /** Signature process version 3. */
-  public static final String SIGN_TC3_256 = "TC3-HMAC-SHA256";
+    /**
+     * Signature process version 3.
+     */
+    public static final String SIGN_TC3_256 = "TC3-HMAC-SHA256";
 
-  private HttpProfile httpProfile;
+    private HttpProfile httpProfile;
 
-  private String signMethod;
+    private String signMethod;
 
-  /**
-   * If payload is NOT involved in signing process, true means will ignore payload, default is
-   * false.
-   */
-  private boolean unsignedPayload;
+    /**
+     * If payload is NOT involved in signing process, true means will ignore payload, default is
+     * false.
+     */
+    private boolean unsignedPayload;
 
-  /**
-   * valid choices: zh-CN, en-US
-   */
-  private Language language;
+    /**
+     * valid choices: zh-CN, en-US
+     */
+    private Language language;
 
-  public ClientProfile(String signMethod, HttpProfile httpProfile) {
-    if (signMethod == null || signMethod.isEmpty()) {
-      signMethod = SIGN_TC3_256;
+    public ClientProfile(String signMethod, HttpProfile httpProfile) {
+        if (signMethod == null || signMethod.isEmpty()) {
+            signMethod = SIGN_TC3_256;
+        }
+        this.signMethod = signMethod;
+        this.httpProfile = httpProfile;
+        this.unsignedPayload = false;
+        this.language = Language.EN_US;
     }
-    this.signMethod = signMethod;
-    this.httpProfile = httpProfile;
-    this.unsignedPayload = false;
-    this.language = Language.EN_US;
-  }
 
-  public ClientProfile(String signMethod) {
-    this(signMethod, new HttpProfile());
-  }
+    public ClientProfile(String signMethod) {
+        this(signMethod, new HttpProfile());
+    }
 
-  public ClientProfile() {
-    this(ClientProfile.SIGN_TC3_256, new HttpProfile());
-  }
+    public ClientProfile() {
+        this(ClientProfile.SIGN_TC3_256, new HttpProfile());
+    }
 
-  public void setSignMethod(String signMethod) {
-    this.signMethod = signMethod;
-  }
+    public String getSignMethod() {
+        return this.signMethod;
+    }
 
-  public void setHttpProfile(HttpProfile httpProfile) {
-    this.httpProfile = httpProfile;
-  }
+    public void setSignMethod(String signMethod) {
+        this.signMethod = signMethod;
+    }
 
-  public String getSignMethod() {
-    return this.signMethod;
-  }
+    public HttpProfile getHttpProfile() {
+        return this.httpProfile;
+    }
 
-  public HttpProfile getHttpProfile() {
-    return this.httpProfile;
-  }
+    public void setHttpProfile(HttpProfile httpProfile) {
+        this.httpProfile = httpProfile;
+    }
 
-  /**
-   * Set the flag of whether payload should be ignored. Only has effect when request method is POST.
-   *
-   * @param flag
-   */
-  public void setUnsignedPayload(boolean flag) {
-    this.unsignedPayload = flag;
-  }
+    /**
+     * Get the flag of whether payload is ignored.
+     *
+     * @return
+     */
+    public boolean isUnsignedPayload() {
+        return this.unsignedPayload;
+    }
 
-  /**
-   * Get the flag of whether payload is ignored.
-   *
-   * @return
-   */
-  public boolean isUnsignedPayload() {
-    return this.unsignedPayload;
-  }
+    /**
+     * Set the flag of whether payload should be ignored. Only has effect when request method is POST.
+     *
+     * @param flag
+     */
+    public void setUnsignedPayload(boolean flag) {
+        this.unsignedPayload = flag;
+    }
 
-  public Language getLanguage() {
-    return this.language;
-  }
+    public Language getLanguage() {
+        return this.language;
+    }
 
-  public void setLanguage(Language lang) {
-    this.language = lang;
-  }
+    public void setLanguage(Language lang) {
+        this.language = lang;
+    }
 }
