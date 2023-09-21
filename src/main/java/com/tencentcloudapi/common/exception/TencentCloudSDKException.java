@@ -18,47 +18,50 @@
 package com.tencentcloudapi.common.exception;
 
 public class TencentCloudSDKException extends Exception {
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-  /** UUID of the request, it will be empty if request is not fulfilled. */
-  private String requestId;
+    /**
+     * UUID of the request, it will be empty if request is not fulfilled.
+     */
+    private String requestId;
 
-  /** Error code, When API returns a failure, it must have an error code. */
-  private String errorCode;
+    /**
+     * Error code, When API returns a failure, it must have an error code.
+     */
+    private String errorCode;
 
-  public TencentCloudSDKException(String message) {
-    this(message, "");
-  }
+    public TencentCloudSDKException(String message) {
+        this(message, "");
+    }
 
-  public TencentCloudSDKException(String message, String requestId) {
-    super(message);
-    this.requestId = requestId;
-  }
+    public TencentCloudSDKException(String message, String requestId) {
+        super(message);
+        this.requestId = requestId;
+    }
 
-  public TencentCloudSDKException(String message, String requestId, String errorCode) {
-    super(message);
-    this.requestId = requestId;
-    this.errorCode = errorCode;
-  }
+    public TencentCloudSDKException(String message, String requestId, String errorCode) {
+        super(message);
+        this.requestId = requestId;
+        this.errorCode = errorCode;
+    }
 
-  public String getRequestId() {
-    return requestId;
-  }
+    public String getRequestId() {
+        return requestId;
+    }
 
-  /**
-   * Get error code
-   *
-   * @return A string represents error code
-   */
-  //    public String getErrorCode() {
-  //        return errorCode;
-  //    }
-
-  public String toString() {
-    return "[TencentCloudSDKException]"
-        + "message:"
-        + this.getMessage()
-        + " requestId:"
-        + this.getRequestId();
-  }
+    /**
+     * Get error code
+     *
+     * @return A string represents error code
+     */
+    //    public String getErrorCode() {
+    //        return errorCode;
+    //    }
+    public String toString() {
+        return "[TencentCloudSDKException]"
+                + "message:"
+                + this.getMessage()
+                + " requestId:"
+                + this.getRequestId();
+    }
 }
