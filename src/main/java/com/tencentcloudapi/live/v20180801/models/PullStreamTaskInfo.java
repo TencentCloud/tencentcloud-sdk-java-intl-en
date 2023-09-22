@@ -275,6 +275,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long VodLocalMode;
 
     /**
+    *  Recording template ID.
+    */
+    @SerializedName("RecordTemplateId")
+    @Expose
+    private String RecordTemplateId;
+
+    /**
+    * Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+    */
+    @SerializedName("BackupToUrl")
+    @Expose
+    private String BackupToUrl;
+
+    /**
      * Get The task ID. 
      * @return TaskId The task ID.
      */
@@ -958,6 +972,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VodLocalMode = VodLocalMode;
     }
 
+    /**
+     * Get  Recording template ID. 
+     * @return RecordTemplateId  Recording template ID.
+     */
+    public String getRecordTemplateId() {
+        return this.RecordTemplateId;
+    }
+
+    /**
+     * Set  Recording template ID.
+     * @param RecordTemplateId  Recording template ID.
+     */
+    public void setRecordTemplateId(String RecordTemplateId) {
+        this.RecordTemplateId = RecordTemplateId;
+    }
+
+    /**
+     * Get Newly added streaming address. Used for the scenario of pushing two streams with a single task. 
+     * @return BackupToUrl Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+     */
+    public String getBackupToUrl() {
+        return this.BackupToUrl;
+    }
+
+    /**
+     * Set Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+     * @param BackupToUrl Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+     */
+    public void setBackupToUrl(String BackupToUrl) {
+        this.BackupToUrl = BackupToUrl;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -1056,6 +1102,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VodLocalMode != null) {
             this.VodLocalMode = new Long(source.VodLocalMode);
         }
+        if (source.RecordTemplateId != null) {
+            this.RecordTemplateId = new String(source.RecordTemplateId);
+        }
+        if (source.BackupToUrl != null) {
+            this.BackupToUrl = new String(source.BackupToUrl);
+        }
     }
 
 
@@ -1090,6 +1142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+        this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
+        this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
 
     }
 }

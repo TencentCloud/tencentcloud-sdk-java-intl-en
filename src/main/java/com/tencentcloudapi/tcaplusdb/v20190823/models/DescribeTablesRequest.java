@@ -37,7 +37,7 @@ public class DescribeTablesRequest extends AbstractModel{
     private String [] TableGroupIds;
 
     /**
-    * Information list of tables to be queried
+    * Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
     */
     @SerializedName("SelectedTables")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get Information list of tables to be queried 
-     * @return SelectedTables Information list of tables to be queried
+     * Get Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter. 
+     * @return SelectedTables Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
      */
     public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set Information list of tables to be queried
-     * @param SelectedTables Information list of tables to be queried
+     * Set Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
+     * @param SelectedTables Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
      */
     public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;

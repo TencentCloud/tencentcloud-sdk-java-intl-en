@@ -31,6 +31,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String TaskId;
 
     /**
+    * `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * @return ApplicationId `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param ApplicationId `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
     }
 
     /**
@@ -84,6 +112,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +126,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

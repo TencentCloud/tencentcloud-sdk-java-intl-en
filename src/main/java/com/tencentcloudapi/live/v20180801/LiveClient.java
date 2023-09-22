@@ -2425,6 +2425,27 @@ Referer information is included in HTTP requests. After you enable referer confi
     }
 
     /**
+     *Restart the running live streaming pull task.
+     * @param req RestartLivePullStreamTaskRequest
+     * @return RestartLivePullStreamTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartLivePullStreamTaskResponse RestartLivePullStreamTask(RestartLivePullStreamTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartLivePullStreamTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartLivePullStreamTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to cancel the delay setting and recover the real-time display of the live streaming image.
      * @param req ResumeDelayLiveStreamRequest
      * @return ResumeDelayLiveStreamResponse

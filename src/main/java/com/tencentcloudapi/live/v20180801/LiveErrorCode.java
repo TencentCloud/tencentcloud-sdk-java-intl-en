@@ -363,7 +363,7 @@ public enum LiveErrorCode {
     // Invalid background length and width.
      INVALIDPARAMETER_INVALIDBACKGROUDRESOLUTION("InvalidParameter.InvalidBackgroudResolution"),
      
-    // 
+    // invalid BackupToUrl.
      INVALIDPARAMETER_INVALIDBACKUPTOURL("InvalidParameter.InvalidBackupToUrl"),
      
     // Invalid output bitrate.
