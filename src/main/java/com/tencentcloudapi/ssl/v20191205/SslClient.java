@@ -396,6 +396,27 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of EDGEONE instances to which a certificate can be deployed.
+     * @param req DescribeHostTeoInstanceListRequest
+     * @return DescribeHostTeoInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostTeoInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostTeoInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to download a certificate.
      * @param req DownloadCertificateRequest
      * @return DownloadCertificateResponse

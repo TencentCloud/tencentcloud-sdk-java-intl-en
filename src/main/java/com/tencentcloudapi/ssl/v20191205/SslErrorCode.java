@@ -39,6 +39,9 @@ public enum SslErrorCode {
     // The certificate and the private key do not match.
      FAILEDOPERATION_CERTIFICATEMISMATCH("FailedOperation.CertificateMismatch"),
      
+    // The certificate is not available. Please check and try again.
+     FAILEDOPERATION_CERTIFICATENOTAVAILABLE("FailedOperation.CertificateNotAvailable"),
+     
     // The certificate does not exist.
      FAILEDOPERATION_CERTIFICATENOTFOUND("FailedOperation.CertificateNotFound"),
      
