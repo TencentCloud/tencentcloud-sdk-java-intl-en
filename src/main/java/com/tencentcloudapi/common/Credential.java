@@ -37,6 +37,9 @@ public class Credential {
 
     private String token;
 
+    public Credential() {
+    }
+
     public Credential(String secretId, String secretKey) {
         this(secretId, secretKey, "");
     }

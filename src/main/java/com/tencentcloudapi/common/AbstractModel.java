@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class AbstractModel {
+    public Map<String, String> header = new HashMap<String, String>();
     protected boolean skipSign = false;
     /**
      * Any stores customized parameters which are not documented. You should make sure it can be
@@ -149,8 +150,6 @@ public abstract class AbstractModel {
 
     /**
      * Get customized key value pairs from this model.
-     *
-     * @return
      */
     public HashMap<String, Object> any() {
         return this.customizedParams;
@@ -162,5 +161,13 @@ public abstract class AbstractModel {
 
     public void setSkipSign(boolean skipSign) {
         this.skipSign = skipSign;
+    }
+
+    public Map<String, String> GetHeader() {
+        return header;
+    }
+
+    public void SetHeader(Map<String, String> header) {
+        this.header = header;
     }
 }
