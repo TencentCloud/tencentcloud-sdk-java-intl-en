@@ -17,6 +17,9 @@
 
 package com.tencentcloudapi.common.profile;
 
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.X509TrustManager;
+
 public class HttpProfile {
 
     public static final String REQ_HTTPS = "https://";
@@ -38,6 +41,11 @@ public class HttpProfile {
      * Endpoint means the domain which this request is sent to, such as cvm.tencentcloudapi.com.
      */
     private String endpoint;
+
+    /**
+     * root domain means endpoint without service name, such as tencentcloudapi.com.
+     */
+    private String rootDomain;
 
     /**
      * HTTPS or HTTP, currently only HTTPS is valid.
@@ -79,9 +87,14 @@ public class HttpProfile {
      */
     private String proxyPassword;
 
+    private SSLSocketFactory sslSocketFactory;
+
+    private X509TrustManager trustManager;
+
     public HttpProfile() {
         this.reqMethod = HttpProfile.REQ_POST;
         this.endpoint = null;
+        this.rootDomain = "tencentcloudapi.com";
         this.protocol = HttpProfile.REQ_HTTPS;
         this.readTimeout = 0;
         this.writeTimeout = 0;
@@ -202,5 +215,29 @@ public class HttpProfile {
 
     public void setProxyPassword(String proxyPassword) {
         this.proxyPassword = proxyPassword;
+    }
+
+    public String getRootDomain() {
+        return rootDomain;
+    }
+
+    public void setRootDomain(String rootDomain) {
+        this.rootDomain = rootDomain;
+    }
+
+    public SSLSocketFactory getSslSocketFactory() {
+        return sslSocketFactory;
+    }
+
+    public void setSslSocketFactory(SSLSocketFactory sslSocketFactory) {
+        this.sslSocketFactory = sslSocketFactory;
+    }
+
+    public X509TrustManager getX509TrustManager() {
+        return trustManager;
+    }
+
+    public void setX509TrustManager(X509TrustManager trustManager) {
+        this.trustManager = trustManager;
     }
 }

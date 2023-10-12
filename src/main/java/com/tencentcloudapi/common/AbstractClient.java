@@ -21,24 +21,29 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.squareup.okhttp.*;
-import com.squareup.okhttp.Headers.Builder;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.http.HttpConnection;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
+import okhttp3.*;
+import okhttp3.Headers.Builder;
 
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.X509TrustManager;
 import javax.xml.bind.DatatypeConverter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -51,10 +56,15 @@ public abstract class AbstractClient {
     private Credential credential;
     private ClientProfile profile;
     private String endpoint;
+    private String service;
     private String region;
     private String path;
     private String sdkVersion;
     private String apiVersion;
+    private TCLog log;
+    private HttpConnection httpConnection;
+
+    private CircuitBreaker regionBreaker;
 
     public AbstractClient(String endpoint, String version, Credential credential, String region) {
         this(endpoint, version, credential, region, new ClientProfile());
@@ -69,11 +79,22 @@ public abstract class AbstractClient {
         this.credential = credential;
         this.profile = profile;
         this.endpoint = endpoint;
+        this.service = endpoint.split("\\.")[0];
         this.region = region;
         this.path = "/";
         this.sdkVersion = AbstractClient.SDK_VERSION;
         this.apiVersion = version;
         this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        this.log = new TCLog(getClass().getName(), profile.isDebug());
+        this.httpConnection = new HttpConnection(
+                this.profile.getHttpProfile().getConnTimeout(),
+                this.profile.getHttpProfile().getReadTimeout(),
+                this.profile.getHttpProfile().getWriteTimeout()
+        );
+        this.httpConnection.addInterceptors(this.log);
+        this.trySetProxy(this.httpConnection);
+        this.trySetSSLSocketFactory(this.httpConnection);
+        this.trySetRegionBreaker();
         warmup();
     }
 
@@ -112,16 +133,67 @@ public abstract class AbstractClient {
      * @throws TencentCloudSDKException
      */
     public String call(String action, String jsonPayload) throws TencentCloudSDKException {
-        String endpoint = this.endpoint;
-        // in case user has reset endpoint after init this client
-        if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
-            endpoint = this.profile.getHttpProfile().getEndpoint();
+        HashMap<String, String> headers = this.getHeaders();
+        headers.put("X-TC-Action", action);
+        headers.put("Content-Type", "application/json; charset=utf-8");
+        byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
+        String authorization = this.getAuthorization(headers, requestPayload);
+        headers.put("Authorization", authorization);
+        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
+        return this.getResponseBody(url, headers, requestPayload);
+    }
+
+    /**
+     * Use post application/octet-stream with tc3-hmac-sha256 signature to call specific action.
+     * Ignore request method and signature method defined in profile.
+     *
+     * @param action  Name of action to be called.
+     * @param headers Parameters of the action, will be put in http header.
+     * @param body    octet-stream binary body.
+     * @return Raw response from API if request succeeded, otherwise an exception will be raised
+     * instead of raw response
+     * @throws TencentCloudSDKException
+     */
+    public String callOctetStream(String action, HashMap<String, String> headers, byte[] body)
+            throws TencentCloudSDKException {
+        headers.putAll(this.getHeaders());
+        headers.put("X-TC-Action", action);
+        headers.put("Content-Type", "application/octet-stream; charset=utf-8");
+        String authorization = this.getAuthorization(headers, body);
+        headers.put("Authorization", authorization);
+        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
+        return this.getResponseBody(url, headers, body);
+    }
+
+    private HashMap<String, String> getHeaders() {
+        HashMap<String, String> headers = new HashMap<String, String>();
+        String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+        headers.put("X-TC-Timestamp", timestamp);
+        headers.put("X-TC-Version", this.apiVersion);
+        headers.put("X-TC-Region", this.getRegion());
+        headers.put("X-TC-RequestClient", SDK_VERSION);
+        headers.put("Host", this.getEndpoint());
+        String token = this.credential.getToken();
+        if (token != null && !token.isEmpty()) {
+            headers.put("X-TC-Token", token);
         }
+        if (this.profile.isUnsignedPayload()) {
+            headers.put("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
+        }
+        if (null != this.profile.getLanguage()) {
+            headers.put("X-TC-Language", this.profile.getLanguage().getValue());
+        }
+        return headers;
+    }
+
+    private String getAuthorization(HashMap<String, String> headers, byte[] body)
+            throws TencentCloudSDKException {
+        String endpoint = this.getEndpoint();
         // always use post tc3-hmac-sha256 signature process
         // okhttp always set charset even we don't specify it,
         // to ensure signature be correct, we have to set it here as well.
-        String contentType = "application/json; charset=utf-8";
-        byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
+        String contentType = headers.get("Content-Type");
+        byte[] requestPayload = body;
         String canonicalUri = "/";
         String canonicalQueryString = "";
         String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
@@ -146,7 +218,7 @@ public abstract class AbstractClient {
                         + "\n"
                         + hashedRequestPayload;
 
-        String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+        String timestamp = headers.get("X-TC-Timestamp");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
@@ -164,56 +236,44 @@ public abstract class AbstractClient {
         byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
         String signature =
                 DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
-        String authorization =
-                "TC3-HMAC-SHA256 "
-                        + "Credential="
-                        + secretId
-                        + "/"
-                        + credentialScope
-                        + ", "
-                        + "SignedHeaders="
-                        + signedHeaders
-                        + ", "
-                        + "Signature="
-                        + signature;
+        return "TC3-HMAC-SHA256 "
+                + "Credential="
+                + secretId
+                + "/"
+                + credentialScope
+                + ", "
+                + "SignedHeaders="
+                + signedHeaders
+                + ", "
+                + "Signature="
+                + signature;
+    }
 
-        HttpConnection conn =
-                new HttpConnection(
-                        this.profile.getHttpProfile().getConnTimeout(),
-                        this.profile.getHttpProfile().getReadTimeout(),
-                        this.profile.getHttpProfile().getWriteTimeout());
-        this.trySetProxy(conn);
-        String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
+    private String getResponseBody(String url, HashMap<String, String> headers, byte[] body)
+            throws TencentCloudSDKException {
         Builder hb = new Headers.Builder();
-        hb.add("Content-Type", contentType)
-                .add("Host", endpoint)
-                .add("Authorization", authorization)
-                .add("X-TC-Action", action)
-                .add("X-TC-Timestamp", timestamp)
-                .add("X-TC-Version", this.apiVersion)
-                .add("X-TC-Region", this.getRegion())
-                .add("X-TC-RequestClient", SDK_VERSION);
-        String token = this.credential.getToken();
-        if (token != null && !token.isEmpty()) {
-            hb.add("X-TC-Token", token);
+        for (String key : headers.keySet()) {
+            hb.add(key, headers.get(key));
         }
-        if (this.profile.isUnsignedPayload()) {
-            hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
+        Response resp = null;
+        try {
+            resp = this.httpConnection.postRequest(url, body, hb.build());
+        } catch (IOException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage(), e);
         }
-        if (null != this.profile.getLanguage()) {
-            hb.add("X-TC-Language", this.profile.getLanguage().getValue());
-        }
-
-        Headers headers = hb.build();
-        Response resp = conn.postRequest(url, requestPayload, headers);
         if (resp.code() != AbstractClient.HTTP_RSP_OK) {
-            throw new TencentCloudSDKException(resp.code() + resp.message());
+            String msg = "response code is " + resp.code() + ", not 200";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, "", "ServerSideError");
         }
         String respbody = null;
         try {
             respbody = resp.body().string();
         } catch (IOException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            String msg =
+                    "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
         }
         JsonResponseModel<JsonResponseErrModel> errResp = null;
         try {
@@ -221,12 +281,13 @@ public abstract class AbstractClient {
             }.getType();
             errResp = gson.fromJson(respbody, errType);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            String msg = "json is not a valid representation for an object of type";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
         }
         if (errResp.response.error != null) {
             throw new TencentCloudSDKException(
-                    errResp.response.error.code + "-" + errResp.response.error.message,
-                    errResp.response.requestId);
+                    errResp.response.error.message, errResp.response.requestId, errResp.response.error.code);
         }
         return respbody;
     }
@@ -246,10 +307,10 @@ public abstract class AbstractClient {
         if (username == null || username.isEmpty()) {
             return;
         }
-        conn.setAuthenticator(
+        conn.setProxyAuthenticator(
                 new Authenticator() {
                     @Override
-                    public Request authenticate(Proxy proxy, Response response) throws IOException {
+                    public Request authenticate(Route route, Response response) throws IOException {
                         String credential = Credentials.basic(username, password);
                         return response
                                 .request()
@@ -257,21 +318,170 @@ public abstract class AbstractClient {
                                 .header("Proxy-Authorization", credential)
                                 .build();
                     }
-
-                    @Override
-                    public Request authenticateProxy(Proxy proxy, Response response) throws IOException {
-                        return authenticate(proxy, response);
-                    }
                 });
+    }
+
+    private void trySetSSLSocketFactory(HttpConnection conn) {
+        SSLSocketFactory sslSocketFactory = this.profile.getHttpProfile().getSslSocketFactory();
+        X509TrustManager trustManager = this.profile.getHttpProfile().getX509TrustManager();
+        if (sslSocketFactory != null) {
+            if (trustManager != null) {
+                this.httpConnection.setSSLSocketFactory(sslSocketFactory, trustManager);
+            } else {
+                this.httpConnection.setSSLSocketFactory(sslSocketFactory);
+            }
+        }
+    }
+
+    private void trySetRegionBreaker() {
+        String ep = profile.getBackupEndpoint();
+        if (ep != null && !ep.isEmpty()) {
+            this.regionBreaker = new CircuitBreaker();
+        }
     }
 
     protected String internalRequest(AbstractModel request, String actionName)
             throws TencentCloudSDKException {
-        Response okRsp = null;
-        String endpoint = this.endpoint;
-        if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
-            endpoint = this.profile.getHttpProfile().getEndpoint();
+
+        CircuitBreaker.Token breakerToken = null;
+        if (regionBreaker != null) {
+            breakerToken = regionBreaker.allow();
+            if (!breakerToken.allowed) {
+                endpoint = service + "." + profile.getBackupEndpoint();
+            }
         }
+
+        Response okRsp;
+        try {
+            okRsp = internalRequestRaw(request, actionName);
+        } catch (IOException e) {
+            // network failure, consider region failure
+            if (breakerToken != null) {
+                breakerToken.report(false);
+            }
+            throw new TencentCloudSDKException("", e);
+        }
+
+        String strResp;
+        try {
+            strResp = okRsp.body().string();
+        } catch (IOException e) {
+            String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+
+        JsonResponseModel<JsonResponseErrModel> errResp;
+        try {
+            Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
+            }.getType();
+            errResp = gson.fromJson(strResp, errType);
+        } catch (JsonSyntaxException e) {
+            String msg = "json is not a valid representation for an object of type";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+
+        if (errResp.response.error != null) {
+            if (breakerToken != null) {
+                JsonResponseErrModel error = errResp.response;
+                boolean regionOk = error.requestId != null
+                        && !error.requestId.isEmpty()
+                        && error.error.code != null
+                        && !error.error.code.equals("InternalError");
+                breakerToken.report(regionOk);
+            }
+            throw new TencentCloudSDKException(
+                    errResp.response.error.message,
+                    errResp.response.requestId,
+                    errResp.response.error.code);
+        }
+
+        return strResp;
+    }
+
+    protected <T> T internalRequest(AbstractModel request, String actionName, Class<T> typeOfT)
+            throws TencentCloudSDKException {
+        CircuitBreaker.Token breakerToken = null;
+        if (regionBreaker != null) {
+            breakerToken = regionBreaker.allow();
+            if (!breakerToken.allowed) {
+                endpoint = service + "." + profile.getBackupEndpoint();
+            }
+        }
+
+        try {
+            Response resp = internalRequestRaw(request, actionName);
+            if (Objects.equals(resp.header("Content-Type"), "text/event-stream")) {
+                return processResponseSSE(resp, typeOfT, breakerToken);
+            }
+            return processResponseJson(resp, typeOfT, breakerToken);
+        } catch (IOException e) {
+            // network failure, consider region failure
+            if (breakerToken != null) {
+                breakerToken.report(false);
+            }
+            throw new TencentCloudSDKException("", e);
+        }
+    }
+
+    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+        SSEResponseModel responseModel;
+        try {
+            responseModel = (SSEResponseModel) typeOfT.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            throw new TencentCloudSDKException("", e);
+        }
+        responseModel.setRequestId(resp.header("X-TC-RequestId"));
+        responseModel.setToken(breakerToken);
+        responseModel.setResponse(resp);
+        return (T) responseModel;
+    }
+
+    protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+        String body;
+        try {
+            body = resp.body().string();
+        } catch (IOException e) {
+            String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+
+        JsonResponseModel<JsonResponseErrModel> errResp;
+        try {
+            Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
+            }.getType();
+            errResp = gson.fromJson(body, errType);
+        } catch (JsonSyntaxException e) {
+            String msg = "json is not a valid representation for an object of type";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+
+        if (errResp.response.error != null) {
+            if (breakerToken != null) {
+                JsonResponseErrModel error = errResp.response;
+                boolean regionOk = error.requestId != null
+                        && !error.requestId.isEmpty()
+                        && error.error.code != null
+                        && !error.error.code.equals("InternalError");
+                breakerToken.report(regionOk);
+            }
+            throw new TencentCloudSDKException(
+                    errResp.response.error.message,
+                    errResp.response.requestId,
+                    errResp.response.error.code);
+        }
+
+        Type type = TypeToken.getParameterized(JsonResponseModel.class, typeOfT).getType();
+        return ((JsonResponseModel<T>)gson.fromJson(body, type)).response;
+    }
+
+    protected Response internalRequestRaw(AbstractModel request, String actionName)
+            throws TencentCloudSDKException, IOException {
+        Response okRsp = null;
+        String endpoint = this.getEndpoint();
         String[] binaryParams = request.getBinaryParams();
         String sm = this.profile.getSignMethod();
         String reqMethod = this.profile.getHttpProfile().getReqMethod();
@@ -293,6 +503,7 @@ public abstract class AbstractClient {
             }
         }
 
+
         if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
             okRsp = doRequestWithTC3(endpoint, request, actionName);
         } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
@@ -303,56 +514,31 @@ public abstract class AbstractClient {
         }
 
         if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
-            throw new TencentCloudSDKException(okRsp.code() + okRsp.message());
+            String msg = "response code is " + okRsp.code() + ", not 200";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, "", "ServerSideError");
         }
-        String strResp = null;
-        try {
-            strResp = okRsp.body().string();
-        } catch (IOException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
-
-        JsonResponseModel<JsonResponseErrModel> errResp = null;
-        try {
-            Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
-            }.getType();
-            errResp = gson.fromJson(strResp, errType);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
-        if (errResp.response.error != null) {
-            throw new TencentCloudSDKException(
-                    errResp.response.error.code + "-" + errResp.response.error.message,
-                    errResp.response.requestId);
-        }
-
-        return strResp;
+        return okRsp;
     }
 
     private Response doRequest(String endpoint, AbstractModel request, String action)
-            throws TencentCloudSDKException {
+            throws TencentCloudSDKException, IOException {
         HashMap<String, String> param = new HashMap<String, String>();
         request.toMap(param, "");
         String strParam = this.formatRequestData(action, param);
-        HttpConnection conn =
-                new HttpConnection(
-                        this.profile.getHttpProfile().getConnTimeout(),
-                        this.profile.getHttpProfile().getReadTimeout(),
-                        this.profile.getHttpProfile().getWriteTimeout());
-        this.trySetProxy(conn);
         String reqMethod = this.profile.getHttpProfile().getReqMethod();
         String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
         if (reqMethod.equals(HttpProfile.REQ_GET)) {
-            return conn.getRequest(url + "?" + strParam);
+            return this.httpConnection.getRequest(url + "?" + strParam);
         } else if (reqMethod.equals(HttpProfile.REQ_POST)) {
-            return conn.postRequest(url, strParam);
+            return this.httpConnection.postRequest(url, strParam);
         } else {
             throw new TencentCloudSDKException("Method only support (GET, POST)");
         }
     }
 
     private Response doRequestWithTC3(String endpoint, AbstractModel request, String action)
-            throws TencentCloudSDKException {
+            throws TencentCloudSDKException, IOException {
         String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
         if (httpRequestMethod == null) {
             throw new TencentCloudSDKException(
@@ -372,7 +558,7 @@ public abstract class AbstractClient {
             try {
                 requestPayload = getMultipartPayload(request, boundary);
             } catch (Exception e) {
-                throw new TencentCloudSDKException("Failed to generate multipart. because: " + e);
+                throw new TencentCloudSDKException("Failed to generate multipart.", e);
             }
         } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
             requestPayload = AbstractModel.toJsonString(request).getBytes(StandardCharsets.UTF_8);
@@ -414,7 +600,6 @@ public abstract class AbstractClient {
                 Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
         String stringToSign =
                 "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
-
         boolean skipSign = request.getSkipSign();
         String authorization = "";
         if (skipSign) {
@@ -440,13 +625,6 @@ public abstract class AbstractClient {
                             + "Signature="
                             + signature;
         }
-
-        HttpConnection conn =
-                new HttpConnection(
-                        this.profile.getHttpProfile().getConnTimeout(),
-                        this.profile.getHttpProfile().getReadTimeout(),
-                        this.profile.getHttpProfile().getWriteTimeout());
-        this.trySetProxy(conn);
         String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
         Builder hb = new Headers.Builder();
         hb.add("Content-Type", contentType)
@@ -456,6 +634,11 @@ public abstract class AbstractClient {
                 .add("X-TC-Timestamp", timestamp)
                 .add("X-TC-Version", this.apiVersion)
                 .add("X-TC-RequestClient", SDK_VERSION);
+        if (null != request.GetHeader()) {
+            for (Map.Entry<String, String> entry : request.GetHeader().entrySet()) {
+                hb.add(entry.getKey(), entry.getValue());
+            }
+        }
         if (null != this.getRegion()) {
             hb.add("X-TC-Region", this.getRegion());
         }
@@ -472,9 +655,9 @@ public abstract class AbstractClient {
 
         Headers headers = hb.build();
         if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
-            return conn.getRequest(url + "?" + canonicalQueryString, headers);
+            return this.httpConnection.getRequest(url + "?" + canonicalQueryString, headers);
         } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
-            return conn.postRequest(url, requestPayload, headers);
+            return this.httpConnection.postRequest(url, requestPayload, headers);
         } else {
             throw new TencentCloudSDKException("Method only support GET, POST");
         }
@@ -521,18 +704,22 @@ public abstract class AbstractClient {
             try {
                 v = URLEncoder.encode(entry.getValue(), "UTF8");
             } catch (UnsupportedEncodingException e) {
-                throw new TencentCloudSDKException("UTF8 is not supported." + e.getMessage());
+                throw new TencentCloudSDKException("UTF8 is not supported.", e);
             }
             queryString.append("&").append(entry.getKey()).append("=").append(v);
         }
-        return queryString.toString().substring(1);
+        if (queryString.length() == 0) {
+            return "";
+        } else {
+            return queryString.toString().substring(1);
+        }
     }
 
     private String formatRequestData(String action, Map<String, String> param)
             throws TencentCloudSDKException {
         param.put("Action", action);
         param.put("RequestClient", this.sdkVersion);
-        param.put("Nonce", String.valueOf(Math.abs(new Random().nextInt())));
+        param.put("Nonce", String.valueOf(Math.abs(new SecureRandom().nextInt())));
         param.put("Timestamp", String.valueOf(System.currentTimeMillis() / 1000));
         param.put("Version", this.apiVersion);
 
@@ -556,10 +743,7 @@ public abstract class AbstractClient {
             param.put("Language", this.profile.getLanguage().getValue());
         }
 
-        String endpoint = this.endpoint;
-        if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
-            endpoint = this.profile.getHttpProfile().getEndpoint();
-        }
+        String endpoint = this.getEndpoint();
 
         String sigInParam =
                 Sign.makeSignPlainText(
@@ -581,7 +765,7 @@ public abstract class AbstractClient {
             }
             strParam += ("Signature=" + URLEncoder.encode(sigOutParam, "utf-8"));
         } catch (UnsupportedEncodingException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            throw new TencentCloudSDKException("", e);
         }
         return strParam;
     }
@@ -603,5 +787,63 @@ public abstract class AbstractClient {
             // ignore but print message to console
             e.printStackTrace();
         }
+    }
+
+    private String getEndpoint() {
+        // in case user has reset endpoint after init this client
+        if (null != this.profile.getHttpProfile().getEndpoint()) {
+            return this.profile.getHttpProfile().getEndpoint();
+        } else {
+            // protected abstract String getService();
+            // use this.getService() from overrided subclass will be better
+            return this.service + "." + this.profile.getHttpProfile().getRootDomain();
+        }
+    }
+
+    /**
+     * 请注意购买类接口谨慎调用，可能导致多次购买
+     * 仅幂等接口推荐使用
+     *
+     * @param req
+     * @param retryTimes
+     * @throws TencentCloudSDKException
+     */
+    public Object retry(AbstractModel req, int retryTimes) throws TencentCloudSDKException {
+        if (retryTimes < 0 || retryTimes > 10) {
+            throw new TencentCloudSDKException("The number of retryTimes supported is 0 to 10.", "", "ClientSideError");
+        }
+        Class cls = this.getClass();
+        String methodName = req.getClass().getSimpleName().replace("Request", "");
+        Method method;
+        try {
+            method = cls.getMethod(methodName, req.getClass());
+        } catch (NoSuchMethodException e) {
+            throw new TencentCloudSDKException("ClientSideError", e);
+        }
+        do {
+            try {
+                return method.invoke(this, req);
+            } catch (IllegalAccessException e) {
+                throw new TencentCloudSDKException("ClientSideError", e);
+            } catch (InvocationTargetException e) {
+                if (retryTimes == 0) {
+                    throw (TencentCloudSDKException) e.getTargetException();
+                }
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new TencentCloudSDKException("ClientSideError", e);
+            }
+        } while (--retryTimes >= 0);
+        return null;
+    }
+
+    public CircuitBreaker getRegionBreaker() {
+        return regionBreaker;
+    }
+
+    public void setRegionBreaker(CircuitBreaker regionBreaker) {
+        this.regionBreaker = regionBreaker;
     }
 }

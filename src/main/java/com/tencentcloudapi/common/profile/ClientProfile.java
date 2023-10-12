@@ -48,6 +48,9 @@ public class ClientProfile {
      * valid choices: zh-CN, en-US
      */
     private Language language;
+    private boolean debug;
+
+    private String backupEndpoint;
 
     public ClientProfile(String signMethod, HttpProfile httpProfile) {
         if (signMethod == null || signMethod.isEmpty()) {
@@ -56,7 +59,8 @@ public class ClientProfile {
         this.signMethod = signMethod;
         this.httpProfile = httpProfile;
         this.unsignedPayload = false;
-        this.language = Language.EN_US;
+        this.language = null;
+        this.setDebug(false);
     }
 
     public ClientProfile(String signMethod) {
@@ -85,8 +89,6 @@ public class ClientProfile {
 
     /**
      * Get the flag of whether payload is ignored.
-     *
-     * @return
      */
     public boolean isUnsignedPayload() {
         return this.unsignedPayload;
@@ -107,5 +109,21 @@ public class ClientProfile {
 
     public void setLanguage(Language lang) {
         this.language = lang;
+    }
+
+    public boolean isDebug() {
+        return debug;
+    }
+
+    public void setDebug(boolean debug) {
+        this.debug = debug;
+    }
+
+    public String getBackupEndpoint() {
+        return backupEndpoint;
+    }
+
+    public void setBackupEndpoint(String backupEndpoint) {
+        this.backupEndpoint = backupEndpoint;
     }
 }
