@@ -37,8 +37,8 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SegmentObjectName;
 
     /**
-    * The subtitle file to add.
+    * 
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddOnSubtitles")
@@ -74,7 +74,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
-    * Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -113,20 +114,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return OutputStorage 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param OutputStorage 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -181,9 +182,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The subtitle file to add.
+     * Get 
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AddOnSubtitles The subtitle file to add.
+     * @return AddOnSubtitles 
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
@@ -191,9 +192,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set The subtitle file to add.
+     * Set 
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AddOnSubtitles The subtitle file to add.
+     * @param AddOnSubtitles 
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
@@ -201,16 +202,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return DrmInfo 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param DrmInfo 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;

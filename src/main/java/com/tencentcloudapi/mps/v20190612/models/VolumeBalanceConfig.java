@@ -20,18 +20,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaOutputConfig extends AbstractModel{
+public class VolumeBalanceConfig extends AbstractModel{
 
     /**
-    * The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
     */
-    @SerializedName("Container")
+    @SerializedName("Switch")
     @Expose
-    private String Container;
+    private String Switch;
 
     /**
-    * The clip mode. Valid values: `normal` (default), `fast`.
+    * The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -39,29 +44,43 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Type;
 
     /**
-     * Get The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`. 
+     * @return Switch Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
      */
-    public String getContainer() {
-        return this.Container;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
+     * @param Switch Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
      */
-    public void setContainer(String Container) {
-        this.Container = Container;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     /**
-     * Get The clip mode. Valid values: `normal` (default), `fast`.
+     * Get The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Type The clip mode. Valid values: `normal` (default), `fast`.
+     * @return Type The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -69,25 +88,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set The clip mode. Valid values: `normal` (default), `fast`.
+     * Set The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Type The clip mode. Valid values: `normal` (default), `fast`.
+     * @param Type The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public EditMediaOutputConfig() {
+    public VolumeBalanceConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EditMediaOutputConfig(EditMediaOutputConfig source) {
-        if (source.Container != null) {
-            this.Container = new String(source.Container);
+    public VolumeBalanceConfig(VolumeBalanceConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -99,7 +124,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Container", this.Container);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Type", this.Type);
 
     }

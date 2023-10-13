@@ -65,6 +65,20 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
+    * 
+    */
+    @SerializedName("AiAnalysisTask")
+    @Expose
+    private AiAnalysisTaskInput AiAnalysisTask;
+
+    /**
+    * 
+    */
+    @SerializedName("AiQualityControlTask")
+    @Expose
+    private AiQualityControlTaskInput AiQualityControlTask;
+
+    /**
     * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
     */
     @SerializedName("SessionId")
@@ -77,6 +91,17 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
+
+    /**
+    * The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
 
     /**
      * Get Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported. 
@@ -175,6 +200,38 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return AiAnalysisTask 
+     */
+    public AiAnalysisTaskInput getAiAnalysisTask() {
+        return this.AiAnalysisTask;
+    }
+
+    /**
+     * Set 
+     * @param AiAnalysisTask 
+     */
+    public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
+        this.AiAnalysisTask = AiAnalysisTask;
+    }
+
+    /**
+     * Get  
+     * @return AiQualityControlTask 
+     */
+    public AiQualityControlTaskInput getAiQualityControlTask() {
+        return this.AiQualityControlTask;
+    }
+
+    /**
+     * Set 
+     * @param AiQualityControlTask 
+     */
+    public void setAiQualityControlTask(AiQualityControlTaskInput AiQualityControlTask) {
+        this.AiQualityControlTask = AiQualityControlTask;
+    }
+
+    /**
      * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed. 
      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      */
@@ -206,6 +263,38 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    /**
+     * Get The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme. 
+     * @return ScheduleId The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+     * @param ScheduleId The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
     public ProcessLiveStreamRequest() {
     }
 
@@ -232,11 +321,20 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
+        if (source.AiAnalysisTask != null) {
+            this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
+        }
+        if (source.AiQualityControlTask != null) {
+            this.AiQualityControlTask = new AiQualityControlTaskInput(source.AiQualityControlTask);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
         }
     }
 
@@ -251,8 +349,11 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+        this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+        this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
 
     }
 }

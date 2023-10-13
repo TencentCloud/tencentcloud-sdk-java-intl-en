@@ -71,6 +71,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ScheduleTask ScheduleTaskEvent;
 
     /**
+    * - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+    */
+    @SerializedName("Timestamp")
+    @Expose
+    private Long Timestamp;
+
+    /**
+    * The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+    */
+    @SerializedName("Sign")
+    @Expose
+    private String Sign;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -198,6 +215,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+ 
+     * @return Timestamp - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+     */
+    public Long getTimestamp() {
+        return this.Timestamp;
+    }
+
+    /**
+     * Set - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+     * @param Timestamp - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+     */
+    public void setTimestamp(Long Timestamp) {
+        this.Timestamp = Timestamp;
+    }
+
+    /**
+     * Get The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS. 
+     * @return Sign The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+     */
+    public String getSign() {
+        return this.Sign;
+    }
+
+    /**
+     * Set The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+     * @param Sign The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+     */
+    public void setSign(String Sign) {
+        this.Sign = Sign;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -239,6 +300,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ScheduleTaskEvent != null) {
             this.ScheduleTaskEvent = new ScheduleTask(source.ScheduleTaskEvent);
         }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.Sign != null) {
+            this.Sign = new String(source.Sign);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -255,6 +322,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
+        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "Sign", this.Sign);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

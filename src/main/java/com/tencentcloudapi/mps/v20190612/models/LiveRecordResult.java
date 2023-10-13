@@ -20,77 +20,80 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaOutputConfig extends AbstractModel{
+public class LiveRecordResult extends AbstractModel{
 
     /**
-    * The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+    * The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Container")
+    @SerializedName("OutputStorage")
     @Expose
-    private String Container;
+    private TaskOutputStorage OutputStorage;
 
     /**
-    * The clip mode. Valid values: `normal` (default), `fast`.
+    * The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Type")
+    @SerializedName("FileList")
     @Expose
-    private String Type;
+    private LiveRecordFile [] FileList;
 
     /**
-     * Get The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * Get The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * @return OutputStorage The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getContainer() {
-        return this.Container;
+    public TaskOutputStorage getOutputStorage() {
+        return this.OutputStorage;
     }
 
     /**
-     * Set The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * Set The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * @param OutputStorage The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setContainer(String Container) {
-        this.Container = Container;
+    public void setOutputStorage(TaskOutputStorage OutputStorage) {
+        this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get The clip mode. Valid values: `normal` (default), `fast`.
+     * Get The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Type The clip mode. Valid values: `normal` (default), `fast`.
+     * @return FileList The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getType() {
-        return this.Type;
+    public LiveRecordFile [] getFileList() {
+        return this.FileList;
     }
 
     /**
-     * Set The clip mode. Valid values: `normal` (default), `fast`.
+     * Set The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Type The clip mode. Valid values: `normal` (default), `fast`.
+     * @param FileList The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setFileList(LiveRecordFile [] FileList) {
+        this.FileList = FileList;
     }
 
-    public EditMediaOutputConfig() {
+    public LiveRecordResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EditMediaOutputConfig(EditMediaOutputConfig source) {
-        if (source.Container != null) {
-            this.Container = new String(source.Container);
+    public LiveRecordResult(LiveRecordResult source) {
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.FileList != null) {
+            this.FileList = new LiveRecordFile[source.FileList.length];
+            for (int i = 0; i < source.FileList.length; i++) {
+                this.FileList[i] = new LiveRecordFile(source.FileList[i]);
+            }
         }
     }
 
@@ -99,8 +102,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Container", this.Container);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamArrayObj(map, prefix + "FileList.", this.FileList);
 
     }
 }

@@ -20,77 +20,82 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaOutputConfig extends AbstractModel{
+public class LiveActivityResult extends AbstractModel{
 
     /**
-    * The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+    * The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Container")
+    @SerializedName("ActivityType")
     @Expose
-    private String Container;
+    private String ActivityType;
 
     /**
-    * The clip mode. Valid values: `normal` (default), `fast`.
+    * The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Type")
+    @SerializedName("LiveActivityResItem")
     @Expose
-    private String Type;
+    private LiveActivityResItem LiveActivityResItem;
 
     /**
-     * Get The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * Get The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * @return ActivityType The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getContainer() {
-        return this.Container;
+    public String getActivityType() {
+        return this.ActivityType;
     }
 
     /**
-     * Set The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * Set The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+     * @param ActivityType The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setContainer(String Container) {
-        this.Container = Container;
+    public void setActivityType(String ActivityType) {
+        this.ActivityType = ActivityType;
     }
 
     /**
-     * Get The clip mode. Valid values: `normal` (default), `fast`.
+     * Get The task output.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Type The clip mode. Valid values: `normal` (default), `fast`.
+     * @return LiveActivityResItem The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getType() {
-        return this.Type;
+    public LiveActivityResItem getLiveActivityResItem() {
+        return this.LiveActivityResItem;
     }
 
     /**
-     * Set The clip mode. Valid values: `normal` (default), `fast`.
+     * Set The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Type The clip mode. Valid values: `normal` (default), `fast`.
+     * @param LiveActivityResItem The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setLiveActivityResItem(LiveActivityResItem LiveActivityResItem) {
+        this.LiveActivityResItem = LiveActivityResItem;
     }
 
-    public EditMediaOutputConfig() {
+    public LiveActivityResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EditMediaOutputConfig(EditMediaOutputConfig source) {
-        if (source.Container != null) {
-            this.Container = new String(source.Container);
+    public LiveActivityResult(LiveActivityResult source) {
+        if (source.ActivityType != null) {
+            this.ActivityType = new String(source.ActivityType);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.LiveActivityResItem != null) {
+            this.LiveActivityResItem = new LiveActivityResItem(source.LiveActivityResItem);
         }
     }
 
@@ -99,8 +104,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Container", this.Container);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "ActivityType", this.ActivityType);
+        this.setParamObj(map, prefix + "LiveActivityResItem.", this.LiveActivityResItem);
 
     }
 }

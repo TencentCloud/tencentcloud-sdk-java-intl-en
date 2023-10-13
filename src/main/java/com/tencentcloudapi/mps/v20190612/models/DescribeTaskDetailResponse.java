@@ -132,6 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ScheduleTask ScheduleTask;
 
     /**
+    * The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LiveScheduleTask")
+    @Expose
+    private LiveScheduleTask LiveScheduleTask;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -407,6 +415,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public LiveScheduleTask getLiveScheduleTask() {
+        return this.LiveScheduleTask;
+    }
+
+    /**
+     * Set The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setLiveScheduleTask(LiveScheduleTask LiveScheduleTask) {
+        this.LiveScheduleTask = LiveScheduleTask;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -472,6 +500,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ScheduleTask != null) {
             this.ScheduleTask = new ScheduleTask(source.ScheduleTask);
         }
+        if (source.LiveScheduleTask != null) {
+            this.LiveScheduleTask = new LiveScheduleTask(source.LiveScheduleTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -496,6 +527,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
+        this.setParamObj(map, prefix + "LiveScheduleTask.", this.LiveScheduleTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

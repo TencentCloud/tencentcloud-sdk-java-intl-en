@@ -38,6 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ScheduleName;
 
     /**
+    * The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * The scheme status. Valid values:
 `Enabled`
 `Disabled`
@@ -45,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("Status")
     @Expose
-    private String [] Status;
+    private String Status;
 
     /**
     * The trigger of the scheme.
@@ -140,6 +150,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Type The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Type The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get The scheme status. Valid values:
 `Enabled`
 `Disabled`
@@ -149,7 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String [] getStatus() {
+    public String getStatus() {
         return this.Status;
     }
 
@@ -163,7 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setStatus(String [] Status) {
+    public void setStatus(String Status) {
         this.Status = Status;
     }
 
@@ -321,11 +359,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ScheduleName != null) {
             this.ScheduleName = new String(source.ScheduleName);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Status != null) {
-            this.Status = new String[source.Status.length];
-            for (int i = 0; i < source.Status.length; i++) {
-                this.Status[i] = new String(source.Status[i]);
-            }
+            this.Status = new String(source.Status);
         }
         if (source.Trigger != null) {
             this.Trigger = new WorkflowTrigger(source.Trigger);
@@ -360,7 +398,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
-        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamArrayObj(map, prefix + "Activities.", this.Activities);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

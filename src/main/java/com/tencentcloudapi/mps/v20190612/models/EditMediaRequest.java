@@ -38,17 +38,29 @@ public class EditMediaRequest extends AbstractModel{
 
     /**
     * The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * Configuration for output files of video editing
+    * The output settings for a video clipping task.
     */
     @SerializedName("OutputConfig")
     @Expose
     private EditMediaOutputConfig OutputConfig;
+
+    /**
+    * The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+    */
+    @SerializedName("ComposeConfig")
+    @Expose
+    private ComposeMediaConfig ComposeConfig;
 
     /**
     * Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
@@ -111,8 +123,14 @@ public class EditMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get The path to save the media processing output file. 
+     * Get The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+ 
      * @return OutputObjectPath The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
@@ -120,26 +138,56 @@ public class EditMediaRequest extends AbstractModel{
 
     /**
      * Set The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
      * @param OutputObjectPath The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get Configuration for output files of video editing 
-     * @return OutputConfig Configuration for output files of video editing
+     * Get The output settings for a video clipping task. 
+     * @return OutputConfig The output settings for a video clipping task.
      */
     public EditMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Configuration for output files of video editing
-     * @param OutputConfig Configuration for output files of video editing
+     * Set The output settings for a video clipping task.
+     * @param OutputConfig The output settings for a video clipping task.
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
+    }
+
+    /**
+     * Get The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task. 
+     * @return ComposeConfig The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+     */
+    public ComposeMediaConfig getComposeConfig() {
+        return this.ComposeConfig;
+    }
+
+    /**
+     * Set The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+     * @param ComposeConfig The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+     */
+    public void setComposeConfig(ComposeMediaConfig ComposeConfig) {
+        this.ComposeConfig = ComposeConfig;
     }
 
     /**
@@ -229,6 +277,9 @@ public class EditMediaRequest extends AbstractModel{
         if (source.OutputConfig != null) {
             this.OutputConfig = new EditMediaOutputConfig(source.OutputConfig);
         }
+        if (source.ComposeConfig != null) {
+            this.ComposeConfig = new ComposeMediaConfig(source.ComposeConfig);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -252,6 +303,7 @@ public class EditMediaRequest extends AbstractModel{
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamObj(map, prefix + "ComposeConfig.", this.ComposeConfig);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

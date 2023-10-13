@@ -20,46 +20,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornTaskInput extends AbstractModel{
+public class ComposeEmptyItem extends AbstractModel{
 
     /**
-    * The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
     */
-    @SerializedName("Definition")
+    @SerializedName("Duration")
     @Expose
-    private Long Definition;
+    private String Duration;
 
     /**
-     * Get The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li> 
+     * @return Duration The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public String getDuration() {
+        return this.Duration;
     }
 
     /**
-     * Set The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
+     * @param Duration The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setDuration(String Duration) {
+        this.Duration = Duration;
     }
 
-    public AiReviewPornTaskInput() {
+    public ComposeEmptyItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AiReviewPornTaskInput(AiReviewPornTaskInput source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public ComposeEmptyItem(ComposeEmptyItem source) {
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
         }
     }
 
@@ -68,7 +68,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
 
     }
 }

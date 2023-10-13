@@ -23,46 +23,61 @@ import java.util.HashMap;
 public class DrmInfo extends AbstractModel{
 
     /**
-    * 
+    * The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("SimpleAesDrm")
     @Expose
     private SimpleAesDrm SimpleAesDrm;
 
     /**
-     * Get  
-     * @return Type 
+     * Get The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Type The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Type The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return SimpleAesDrm 
+     * Get The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return SimpleAesDrm The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public SimpleAesDrm getSimpleAesDrm() {
         return this.SimpleAesDrm;
     }
 
     /**
-     * Set 
-     * @param SimpleAesDrm 
+     * Set The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param SimpleAesDrm The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setSimpleAesDrm(SimpleAesDrm SimpleAesDrm) {
         this.SimpleAesDrm = SimpleAesDrm;

@@ -31,6 +31,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private VideoEnhanceConfig VideoEnhance;
 
     /**
+    * The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AudioEnhance")
+    @Expose
+    private AudioEnhanceConfig AudioEnhance;
+
+    /**
      * Get Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VideoEnhance Video enhancement configuration.
@@ -50,6 +58,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VideoEnhance = VideoEnhance;
     }
 
+    /**
+     * Get The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return AudioEnhance The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public AudioEnhanceConfig getAudioEnhance() {
+        return this.AudioEnhance;
+    }
+
+    /**
+     * Set The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param AudioEnhance The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setAudioEnhance(AudioEnhanceConfig AudioEnhance) {
+        this.AudioEnhance = AudioEnhance;
+    }
+
     public EnhanceConfig() {
     }
 
@@ -61,6 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VideoEnhance != null) {
             this.VideoEnhance = new VideoEnhanceConfig(source.VideoEnhance);
         }
+        if (source.AudioEnhance != null) {
+            this.AudioEnhance = new AudioEnhanceConfig(source.AudioEnhance);
+        }
     }
 
 
@@ -69,6 +100,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "VideoEnhance.", this.VideoEnhance);
+        this.setParamObj(map, prefix + "AudioEnhance.", this.AudioEnhance);
 
     }
 }

@@ -20,139 +20,139 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AwsSQS extends AbstractModel{
+public class AudioEnhanceConfig extends AbstractModel{
 
     /**
-    * The region of the SQS queue.
+    * The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("SQSRegion")
+    @SerializedName("Denoise")
     @Expose
-    private String SQSRegion;
+    private AudioDenoiseConfig Denoise;
 
     /**
-    * The name of the SQS queue.
+    * The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("SQSQueueName")
+    @SerializedName("Separate")
     @Expose
-    private String SQSQueueName;
+    private AudioSeparateConfig Separate;
 
     /**
-    * The key ID required to read from/write to the SQS queue.
+    * The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("S3SecretId")
+    @SerializedName("VolumeBalance")
     @Expose
-    private String S3SecretId;
+    private VolumeBalanceConfig VolumeBalance;
 
     /**
-    * The key required to read from/write to the SQS queue.
+    * The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("S3SecretKey")
+    @SerializedName("Beautify")
     @Expose
-    private String S3SecretKey;
+    private AudioBeautifyConfig Beautify;
 
     /**
-     * Get The region of the SQS queue.
+     * Get The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SQSRegion The region of the SQS queue.
+     * @return Denoise The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getSQSRegion() {
-        return this.SQSRegion;
+    public AudioDenoiseConfig getDenoise() {
+        return this.Denoise;
     }
 
     /**
-     * Set The region of the SQS queue.
+     * Set The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SQSRegion The region of the SQS queue.
+     * @param Denoise The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setSQSRegion(String SQSRegion) {
-        this.SQSRegion = SQSRegion;
+    public void setDenoise(AudioDenoiseConfig Denoise) {
+        this.Denoise = Denoise;
     }
 
     /**
-     * Get The name of the SQS queue.
+     * Get The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SQSQueueName The name of the SQS queue.
+     * @return Separate The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getSQSQueueName() {
-        return this.SQSQueueName;
+    public AudioSeparateConfig getSeparate() {
+        return this.Separate;
     }
 
     /**
-     * Set The name of the SQS queue.
+     * Set The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SQSQueueName The name of the SQS queue.
+     * @param Separate The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setSQSQueueName(String SQSQueueName) {
-        this.SQSQueueName = SQSQueueName;
+    public void setSeparate(AudioSeparateConfig Separate) {
+        this.Separate = Separate;
     }
 
     /**
-     * Get The key ID required to read from/write to the SQS queue.
+     * Get The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return S3SecretId The key ID required to read from/write to the SQS queue.
+     * @return VolumeBalance The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getS3SecretId() {
-        return this.S3SecretId;
+    public VolumeBalanceConfig getVolumeBalance() {
+        return this.VolumeBalance;
     }
 
     /**
-     * Set The key ID required to read from/write to the SQS queue.
+     * Set The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param S3SecretId The key ID required to read from/write to the SQS queue.
+     * @param VolumeBalance The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setS3SecretId(String S3SecretId) {
-        this.S3SecretId = S3SecretId;
+    public void setVolumeBalance(VolumeBalanceConfig VolumeBalance) {
+        this.VolumeBalance = VolumeBalance;
     }
 
     /**
-     * Get The key required to read from/write to the SQS queue.
+     * Get The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return S3SecretKey The key required to read from/write to the SQS queue.
+     * @return Beautify The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public String getS3SecretKey() {
-        return this.S3SecretKey;
+    public AudioBeautifyConfig getBeautify() {
+        return this.Beautify;
     }
 
     /**
-     * Set The key required to read from/write to the SQS queue.
+     * Set The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param S3SecretKey The key required to read from/write to the SQS queue.
+     * @param Beautify The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setS3SecretKey(String S3SecretKey) {
-        this.S3SecretKey = S3SecretKey;
+    public void setBeautify(AudioBeautifyConfig Beautify) {
+        this.Beautify = Beautify;
     }
 
-    public AwsSQS() {
+    public AudioEnhanceConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AwsSQS(AwsSQS source) {
-        if (source.SQSRegion != null) {
-            this.SQSRegion = new String(source.SQSRegion);
+    public AudioEnhanceConfig(AudioEnhanceConfig source) {
+        if (source.Denoise != null) {
+            this.Denoise = new AudioDenoiseConfig(source.Denoise);
         }
-        if (source.SQSQueueName != null) {
-            this.SQSQueueName = new String(source.SQSQueueName);
+        if (source.Separate != null) {
+            this.Separate = new AudioSeparateConfig(source.Separate);
         }
-        if (source.S3SecretId != null) {
-            this.S3SecretId = new String(source.S3SecretId);
+        if (source.VolumeBalance != null) {
+            this.VolumeBalance = new VolumeBalanceConfig(source.VolumeBalance);
         }
-        if (source.S3SecretKey != null) {
-            this.S3SecretKey = new String(source.S3SecretKey);
+        if (source.Beautify != null) {
+            this.Beautify = new AudioBeautifyConfig(source.Beautify);
         }
     }
 
@@ -161,10 +161,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SQSRegion", this.SQSRegion);
-        this.setParamSimple(map, prefix + "SQSQueueName", this.SQSQueueName);
-        this.setParamSimple(map, prefix + "S3SecretId", this.S3SecretId);
-        this.setParamSimple(map, prefix + "S3SecretKey", this.S3SecretKey);
+        this.setParamObj(map, prefix + "Denoise.", this.Denoise);
+        this.setParamObj(map, prefix + "Separate.", this.Separate);
+        this.setParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
+        this.setParamObj(map, prefix + "Beautify.", this.Beautify);
 
     }
 }

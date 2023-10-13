@@ -31,6 +31,7 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
     * The storage location of the highlight segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -53,8 +54,10 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
     }
 
     /**
-     * Get The storage location of the highlight segments. 
+     * Get The storage location of the highlight segments.
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return OutputStorage The storage location of the highlight segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -62,7 +65,9 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
      * Set The storage location of the highlight segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param OutputStorage The storage location of the highlight segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

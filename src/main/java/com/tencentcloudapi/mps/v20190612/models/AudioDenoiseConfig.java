@@ -20,46 +20,56 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornTaskInput extends AbstractModel{
+public class AudioDenoiseConfig extends AbstractModel{
 
     /**
-    * The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
     */
-    @SerializedName("Definition")
+    @SerializedName("Switch")
     @Expose
-    private Long Definition;
+    private String Switch;
 
     /**
-     * Get The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`. 
+     * @return Switch Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
+     * @param Switch Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
-    public AiReviewPornTaskInput() {
+    public AudioDenoiseConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AiReviewPornTaskInput(AiReviewPornTaskInput source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public AudioDenoiseConfig(AudioDenoiseConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -68,7 +78,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

@@ -20,46 +20,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornTaskInput extends AbstractModel{
+public class LiveActivityResItem extends AbstractModel{
 
     /**
-    * The ID of a porn detection template.
+    * The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Definition")
+    @SerializedName("LiveRecordTask")
     @Expose
-    private Long Definition;
+    private LiveScheduleLiveRecordTaskResult LiveRecordTask;
 
     /**
-     * Get The ID of a porn detection template.
+     * Get The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Definition The ID of a porn detection template.
+     * @return LiveRecordTask The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public LiveScheduleLiveRecordTaskResult getLiveRecordTask() {
+        return this.LiveRecordTask;
     }
 
     /**
-     * Set The ID of a porn detection template.
+     * Set The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Definition The ID of a porn detection template.
+     * @param LiveRecordTask The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setLiveRecordTask(LiveScheduleLiveRecordTaskResult LiveRecordTask) {
+        this.LiveRecordTask = LiveRecordTask;
     }
 
-    public AiReviewPornTaskInput() {
+    public LiveActivityResItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AiReviewPornTaskInput(AiReviewPornTaskInput source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public LiveActivityResItem(LiveActivityResItem source) {
+        if (source.LiveRecordTask != null) {
+            this.LiveRecordTask = new LiveScheduleLiveRecordTaskResult(source.LiveRecordTask);
         }
     }
 
@@ -68,7 +68,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamObj(map, prefix + "LiveRecordTask.", this.LiveRecordTask);
 
     }
 }
