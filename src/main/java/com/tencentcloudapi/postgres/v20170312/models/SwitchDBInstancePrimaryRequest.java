@@ -20,82 +20,82 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceDeploymentRequest extends AbstractModel{
+public class SwitchDBInstancePrimaryRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * Instance ID
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+    * Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
     */
-    @SerializedName("DBNodeSet")
+    @SerializedName("Force")
     @Expose
-    private DBNode [] DBNodeSet;
+    private Boolean Force;
 
     /**
     * Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
     */
     @SerializedName("SwitchTag")
     @Expose
     private Long SwitchTag;
 
     /**
-    * Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+    * The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+    * The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
     */
     @SerializedName("SwitchEndTime")
     @Expose
     private String SwitchEndTime;
 
     /**
-     * Get Instance ID. 
-     * @return DBInstanceId Instance ID.
+     * Get Instance ID 
+     * @return DBInstanceId Instance ID
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param DBInstanceId Instance ID.
+     * Set Instance ID
+     * @param DBInstanceId Instance ID
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API. 
-     * @return DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * Get Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`. 
+     * @return Force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
      */
-    public DBNode [] getDBNodeSet() {
-        return this.DBNodeSet;
+    public Boolean getForce() {
+        return this.Force;
     }
 
     /**
-     * Set Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * Set Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
+     * @param Force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
      */
-    public void setDBNodeSet(DBNode [] DBNodeSet) {
-        this.DBNodeSet = DBNodeSet;
+    public void setForce(Boolean Force) {
+        this.Force = Force;
     }
 
     /**
@@ -103,12 +103,12 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`.  
+<li>Default value: `0`.  
      * @return SwitchTag Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
@@ -119,65 +119,62 @@ Default value: `0`.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
      * @param SwitchTag Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
     }
 
     /**
-     * Get Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid. 
-     * @return SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * Get The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`. 
+     * @return SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-     * @param SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * Set The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
+     * @param SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid. 
-     * @return SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * Get The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes. 
+     * @return SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-     * @param SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * Set The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
+     * @param SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;
     }
 
-    public ModifyDBInstanceDeploymentRequest() {
+    public SwitchDBInstancePrimaryRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyDBInstanceDeploymentRequest(ModifyDBInstanceDeploymentRequest source) {
+    public SwitchDBInstancePrimaryRequest(SwitchDBInstancePrimaryRequest source) {
         if (source.DBInstanceId != null) {
             this.DBInstanceId = new String(source.DBInstanceId);
         }
-        if (source.DBNodeSet != null) {
-            this.DBNodeSet = new DBNode[source.DBNodeSet.length];
-            for (int i = 0; i < source.DBNodeSet.length; i++) {
-                this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
-            }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
         }
         if (source.SwitchTag != null) {
             this.SwitchTag = new Long(source.SwitchTag);
@@ -196,7 +193,7 @@ Default value: `0`.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-        this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+        this.setParamSimple(map, prefix + "Force", this.Force);
         this.setParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);

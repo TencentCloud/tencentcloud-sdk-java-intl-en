@@ -30,7 +30,7 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+    * Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
     */
     @SerializedName("SpecCode")
     @Expose
@@ -44,49 +44,58 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+    * Validity period in months. Valid values:
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+    * Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * VPC ID.
+    * VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * ID of a subnet in the VPC specified by `VpcId`.
+    * VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Name of the purchased instance.
+    * Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+    * Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Security group ID.
+    * Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -100,21 +109,25 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+    * The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-    * This parameter is required if you purchase a multi-AZ deployed instance.
+    * Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
     */
     @SerializedName("DBNodeSet")
     @Expose
     private DBNode [] DBNodeSet;
 
     /**
-    * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+    * Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -149,6 +162,17 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private String RecoveryTargetTime;
 
     /**
+    * Primary-standby sync mode. Valid values:  
+<li>`Semi-sync`
+<li>`Async`
+Default value for the primary instance: `Semi-sync`.
+Default value for the standby instance: `Async`.
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private String SyncMode;
+
+    /**
      * Get ID of the original instance to be cloned. 
      * @return DBInstanceId ID of the original instance to be cloned.
      */
@@ -165,16 +189,16 @@ public class CloneDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
-     * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Get Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API. 
+     * @return SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-     * @param SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Set Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+     * @param SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -197,112 +221,148 @@ public class CloneDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used. 
-     * @return Period Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * Get Validity period in months. Valid values:
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`. 
+     * @return Period Validity period in months. Valid values:
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
-     * @param Period Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * Set Validity period in months. Valid values:
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+     * @param Period Validity period in months. Valid values:
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`. 
-     * @return AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+     * Get Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`. 
+     * @return AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
-     * @param AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+     * Set Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
+     * @param AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get VPC ID. 
-     * @return VpcId VPC ID.
+     * Get VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API. 
+     * @return VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID.
-     * @param VpcId VPC ID.
+     * Set VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * @param VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get ID of a subnet in the VPC specified by `VpcId`. 
-     * @return SubnetId ID of a subnet in the VPC specified by `VpcId`.
+     * Get VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. 
+     * @return SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set ID of a subnet in the VPC specified by `VpcId`.
-     * @param SubnetId ID of a subnet in the VPC specified by `VpcId`.
+     * Set VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * @param SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Name of the purchased instance. 
-     * @return Name Name of the purchased instance.
+     * Get Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default. 
+     * @return Name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the purchased instance.
-     * @param Name Name of the purchased instance.
+     * Set Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * @param Name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). 
-     * @return InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * Get Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`. 
+     * @return InstanceChargeType Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
-     * @param InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * Set Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
+     * @param InstanceChargeType Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Security group ID. 
-     * @return SecurityGroupIds Security group ID.
+     * Get Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+ 
+     * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID.
-     * @param SecurityGroupIds Security group ID.
+     * Set Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
+     * @param SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -325,48 +385,64 @@ public class CloneDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The information of tags to be bound with the purchased instance. This parameter is left empty by default. 
-     * @return TagList The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+     * Get The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API. 
+     * @return TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set The information of tags to be bound with the purchased instance. This parameter is left empty by default.
-     * @param TagList The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+     * Set The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+     * @param TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get This parameter is required if you purchase a multi-AZ deployed instance. 
-     * @return DBNodeSet This parameter is required if you purchase a multi-AZ deployed instance.
+     * Get Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API. 
+     * @return DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
     }
 
     /**
-     * Set This parameter is required if you purchase a multi-AZ deployed instance.
-     * @param DBNodeSet This parameter is required if you purchase a multi-AZ deployed instance.
+     * Set Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * @param DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;
     }
 
     /**
-     * Get Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`. 
-     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Get Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`. 
+     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Set Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -434,6 +510,38 @@ public class CloneDBInstanceRequest extends AbstractModel{
      */
     public void setRecoveryTargetTime(String RecoveryTargetTime) {
         this.RecoveryTargetTime = RecoveryTargetTime;
+    }
+
+    /**
+     * Get Primary-standby sync mode. Valid values:  
+<li>`Semi-sync`
+<li>`Async`
+Default value for the primary instance: `Semi-sync`.
+Default value for the standby instance: `Async`. 
+     * @return SyncMode Primary-standby sync mode. Valid values:  
+<li>`Semi-sync`
+<li>`Async`
+Default value for the primary instance: `Semi-sync`.
+Default value for the standby instance: `Async`.
+     */
+    public String getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set Primary-standby sync mode. Valid values:  
+<li>`Semi-sync`
+<li>`Async`
+Default value for the primary instance: `Semi-sync`.
+Default value for the standby instance: `Async`.
+     * @param SyncMode Primary-standby sync mode. Valid values:  
+<li>`Semi-sync`
+<li>`Async`
+Default value for the primary instance: `Semi-sync`.
+Default value for the standby instance: `Async`.
+     */
+    public void setSyncMode(String SyncMode) {
+        this.SyncMode = SyncMode;
     }
 
     public CloneDBInstanceRequest() {
@@ -507,6 +615,9 @@ public class CloneDBInstanceRequest extends AbstractModel{
         if (source.RecoveryTargetTime != null) {
             this.RecoveryTargetTime = new String(source.RecoveryTargetTime);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new String(source.SyncMode);
+        }
     }
 
 
@@ -532,6 +643,7 @@ public class CloneDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
         this.setParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
 
     }
 }

@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBErrlogsResponse extends AbstractModel{
-
-    /**
-    * Number of logs returned in a single query. Maximum value: `10000`.
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * Detailed sets of error logs
-    */
-    @SerializedName("Details")
-    @Expose
-    private ErrLogDetail [] Details;
+public class ModifyDBInstanceHAConfigResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,38 +28,6 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Number of logs returned in a single query. Maximum value: `10000`. 
-     * @return TotalCount Number of logs returned in a single query. Maximum value: `10000`.
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Number of logs returned in a single query. Maximum value: `10000`.
-     * @param TotalCount Number of logs returned in a single query. Maximum value: `10000`.
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get Detailed sets of error logs 
-     * @return Details Detailed sets of error logs
-     */
-    public ErrLogDetail [] getDetails() {
-        return this.Details;
-    }
-
-    /**
-     * Set Detailed sets of error logs
-     * @param Details Detailed sets of error logs
-     */
-    public void setDetails(ErrLogDetail [] Details) {
-        this.Details = Details;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -91,23 +45,14 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBErrlogsResponse() {
+    public ModifyDBInstanceHAConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBErrlogsResponse(DescribeDBErrlogsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Details != null) {
-            this.Details = new ErrLogDetail[source.Details.length];
-            for (int i = 0; i < source.Details.length; i++) {
-                this.Details[i] = new ErrLogDetail(source.Details[i]);
-            }
-        }
+    public ModifyDBInstanceHAConfigResponse(ModifyDBInstanceHAConfigResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Details.", this.Details);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

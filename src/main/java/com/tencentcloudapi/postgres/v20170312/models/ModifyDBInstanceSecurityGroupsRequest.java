@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * The list of security groups to be associated with the instance or RO groups
+    * The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
     */
     @SerializedName("SecurityGroupIdSet")
     @Expose
@@ -44,16 +46,24 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     private String ReadOnlyGroupId;
 
     /**
-     * Get The list of security groups to be associated with the instance or RO groups 
-     * @return SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups
+     * Get The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+ 
+     * @return SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
      */
     public String [] getSecurityGroupIdSet() {
         return this.SecurityGroupIdSet;
     }
 
     /**
-     * Set The list of security groups to be associated with the instance or RO groups
-     * @param SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups
+     * Set The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
+     * @param SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
      */
     public void setSecurityGroupIdSet(String [] SecurityGroupIdSet) {
         this.SecurityGroupIdSet = SecurityGroupIdSet;

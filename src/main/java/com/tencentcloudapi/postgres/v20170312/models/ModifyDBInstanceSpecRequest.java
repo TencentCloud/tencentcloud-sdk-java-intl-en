@@ -44,7 +44,10 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+    * Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -65,7 +68,11 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+    * Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -134,16 +141,28 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`. 
-     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Get Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`. 
+     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Set Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -182,16 +201,32 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`. 
-     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+     * Get Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`.  
+     * @return SwitchTag Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
-     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+     * Set Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
+     * @param SwitchTag Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

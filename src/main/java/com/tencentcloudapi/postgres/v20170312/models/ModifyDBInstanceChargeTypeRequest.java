@@ -30,28 +30,39 @@ public class ModifyDBInstanceChargeTypeRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * Instance billing mode.  Valid values:  `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). Default value:  `PREPAID`.
+    * Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Validity period  in months. Valid values:  Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+    * Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Renewal flag. Valid values；  Valid values: `0` (manual renewal), `1` (auto-renewal).
+    * Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+    * Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -74,64 +85,108 @@ public class ModifyDBInstanceChargeTypeRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance billing mode.  Valid values:  `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). Default value:  `PREPAID`. 
-     * @return InstanceChargeType Instance billing mode.  Valid values:  `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). Default value:  `PREPAID`.
+     * Get Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`. 
+     * @return InstanceChargeType Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode.  Valid values:  `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). Default value:  `PREPAID`.
-     * @param InstanceChargeType Instance billing mode.  Valid values:  `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). Default value:  `PREPAID`.
+     * Set Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
+     * @param InstanceChargeType Instance billing mode. Valid values:
+<li>`PREPAID`: Monthly subscription.
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+Default value: `PREPAID`.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Validity period  in months. Valid values:  Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used. 
-     * @return Period Validity period  in months. Valid values:  Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * Get Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`. 
+     * @return Period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Validity period  in months. Valid values:  Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
-     * @param Period Validity period  in months. Valid values:  Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * Set Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+     * @param Period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Renewal flag. Valid values；  Valid values: `0` (manual renewal), `1` (auto-renewal). 
-     * @return AutoRenewFlag Renewal flag. Valid values；  Valid values: `0` (manual renewal), `1` (auto-renewal).
+     * Get Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`. 
+     * @return AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Renewal flag. Valid values；  Valid values: `0` (manual renewal), `1` (auto-renewal).
-     * @param AutoRenewFlag Renewal flag. Valid values；  Valid values: `0` (manual renewal), `1` (auto-renewal).
+     * Set Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
+     * @param AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`. 
-     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Get Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`. 
+     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Set Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;

@@ -23,19 +23,22 @@ import java.util.HashMap;
 public class InstanceAuditLogFilters extends AbstractModel{
 
     /**
-    * Filter condition, which is not supported for `SQL`. The search conditions are supported as follows:
+    * Filter condition. The search conditions are supported as follows:
 
-`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for 
-`host` (Client IP),
-`user` (Username),
-and `DBName` (Database name).
+Include/Exclude, and Include/Exclude (segment dimension) can be used to search for:
+`sql` - SQL details.
 
-`Equal to` and `Not equal to` can be used to search for 
-`sqlType`- SQL u200dtype,
+`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for:
+`host` - Client IP,
+`user` - Username,
+`DBName` - Database name.
+
+`Equal to` and `Not equal to` can be used to search for:
+`sqlType` - SQL u200dtype,
 `errCode` - Error code,
-`threadId`- Thread ID.
+`threadId` - Thread ID.
 
-Range search is supported for the fields, such as 
+Range search is supported for:
 `execTime`- Execution time (μs),
 `lockWaitTime`u200d - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
@@ -50,9 +53,11 @@ Range search is supported for the fields, such as
     private String Type;
 
     /**
-    * Filter, including:
+    * Filter. Valid values:
+`WINC` - Include (segment dimension)
+`WEXC` - Exclude (segment dimension)
 `INC` - Include,
-`EXC` -Exclude,
+`EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
 u200d`RA` - Range
@@ -62,26 +67,29 @@ u200d`RA` - Range
     private String Compare;
 
     /**
-    * The filter value
+    * The filter value. In a reverse query, multiple values are in an "AND" relationship; while in a forward query, multiple values are in an "OR" relationship.
     */
     @SerializedName("Value")
     @Expose
     private String [] Value;
 
     /**
-     * Get Filter condition, which is not supported for `SQL`. The search conditions are supported as follows:
+     * Get Filter condition. The search conditions are supported as follows:
 
-`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for 
-`host` (Client IP),
-`user` (Username),
-and `DBName` (Database name).
+Include/Exclude, and Include/Exclude (segment dimension) can be used to search for:
+`sql` - SQL details.
 
-`Equal to` and `Not equal to` can be used to search for 
-`sqlType`- SQL u200dtype,
+`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for:
+`host` - Client IP,
+`user` - Username,
+`DBName` - Database name.
+
+`Equal to` and `Not equal to` can be used to search for:
+`sqlType` - SQL u200dtype,
 `errCode` - Error code,
-`threadId`- Thread ID.
+`threadId` - Thread ID.
 
-Range search is supported for the fields, such as 
+Range search is supported for:
 `execTime`- Execution time (μs),
 `lockWaitTime`u200d - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
@@ -90,19 +98,22 @@ Range search is supported for the fields, such as
 `checkRows` - Number of scanned rows,
 `affectRows` - Number of affected rows,
 `sentRows` - Number of returned rows. 
-     * @return Type Filter condition, which is not supported for `SQL`. The search conditions are supported as follows:
+     * @return Type Filter condition. The search conditions are supported as follows:
 
-`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for 
-`host` (Client IP),
-`user` (Username),
-and `DBName` (Database name).
+Include/Exclude, and Include/Exclude (segment dimension) can be used to search for:
+`sql` - SQL details.
 
-`Equal to` and `Not equal to` can be used to search for 
-`sqlType`- SQL u200dtype,
+`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for:
+`host` - Client IP,
+`user` - Username,
+`DBName` - Database name.
+
+`Equal to` and `Not equal to` can be used to search for:
+`sqlType` - SQL u200dtype,
 `errCode` - Error code,
-`threadId`- Thread ID.
+`threadId` - Thread ID.
 
-Range search is supported for the fields, such as 
+Range search is supported for:
 `execTime`- Execution time (μs),
 `lockWaitTime`u200d - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
@@ -117,19 +128,22 @@ Range search is supported for the fields, such as
     }
 
     /**
-     * Set Filter condition, which is not supported for `SQL`. The search conditions are supported as follows:
+     * Set Filter condition. The search conditions are supported as follows:
 
-`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for 
-`host` (Client IP),
-`user` (Username),
-and `DBName` (Database name).
+Include/Exclude, and Include/Exclude (segment dimension) can be used to search for:
+`sql` - SQL details.
 
-`Equal to` and `Not equal to` can be used to search for 
-`sqlType`- SQL u200dtype,
+`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for:
+`host` - Client IP,
+`user` - Username,
+`DBName` - Database name.
+
+`Equal to` and `Not equal to` can be used to search for:
+`sqlType` - SQL u200dtype,
 `errCode` - Error code,
-`threadId`- Thread ID.
+`threadId` - Thread ID.
 
-Range search is supported for the fields, such as 
+Range search is supported for:
 `execTime`- Execution time (μs),
 `lockWaitTime`u200d - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
@@ -138,19 +152,22 @@ Range search is supported for the fields, such as
 `checkRows` - Number of scanned rows,
 `affectRows` - Number of affected rows,
 `sentRows` - Number of returned rows.
-     * @param Type Filter condition, which is not supported for `SQL`. The search conditions are supported as follows:
+     * @param Type Filter condition. The search conditions are supported as follows:
 
-`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for 
-`host` (Client IP),
-`user` (Username),
-and `DBName` (Database name).
+Include/Exclude, and Include/Exclude (segment dimension) can be used to search for:
+`sql` - SQL details.
 
-`Equal to` and `Not equal to` can be used to search for 
-`sqlType`- SQL u200dtype,
+`Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for:
+`host` - Client IP,
+`user` - Username,
+`DBName` - Database name.
+
+`Equal to` and `Not equal to` can be used to search for:
+`sqlType` - SQL u200dtype,
 `errCode` - Error code,
-`threadId`- Thread ID.
+`threadId` - Thread ID.
 
-Range search is supported for the fields, such as 
+Range search is supported for:
 `execTime`- Execution time (μs),
 `lockWaitTime`u200d - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
@@ -165,15 +182,19 @@ Range search is supported for the fields, such as
     }
 
     /**
-     * Get Filter, including:
+     * Get Filter. Valid values:
+`WINC` - Include (segment dimension)
+`WEXC` - Exclude (segment dimension)
 `INC` - Include,
-`EXC` -Exclude,
+`EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
 u200d`RA` - Range 
-     * @return Compare Filter, including:
+     * @return Compare Filter. Valid values:
+`WINC` - Include (segment dimension)
+`WEXC` - Exclude (segment dimension)
 `INC` - Include,
-`EXC` -Exclude,
+`EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
 u200d`RA` - Range
@@ -183,15 +204,19 @@ u200d`RA` - Range
     }
 
     /**
-     * Set Filter, including:
+     * Set Filter. Valid values:
+`WINC` - Include (segment dimension)
+`WEXC` - Exclude (segment dimension)
 `INC` - Include,
-`EXC` -Exclude,
+`EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
 u200d`RA` - Range
-     * @param Compare Filter, including:
+     * @param Compare Filter. Valid values:
+`WINC` - Include (segment dimension)
+`WEXC` - Exclude (segment dimension)
 `INC` - Include,
-`EXC` -Exclude,
+`EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
 u200d`RA` - Range
@@ -201,16 +226,16 @@ u200d`RA` - Range
     }
 
     /**
-     * Get The filter value 
-     * @return Value The filter value
+     * Get The filter value. In a reverse query, multiple values are in an "AND" relationship; while in a forward query, multiple values are in an "OR" relationship. 
+     * @return Value The filter value. In a reverse query, multiple values are in an "AND" relationship; while in a forward query, multiple values are in an "OR" relationship.
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set The filter value
-     * @param Value The filter value
+     * Set The filter value. In a reverse query, multiple values are in an "AND" relationship; while in a forward query, multiple values are in an "OR" relationship.
+     * @param Value The filter value. In a reverse query, multiple values are in an "AND" relationship; while in a forward query, multiple values are in an "OR" relationship.
      */
     public void setValue(String [] Value) {
         this.Value = Value;

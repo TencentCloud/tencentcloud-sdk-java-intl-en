@@ -75,7 +75,7 @@ public class DescribeAuditLogsRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * Filter, which can be used to filter logs.
+    * Filter. Multiple values are in `AND` relationship.
     */
     @SerializedName("LogFilter")
     @Expose
@@ -206,16 +206,16 @@ public class DescribeAuditLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter, which can be used to filter logs. 
-     * @return LogFilter Filter, which can be used to filter logs.
+     * Get Filter. Multiple values are in `AND` relationship. 
+     * @return LogFilter Filter. Multiple values are in `AND` relationship.
      */
     public InstanceAuditLogFilters [] getLogFilter() {
         return this.LogFilter;
     }
 
     /**
-     * Set Filter, which can be used to filter logs.
-     * @param LogFilter Filter, which can be used to filter logs.
+     * Set Filter. Multiple values are in `AND` relationship.
+     * @param LogFilter Filter. Multiple values are in `AND` relationship.
      */
     public void setLogFilter(InstanceAuditLogFilters [] LogFilter) {
         this.LogFilter = LogFilter;

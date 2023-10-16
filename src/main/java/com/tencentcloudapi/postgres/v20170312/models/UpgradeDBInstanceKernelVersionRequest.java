@@ -30,17 +30,19 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+    * Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+
     */
     @SerializedName("TargetDBKernelVersion")
     @Expose
     private String TargetDBKernelVersion;
 
     /**
-    * Switch time after the kernel version upgrade. Valid values:
-`0` (default value): Switch now.
-`1`: Switch at the specified time.
-`2`: Switch in the maintenance time.
+    * Switch time after the kernel version upgrade for the specified instance. Valid values:
+<li>`0`: Switch now.
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -61,9 +63,10 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel{
     private String SwitchEndTime;
 
     /**
-    * Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
-`true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-`false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
+    * Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
+u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
+u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+Default value: `false`.
     */
     @SerializedName("DryRun")
     @Expose
@@ -86,44 +89,52 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API. 
-     * @return TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+     * Get Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+ 
+     * @return TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+
      */
     public String getTargetDBKernelVersion() {
         return this.TargetDBKernelVersion;
     }
 
     /**
-     * Set Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
-     * @param TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+     * Set Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+
+     * @param TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+
      */
     public void setTargetDBKernelVersion(String TargetDBKernelVersion) {
         this.TargetDBKernelVersion = TargetDBKernelVersion;
     }
 
     /**
-     * Get Switch time after the kernel version upgrade. Valid values:
-`0` (default value): Switch now.
-`1`: Switch at the specified time.
-`2`: Switch in the maintenance time. 
-     * @return SwitchTag Switch time after the kernel version upgrade. Valid values:
-`0` (default value): Switch now.
-`1`: Switch at the specified time.
-`2`: Switch in the maintenance time.
+     * Get Switch time after the kernel version upgrade for the specified instance. Valid values:
+<li>`0`: Switch now.
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`.  
+     * @return SwitchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
+<li>`0`: Switch now.
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time after the kernel version upgrade. Valid values:
-`0` (default value): Switch now.
-`1`: Switch at the specified time.
-`2`: Switch in the maintenance time.
-     * @param SwitchTag Switch time after the kernel version upgrade. Valid values:
-`0` (default value): Switch now.
-`1`: Switch at the specified time.
-`2`: Switch in the maintenance time.
+     * Set Switch time after the kernel version upgrade for the specified instance. Valid values:
+<li>`0`: Switch now.
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
+     * @param SwitchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
+<li>`0`: Switch now.
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
@@ -162,24 +173,28 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
-`true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-`false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed. 
-     * @return DryRun Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
-`true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-`false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * Get Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
+u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
+u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+Default value: `false`. 
+     * @return DryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
+u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
+u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+Default value: `false`.
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
-`true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-`false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
-     * @param DryRun Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
-`true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-`false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * Set Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
+u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
+u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+Default value: `false`.
+     * @param DryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
+u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
+u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+Default value: `false`.
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

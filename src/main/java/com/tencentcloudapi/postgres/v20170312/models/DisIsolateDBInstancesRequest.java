@@ -23,21 +23,26 @@ import java.util.HashMap;
 public class DisIsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+    * Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+    * Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+    * Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -51,48 +56,68 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * Get List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here. 
-     * @return DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+     * Get Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here. 
+     * @return DBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
-     * @param DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+     * Set Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+     * @param DBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get The valid period (in months) of the monthly-subscribed instance when removing it from isolation 
-     * @return Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * Get Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`. 
+     * @return Period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set The valid period (in months) of the monthly-subscribed instance when removing it from isolation
-     * @param Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * Set Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+     * @param Period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`. 
-     * @return AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+     * Get Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`. 
+     * @return AutoVoucher Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
-     * @param AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+     * Set Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
+     * @param AutoVoucher Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;

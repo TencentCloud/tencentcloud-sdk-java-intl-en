@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBInstancesRequest extends AbstractModel{
 
     /**
-    * Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+    * Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
     */
     @SerializedName("SpecCode")
     @Expose
@@ -163,16 +163,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String DBKernelVersion;
 
     /**
-     * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
-     * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API. 
+     * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-     * @param SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+     * @param SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;

@@ -30,7 +30,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+    * Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
     */
     @SerializedName("SpecCode")
     @Expose
@@ -104,16 +104,16 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
-     * @return SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Get Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API. 
+     * @return SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-     * @param SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Set Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+     * @param SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;

@@ -30,7 +30,8 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * New name of database instance
+    * Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
     */
     @SerializedName("InstanceName")
     @Expose
@@ -53,16 +54,20 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     }
 
     /**
-     * Get New name of database instance 
-     * @return InstanceName New name of database instance
+     * Get Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+ 
+     * @return InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set New name of database instance
-     * @param InstanceName New name of database instance
+     * Set Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
+     * @param InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

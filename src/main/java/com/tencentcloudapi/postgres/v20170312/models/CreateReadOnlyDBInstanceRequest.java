@@ -23,7 +23,22 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
 
     /**
-    * Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+    * Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * ID of the primary instance to which the read-only instance belongs
+    */
+    @SerializedName("MasterDBInstanceId")
+    @Expose
+    private String MasterDBInstanceId;
+
+    /**
+    * Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
     */
     @SerializedName("SpecCode")
     @Expose
@@ -37,56 +52,50 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * Number of instances purchased at a time. Value range: 1–100.
+    * The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+    * Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * ID of the primary instance to which the read-only replica belongs
+    * VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
     */
-    @SerializedName("MasterDBInstanceId")
+    @SerializedName("VpcId")
     @Expose
-    private String MasterDBInstanceId;
+    private String VpcId;
 
     /**
-    * Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+    * VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
     */
-    @SerializedName("Zone")
+    @SerializedName("SubnetId")
     @Expose
-    private String Zone;
+    private String SubnetId;
 
     /**
-    * Project ID
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
-
-    /**
-    * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
-    * Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+    * Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+    * Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -100,25 +109,21 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+    * Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * VPC ID
+    * Project ID
     */
-    @SerializedName("VpcId")
+    @SerializedName("ProjectId")
     @Expose
-    private String VpcId;
-
-    /**
-    * VPC subnet ID
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
+    private Long ProjectId;
 
     /**
     * Special offer ID
@@ -128,20 +133,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * Instance name (which will be supported in the future)
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-    */
-    @SerializedName("NeedSupportIpv6")
-    @Expose
-    private Long NeedSupportIpv6;
-
-    /**
     * RO group ID
     */
     @SerializedName("ReadOnlyGroupId")
@@ -149,30 +140,91 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String ReadOnlyGroupId;
 
     /**
-    * The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+    * The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
     */
     @SerializedName("TagList")
     @Expose
     private Tag TagList;
 
     /**
-    * Security group ID
+    * Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
-     * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+    * Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+    */
+    @SerializedName("NeedSupportIpv6")
+    @Expose
+    private Long NeedSupportIpv6;
+
+    /**
+    * Instance name (which will be supported in the future)
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
+     * Get Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API. 
+     * @return Zone Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * @param Zone Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get ID of the primary instance to which the read-only instance belongs 
+     * @return MasterDBInstanceId ID of the primary instance to which the read-only instance belongs
+     */
+    public String getMasterDBInstanceId() {
+        return this.MasterDBInstanceId;
+    }
+
+    /**
+     * Set ID of the primary instance to which the read-only instance belongs
+     * @param MasterDBInstanceId ID of the primary instance to which the read-only instance belongs
+     */
+    public void setMasterDBInstanceId(String MasterDBInstanceId) {
+        this.MasterDBInstanceId = MasterDBInstanceId;
+    }
+
+    /**
+     * Get Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API. 
+     * @return SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-     * @param SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * Set Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+     * @param SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -195,128 +247,128 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of instances purchased at a time. Value range: 1–100. 
-     * @return InstanceCount Number of instances purchased at a time. Value range: 1–100.
+     * Get The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls. 
+     * @return InstanceCount The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances purchased at a time. Value range: 1–100.
-     * @param InstanceCount Number of instances purchased at a time. Value range: 1–100.
+     * Set The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+     * @param InstanceCount The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used. 
-     * @return Period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * Get Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`. 
+     * @return Period Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
-     * @param Period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * Set Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+     * @param Period Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get ID of the primary instance to which the read-only replica belongs 
-     * @return MasterDBInstanceId ID of the primary instance to which the read-only replica belongs
+     * Get VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API. 
+     * @return VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      */
-    public String getMasterDBInstanceId() {
-        return this.MasterDBInstanceId;
+    public String getVpcId() {
+        return this.VpcId;
     }
 
     /**
-     * Set ID of the primary instance to which the read-only replica belongs
-     * @param MasterDBInstanceId ID of the primary instance to which the read-only replica belongs
+     * Set VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * @param VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      */
-    public void setMasterDBInstanceId(String MasterDBInstanceId) {
-        this.MasterDBInstanceId = MasterDBInstanceId;
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
-     * Get Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API. 
-     * @return Zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+     * Get VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. 
+     * @return SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      */
-    public String getZone() {
-        return this.Zone;
+    public String getSubnetId() {
+        return this.SubnetId;
     }
 
     /**
-     * Set Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-     * @param Zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+     * Set VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * @param SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set Project ID
-     * @param ProjectId Project ID
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance. 
-     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-     * @param DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-    }
-
-    /**
-     * Get Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance. 
-     * @return InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+     * Get Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance. 
+     * @return InstanceChargeType Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
-     * @param InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+     * Set Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+     * @param InstanceChargeType Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`. 
-     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Get Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`. 
+     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * Set Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -339,51 +391,47 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`. 
-     * @return AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+     * Get Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`. 
+     * @return AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
-     * @param AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+     * Set Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
+     * @param AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
-    public String getVpcId() {
-        return this.VpcId;
+    public Long getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set Project ID
+     * @param ProjectId Project ID
      */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
-     * Get VPC subnet ID 
-     * @return SubnetId VPC subnet ID
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set VPC subnet ID
-     * @param SubnetId VPC subnet ID
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -403,38 +451,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name (which will be supported in the future) 
-     * @return Name Instance name (which will be supported in the future)
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set Instance name (which will be supported in the future)
-     * @param Name Instance name (which will be supported in the future)
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). 
-     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-     */
-    public Long getNeedSupportIpv6() {
-        return this.NeedSupportIpv6;
-    }
-
-    /**
-     * Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-     * @param NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-     */
-    public void setNeedSupportIpv6(Long NeedSupportIpv6) {
-        this.NeedSupportIpv6 = NeedSupportIpv6;
-    }
-
-    /**
      * Get RO group ID 
      * @return ReadOnlyGroupId RO group ID
      */
@@ -451,35 +467,99 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array). 
-     * @return TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+     * Get The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API. 
+     * @return TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
-     * @param TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+     * Set The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+     * @param TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get Security group ID 
-     * @return SecurityGroupIds Security group ID
+     * Get Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+ 
+     * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID
-     * @param SecurityGroupIds Security group ID
+     * Set Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
+     * @param SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`. 
+     * @return NeedSupportIpv6 Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     */
+    public Long getNeedSupportIpv6() {
+        return this.NeedSupportIpv6;
+    }
+
+    /**
+     * Set Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     * @param NeedSupportIpv6 Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+     */
+    public void setNeedSupportIpv6(Long NeedSupportIpv6) {
+        this.NeedSupportIpv6 = NeedSupportIpv6;
+    }
+
+    /**
+     * Get Instance name (which will be supported in the future) 
+     * @return Name Instance name (which will be supported in the future)
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Instance name (which will be supported in the future)
+     * @param Name Instance name (which will be supported in the future)
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance. 
+     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * @param DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
     }
 
     public CreateReadOnlyDBInstanceRequest() {
@@ -490,6 +570,12 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateReadOnlyDBInstanceRequest(CreateReadOnlyDBInstanceRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.MasterDBInstanceId != null) {
+            this.MasterDBInstanceId = new String(source.MasterDBInstanceId);
+        }
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
@@ -502,17 +588,11 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
-        if (source.MasterDBInstanceId != null) {
-            this.MasterDBInstanceId = new String(source.MasterDBInstanceId);
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
-        }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
@@ -529,20 +609,11 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
         }
         if (source.ActivityId != null) {
             this.ActivityId = new Long(source.ActivityId);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.NeedSupportIpv6 != null) {
-            this.NeedSupportIpv6 = new Long(source.NeedSupportIpv6);
         }
         if (source.ReadOnlyGroupId != null) {
             this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
@@ -556,6 +627,15 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.NeedSupportIpv6 != null) {
+            this.NeedSupportIpv6 = new Long(source.NeedSupportIpv6);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
+        }
     }
 
 
@@ -563,26 +643,26 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
-        this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamSimple(map, prefix + "ReadOnlyGroupId", this.ReadOnlyGroupId);
         this.setParamObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
 
     }
 }

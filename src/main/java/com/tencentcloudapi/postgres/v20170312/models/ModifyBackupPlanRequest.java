@@ -44,7 +44,7 @@ public class ModifyBackupPlanRequest extends AbstractModel{
     private String MaxBackupStartTime;
 
     /**
-    * Backup retention period in days. Value range: 3-7
+    * Backup retention period in days. Value range: 7-1830
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyBackupPlanRequest extends AbstractModel{
     }
 
     /**
-     * Get Backup retention period in days. Value range: 3-7 
-     * @return BaseBackupRetentionPeriod Backup retention period in days. Value range: 3-7
+     * Get Backup retention period in days. Value range: 7-1830 
+     * @return BaseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set Backup retention period in days. Value range: 3-7
-     * @param BaseBackupRetentionPeriod Backup retention period in days. Value range: 3-7
+     * Set Backup retention period in days. Value range: 7-1830
+     * @param BaseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;

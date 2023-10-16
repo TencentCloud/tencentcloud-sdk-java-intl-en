@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeDBErrlogsRequest extends AbstractModel{
 
     /**
-    * Instance ID in the format of postgres-5bq3wfjd
+    * Instance ID	
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+    * u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time in the format of 2018-01-01 00:00:00
+    * u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
     */
     @SerializedName("EndTime")
     @Expose
@@ -51,69 +51,69 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
-    * Search keyword
+    * Keywords used for search
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * Number of entries returned per page. Value range: 1-100
+    * Number of results returned per page. Value range: 1-100. Default value: `50`.	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Page number for data return in paged query. Pagination starts from 0
+    * Data offset, which starts from 0. Default value: `0`.	
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Instance ID in the format of postgres-5bq3wfjd 
-     * @return DBInstanceId Instance ID in the format of postgres-5bq3wfjd
+     * Get Instance ID	 
+     * @return DBInstanceId Instance ID	
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-5bq3wfjd
-     * @param DBInstanceId Instance ID in the format of postgres-5bq3wfjd
+     * Set Instance ID	
+     * @param DBInstanceId Instance ID	
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago 
-     * @return StartTime Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+     * Get u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	 
+     * @return StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
-     * @param StartTime Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+     * Set u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+     * @param StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of 2018-01-01 00:00:00 
-     * @return EndTime Query end time in the format of 2018-01-01 00:00:00
+     * Get u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	 
+     * @return EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of 2018-01-01 00:00:00
-     * @param EndTime Query end time in the format of 2018-01-01 00:00:00
+     * Set u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+     * @param EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -136,48 +136,48 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Search keyword 
-     * @return SearchKeys Search keyword
+     * Get Keywords used for search 
+     * @return SearchKeys Keywords used for search
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set Search keyword
-     * @param SearchKeys Search keyword
+     * Set Keywords used for search
+     * @param SearchKeys Keywords used for search
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get Number of entries returned per page. Value range: 1-100 
-     * @return Limit Number of entries returned per page. Value range: 1-100
+     * Get Number of results returned per page. Value range: 1-100. Default value: `50`.	 
+     * @return Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page. Value range: 1-100
-     * @param Limit Number of entries returned per page. Value range: 1-100
+     * Set Number of results returned per page. Value range: 1-100. Default value: `50`.	
+     * @param Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Page number for data return in paged query. Pagination starts from 0 
-     * @return Offset Page number for data return in paged query. Pagination starts from 0
+     * Get Data offset, which starts from 0. Default value: `0`.	 
+     * @return Offset Data offset, which starts from 0. Default value: `0`.	
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number for data return in paged query. Pagination starts from 0
-     * @param Offset Page number for data return in paged query. Pagination starts from 0
+     * Set Data offset, which starts from 0. Default value: `0`.	
+     * @param Offset Data offset, which starts from 0. Default value: `0`.	
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

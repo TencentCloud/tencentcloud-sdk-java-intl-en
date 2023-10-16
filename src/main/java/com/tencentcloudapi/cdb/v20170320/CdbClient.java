@@ -961,6 +961,27 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     }
 
     /**
+     *This API is used to query the elastic expansion policy of an instance.
+     * @param req DescribeCpuExpandStrategyRequest
+     * @return DescribeCpuExpandStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(DescribeCpuExpandStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCpuExpandStrategyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCpuExpandStrategyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCpuExpandStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query database version attributes, including supported features such as database encryption and audit.
      * @param req DescribeDBFeaturesRequest
      * @return DescribeDBFeaturesResponse
@@ -2567,6 +2588,27 @@ Note:
     }
 
     /**
+     *u200cThis API is used to enable elastic CPU expansion manually or automatically.
+     * @param req StartCpuExpandRequest
+     * @return StartCpuExpandResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartCpuExpandResponse StartCpuExpand(StartCpuExpandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartCpuExpandResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartCpuExpandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartCpuExpand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to start the data replication from the source instance to the read-only instance.
      * @param req StartReplicationRequest
      * @return StartReplicationResponse
@@ -2580,6 +2622,27 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<StartReplicationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartReplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable elastic CPU expansion.
+     * @param req StopCpuExpandRequest
+     * @return StopCpuExpandResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCpuExpandResponse StopCpuExpand(StopCpuExpandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopCpuExpandResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopCpuExpandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopCpuExpand");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

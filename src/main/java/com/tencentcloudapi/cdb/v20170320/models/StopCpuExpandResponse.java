@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBErrlogsResponse extends AbstractModel{
+public class StopCpuExpandResponse extends AbstractModel{
 
     /**
-    * Number of logs returned in a single query. Maximum value: `10000`.
+    * Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
     */
-    @SerializedName("TotalCount")
+    @SerializedName("AsyncRequestId")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * Detailed sets of error logs
-    */
-    @SerializedName("Details")
-    @Expose
-    private ErrLogDetail [] Details;
+    private String AsyncRequestId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of logs returned in a single query. Maximum value: `10000`. 
-     * @return TotalCount Number of logs returned in a single query. Maximum value: `10000`.
+     * Get Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query. 
+     * @return AsyncRequestId Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getAsyncRequestId() {
+        return this.AsyncRequestId;
     }
 
     /**
-     * Set Number of logs returned in a single query. Maximum value: `10000`.
-     * @param TotalCount Number of logs returned in a single query. Maximum value: `10000`.
+     * Set Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+     * @param AsyncRequestId Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get Detailed sets of error logs 
-     * @return Details Detailed sets of error logs
-     */
-    public ErrLogDetail [] getDetails() {
-        return this.Details;
-    }
-
-    /**
-     * Set Detailed sets of error logs
-     * @param Details Detailed sets of error logs
-     */
-    public void setDetails(ErrLogDetail [] Details) {
-        this.Details = Details;
+    public void setAsyncRequestId(String AsyncRequestId) {
+        this.AsyncRequestId = AsyncRequestId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBErrlogsResponse() {
+    public StopCpuExpandResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBErrlogsResponse(DescribeDBErrlogsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Details != null) {
-            this.Details = new ErrLogDetail[source.Details.length];
-            for (int i = 0; i < source.Details.length; i++) {
-                this.Details[i] = new ErrLogDetail(source.Details[i]);
-            }
+    public StopCpuExpandResponse(StopCpuExpandResponse source) {
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new String(source.AsyncRequestId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
