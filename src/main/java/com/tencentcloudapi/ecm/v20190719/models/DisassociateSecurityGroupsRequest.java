@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisassociateSecurityGroupsRequest extends AbstractModel{
+public class DisassociateSecurityGroupsRequest extends AbstractModel {
 
     /**
     * ID of the security group to be unbound, such as `esg-efil73jd`. You can unbind only one security group at a time.

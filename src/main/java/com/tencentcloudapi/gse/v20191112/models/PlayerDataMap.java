@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlayerDataMap extends AbstractModel{
+public class PlayerDataMap extends AbstractModel {
 
     /**
     * The key of player custom data. It should contain 1 to 1024 ASCII characters.

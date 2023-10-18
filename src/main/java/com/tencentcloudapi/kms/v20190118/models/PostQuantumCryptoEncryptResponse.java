@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PostQuantumCryptoEncryptResponse extends AbstractModel{
+public class PostQuantumCryptoEncryptResponse extends AbstractModel {
 
     /**
     * Base64-encoded ciphertext after encryption. This field contains the information of ciphertext and keys. It is not the result of encrypting the plaintext. To get the plaintext, you need to pass in this field to the PostQuantumCryptoDecrypt API.

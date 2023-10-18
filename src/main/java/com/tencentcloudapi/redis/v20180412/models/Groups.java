@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Groups extends AbstractModel{
+public class Groups extends AbstractModel {
 
     /**
     * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.

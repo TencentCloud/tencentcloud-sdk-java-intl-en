@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestoreInstanceResponse extends AbstractModel{
+public class RestoreInstanceResponse extends AbstractModel {
 
     /**
     * Async flow task ID, which can be used to call the `DescribeFlowStatus` API to get the task execution status

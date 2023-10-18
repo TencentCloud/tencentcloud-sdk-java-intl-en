@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuLayoutVolume extends AbstractModel{
+public class McuLayoutVolume extends AbstractModel {
 
     /**
     * The application data, which will be embedded in the `app_data` field of the custom SEI. It must be shorter than 4,096 characters.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDataTransformRequest extends AbstractModel{
+public class CreateDataTransformRequest extends AbstractModel {
 
     /**
     * Task type. Valid values: 1 (specified topic) and 2 (dynamically created).

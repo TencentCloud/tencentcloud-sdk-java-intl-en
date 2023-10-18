@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
+public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
 
     /**
     * Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StatisticsItem extends AbstractModel{
+public class StatisticsItem extends AbstractModel {
 
     /**
     * Date in the format of yyyy-mm-dd, such as 2018-07-13

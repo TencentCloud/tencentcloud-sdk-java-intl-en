@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateDevicesEnableStateResponse extends AbstractModel{
+public class UpdateDevicesEnableStateResponse extends AbstractModel {
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.

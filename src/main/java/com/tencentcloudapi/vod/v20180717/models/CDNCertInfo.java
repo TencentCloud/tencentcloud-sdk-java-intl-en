@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CDNCertInfo extends AbstractModel{
+public class CDNCertInfo extends AbstractModel {
 
     /**
     * Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service

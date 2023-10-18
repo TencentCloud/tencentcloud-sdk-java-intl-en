@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LibDetail extends AbstractModel{
+public class LibDetail extends AbstractModel {
 
     /**
     * This field is used to return the ID of the recognized object for easier recognition and distinction.

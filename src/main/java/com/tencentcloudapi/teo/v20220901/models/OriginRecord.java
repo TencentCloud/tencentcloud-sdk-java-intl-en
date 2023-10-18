@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OriginRecord extends AbstractModel{
+public class OriginRecord extends AbstractModel {
 
     /**
     * The origin record value, which can be an IPv4/IPv6 address or a domain name.

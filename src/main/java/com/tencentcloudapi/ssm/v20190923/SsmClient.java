@@ -49,14 +49,10 @@ public class SsmClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateProductSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateProductSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateProductSecret", CreateProductSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class SsmClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSSHKeyPairSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSSHKeyPairSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSSHKeyPairSecret", CreateSSHKeyPairSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class SsmClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSecret", CreateSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class SsmClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSecret", DeleteSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSecretVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSecretVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSecretVersion", DeleteSecretVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -155,14 +135,10 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAsyncRequestInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAsyncRequestInfo", DescribeAsyncRequestInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -177,14 +153,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRotationDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRotationDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRotationDetail", DescribeRotationDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -199,14 +171,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRotationHistoryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRotationHistory");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRotationHistory", DescribeRotationHistoryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -220,14 +188,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSecret", DescribeSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -241,14 +205,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSupportedProductsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSupportedProducts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSupportedProducts", DescribeSupportedProductsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -262,14 +222,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableSecret", DisableSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -283,14 +239,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableSecret", EnableSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -304,14 +256,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRegionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRegions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRegions", GetRegionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -325,14 +273,10 @@ This API is only applicable to Tencent Cloud service credentials.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetSSHKeyPairValueResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSSHKeyPairValue");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetSSHKeyPairValue", GetSSHKeyPairValueResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -347,14 +291,10 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetSecretValueResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSecretValue");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetSecretValue", GetSecretValueResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -368,14 +308,10 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetServiceStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetServiceStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetServiceStatus", GetServiceStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -389,14 +325,10 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListSecretVersionIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListSecretVersionIds");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListSecretVersionIds", ListSecretVersionIdsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -410,14 +342,10 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListSecretsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListSecrets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListSecrets", ListSecretsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -432,14 +360,10 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutSecretValueResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutSecretValue");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutSecretValue", PutSecretValueResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -453,14 +377,10 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RestoreSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RestoreSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RestoreSecret", RestoreSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -475,14 +395,10 @@ Note that only the secrets with the "Enabled" status can be rotated.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RotateProductSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RotateProductSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RotateProductSecret", RotateProductSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -496,14 +412,10 @@ Note that only the secrets with the "Enabled" status can be rotated.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateDescriptionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateDescription");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateDescription", UpdateDescriptionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -520,14 +432,10 @@ Rotation start time
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateRotationStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateRotationStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateRotationStatus", UpdateRotationStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -542,14 +450,10 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateSecretResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateSecret");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateSecret", UpdateSecretResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

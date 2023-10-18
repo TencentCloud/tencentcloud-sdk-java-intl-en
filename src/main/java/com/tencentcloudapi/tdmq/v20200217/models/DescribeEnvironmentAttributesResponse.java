@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEnvironmentAttributesResponse extends AbstractModel{
+public class DescribeEnvironmentAttributesResponse extends AbstractModel {
 
     /**
     * TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days).

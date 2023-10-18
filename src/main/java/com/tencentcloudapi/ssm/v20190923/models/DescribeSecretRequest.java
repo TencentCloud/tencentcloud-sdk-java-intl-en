@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecretRequest extends AbstractModel{
+public class DescribeSecretRequest extends AbstractModel {
 
     /**
     * Name of a Secret whose detailed information is to be obtained.

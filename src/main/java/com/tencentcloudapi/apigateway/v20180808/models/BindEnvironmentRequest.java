@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindEnvironmentRequest extends AbstractModel{
+public class BindEnvironmentRequest extends AbstractModel {
 
     /**
     * List of unique IDs of the usage plans to be bound.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportKeyPairRequest extends AbstractModel{
+public class ImportKeyPairRequest extends AbstractModel {
 
     /**
     * Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.

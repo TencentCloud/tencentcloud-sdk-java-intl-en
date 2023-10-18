@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMachineRequest extends AbstractModel{
+public class DescribeMachineRequest extends AbstractModel {
 
     /**
     * If this parameter is not `0`, machines supporting IPv6 will be queried.

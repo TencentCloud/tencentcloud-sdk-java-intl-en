@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWhiteboardPushCallbackResponse extends AbstractModel{
+public class DescribeWhiteboardPushCallbackResponse extends AbstractModel {
 
     /**
     * Callback URL of the whiteboard push event. If no callback URL is set, this parameter is null.

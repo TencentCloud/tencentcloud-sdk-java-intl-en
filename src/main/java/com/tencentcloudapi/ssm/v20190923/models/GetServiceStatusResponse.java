@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetServiceStatusResponse extends AbstractModel{
+public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * `true`: The service is activated; `false`: The service is not activated.

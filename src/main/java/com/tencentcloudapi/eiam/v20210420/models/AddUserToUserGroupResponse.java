@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserToUserGroupResponse extends AbstractModel{
+public class AddUserToUserGroupResponse extends AbstractModel {
 
     /**
     * List of IDs of the users failed to be added to the user group.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchFacesRequest extends AbstractModel{
+public class SearchFacesRequest extends AbstractModel {
 
     /**
     * List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.

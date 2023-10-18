@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBInstancesRequest extends AbstractModel{
+public class DescribeDCDBInstancesRequest extends AbstractModel {
 
     /**
     * Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAIAnalysisTemplateRequest extends AbstractModel{
+public class CreateAIAnalysisTemplateRequest extends AbstractModel {
 
     /**
     * Video content analysis template name. Length limit: 64 characters.

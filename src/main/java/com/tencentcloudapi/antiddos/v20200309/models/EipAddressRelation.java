@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipAddressRelation extends AbstractModel{
+public class EipAddressRelation extends AbstractModel {
 
     /**
     * Region of the Anti-DDoS instance bound to the EIP. For example, hk indicates Hong Kong.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnLogInfo extends AbstractModel{
+public class CdnLogInfo extends AbstractModel {
 
     /**
     * Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrtcUsageResponse extends AbstractModel{
+public class DescribeTrtcUsageResponse extends AbstractModel {
 
     /**
     * The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.

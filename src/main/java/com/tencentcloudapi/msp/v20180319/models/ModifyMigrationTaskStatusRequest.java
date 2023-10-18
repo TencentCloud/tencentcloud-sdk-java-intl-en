@@ -16,11 +16,12 @@
 package com.tencentcloudapi.msp.v20180319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrationTaskStatusRequest extends AbstractModel{
+public class ModifyMigrationTaskStatusRequest extends AbstractModel {
 
     /**
     * Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).

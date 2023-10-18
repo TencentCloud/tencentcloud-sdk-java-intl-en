@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrdersRequest extends AbstractModel{
+public class DescribeOrdersRequest extends AbstractModel {
 
     /**
     * Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status

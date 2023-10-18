@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDisasterRecoverGroupsRequest extends AbstractModel{
+public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
 
     /**
     * ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.

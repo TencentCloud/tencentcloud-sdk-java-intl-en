@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AsrWordsConfigureInfo extends AbstractModel{
+public class AsrWordsConfigureInfo extends AbstractModel {
 
     /**
     * Switch of a speech keyword recognition task. Valid values:

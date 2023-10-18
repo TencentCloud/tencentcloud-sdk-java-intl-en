@@ -55,14 +55,10 @@ You can manually configure the function after replication as required.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CopyFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CopyFunction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CopyFunction", CopyFunctionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -77,14 +73,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAliasResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAlias");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAlias", CreateAliasResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -98,14 +90,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateNamespaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateNamespace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateNamespace", CreateNamespaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -119,14 +107,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTriggerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTrigger");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTrigger", CreateTriggerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -140,14 +124,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAliasResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAlias");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAlias", DeleteAliasResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -161,14 +141,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteFunction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteFunction", DeleteFunctionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -182,14 +158,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLayerVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLayerVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLayerVersion", DeleteLayerVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -203,14 +175,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteNamespace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteNamespace", DeleteNamespaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -224,14 +192,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteProvisionedConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteProvisionedConcurrencyConfig", DeleteProvisionedConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -245,14 +209,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteReservedConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteReservedConcurrencyConfig", DeleteReservedConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -266,14 +226,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTriggerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTrigger");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTrigger", DeleteTriggerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -287,14 +243,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetAccount", GetAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -308,14 +260,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetAliasResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAlias");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetAlias", GetAliasResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -329,14 +277,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetAsyncEventStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAsyncEventStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetAsyncEventStatus", GetAsyncEventStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -350,14 +294,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetFunctionAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFunctionAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetFunctionAddress", GetFunctionAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -371,14 +311,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFunctionEventInvokeConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetFunctionEventInvokeConfig", GetFunctionEventInvokeConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -392,14 +328,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetFunctionLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFunctionLogs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetFunctionLogs", GetFunctionLogsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -413,14 +345,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetLayerVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetLayerVersion", GetLayerVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -434,14 +362,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetProvisionedConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetProvisionedConcurrencyConfig", GetProvisionedConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -455,14 +379,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRequestStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRequestStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRequestStatus", GetRequestStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -476,14 +396,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetReservedConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetReservedConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetReservedConcurrencyConfig", GetReservedConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -497,14 +413,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Invoke");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "Invoke", InvokeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -518,14 +430,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InvokeFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InvokeFunction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InvokeFunction", InvokeFunctionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -539,14 +447,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAliasesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAliases");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAliases", ListAliasesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -560,14 +464,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAsyncEventsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAsyncEvents");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAsyncEvents", ListAsyncEventsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -581,14 +481,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListFunctionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListFunctions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListFunctions", ListFunctionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -602,14 +498,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListLayerVersionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListLayerVersions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListLayerVersions", ListLayerVersionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -623,14 +515,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListLayersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListLayers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListLayers", ListLayersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -644,14 +532,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListNamespacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListNamespaces");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListNamespaces", ListNamespacesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -665,14 +549,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListTriggersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListTriggers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListTriggers", ListTriggersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -686,14 +566,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListVersionByFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListVersionByFunction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListVersionByFunction", ListVersionByFunctionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -707,14 +583,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PublishLayerVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PublishLayerVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PublishLayerVersion", PublishLayerVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -728,14 +600,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PublishVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PublishVersion", PublishVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -749,14 +617,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutProvisionedConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutProvisionedConcurrencyConfig", PutProvisionedConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -770,14 +634,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutReservedConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutReservedConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutReservedConcurrencyConfig", PutReservedConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -791,14 +651,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutTotalConcurrencyConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutTotalConcurrencyConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutTotalConcurrencyConfig", PutTotalConcurrencyConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -812,14 +668,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateAsyncEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateAsyncEvent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateAsyncEvent", TerminateAsyncEventResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -833,14 +685,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAlias");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -854,14 +702,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateFunctionCodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateFunctionCode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateFunctionCode", UpdateFunctionCodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -875,14 +719,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateFunctionEventInvokeConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateFunctionEventInvokeConfig", UpdateFunctionEventInvokeConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -896,14 +736,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateNamespaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateNamespace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateNamespace", UpdateNamespaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -917,14 +753,10 @@ An alias must point to a master version and can point to an additional version a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateTriggerStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateTriggerStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateTriggerStatus", UpdateTriggerStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

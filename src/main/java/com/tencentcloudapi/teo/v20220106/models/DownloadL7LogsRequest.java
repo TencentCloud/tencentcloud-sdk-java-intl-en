@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadL7LogsRequest extends AbstractModel{
+public class DownloadL7LogsRequest extends AbstractModel {
 
     /**
     * Start time. It must conform to the RFC3339 standard.

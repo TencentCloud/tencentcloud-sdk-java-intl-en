@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyPrometheusInstanceRequest extends AbstractModel{
+public class DestroyPrometheusInstanceRequest extends AbstractModel {
 
     /**
     * Instance ID. The instance must be terminated first.

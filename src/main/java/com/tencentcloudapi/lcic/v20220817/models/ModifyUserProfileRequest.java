@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyUserProfileRequest extends AbstractModel{
+public class ModifyUserProfileRequest extends AbstractModel {
 
     /**
     * The ID of the user whose profile will be modified.

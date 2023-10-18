@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEmailIdentityRequest extends AbstractModel{
+public class CreateEmailIdentityRequest extends AbstractModel {
 
     /**
     * Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.

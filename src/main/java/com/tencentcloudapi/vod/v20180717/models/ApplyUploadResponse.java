@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyUploadResponse extends AbstractModel{
+public class ApplyUploadResponse extends AbstractModel {
 
     /**
     * Storage bucket, which is used as the `bucket_name` in the URL of the upload API.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertificateBindResourceTaskResultRequest extends AbstractModel{
+public class DescribeCertificateBindResourceTaskResultRequest extends AbstractModel {
 
     /**
     * The task IDs, which are used to query the results of associated cloud resources, 100 IDs at most.

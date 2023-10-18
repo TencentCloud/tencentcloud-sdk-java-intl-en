@@ -16,11 +16,12 @@
 package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IntlDomainInfo extends AbstractModel{
+public class IntlDomainInfo extends AbstractModel {
 
     /**
     * The auto-renewal flag. Valid values: `0` (disabled by default), `1` (enabled), `2` (disabled).

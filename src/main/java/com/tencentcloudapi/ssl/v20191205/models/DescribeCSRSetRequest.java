@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCSRSetRequest extends AbstractModel{
+public class DescribeCSRSetRequest extends AbstractModel {
 
     /**
     * The number of CSRs on each page. The default value is 10, and the maximum value is 100.

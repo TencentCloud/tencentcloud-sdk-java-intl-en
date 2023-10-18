@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdc.v20200828.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOutputSrtSettings extends AbstractModel{
+public class CreateOutputSrtSettings extends AbstractModel {
 
     /**
     * The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.

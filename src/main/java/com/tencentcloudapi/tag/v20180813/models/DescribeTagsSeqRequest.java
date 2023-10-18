@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagsSeqRequest extends AbstractModel{
+public class DescribeTagsSeqRequest extends AbstractModel {
 
     /**
     * Tag key, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried

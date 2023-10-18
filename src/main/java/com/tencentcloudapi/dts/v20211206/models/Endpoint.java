@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Endpoint extends AbstractModel{
+public class Endpoint extends AbstractModel {
 
     /**
     * Region name, such as `ap-guangzhou`.
@@ -229,6 +230,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DatabaseNetEnv")
     @Expose
     private String DatabaseNetEnv;
+
+    /**
+    * The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CcnOwnerUin")
+    @Expose
+    private String CcnOwnerUin;
 
     /**
      * Get Region name, such as `ap-guangzhou`.
@@ -750,6 +759,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DatabaseNetEnv = DatabaseNetEnv;
     }
 
+    /**
+     * Get The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+     * @return CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCcnOwnerUin() {
+        return this.CcnOwnerUin;
+    }
+
+    /**
+     * Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     * @param CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCcnOwnerUin(String CcnOwnerUin) {
+        this.CcnOwnerUin = CcnOwnerUin;
+    }
+
     public Endpoint() {
     }
 
@@ -836,6 +865,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DatabaseNetEnv != null) {
             this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
         }
+        if (source.CcnOwnerUin != null) {
+            this.CcnOwnerUin = new String(source.CcnOwnerUin);
+        }
     }
 
 
@@ -869,6 +901,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+        this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
 
     }
 }

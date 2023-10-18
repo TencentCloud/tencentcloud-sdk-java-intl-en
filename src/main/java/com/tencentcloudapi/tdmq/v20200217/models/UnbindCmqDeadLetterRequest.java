@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindCmqDeadLetterRequest extends AbstractModel{
+public class UnbindCmqDeadLetterRequest extends AbstractModel {
 
     /**
     * Source queue name of dead letter policy. Calling this API will clear the dead letter queue policy of this queue.

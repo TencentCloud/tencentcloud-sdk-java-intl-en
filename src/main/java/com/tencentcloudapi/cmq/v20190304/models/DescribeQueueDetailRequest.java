@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cmq.v20190304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeQueueDetailRequest extends AbstractModel{
+public class DescribeQueueDetailRequest extends AbstractModel {
 
     /**
     * Starting position of queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DdosAllowBlock extends AbstractModel{
+public class DdosAllowBlock extends AbstractModel {
 
     /**
     * Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScheduleRequest extends AbstractModel{
+public class CreateScheduleRequest extends AbstractModel {
 
     /**
     * The scheme name (max 128 characters). This name should be unique across your account.

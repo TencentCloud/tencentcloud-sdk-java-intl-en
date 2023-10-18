@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpVisitResponse extends AbstractModel{
+public class DescribeIpVisitResponse extends AbstractModel {
 
     /**
     * Time granularity of data statistics, which supports 5min (5 minutes) and day (1 day).

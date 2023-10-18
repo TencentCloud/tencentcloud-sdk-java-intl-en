@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdvancedAuthenticationTypeE extends AbstractModel{
+public class AdvancedAuthenticationTypeE extends AbstractModel {
 
     /**
     * Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.

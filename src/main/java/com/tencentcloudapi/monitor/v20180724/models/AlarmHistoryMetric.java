@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmHistoryMetric extends AbstractModel{
+public class AlarmHistoryMetric extends AbstractModel {
 
     /**
     * Namespace used to query data by Tencent Cloud service monitoring type

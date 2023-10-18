@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OriginIp extends AbstractModel{
+public class OriginIp extends AbstractModel {
 
     /**
     * Intermediate IP range/intermediate IP. The IP range information is returned by default.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20190711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatistics extends AbstractModel{
+public class SmsPackagesStatistics extends AbstractModel {
 
     /**
     * Package creation time in standard time format, such as 2019-10-08 17:18:37.

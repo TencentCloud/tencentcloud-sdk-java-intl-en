@@ -49,14 +49,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddUser", AddUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddUserToGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddUserToGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddUserToGroup", AddUserToGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachGroupPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachGroupPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachGroupPolicy", AttachGroupPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachRolePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachRolePolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachRolePolicy", AttachRolePolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachUserPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachUserPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachUserPolicy", AttachUserPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ConsumeCustomMFATokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ConsumeCustomMFAToken");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ConsumeCustomMFAToken", ConsumeCustomMFATokenResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +151,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAccessKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAccessKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAccessKey", CreateAccessKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +168,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -217,14 +185,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateOIDCConfig", CreateOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -238,14 +202,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePolicy", CreatePolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -259,14 +219,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePolicyVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePolicyVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePolicyVersion", CreatePolicyVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -280,14 +236,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRole", CreateRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -301,14 +253,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSAMLProviderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSAMLProvider");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSAMLProvider", CreateSAMLProviderResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -322,14 +270,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateServiceLinkedRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateServiceLinkedRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateServiceLinkedRole", CreateServiceLinkedRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -343,14 +287,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUserOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUserOIDCConfig", CreateUserOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -364,14 +304,10 @@ public class CamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserSAMLConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUserSAMLConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUserSAMLConfig", CreateUserSAMLConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -386,14 +322,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAccessKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAccessKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAccessKey", DeleteAccessKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -407,14 +339,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -428,14 +356,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteOIDCConfig", DeleteOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -449,14 +373,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePolicy", DeletePolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -470,14 +390,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePolicyVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePolicyVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePolicyVersion", DeletePolicyVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -491,14 +407,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRole", DeleteRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -512,14 +424,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRolePermissionsBoundaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRolePermissionsBoundary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRolePermissionsBoundary", DeleteRolePermissionsBoundaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -533,14 +441,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSAMLProviderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSAMLProvider");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSAMLProvider", DeleteSAMLProviderResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -554,14 +458,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteServiceLinkedRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteServiceLinkedRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteServiceLinkedRole", DeleteServiceLinkedRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -575,14 +475,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -596,14 +492,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUserPermissionsBoundary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUserPermissionsBoundary", DeleteUserPermissionsBoundaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -617,14 +509,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeOIDCConfig", DescribeOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -638,14 +526,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoleListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoleList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRoleList", DescribeRoleListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -659,14 +543,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagCollResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSafeAuthFlagColl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSafeAuthFlagColl", DescribeSafeAuthFlagCollResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -680,14 +560,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagIntlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSafeAuthFlagIntl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSafeAuthFlagIntl", DescribeSafeAuthFlagIntlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -701,14 +577,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubAccountsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubAccounts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSubAccounts", DescribeSubAccountsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -722,14 +594,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUserOIDCConfig", DescribeUserOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -743,14 +611,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserSAMLConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserSAMLConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUserSAMLConfig", DescribeUserSAMLConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -764,14 +628,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachGroupPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachGroupPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachGroupPolicy", DetachGroupPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -785,14 +645,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachRolePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachRolePolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachRolePolicy", DetachRolePolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -806,14 +662,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachUserPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachUserPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachUserPolicy", DetachUserPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -827,14 +679,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableUserSSOResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableUserSSO");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableUserSSO", DisableUserSSOResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -848,14 +696,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetAccountSummaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAccountSummary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetAccountSummary", GetAccountSummaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -869,14 +713,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetCustomMFATokenInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCustomMFATokenInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetCustomMFATokenInfo", GetCustomMFATokenInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -890,14 +730,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetGroup", GetGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -911,14 +747,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPolicy", GetPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -932,14 +764,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPolicyVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPolicyVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPolicyVersion", GetPolicyVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -953,14 +781,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRole", GetRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -974,14 +798,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetSAMLProviderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSAMLProvider");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetSAMLProvider", GetSAMLProviderResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -995,14 +815,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetSecurityLastUsedResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSecurityLastUsed");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetSecurityLastUsed", GetSecurityLastUsedResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1016,14 +832,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetServiceLinkedRoleDeletionStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetServiceLinkedRoleDeletionStatus", GetServiceLinkedRoleDeletionStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1037,14 +849,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetUser", GetUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1058,14 +866,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetUserAppIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetUserAppId");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetUserAppId", GetUserAppIdResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1079,14 +883,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAccessKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAccessKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAccessKeys", ListAccessKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1100,14 +900,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAttachedGroupPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAttachedGroupPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAttachedGroupPolicies", ListAttachedGroupPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1121,14 +917,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAttachedRolePoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAttachedRolePolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAttachedRolePolicies", ListAttachedRolePoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1142,14 +934,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAttachedUserAllPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAttachedUserAllPolicies", ListAttachedUserAllPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1163,14 +951,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAttachedUserPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAttachedUserPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAttachedUserPolicies", ListAttachedUserPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1184,14 +968,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListCollaboratorsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListCollaborators");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListCollaborators", ListCollaboratorsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1205,14 +985,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListEntitiesForPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEntitiesForPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListEntitiesForPolicy", ListEntitiesForPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1226,14 +1002,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListGroups", ListGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1247,14 +1019,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListGroupsForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListGroupsForUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListGroupsForUser", ListGroupsForUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1268,14 +1036,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListPolicies", ListPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1289,14 +1053,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListPolicyVersionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListPolicyVersions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListPolicyVersions", ListPolicyVersionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1310,14 +1070,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListSAMLProvidersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListSAMLProviders");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListSAMLProviders", ListSAMLProvidersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1331,14 +1087,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUsersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUsers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUsers", ListUsersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1352,14 +1104,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUsersForGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUsersForGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUsersForGroup", ListUsersForGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1373,14 +1121,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutRolePermissionsBoundaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutRolePermissionsBoundary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutRolePermissionsBoundary", PutRolePermissionsBoundaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1394,14 +1138,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutUserPermissionsBoundaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutUserPermissionsBoundary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutUserPermissionsBoundary", PutUserPermissionsBoundaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1415,14 +1155,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveUserFromGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveUserFromGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveUserFromGroup", RemoveUserFromGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1436,14 +1172,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetDefaultPolicyVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetDefaultPolicyVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetDefaultPolicyVersion", SetDefaultPolicyVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1457,14 +1189,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetMfaFlagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetMfaFlag");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetMfaFlag", SetMfaFlagResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1478,14 +1206,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TagRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TagRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TagRole", TagRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1499,14 +1223,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UntagRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UntagRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UntagRole", UntagRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1520,14 +1240,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAccessKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAccessKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateAccessKey", UpdateAccessKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1541,14 +1257,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAssumeRolePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAssumeRolePolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateAssumeRolePolicy", UpdateAssumeRolePolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1562,14 +1274,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGroup", UpdateGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1583,14 +1291,10 @@ Calling this API is a high-risk operation because the key cannot be recovered on
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateOIDCConfig", UpdateOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1605,14 +1309,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdatePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdatePolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdatePolicy", UpdatePolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1626,14 +1326,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateRoleConsoleLoginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateRoleConsoleLogin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateRoleConsoleLogin", UpdateRoleConsoleLoginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1647,14 +1343,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateRoleDescriptionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateRoleDescription");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateRoleDescription", UpdateRoleDescriptionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1668,14 +1360,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateSAMLProviderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateSAMLProvider");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateSAMLProvider", UpdateSAMLProviderResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1689,14 +1377,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateUser", UpdateUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1710,14 +1394,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateUserOIDCConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateUserOIDCConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateUserOIDCConfig", UpdateUserOIDCConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1731,14 +1411,10 @@ This API will update the default version of an existing policy instead of creati
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateUserSAMLConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateUserSAMLConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateUserSAMLConfig", UpdateUserSAMLConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

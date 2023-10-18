@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubAppIdRequest extends AbstractModel{
+public class CreateSubAppIdRequest extends AbstractModel {
 
     /**
     * Subapplication name. Length limit: 40 characters.

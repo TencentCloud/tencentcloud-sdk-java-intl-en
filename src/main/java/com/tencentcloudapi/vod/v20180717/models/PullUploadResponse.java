@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullUploadResponse extends AbstractModel{
+public class PullUploadResponse extends AbstractModel {
 
     /**
     * Video pull for upload task ID, which can be used to query the status of pull for upload task.

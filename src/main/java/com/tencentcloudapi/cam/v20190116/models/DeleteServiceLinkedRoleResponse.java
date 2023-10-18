@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceLinkedRoleResponse extends AbstractModel{
+public class DeleteServiceLinkedRoleResponse extends AbstractModel {
 
     /**
     * Deletion task identifier, which can be used to check the status of a service-linked role deletion.

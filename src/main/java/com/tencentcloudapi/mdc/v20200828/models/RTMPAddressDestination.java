@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdc.v20200828.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RTMPAddressDestination extends AbstractModel{
+public class RTMPAddressDestination extends AbstractModel {
 
     /**
     * Destination URL of RTMP push in the format of 'rtmp://domain/live'.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScdnAclConfig extends AbstractModel{
+public class ScdnAclConfig extends AbstractModel {
 
     /**
     * Whether to enable. Valid values: `on` and `off`.

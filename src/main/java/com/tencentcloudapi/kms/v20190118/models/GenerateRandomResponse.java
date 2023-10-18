@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateRandomResponse extends AbstractModel{
+public class GenerateRandomResponse extends AbstractModel {
 
     /**
     * Base64-encoded plaintext of the randomly generated number. You need to Base64-decode it to get the plaintext.

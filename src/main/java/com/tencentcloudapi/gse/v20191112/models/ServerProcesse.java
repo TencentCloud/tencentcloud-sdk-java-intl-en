@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServerProcesse extends AbstractModel{
+public class ServerProcesse extends AbstractModel {
 
     /**
     * Number of concurrent processes. Value range of total concurrent processes: 1-50.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveTimeShiftBillInfoListRequest extends AbstractModel{
+public class DescribeLiveTimeShiftBillInfoListRequest extends AbstractModel {
 
     /**
     * The start time for query. You can query data from the past three months. The longest time period that can be queried is one month.

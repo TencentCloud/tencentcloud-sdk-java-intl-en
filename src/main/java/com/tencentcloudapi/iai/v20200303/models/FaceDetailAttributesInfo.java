@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceDetailAttributesInfo extends AbstractModel{
+public class FaceDetailAttributesInfo extends AbstractModel {
 
     /**
     * Age. Value range: [0,65], where 65 indicates 65 years old or above. 

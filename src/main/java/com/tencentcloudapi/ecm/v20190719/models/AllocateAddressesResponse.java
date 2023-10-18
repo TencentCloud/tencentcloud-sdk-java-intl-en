@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateAddressesResponse extends AbstractModel{
+public class AllocateAddressesResponse extends AbstractModel {
 
     /**
     * List of unique IDs of the EIPs applied for.

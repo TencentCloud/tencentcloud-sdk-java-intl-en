@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectedWordCoordPoint extends AbstractModel{
+public class DetectedWordCoordPoint extends AbstractModel {
 
     /**
     * Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner

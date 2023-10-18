@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBinlogBackupOverviewRequest extends AbstractModel{
+public class DescribeBinlogBackupOverviewRequest extends AbstractModel {
 
     /**
     * TencentDB product type to be queried. Currently, only `mysql` is supported.

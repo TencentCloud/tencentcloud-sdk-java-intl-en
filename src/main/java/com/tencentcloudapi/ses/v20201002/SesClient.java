@@ -49,14 +49,10 @@ public class SesClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchSendEmailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchSendEmail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchSendEmail", BatchSendEmailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class SesClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateEmailAddress", CreateEmailAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class SesClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateEmailIdentity", CreateEmailIdentityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -113,14 +101,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateEmailTemplate", CreateEmailTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateReceiverResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReceiver");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateReceiver", CreateReceiverResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -155,14 +135,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReceiverDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateReceiverDetail", CreateReceiverDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -176,14 +152,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteBlackListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteBlackList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteBlackList", DeleteBlackListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -197,14 +169,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteEmailAddress", DeleteEmailAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -218,14 +186,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteEmailIdentity", DeleteEmailIdentityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -239,14 +203,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteEmailTemplate", DeleteEmailTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -260,14 +220,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteReceiverResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteReceiver");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteReceiver", DeleteReceiverResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -281,14 +237,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetEmailIdentity", GetEmailIdentityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -302,14 +254,10 @@ Note: Only an approved template can be used to send emails.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetEmailTemplate", GetEmailTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -324,14 +272,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetSendEmailStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSendEmailStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetSendEmailStatus", GetSendEmailStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -345,14 +289,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetStatisticsReportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetStatisticsReport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetStatisticsReport", GetStatisticsReportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -366,14 +306,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListBlackEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListBlackEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListBlackEmailAddress", ListBlackEmailAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -387,14 +323,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListEmailAddress", ListEmailAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -408,14 +340,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListEmailIdentitiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEmailIdentities");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListEmailIdentities", ListEmailIdentitiesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -429,14 +357,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListEmailTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEmailTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListEmailTemplates", ListEmailTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -450,14 +374,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListReceiversResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListReceivers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListReceivers", ListReceiversResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -471,14 +391,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListSendTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListSendTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListSendTasks", ListSendTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -492,14 +408,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SendEmailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendEmail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -513,14 +425,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateEmailIdentity", UpdateEmailIdentityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -534,14 +442,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEmailSmtpPassWord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateEmailSmtpPassWord", UpdateEmailSmtpPassWordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -555,14 +459,10 @@ Default API request rate limit: 1 request/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateEmailTemplate", UpdateEmailTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

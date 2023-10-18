@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceDealRequest extends AbstractModel{
+public class DescribeDBInstanceDealRequest extends AbstractModel {
 
     /**
     * Order ID. It is returned by the `CreateDBInstance` and other APIs.

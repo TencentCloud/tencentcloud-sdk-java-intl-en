@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceRequest extends AbstractModel{
+public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
     * The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.

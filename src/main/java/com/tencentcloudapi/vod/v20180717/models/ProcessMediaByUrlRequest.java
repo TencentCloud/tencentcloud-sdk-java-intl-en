@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessMediaByUrlRequest extends AbstractModel{
+public class ProcessMediaByUrlRequest extends AbstractModel {
 
     /**
     * This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.

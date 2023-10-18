@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OriginFilter extends AbstractModel{
+public class OriginFilter extends AbstractModel {
 
     /**
     * Field to be filtered. Supported field: name

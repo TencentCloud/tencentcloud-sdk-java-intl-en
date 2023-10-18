@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceChargePrepaid extends AbstractModel{
+public class InstanceChargePrepaid extends AbstractModel {
 
     /**
     * The period of monthly subscription, which defaults to 1 and is expressed in month.

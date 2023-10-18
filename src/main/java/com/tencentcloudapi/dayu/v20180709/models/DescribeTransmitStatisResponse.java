@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTransmitStatisResponse extends AbstractModel{
+public class DescribeTransmitStatisResponse extends AbstractModel {
 
     /**
     * If `MetricName` is `traffic`, this field indicates the inbound traffic bandwidth in bps;

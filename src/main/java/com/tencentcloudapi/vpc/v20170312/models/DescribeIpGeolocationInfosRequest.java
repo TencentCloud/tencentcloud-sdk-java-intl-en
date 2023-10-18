@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpGeolocationInfosRequest extends AbstractModel{
+public class DescribeIpGeolocationInfosRequest extends AbstractModel {
 
     /**
     * The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100

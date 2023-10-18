@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PushQualityData extends AbstractModel{
+public class PushQualityData extends AbstractModel {
 
     /**
     * The time of the data in the format of “%Y-%m-%d %H:%M:%S.%ms” (accurate to the millisecond).

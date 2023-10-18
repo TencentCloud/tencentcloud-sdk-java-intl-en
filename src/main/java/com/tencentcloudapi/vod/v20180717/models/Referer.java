@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Referer extends AbstractModel{
+public class Referer extends AbstractModel {
 
     /**
     * Referer blacklist/whitelist configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>

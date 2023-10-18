@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Simple extends AbstractModel{
+public class Simple extends AbstractModel {
 
     /**
     * HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.

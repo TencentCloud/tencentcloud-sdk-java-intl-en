@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdp.v20200527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelInfo extends AbstractModel{
+public class ChannelInfo extends AbstractModel {
 
     /**
     * Channel ID.

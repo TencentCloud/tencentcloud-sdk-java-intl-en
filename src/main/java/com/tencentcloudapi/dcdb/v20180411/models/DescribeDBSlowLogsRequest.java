@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSlowLogsRequest extends AbstractModel{
+public class DescribeDBSlowLogsRequest extends AbstractModel {
 
     /**
     * Instance ID in the format of dcdbt-hw0qj6m1

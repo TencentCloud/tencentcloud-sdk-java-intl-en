@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUnusualEventRequest extends AbstractModel{
+public class DescribeUnusualEventRequest extends AbstractModel {
 
     /**
     * The application ID, such as `1400xxxxxx`.

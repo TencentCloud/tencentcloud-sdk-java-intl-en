@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleInfo extends AbstractModel{
+public class RuleInfo extends AbstractModel {
 
     /**
     * Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.

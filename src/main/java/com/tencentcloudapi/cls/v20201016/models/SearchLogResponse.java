@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchLogResponse extends AbstractModel{
+public class SearchLogResponse extends AbstractModel {
 
     /**
     * You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListGroupsForUserResponse extends AbstractModel{
+public class ListGroupsForUserResponse extends AbstractModel {
 
     /**
     * Total number of User Groups to which the sub-user has been added

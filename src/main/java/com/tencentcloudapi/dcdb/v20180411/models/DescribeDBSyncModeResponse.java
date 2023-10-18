@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSyncModeResponse extends AbstractModel{
+public class DescribeDBSyncModeResponse extends AbstractModel {
 
     /**
     * Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync

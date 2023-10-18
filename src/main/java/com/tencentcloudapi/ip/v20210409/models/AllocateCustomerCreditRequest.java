@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ip.v20210409.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateCustomerCreditRequest extends AbstractModel{
+public class AllocateCustomerCreditRequest extends AbstractModel {
 
     /**
     * Specific value of the credit allocated to the customer

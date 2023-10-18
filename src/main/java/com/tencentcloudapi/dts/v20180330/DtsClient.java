@@ -49,14 +49,10 @@ public class DtsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ActivateSubscribeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ActivateSubscribe");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ActivateSubscribe", ActivateSubscribeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -73,14 +69,10 @@ If the task status queried through the (DescribeMigrateJobs) API is ready (statu
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CompleteMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CompleteMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CompleteMigrateJob", CompleteMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -98,14 +90,10 @@ For a finance zone link, use the domain name https://dts.ap-shenzhen-fsi.tencent
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMigrateCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMigrateCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateMigrateCheckJob", CreateMigrateCheckJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -121,14 +109,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateMigrateJob", CreateMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -142,14 +126,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSubscribeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSubscribe");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSubscribe", CreateSubscribeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -163,14 +143,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteMigrateJob", DeleteMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -184,14 +160,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAsyncRequestInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAsyncRequestInfo", DescribeAsyncRequestInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -207,14 +179,10 @@ If the check fails, the reason can be queried. Please modify the migration confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMigrateCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMigrateCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMigrateCheckJob", DescribeMigrateCheckJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -229,14 +197,10 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMigrateJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMigrateJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMigrateJobs", DescribeMigrateJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -250,14 +214,10 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRegionConfResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRegionConf");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRegionConf", DescribeRegionConfResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -271,14 +231,10 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubscribeConfResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubscribeConf");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSubscribeConf", DescribeSubscribeConfResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -292,14 +248,10 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubscribesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubscribes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSubscribes", DescribeSubscribesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -313,14 +265,10 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<IsolateSubscribeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "IsolateSubscribe");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "IsolateSubscribe", IsolateSubscribeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -337,14 +285,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyMigrateJob", ModifyMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -358,14 +302,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubscribeConsumeTime");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubscribeConsumeTime", ModifySubscribeConsumeTimeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -379,14 +319,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubscribeNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubscribeName");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubscribeName", ModifySubscribeNameResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -400,14 +336,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubscribeObjectsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubscribeObjects");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubscribeObjects", ModifySubscribeObjectsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -421,14 +353,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubscribeVipVportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubscribeVipVport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubscribeVipVport", ModifySubscribeVipVportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -442,14 +370,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<OfflineIsolatedSubscribeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OfflineIsolatedSubscribe");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "OfflineIsolatedSubscribe", OfflineIsolatedSubscribeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -463,14 +387,10 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetSubscribeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetSubscribe");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetSubscribe", ResetSubscribeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -485,14 +405,10 @@ Before calling this API, be sure to use the CreateMigrateCheckJob API to check t
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartMigrateJob", StartMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -507,14 +423,10 @@ During migration, this API can be used to cancel migration if the task status qu
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopMigrateJob", StopMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

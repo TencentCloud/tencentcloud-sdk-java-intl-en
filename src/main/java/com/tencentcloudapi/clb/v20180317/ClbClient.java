@@ -50,14 +50,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AssociateTargetGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssociateTargetGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AssociateTargetGroups", AssociateTargetGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -71,14 +67,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AutoRewriteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AutoRewrite");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AutoRewrite", AutoRewriteResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -92,14 +84,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchDeregisterTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchDeregisterTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchDeregisterTargets", BatchDeregisterTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -114,14 +102,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchModifyTargetWeightResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchModifyTargetWeight");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchModifyTargetWeight", BatchModifyTargetWeightResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -135,14 +119,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchRegisterTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchRegisterTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchRegisterTargets", BatchRegisterTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -178,14 +158,10 @@ This API is only available for beta users. To try it out, [submit a ticket](http
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CloneLoadBalancerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CloneLoadBalancer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CloneLoadBalancer", CloneLoadBalancerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -199,14 +175,10 @@ This API is only available for beta users. To try it out, [submit a ticket](http
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateClsLogSetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateClsLogSet");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateClsLogSet", CreateClsLogSetResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -221,14 +193,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateListenerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateListener");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateListener", CreateListenerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -244,14 +212,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLoadBalancer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLoadBalancer", CreateLoadBalancerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -266,14 +230,10 @@ This is an async API. After it is returned successfully, you can check the task 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancerSnatIpsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLoadBalancerSnatIps");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLoadBalancerSnatIps", CreateLoadBalancerSnatIpsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -288,14 +248,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRule", CreateRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -309,14 +265,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTargetGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTargetGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTargetGroup", CreateTargetGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -330,14 +282,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -352,14 +300,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteListenerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteListener");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteListener", DeleteListenerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -374,14 +318,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLoadBalancer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLoadBalancer", DeleteLoadBalancerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -396,14 +336,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerListenersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLoadBalancerListeners");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLoadBalancerListeners", DeleteLoadBalancerListenersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -418,14 +354,10 @@ This is an async API. After it is returned successfully, you can check the task 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerSnatIpsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLoadBalancerSnatIps");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLoadBalancerSnatIps", DeleteLoadBalancerSnatIpsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -439,14 +371,10 @@ This is an async API. After it is returned successfully, you can check the task 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRewriteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRewrite");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRewrite", DeleteRewriteResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -461,14 +389,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRule", DeleteRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -482,14 +406,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTargetGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTargetGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTargetGroups", DeleteTargetGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -514,14 +434,10 @@ This is an async API. After it is returned successfully, you can call the [Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeregisterFunctionTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeregisterFunctionTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeregisterFunctionTargets", DeregisterFunctionTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -536,14 +452,10 @@ This is an async API. After it is returned successfully, you can call the API `D
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeregisterTargetGroupInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeregisterTargetGroupInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeregisterTargetGroupInstances", DeregisterTargetGroupInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -558,14 +470,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeregisterTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeregisterTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeregisterTargets", DeregisterTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -579,14 +487,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeregisterTargetsFromClassicalLB");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeregisterTargetsFromClassicalLB", DeregisterTargetsFromClassicalLBResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -600,14 +504,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBlockIPListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBlockIPList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBlockIPList", DescribeBlockIPListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -621,14 +521,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBlockIPTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBlockIPTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBlockIPTask", DescribeBlockIPTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -642,14 +538,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBByInstanceIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClassicalLBByInstanceId");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClassicalLBByInstanceId", DescribeClassicalLBByInstanceIdResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -663,14 +555,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBHealthStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClassicalLBHealthStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClassicalLBHealthStatus", DescribeClassicalLBHealthStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -684,14 +572,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBListenersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClassicalLBListeners");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClassicalLBListeners", DescribeClassicalLBListenersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -705,14 +589,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClassicalLBTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClassicalLBTargets", DescribeClassicalLBTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -726,14 +606,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClsLogSetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClsLogSet");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClsLogSet", DescribeClsLogSetResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -747,14 +623,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCrossTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCrossTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCrossTargets", DescribeCrossTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -768,14 +640,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCustomizedConfigAssociateList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCustomizedConfigAssociateList", DescribeCustomizedConfigAssociateListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -789,14 +657,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCustomizedConfigListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCustomizedConfigList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCustomizedConfigList", DescribeCustomizedConfigListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -810,14 +674,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIdleLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIdleLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeIdleLoadBalancers", DescribeIdleLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -831,14 +691,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLBListenersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLBListeners");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLBListeners", DescribeLBListenersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -852,14 +708,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeListenersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeListeners");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeListeners", DescribeListenersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -873,14 +725,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerListByCertIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancerListByCertId");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLoadBalancerListByCertId", DescribeLoadBalancerListByCertIdResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -894,14 +742,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerOverviewResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancerOverview");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLoadBalancerOverview", DescribeLoadBalancerOverviewResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -915,14 +759,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerTrafficResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancerTraffic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLoadBalancerTraffic", DescribeLoadBalancerTrafficResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -936,14 +776,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLoadBalancers", DescribeLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -957,14 +793,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancersDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLoadBalancersDetail", DescribeLoadBalancersDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -978,14 +810,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeQuota");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeQuota", DescribeQuotaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -999,14 +827,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeResources");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeResources", DescribeResourcesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1020,14 +844,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRewriteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRewrite");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRewrite", DescribeRewriteResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1041,14 +861,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTargetGroupInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTargetGroupInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTargetGroupInstances", DescribeTargetGroupInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1062,14 +878,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTargetGroupListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTargetGroupList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTargetGroupList", DescribeTargetGroupListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1083,14 +895,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTargetGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTargetGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTargetGroups", DescribeTargetGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1104,14 +912,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTargetHealthResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTargetHealth");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTargetHealth", DescribeTargetHealthResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1125,14 +929,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTargets", DescribeTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1146,14 +946,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTaskStatus", DescribeTaskStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1168,14 +964,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisassociateTargetGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisassociateTargetGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisassociateTargetGroups", DisassociateTargetGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1189,14 +981,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ManualRewriteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManualRewrite");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ManualRewrite", ManualRewriteResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1211,14 +999,10 @@ This is an async API. After it is returned successfully, you can check the actio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<MigrateClassicalLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MigrateClassicalLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "MigrateClassicalLoadBalancers", MigrateClassicalLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1233,14 +1017,10 @@ This is an async API. After it is returned successfully, you can check the actio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyBlockIPListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyBlockIPList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyBlockIPList", ModifyBlockIPListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1255,14 +1035,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDomain", ModifyDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1277,14 +1053,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDomainAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDomainAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDomainAttributes", ModifyDomainAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1298,14 +1070,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyFunctionTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyFunctionTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyFunctionTargets", ModifyFunctionTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1320,14 +1088,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyListenerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyListener");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyListener", ModifyListenerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1342,14 +1106,10 @@ This is an async API. After it is returned successfully, you can check the task 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancerAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLoadBalancerAttributes", ModifyLoadBalancerAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1367,14 +1127,10 @@ Limits
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerSlaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancerSla");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLoadBalancerSla", ModifyLoadBalancerSlaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1389,14 +1145,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyRule", ModifyRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1410,14 +1162,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTargetGroupAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTargetGroupAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTargetGroupAttribute", ModifyTargetGroupAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1432,14 +1180,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTargetGroupInstancesPortResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTargetGroupInstancesPort");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTargetGroupInstancesPort", ModifyTargetGroupInstancesPortResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1454,14 +1198,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTargetGroupInstancesWeightResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTargetGroupInstancesWeight");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTargetGroupInstancesWeight", ModifyTargetGroupInstancesWeightResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1476,14 +1216,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTargetPortResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTargetPort");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTargetPort", ModifyTargetPortResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1498,14 +1234,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTargetWeightResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTargetWeight");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTargetWeight", ModifyTargetWeightResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1529,14 +1261,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RegisterFunctionTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterFunctionTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RegisterFunctionTargets", RegisterFunctionTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1551,14 +1279,10 @@ This is an async API. After it is returned successfully, you can call the `Descr
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RegisterTargetGroupInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterTargetGroupInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RegisterTargetGroupInstances", RegisterTargetGroupInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1573,14 +1297,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RegisterTargetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterTargets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RegisterTargets", RegisterTargetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1594,14 +1314,10 @@ This is an async API. After it is returned successfully, you can call the Descri
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterTargetsWithClassicalLB");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RegisterTargetsWithClassicalLB", RegisterTargetsWithClassicalLBResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1618,14 +1334,10 @@ Note: This API can only be called in the Guangzhou region; for other regions, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReplaceCertForLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ReplaceCertForLoadBalancers", ReplaceCertForLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1639,14 +1351,10 @@ Note: This API can only be called in the Guangzhou region; for other regions, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetCustomizedConfigForLoadBalancer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetCustomizedConfigForLoadBalancer", SetCustomizedConfigForLoadBalancerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1660,14 +1368,10 @@ Note: This API can only be called in the Guangzhou region; for other regions, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetLoadBalancerClsLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetLoadBalancerClsLog");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetLoadBalancerClsLog", SetLoadBalancerClsLogResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1683,14 +1387,10 @@ During an unbinding operation, the input parameters need to be all the security 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetLoadBalancerSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetLoadBalancerSecurityGroups", SetLoadBalancerSecurityGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1704,14 +1404,10 @@ During an unbinding operation, the input parameters need to be all the security 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetSecurityGroupForLoadbalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetSecurityGroupForLoadbalancers", SetSecurityGroupForLoadbalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

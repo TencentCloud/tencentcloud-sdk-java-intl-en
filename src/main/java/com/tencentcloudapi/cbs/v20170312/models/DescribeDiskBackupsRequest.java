@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskBackupsRequest extends AbstractModel{
+public class DescribeDiskBackupsRequest extends AbstractModel {
 
     /**
     * List of IDs of the backup points to be queried. `DiskBackupIds` and `Filters` cannot be specified at the same time.

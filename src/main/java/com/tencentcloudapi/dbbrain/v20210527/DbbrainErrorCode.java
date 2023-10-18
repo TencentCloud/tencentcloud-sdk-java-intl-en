@@ -9,6 +9,9 @@ public enum DbbrainErrorCode {
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
+    // 
+     FAILEDOPERATION_SEGMENTLOADING("FailedOperation.SegmentLoading"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      

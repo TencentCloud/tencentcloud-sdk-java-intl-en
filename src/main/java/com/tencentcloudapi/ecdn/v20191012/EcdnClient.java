@@ -51,14 +51,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddEcdnDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddEcdnDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddEcdnDomain", AddEcdnDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -74,14 +70,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEcdnDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEcdnDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteEcdnDomain", DeleteEcdnDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -97,14 +89,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomains");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDomains", DescribeDomainsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -120,14 +108,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainsConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomainsConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDomainsConfig", DescribeDomainsConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -141,14 +125,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEcdnDomainLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEcdnDomainLogs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeEcdnDomainLogs", DescribeEcdnDomainLogsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -162,14 +142,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEcdnDomainStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEcdnDomainStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeEcdnDomainStatistics", DescribeEcdnDomainStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -191,14 +167,10 @@ public class EcdnClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEcdnStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEcdnStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeEcdnStatistics", DescribeEcdnStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -214,14 +186,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIpStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIpStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeIpStatus", DescribeIpStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -237,14 +205,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePurgeQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePurgeQuota");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePurgeQuota", DescribePurgeQuotaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -260,14 +224,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePurgeTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePurgeTasks", DescribePurgeTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -283,14 +243,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PurgePathCacheResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PurgePathCache");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PurgePathCache", PurgePathCacheResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -306,14 +262,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PurgeUrlsCacheResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PurgeUrlsCache");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PurgeUrlsCache", PurgeUrlsCacheResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -329,14 +281,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartEcdnDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartEcdnDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartEcdnDomain", StartEcdnDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -352,14 +300,10 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopEcdnDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopEcdnDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopEcdnDomain", StopEcdnDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -377,14 +321,10 @@ Note: if you need to update complex configuration items, you must pass all the a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateDomainConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateDomainConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateDomainConfig", UpdateDomainConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

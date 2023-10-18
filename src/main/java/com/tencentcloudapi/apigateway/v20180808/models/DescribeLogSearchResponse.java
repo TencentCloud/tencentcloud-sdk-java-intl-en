@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogSearchResponse extends AbstractModel{
+public class DescribeLogSearchResponse extends AbstractModel {
 
     /**
     * Cursor for getting more search results. If the value is `""`, there will be no subsequent results

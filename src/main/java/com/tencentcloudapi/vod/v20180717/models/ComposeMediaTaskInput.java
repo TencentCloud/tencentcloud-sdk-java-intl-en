@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeMediaTaskInput extends AbstractModel{
+public class ComposeMediaTaskInput extends AbstractModel {
 
     /**
     * List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagRetentionExecutionResponse extends AbstractModel{
+public class DescribeTagRetentionExecutionResponse extends AbstractModel {
 
     /**
     * List of tag retention execution records

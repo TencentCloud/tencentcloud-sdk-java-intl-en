@@ -16,11 +16,12 @@
 package com.tencentcloudapi.msp.v20180319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterMigrationTaskRequest extends AbstractModel{
+public class RegisterMigrationTaskRequest extends AbstractModel {
 
     /**
     * Task type, valid values include `database` (database migration), `file` (file migration) or `host` (host migration).

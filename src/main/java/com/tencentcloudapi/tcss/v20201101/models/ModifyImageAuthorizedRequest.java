@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyImageAuthorizedRequest extends AbstractModel{
+public class ModifyImageAuthorizedRequest extends AbstractModel {
 
     /**
     * Whether to license all local images, which has a higher priority than licensing by local image ID. When it is `true`, `UpdatedLocalImageCnt` should be greater than `0`.

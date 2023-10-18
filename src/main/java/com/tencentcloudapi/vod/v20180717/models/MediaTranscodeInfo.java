@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTranscodeInfo extends AbstractModel{
+public class MediaTranscodeInfo extends AbstractModel {
 
     /**
     * Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.

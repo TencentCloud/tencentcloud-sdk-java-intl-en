@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetDBInstancePasswordResponse extends AbstractModel{
+public class ResetDBInstancePasswordResponse extends AbstractModel {
 
     /**
     * Async request ID, which is used to query the running status of the process.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerAttributesResponse extends AbstractModel{
+public class ModifyLoadBalancerAttributesResponse extends AbstractModel {
 
     /**
     * This parameter can be used to query whether CLB billing mode switch is successful.

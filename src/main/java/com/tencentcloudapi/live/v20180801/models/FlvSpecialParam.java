@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FlvSpecialParam extends AbstractModel{
+public class FlvSpecialParam extends AbstractModel {
 
     /**
     * Whether to enable upload while recording. This parameter is only valid for FLV recording.

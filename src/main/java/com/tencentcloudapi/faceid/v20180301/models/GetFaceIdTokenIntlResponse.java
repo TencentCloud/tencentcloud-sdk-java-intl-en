@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFaceIdTokenIntlResponse extends AbstractModel{
+public class GetFaceIdTokenIntlResponse extends AbstractModel {
 
     /**
     * The SDK token, which is used throughout the verification process and to get the verification result.

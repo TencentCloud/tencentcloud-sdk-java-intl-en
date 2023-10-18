@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncJobInfo extends AbstractModel{
+public class SyncJobInfo extends AbstractModel {
 
     /**
     * Sync task ID, such as `sync-btso140`.
@@ -143,6 +144,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Endpoint SrcInfo;
 
     /**
+    * Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SrcNodeType")
+    @Expose
+    private String SrcNodeType;
+
+    /**
+    * Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SrcInfos")
+    @Expose
+    private SyncDBEndpointInfos SrcInfos;
+
+    /**
     * Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -173,6 +190,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DstInfo")
     @Expose
     private Endpoint DstInfo;
+
+    /**
+    * Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DstNodeType")
+    @Expose
+    private String DstNodeType;
+
+    /**
+    * Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DstInfos")
+    @Expose
+    private SyncDBEndpointInfos DstInfos;
 
     /**
     * Creation time in the format of `yyyy-mm-dd hh:mm:ss`
@@ -261,6 +294,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
     private Long AutoRetryTimeRangeMinutes;
+
+    /**
+    * Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DumperResumeCtrl")
+    @Expose
+    private String DumperResumeCtrl;
 
     /**
      * Get Sync task ID, such as `sync-btso140`.
@@ -563,6 +604,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return SrcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public String getSrcNodeType() {
+        return this.SrcNodeType;
+    }
+
+    /**
+     * Set Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param SrcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setSrcNodeType(String SrcNodeType) {
+        this.SrcNodeType = SrcNodeType;
+    }
+
+    /**
+     * Get Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return SrcInfos Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public SyncDBEndpointInfos getSrcInfos() {
+        return this.SrcInfos;
+    }
+
+    /**
+     * Set Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param SrcInfos Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
+        this.SrcInfos = SrcInfos;
+    }
+
+    /**
      * Get Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DstRegion Target database region, such as `ap-guangzhou`.
@@ -640,6 +721,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setDstInfo(Endpoint DstInfo) {
         this.DstInfo = DstInfo;
+    }
+
+    /**
+     * Get Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return DstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public String getDstNodeType() {
+        return this.DstNodeType;
+    }
+
+    /**
+     * Set Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param DstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setDstNodeType(String DstNodeType) {
+        this.DstNodeType = DstNodeType;
+    }
+
+    /**
+     * Get Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return DstInfos Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public SyncDBEndpointInfos getDstInfos() {
+        return this.DstInfos;
+    }
+
+    /**
+     * Set Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param DstInfos Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setDstInfos(SyncDBEndpointInfos DstInfos) {
+        this.DstInfos = DstInfos;
     }
 
     /**
@@ -862,6 +983,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
+    /**
+     * Get Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public String getDumperResumeCtrl() {
+        return this.DumperResumeCtrl;
+    }
+
+    /**
+     * Set Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setDumperResumeCtrl(String DumperResumeCtrl) {
+        this.DumperResumeCtrl = DumperResumeCtrl;
+    }
+
     public SyncJobInfo() {
     }
 
@@ -921,6 +1062,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SrcInfo != null) {
             this.SrcInfo = new Endpoint(source.SrcInfo);
         }
+        if (source.SrcNodeType != null) {
+            this.SrcNodeType = new String(source.SrcNodeType);
+        }
+        if (source.SrcInfos != null) {
+            this.SrcInfos = new SyncDBEndpointInfos(source.SrcInfos);
+        }
         if (source.DstRegion != null) {
             this.DstRegion = new String(source.DstRegion);
         }
@@ -932,6 +1079,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.DstInfo != null) {
             this.DstInfo = new Endpoint(source.DstInfo);
+        }
+        if (source.DstNodeType != null) {
+            this.DstNodeType = new String(source.DstNodeType);
+        }
+        if (source.DstInfos != null) {
+            this.DstInfos = new SyncDBEndpointInfos(source.DstInfos);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -969,6 +1122,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
+        if (source.DumperResumeCtrl != null) {
+            this.DumperResumeCtrl = new String(source.DumperResumeCtrl);
+        }
     }
 
 
@@ -991,10 +1147,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SrcDatabaseType", this.SrcDatabaseType);
         this.setParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
         this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+        this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+        this.setParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
         this.setParamSimple(map, prefix + "DstRegion", this.DstRegion);
         this.setParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
+        this.setParamObj(map, prefix + "DstInfos.", this.DstInfos);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
@@ -1006,6 +1166,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+        this.setParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
 
     }
 }

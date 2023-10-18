@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetServiceStatusResponse extends AbstractModel{
+public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * Whether the KMS service has been activated. true: activated

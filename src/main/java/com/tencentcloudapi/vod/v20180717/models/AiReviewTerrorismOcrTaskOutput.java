@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
+public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
 
     /**
     * Confidence score for the OCR-detected terrorism content. Value range: 0-100

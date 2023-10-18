@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVoucherUsageDetailsRequest extends AbstractModel{
+public class DescribeVoucherUsageDetailsRequest extends AbstractModel {
 
     /**
     * The number of records per page. The default is 20, and the maximum is 1,000.

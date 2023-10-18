@@ -49,14 +49,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateApp", CreateAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRoomMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRoomMember");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRoomMember", DeleteRoomMemberResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAppStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAppStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAppStatistics", DescribeAppStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApplicationDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApplicationData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApplicationData", DescribeApplicationDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRecordInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRecordInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRecordInfo", DescribeRecordInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTaskInfo", DescribeTaskInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +151,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAppStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAppStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAppStatus", ModifyAppStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +168,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRecordInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRecordInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyRecordInfo", ModifyRecordInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -217,14 +185,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartRecord", StartRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -239,14 +203,10 @@ public class GmeClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopRecord", StopRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

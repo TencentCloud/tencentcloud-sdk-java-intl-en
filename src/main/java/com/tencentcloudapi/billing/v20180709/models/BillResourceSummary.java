@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillResourceSummary extends AbstractModel{
+public class BillResourceSummary extends AbstractModel {
 
     /**
     * Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.

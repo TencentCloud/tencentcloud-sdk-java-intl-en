@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMatchRequest extends AbstractModel{
+public class CreateMatchRequest extends AbstractModel {
 
     /**
     * Match name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.

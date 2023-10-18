@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConfigureSyncJobRequest extends AbstractModel{
+public class ConfigureSyncJobRequest extends AbstractModel {
 
     /**
     * Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task.
@@ -121,7 +122,7 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String DstNodeType;
 
     /**
-    * Sync task options
+    * Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
     */
     @SerializedName("Options")
     @Expose
@@ -359,16 +360,16 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Sync task options 
-     * @return Options Sync task options
+     * Get Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API. 
+     * @return Options Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
      */
     public Options getOptions() {
         return this.Options;
     }
 
     /**
-     * Set Sync task options
-     * @param Options Sync task options
+     * Set Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
+     * @param Options Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
      */
     public void setOptions(Options Options) {
         this.Options = Options;

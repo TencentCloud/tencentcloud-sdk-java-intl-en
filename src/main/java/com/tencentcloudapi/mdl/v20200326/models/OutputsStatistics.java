@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputsStatistics extends AbstractModel{
+public class OutputsStatistics extends AbstractModel {
 
     /**
     * Output information of pipeline 0.

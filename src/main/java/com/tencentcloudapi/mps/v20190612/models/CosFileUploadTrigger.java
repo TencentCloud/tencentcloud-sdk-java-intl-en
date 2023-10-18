@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosFileUploadTrigger extends AbstractModel{
+public class CosFileUploadTrigger extends AbstractModel {
 
     /**
     * Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.

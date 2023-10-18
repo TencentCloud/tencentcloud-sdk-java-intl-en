@@ -49,14 +49,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddAccountToAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddAccountToAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddAccountToAccountGroup", AddAccountToAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddUserToUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddUserToUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddUserToUserGroup", AddUserToUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAccountGroup", CreateAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAppAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAppAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAppAccount", CreateAppAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateOrgNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateOrgNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateOrgNode", CreateOrgNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +151,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUserGroup", CreateUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +168,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAccountGroup", DeleteAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -217,14 +185,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAppAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAppAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAppAccount", DeleteAppAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -238,14 +202,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOrgNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOrgNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteOrgNode", DeleteOrgNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -259,14 +219,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -280,14 +236,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUserGroup", DeleteUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -301,14 +253,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUsersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUsers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUsers", DeleteUsersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -322,14 +270,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAccountGroup", DescribeAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -343,14 +287,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAppAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAppAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAppAccount", DescribeAppAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -364,14 +304,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApplicationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApplication");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApplication", DescribeApplicationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -385,14 +321,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOrgNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOrgNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeOrgNode", DescribeOrgNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -406,14 +338,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePublicKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePublicKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePublicKey", DescribePublicKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -427,14 +355,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUserGroup", DescribeUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -448,14 +372,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUserInfo", DescribeUserInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -469,14 +389,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserResourcesAuthorizationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserResourcesAuthorization");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUserResourcesAuthorization", DescribeUserResourcesAuthorizationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -490,14 +406,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserThirdPartyAccountInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUserThirdPartyAccountInfo", DescribeUserThirdPartyAccountInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -511,14 +423,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAccountInAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAccountInAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAccountInAccountGroup", ListAccountInAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -532,14 +440,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListApplicationAuthorizationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListApplicationAuthorizations");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListApplicationAuthorizations", ListApplicationAuthorizationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -553,14 +457,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListApplicationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListApplications");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListApplications", ListApplicationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -574,14 +474,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAuthorizedApplicationsToOrgNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAuthorizedApplicationsToOrgNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAuthorizedApplicationsToOrgNode", ListAuthorizedApplicationsToOrgNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -595,14 +491,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAuthorizedApplicationsToUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAuthorizedApplicationsToUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAuthorizedApplicationsToUser", ListAuthorizedApplicationsToUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -616,14 +508,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAuthorizedApplicationsToUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAuthorizedApplicationsToUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAuthorizedApplicationsToUserGroup", ListAuthorizedApplicationsToUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -637,14 +525,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUserGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUserGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUserGroups", ListUserGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -658,14 +542,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUserGroupsOfUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUserGroupsOfUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUserGroupsOfUser", ListUserGroupsOfUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -679,14 +559,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUsersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUsers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUsers", ListUsersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -700,14 +576,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUsersInOrgNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUsersInOrgNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUsersInOrgNode", ListUsersInOrgNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -721,14 +593,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListUsersInUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListUsersInUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListUsersInUserGroup", ListUsersInUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -742,14 +610,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAccountGroup", ModifyAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -763,14 +627,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAppAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAppAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAppAccount", ModifyAppAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -784,14 +644,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApplicationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApplication");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyApplication", ModifyApplicationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -805,14 +661,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUserInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUserInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyUserInfo", ModifyUserInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -826,14 +678,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveAccountFromAccountGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveAccountFromAccountGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveAccountFromAccountGroup", RemoveAccountFromAccountGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -847,14 +695,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveUserFromUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveUserFromUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveUserFromUserGroup", RemoveUserFromUserGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -868,14 +712,10 @@ public class EiamClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateOrgNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateOrgNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateOrgNode", UpdateOrgNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

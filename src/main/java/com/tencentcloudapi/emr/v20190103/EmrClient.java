@@ -50,14 +50,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddUsersForUserManagerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddUsersForUserManager");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddUsersForUserManager", AddUsersForUserManagerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -71,14 +67,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCluster");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -92,14 +84,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateInstance", CreateInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -113,14 +101,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClusterNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClusterNodes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClusterNodes", DescribeClusterNodesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEmrApplicationStatics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeEmrApplicationStatics", DescribeEmrApplicationStaticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -155,14 +135,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -176,14 +152,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstancesList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstancesList", DescribeInstancesListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -197,14 +169,10 @@ This API is used to add user lists (user management).
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeResourceScheduleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeResourceSchedule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeResourceSchedule", DescribeResourceScheduleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -219,14 +187,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsersForUserManagerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsersForUserManager");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUsersForUserManager", DescribeUsersForUserManagerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -240,14 +204,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceCreateInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceCreateInstance", InquiryPriceCreateInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -261,14 +221,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceRenewInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceRenewInstance", InquiryPriceRenewInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -282,14 +238,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceScaleOutInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceScaleOutInstance", InquiryPriceScaleOutInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -303,14 +255,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceUpdateInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceUpdateInstance", InquiryPriceUpdateInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -324,14 +272,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyResourceScheduleConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyResourceScheduleConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyResourceScheduleConfig", ModifyResourceScheduleConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -345,14 +289,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyResourceScheduler");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyResourceScheduler", ModifyResourceSchedulerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -366,14 +306,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ScaleOutClusterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ScaleOutCluster");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ScaleOutCluster", ScaleOutClusterResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -387,14 +323,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ScaleOutInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -408,14 +340,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartStopServiceOrMonitorResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartStopServiceOrMonitor");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartStopServiceOrMonitor", StartStopServiceOrMonitorResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -429,14 +357,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateClusterNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateClusterNodes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateClusterNodes", TerminateClusterNodesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -450,14 +374,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateInstance", TerminateInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -471,14 +391,10 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateTasks", TerminateTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

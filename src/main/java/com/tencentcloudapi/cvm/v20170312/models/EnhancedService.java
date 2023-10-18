@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnhancedService extends AbstractModel{
+public class EnhancedService extends AbstractModel {
 
     /**
     * Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.

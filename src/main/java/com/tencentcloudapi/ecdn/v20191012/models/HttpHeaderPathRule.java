@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpHeaderPathRule extends AbstractModel{
+public class HttpHeaderPathRule extends AbstractModel {
 
     /**
     * HTTP header setting method. Valid values: add (add header), set (set header), del (delete header).

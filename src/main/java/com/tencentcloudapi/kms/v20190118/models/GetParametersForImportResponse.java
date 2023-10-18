@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetParametersForImportResponse extends AbstractModel{
+public class GetParametersForImportResponse extends AbstractModel {
 
     /**
     * Unique ID of a CMK, which is used to specify the CMK into which to import key material.

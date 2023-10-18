@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAcRuleResponse extends AbstractModel{
+public class ModifyAcRuleResponse extends AbstractModel {
 
     /**
     * Status value. 0: operation successful; non-0: operation failed

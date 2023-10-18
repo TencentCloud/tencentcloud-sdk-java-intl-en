@@ -50,14 +50,10 @@ public class CvmClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AllocateHostsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AllocateHosts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AllocateHosts", AllocateHostsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -76,14 +72,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AssociateInstancesKeyPairsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssociateInstancesKeyPairs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AssociateInstancesKeyPairs", AssociateInstancesKeyPairsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -97,14 +89,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssociateSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -118,14 +106,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ConfigureChcAssistVpcResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ConfigureChcAssistVpc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ConfigureChcAssistVpc", ConfigureChcAssistVpcResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -139,14 +123,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ConfigureChcDeployVpcResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ConfigureChcDeployVpc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ConfigureChcDeployVpc", ConfigureChcDeployVpcResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -160,14 +140,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateDisasterRecoverGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDisasterRecoverGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateDisasterRecoverGroup", CreateDisasterRecoverGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -181,14 +157,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateImageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateImage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateImage", CreateImageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -207,14 +179,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateKeyPairResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateKeyPair");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateKeyPair", CreateKeyPairResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -228,14 +196,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLaunchTemplateVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLaunchTemplateVersion", CreateLaunchTemplateVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -249,14 +213,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDisasterRecoverGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDisasterRecoverGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteDisasterRecoverGroups", DeleteDisasterRecoverGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -274,14 +234,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteImagesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteImages");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteImages", DeleteImagesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -298,14 +254,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteKeyPairsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteKeyPairs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteKeyPairs", DeleteKeyPairsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -319,14 +271,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLaunchTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLaunchTemplate", DeleteLaunchTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -340,14 +288,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLaunchTemplateVersions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLaunchTemplateVersions", DeleteLaunchTemplateVersionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -361,14 +305,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeChcDeniedActionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeChcDeniedActions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeChcDeniedActions", DescribeChcDeniedActionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -385,14 +325,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeChcHostsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeChcHosts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeChcHosts", DescribeChcHostsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -406,14 +342,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDisasterRecoverGroupQuota");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDisasterRecoverGroupQuota", DescribeDisasterRecoverGroupQuotaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -427,14 +359,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDisasterRecoverGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDisasterRecoverGroups", DescribeDisasterRecoverGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -448,14 +376,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeHostsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeHosts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeHosts", DescribeHostsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -469,14 +393,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImageQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImageQuota");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImageQuota", DescribeImageQuotaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -490,14 +410,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImageSharePermissionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImageSharePermission");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImageSharePermission", DescribeImageSharePermissionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -514,14 +430,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImages");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImages", DescribeImagesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -535,14 +447,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImportImageOsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImportImageOs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImportImageOs", DescribeImportImageOsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -556,14 +464,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceFamilyConfigsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceFamilyConfigs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstanceFamilyConfigs", DescribeInstanceFamilyConfigsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -580,14 +484,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -603,14 +503,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesOperationLimitResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstancesOperationLimit");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstancesOperationLimit", DescribeInstancesOperationLimitResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -627,14 +523,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstancesStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstancesStatus", DescribeInstancesStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -648,14 +540,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetChargeTypeConfigsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetChargeTypeConfigs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInternetChargeTypeConfigs", DescribeInternetChargeTypeConfigsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -671,14 +559,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeKeyPairsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeKeyPairs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeKeyPairs", DescribeKeyPairsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -692,14 +576,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLaunchTemplateVersions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLaunchTemplateVersions", DescribeLaunchTemplateVersionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -713,14 +593,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLaunchTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLaunchTemplates", DescribeLaunchTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -734,14 +610,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRegions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -755,14 +627,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReservedInstancesConfigInfos");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeReservedInstancesConfigInfos", DescribeReservedInstancesConfigInfosResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -776,14 +644,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReservedInstancesOfferings");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeReservedInstancesOfferings", DescribeReservedInstancesOfferingsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -797,14 +661,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeZoneInstanceConfigInfosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeZoneInstanceConfigInfos");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeZoneInstanceConfigInfos", DescribeZoneInstanceConfigInfosResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -818,14 +678,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeZones");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeZones", DescribeZonesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -844,14 +700,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisassociateInstancesKeyPairs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisassociateInstancesKeyPairs", DisassociateInstancesKeyPairsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -865,14 +717,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -886,14 +734,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ExportImagesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ExportImages");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ExportImages", ExportImagesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -907,14 +751,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ImportImageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImportImage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ImportImage", ImportImageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -932,14 +772,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ImportKeyPairResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImportKeyPair");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ImportKeyPair", ImportKeyPairResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -953,14 +789,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquirePricePurchaseReservedInstancesOffering");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquirePricePurchaseReservedInstancesOffering", InquirePricePurchaseReservedInstancesOfferingResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -978,14 +810,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceResetInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceResetInstance", InquiryPriceResetInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1002,14 +830,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstancesInternetMaxBandwidthResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceResetInstancesInternetMaxBandwidth");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceResetInstancesInternetMaxBandwidth", InquiryPriceResetInstancesInternetMaxBandwidthResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1026,14 +850,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstancesTypeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceResetInstancesType");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceResetInstancesType", InquiryPriceResetInstancesTypeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1050,14 +870,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeInstanceDisksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceResizeInstanceDisks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceResizeInstanceDisks", InquiryPriceResizeInstanceDisksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1071,14 +887,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceRunInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceRunInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquiryPriceRunInstances", InquiryPriceRunInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1092,14 +904,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyChcAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyChcAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyChcAttribute", ModifyChcAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1113,14 +921,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDisasterRecoverGroupAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDisasterRecoverGroupAttribute", ModifyDisasterRecoverGroupAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1134,14 +938,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyHostsAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyHostsAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyHostsAttribute", ModifyHostsAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1157,14 +957,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyImageAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyImageAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyImageAttribute", ModifyImageAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1184,14 +980,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyImageSharePermissionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyImageSharePermission");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyImageSharePermission", ModifyImageSharePermissionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1211,14 +1003,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstancesAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstancesAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInstancesAttribute", ModifyInstancesAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1237,14 +1025,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstancesProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstancesProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInstancesProject", ModifyInstancesProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1261,14 +1045,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstancesVpcAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstancesVpcAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInstancesVpcAttribute", ModifyInstancesVpcAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1286,14 +1066,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyKeyPairAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyKeyPairAttribute", ModifyKeyPairAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1307,14 +1083,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLaunchTemplateDefaultVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLaunchTemplateDefaultVersion", ModifyLaunchTemplateDefaultVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1328,14 +1100,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PurchaseReservedInstancesOfferingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PurchaseReservedInstancesOffering");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PurchaseReservedInstancesOffering", PurchaseReservedInstancesOfferingResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1354,14 +1122,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RebootInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RebootInstances", RebootInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1375,14 +1139,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveChcAssistVpcResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveChcAssistVpc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveChcAssistVpc", RemoveChcAssistVpcResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1396,14 +1156,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveChcDeployVpcResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveChcDeployVpc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveChcDeployVpc", RemoveChcDeployVpcResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1424,14 +1180,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetInstance", ResetInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1448,14 +1200,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetInstancesInternetMaxBandwidthResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetInstancesInternetMaxBandwidth");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetInstancesInternetMaxBandwidth", ResetInstancesInternetMaxBandwidthResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1474,14 +1222,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetInstancesPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetInstancesPassword");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetInstancesPassword", ResetInstancesPasswordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1497,14 +1241,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetInstancesTypeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetInstancesType");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetInstancesType", ResetInstancesTypeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1522,14 +1262,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResizeInstanceDisksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResizeInstanceDisks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResizeInstanceDisks", ResizeInstanceDisksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1548,14 +1284,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RunInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RunInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RunInstances", RunInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1573,14 +1305,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartInstances", StartInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1599,14 +1327,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopInstances", StopInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1624,14 +1348,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SyncImagesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SyncImages");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SyncImages", SyncImagesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1650,14 +1370,10 @@ If you currently use a password to log in, you will no longer be able to do so a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateInstances", TerminateInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

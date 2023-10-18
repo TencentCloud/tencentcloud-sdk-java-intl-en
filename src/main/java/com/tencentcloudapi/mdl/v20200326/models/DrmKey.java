@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrmKey extends AbstractModel{
+public class DrmKey extends AbstractModel {
 
     /**
     * DRM key, which is a 32-bit hexadecimal string.

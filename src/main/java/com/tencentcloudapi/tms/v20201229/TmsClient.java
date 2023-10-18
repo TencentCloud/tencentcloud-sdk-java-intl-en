@@ -66,14 +66,10 @@ public class TmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TextModerationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextModeration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TextModeration", TextModerationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskHighlightInput extends AbstractModel{
+public class AiAnalysisTaskHighlightInput extends AbstractModel {
 
     /**
     * The ID of the intelligent highlight generation template.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
+public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
 
     /**
     * Instance ID.
@@ -51,7 +52,7 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
     private String Product;
 
     /**
-    * MD5 value of SOL template
+    * MD5 value of the SQL template
     */
     @SerializedName("Md5")
     @Expose
@@ -122,16 +123,16 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
     }
 
     /**
-     * Get MD5 value of SOL template 
-     * @return Md5 MD5 value of SOL template
+     * Get MD5 value of the SQL template 
+     * @return Md5 MD5 value of the SQL template
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set MD5 value of SOL template
-     * @param Md5 MD5 value of SOL template
+     * Set MD5 value of the SQL template
+     * @param Md5 MD5 value of the SQL template
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;

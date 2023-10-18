@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Whiteboard extends AbstractModel{
+public class Whiteboard extends AbstractModel {
 
     /**
     * Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.

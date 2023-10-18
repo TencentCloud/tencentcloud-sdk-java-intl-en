@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateModuleResponse extends AbstractModel{
+public class CreateModuleResponse extends AbstractModel {
 
     /**
     * Module ID. It is the ID assigned to a module after it is created successfully.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComplianceTaskPolicyItemSummaryListRequest extends AbstractModel{
+public class DescribeComplianceTaskPolicyItemSummaryListRequest extends AbstractModel {
 
     /**
     * Asset type, which indicates to only query check items related to the specified asset type.

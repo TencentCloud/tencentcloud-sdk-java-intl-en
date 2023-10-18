@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullUploadRequest extends AbstractModel{
+public class PullUploadRequest extends AbstractModel {
 
     /**
     * The URL of the media to pull, which can be in HLS format, but not DASH format.

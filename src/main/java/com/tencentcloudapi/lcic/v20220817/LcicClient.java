@@ -50,14 +50,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddGroupMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddGroupMember");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddGroupMember", AddGroupMemberResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -72,14 +68,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchAddGroupMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchAddGroupMember");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchAddGroupMember", BatchAddGroupMemberResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -94,14 +86,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchCreateGroupWithMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchCreateGroupWithMembers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchCreateGroupWithMembers", BatchCreateGroupWithMembersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -115,14 +103,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchCreateRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchCreateRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchCreateRoom", BatchCreateRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -137,14 +121,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchDeleteGroupMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchDeleteGroupMember");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchDeleteGroupMember", BatchDeleteGroupMemberResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -159,14 +139,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchDeleteRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchDeleteRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchDeleteRecord", BatchDeleteRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -180,14 +156,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchDescribeDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchDescribeDocument");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchDescribeDocument", BatchDescribeDocumentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -202,14 +174,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchRegisterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchRegister");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchRegister", BatchRegisterResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -223,14 +191,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindDocumentToRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindDocumentToRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindDocumentToRoom", BindDocumentToRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -244,14 +208,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDocument");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateDocument", CreateDocumentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -266,14 +226,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGroupWithMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGroupWithMembers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGroupWithMembers", CreateGroupWithMembersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -288,14 +244,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGroupWithSubGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGroupWithSubGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGroupWithSubGroup", CreateGroupWithSubGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -310,14 +262,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRoom", CreateRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -331,14 +279,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSupervisorResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSupervisor");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSupervisor", CreateSupervisorResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -352,14 +296,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAppCustomContentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAppCustomContent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAppCustomContent", DeleteAppCustomContentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -374,14 +314,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDocument");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteDocument", DeleteDocumentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -396,14 +332,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -418,14 +350,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGroupMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGroupMember");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGroupMember", DeleteGroupMemberResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -440,14 +368,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRecord", DeleteRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -461,14 +385,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRoom", DeleteRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -482,14 +402,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSupervisorResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSupervisor");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSupervisor", DeleteSupervisorResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -503,14 +419,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAnswerListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAnswerList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAnswerList", DescribeAnswerListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -525,14 +437,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCurrentMemberListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCurrentMemberList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCurrentMemberList", DescribeCurrentMemberListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -546,14 +454,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDeveloperResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDeveloper");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDeveloper", DescribeDeveloperResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -568,14 +472,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDocument");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDocument", DescribeDocumentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -593,14 +493,10 @@ This API is used to query courseware. It has been deprecated. Please use `BatchD
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDocumentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDocuments");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDocuments", DescribeDocumentsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -615,14 +511,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDocumentsByRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDocumentsByRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDocumentsByRoom", DescribeDocumentsByRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -637,14 +529,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroup", DescribeGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -659,14 +547,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroupList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroupList", DescribeGroupListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -681,14 +565,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupMemberListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroupMemberList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroupMemberList", DescribeGroupMemberListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -702,14 +582,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeQuestionListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeQuestionList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeQuestionList", DescribeQuestionListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -724,14 +600,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRoom", DescribeRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -746,14 +618,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoomStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoomStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRoomStatistics", DescribeRoomStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -768,14 +636,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSdkAppIdUsersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSdkAppIdUsers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSdkAppIdUsers", DescribeSdkAppIdUsersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -789,14 +653,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSupervisorsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSupervisors");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSupervisors", DescribeSupervisorsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -810,14 +670,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -831,14 +687,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EndRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EndRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EndRoom", EndRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -852,14 +704,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRoomEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRoomEvent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRoomEvent", GetRoomEventResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -873,14 +721,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRoomMessageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRoomMessage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRoomMessage", GetRoomMessageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -894,14 +738,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRoomsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRooms");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRooms", GetRoomsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -916,14 +756,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetWatermark", GetWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -937,14 +773,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<KickUserFromRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "KickUserFromRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "KickUserFromRoom", KickUserFromRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -958,14 +790,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<LoginOriginIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LoginOriginId");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "LoginOriginId", LoginOriginIdResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -979,14 +807,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<LoginUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LoginUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "LoginUser", LoginUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1001,14 +825,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyApp", ModifyAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1023,14 +843,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1045,14 +861,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyRoom", ModifyRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1067,14 +879,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUserProfileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUserProfile");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyUserProfile", ModifyUserProfileResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1088,14 +896,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RegisterUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RegisterUser", RegisterUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1109,14 +913,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetAppCustomContent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetAppCustomContent", SetAppCustomContentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1131,14 +931,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetWatermark", SetWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1152,14 +948,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartRoom", StartRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1173,14 +965,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnbindDocumentFromRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindDocumentFromRoom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnbindDocumentFromRoom", UnbindDocumentFromRoomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

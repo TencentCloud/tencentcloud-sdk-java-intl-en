@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaDeleteItem extends AbstractModel{
+public class MediaDeleteItem extends AbstractModel {
 
     /**
     * The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:

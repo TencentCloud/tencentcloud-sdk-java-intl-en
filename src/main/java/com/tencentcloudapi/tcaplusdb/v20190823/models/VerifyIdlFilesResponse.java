@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyIdlFilesResponse extends AbstractModel{
+public class VerifyIdlFilesResponse extends AbstractModel {
 
     /**
     * Information list of all IDL files uploaded and verified in this request

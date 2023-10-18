@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReviewImageRequest extends AbstractModel{
+public class ReviewImageRequest extends AbstractModel {
 
     /**
     * The unique ID of the media file. For this API to work, the file must be an image.

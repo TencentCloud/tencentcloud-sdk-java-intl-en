@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAvailableZoneInfoResponse extends AbstractModel{
+public class DescribeAvailableZoneInfoResponse extends AbstractModel {
 
     /**
     * Information such as resource availability in each AZ and the supported storage classes and protocols

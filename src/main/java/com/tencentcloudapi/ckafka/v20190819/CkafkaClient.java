@@ -49,14 +49,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchCreateAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchCreateAcl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchCreateAcl", BatchCreateAclResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchModifyGroupOffsetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchModifyGroupOffsets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchModifyGroupOffsets", BatchModifyGroupOffsetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BatchModifyTopicAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchModifyTopicAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BatchModifyTopicAttributes", BatchModifyTopicAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAcl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAcl", CreateAclResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAclRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAclRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAclRule", CreateAclRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateConsumerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateConsumer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateConsumer", CreateConsumerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +151,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateDatahubTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDatahubTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateDatahubTopic", CreateDatahubTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +168,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateInstancePostResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateInstancePost");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateInstancePost", CreateInstancePostResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -217,14 +185,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePartitionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePartition");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePartition", CreatePartitionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -238,14 +202,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePostPaidInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePostPaidInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePostPaidInstance", CreatePostPaidInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -259,14 +219,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -280,14 +236,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTopicIpWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTopicIpWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTopicIpWhiteList", CreateTopicIpWhiteListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -301,14 +253,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -322,14 +270,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAcl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAcl", DeleteAclResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -343,14 +287,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteInstancePreResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteInstancePre");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteInstancePre", DeleteInstancePreResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -364,14 +304,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRouteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRoute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRoute", DeleteRouteResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -385,14 +321,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRouteTriggerTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRouteTriggerTime");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRouteTriggerTime", DeleteRouteTriggerTimeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -406,14 +338,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -427,14 +355,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTopicIpWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTopicIpWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTopicIpWhiteList", DeleteTopicIpWhiteListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -448,14 +372,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -469,14 +389,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeACLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeACL");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeACL", DescribeACLResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -490,14 +406,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAclRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAclRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAclRule", DescribeAclRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -511,14 +423,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAppInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAppInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAppInfo", DescribeAppInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -532,14 +440,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCkafkaZoneResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCkafkaZone");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCkafkaZone", DescribeCkafkaZoneResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -553,14 +457,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeConsumerGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeConsumerGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeConsumerGroup", DescribeConsumerGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -574,14 +474,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDatahubTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDatahubTopic", DescribeDatahubTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -595,14 +491,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDatahubTopics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDatahubTopics", DescribeDatahubTopicsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -616,14 +508,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroup", DescribeGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -637,14 +525,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroupInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroupInfo", DescribeGroupInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -658,14 +542,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupOffsetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroupOffsets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroupOffsets", DescribeGroupOffsetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -679,14 +559,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstanceAttributes", DescribeInstanceAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -700,14 +576,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -721,14 +593,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstancesDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstancesDetail", DescribeInstancesDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -742,14 +610,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRegionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRegion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRegion", DescribeRegionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -763,14 +627,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRouteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRoute", DescribeRouteResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -784,14 +644,10 @@ public class CkafkaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTaskStatus", DescribeTaskStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -806,14 +662,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopic", DescribeTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -828,14 +680,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopicAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopicAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopicAttributes", DescribeTopicAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -849,14 +697,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopicDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopicDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopicDetail", DescribeTopicDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -870,14 +714,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopicProduceConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopicProduceConnection");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopicProduceConnection", DescribeTopicProduceConnectionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -891,14 +731,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopicSubscribeGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopicSubscribeGroup", DescribeTopicSubscribeGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -912,14 +748,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopicSyncReplicaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopicSyncReplica");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopicSyncReplica", DescribeTopicSyncReplicaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -933,14 +765,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -954,14 +782,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<FetchMessageByOffsetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FetchMessageByOffset");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "FetchMessageByOffset", FetchMessageByOffsetResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -975,14 +799,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FetchMessageListByOffset");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "FetchMessageListByOffset", FetchMessageListByOffsetResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -996,14 +816,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InquireCkafkaPriceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquireCkafkaPrice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InquireCkafkaPrice", InquireCkafkaPriceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1017,14 +833,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAclRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAclRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAclRule", ModifyAclRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1038,14 +850,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDatahubTopicResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDatahubTopic");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDatahubTopic", ModifyDatahubTopicResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1059,14 +867,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyGroupOffsetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyGroupOffsets");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyGroupOffsets", ModifyGroupOffsetsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1080,14 +884,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstanceAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstanceAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInstanceAttributes", ModifyInstanceAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1101,14 +901,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstancePreResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstancePre");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInstancePre", ModifyInstancePreResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1122,14 +918,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPassword");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPassword", ModifyPasswordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1143,14 +935,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTopicAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTopicAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTopicAttributes", ModifyTopicAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1164,14 +952,10 @@ This API is used to get the list of topics in a CKafka instance of a user.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SendMessageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendMessage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

@@ -49,14 +49,10 @@ public class DataintegrationClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SendMessageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendMessage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

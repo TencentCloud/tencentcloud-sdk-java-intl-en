@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrationDetailResponse extends AbstractModel{
+public class DescribeMigrationDetailResponse extends AbstractModel {
 
     /**
     * Data migration task ID
@@ -180,6 +181,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("ErrorInfo")
     @Expose
     private ErrorInfoItem [] ErrorInfo;
+
+    /**
+    * Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+    */
+    @SerializedName("DumperResumeCtrl")
+    @Expose
+    private String DumperResumeCtrl;
+
+    /**
+    * Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RateLimitOption")
+    @Expose
+    private RateLimitOption RateLimitOption;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -585,6 +601,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage. 
+     * @return DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+     */
+    public String getDumperResumeCtrl() {
+        return this.DumperResumeCtrl;
+    }
+
+    /**
+     * Set Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+     * @param DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+     */
+    public void setDumperResumeCtrl(String DumperResumeCtrl) {
+        this.DumperResumeCtrl = DumperResumeCtrl;
+    }
+
+    /**
+     * Get Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return RateLimitOption Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public RateLimitOption getRateLimitOption() {
+        return this.RateLimitOption;
+    }
+
+    /**
+     * Set Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param RateLimitOption Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setRateLimitOption(RateLimitOption RateLimitOption) {
+        this.RateLimitOption = RateLimitOption;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -674,6 +726,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ErrorInfo[i] = new ErrorInfoItem(source.ErrorInfo[i]);
             }
         }
+        if (source.DumperResumeCtrl != null) {
+            this.DumperResumeCtrl = new String(source.DumperResumeCtrl);
+        }
+        if (source.RateLimitOption != null) {
+            this.RateLimitOption = new RateLimitOption(source.RateLimitOption);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -704,6 +762,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CheckStepInfo.", this.CheckStepInfo);
         this.setParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
         this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+        this.setParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
+        this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

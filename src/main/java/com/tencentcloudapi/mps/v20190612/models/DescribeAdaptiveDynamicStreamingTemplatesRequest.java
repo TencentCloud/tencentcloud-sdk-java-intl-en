@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel{
+public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel {
 
     /**
     * Unique ID filter of adaptive bitrate streaming templates. Array length limit: 100.

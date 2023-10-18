@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComponentStatisticsRequest extends AbstractModel{
+public class DescribeComponentStatisticsRequest extends AbstractModel {
 
     /**
     * Number of results to be returned. Default value: 10. Maximum value: 100.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTokenResponse extends AbstractModel{
+public class DescribeTokenResponse extends AbstractModel {
 
     /**
     * The token corresponding to the current MatchCode. If the current MatchCode does not have a token, this parameter may not obtain a valid value.

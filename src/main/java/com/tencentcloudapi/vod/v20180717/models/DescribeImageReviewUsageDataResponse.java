@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageReviewUsageDataResponse extends AbstractModel{
+public class DescribeImageReviewUsageDataResponse extends AbstractModel {
 
     /**
     * The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskResult extends AbstractModel{
+public class TaskResult extends AbstractModel {
 
     /**
     * This field is used to return the `DataId` passed in within the `TaskInput` structure when an audio moderation task is created. It is used to identify the specific moderation task.

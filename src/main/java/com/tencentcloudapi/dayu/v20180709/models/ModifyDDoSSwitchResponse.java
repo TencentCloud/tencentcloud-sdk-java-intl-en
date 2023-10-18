@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSSwitchResponse extends AbstractModel{
+public class ModifyDDoSSwitchResponse extends AbstractModel {
 
     /**
     * Current protection status value. Valid values: [0 (disabled), 1 (enabled)]

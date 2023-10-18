@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyHourDBInstanceRequest extends AbstractModel{
+public class DestroyHourDBInstanceRequest extends AbstractModel {
 
     /**
     * Instance ID in the format of tdsql-avw0207d. It is the same as the instance ID displayed in the TencentDB console.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PodSpec extends AbstractModel{
+public class PodSpec extends AbstractModel {
 
     /**
     * Identifier of external resource provider, such as "cls-a1cd23fa".

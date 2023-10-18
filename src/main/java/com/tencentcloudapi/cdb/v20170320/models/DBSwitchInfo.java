@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBSwitchInfo extends AbstractModel{
+public class DBSwitchInfo extends AbstractModel {
 
     /**
     * Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31

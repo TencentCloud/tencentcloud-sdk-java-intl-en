@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
+public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
 
     /**
     * Instance ID in the format of mssql-njj2mtpl

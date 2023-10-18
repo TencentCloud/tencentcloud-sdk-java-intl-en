@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSyncModeRequest extends AbstractModel{
+public class DescribeDBSyncModeRequest extends AbstractModel {
 
     /**
     * ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.

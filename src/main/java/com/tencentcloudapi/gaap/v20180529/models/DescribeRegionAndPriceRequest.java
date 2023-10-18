@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionAndPriceRequest extends AbstractModel{
+public class DescribeRegionAndPriceRequest extends AbstractModel {
 
     /**
     * IP version. Valid values: `IPv4` (default), `IPv6`.

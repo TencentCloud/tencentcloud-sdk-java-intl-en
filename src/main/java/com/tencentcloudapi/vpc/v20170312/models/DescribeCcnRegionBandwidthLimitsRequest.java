@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
+public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel {
 
     /**
     * The CCN instance ID in the format of `ccn-f49l6u0z`.

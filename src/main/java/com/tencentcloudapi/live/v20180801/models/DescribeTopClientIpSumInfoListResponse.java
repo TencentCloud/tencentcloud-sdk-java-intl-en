@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
+public class DescribeTopClientIpSumInfoListResponse extends AbstractModel {
 
     /**
     * Page number. Value range: [1,1000]. Default value: 1.

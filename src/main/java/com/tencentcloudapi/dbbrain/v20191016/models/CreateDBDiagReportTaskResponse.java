@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBDiagReportTaskResponse extends AbstractModel{
+public class CreateDBDiagReportTaskResponse extends AbstractModel {
 
     /**
     * ID of an async task request, which can be used to query the execution result of an async task.

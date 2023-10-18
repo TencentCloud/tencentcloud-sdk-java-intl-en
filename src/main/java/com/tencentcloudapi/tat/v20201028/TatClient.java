@@ -52,14 +52,10 @@ public class TatClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CancelInvocationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CancelInvocation");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CancelInvocation", CancelInvocationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -73,14 +69,10 @@ public class TatClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCommand");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateCommand", CreateCommandResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -94,14 +86,10 @@ public class TatClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateInvokerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateInvoker");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateInvoker", CreateInvokerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -116,14 +104,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCommand");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteCommand", DeleteCommandResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -137,14 +121,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteInvokerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteInvoker");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteInvoker", DeleteInvokerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -158,14 +138,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutomationAgentStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutomationAgentStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAutomationAgentStatus", DescribeAutomationAgentStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -179,14 +155,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCommandsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCommands");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCommands", DescribeCommandsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -200,14 +172,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInvocationTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInvocationTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInvocationTasks", DescribeInvocationTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -221,14 +189,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInvocationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInvocations");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInvocations", DescribeInvocationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -242,14 +206,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInvokerRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInvokerRecords");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInvokerRecords", DescribeInvokerRecordsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -263,14 +223,10 @@ Commands bound to an invoker cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInvokersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInvokers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInvokers", DescribeInvokersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -285,14 +241,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRegions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -306,14 +258,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableInvokerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableInvoker");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableInvoker", DisableInvokerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -327,14 +275,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableInvokerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableInvoker");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableInvoker", EnableInvokerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -354,14 +298,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InvokeCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InvokeCommand");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InvokeCommand", InvokeCommandResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -375,14 +315,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCommand");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyCommand", ModifyCommandResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -396,14 +332,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInvokerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInvoker");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInvoker", ModifyInvokerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -417,14 +349,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PreviewReplacedCommandContentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PreviewReplacedCommandContent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PreviewReplacedCommandContent", PreviewReplacedCommandContentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -444,14 +372,10 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RunCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RunCommand");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RunCommand", RunCommandResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

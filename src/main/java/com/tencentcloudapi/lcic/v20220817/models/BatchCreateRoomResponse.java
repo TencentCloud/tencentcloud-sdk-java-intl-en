@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchCreateRoomResponse extends AbstractModel{
+public class BatchCreateRoomResponse extends AbstractModel {
 
     /**
     * The IDs of the rooms created, which are in the same order as they are passed in.

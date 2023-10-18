@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancerTrafficRequest extends AbstractModel{
+public class DescribeLoadBalancerTrafficRequest extends AbstractModel {
 
     /**
     * CLB instance region. If this parameter is not passed in, CLB instances in all regions will be returned.

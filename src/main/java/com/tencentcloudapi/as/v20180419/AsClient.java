@@ -52,14 +52,10 @@ public class AsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachInstances", AttachInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -73,14 +69,10 @@ public class AsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachLoadBalancers", AttachLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -94,14 +86,10 @@ public class AsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ClearLaunchConfigurationAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ClearLaunchConfigurationAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ClearLaunchConfigurationAttributes", ClearLaunchConfigurationAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -117,14 +105,10 @@ public class AsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CompleteLifecycleActionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CompleteLifecycleAction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CompleteLifecycleAction", CompleteLifecycleActionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -138,14 +122,10 @@ public class AsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAutoScalingGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAutoScalingGroup", CreateAutoScalingGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -161,14 +141,10 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAutoScalingGroupFromInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAutoScalingGroupFromInstance", CreateAutoScalingGroupFromInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -186,14 +162,10 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLaunchConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLaunchConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLaunchConfiguration", CreateLaunchConfigurationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -227,14 +199,10 @@ If you configured a notification, Auto Scaling will notify the TDMQ queue of the
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLifecycleHookResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLifecycleHook");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLifecycleHook", CreateLifecycleHookResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -275,14 +243,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateNotificationConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateNotificationConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateNotificationConfiguration", CreateNotificationConfigurationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -296,14 +260,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateScalingPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateScalingPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateScalingPolicy", CreateScalingPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -317,14 +277,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateScheduledActionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateScheduledAction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateScheduledAction", CreateScheduledActionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -338,14 +294,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAutoScalingGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAutoScalingGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAutoScalingGroup", DeleteAutoScalingGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -362,14 +314,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLaunchConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLaunchConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLaunchConfiguration", DeleteLaunchConfigurationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -383,14 +331,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLifecycleHookResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLifecycleHook");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLifecycleHook", DeleteLifecycleHookResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -404,14 +348,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteNotificationConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteNotificationConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteNotificationConfiguration", DeleteNotificationConfigurationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -425,14 +365,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteScalingPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteScalingPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteScalingPolicy", DeleteScalingPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -446,14 +382,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteScheduledActionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteScheduledAction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteScheduledAction", DeleteScheduledActionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -467,14 +399,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccountLimitsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccountLimits");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAccountLimits", DescribeAccountLimitsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -488,14 +416,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingActivitiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutoScalingActivities");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAutoScalingActivities", DescribeAutoScalingActivitiesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -509,14 +433,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutoScalingAdvices");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAutoScalingAdvices", DescribeAutoScalingAdvicesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -530,14 +450,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingGroupLastActivitiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutoScalingGroupLastActivities");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAutoScalingGroupLastActivities", DescribeAutoScalingGroupLastActivitiesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -554,14 +470,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutoScalingGroups");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAutoScalingGroups", DescribeAutoScalingGroupsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -578,14 +490,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutoScalingInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAutoScalingInstances", DescribeAutoScalingInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -602,14 +510,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLaunchConfigurationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLaunchConfigurations");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLaunchConfigurations", DescribeLaunchConfigurationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -626,14 +530,10 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLifecycleHooksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLifecycleHooks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLifecycleHooks", DescribeLifecycleHooksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -650,14 +550,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNotificationConfigurationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNotificationConfigurations");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeNotificationConfigurations", DescribeNotificationConfigurationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -671,14 +567,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScalingPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScalingPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeScalingPolicies", DescribeScalingPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -695,14 +587,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScheduledActionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScheduledActions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeScheduledActions", DescribeScheduledActionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -719,14 +607,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachInstances", DetachInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -740,14 +624,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachLoadBalancers", DetachLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -774,14 +654,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableAutoScalingGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableAutoScalingGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableAutoScalingGroup", DisableAutoScalingGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -795,14 +671,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableAutoScalingGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableAutoScalingGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableAutoScalingGroup", EnableAutoScalingGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -820,14 +692,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ExecuteScalingPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ExecuteScalingPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ExecuteScalingPolicy", ExecuteScalingPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -841,14 +709,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAutoScalingGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAutoScalingGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAutoScalingGroup", ModifyAutoScalingGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -862,14 +726,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDesiredCapacityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDesiredCapacity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDesiredCapacity", ModifyDesiredCapacityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -886,14 +746,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLaunchConfigurationAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLaunchConfigurationAttributes", ModifyLaunchConfigurationAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -907,14 +763,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLifecycleHookResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLifecycleHook");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLifecycleHook", ModifyLifecycleHookResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -928,14 +780,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancerTargetAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLoadBalancerTargetAttributes", ModifyLoadBalancerTargetAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -953,14 +801,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLoadBalancers", ModifyLoadBalancersResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -975,14 +819,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyNotificationConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyNotificationConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyNotificationConfiguration", ModifyNotificationConfigurationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -996,14 +836,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyScalingPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyScalingPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyScalingPolicy", ModifyScalingPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1017,14 +853,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyScheduledActionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyScheduledAction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyScheduledAction", ModifyScheduledActionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1041,14 +873,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveInstances", RemoveInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1068,14 +896,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ScaleInInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ScaleInInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ScaleInInstances", ScaleInInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1094,14 +918,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ScaleOutInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ScaleOutInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ScaleOutInstances", ScaleOutInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1116,14 +936,10 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetInstancesProtectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetInstancesProtection");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetInstancesProtection", SetInstancesProtectionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1139,14 +955,10 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartAutoScalingInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartAutoScalingInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartAutoScalingInstances", StartAutoScalingInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1164,14 +976,10 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopAutoScalingInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopAutoScalingInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopAutoScalingInstances", StopAutoScalingInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1188,14 +996,10 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeLaunchConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeLaunchConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpgradeLaunchConfiguration", UpgradeLaunchConfigurationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1212,14 +1016,10 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeLifecycleHookResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeLifecycleHook");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpgradeLifecycleHook", UpgradeLifecycleHookResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

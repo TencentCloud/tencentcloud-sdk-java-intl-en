@@ -51,14 +51,10 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddDelayLiveStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddDelayLiveStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddDelayLiveStream", AddDelayLiveStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -72,14 +68,10 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddLiveDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddLiveDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddLiveDomain", AddLiveDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -94,14 +86,10 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AddLiveWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddLiveWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AddLiveWatermark", AddLiveWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -115,14 +103,10 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AuthenticateDomainOwnerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AuthenticateDomainOwner");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AuthenticateDomainOwner", AuthenticateDomainOwnerResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -136,14 +120,10 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CancelCommonMixStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CancelCommonMixStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CancelCommonMixStream", CancelCommonMixStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -159,14 +139,10 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateCommonMixStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCommonMixStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateCommonMixStream", CreateCommonMixStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -181,14 +157,10 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveCallbackRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveCallbackRule", CreateLiveCallbackRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -204,14 +176,10 @@ Note: You need to specify at least one callback URL.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveCallbackTemplate", CreateLiveCallbackTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -232,14 +200,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLivePullStreamTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLivePullStreamTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLivePullStreamTask", CreateLivePullStreamTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -268,14 +232,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveRecord", CreateLiveRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -290,14 +250,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveRecordRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveRecordRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveRecordRule", CreateLiveRecordRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -312,14 +268,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveRecordTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveRecordTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveRecordTemplate", CreateLiveRecordTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -335,14 +287,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveSnapshotRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveSnapshotRule", CreateLiveSnapshotRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -357,14 +305,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveSnapshotTemplate", CreateLiveSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -379,14 +323,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveTimeShiftRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveTimeShiftRule", CreateLiveTimeShiftRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -400,14 +340,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveTimeShiftTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveTimeShiftTemplate", CreateLiveTimeShiftTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -422,14 +358,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveTranscodeRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveTranscodeRule", CreateLiveTranscodeRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -444,14 +376,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveTranscodeTemplate", CreateLiveTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -465,14 +393,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveWatermarkRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveWatermarkRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLiveWatermarkRule", CreateLiveWatermarkRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -495,14 +419,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRecordTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRecordTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRecordTask", CreateRecordTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -522,14 +442,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateScreenshotTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateScreenshotTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateScreenshotTask", CreateScreenshotTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -543,14 +459,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveCallbackRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveCallbackRule", DeleteLiveCallbackRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -564,14 +476,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveCallbackTemplate", DeleteLiveCallbackTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -585,14 +493,10 @@ Note: only one screencapturing template can be associated with one domain name.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveDomain", DeleteLiveDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -609,14 +513,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLivePullStreamTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLivePullStreamTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLivePullStreamTask", DeleteLivePullStreamTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -630,14 +530,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveRecord", DeleteLiveRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -651,14 +547,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveRecordRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveRecordRule", DeleteLiveRecordRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -672,14 +564,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveRecordTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -693,14 +581,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveSnapshotRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveSnapshotRule", DeleteLiveSnapshotRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -714,14 +598,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveSnapshotTemplate", DeleteLiveSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -735,14 +615,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveTimeShiftRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveTimeShiftRule", DeleteLiveTimeShiftRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -756,14 +632,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveTimeShiftTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveTimeShiftTemplate", DeleteLiveTimeShiftTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -778,14 +650,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveTranscodeRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveTranscodeRule", DeleteLiveTranscodeRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -799,14 +667,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveTranscodeTemplate", DeleteLiveTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -820,14 +684,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveWatermark", DeleteLiveWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -841,14 +701,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveWatermarkRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLiveWatermarkRule", DeleteLiveWatermarkRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -862,14 +718,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRecordTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRecordTask", DeleteRecordTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -883,14 +735,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllStreamPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAllStreamPlayInfoList", DescribeAllStreamPlayInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -904,14 +752,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillBandwidthAndFluxList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillBandwidthAndFluxList", DescribeBillBandwidthAndFluxListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -925,14 +769,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeConcurrentRecordStreamNum");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeConcurrentRecordStreamNum", DescribeConcurrentRecordStreamNumResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -946,14 +786,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDeliverBandwidthListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDeliverBandwidthList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDeliverBandwidthList", DescribeDeliverBandwidthListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -967,14 +803,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGroupProIspPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGroupProIspPlayInfoList", DescribeGroupProIspPlayInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -989,14 +821,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeHttpStatusInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeHttpStatusInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeHttpStatusInfoList", DescribeHttpStatusInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1010,14 +838,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveCallbackRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveCallbackRules", DescribeLiveCallbackRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1031,14 +855,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveCallbackTemplate", DescribeLiveCallbackTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1052,14 +872,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveCallbackTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveCallbackTemplates", DescribeLiveCallbackTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1073,14 +889,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveCert");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveCert", DescribeLiveCertResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1094,14 +906,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveCertsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveCerts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveCerts", DescribeLiveCertsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1115,14 +923,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDelayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDelayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveDelayInfoList", DescribeLiveDelayInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1136,14 +940,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveDomain", DescribeLiveDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1157,14 +957,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDomainCert");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveDomainCert", DescribeLiveDomainCertResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1178,14 +974,10 @@ Note: data can be queried one hour after it is generated. For example, data betw
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDomainCertBindings");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveDomainCertBindings", DescribeLiveDomainCertBindingsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1200,14 +992,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainRefererResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDomainReferer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveDomainReferer", DescribeLiveDomainRefererResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1221,14 +1009,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDomains");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveDomains", DescribeLiveDomainsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1244,14 +1028,10 @@ Note: this API is used for query only and should not be relied too much upon in 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveForbidStreamListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveForbidStreamList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveForbidStreamList", DescribeLiveForbidStreamListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1265,14 +1045,10 @@ Note: this API is used for query only and should not be relied too much upon in 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLivePlayAuthKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLivePlayAuthKey", DescribeLivePlayAuthKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1287,14 +1063,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLivePullStreamTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLivePullStreamTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLivePullStreamTasks", DescribeLivePullStreamTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1308,14 +1080,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLivePushAuthKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLivePushAuthKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLivePushAuthKey", DescribeLivePushAuthKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1329,14 +1097,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveRecordRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveRecordRules", DescribeLiveRecordRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1350,14 +1114,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveRecordTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveRecordTemplate", DescribeLiveRecordTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1371,14 +1131,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveRecordTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1392,14 +1148,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveSnapshotRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveSnapshotRules", DescribeLiveSnapshotRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1413,14 +1165,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveSnapshotTemplate", DescribeLiveSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1434,14 +1182,10 @@ The tasks returned are sorted by last updated time in descending order.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveSnapshotTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveSnapshotTemplates", DescribeLiveSnapshotTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1459,14 +1203,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamEventListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveStreamEventList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveStreamEventList", DescribeLiveStreamEventListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1485,14 +1225,10 @@ Notes:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamOnlineListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveStreamOnlineList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveStreamOnlineList", DescribeLiveStreamOnlineListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1507,14 +1243,10 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPublishedListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveStreamPublishedList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveStreamPublishedList", DescribeLiveStreamPublishedListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1528,14 +1260,10 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPushInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveStreamPushInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveStreamPushInfoList", DescribeLiveStreamPushInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1558,14 +1286,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamStateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveStreamState");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveStreamState", DescribeLiveStreamStateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1579,14 +1303,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftBillInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTimeShiftBillInfoList", DescribeLiveTimeShiftBillInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1600,14 +1320,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTimeShiftRules", DescribeLiveTimeShiftRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1621,14 +1337,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTimeShiftTemplates", DescribeLiveTimeShiftTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1642,14 +1354,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTranscodeDetailInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTranscodeDetailInfo", DescribeLiveTranscodeDetailInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1663,14 +1371,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTranscodeRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTranscodeRules", DescribeLiveTranscodeRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1684,14 +1388,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTranscodeTemplate", DescribeLiveTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1705,14 +1405,10 @@ This API allows you to query the status of a stream in real time. Given external
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTranscodeTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTranscodeTemplates", DescribeLiveTranscodeTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1729,14 +1425,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveTranscodeTotalInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveTranscodeTotalInfo", DescribeLiveTranscodeTotalInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1750,14 +1442,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveWatermark", DescribeLiveWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1771,14 +1459,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveWatermarkRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveWatermarkRules", DescribeLiveWatermarkRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1792,14 +1476,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveWatermarks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLiveWatermarks", DescribeLiveWatermarksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1813,14 +1493,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlayErrorCodeDetailInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePlayErrorCodeDetailInfoList", DescribePlayErrorCodeDetailInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1834,14 +1510,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlayErrorCodeSumInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePlayErrorCodeSumInfoList", DescribePlayErrorCodeSumInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1855,14 +1527,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProvinceIspPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProvinceIspPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProvinceIspPlayInfoList", DescribeProvinceIspPlayInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1879,14 +1547,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRecordTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRecordTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRecordTask", DescribeRecordTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1900,14 +1564,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScreenShotSheetNumListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScreenShotSheetNumList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeScreenShotSheetNumList", DescribeScreenShotSheetNumListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1921,14 +1581,10 @@ If the start time and end time are not on the same day or if the data of specifi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStreamDayPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStreamDayPlayInfoList", DescribeStreamDayPlayInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1943,14 +1599,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStreamPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStreamPlayInfoList", DescribeStreamPlayInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1964,14 +1616,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStreamPushInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStreamPushInfoList", DescribeStreamPushInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1985,14 +1633,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTimeShiftRecordDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTimeShiftRecordDetail", DescribeTimeShiftRecordDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2006,14 +1650,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftStreamListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTimeShiftStreamList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTimeShiftStreamList", DescribeTimeShiftStreamListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2027,14 +1667,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopClientIpSumInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTopClientIpSumInfoList", DescribeTopClientIpSumInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2048,14 +1684,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTaskNumResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTranscodeTaskNum");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTranscodeTaskNum", DescribeTranscodeTaskNumResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2069,14 +1701,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUploadStreamNumsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUploadStreamNums");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUploadStreamNums", DescribeUploadStreamNumsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2090,14 +1718,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVisitTopSumInfoList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeVisitTopSumInfoList", DescribeVisitTopSumInfoListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2112,14 +1736,10 @@ Note: If you call this API to pause an inactive stream, the request will be cons
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DropLiveStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DropLiveStream", DropLiveStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2133,14 +1753,10 @@ Note: If you call this API to pause an inactive stream, the request will be cons
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableLiveDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableLiveDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableLiveDomain", EnableLiveDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2154,14 +1770,10 @@ Note: If you call this API to pause an inactive stream, the request will be cons
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ForbidLiveDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ForbidLiveDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ForbidLiveDomain", ForbidLiveDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2179,14 +1791,10 @@ Note:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ForbidLiveStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ForbidLiveStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ForbidLiveStream", ForbidLiveStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2200,14 +1808,10 @@ Note:
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveCallbackTemplate", ModifyLiveCallbackTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2222,14 +1826,10 @@ If a self-owned certificate is used, it will be automatically uploaded to Tencen
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveDomainCertBindings");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveDomainCertBindings", ModifyLiveDomainCertBindingsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2244,14 +1844,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainRefererResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveDomainReferer");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveDomainReferer", ModifyLiveDomainRefererResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2265,14 +1861,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLivePlayAuthKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLivePlayAuthKey", ModifyLivePlayAuthKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2286,14 +1878,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLivePlayDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLivePlayDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLivePlayDomain", ModifyLivePlayDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2309,14 +1897,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLivePullStreamTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLivePullStreamTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLivePullStreamTask", ModifyLivePullStreamTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2330,14 +1914,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLivePushAuthKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLivePushAuthKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLivePushAuthKey", ModifyLivePushAuthKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2351,14 +1931,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveRecordTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2372,14 +1948,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveSnapshotTemplate", ModifyLiveSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2393,14 +1965,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveTimeShiftTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveTimeShiftTemplate", ModifyLiveTimeShiftTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2414,14 +1982,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyLiveTranscodeTemplate", ModifyLiveTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2435,14 +1999,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RestartLivePullStreamTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RestartLivePullStreamTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RestartLivePullStreamTask", RestartLivePullStreamTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2456,14 +2016,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeDelayLiveStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeDelayLiveStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeDelayLiveStream", ResumeDelayLiveStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2477,14 +2033,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeLiveStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeLiveStream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeLiveStream", ResumeLiveStreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2498,14 +2050,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopLiveRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopLiveRecord", StopLiveRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2519,14 +2067,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopRecordTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopRecordTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopRecordTask", StopRecordTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2540,14 +2084,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindLiveDomainCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindLiveDomainCert");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindLiveDomainCert", UnBindLiveDomainCertResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2561,14 +2101,10 @@ Referer information is included in HTTP requests. After you enable referer confi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateLiveWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateLiveWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateLiveWatermark", UpdateLiveWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulScanInfoRequest extends AbstractModel{
+public class DescribeVulScanInfoRequest extends AbstractModel {
 
     /**
     * ID of the task to scan local images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tts.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceRequest extends AbstractModel{
+public class TextToVoiceRequest extends AbstractModel {
 
     /**
     * The source text for synthesizing speech, which is encoded in UTF-8.

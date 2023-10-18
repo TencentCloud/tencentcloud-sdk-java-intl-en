@@ -53,14 +53,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateLogExportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLogExport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateLogExport", CreateLogExportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -74,14 +70,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateOfflineLogConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateOfflineLogConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateOfflineLogConfig", CreateOfflineLogConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -95,14 +87,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -116,14 +104,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateReleaseFileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReleaseFile");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateReleaseFile", CreateReleaseFileResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -137,14 +121,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateStarProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateStarProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateStarProject", CreateStarProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -158,14 +138,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTawInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTawInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTawInstance", CreateTawInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -179,14 +155,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateWhitelistResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWhitelist");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateWhitelist", CreateWhitelistResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -200,14 +172,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -225,14 +193,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLogExportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLogExport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteLogExport", DeleteLogExportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -246,14 +210,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOfflineLogConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOfflineLogConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteOfflineLogConfig", DeleteOfflineLogConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -267,14 +227,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOfflineLogRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOfflineLogRecord");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteOfflineLogRecord", DeleteOfflineLogRecordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -288,14 +244,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -309,14 +261,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteReleaseFileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteReleaseFile");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteReleaseFile", DeleteReleaseFileResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -330,14 +278,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteStarProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteStarProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteStarProject", DeleteStarProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -351,14 +295,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteWhitelistResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteWhitelist");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteWhitelist", DeleteWhitelistResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -372,14 +312,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeData", DescribeDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -393,14 +329,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataCustomUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataCustomUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataCustomUrl", DescribeDataCustomUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -414,14 +346,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataEventUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataEventUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataEventUrl", DescribeDataEventUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -435,14 +363,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataFetchProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataFetchProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataFetchProject", DescribeDataFetchProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -456,14 +380,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataFetchUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataFetchUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataFetchUrl", DescribeDataFetchUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -477,14 +397,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataFetchUrlInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataFetchUrlInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataFetchUrlInfo", DescribeDataFetchUrlInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -498,14 +414,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataLogUrlInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataLogUrlInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataLogUrlInfo", DescribeDataLogUrlInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -519,14 +431,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataLogUrlStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataLogUrlStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataLogUrlStatistics", DescribeDataLogUrlStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -540,14 +448,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataPerformancePageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataPerformancePage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataPerformancePage", DescribeDataPerformancePageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -561,14 +465,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataPerformanceProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataPerformanceProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataPerformanceProject", DescribeDataPerformanceProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -582,14 +482,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataPvUrlInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataPvUrlInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataPvUrlInfo", DescribeDataPvUrlInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -603,14 +499,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataPvUrlStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataPvUrlStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataPvUrlStatistics", DescribeDataPvUrlStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -624,14 +516,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataReportCountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataReportCount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataReportCount", DescribeDataReportCountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -645,14 +533,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataSetUrlStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataSetUrlStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataSetUrlStatistics", DescribeDataSetUrlStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -666,14 +550,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataStaticProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataStaticProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataStaticProject", DescribeDataStaticProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -687,14 +567,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataStaticResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataStaticResource");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataStaticResource", DescribeDataStaticResourceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -708,14 +584,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataStaticUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataStaticUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataStaticUrl", DescribeDataStaticUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -730,14 +602,10 @@ It includes the Web Vitals metric for the page loading performance.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataWebVitalsPageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataWebVitalsPage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDataWebVitalsPage", DescribeDataWebVitalsPageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -751,14 +619,10 @@ It includes the Web Vitals metric for the page loading performance.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeErrorResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeError");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeError", DescribeErrorResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -776,14 +640,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLogExportsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLogExports");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLogExports", DescribeLogExportsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -797,14 +657,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLogListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLogList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLogList", DescribeLogListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -818,14 +674,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOfflineLogConfigsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOfflineLogConfigs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeOfflineLogConfigs", DescribeOfflineLogConfigsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -839,14 +691,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOfflineLogRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOfflineLogRecords");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeOfflineLogRecords", DescribeOfflineLogRecordsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -860,14 +708,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOfflineLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOfflineLogs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeOfflineLogs", DescribeOfflineLogsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -881,14 +725,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProjectLimitsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProjectLimits");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProjectLimits", DescribeProjectLimitsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -902,14 +742,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProjects");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProjects", DescribeProjectsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -923,14 +759,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePvListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePvList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePvList", DescribePvListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -944,14 +776,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReleaseFileSignResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReleaseFileSign");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeReleaseFileSign", DescribeReleaseFileSignResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -965,14 +793,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReleaseFilesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReleaseFiles");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeReleaseFiles", DescribeReleaseFilesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -986,14 +810,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRumGroupLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRumGroupLog");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRumGroupLog", DescribeRumGroupLogResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1007,14 +827,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRumLogExport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRumLogExport", DescribeRumLogExportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1028,14 +844,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRumLogExports");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRumLogExports", DescribeRumLogExportsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1049,14 +861,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRumLogListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRumLogList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRumLogList", DescribeRumLogListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1070,14 +878,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRumStatsLogListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRumStatsLogList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRumStatsLogList", DescribeRumStatsLogListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1091,14 +895,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScoresResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScores");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeScores", DescribeScoresResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1112,14 +912,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTawAreasResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTawAreas");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTawAreas", DescribeTawAreasResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1133,14 +929,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUvListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUvList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUvList", DescribeUvListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1154,14 +946,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWhitelistsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWhitelists");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWhitelists", DescribeWhitelistsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1175,14 +963,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyInstance", ModifyInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1196,14 +980,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyProject", ModifyProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1217,14 +997,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyProjectLimitResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyProjectLimit");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyProjectLimit", ModifyProjectLimitResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1238,14 +1014,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeInstance", ResumeInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1259,14 +1031,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeProject", ResumeProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1280,14 +1048,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopInstance", StopInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1301,14 +1065,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopProject", StopProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrationJobRequest extends AbstractModel{
+public class ModifyMigrationJobRequest extends AbstractModel {
 
     /**
     * Task ID
@@ -37,7 +38,7 @@ public class ModifyMigrationJobRequest extends AbstractModel{
     private String RunMode;
 
     /**
-    * Migration task configuration options, which describe how the task performs migration.
+    * Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
     */
     @SerializedName("MigrateOption")
     @Expose
@@ -118,16 +119,16 @@ public class ModifyMigrationJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Migration task configuration options, which describe how the task performs migration. 
-     * @return MigrateOption Migration task configuration options, which describe how the task performs migration.
+     * Get Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running. 
+     * @return MigrateOption Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
      */
     public MigrateOption getMigrateOption() {
         return this.MigrateOption;
     }
 
     /**
-     * Set Migration task configuration options, which describe how the task performs migration.
-     * @param MigrateOption Migration task configuration options, which describe how the task performs migration.
+     * Set Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
+     * @param MigrateOption Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
      */
     public void setMigrateOption(MigrateOption MigrateOption) {
         this.MigrateOption = MigrateOption;

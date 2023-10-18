@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRecordTaskResponse extends AbstractModel{
+public class DescribeRecordTaskResponse extends AbstractModel {
 
     /**
     * Page token: When the request does not return all data, this field indicates the token of the next record. When this field is empty, it means there is no more data.

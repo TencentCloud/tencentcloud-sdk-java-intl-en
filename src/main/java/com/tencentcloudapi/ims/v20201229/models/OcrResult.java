@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OcrResult extends AbstractModel{
+public class OcrResult extends AbstractModel {
 
     /**
     * This field indicates the recognition scenario. Default value: OCR (image OCR).

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRulesSettingResponse extends AbstractModel{
+public class DescribeRulesSettingResponse extends AbstractModel {
 
     /**
     * List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.

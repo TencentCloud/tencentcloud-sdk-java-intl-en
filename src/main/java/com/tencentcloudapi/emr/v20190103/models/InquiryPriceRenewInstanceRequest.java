@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewInstanceRequest extends AbstractModel{
+public class InquiryPriceRenewInstanceRequest extends AbstractModel {
 
     /**
     * How long the instance will be renewed for, which needs to be used together with `TimeUnit`.

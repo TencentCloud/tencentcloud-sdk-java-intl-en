@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClassRequest extends AbstractModel{
+public class CreateClassRequest extends AbstractModel {
 
     /**
     * Parent category ID. For a first-level category, enter `-1`.

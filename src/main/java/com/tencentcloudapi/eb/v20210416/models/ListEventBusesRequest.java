@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEventBusesRequest extends AbstractModel{
+public class ListEventBusesRequest extends AbstractModel {
 
     /**
     * Indicates by which field to sort the returned results. Valid values: AddTime (creation time), ModTime (modification time)

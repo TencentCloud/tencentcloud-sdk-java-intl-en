@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizePhilippinesUMIDOCRRequest extends AbstractModel{
+public class RecognizePhilippinesUMIDOCRRequest extends AbstractModel {
 
     /**
     * The Base64-encoded value of the image.

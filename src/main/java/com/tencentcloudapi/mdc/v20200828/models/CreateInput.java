@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdc.v20200828.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInput extends AbstractModel{
+public class CreateInput extends AbstractModel {
 
     /**
     * Input name, which can contain 1 to 32 letters, digits, and underscores.

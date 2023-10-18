@@ -50,14 +50,10 @@ public class VodClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ApplyUploadResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyUpload");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ApplyUpload", ApplyUploadResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -71,14 +67,10 @@ public class VodClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachMediaSubtitlesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachMediaSubtitles");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachMediaSubtitles", AttachMediaSubtitlesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -92,14 +84,10 @@ public class VodClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CloneCDNDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CloneCDNDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CloneCDNDomain", CloneCDNDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -113,14 +101,10 @@ public class VodClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CommitUploadResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CommitUpload");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CommitUpload", CommitUploadResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -145,14 +129,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ComposeMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ComposeMedia");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ComposeMedia", ComposeMediaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -168,14 +148,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ConfirmEventsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ConfirmEvents");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ConfirmEvents", ConfirmEventsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -189,14 +165,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAIAnalysisTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAIAnalysisTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAIAnalysisTemplate", CreateAIAnalysisTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -210,14 +182,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAIRecognitionTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAIRecognitionTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAIRecognitionTemplate", CreateAIRecognitionTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -231,14 +199,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate", CreateAdaptiveDynamicStreamingTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -252,14 +216,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAnimatedGraphicsTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAnimatedGraphicsTemplate", CreateAnimatedGraphicsTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -273,14 +233,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateCDNDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCDNDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateCDNDomain", CreateCDNDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -297,14 +253,10 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateClass");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateClass", CreateClassResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -319,14 +271,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateContentReviewTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateContentReviewTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateContentReviewTemplate", CreateContentReviewTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -340,14 +288,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateImageProcessingTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateImageProcessingTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateImageProcessingTemplate", CreateImageProcessingTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -361,14 +305,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateImageSpriteTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateImageSpriteTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateImageSpriteTemplate", CreateImageSpriteTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -382,14 +322,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePersonSampleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePersonSample");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -403,14 +339,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateProcedureTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateProcedureTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateProcedureTemplate", CreateProcedureTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -424,14 +356,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRebuildMediaTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRebuildMediaTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRebuildMediaTemplate", CreateRebuildMediaTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -446,14 +374,10 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateReviewTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReviewTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateReviewTemplate", CreateReviewTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -469,14 +393,10 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRoundPlayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRoundPlay");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRoundPlay", CreateRoundPlayResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -490,14 +410,10 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSampleSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSampleSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSampleSnapshotTemplate", CreateSampleSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -511,14 +427,10 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate", CreateSnapshotByTimeOffsetTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -534,14 +446,10 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateStorageRegionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateStorageRegion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateStorageRegion", CreateStorageRegionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -555,14 +463,10 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSubAppIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSubAppId");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSubAppId", CreateSubAppIdResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -577,14 +481,10 @@ This API is used to create a player configuration. Up to 100 configurations can 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSuperPlayerConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSuperPlayerConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSuperPlayerConfig", CreateSuperPlayerConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -598,14 +498,10 @@ This API is used to create a player configuration. Up to 100 configurations can 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTranscodeTemplate", CreateTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -620,14 +516,10 @@ This API is used to create a player configuration. Up to 100 configurations can 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateVodDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateVodDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateVodDomain", CreateVodDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -641,14 +533,10 @@ This API is used to create a player configuration. Up to 100 configurations can 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateWatermarkTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWatermarkTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateWatermarkTemplate", CreateWatermarkTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -662,14 +550,10 @@ This API is used to create a player configuration. Up to 100 configurations can 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateWordSamplesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWordSamples");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateWordSamples", CreateWordSamplesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -685,14 +569,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAIAnalysisTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAIAnalysisTemplate", DeleteAIAnalysisTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -706,14 +586,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAIRecognitionTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAIRecognitionTemplate", DeleteAIRecognitionTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -727,14 +603,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate", DeleteAdaptiveDynamicStreamingTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -748,14 +620,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAnimatedGraphicsTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAnimatedGraphicsTemplate", DeleteAnimatedGraphicsTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -769,14 +637,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCDNDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCDNDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteCDNDomain", DeleteCDNDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -791,14 +655,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteClass");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteClass", DeleteClassResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -813,14 +673,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteContentReviewTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteContentReviewTemplate", DeleteContentReviewTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -834,14 +690,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteImageProcessingTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteImageProcessingTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteImageProcessingTemplate", DeleteImageProcessingTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -855,14 +707,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteImageSpriteTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteImageSpriteTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -878,14 +726,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteMedia");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteMedia", DeleteMediaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -899,14 +743,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePersonSampleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePersonSample");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -920,14 +760,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteProcedureTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteProcedureTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteProcedureTemplate", DeleteProcedureTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -941,14 +777,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRebuildMediaTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRebuildMediaTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRebuildMediaTemplate", DeleteRebuildMediaTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -963,14 +795,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteReviewTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteReviewTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteReviewTemplate", DeleteReviewTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -984,14 +812,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRoundPlayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRoundPlay");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRoundPlay", DeleteRoundPlayResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1005,14 +829,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSampleSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSampleSnapshotTemplate", DeleteSampleSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1026,14 +846,10 @@ This API is used to delete a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate", DeleteSnapshotByTimeOffsetTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1049,14 +865,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSuperPlayerConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSuperPlayerConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSuperPlayerConfig", DeleteSuperPlayerConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1070,14 +882,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTranscodeTemplate", DeleteTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1092,14 +900,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteVodDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteVodDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteVodDomain", DeleteVodDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1113,14 +917,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteWatermarkTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteWatermarkTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteWatermarkTemplate", DeleteWatermarkTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1134,14 +934,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteWordSamplesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteWordSamples");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteWordSamples", DeleteWordSamplesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1155,14 +951,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAIAnalysisTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAIAnalysisTemplates", DescribeAIAnalysisTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1176,14 +968,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAIRecognitionTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAIRecognitionTemplates", DescribeAIRecognitionTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1197,14 +985,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1218,14 +1002,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllClass");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAllClass", DescribeAllClassResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1239,14 +1019,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAnimatedGraphicsTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1260,14 +1036,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCDNDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCDNDomains");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCDNDomains", DescribeCDNDomainsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1284,14 +1056,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCDNStatDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCDNStatDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCDNStatDetails", DescribeCDNStatDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1309,14 +1077,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCDNUsageDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCDNUsageData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCDNUsageData", DescribeCDNUsageDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1333,14 +1097,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCdnLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCdnLogs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCdnLogs", DescribeCdnLogsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1358,14 +1118,10 @@ This API is used to delete a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClientUploadAccelerationUsageData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClientUploadAccelerationUsageData", DescribeClientUploadAccelerationUsageDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1380,14 +1136,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeContentReviewTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeContentReviewTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1408,14 +1160,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDailyPlayStatFileListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDailyPlayStatFileList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDailyPlayStatFileList", DescribeDailyPlayStatFileListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1429,14 +1177,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDrmKeyProviderInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDrmKeyProviderInfo", DescribeDrmKeyProviderInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1452,14 +1196,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeFileAttributes", DescribeFileAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1473,14 +1213,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImageProcessingTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImageProcessingTemplates", DescribeImageProcessingTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1498,14 +1234,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImageReviewUsageDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImageReviewUsageData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImageReviewUsageData", DescribeImageReviewUsageDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1519,14 +1251,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImageSpriteTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1544,14 +1272,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLicenseUsageDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLicenseUsageData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLicenseUsageData", DescribeLicenseUsageDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1576,14 +1300,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaInfosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaInfos");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMediaInfos", DescribeMediaInfosResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1600,14 +1320,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaPlayStatDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaPlayStatDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMediaPlayStatDetails", DescribeMediaPlayStatDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1623,14 +1339,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessUsageDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaProcessUsageData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMediaProcessUsageData", DescribeMediaProcessUsageDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1644,14 +1356,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePersonSamplesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePersonSamples");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1665,14 +1373,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProcedureTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProcedureTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProcedureTemplates", DescribeProcedureTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1686,14 +1390,10 @@ This API is used to get the information of custom and [preset](https://intl.clou
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRebuildMediaTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRebuildMediaTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRebuildMediaTemplates", DescribeRebuildMediaTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1712,14 +1412,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReviewDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeReviewDetails", DescribeReviewDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1734,14 +1430,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReviewTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReviewTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeReviewTemplates", DescribeReviewTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1755,14 +1447,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoundPlaysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoundPlays");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRoundPlays", DescribeRoundPlaysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1776,14 +1464,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSampleSnapshotTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSampleSnapshotTemplates", DescribeSampleSnapshotTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1797,14 +1481,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates", DescribeSnapshotByTimeOffsetTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1818,14 +1498,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStorageDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStorageData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStorageData", DescribeStorageDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1842,14 +1518,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStorageDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStorageDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStorageDetails", DescribeStorageDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1866,14 +1538,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStorageRegionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStorageRegions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStorageRegions", DescribeStorageRegionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1887,14 +1555,10 @@ This API returns the video content duration for intelligent recognition in secon
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubAppIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubAppIds");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSubAppIds", DescribeSubAppIdsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1909,14 +1573,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSuperPlayerConfigsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSuperPlayerConfigs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSuperPlayerConfigs", DescribeSuperPlayerConfigsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1930,14 +1590,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1953,14 +1609,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1974,14 +1626,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTranscodeTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTranscodeTemplates", DescribeTranscodeTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1995,14 +1643,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVodDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVodDomains");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeVodDomains", DescribeVodDomainsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2016,14 +1660,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWatermarkTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWatermarkTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWatermarkTemplates", DescribeWatermarkTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2037,14 +1677,10 @@ This API is used to query player configurations. It supports pagination.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWordSamplesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWordSamples");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2068,14 +1704,10 @@ You can also specify whether to perform a task flow for the generated new video.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EditMedia");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EditMedia", EditMediaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2089,14 +1721,10 @@ You can also specify whether to perform a task flow for the generated new video.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ExecuteFunction");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ExecuteFunction", ExecuteFunctionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2110,14 +1738,10 @@ You can also specify whether to perform a task flow for the generated new video.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ExtractTraceWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ExtractTraceWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ExtractTraceWatermark", ExtractTraceWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2132,14 +1756,10 @@ You can also specify whether to perform a task flow for the generated new video.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ForbidMediaDistributionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ForbidMediaDistribution");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ForbidMediaDistribution", ForbidMediaDistributionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2176,14 +1796,10 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<LiveRealTimeClipResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LiveRealTimeClip");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "LiveRealTimeClip", LiveRealTimeClipResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2197,14 +1813,10 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ManageTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManageTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ManageTask", ManageTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2220,14 +1832,10 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAIAnalysisTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAIAnalysisTemplate", ModifyAIAnalysisTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2241,14 +1849,10 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAIRecognitionTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAIRecognitionTemplate", ModifyAIRecognitionTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2262,14 +1866,10 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2283,14 +1883,10 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAnimatedGraphicsTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2304,14 +1900,10 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCDNDomainConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCDNDomainConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyCDNDomainConfig", ModifyCDNDomainConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2325,14 +1917,10 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyClass");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyClass", ModifyClassResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2347,14 +1935,10 @@ This API is used to modify a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyContentReviewTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyContentReviewTemplate", ModifyContentReviewTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2368,14 +1952,10 @@ This API is used to modify a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDefaultStorageRegionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDefaultStorageRegion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDefaultStorageRegion", ModifyDefaultStorageRegionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2389,14 +1969,10 @@ This API is used to modify a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyImageSpriteTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyImageSpriteTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2410,14 +1986,10 @@ This API is used to modify a custom audio/video moderation template.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyMediaInfo", ModifyMediaInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2443,14 +2015,10 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaStorageClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaStorageClass");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyMediaStorageClass", ModifyMediaStorageClassResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2464,14 +2032,10 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPersonSample");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2485,14 +2049,10 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRebuildMediaTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRebuildMediaTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyRebuildMediaTemplate", ModifyRebuildMediaTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2507,14 +2067,10 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyReviewTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyReviewTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyReviewTemplate", ModifyReviewTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2529,14 +2085,10 @@ The modification will only take effect for new playback requests. For ongoing pl
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRoundPlayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRoundPlay");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyRoundPlay", ModifyRoundPlayResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2550,14 +2102,10 @@ The modification will only take effect for new playback requests. For ongoing pl
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySampleSnapshotTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySampleSnapshotTemplate", ModifySampleSnapshotTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2571,14 +2119,10 @@ The modification will only take effect for new playback requests. For ongoing pl
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate", ModifySnapshotByTimeOffsetTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2592,14 +2136,10 @@ The modification will only take effect for new playback requests. For ongoing pl
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubAppIdInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubAppIdInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubAppIdInfo", ModifySubAppIdInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2613,14 +2153,10 @@ The modification will only take effect for new playback requests. For ongoing pl
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubAppIdStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubAppIdStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubAppIdStatus", ModifySubAppIdStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2635,14 +2171,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySuperPlayerConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySuperPlayerConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySuperPlayerConfig", ModifySuperPlayerConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2656,14 +2188,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTranscodeTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTranscodeTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTranscodeTemplate", ModifyTranscodeTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2678,14 +2206,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVodDomainAccelerateConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVodDomainAccelerateConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyVodDomainAccelerateConfig", ModifyVodDomainAccelerateConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2700,14 +2224,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVodDomainConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVodDomainConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyVodDomainConfig", ModifyVodDomainConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2721,14 +2241,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyWatermarkTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyWatermarkTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyWatermarkTemplate", ModifyWatermarkTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2742,14 +2258,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyWordSampleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyWordSample");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyWordSample", ModifyWordSampleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2763,14 +2275,10 @@ This API is used to modify a player configuration.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ParseStreamingManifestResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ParseStreamingManifest");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ParseStreamingManifest", ParseStreamingManifestResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2789,14 +2297,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ProcessMediaByProcedureResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ProcessMediaByProcedure");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ProcessMediaByProcedure", ProcessMediaByProcedureResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2810,14 +2314,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ProcessMediaByUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ProcessMediaByUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ProcessMediaByUrl", ProcessMediaByUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2836,14 +2336,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PullEventsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PullEvents");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PullEvents", PullEventsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2857,14 +2353,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PullUploadResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PullUpload");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PullUpload", PullUploadResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2881,14 +2373,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PushUrlCacheResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PushUrlCache");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PushUrlCache", PushUrlCacheResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2902,14 +2390,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RebuildMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RebuildMedia");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RebuildMedia", RebuildMediaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2923,14 +2407,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RebuildMediaByTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RebuildMediaByTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RebuildMediaByTemplate", RebuildMediaByTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2947,14 +2427,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RefreshUrlCacheResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RefreshUrlCache");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RefreshUrlCache", RefreshUrlCacheResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2968,14 +2444,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RemoveWatermarkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveWatermark");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RemoveWatermark", RemoveWatermarkResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2989,14 +2461,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetProcedureTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetProcedureTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetProcedureTemplate", ResetProcedureTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3010,14 +2478,10 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RestoreMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RestoreMedia");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RestoreMedia", RestoreMediaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3033,14 +2497,10 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ReviewAudioVideoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReviewAudioVideo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ReviewAudioVideo", ReviewAudioVideoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3054,14 +2514,10 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ReviewImageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReviewImage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ReviewImage", ReviewImageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3111,14 +2567,10 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SearchMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchMedia");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SearchMedia", SearchMediaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3132,14 +2584,10 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetDrmKeyProviderInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetDrmKeyProviderInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetDrmKeyProviderInfo", SetDrmKeyProviderInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3175,14 +2623,10 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SimpleHlsClipResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SimpleHlsClip");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SimpleHlsClip", SimpleHlsClipResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3196,14 +2640,10 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartCDNDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartCDNDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartCDNDomain", StartCDNDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

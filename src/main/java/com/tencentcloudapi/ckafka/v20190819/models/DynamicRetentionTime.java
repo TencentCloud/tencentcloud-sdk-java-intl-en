@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DynamicRetentionTime extends AbstractModel{
+public class DynamicRetentionTime extends AbstractModel {
 
     /**
     * Whether the dynamic message retention time configuration is enabled. 0: disabled; 1: enabled

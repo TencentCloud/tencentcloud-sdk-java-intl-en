@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRoomMemberResponse extends AbstractModel{
+public class DeleteRoomMemberResponse extends AbstractModel {
 
     /**
     * Result of the operation to delete a room or remove a member

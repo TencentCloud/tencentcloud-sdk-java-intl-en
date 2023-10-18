@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamLiveTranscodeDetailRequest extends AbstractModel{
+public class DescribeStreamLiveTranscodeDetailRequest extends AbstractModel {
 
     /**
     * The query start time (UTC+8) in the format of yyyy-MM-dd.

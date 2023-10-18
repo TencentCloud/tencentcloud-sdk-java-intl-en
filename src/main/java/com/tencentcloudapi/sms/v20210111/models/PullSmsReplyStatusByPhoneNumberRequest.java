@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20210111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
+public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel {
 
     /**
     * Pull start time in seconds in the format of UNIX timestamp.

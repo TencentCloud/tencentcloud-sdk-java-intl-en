@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAlarmLogRequest extends AbstractModel{
+public class GetAlarmLogRequest extends AbstractModel {
 
     /**
     * Start time of the log to be queried, which is a Unix timestamp in milliseconds

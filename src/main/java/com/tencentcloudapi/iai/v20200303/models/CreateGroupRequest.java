@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGroupRequest extends AbstractModel{
+public class CreateGroupRequest extends AbstractModel {
 
     /**
     * Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.

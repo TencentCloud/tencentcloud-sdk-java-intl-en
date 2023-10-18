@@ -16,11 +16,12 @@
 package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillDetailRequest extends AbstractModel{
+public class DescribeBillDetailRequest extends AbstractModel {
 
     /**
     * The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.

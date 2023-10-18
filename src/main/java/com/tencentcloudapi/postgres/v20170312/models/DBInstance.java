@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBInstance extends AbstractModel{
+public class DBInstance extends AbstractModel {
 
     /**
     * Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.

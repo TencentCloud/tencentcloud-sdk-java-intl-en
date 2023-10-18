@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dms.v20200819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendTemplatedEmailResponse extends AbstractModel{
+public class SendTemplatedEmailResponse extends AbstractModel {
 
     /**
     * The result of creating a template email task

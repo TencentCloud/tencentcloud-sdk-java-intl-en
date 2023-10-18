@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NodeDetailPriceResult extends AbstractModel{
+public class NodeDetailPriceResult extends AbstractModel {
 
     /**
     * The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`

@@ -49,14 +49,10 @@ public class StsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AssumeRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssumeRole");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AssumeRole", AssumeRoleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class StsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(true);
         try {
-                Type type = new TypeToken<JsonResponseModel<AssumeRoleWithSAMLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssumeRoleWithSAML");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AssumeRoleWithSAML", AssumeRoleWithSAMLResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class StsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(true);
         try {
-                Type type = new TypeToken<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssumeRoleWithWebIdentity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AssumeRoleWithWebIdentity", AssumeRoleWithWebIdentityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -113,14 +101,10 @@ The persistent keys of the root account and sub-account as well as the temporary
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetCallerIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCallerIdentity");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetCallerIdentity", GetCallerIdentityResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ The persistent keys of the root account and sub-account as well as the temporary
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetFederationTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFederationToken");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetFederationToken", GetFederationTokenResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

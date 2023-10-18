@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageResultsResultDetail extends AbstractModel{
+public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * This field is used to return the task name in the `TaskInput` parameter passed in when the video moderation API is called for easier task identification and management.

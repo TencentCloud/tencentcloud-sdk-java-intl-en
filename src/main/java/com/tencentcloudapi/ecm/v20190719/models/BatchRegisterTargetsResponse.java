@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchRegisterTargetsResponse extends AbstractModel{
+public class BatchRegisterTargetsResponse extends AbstractModel {
 
     /**
     * IDs of the listeners failed to be bound. If this parameter is empty, all listeners have been bound successfully.

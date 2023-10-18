@@ -51,14 +51,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BankCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BankCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BankCardOCR", BankCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -78,14 +74,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GeneralAccurateOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GeneralAccurateOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GeneralAccurateOCR", GeneralAccurateOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -105,14 +97,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GeneralBasicOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GeneralBasicOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GeneralBasicOCR", GeneralBasicOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -128,14 +116,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<HKIDCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "HKIDCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "HKIDCardOCR", HKIDCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -151,14 +135,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<HmtResidentPermitOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "HmtResidentPermitOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "HmtResidentPermitOCR", HmtResidentPermitOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -219,14 +199,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<IDCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "IDCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "IDCardOCR", IDCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -242,14 +218,10 @@ A maximum of 10 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<LicensePlateOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LicensePlateOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "LicensePlateOCR", LicensePlateOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -265,14 +237,10 @@ This API is not fully available for the time being. For more information, contac
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<MLIDCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MLIDCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "MLIDCardOCR", MLIDCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -288,14 +256,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<MLIDPassportOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MLIDPassportOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "MLIDPassportOCR", MLIDPassportOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -311,14 +275,10 @@ A maximum of 20 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<MainlandPermitOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MainlandPermitOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "MainlandPermitOCR", MainlandPermitOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -334,14 +294,10 @@ A maximum of 10 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PermitOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PermitOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PermitOCR", PermitOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -481,14 +437,10 @@ The invoice/ticket subtype (SubType), subtype description (TypeDescription), and
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeGeneralInvoiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeGeneralInvoice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizeGeneralInvoice", RecognizeGeneralInvoiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -504,14 +456,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeIndonesiaIDCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizeIndonesiaIDCardOCR", RecognizeIndonesiaIDCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -525,14 +473,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR", RecognizeKoreanDrivingLicenseOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -546,14 +490,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeKoreanIDCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizeKoreanIDCardOCR", RecognizeKoreanIDCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -567,14 +507,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR", RecognizePhilippinesDrivingLicenseOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -588,14 +524,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizePhilippinesSssIDOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizePhilippinesSssIDOCR", RecognizePhilippinesSssIDOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -609,14 +541,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizePhilippinesTinIDOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizePhilippinesTinIDOCR", RecognizePhilippinesTinIDOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -630,14 +558,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizePhilippinesUMIDOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizePhilippinesUMIDOCR", RecognizePhilippinesUMIDOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -653,14 +577,10 @@ The API request rate is limited to 20 requests/sec by default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizePhilippinesVoteIDOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizePhilippinesVoteIDOCR", RecognizePhilippinesVoteIDOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -676,14 +596,10 @@ A maximum of 2 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeTableAccurateOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeTableAccurateOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizeTableAccurateOCR", RecognizeTableAccurateOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -700,14 +616,10 @@ A maximum of 10 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeThaiIDCardOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecognizeThaiIDCardOCR", RecognizeThaiIDCardOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -723,14 +635,10 @@ A maximum of 5 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SealOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SealOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SealOCR", SealOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -746,14 +654,10 @@ A maximum of 10 requests can be initiated per second for this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SmartStructuralOCRV2Response>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SmartStructuralOCRV2");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SmartStructuralOCRV2", SmartStructuralOCRV2Response.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -769,14 +673,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TableOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TableOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TableOCR", TableOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -790,14 +690,10 @@ This API is not fully available for the time being. For more information, please
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<VinOCRResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VinOCR");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "VinOCR", VinOCRResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClsLogSetRequest extends AbstractModel{
+public class CreateClsLogSetRequest extends AbstractModel {
 
     /**
     * Logset name, which must be unique among all CLS logsets; default value: clb_logset

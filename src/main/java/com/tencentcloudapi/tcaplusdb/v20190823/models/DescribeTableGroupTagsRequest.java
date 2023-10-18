@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTableGroupTagsRequest extends AbstractModel{
+public class DescribeTableGroupTagsRequest extends AbstractModel {
 
     /**
     * The ID of the cluster where table group tags need to be queried

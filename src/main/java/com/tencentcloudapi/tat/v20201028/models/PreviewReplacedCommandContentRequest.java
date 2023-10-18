@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewReplacedCommandContentRequest extends AbstractModel{
+public class PreviewReplacedCommandContentRequest extends AbstractModel {
 
     /**
     * Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.

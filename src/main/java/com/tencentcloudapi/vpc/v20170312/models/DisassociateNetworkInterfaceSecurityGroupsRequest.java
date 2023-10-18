@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisassociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel{
+public class DisassociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel {
 
     /**
     * ENI instance ID, e.g. eni-pxir56ns. You can enter up to 100 instances for each request.

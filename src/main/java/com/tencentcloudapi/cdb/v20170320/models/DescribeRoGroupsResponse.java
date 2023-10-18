@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRoGroupsResponse extends AbstractModel{
+public class DescribeRoGroupsResponse extends AbstractModel {
 
     /**
     * RO group information array. An instance can be associated with multiple RO groups.

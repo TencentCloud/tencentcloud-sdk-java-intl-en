@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMigrationServiceResponse extends AbstractModel{
+public class CreateMigrationServiceResponse extends AbstractModel {
 
     /**
     * The list of migration task IDs randomly generated in the format of `dts-c1f6rs21` after a successful order placement

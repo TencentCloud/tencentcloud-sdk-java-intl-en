@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ObjectResult extends AbstractModel{
+public class ObjectResult extends AbstractModel {
 
     /**
     * This field is used to return the recognized object scenario result, such as QR code, logo, and image OCR.

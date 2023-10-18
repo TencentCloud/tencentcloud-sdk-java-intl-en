@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NewAccount extends AbstractModel{
+public class NewAccount extends AbstractModel {
 
     /**
     * Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkInterface extends AbstractModel{
+public class NetworkInterface extends AbstractModel {
 
     /**
     * The ID of the ENI instance, such as `eni-f1xjkw1b`.

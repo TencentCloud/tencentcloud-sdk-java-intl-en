@@ -16,11 +16,12 @@
 package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteScalingPolicyRequest extends AbstractModel{
+public class ExecuteScalingPolicyRequest extends AbstractModel {
 
     /**
     * Auto-scaling policy ID. This parameter is not available to a target tracking policy.

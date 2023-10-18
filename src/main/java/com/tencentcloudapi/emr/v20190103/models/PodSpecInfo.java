@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PodSpecInfo extends AbstractModel{
+public class PodSpecInfo extends AbstractModel {
 
     /**
     * The specified information such as pod spec and source for scale-out with pod resources.

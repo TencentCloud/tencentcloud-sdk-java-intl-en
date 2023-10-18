@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaImageSpriteInfo extends AbstractModel{
+public class MediaImageSpriteInfo extends AbstractModel {
 
     /**
     * Information set of image sprites with specified specifications. Each element represents a set of image sprites with the same specification.

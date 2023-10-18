@@ -16,11 +16,12 @@
 package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIntlDomainPriceNewListRequest extends AbstractModel{
+public class DescribeIntlDomainPriceNewListRequest extends AbstractModel {
 
     /**
     * The list of domain suffixes for which you want to query prices. This parameter defaults to all suffixes.

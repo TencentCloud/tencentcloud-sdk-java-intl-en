@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JobItem extends AbstractModel{
+public class JobItem extends AbstractModel {
 
     /**
     * Data migration task ID
@@ -164,6 +165,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
     private Long AutoRetryTimeRangeMinutes;
+
+    /**
+    * Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DumperResumeCtrl")
+    @Expose
+    private String DumperResumeCtrl;
 
     /**
      * Get Data migration task ID
@@ -521,6 +530,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
+    /**
+     * Get Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public String getDumperResumeCtrl() {
+        return this.DumperResumeCtrl;
+    }
+
+    /**
+     * Set Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setDumperResumeCtrl(String DumperResumeCtrl) {
+        this.DumperResumeCtrl = DumperResumeCtrl;
+    }
+
     public JobItem() {
     }
 
@@ -586,6 +615,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
+        if (source.DumperResumeCtrl != null) {
+            this.DumperResumeCtrl = new String(source.DumperResumeCtrl);
+        }
     }
 
 
@@ -611,6 +643,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+        this.setParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
 
     }
 }

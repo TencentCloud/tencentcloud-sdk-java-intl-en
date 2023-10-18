@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListSecretsRequest extends AbstractModel{
+public class ListSecretsRequest extends AbstractModel {
 
     /**
     * Starting position of the list, starting at 0. If not specified, 0 is used by default.

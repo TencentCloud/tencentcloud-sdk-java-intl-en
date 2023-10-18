@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCommandRequest extends AbstractModel{
+public class CreateCommandRequest extends AbstractModel {
 
     /**
     * Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].

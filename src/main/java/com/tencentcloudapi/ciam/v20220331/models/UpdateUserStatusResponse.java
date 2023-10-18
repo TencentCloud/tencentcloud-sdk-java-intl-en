@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ciam.v20220331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateUserStatusResponse extends AbstractModel{
+public class UpdateUserStatusResponse extends AbstractModel {
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.

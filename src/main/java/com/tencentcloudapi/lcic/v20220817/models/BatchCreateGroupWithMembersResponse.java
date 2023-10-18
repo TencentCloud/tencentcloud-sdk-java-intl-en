@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchCreateGroupWithMembersResponse extends AbstractModel{
+public class BatchCreateGroupWithMembersResponse extends AbstractModel {
 
     /**
     * The IDs of the groups created, which are in the same order as the elements in the request parameter `GroupBaseInfos.N`.

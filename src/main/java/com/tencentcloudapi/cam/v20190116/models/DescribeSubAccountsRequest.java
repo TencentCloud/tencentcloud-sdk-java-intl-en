@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubAccountsRequest extends AbstractModel{
+public class DescribeSubAccountsRequest extends AbstractModel {
 
     /**
     * List of sub-user UINs. Up to 50 UINs are supported.

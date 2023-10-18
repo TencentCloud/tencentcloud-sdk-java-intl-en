@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveWaterMarkTaskInput extends AbstractModel{
+public class RemoveWaterMarkTaskInput extends AbstractModel {
 
     /**
     * The ID of the media file.

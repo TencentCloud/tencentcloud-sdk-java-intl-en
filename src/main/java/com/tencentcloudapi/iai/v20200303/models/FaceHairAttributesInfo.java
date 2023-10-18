@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceHairAttributesInfo extends AbstractModel{
+public class FaceHairAttributesInfo extends AbstractModel {
 
     /**
     * 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid

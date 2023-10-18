@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBaseBackupsRequest extends AbstractModel{
+public class DescribeBaseBackupsRequest extends AbstractModel {
 
     /**
     * Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.

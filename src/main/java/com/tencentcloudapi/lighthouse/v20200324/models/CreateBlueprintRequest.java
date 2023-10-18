@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBlueprintRequest extends AbstractModel{
+public class CreateBlueprintRequest extends AbstractModel {
 
     /**
     * Image name, which can contain up to 60 characters.

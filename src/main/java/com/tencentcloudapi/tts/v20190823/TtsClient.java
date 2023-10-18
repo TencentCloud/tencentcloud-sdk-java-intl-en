@@ -53,14 +53,10 @@ Default API request rate limit: 20 requests/sec.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextToVoice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TextToVoice", TextToVoiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

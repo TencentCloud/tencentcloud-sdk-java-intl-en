@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetInstancesPasswordRequest extends AbstractModel{
+public class ResetInstancesPasswordRequest extends AbstractModel {
 
     /**
     * List of IDs of the instances for which to set the password. You can request up to 100 instances in a region at a time.

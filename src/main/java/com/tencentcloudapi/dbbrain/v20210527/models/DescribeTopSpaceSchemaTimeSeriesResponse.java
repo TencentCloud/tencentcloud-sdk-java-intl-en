@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceSchemaTimeSeriesResponse extends AbstractModel{
+public class DescribeTopSpaceSchemaTimeSeriesResponse extends AbstractModel {
 
     /**
     * Time series list of the returned space statistics of top databases.

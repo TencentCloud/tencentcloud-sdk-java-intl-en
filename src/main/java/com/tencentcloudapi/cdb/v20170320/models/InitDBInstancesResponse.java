@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InitDBInstancesResponse extends AbstractModel{
+public class InitDBInstancesResponse extends AbstractModel {
 
     /**
     * Array of async task request IDs, which can be used to query the execution results of async tasks.

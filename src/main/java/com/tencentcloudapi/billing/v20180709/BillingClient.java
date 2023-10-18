@@ -49,14 +49,10 @@ public class BillingClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccountBalanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccountBalance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAccountBalance", DescribeAccountBalanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -71,14 +67,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillDetail", DescribeBillDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -92,14 +84,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillResourceSummaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillResourceSummary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillResourceSummary", DescribeBillResourceSummaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -113,14 +101,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillSummary");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillSummary", DescribeBillSummaryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillSummaryByPayMode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillSummaryByPayMode", DescribeBillSummaryByPayModeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -155,14 +135,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProductResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillSummaryByProduct");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillSummaryByProduct", DescribeBillSummaryByProductResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -176,14 +152,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillSummaryByProject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillSummaryByProject", DescribeBillSummaryByProjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -197,14 +169,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByRegionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillSummaryByRegion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillSummaryByRegion", DescribeBillSummaryByRegionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -218,14 +186,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByTagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillSummaryByTag");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBillSummaryByTag", DescribeBillSummaryByTagResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -239,14 +203,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDosageCosDetailByDate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDosageCosDetailByDate", DescribeDosageCosDetailByDateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -260,14 +220,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVoucherInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVoucherInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeVoucherInfo", DescribeVoucherInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -281,14 +237,10 @@ Notes: 1. The API request may fail due to network instability or other network e
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVoucherUsageDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVoucherUsageDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeVoucherUsageDetails", DescribeVoucherUsageDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

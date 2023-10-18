@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserDefineOcrTextReviewTemplateInfo extends AbstractModel{
+public class UserDefineOcrTextReviewTemplateInfo extends AbstractModel {
 
     /**
     * Switch of a custom text audit task. Valid values:

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrmStreamingsInfo extends AbstractModel{
+public class DrmStreamingsInfo extends AbstractModel {
 
     /**
     * ID of the adaptive bitrate streaming template whose protection type is SimpleAES.

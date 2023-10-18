@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
+public class AiReviewPoliticalAsrTaskOutput extends AbstractModel {
 
     /**
     * The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.

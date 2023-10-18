@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AcknowledgeMessageRequest extends AbstractModel{
+public class AcknowledgeMessageRequest extends AbstractModel {
 
     /**
     * Unique ID used to identify the message, which can be obtained from the returned value of `receiveMessage`.

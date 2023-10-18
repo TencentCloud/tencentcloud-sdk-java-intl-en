@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateGameServerSessionRequest extends AbstractModel{
+public class UpdateGameServerSessionRequest extends AbstractModel {
 
     /**
     * Game server session ID. It should contain 1 to 256 ASCII characters.

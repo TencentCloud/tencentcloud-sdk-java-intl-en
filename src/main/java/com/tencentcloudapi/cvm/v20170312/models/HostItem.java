@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HostItem extends AbstractModel{
+public class HostItem extends AbstractModel {
 
     /**
     * CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.

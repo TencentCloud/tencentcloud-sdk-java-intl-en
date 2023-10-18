@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelTaskRequest extends AbstractModel{
+public class CancelTaskRequest extends AbstractModel {
 
     /**
     * This field indicates the task ID (in the `Results` parameter) returned after an audio moderation task is created. It is used to identify the moderation task to be canceled.

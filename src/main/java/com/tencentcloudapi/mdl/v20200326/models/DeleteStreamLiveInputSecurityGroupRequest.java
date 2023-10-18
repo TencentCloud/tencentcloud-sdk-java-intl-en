@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStreamLiveInputSecurityGroupRequest extends AbstractModel{
+public class DeleteStreamLiveInputSecurityGroupRequest extends AbstractModel {
 
     /**
     * Input security group ID

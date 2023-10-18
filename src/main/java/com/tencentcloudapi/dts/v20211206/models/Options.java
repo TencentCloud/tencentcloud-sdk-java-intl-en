@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Options extends AbstractModel{
+public class Options extends AbstractModel {
 
     /**
     * Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
@@ -85,6 +86,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("KafkaOption")
     @Expose
     private KafkaOption KafkaOption;
+
+    /**
+    * Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RateLimitOption")
+    @Expose
+    private RateLimitOption RateLimitOption;
+
+    /**
+    * Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
 
     /**
      * Get Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
@@ -246,6 +263,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.KafkaOption = KafkaOption;
     }
 
+    /**
+     * Get Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public RateLimitOption getRateLimitOption() {
+        return this.RateLimitOption;
+    }
+
+    /**
+     * Set Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setRateLimitOption(RateLimitOption RateLimitOption) {
+        this.RateLimitOption = RateLimitOption;
+    }
+
+    /**
+     * Get Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return AutoRetryTimeRangeMinutes Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param AutoRetryTimeRangeMinutes Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public Options() {
     }
 
@@ -284,6 +341,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.KafkaOption != null) {
             this.KafkaOption = new KafkaOption(source.KafkaOption);
         }
+        if (source.RateLimitOption != null) {
+            this.RateLimitOption = new RateLimitOption(source.RateLimitOption);
+        }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -299,6 +362,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
         this.setParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
         this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
+        this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

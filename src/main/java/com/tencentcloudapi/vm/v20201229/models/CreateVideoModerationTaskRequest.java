@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVideoModerationTaskRequest extends AbstractModel{
+public class CreateVideoModerationTaskRequest extends AbstractModel {
 
     /**
     * This parameter is used to pass in the task type of a moderation task. Valid values: **VIDEO** (video on demand), **LIVE_VIDEO** (video live streaming).

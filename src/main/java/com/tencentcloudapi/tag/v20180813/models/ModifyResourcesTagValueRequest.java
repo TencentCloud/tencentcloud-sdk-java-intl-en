@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyResourcesTagValueRequest extends AbstractModel{
+public class ModifyResourcesTagValueRequest extends AbstractModel {
 
     /**
     * Resource service name (the third segment in the six-segment resource description)

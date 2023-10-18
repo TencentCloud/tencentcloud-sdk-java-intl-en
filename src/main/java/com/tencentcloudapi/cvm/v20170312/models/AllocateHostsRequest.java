@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateHostsRequest extends AbstractModel{
+public class AllocateHostsRequest extends AbstractModel {
 
     /**
     * Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.

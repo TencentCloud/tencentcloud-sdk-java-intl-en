@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListApplicationAuthorizationsRequest extends AbstractModel{
+public class ListApplicationAuthorizationsRequest extends AbstractModel {
 
     /**
     * Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.

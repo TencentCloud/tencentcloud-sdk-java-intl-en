@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStreamLiveInputSecurityGroupRequest extends AbstractModel{
+public class CreateStreamLiveInputSecurityGroupRequest extends AbstractModel {
 
     /**
     * Input security group name, which can contain case-sensitive letters, digits, and underscores and must be unique at the region level

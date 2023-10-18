@@ -16,11 +16,12 @@
 package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCustomersCreditRequest extends AbstractModel{
+public class QueryCustomersCreditRequest extends AbstractModel {
 
     /**
     * Search condition type. You can only search by customer ID, name, remarks, or email.

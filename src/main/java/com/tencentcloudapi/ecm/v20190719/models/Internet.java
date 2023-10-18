@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Internet extends AbstractModel{
+public class Internet extends AbstractModel {
 
     /**
     * Private network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.

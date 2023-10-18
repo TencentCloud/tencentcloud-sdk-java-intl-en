@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListClsLogTopicsRequest extends AbstractModel{
+public class ListClsLogTopicsRequest extends AbstractModel {
 
     /**
     * Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.

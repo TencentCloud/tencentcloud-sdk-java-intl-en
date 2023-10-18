@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIPProductInfoResponse extends AbstractModel{
+public class DescribeIPProductInfoResponse extends AbstractModel {
 
     /**
     * Tencent Cloud product information list. If nothing is found, an empty array will be returned. Valid values:

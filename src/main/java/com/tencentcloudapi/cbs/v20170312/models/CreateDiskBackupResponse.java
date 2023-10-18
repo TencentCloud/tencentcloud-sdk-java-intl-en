@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDiskBackupResponse extends AbstractModel{
+public class CreateDiskBackupResponse extends AbstractModel {
 
     /**
     * ID of the cloud disk backup point.

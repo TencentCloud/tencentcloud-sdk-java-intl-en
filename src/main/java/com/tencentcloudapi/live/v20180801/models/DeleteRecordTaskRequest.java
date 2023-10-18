@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRecordTaskRequest extends AbstractModel{
+public class DeleteRecordTaskRequest extends AbstractModel {
 
     /**
     * Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.

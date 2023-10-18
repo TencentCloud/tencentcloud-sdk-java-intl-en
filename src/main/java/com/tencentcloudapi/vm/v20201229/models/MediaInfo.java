@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaInfo extends AbstractModel{
+public class MediaInfo extends AbstractModel {
 
     /**
     * This field is used to return the segment length of the input video stream in seconds. It is **5 seconds by default** and is customizable.<br>Note: this field will take effect only when the moderated file is streaming media. If it returns 0, no valid value has been obtained.

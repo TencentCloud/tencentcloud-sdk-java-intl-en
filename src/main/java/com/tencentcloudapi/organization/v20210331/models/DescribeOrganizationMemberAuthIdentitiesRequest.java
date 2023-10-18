@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel{
+public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel {
 
     /**
     * Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.

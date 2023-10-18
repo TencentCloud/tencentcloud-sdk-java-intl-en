@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWhiteBoxServiceStatusResponse extends AbstractModel{
+public class DescribeWhiteBoxServiceStatusResponse extends AbstractModel {
 
     /**
     * Whether the user's white-box key service is available

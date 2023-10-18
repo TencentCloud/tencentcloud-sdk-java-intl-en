@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetResourcesRequest extends AbstractModel{
+public class GetResourcesRequest extends AbstractModel {
 
     /**
     * Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAllNamespacesRequest extends AbstractModel{
+public class DescribeAllNamespacesRequest extends AbstractModel {
 
     /**
     * Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).

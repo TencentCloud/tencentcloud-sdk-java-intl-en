@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoEncode extends AbstractModel{
+public class VideoEncode extends AbstractModel {
 
     /**
     * The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].

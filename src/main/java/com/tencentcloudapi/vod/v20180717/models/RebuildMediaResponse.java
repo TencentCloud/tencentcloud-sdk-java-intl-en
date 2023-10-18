@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RebuildMediaResponse extends AbstractModel{
+public class RebuildMediaResponse extends AbstractModel {
 
     /**
     * The ID of the audio/video remastering task. You need to provide this ID to query the task status.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatFwVpcDnsLstResponse extends AbstractModel{
+public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
 
     /**
     * VPC DNS info array of NAT firewall

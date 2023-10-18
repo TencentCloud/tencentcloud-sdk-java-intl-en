@@ -49,14 +49,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ArchiveKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ArchiveKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ArchiveKey", ArchiveKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AsymmetricRsaDecryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AsymmetricRsaDecrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AsymmetricRsaDecrypt", AsymmetricRsaDecryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AsymmetricSm2DecryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AsymmetricSm2Decrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AsymmetricSm2Decrypt", AsymmetricSm2DecryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindCloudResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindCloudResource");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindCloudResource", BindCloudResourceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CancelKeyArchiveResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CancelKeyArchive");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CancelKeyArchive", CancelKeyArchiveResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CancelKeyDeletionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CancelKeyDeletion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CancelKeyDeletion", CancelKeyDeletionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +151,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateKey", CreateKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +168,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateWhiteBoxKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWhiteBoxKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateWhiteBoxKey", CreateWhiteBoxKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -217,14 +185,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DecryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Decrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "Decrypt", DecryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -238,14 +202,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteImportedKeyMaterialResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteImportedKeyMaterial");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteImportedKeyMaterial", DeleteImportedKeyMaterialResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -259,14 +219,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteWhiteBoxKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteWhiteBoxKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteWhiteBoxKey", DeleteWhiteBoxKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -280,14 +236,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeKey", DescribeKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -301,14 +253,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeKeys", DescribeKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -322,14 +270,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWhiteBoxDecryptKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWhiteBoxDecryptKey", DescribeWhiteBoxDecryptKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -343,14 +287,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWhiteBoxDeviceFingerprints");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWhiteBoxDeviceFingerprints", DescribeWhiteBoxDeviceFingerprintsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -364,14 +304,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWhiteBoxKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWhiteBoxKey", DescribeWhiteBoxKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -385,14 +321,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWhiteBoxKeyDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWhiteBoxKeyDetails", DescribeWhiteBoxKeyDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -406,14 +338,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWhiteBoxServiceStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeWhiteBoxServiceStatus", DescribeWhiteBoxServiceStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -427,14 +355,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableKey", DisableKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -448,14 +372,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableKeyRotationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableKeyRotation");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableKeyRotation", DisableKeyRotationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -469,14 +389,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableKeys", DisableKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -490,14 +406,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableWhiteBoxKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableWhiteBoxKey", DisableWhiteBoxKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -511,14 +423,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableWhiteBoxKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableWhiteBoxKeys", DisableWhiteBoxKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -532,14 +440,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableKey", EnableKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -553,14 +457,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableKeyRotationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableKeyRotation");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableKeyRotation", EnableKeyRotationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -574,14 +474,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableKeys", EnableKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -595,14 +491,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableWhiteBoxKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableWhiteBoxKey", EnableWhiteBoxKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -616,14 +508,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableWhiteBoxKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableWhiteBoxKeys", EnableWhiteBoxKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -637,14 +525,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EncryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Encrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "Encrypt", EncryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -658,14 +542,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EncryptByWhiteBoxResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EncryptByWhiteBox");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EncryptByWhiteBox", EncryptByWhiteBoxResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -679,14 +559,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GenerateDataKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GenerateDataKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GenerateDataKey", GenerateDataKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -700,14 +576,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GenerateRandomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GenerateRandom");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GenerateRandom", GenerateRandomResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -721,14 +593,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetKeyRotationStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetKeyRotationStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetKeyRotationStatus", GetKeyRotationStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -742,14 +610,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetParametersForImportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetParametersForImport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetParametersForImport", GetParametersForImportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -763,14 +627,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPublicKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPublicKey", GetPublicKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -784,14 +644,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetRegionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRegions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetRegions", GetRegionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -805,14 +661,10 @@ public class KmsClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetServiceStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetServiceStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetServiceStatus", GetServiceStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -827,14 +679,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ImportKeyMaterialResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImportKeyMaterial");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ImportKeyMaterial", ImportKeyMaterialResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -848,14 +696,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAlgorithmsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListAlgorithms");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListAlgorithms", ListAlgorithmsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -869,14 +713,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListKeyDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListKeyDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListKeyDetail", ListKeyDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -890,14 +730,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ListKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListKeys");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ListKeys", ListKeysResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -911,14 +747,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OverwriteWhiteBoxDeviceFingerprints");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "OverwriteWhiteBoxDeviceFingerprints", OverwriteWhiteBoxDeviceFingerprintsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -932,14 +764,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoDecryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PostQuantumCryptoDecrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PostQuantumCryptoDecrypt", PostQuantumCryptoDecryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -953,14 +781,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoEncryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PostQuantumCryptoEncrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PostQuantumCryptoEncrypt", PostQuantumCryptoEncryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -974,14 +798,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoSignResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PostQuantumCryptoSign");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PostQuantumCryptoSign", PostQuantumCryptoSignResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -995,14 +815,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoVerifyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PostQuantumCryptoVerify");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PostQuantumCryptoVerify", PostQuantumCryptoVerifyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1016,14 +832,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ReEncryptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReEncrypt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ReEncrypt", ReEncryptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1037,14 +849,10 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ScheduleKeyDeletionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ScheduleKeyDeletion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ScheduleKeyDeletion", ScheduleKeyDeletionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1059,14 +867,10 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SignByAsymmetricKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SignByAsymmetricKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SignByAsymmetricKey", SignByAsymmetricKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1080,14 +884,10 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnbindCloudResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindCloudResource");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnbindCloudResource", UnbindCloudResourceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1101,14 +901,10 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAlias");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1122,14 +918,10 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateKeyDescriptionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateKeyDescription");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateKeyDescription", UpdateKeyDescriptionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1143,14 +935,10 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<VerifyByAsymmetricKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyByAsymmetricKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "VerifyByAsymmetricKey", VerifyByAsymmetricKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

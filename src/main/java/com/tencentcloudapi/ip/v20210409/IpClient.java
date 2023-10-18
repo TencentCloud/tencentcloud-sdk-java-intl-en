@@ -53,14 +53,10 @@ public class IpClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AllocateCustomerCreditResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AllocateCustomerCredit");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AllocateCustomerCredit", AllocateCustomerCreditResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -78,14 +74,10 @@ Notes:<br>
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -99,14 +91,10 @@ Notes:<br>
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetCountryCodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCountryCodes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetCountryCodes", GetCountryCodesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -120,14 +108,10 @@ Notes:<br>
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<QueryCreditAllocationHistoryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCreditAllocationHistory");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "QueryCreditAllocationHistory", QueryCreditAllocationHistoryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -141,14 +125,10 @@ Notes:<br>
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<QueryCustomersCreditResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCustomersCredit");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "QueryCustomersCredit", QueryCustomersCreditResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -162,14 +142,10 @@ Notes:<br>
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<QueryPartnerCreditResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryPartnerCredit");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "QueryPartnerCredit", QueryPartnerCreditResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

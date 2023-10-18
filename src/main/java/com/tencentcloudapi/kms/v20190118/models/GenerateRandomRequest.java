@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateRandomRequest extends AbstractModel{
+public class GenerateRandomRequest extends AbstractModel {
 
     /**
     * Length of the random number. Minimum value: 1. Maximum value: 1024

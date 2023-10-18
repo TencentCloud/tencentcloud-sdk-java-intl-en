@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskResultSummaryResponse extends AbstractModel{
+public class DescribeTaskResultSummaryResponse extends AbstractModel {
 
     /**
     * Number of nodes affected by critical risks in the last seven days

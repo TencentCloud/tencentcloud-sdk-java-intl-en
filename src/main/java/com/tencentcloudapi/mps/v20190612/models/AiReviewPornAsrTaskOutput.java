@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornAsrTaskOutput extends AbstractModel{
+public class AiReviewPornAsrTaskOutput extends AbstractModel {
 
     /**
     * Score of the ASR-detected porn information in text from 0 to 100.

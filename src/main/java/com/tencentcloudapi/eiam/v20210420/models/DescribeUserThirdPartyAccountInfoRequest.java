@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserThirdPartyAccountInfoRequest extends AbstractModel{
+public class DescribeUserThirdPartyAccountInfoRequest extends AbstractModel {
 
     /**
     * Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.

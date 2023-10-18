@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRoomEventResponse extends AbstractModel{
+public class GetRoomEventResponse extends AbstractModel {
 
     /**
     * The total number of events for the room. The value of this parameter is not affected by `keyword`.

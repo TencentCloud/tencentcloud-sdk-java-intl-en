@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScreenShotSheetNumListRequest extends AbstractModel{
+public class DescribeScreenShotSheetNumListRequest extends AbstractModel {
 
     /**
     * Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.

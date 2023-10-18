@@ -16,11 +16,12 @@
 package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomerUinData extends AbstractModel{
+public class DescribeCustomerUinData extends AbstractModel {
 
     /**
     * Customer UIN Note: This field may return null, indicating that no valid values can be obtained.

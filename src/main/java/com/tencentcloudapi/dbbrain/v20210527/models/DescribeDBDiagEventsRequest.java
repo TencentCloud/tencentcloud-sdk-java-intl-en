@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBDiagEventsRequest extends AbstractModel{
+public class DescribeDBDiagEventsRequest extends AbstractModel {
 
     /**
     * Start time in the format of “2021-05-27 00:00:00”. The earliest time that can be queried is 30 days before the current time.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetServiceLinkedRoleDeletionStatusResponse extends AbstractModel{
+public class GetServiceLinkedRoleDeletionStatusResponse extends AbstractModel {
 
     /**
     * Status: NOT_STARTED, IN_PROGRESS, SUCCEEDED, FAILED

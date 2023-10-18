@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
+public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel {
 
     /**
     * Information of error codes starting with 2, 3, 4, or 5 by district and ISP.

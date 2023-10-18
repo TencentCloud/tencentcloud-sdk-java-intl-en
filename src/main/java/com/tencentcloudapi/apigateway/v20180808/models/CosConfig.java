@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosConfig extends AbstractModel{
+public class CosConfig extends AbstractModel {
 
     /**
     * Specifies how the backend COS bucket is called by the API. The frontend request method and Action can be:

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimerScalingPolicy extends AbstractModel{
+public class TimerScalingPolicy extends AbstractModel {
 
     /**
     * Unique ID of the policy. When it’s filled in, the policy will be updated.

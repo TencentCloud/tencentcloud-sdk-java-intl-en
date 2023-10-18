@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamLiveChannelAlertsResponse extends AbstractModel{
+public class DescribeStreamLiveChannelAlertsResponse extends AbstractModel {
 
     /**
     * Alarm information of the channel’s two pipelines

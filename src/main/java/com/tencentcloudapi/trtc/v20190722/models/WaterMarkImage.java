@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WaterMarkImage extends AbstractModel{
+public class WaterMarkImage extends AbstractModel {
 
     /**
     * The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyByAsymmetricKeyResponse extends AbstractModel{
+public class VerifyByAsymmetricKeyResponse extends AbstractModel {
 
     /**
     * Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.

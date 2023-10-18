@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommitUploadRequest extends AbstractModel{
+public class CommitUploadRequest extends AbstractModel {
 
     /**
     * VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.

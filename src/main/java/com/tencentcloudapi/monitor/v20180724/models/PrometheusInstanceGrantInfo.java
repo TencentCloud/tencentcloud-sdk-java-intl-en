@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PrometheusInstanceGrantInfo extends AbstractModel{
+public class PrometheusInstanceGrantInfo extends AbstractModel {
 
     /**
     * Whether there is permission to operate on the billing information. Valid values: 1 (yes), 2 (no).

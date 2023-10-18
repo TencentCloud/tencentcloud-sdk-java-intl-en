@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReleaseFileSignRequest extends AbstractModel{
+public class DescribeReleaseFileSignRequest extends AbstractModel {
 
     /**
     * Timeout period. If it is not set, it will be 5 minutes by default

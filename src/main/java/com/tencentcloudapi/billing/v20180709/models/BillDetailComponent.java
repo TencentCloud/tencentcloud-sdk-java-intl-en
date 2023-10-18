@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillDetailComponent extends AbstractModel{
+public class BillDetailComponent extends AbstractModel {
 
     /**
     * Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BalanceRoGroupLoadRequest extends AbstractModel{
+public class BalanceRoGroupLoadRequest extends AbstractModel {
 
     /**
     * RO group ID in the format of `cdbrg-c1nl9rpv`.

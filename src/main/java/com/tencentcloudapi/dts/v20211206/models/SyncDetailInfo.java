@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncDetailInfo extends AbstractModel{
+public class SyncDetailInfo extends AbstractModel {
 
     /**
     * Total number of steps
@@ -47,8 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Progress;
 
     /**
-    * Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -93,6 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("CauseOfCompareDisable")
     @Expose
     private String CauseOfCompareDisable;
+
+    /**
+    * Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ErrInfo")
+    @Expose
+    private ErrInfo ErrInfo;
 
     /**
      * Get Total number of steps
@@ -155,20 +164,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CurrentStepProgress Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return CurrentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public Long getCurrentStepProgress() {
         return this.CurrentStepProgress;
     }
 
     /**
-     * Set Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CurrentStepProgress Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param CurrentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setCurrentStepProgress(Long CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;
@@ -274,6 +283,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CauseOfCompareDisable = CauseOfCompareDisable;
     }
 
+    /**
+     * Get Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * @return ErrInfo Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public ErrInfo getErrInfo() {
+        return this.ErrInfo;
+    }
+
+    /**
+     * Set Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param ErrInfo Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public void setErrInfo(ErrInfo ErrInfo) {
+        this.ErrInfo = ErrInfo;
+    }
+
     public SyncDetailInfo() {
     }
 
@@ -312,6 +341,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CauseOfCompareDisable != null) {
             this.CauseOfCompareDisable = new String(source.CauseOfCompareDisable);
         }
+        if (source.ErrInfo != null) {
+            this.ErrInfo = new ErrInfo(source.ErrInfo);
+        }
     }
 
 
@@ -328,6 +360,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
         this.setParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
+        this.setParamObj(map, prefix + "ErrInfo.", this.ErrInfo);
 
     }
 }

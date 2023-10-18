@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JgwOperateResponse extends AbstractModel{
+public class JgwOperateResponse extends AbstractModel {
 
     /**
     * Returned code. 0: normal, other values: error

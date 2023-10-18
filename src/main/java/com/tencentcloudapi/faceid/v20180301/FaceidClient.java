@@ -49,14 +49,10 @@ public class FaceidClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ApplyLivenessTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyLivenessToken");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ApplyLivenessToken", ApplyLivenessTokenResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class FaceidClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ApplySdkVerificationTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplySdkVerificationToken");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ApplySdkVerificationToken", ApplySdkVerificationTokenResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class FaceidClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyWebVerificationBizTokenIntl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ApplyWebVerificationBizTokenIntl", ApplyWebVerificationBizTokenIntlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class FaceidClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ApplyWebVerificationTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyWebVerificationToken");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ApplyWebVerificationToken", ApplyWebVerificationTokenResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ The data will be stored in a COS bucket in the region specified by the parameter
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUploadUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUploadUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUploadUrl", CreateUploadUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -156,14 +136,10 @@ The image and the data generated with the SDK must be stored in COS, and the reg
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectReflectLivenessAndCompare");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetectReflectLivenessAndCompare", DetectReflectLivenessAndCompareResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -178,14 +154,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GenerateReflectSequenceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GenerateReflectSequence");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GenerateReflectSequence", GenerateReflectSequenceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -199,14 +171,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetFaceIdResultIntlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFaceIdResultIntl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetFaceIdResultIntl", GetFaceIdResultIntlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -220,14 +188,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetFaceIdTokenIntlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFaceIdTokenIntl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetFaceIdTokenIntl", GetFaceIdTokenIntlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -241,14 +205,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetLivenessResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetLivenessResult");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetLivenessResult", GetLivenessResultResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -262,14 +222,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetSdkVerificationResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSdkVerificationResult");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetSdkVerificationResult", GetSdkVerificationResultResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -283,14 +239,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetWebVerificationResult");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetWebVerificationResult", GetWebVerificationResultResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -304,14 +256,10 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultIntlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetWebVerificationResultIntl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetWebVerificationResultIntl", GetWebVerificationResultIntlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -326,14 +274,10 @@ This API on the legacy version will continue to serve existing users but will be
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<LivenessCompareResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LivenessCompare");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "LivenessCompare", LivenessCompareResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -347,14 +291,10 @@ This API on the legacy version will continue to serve existing users but will be
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<VideoLivenessCompareResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VideoLivenessCompare");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "VideoLivenessCompare", VideoLivenessCompareResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

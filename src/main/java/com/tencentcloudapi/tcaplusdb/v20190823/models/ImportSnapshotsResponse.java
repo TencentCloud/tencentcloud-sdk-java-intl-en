@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportSnapshotsResponse extends AbstractModel{
+public class ImportSnapshotsResponse extends AbstractModel {
 
     /**
     * `TaskId` is in the format of `AppInstanceId-taskId`, used to identify tasks of different clusters.

@@ -49,14 +49,10 @@ public class DcClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AcceptDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AcceptDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AcceptDirectConnectTunnel", AcceptDirectConnectTunnelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class DcClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ApplyInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ApplyInternetAddress", ApplyInternetAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -94,14 +86,10 @@ If there is any connection in arrears under your account, you cannot apply for m
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDirectConnect");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateDirectConnect", CreateDirectConnectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -115,14 +103,10 @@ If there is any connection in arrears under your account, you cannot apply for m
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateDirectConnectTunnel", CreateDirectConnectTunnelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -137,14 +121,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDirectConnect");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteDirectConnect", DeleteDirectConnectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -158,14 +138,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteDirectConnectTunnel", DeleteDirectConnectTunnelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -180,14 +156,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccessPointsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccessPoints");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAccessPoints", DescribeAccessPointsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -201,14 +173,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDirectConnectTunnels");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDirectConnectTunnels", DescribeDirectConnectTunnelsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -222,14 +190,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDirectConnects");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDirectConnects", DescribeDirectConnectsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -243,14 +207,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInternetAddress", DescribeInternetAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -264,14 +224,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetAddressQuota");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInternetAddressQuota", DescribeInternetAddressQuotaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -285,14 +241,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetAddressStatistics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInternetAddressStatistics", DescribeInternetAddressStatisticsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -306,14 +258,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableInternetAddress", DisableInternetAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -327,14 +275,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableInternetAddress", EnableInternetAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -348,14 +292,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDirectConnectAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDirectConnectAttribute", ModifyDirectConnectAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -369,14 +309,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDirectConnectTunnelAttribute");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyDirectConnectTunnelAttribute", ModifyDirectConnectTunnelAttributeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -390,14 +326,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RejectDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RejectDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RejectDirectConnectTunnel", RejectDirectConnectTunnelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -411,14 +343,10 @@ Only connected connections can be deleted.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ReleaseInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReleaseInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ReleaseInternetAddress", ReleaseInternetAddressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

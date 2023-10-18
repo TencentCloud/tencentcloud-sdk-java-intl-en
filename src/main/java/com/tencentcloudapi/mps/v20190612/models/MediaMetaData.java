@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMetaData extends AbstractModel{
+public class MediaMetaData extends AbstractModel {
 
     /**
     * Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).

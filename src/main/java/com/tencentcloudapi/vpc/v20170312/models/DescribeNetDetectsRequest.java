@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetDetectsRequest extends AbstractModel{
+public class DescribeNetDetectsRequest extends AbstractModel {
 
     /**
     * The array of network probe IDs, such as [`netd-12345678`].

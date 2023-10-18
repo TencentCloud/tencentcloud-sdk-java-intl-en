@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceCertForLoadBalancersRequest extends AbstractModel{
+public class ReplaceCertForLoadBalancersRequest extends AbstractModel {
 
     /**
     * ID of the certificate to be replaced, which can be a server certificate or a client certificate.

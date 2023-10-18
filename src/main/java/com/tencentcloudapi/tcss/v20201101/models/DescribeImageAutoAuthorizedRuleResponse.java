@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel{
+public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
     * Whether the rule takes effect. Valid values: `0` (no); `1` (yes).

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioResultDetailLanguageResult extends AbstractModel{
+public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * This field is used to return the language information.

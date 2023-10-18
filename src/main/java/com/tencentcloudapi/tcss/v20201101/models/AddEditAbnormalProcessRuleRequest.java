@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddEditAbnormalProcessRuleRequest extends AbstractModel{
+public class AddEditAbnormalProcessRuleRequest extends AbstractModel {
 
     /**
     * Information of the added policy. The policy ID is empty here but cannot be empty when you edit a policy.

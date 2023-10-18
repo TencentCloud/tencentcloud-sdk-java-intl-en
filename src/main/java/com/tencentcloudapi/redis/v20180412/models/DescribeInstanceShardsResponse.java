@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceShardsResponse extends AbstractModel{
+public class DescribeInstanceShardsResponse extends AbstractModel {
 
     /**
     * List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.

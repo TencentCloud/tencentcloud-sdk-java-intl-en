@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MultiTopicSearchInformation extends AbstractModel{
+public class MultiTopicSearchInformation extends AbstractModel {
 
     /**
     * ID of the log topic to be searched for

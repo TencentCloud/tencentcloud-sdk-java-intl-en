@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageRequest extends AbstractModel{
+public class DescribeImageRequest extends AbstractModel {
 
     /**
     * Filter. Each request can contain up to 10 `Filters`. The detailed filters are as follows:

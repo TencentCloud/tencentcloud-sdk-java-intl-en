@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCompareTaskResponse extends AbstractModel{
+public class CreateCompareTaskResponse extends AbstractModel {
 
     /**
     * Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`.

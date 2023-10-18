@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBPriceRequest extends AbstractModel{
+public class DescribeDBPriceRequest extends AbstractModel {
 
     /**
     * Instance validity period in months. Value range: 1-36. This field is invalid when querying the prices of pay-as-you-go instances.

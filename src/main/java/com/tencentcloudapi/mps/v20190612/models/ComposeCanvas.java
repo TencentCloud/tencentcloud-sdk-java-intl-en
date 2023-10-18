@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeCanvas extends AbstractModel{
+public class ComposeCanvas extends AbstractModel {
 
     /**
     * The RGB value of the background color. The format is #RRGGBB, such as `#F0F0F0`. 

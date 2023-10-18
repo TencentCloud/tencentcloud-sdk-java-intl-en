@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenameRestoreDatabase extends AbstractModel{
+public class RenameRestoreDatabase extends AbstractModel {
 
     /**
     * Database name. If the `OldName` database does not exist, a failure will be returned.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommonMixInputParam extends AbstractModel{
+public class CommonMixInputParam extends AbstractModel {
 
     /**
     * Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.

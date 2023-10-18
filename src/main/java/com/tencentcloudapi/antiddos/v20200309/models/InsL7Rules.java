@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InsL7Rules extends AbstractModel{
+public class InsL7Rules extends AbstractModel {
 
     /**
     * Rules can only be modified when the status is `0`, `2`, or `8`.

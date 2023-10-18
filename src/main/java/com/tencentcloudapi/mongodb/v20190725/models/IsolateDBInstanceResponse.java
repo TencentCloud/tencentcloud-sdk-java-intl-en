@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IsolateDBInstanceResponse extends AbstractModel{
+public class IsolateDBInstanceResponse extends AbstractModel {
 
     /**
     * Async task request ID, which can be used to query the execution result of an async task.

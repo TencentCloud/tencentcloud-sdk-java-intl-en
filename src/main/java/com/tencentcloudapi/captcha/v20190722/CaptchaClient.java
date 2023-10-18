@@ -49,14 +49,10 @@ public class CaptchaClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCaptchaResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCaptchaResult");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCaptchaResult", DescribeCaptchaResultResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

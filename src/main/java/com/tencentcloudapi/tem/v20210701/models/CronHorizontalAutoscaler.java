@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CronHorizontalAutoscaler extends AbstractModel{
+public class CronHorizontalAutoscaler extends AbstractModel {
 
     /**
     * Name of a scheduled scaling policy

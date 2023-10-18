@@ -55,14 +55,10 @@ For instances added to the compute environment, their UserData will be reset, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachInstances", AttachInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -76,14 +72,10 @@ For instances added to the compute environment, their UserData will be reset, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateComputeEnvResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateComputeEnv");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateComputeEnv", CreateComputeEnvResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -97,14 +89,10 @@ For instances added to the compute environment, their UserData will be reset, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTaskTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTaskTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateTaskTemplate", CreateTaskTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -118,14 +106,10 @@ For instances added to the compute environment, their UserData will be reset, an
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteComputeEnvResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteComputeEnv");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteComputeEnv", DeleteComputeEnvResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -141,14 +125,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteJob", DeleteJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -162,14 +142,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTaskTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTaskTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTaskTemplates", DeleteTaskTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -183,14 +159,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAvailableCvmInstanceTypes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAvailableCvmInstanceTypes", DescribeAvailableCvmInstanceTypesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -204,14 +176,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComputeEnv");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeComputeEnv", DescribeComputeEnvResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -225,14 +193,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvActivitiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComputeEnvActivities");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeComputeEnvActivities", DescribeComputeEnvActivitiesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -246,14 +210,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComputeEnvCreateInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeComputeEnvCreateInfo", DescribeComputeEnvCreateInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -267,14 +227,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComputeEnvCreateInfos");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeComputeEnvCreateInfos", DescribeComputeEnvCreateInfosResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -288,14 +244,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComputeEnvs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeComputeEnvs", DescribeComputeEnvsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -309,14 +261,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCvmZoneInstanceConfigInfos");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCvmZoneInstanceConfigInfos", DescribeCvmZoneInstanceConfigInfosResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -330,14 +278,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceCategoriesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceCategories");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstanceCategories", DescribeInstanceCategoriesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -351,14 +295,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeJob", DescribeJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -372,14 +312,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeJobSubmitInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeJobSubmitInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeJobSubmitInfo", DescribeJobSubmitInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -393,14 +329,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeJobs", DescribeJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -414,14 +346,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTask", DescribeTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -435,14 +363,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskLogs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTaskLogs", DescribeTaskLogsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -456,14 +380,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskTemplates");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTaskTemplates", DescribeTaskTemplatesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -477,14 +397,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachInstances", DetachInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -498,14 +414,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyComputeEnvResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyComputeEnv");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyComputeEnv", ModifyComputeEnvResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -519,14 +431,10 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTaskTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTaskTemplate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyTaskTemplate", ModifyTaskTemplateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -541,14 +449,10 @@ Job retry is supported only if a job is in the "FAILED" state. After the retry o
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RetryJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RetryJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RetryJobs", RetryJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -563,14 +467,10 @@ Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABN
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateComputeNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateComputeNode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateComputeNode", TerminateComputeNodeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -584,14 +484,10 @@ Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABN
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateComputeNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateComputeNodes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateComputeNodes", TerminateComputeNodesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -607,14 +503,10 @@ Job termination is an asynchronous process, and the time it takes to complete th
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateJob", TerminateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -632,14 +524,10 @@ Job termination is an asynchronous process, and the time it takes to complete th
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateTaskInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminateTaskInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminateTaskInstance", TerminateTaskInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

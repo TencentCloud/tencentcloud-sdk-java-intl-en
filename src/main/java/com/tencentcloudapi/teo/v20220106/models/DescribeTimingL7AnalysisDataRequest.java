@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTimingL7AnalysisDataRequest extends AbstractModel{
+public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
     * Client time in RFC 3339 format

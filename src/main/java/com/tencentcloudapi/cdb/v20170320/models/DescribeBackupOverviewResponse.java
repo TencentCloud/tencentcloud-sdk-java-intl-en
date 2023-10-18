@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupOverviewResponse extends AbstractModel{
+public class DescribeBackupOverviewResponse extends AbstractModel {
 
     /**
     * Total number of backups of a user in the current region (including data backups and log backups).

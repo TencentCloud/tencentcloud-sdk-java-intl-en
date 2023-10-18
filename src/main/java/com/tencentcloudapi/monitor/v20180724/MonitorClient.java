@@ -49,14 +49,10 @@ public class MonitorClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindPrometheusManagedGrafanaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindPrometheusManagedGrafana");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindPrometheusManagedGrafana", BindPrometheusManagedGrafanaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class MonitorClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindingPolicyObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindingPolicyObject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindingPolicyObject", BindingPolicyObjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class MonitorClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CheckIsPrometheusNewUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckIsPrometheusNewUser");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CheckIsPrometheusNewUser", CheckIsPrometheusNewUserResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class MonitorClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CleanGrafanaInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CleanGrafanaInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CleanGrafanaInstance", CleanGrafanaInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class MonitorClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAlarmNoticeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAlarmNotice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAlarmNotice", CreateAlarmNoticeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class MonitorClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAlarmPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAlarmPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAlarmPolicy", CreateAlarmPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -177,14 +153,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAlertRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAlertRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAlertRule", CreateAlertRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -198,14 +170,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateExporterIntegrationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateExporterIntegration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateExporterIntegration", CreateExporterIntegrationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -219,14 +187,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGrafanaInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGrafanaInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGrafanaInstance", CreateGrafanaInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -240,14 +204,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGrafanaIntegrationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGrafanaIntegration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGrafanaIntegration", CreateGrafanaIntegrationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -261,14 +221,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGrafanaNotificationChannel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGrafanaNotificationChannel", CreateGrafanaNotificationChannelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -282,14 +238,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePolicyGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePolicyGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePolicyGroup", CreatePolicyGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -303,14 +255,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusAgentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusAgent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusAgent", CreatePrometheusAgentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -324,14 +272,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusAlertPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusAlertPolicy", CreatePrometheusAlertPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -345,14 +289,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusClusterAgentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusClusterAgent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusClusterAgent", CreatePrometheusClusterAgentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -366,14 +306,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusConfig", CreatePrometheusConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -387,14 +323,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusGlobalNotificationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusGlobalNotification");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusGlobalNotification", CreatePrometheusGlobalNotificationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -408,14 +340,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusMultiTenantInstancePostPayMode");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusMultiTenantInstancePostPayMode", CreatePrometheusMultiTenantInstancePostPayModeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -429,14 +357,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusRecordRuleYamlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusRecordRuleYaml");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusRecordRuleYaml", CreatePrometheusRecordRuleYamlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -450,14 +374,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusScrapeJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusScrapeJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusScrapeJob", CreatePrometheusScrapeJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -471,14 +391,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrometheusTempResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrometheusTemp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrometheusTemp", CreatePrometheusTempResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -492,14 +408,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRecordingRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRecordingRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateRecordingRule", CreateRecordingRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -513,14 +425,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSSOAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSSOAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSSOAccount", CreateSSOAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -536,14 +444,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateServiceDiscoveryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateServiceDiscovery");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateServiceDiscovery", CreateServiceDiscoveryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -557,14 +461,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAlarmNoticesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAlarmNotices");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAlarmNotices", DeleteAlarmNoticesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -578,14 +478,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAlarmPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAlarmPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAlarmPolicy", DeleteAlarmPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -599,14 +495,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAlertRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAlertRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAlertRules", DeleteAlertRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -620,14 +512,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteExporterIntegrationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteExporterIntegration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteExporterIntegration", DeleteExporterIntegrationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -641,14 +529,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGrafanaInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGrafanaInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGrafanaInstance", DeleteGrafanaInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -662,14 +546,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGrafanaIntegrationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGrafanaIntegration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGrafanaIntegration", DeleteGrafanaIntegrationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -683,14 +563,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGrafanaNotificationChannel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGrafanaNotificationChannel", DeleteGrafanaNotificationChannelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -704,14 +580,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePolicyGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePolicyGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePolicyGroup", DeletePolicyGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -725,14 +597,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusAlertPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusAlertPolicy", DeletePrometheusAlertPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -746,14 +614,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusClusterAgentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusClusterAgent");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusClusterAgent", DeletePrometheusClusterAgentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -767,14 +631,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusConfig", DeletePrometheusConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -788,14 +648,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusRecordRuleYamlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusRecordRuleYaml");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusRecordRuleYaml", DeletePrometheusRecordRuleYamlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -809,14 +665,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusScrapeJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusScrapeJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusScrapeJobs", DeletePrometheusScrapeJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -830,14 +682,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusTemp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusTemp", DeletePrometheusTempResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -851,14 +699,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempSyncResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrometheusTempSync");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrometheusTempSync", DeletePrometheusTempSyncResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -872,14 +716,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRecordingRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRecordingRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteRecordingRules", DeleteRecordingRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -893,14 +733,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSSOAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSSOAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteSSOAccount", DeleteSSOAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -914,14 +750,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccidentEventListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccidentEventList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAccidentEventList", DescribeAccidentEventListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -935,14 +767,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmEventsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmEvents");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmEvents", DescribeAlarmEventsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -958,14 +786,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmHistoriesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmHistories");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmHistories", DescribeAlarmHistoriesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -979,14 +803,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmMetricsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmMetrics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmMetrics", DescribeAlarmMetricsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1000,14 +820,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmNotice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmNotice", DescribeAlarmNoticeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1021,14 +837,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeCallbacksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmNoticeCallbacks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmNoticeCallbacks", DescribeAlarmNoticeCallbacksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1042,14 +854,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmNotices");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmNotices", DescribeAlarmNoticesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1063,14 +871,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmPolicies", DescribeAlarmPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1084,14 +888,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlarmPolicy", DescribeAlarmPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1105,14 +905,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlertRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlertRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAlertRules", DescribeAlertRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1126,14 +922,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllNamespacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllNamespaces");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAllNamespaces", DescribeAllNamespacesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1147,14 +939,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBaseMetricsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBaseMetrics");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBaseMetrics", DescribeBaseMetricsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1168,14 +956,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBasicAlarmListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBasicAlarmList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBasicAlarmList", DescribeBasicAlarmListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1189,14 +973,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBindingPolicyObjectList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeBindingPolicyObjectList", DescribeBindingPolicyObjectListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1210,14 +990,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClusterAgentCreatingProgress");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeClusterAgentCreatingProgress", DescribeClusterAgentCreatingProgressResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1231,14 +1007,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeConditionsTemplateListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeConditionsTemplateList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeConditionsTemplateList", DescribeConditionsTemplateListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1252,14 +1024,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDNSConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDNSConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDNSConfig", DescribeDNSConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1273,14 +1041,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeExporterIntegrationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeExporterIntegrations");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeExporterIntegrations", DescribeExporterIntegrationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1294,14 +1058,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaChannelsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaChannels");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaChannels", DescribeGrafanaChannelsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1315,14 +1075,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaConfig", DescribeGrafanaConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1336,14 +1092,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaEnvironments");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaEnvironments", DescribeGrafanaEnvironmentsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1357,14 +1109,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaInstances", DescribeGrafanaInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1378,14 +1126,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaIntegrations");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaIntegrations", DescribeGrafanaIntegrationsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1399,14 +1143,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaNotificationChannels");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaNotificationChannels", DescribeGrafanaNotificationChannelsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1420,14 +1160,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGrafanaWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGrafanaWhiteList", DescribeGrafanaWhiteListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1441,14 +1177,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstalledPluginsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstalledPlugins");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstalledPlugins", DescribeInstalledPluginsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1462,14 +1194,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMonitorTypesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMonitorTypes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMonitorTypes", DescribeMonitorTypesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1483,14 +1211,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePolicyConditionListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePolicyConditionList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePolicyConditionList", DescribePolicyConditionListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1504,14 +1228,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePolicyGroupInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePolicyGroupInfo", DescribePolicyGroupInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1525,14 +1245,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePolicyGroupList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePolicyGroupList", DescribePolicyGroupListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1546,14 +1262,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProductEventListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProductEventList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProductEventList", DescribeProductEventListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1567,14 +1279,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusAgentInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusAgentInstances", DescribePrometheusAgentInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1588,14 +1296,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusAgents");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusAgents", DescribePrometheusAgentsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1609,14 +1313,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusAlertPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusAlertPolicy", DescribePrometheusAlertPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1630,14 +1330,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusClusterAgentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusClusterAgents");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusClusterAgents", DescribePrometheusClusterAgentsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1651,14 +1347,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusConfig", DescribePrometheusConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1672,14 +1364,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusGlobalConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusGlobalConfig", DescribePrometheusGlobalConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1693,14 +1381,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalNotificationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusGlobalNotification");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusGlobalNotification", DescribePrometheusGlobalNotificationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1714,14 +1398,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusInstanceDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusInstanceDetail", DescribePrometheusInstanceDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1735,14 +1415,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceInitStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusInstanceInitStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusInstanceInitStatus", DescribePrometheusInstanceInitStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1756,14 +1432,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusInstanceUsage");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusInstanceUsage", DescribePrometheusInstanceUsageResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1781,14 +1453,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusInstances", DescribePrometheusInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1802,14 +1470,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesOverviewResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusInstancesOverview");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusInstancesOverview", DescribePrometheusInstancesOverviewResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1823,14 +1487,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRuleYamlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusRecordRuleYaml");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusRecordRuleYaml", DescribePrometheusRecordRuleYamlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1844,14 +1504,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusRecordRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusRecordRules", DescribePrometheusRecordRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1865,14 +1521,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusScrapeJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusScrapeJobs", DescribePrometheusScrapeJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1886,14 +1538,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTargetsTMPResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusTargetsTMP");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusTargetsTMP", DescribePrometheusTargetsTMPResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1907,14 +1555,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusTemp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusTemp", DescribePrometheusTempResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1928,14 +1572,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempSyncResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusTempSync");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusTempSync", DescribePrometheusTempSyncResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1949,14 +1589,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrometheusZonesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrometheusZones");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrometheusZones", DescribePrometheusZonesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1970,14 +1606,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRecordingRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRecordingRules");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeRecordingRules", DescribeRecordingRulesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1991,14 +1623,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSSOAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSSOAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSSOAccount", DescribeSSOAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2014,14 +1642,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceDiscoveryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceDiscovery");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceDiscovery", DescribeServiceDiscoveryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2035,14 +1659,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStatisticDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStatisticData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeStatisticData", DescribeStatisticDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2056,14 +1676,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DestroyPrometheusInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DestroyPrometheusInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DestroyPrometheusInstance", DestroyPrometheusInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2077,14 +1693,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableGrafanaInternetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableGrafanaInternet");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableGrafanaInternet", EnableGrafanaInternetResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2098,14 +1710,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableGrafanaSSOResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableGrafanaSSO");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableGrafanaSSO", EnableGrafanaSSOResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2119,14 +1727,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableSSOCamCheckResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableSSOCamCheck");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableSSOCamCheck", EnableSSOCamCheckResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2144,14 +1748,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetMonitorDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetMonitorData");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetMonitorData", GetMonitorDataResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2165,14 +1765,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPrometheusAgentManagementCommand");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPrometheusAgentManagementCommand", GetPrometheusAgentManagementCommandResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2186,14 +1782,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<InstallPluginsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InstallPlugins");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "InstallPlugins", InstallPluginsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2207,14 +1799,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmNoticeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmNotice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmNotice", ModifyAlarmNoticeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2228,14 +1816,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyConditionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmPolicyCondition");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmPolicyCondition", ModifyAlarmPolicyConditionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2249,14 +1833,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmPolicyInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmPolicyInfo", ModifyAlarmPolicyInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2270,14 +1850,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyNoticeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmPolicyNotice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmPolicyNotice", ModifyAlarmPolicyNoticeResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2291,14 +1867,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmPolicyStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmPolicyStatus", ModifyAlarmPolicyStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2312,14 +1884,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmPolicyTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmPolicyTasks", ModifyAlarmPolicyTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2333,14 +1901,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmReceiversResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmReceivers");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAlarmReceivers", ModifyAlarmReceiversResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2354,14 +1918,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyGrafanaInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyGrafanaInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyGrafanaInstance", ModifyGrafanaInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2375,14 +1935,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPolicyGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPolicyGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPolicyGroup", ModifyPolicyGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2396,14 +1952,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusAgentExternalLabels");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusAgentExternalLabels", ModifyPrometheusAgentExternalLabelsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2417,14 +1969,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusAlertPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusAlertPolicy", ModifyPrometheusAlertPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2438,14 +1986,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusConfig", ModifyPrometheusConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2459,14 +2003,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusGlobalNotificationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusGlobalNotification");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusGlobalNotification", ModifyPrometheusGlobalNotificationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2480,14 +2020,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusInstanceAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusInstanceAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusInstanceAttributes", ModifyPrometheusInstanceAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2501,14 +2037,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusRecordRuleYaml");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusRecordRuleYaml", ModifyPrometheusRecordRuleYamlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2522,14 +2054,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusTempResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPrometheusTemp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPrometheusTemp", ModifyPrometheusTempResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2543,14 +2071,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeGrafanaInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeGrafanaInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeGrafanaInstance", ResumeGrafanaInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2564,14 +2088,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RunPrometheusInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RunPrometheusInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RunPrometheusInstance", RunPrometheusInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2585,14 +2105,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SendCustomAlarmMsgResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendCustomAlarmMsg");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SendCustomAlarmMsg", SendCustomAlarmMsgResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2607,14 +2123,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetDefaultAlarmPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetDefaultAlarmPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetDefaultAlarmPolicy", SetDefaultAlarmPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2628,14 +2140,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SyncPrometheusTempResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SyncPrometheusTemp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SyncPrometheusTemp", SyncPrometheusTempResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2649,14 +2157,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminatePrometheusInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TerminatePrometheusInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "TerminatePrometheusInstances", TerminatePrometheusInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2670,14 +2174,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindingAllPolicyObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindingAllPolicyObject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindingAllPolicyObject", UnBindingAllPolicyObjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2691,14 +2191,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindingPolicyObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindingPolicyObject");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindingPolicyObject", UnBindingPolicyObjectResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2712,14 +2208,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnbindPrometheusManagedGrafanaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindPrometheusManagedGrafana");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnbindPrometheusManagedGrafana", UnbindPrometheusManagedGrafanaResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2733,14 +2225,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UninstallGrafanaDashboardResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UninstallGrafanaDashboard");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UninstallGrafanaDashboard", UninstallGrafanaDashboardResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2754,14 +2242,10 @@ Alarm policies in the same type under the project will be set as non-default.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UninstallGrafanaPluginsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UninstallGrafanaPlugins");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UninstallGrafanaPlugins", UninstallGrafanaPluginsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2777,14 +2261,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAlertRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAlertRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateAlertRule", UpdateAlertRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2798,14 +2278,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAlertRuleStateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAlertRuleState");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateAlertRuleState", UpdateAlertRuleStateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2819,14 +2295,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateDNSConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateDNSConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateDNSConfig", UpdateDNSConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2840,14 +2312,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateExporterIntegrationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateExporterIntegration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateExporterIntegration", UpdateExporterIntegrationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2861,14 +2329,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGrafanaConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGrafanaConfig", UpdateGrafanaConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2882,14 +2346,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGrafanaEnvironments");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGrafanaEnvironments", UpdateGrafanaEnvironmentsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2903,14 +2363,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaIntegrationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGrafanaIntegration");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGrafanaIntegration", UpdateGrafanaIntegrationResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2924,14 +2380,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGrafanaNotificationChannel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGrafanaNotificationChannel", UpdateGrafanaNotificationChannelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2945,14 +2397,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGrafanaWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGrafanaWhiteList", UpdateGrafanaWhiteListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2966,14 +2414,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdatePrometheusAgentStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdatePrometheusAgentStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdatePrometheusAgentStatus", UpdatePrometheusAgentStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -2987,14 +2431,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdatePrometheusScrapeJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdatePrometheusScrapeJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdatePrometheusScrapeJob", UpdatePrometheusScrapeJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3008,14 +2448,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateRecordingRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateRecordingRule");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateRecordingRule", UpdateRecordingRuleResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3029,14 +2465,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateSSOAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateSSOAccount");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateSSOAccount", UpdateSSOAccountResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3050,14 +2482,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeGrafanaDashboardResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeGrafanaDashboard");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpgradeGrafanaDashboard", UpgradeGrafanaDashboardResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -3071,14 +2499,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeGrafanaInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeGrafanaInstance");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpgradeGrafanaInstance", UpgradeGrafanaInstanceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RebuildMediaTaskOutput extends AbstractModel{
+public class RebuildMediaTaskOutput extends AbstractModel {
 
     /**
     * The file type, such as MP4 and FLV.

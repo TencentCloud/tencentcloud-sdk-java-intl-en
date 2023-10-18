@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSchedulingDomainListRequest extends AbstractModel{
+public class DescribeSchedulingDomainListRequest extends AbstractModel {
 
     /**
     * Number of items in a page. Returned results are not paged if you enter '0'.

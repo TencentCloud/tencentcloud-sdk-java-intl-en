@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRefreshTaskResponse extends AbstractModel{
+public class DescribeRefreshTaskResponse extends AbstractModel {
 
     /**
     * Refresh task status. Valid values: `Task_New`, `Task_Running`, `Task_Finish`, `Task_Error`, `Task_NoExist`.

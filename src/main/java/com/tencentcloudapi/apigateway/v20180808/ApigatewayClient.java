@@ -49,14 +49,10 @@ public class ApigatewayClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AttachPluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachPlugin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AttachPlugin", AttachPluginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class ApigatewayClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindApiApp", BindApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -93,14 +85,10 @@ Currently, a usage plan can be bound to an API; however, under the same service,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindEnvironmentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindEnvironment");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindEnvironment", BindEnvironmentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -114,14 +102,10 @@ Currently, a usage plan can be bound to an API; however, under the same service,
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindIPStrategy", BindIPStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -136,14 +120,10 @@ You can bind a key to a usage plan and bind the usage plan to an environment whe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindSecretIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindSecretIds");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindSecretIds", BindSecretIdsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -158,14 +138,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BindSubDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindSubDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BindSubDomain", BindSubDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -179,14 +155,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<BuildAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BuildAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "BuildAPIDoc", BuildAPIDocResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -200,14 +172,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateAPIDoc", CreateAPIDocResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -221,14 +189,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApi");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateApi", CreateApiResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -242,14 +206,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateApiApp", CreateApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -263,14 +223,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApiKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -284,14 +240,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateIPStrategy", CreateIPStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -305,14 +257,10 @@ Each service in API Gateway provides a default domain name for users to call. If
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePlugin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePlugin", CreatePluginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -327,14 +275,10 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateService", CreateServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -348,14 +292,10 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUpstreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUpstream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUpstream", CreateUpstreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -370,14 +310,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateUsagePlan", CreateUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -391,14 +327,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteAPIDoc", DeleteAPIDocResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -412,14 +344,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApi");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteApi", DeleteApiResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -433,14 +361,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteApiApp", DeleteApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -454,14 +378,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApiKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -475,14 +395,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteIPStrategy", DeleteIPStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -496,14 +412,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePlugin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -517,14 +429,10 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteService", DeleteServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -539,14 +447,10 @@ You can use this API if you use a custom domain name and custom mapping. Please 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteServiceSubDomainMapping");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteServiceSubDomainMapping", DeleteServiceSubDomainMappingResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -560,14 +464,10 @@ You can use this API if you use a custom domain name and custom mapping. Please 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUpstreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUpstream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUpstream", DeleteUpstreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -581,14 +481,10 @@ You can use this API if you use a custom domain name and custom mapping. Please 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteUsagePlan", DeleteUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -604,14 +500,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DemoteServiceUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DemoteServiceUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DemoteServiceUsagePlan", DemoteServiceUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -625,14 +517,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAPIDocDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAPIDocDetail", DescribeAPIDocDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -646,14 +534,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAPIDocs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAPIDocs", DescribeAPIDocsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -667,14 +551,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllPluginApisResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllPluginApis");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeAllPluginApis", DescribeAllPluginApisResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -688,14 +568,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApi");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApi", DescribeApiResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -709,14 +585,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiApp", DescribeApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -730,14 +602,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiAppBindApisStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiAppBindApisStatus", DescribeApiAppBindApisStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -751,14 +619,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiAppsStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiAppsStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiAppsStatus", DescribeApiAppsStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -772,14 +636,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiBindApiAppsStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiBindApiAppsStatus", DescribeApiBindApiAppsStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -793,14 +653,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiEnvironmentStrategy", DescribeApiEnvironmentStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -814,14 +670,10 @@ This operation will also be denied if the current environment has not been publi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiForApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiForApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiForApiApp", DescribeApiForApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -836,14 +688,10 @@ After creating an API key, you can query its details by using this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiKey", DescribeApiKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -858,14 +706,10 @@ After creating an API key, you can query its details by using this API.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiKeysStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiKeysStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiKeysStatus", DescribeApiKeysStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -880,14 +724,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApiUsagePlan", DescribeApiUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -901,14 +741,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApisStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApisStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeApisStatus", DescribeApisStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -922,14 +758,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeIPStrategy", DescribeIPStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -943,14 +775,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIPStrategyApisStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeIPStrategyApisStatus", DescribeIPStrategyApisStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -964,14 +792,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategysStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIPStrategysStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeIPStrategysStatus", DescribeIPStrategysStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -985,14 +809,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLogSearchResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLogSearch");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeLogSearch", DescribeLogSearchResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1006,14 +826,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlugin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePlugin", DescribePluginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1027,14 +843,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginApisResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePluginApis");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePluginApis", DescribePluginApisResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1048,14 +860,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginsByApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePluginsByApi");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePluginsByApi", DescribePluginsByApiResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1069,14 +877,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeService", DescribeServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1090,14 +894,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceEnvironmentList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceEnvironmentList", DescribeServiceEnvironmentListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1112,14 +912,10 @@ A service can only be used when it is published to an environment after creation
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceEnvironmentReleaseHistory");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceEnvironmentReleaseHistory", DescribeServiceEnvironmentReleaseHistoryResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1133,14 +929,10 @@ A service can only be used when it is published to an environment after creation
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceEnvironmentStrategy", DescribeServiceEnvironmentStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1154,14 +946,10 @@ A service can only be used when it is published to an environment after creation
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceForApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceForApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceForApiApp", DescribeServiceForApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1176,14 +964,10 @@ A service is generally published on several versions. This API can be used to qu
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceReleaseVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceReleaseVersion");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceReleaseVersion", DescribeServiceReleaseVersionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1198,14 +982,10 @@ In API Gateway, you can bind a custom domain name to a service and map its paths
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainMappingsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceSubDomainMappings");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceSubDomainMappings", DescribeServiceSubDomainMappingsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1220,14 +1000,10 @@ In API Gateway, you can bind custom domain names to a service for service call. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceSubDomains");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceSubDomains", DescribeServiceSubDomainsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1242,14 +1018,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServiceUsagePlan", DescribeServiceUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1263,14 +1035,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServicesStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServicesStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeServicesStatus", DescribeServicesStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1284,14 +1052,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamBindApisResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUpstreamBindApis");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUpstreamBindApis", DescribeUpstreamBindApisResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1305,14 +1069,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUpstreams");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUpstreams", DescribeUpstreamsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1326,14 +1086,10 @@ To make authentication and throttling for a service take effect, you need to bin
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUsagePlan", DescribeUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1348,14 +1104,10 @@ After binding a usage plan to environments, you can use this API to query all se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanEnvironmentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlanEnvironments");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUsagePlanEnvironments", DescribeUsagePlanEnvironmentsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1370,14 +1122,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanSecretIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlanSecretIds");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUsagePlanSecretIds", DescribeUsagePlanSecretIdsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1391,14 +1139,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlansStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlansStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeUsagePlansStatus", DescribeUsagePlansStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1412,14 +1156,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetachPluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachPlugin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetachPlugin", DetachPluginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1433,14 +1173,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DisableApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableApiKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DisableApiKey", DisableApiKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1454,14 +1190,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EnableApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableApiKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EnableApiKey", EnableApiKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1475,14 +1207,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ImportOpenApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImportOpenApi");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ImportOpenApi", ImportOpenApiResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1496,14 +1224,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyAPIDoc", ModifyAPIDocResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1517,14 +1241,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApi");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyApi", ModifyApiResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1538,14 +1258,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyApiApp", ModifyApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1559,14 +1275,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApiEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyApiEnvironmentStrategy", ModifyApiEnvironmentStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1580,14 +1292,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiIncrementResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApiIncrement");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyApiIncrement", ModifyApiIncrementResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1601,14 +1309,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyIPStrategy", ModifyIPStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1622,14 +1326,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPlugin");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1643,14 +1343,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyService", ModifyServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1664,14 +1360,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyServiceEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyServiceEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyServiceEnvironmentStrategy", ModifyServiceEnvironmentStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1685,14 +1377,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySubDomain", ModifySubDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1706,14 +1394,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUpstreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUpstream");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyUpstream", ModifyUpstreamResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1727,14 +1411,10 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyUsagePlan", ModifyUsagePlanResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1749,14 +1429,10 @@ An API Gateway service can only be called when it is published to an environment
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ReleaseServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReleaseService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ReleaseService", ReleaseServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1770,14 +1446,10 @@ An API Gateway service can only be called when it is published to an environment
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResetAPIDocPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetAPIDocPassword");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResetAPIDocPassword", ResetAPIDocPasswordResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1791,14 +1463,10 @@ An API Gateway service can only be called when it is published to an environment
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindEnvironmentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindEnvironment");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindEnvironment", UnBindEnvironmentResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1812,14 +1480,10 @@ An API Gateway service can only be called when it is published to an environment
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindIPStrategy", UnBindIPStrategyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1833,14 +1497,10 @@ An API Gateway service can only be called when it is published to an environment
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindSecretIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindSecretIds");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindSecretIds", UnBindSecretIdsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1855,14 +1515,10 @@ After binding a custom domain name to a service by using API Gateway, you can us
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnBindSubDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindSubDomain");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnBindSubDomain", UnBindSubDomainResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1877,14 +1533,10 @@ Only after a service is published to an environment can its APIs be called. You 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnReleaseServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnReleaseService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnReleaseService", UnReleaseServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1898,14 +1550,10 @@ Only after a service is published to an environment can its APIs be called. You 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UnbindApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindApiApp");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UnbindApiApp", UnbindApiAppResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1919,14 +1567,10 @@ Only after a service is published to an environment can its APIs be called. You 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateApiAppKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateApiAppKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateApiAppKey", UpdateApiAppKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1940,14 +1584,10 @@ Only after a service is published to an environment can its APIs be called. You 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateApiKey");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateApiKey", UpdateApiKeyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1961,14 +1601,10 @@ Only after a service is published to an environment can its APIs be called. You 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateService", UpdateServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

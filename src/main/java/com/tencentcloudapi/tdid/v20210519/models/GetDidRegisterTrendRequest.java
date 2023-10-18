@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdid.v20210519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDidRegisterTrendRequest extends AbstractModel{
+public class GetDidRegisterTrendRequest extends AbstractModel {
 
     /**
     * The start date (as early as 2021-4-23).

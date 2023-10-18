@@ -52,14 +52,10 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CompleteMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CompleteMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CompleteMigrateJob", CompleteMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -73,14 +69,10 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ConfigureSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ConfigureSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ConfigureSyncJob", ConfigureSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -94,14 +86,10 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ContinueMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ContinueMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ContinueMigrateJob", ContinueMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -115,14 +103,10 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ContinueSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ContinueSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ContinueSyncJob", ContinueSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -136,14 +120,10 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateCheckSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCheckSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateCheckSyncJob", CreateCheckSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -157,14 +137,10 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateCompareTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCompareTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateCompareTask", CreateCompareTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -181,14 +157,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMigrateCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMigrateCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateMigrateCheckJob", CreateMigrateCheckJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -202,14 +174,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMigrationServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMigrationService");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateMigrationService", CreateMigrationServiceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -223,14 +191,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateModifyCheckSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateModifyCheckSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateModifyCheckSyncJob", CreateModifyCheckSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -244,14 +208,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateSyncJob", CreateSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -265,14 +225,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCompareTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCompareTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteCompareTask", DeleteCompareTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -286,14 +242,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCheckSyncJobResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCheckSyncJobResult");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCheckSyncJobResult", DescribeCheckSyncJobResultResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -307,14 +259,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCompareReportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCompareReport");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCompareReport", DescribeCompareReportResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -328,14 +276,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCompareTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCompareTasks");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeCompareTasks", DescribeCompareTasksResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -349,14 +293,10 @@ After successful check, if the migration task needs to be modified, a new check 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMigrateDBInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMigrateDBInstances");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMigrateDBInstances", DescribeMigrateDBInstancesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -372,14 +312,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMigrationCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMigrationCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMigrationCheckJob", DescribeMigrationCheckJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -393,14 +329,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMigrationDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMigrationDetail");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMigrationDetail", DescribeMigrationDetailResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -414,14 +346,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMigrationJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMigrationJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeMigrationJobs", DescribeMigrationJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -435,14 +363,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeModifyCheckSyncJobResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeModifyCheckSyncJobResult");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeModifyCheckSyncJobResult", DescribeModifyCheckSyncJobResultResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -456,14 +380,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSyncJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSyncJobs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeSyncJobs", DescribeSyncJobsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -477,14 +397,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DestroyMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DestroyMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DestroyMigrateJob", DestroyMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -498,14 +414,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DestroySyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DestroySyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DestroySyncJob", DestroySyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -519,14 +431,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<IsolateMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "IsolateMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "IsolateMigrateJob", IsolateMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -540,14 +448,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<IsolateSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "IsolateSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "IsolateSyncJob", IsolateSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -561,14 +465,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCompareTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCompareTask");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyCompareTask", ModifyCompareTaskResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -582,14 +482,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCompareTaskNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCompareTaskName");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyCompareTaskName", ModifyCompareTaskNameResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -603,14 +499,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMigrateJobSpecResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMigrateJobSpec");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyMigrateJobSpec", ModifyMigrateJobSpecResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -624,14 +516,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMigrateNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMigrateName");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyMigrateName", ModifyMigrateNameResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -645,14 +533,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMigrationJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMigrationJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyMigrationJob", ModifyMigrationJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -666,14 +550,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifySyncJobConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySyncJobConfig");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifySyncJobConfig", ModifySyncJobConfigResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -687,14 +567,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PauseMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PauseMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PauseMigrateJob", PauseMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -708,14 +584,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PauseSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PauseSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PauseSyncJob", PauseSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -729,14 +601,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecoverMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecoverMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecoverMigrateJob", RecoverMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -750,14 +618,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<RecoverSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecoverSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "RecoverSyncJob", RecoverSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -771,14 +635,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResizeSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResizeSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResizeSyncJob", ResizeSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -792,14 +652,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeMigrateJob", ResumeMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -813,14 +669,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ResumeSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResumeSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ResumeSyncJob", ResumeSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -834,14 +686,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SkipCheckItemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SkipCheckItem");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SkipCheckItem", SkipCheckItemResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -855,14 +703,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SkipSyncCheckItemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SkipSyncCheckItem");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SkipSyncCheckItem", SkipSyncCheckItemResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -876,14 +720,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartCompareResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartCompare");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartCompare", StartCompareResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -897,14 +737,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartMigrateJob", StartMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -918,14 +754,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartModifySyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartModifySyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartModifySyncJob", StartModifySyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -939,14 +771,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartSyncJob", StartSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -960,14 +788,10 @@ If the check fails, the cause can be queried. Modify the migration configuration
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopCompareResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopCompare");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopCompare", StopCompareResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -982,14 +806,10 @@ After calling this API, you can call the `DescribeMigrationJobs` API to query th
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopMigrateJob", StopMigrateJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -1003,14 +823,10 @@ After calling this API, you can call the `DescribeMigrationJobs` API to query th
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopSyncJob", StopSyncJobResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

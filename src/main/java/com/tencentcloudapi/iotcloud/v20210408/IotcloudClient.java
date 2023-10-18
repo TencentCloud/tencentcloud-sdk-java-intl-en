@@ -49,14 +49,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDevice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateDevice", CreateDeviceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrivateCAResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrivateCA");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePrivateCA", CreatePrivateCAResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -91,14 +83,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateProductResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateProduct");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateProduct", CreateProductResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -112,14 +100,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDevice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteDevice", DeleteDeviceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -133,14 +117,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDeviceShadowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDeviceShadow");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteDeviceShadow", DeleteDeviceShadowResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -154,14 +134,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePrivateCAResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePrivateCA");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePrivateCA", DeletePrivateCAResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +151,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteProductResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteProduct");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteProduct", DeleteProductResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +168,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDevice");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDevice", DescribeDeviceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -217,14 +185,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDevices");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeDevices", DescribeDevicesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -238,14 +202,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrivateCAResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrivateCA");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrivateCA", DescribePrivateCAResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -259,14 +219,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrivateCABindedProductsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrivateCABindedProducts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrivateCABindedProducts", DescribePrivateCABindedProductsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -280,14 +236,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrivateCAsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrivateCAs");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePrivateCAs", DescribePrivateCAsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -301,14 +253,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProductResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProduct");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProduct", DescribeProductResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -322,14 +270,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProductCAResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProductCA");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProductCA", DescribeProductCAResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -343,14 +287,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProductsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProducts");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeProducts", DescribeProductsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -364,14 +304,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetProductsForbiddenStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetProductsForbiddenStatus");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetProductsForbiddenStatus", SetProductsForbiddenStatusResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -385,14 +321,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateDeviceLogLevelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateDeviceLogLevel");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateDeviceLogLevel", UpdateDeviceLogLevelResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -406,14 +338,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateDevicesEnableStateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateDevicesEnableState");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateDevicesEnableState", UpdateDevicesEnableStateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -427,14 +355,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdatePrivateCAResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdatePrivateCA");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdatePrivateCA", UpdatePrivateCAResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -448,14 +372,10 @@ public class IotcloudClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateProductDynamicRegisterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateProductDynamicRegister");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateProductDynamicRegister", UpdateProductDynamicRegisterResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

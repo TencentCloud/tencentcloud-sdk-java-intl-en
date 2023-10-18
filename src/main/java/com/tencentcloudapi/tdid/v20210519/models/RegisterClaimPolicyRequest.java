@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdid.v20210519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterClaimPolicyRequest extends AbstractModel{
+public class RegisterClaimPolicyRequest extends AbstractModel {
 
     /**
     * The claim protocol type (CPT) index.

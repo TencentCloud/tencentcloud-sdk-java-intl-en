@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAcRuleRequest extends AbstractModel{
+public class DeleteAcRuleRequest extends AbstractModel {
 
     /**
     * The ID of the rule to delete. It can be queried via the DescribeAcLists API.

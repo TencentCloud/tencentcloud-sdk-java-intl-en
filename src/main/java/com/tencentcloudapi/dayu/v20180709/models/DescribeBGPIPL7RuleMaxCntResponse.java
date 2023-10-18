@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBGPIPL7RuleMaxCntResponse extends AbstractModel{
+public class DescribeBGPIPL7RuleMaxCntResponse extends AbstractModel {
 
     /**
     * Maximum number of layer-7 rules that can be added for Anti-DDoS Advanced

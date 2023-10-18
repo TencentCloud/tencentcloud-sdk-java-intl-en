@@ -52,14 +52,10 @@ public class IaiClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<AnalyzeFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AnalyzeFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "AnalyzeFace", AnalyzeFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -78,14 +74,10 @@ If you need to judge "whether the person in the image is someone specified" in s
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CompareFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CompareFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CompareFace", CompareFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -101,14 +93,10 @@ If you need to judge "whether the person in the image is someone specified" in s
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CopyPersonResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CopyPerson");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CopyPerson", CopyPersonResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -125,14 +113,10 @@ If you need to judge "whether the person in the image is someone specified" in s
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateFace", CreateFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -151,14 +135,10 @@ The maximum number of faces that can be included in one group varies by algorith
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -175,14 +155,10 @@ The maximum number of faces that can be included in one group varies by algorith
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePersonResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePerson");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreatePerson", CreatePersonResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -196,14 +172,10 @@ The maximum number of faces that can be included in one group varies by algorith
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteFace", DeleteFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -218,14 +190,10 @@ The maximum number of faces that can be included in one group varies by algorith
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -239,14 +207,10 @@ The maximum number of faces that can be included in one group varies by algorith
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePersonResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePerson");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePerson", DeletePersonResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -260,14 +224,10 @@ The maximum number of faces that can be included in one group varies by algorith
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePersonFromGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePersonFromGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeletePersonFromGroup", DeletePersonFromGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -297,14 +257,10 @@ The face quality information is mainly used to evaluate the quality of the input
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetectFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetectFace", DetectFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -338,14 +294,10 @@ Use this API for corresponding face detection and attribute analysis.
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetectFaceAttributesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectFaceAttributes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetectFaceAttributes", DetectFaceAttributesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -370,14 +322,10 @@ Image-based liveness detection is suitable for scenarios where the image is a se
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetectLiveFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectLiveFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetectLiveFace", DetectLiveFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -395,14 +343,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DetectLiveFaceAccurateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetectLiveFaceAccurate");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DetectLiveFaceAccurate", DetectLiveFaceAccurateResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -416,14 +360,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetGroupInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetGroupInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetGroupInfo", GetGroupInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -437,14 +377,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetGroupListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetGroupList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetGroupList", GetGroupListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -458,14 +394,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPersonBaseInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPersonBaseInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPersonBaseInfo", GetPersonBaseInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -479,14 +411,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPersonGroupInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPersonGroupInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPersonGroupInfo", GetPersonGroupInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -500,14 +428,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPersonListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPersonList");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPersonList", GetPersonListResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -521,14 +445,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetPersonListNumResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPersonListNum");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetPersonListNum", GetPersonListNumResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -542,14 +462,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -563,14 +479,10 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPersonGroupInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPersonGroupInfo");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "ModifyPersonGroupInfo", ModifyPersonGroupInfoResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -599,14 +511,10 @@ This API should be used together with [Group Management APIs](https://intl.cloud
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SearchFacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchFaces");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SearchFaces", SearchFacesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -635,14 +543,10 @@ This API should be used together with [Group Management APIs](https://intl.cloud
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SearchFacesReturnsByGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchFacesReturnsByGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SearchFacesReturnsByGroup", SearchFacesReturnsByGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -666,14 +570,10 @@ This API fuses the features of all face images of a person; for example, if a pe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SearchPersonsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchPersons");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SearchPersons", SearchPersonsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -696,14 +596,10 @@ This API fuses the features of all face images of a person; for example, if a pe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SearchPersonsReturnsByGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchPersonsReturnsByGroup");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SearchPersonsReturnsByGroup", SearchPersonsReturnsByGroupResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -724,14 +620,10 @@ This API recognizes each face image of a person as an independent one. By contra
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<VerifyFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyFace");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "VerifyFace", VerifyFaceResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -753,14 +645,10 @@ This API fuses the features of all face images of a person; for example, if a pe
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<VerifyPersonResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyPerson");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "VerifyPerson", VerifyPersonResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

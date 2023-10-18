@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksRequest extends AbstractModel{
+public class DescribeTasksRequest extends AbstractModel {
 
     /**
     * This parameter indicates the number of tasks to be displayed on each page of the task list. **Default value: 10**.

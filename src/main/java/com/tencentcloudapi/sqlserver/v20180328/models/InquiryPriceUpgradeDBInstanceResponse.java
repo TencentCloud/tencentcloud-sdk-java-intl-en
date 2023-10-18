@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
+public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel {
 
     /**
     * Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD

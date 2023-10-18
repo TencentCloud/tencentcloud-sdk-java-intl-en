@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeApplicationRequest extends AbstractModel{
+public class DescribeApplicationRequest extends AbstractModel {
 
     /**
     * Application ID, which is globally unique. You must specify at least this parameter or `ClientId`.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceGTIDResponse extends AbstractModel{
+public class DescribeDBInstanceGTIDResponse extends AbstractModel {
 
     /**
     * GTID enablement flag. Value range: 0 (not enabled), 1 (enabled).

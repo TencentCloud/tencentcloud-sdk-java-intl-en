@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePrometheusZonesRequest extends AbstractModel{
+public class DescribePrometheusZonesRequest extends AbstractModel {
 
     /**
     * Region ID. You only need to specify the value of either `RegionId` or `RegionName`.

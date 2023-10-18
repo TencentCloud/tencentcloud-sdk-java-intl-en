@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccessKeyRequest extends AbstractModel{
+public class CreateAccessKeyRequest extends AbstractModel {
 
     /**
     * UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.

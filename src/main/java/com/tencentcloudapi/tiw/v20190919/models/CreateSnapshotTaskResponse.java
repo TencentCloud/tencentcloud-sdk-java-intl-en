@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSnapshotTaskResponse extends AbstractModel{
+public class CreateSnapshotTaskResponse extends AbstractModel {
 
     /**
     * ID of the whiteboard snapshot task. This parameter is returned only if a task is created successfully.

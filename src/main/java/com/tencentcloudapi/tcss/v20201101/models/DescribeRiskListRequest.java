@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskListRequest extends AbstractModel{
+public class DescribeRiskListRequest extends AbstractModel {
 
     /**
     * ID of the cluster to be queried. If it is not specified, all risk items will be queried.

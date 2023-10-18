@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckProxyCreateResponse extends AbstractModel{
+public class CheckProxyCreateResponse extends AbstractModel {
 
     /**
     * Queries whether a connection with the specified configuration can be created. 1: yes; 0: no.

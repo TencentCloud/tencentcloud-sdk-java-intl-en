@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRotationHistoryRequest extends AbstractModel{
+public class DescribeRotationHistoryRequest extends AbstractModel {
 
     /**
     * Specifies the name of the credential for which to get the credential rotation records.

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAllStreamPlayInfoListResponse extends AbstractModel{
+public class DescribeAllStreamPlayInfoListResponse extends AbstractModel {
 
     /**
     * The time point queried, whose format is the same as that of the corresponding request parameter.

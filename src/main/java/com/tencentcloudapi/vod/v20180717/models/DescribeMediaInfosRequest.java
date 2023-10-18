@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMediaInfosRequest extends AbstractModel{
+public class DescribeMediaInfosRequest extends AbstractModel {
 
     /**
     * List of media file IDs. N starts from 0 and can be up to 19.

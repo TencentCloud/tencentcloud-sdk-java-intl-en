@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20190711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallbackStatusStatisticsRequest extends AbstractModel{
+public class CallbackStatusStatisticsRequest extends AbstractModel {
 
     /**
     * Start time of pull in the format of `yyyymmddhh` accurate to the hour.

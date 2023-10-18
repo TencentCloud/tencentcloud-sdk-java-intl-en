@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskData extends AbstractModel{
+public class TaskData extends AbstractModel {
 
     /**
     * This field is used to return the ID of the video moderation task data for subsequent query and management of moderation tasks.

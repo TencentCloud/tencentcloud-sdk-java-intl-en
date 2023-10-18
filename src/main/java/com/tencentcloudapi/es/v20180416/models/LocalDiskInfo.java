@@ -16,11 +16,12 @@
 package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LocalDiskInfo extends AbstractModel{
+public class LocalDiskInfo extends AbstractModel {
 
     /**
     * Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>

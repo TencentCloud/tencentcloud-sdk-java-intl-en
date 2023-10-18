@@ -49,14 +49,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CopyFleetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CopyFleet");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CopyFleet", CopyFleetResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -70,14 +66,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateGameServerSessionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateGameServerSession");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "CreateGameServerSession", CreateGameServerSessionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -92,14 +84,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTimerScalingPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTimerScalingPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DeleteTimerScalingPolicy", DeleteTimerScalingPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -113,14 +101,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGameServerSessionDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGameServerSessionDetails");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGameServerSessionDetails", DescribeGameServerSessionDetailsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -134,14 +118,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGameServerSessionPlacementResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGameServerSessionPlacement");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGameServerSessionPlacement", DescribeGameServerSessionPlacementResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -155,14 +135,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGameServerSessionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGameServerSessions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeGameServerSessions", DescribeGameServerSessionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -176,14 +152,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceTypesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceTypes");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeInstanceTypes", DescribeInstanceTypesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -197,14 +169,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribePlayerSessionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlayerSessions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribePlayerSessions", DescribePlayerSessionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -219,14 +187,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTimerScalingPolicies");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "DescribeTimerScalingPolicies", DescribeTimerScalingPoliciesResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -240,14 +204,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<EndGameServerSessionAndProcessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EndGameServerSessionAndProcess");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "EndGameServerSessionAndProcess", EndGameServerSessionAndProcessResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -261,14 +221,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetGameServerSessionLogUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetGameServerSessionLogUrl");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetGameServerSessionLogUrl", GetGameServerSessionLogUrlResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -282,14 +238,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<GetInstanceAccessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetInstanceAccess");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "GetInstanceAccess", GetInstanceAccessResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -303,14 +255,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<JoinGameServerSessionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "JoinGameServerSession");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "JoinGameServerSession", JoinGameServerSessionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -324,14 +272,10 @@ public class GseClient extends AbstractClient{
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<JoinGameServerSessionBatchResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "JoinGameServerSessionBatch");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "JoinGameServerSessionBatch", JoinGameServerSessionBatchResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -348,14 +292,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<PutTimerScalingPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutTimerScalingPolicy");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "PutTimerScalingPolicy", PutTimerScalingPolicyResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -369,14 +309,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SearchGameServerSessionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchGameServerSessions");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SearchGameServerSessions", SearchGameServerSessionsResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -393,14 +329,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<SetServerReservedResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetServerReserved");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "SetServerReserved", SetServerReservedResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -414,14 +346,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StartGameServerSessionPlacementResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartGameServerSessionPlacement");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StartGameServerSessionPlacement", StartGameServerSessionPlacementResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -435,14 +363,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<StopGameServerSessionPlacementResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopGameServerSessionPlacement");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "StopGameServerSessionPlacement", StopGameServerSessionPlacementResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -456,14 +380,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateBucketAccelerateOptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateBucketAccelerateOpt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateBucketAccelerateOpt", UpdateBucketAccelerateOptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -477,14 +397,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateBucketCORSOptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateBucketCORSOpt");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateBucketCORSOpt", UpdateBucketCORSOptResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
     /**
@@ -498,14 +414,10 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<UpdateGameServerSessionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateGameServerSession");
-                rsp  = gson.fromJson(rspStr, type);
+                return this.internalRequest(req, "UpdateGameServerSession", UpdateGameServerSessionResponse.class);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
-        return rsp.response;
     }
 
 }

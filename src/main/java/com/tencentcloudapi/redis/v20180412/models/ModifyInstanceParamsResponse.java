@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceParamsResponse extends AbstractModel{
+public class ModifyInstanceParamsResponse extends AbstractModel {
 
     /**
     * Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>

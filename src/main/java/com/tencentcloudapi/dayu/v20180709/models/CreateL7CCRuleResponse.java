@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7CCRuleResponse extends AbstractModel{
+public class CreateL7CCRuleResponse extends AbstractModel {
 
     /**
     * Custom layer-7 CC protection rule parameters. If custom CC protection rule is not enabled, an empty array will be returned.

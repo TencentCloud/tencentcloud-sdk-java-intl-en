@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeSourceMedia extends AbstractModel{
+public class ComposeSourceMedia extends AbstractModel {
 
     /**
     * The material ID, which can be found in `FileInfos`.

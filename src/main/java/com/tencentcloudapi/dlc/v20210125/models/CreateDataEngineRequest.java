@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDataEngineRequest extends AbstractModel{
+public class CreateDataEngineRequest extends AbstractModel {
 
     /**
     * The engine type. Valid values: `spark` and `presto`.

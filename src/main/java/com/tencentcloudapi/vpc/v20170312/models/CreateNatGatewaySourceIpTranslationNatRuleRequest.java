@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatGatewaySourceIpTranslationNatRuleRequest extends AbstractModel{
+public class CreateNatGatewaySourceIpTranslationNatRuleRequest extends AbstractModel {
 
     /**
     * The ID of the NAT Gateway, such as `nat-df45454`

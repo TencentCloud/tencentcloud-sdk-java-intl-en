@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEmailAddressRequest extends AbstractModel{
+public class CreateEmailAddressRequest extends AbstractModel {
 
     /**
     * Your sender address. (You can create up to 10 sender addresses for each domain.)

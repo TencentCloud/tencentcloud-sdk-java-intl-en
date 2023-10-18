@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateProductDynamicRegisterResponse extends AbstractModel{
+public class UpdateProductDynamicRegisterResponse extends AbstractModel {
 
     /**
     * Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.

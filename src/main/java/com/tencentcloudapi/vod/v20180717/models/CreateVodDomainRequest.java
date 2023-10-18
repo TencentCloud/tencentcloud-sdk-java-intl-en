@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVodDomainRequest extends AbstractModel{
+public class CreateVodDomainRequest extends AbstractModel {
 
     /**
     * Domain name to add to VOD. Note: a wildcard domain name is not supported.

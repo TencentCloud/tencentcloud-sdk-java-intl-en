@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupReferencesRequest extends AbstractModel{
+public class DescribeSecurityGroupReferencesRequest extends AbstractModel {
 
     /**
     * A set of security group instance IDs, e.g. ['sg-12345678']
