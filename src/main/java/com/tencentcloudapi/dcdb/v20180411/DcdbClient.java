@@ -45,14 +45,8 @@ public class DcdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ActiveHourDCDBInstanceResponse ActiveHourDCDBInstance(ActiveHourDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ActiveHourDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ActiveHourDCDBInstance", ActiveHourDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ActiveHourDCDBInstance", ActiveHourDCDBInstanceResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class DcdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class DcdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelDcnJobResponse CancelDcnJob(CancelDcnJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelDcnJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelDcnJob", CancelDcnJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelDcnJob", CancelDcnJobResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class DcdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CloneAccountResponse CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloneAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CloneAccount", CloneAccountResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CloneAccount", CloneAccountResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class DcdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CloseDBExtranetAccessResponse CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CloseDBExtranetAccess", CloseDBExtranetAccessResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CloseDBExtranetAccess", CloseDBExtranetAccessResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ Note: Accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public CopyAccountPrivilegesResponse CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CopyAccountPrivileges", CopyAccountPrivilegesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CopyAccountPrivileges", CopyAccountPrivilegesResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ Note: Accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ Note: Accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public CreateDCDBInstanceResponse CreateDCDBInstance(CreateDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDCDBInstance", CreateDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDCDBInstance", CreateDCDBInstanceResponse.class);
     }
 
     /**
@@ -182,14 +134,8 @@ Note: Accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDedicatedClusterDCDBInstance", CreateDedicatedClusterDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDedicatedClusterDCDBInstance", CreateDedicatedClusterDCDBInstanceResponse.class);
     }
 
     /**
@@ -199,14 +145,8 @@ Note: Accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public CreateHourDCDBInstanceResponse CreateHourDCDBInstance(CreateHourDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateHourDCDBInstance", CreateHourDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateHourDCDBInstance", CreateHourDCDBInstanceResponse.class);
     }
 
     /**
@@ -216,14 +156,8 @@ Note: Accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
     }
 
     /**
@@ -234,14 +168,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAccountPrivileges", DescribeAccountPrivilegesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAccountPrivileges", DescribeAccountPrivilegesResponse.class);
     }
 
     /**
@@ -251,14 +179,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccountsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAccounts", DescribeAccountsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAccounts", DescribeAccountsResponse.class);
     }
 
     /**
@@ -268,14 +190,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeBackupFilesResponse DescribeBackupFiles(DescribeBackupFilesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBackupFiles", DescribeBackupFilesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBackupFiles", DescribeBackupFilesResponse.class);
     }
 
     /**
@@ -285,14 +201,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBEncryptAttributes", DescribeDBEncryptAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBEncryptAttributes", DescribeDBEncryptAttributesResponse.class);
     }
 
     /**
@@ -302,14 +212,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBLogFilesResponse DescribeDBLogFiles(DescribeDBLogFilesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBLogFilesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBLogFiles", DescribeDBLogFilesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBLogFiles", DescribeDBLogFilesResponse.class);
     }
 
     /**
@@ -319,14 +223,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBParametersResponse DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBParametersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBParameters", DescribeDBParametersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBParameters", DescribeDBParametersResponse.class);
     }
 
     /**
@@ -336,14 +234,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
     }
 
     /**
@@ -353,14 +245,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBSlowLogsResponse DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBSlowLogs", DescribeDBSlowLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBSlowLogs", DescribeDBSlowLogsResponse.class);
     }
 
     /**
@@ -370,14 +256,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBSyncModeResponse DescribeDBSyncMode(DescribeDBSyncModeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBSyncModeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBSyncMode", DescribeDBSyncModeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBSyncMode", DescribeDBSyncModeResponse.class);
     }
 
     /**
@@ -387,14 +267,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDBTmpInstancesResponse DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDBTmpInstances", DescribeDBTmpInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDBTmpInstances", DescribeDBTmpInstancesResponse.class);
     }
 
     /**
@@ -404,14 +278,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetail(DescribeDCDBInstanceDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDCDBInstanceDetail", DescribeDCDBInstanceDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDCDBInstanceDetail", DescribeDCDBInstanceDetailResponse.class);
     }
 
     /**
@@ -421,14 +289,8 @@ Note: Accounts with the same username but different hosts are considered as diff
      * @throws TencentCloudSDKException
      */
     public DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(DescribeDCDBInstanceNodeInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDCDBInstanceNodeInfo", DescribeDCDBInstanceNodeInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDCDBInstanceNodeInfo", DescribeDCDBInstanceNodeInfoResponse.class);
     }
 
     /**
@@ -439,14 +301,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDCDBInstancesResponse DescribeDCDBInstances(DescribeDCDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDCDBInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDCDBInstances", DescribeDCDBInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDCDBInstances", DescribeDCDBInstancesResponse.class);
     }
 
     /**
@@ -456,14 +312,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDCDBPriceResponse DescribeDCDBPrice(DescribeDCDBPriceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDCDBPriceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDCDBPrice", DescribeDCDBPriceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDCDBPrice", DescribeDCDBPriceResponse.class);
     }
 
     /**
@@ -473,14 +323,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDCDBShardsResponse DescribeDCDBShards(DescribeDCDBShardsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDCDBShardsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDCDBShards", DescribeDCDBShardsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDCDBShards", DescribeDCDBShardsResponse.class);
     }
 
     /**
@@ -490,14 +334,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDatabaseObjectsResponse DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDatabaseObjects", DescribeDatabaseObjectsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDatabaseObjects", DescribeDatabaseObjectsResponse.class);
     }
 
     /**
@@ -507,14 +345,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDatabaseTable", DescribeDatabaseTableResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDatabaseTable", DescribeDatabaseTableResponse.class);
     }
 
     /**
@@ -524,14 +356,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatabasesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDatabases", DescribeDatabasesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDatabases", DescribeDatabasesResponse.class);
     }
 
     /**
@@ -541,14 +367,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeDcnDetailResponse DescribeDcnDetail(DescribeDcnDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDcnDetail", DescribeDcnDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDcnDetail", DescribeDcnDetailResponse.class);
     }
 
     /**
@@ -558,14 +378,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeFileDownloadUrl", DescribeFileDownloadUrlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeFileDownloadUrl", DescribeFileDownloadUrlResponse.class);
     }
 
     /**
@@ -575,14 +389,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeFlow", DescribeFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeFlow", DescribeFlowResponse.class);
     }
 
     /**
@@ -592,14 +400,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLogFileRetentionPeriod", DescribeLogFileRetentionPeriodResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLogFileRetentionPeriod", DescribeLogFileRetentionPeriodResponse.class);
     }
 
     /**
@@ -609,14 +411,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOrdersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeOrders", DescribeOrdersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeOrders", DescribeOrdersResponse.class);
     }
 
     /**
@@ -626,14 +422,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProjectSecurityGroups", DescribeProjectSecurityGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProjectSecurityGroups", DescribeProjectSecurityGroupsResponse.class);
     }
 
     /**
@@ -643,14 +433,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DestroyDCDBInstanceResponse DestroyDCDBInstance(DestroyDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyDCDBInstance", DestroyDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyDCDBInstance", DestroyDCDBInstanceResponse.class);
     }
 
     /**
@@ -660,14 +444,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DestroyHourDCDBInstanceResponse DestroyHourDCDBInstance(DestroyHourDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyHourDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyHourDCDBInstance", DestroyHourDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyHourDCDBInstance", DestroyHourDCDBInstanceResponse.class);
     }
 
     /**
@@ -677,14 +455,8 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
      * @throws TencentCloudSDKException
      */
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
     }
 
     /**
@@ -695,14 +467,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public GrantAccountPrivilegesResponse GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GrantAccountPrivileges", GrantAccountPrivilegesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GrantAccountPrivileges", GrantAccountPrivilegesResponse.class);
     }
 
     /**
@@ -712,14 +478,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public InitDCDBInstancesResponse InitDCDBInstances(InitDCDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InitDCDBInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InitDCDBInstances", InitDCDBInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InitDCDBInstances", InitDCDBInstancesResponse.class);
     }
 
     /**
@@ -729,14 +489,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public IsolateDCDBInstanceResponse IsolateDCDBInstance(IsolateDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IsolateDCDBInstance", IsolateDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IsolateDCDBInstance", IsolateDCDBInstanceResponse.class);
     }
 
     /**
@@ -746,14 +500,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IsolateDedicatedDBInstance", IsolateDedicatedDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IsolateDedicatedDBInstance", IsolateDedicatedDBInstanceResponse.class);
     }
 
     /**
@@ -763,14 +511,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public IsolateHourDCDBInstanceResponse IsolateHourDCDBInstance(IsolateHourDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateHourDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IsolateHourDCDBInstance", IsolateHourDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IsolateHourDCDBInstance", IsolateHourDCDBInstanceResponse.class);
     }
 
     /**
@@ -780,14 +522,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public KillSessionResponse KillSession(KillSessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<KillSessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "KillSession", KillSessionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "KillSession", KillSessionResponse.class);
     }
 
     /**
@@ -797,14 +533,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyAccountConfigResponse ModifyAccountConfig(ModifyAccountConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccountConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAccountConfig", ModifyAccountConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAccountConfig", ModifyAccountConfigResponse.class);
     }
 
     /**
@@ -815,14 +545,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAccountDescription", ModifyAccountDescriptionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAccountDescription", ModifyAccountDescriptionResponse.class);
     }
 
     /**
@@ -832,14 +556,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAccountPrivileges", ModifyAccountPrivilegesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAccountPrivileges", ModifyAccountPrivilegesResponse.class);
     }
 
     /**
@@ -849,14 +567,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDBEncryptAttributes", ModifyDBEncryptAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDBEncryptAttributes", ModifyDBEncryptAttributesResponse.class);
     }
 
     /**
@@ -866,14 +578,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDBInstanceName", ModifyDBInstanceNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDBInstanceName", ModifyDBInstanceNameResponse.class);
     }
 
     /**
@@ -883,14 +589,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDBInstanceSecurityGroups", ModifyDBInstanceSecurityGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDBInstanceSecurityGroups", ModifyDBInstanceSecurityGroupsResponse.class);
     }
 
     /**
@@ -900,14 +600,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyDBInstancesProjectResponse ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDBInstancesProject", ModifyDBInstancesProjectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDBInstancesProject", ModifyDBInstancesProjectResponse.class);
     }
 
     /**
@@ -917,14 +611,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyDBParametersResponse ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBParametersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDBParameters", ModifyDBParametersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDBParameters", ModifyDBParametersResponse.class);
     }
 
     /**
@@ -934,14 +622,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyDBSyncModeResponse ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDBSyncMode", ModifyDBSyncModeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDBSyncMode", ModifyDBSyncModeResponse.class);
     }
 
     /**
@@ -951,14 +633,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyInstanceNetwork", ModifyInstanceNetworkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyInstanceNetwork", ModifyInstanceNetworkResponse.class);
     }
 
     /**
@@ -968,14 +644,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceVipResponse ModifyInstanceVip(ModifyInstanceVipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyInstanceVip", ModifyInstanceVipResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyInstanceVip", ModifyInstanceVipResponse.class);
     }
 
     /**
@@ -985,14 +655,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceVportResponse ModifyInstanceVport(ModifyInstanceVportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyInstanceVport", ModifyInstanceVportResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyInstanceVport", ModifyInstanceVportResponse.class);
     }
 
     /**
@@ -1003,14 +667,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResetAccountPassword", ResetAccountPasswordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResetAccountPassword", ResetAccountPasswordResponse.class);
     }
 
     /**
@@ -1020,14 +678,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SwitchDBInstanceHA", SwitchDBInstanceHAResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SwitchDBInstanceHA", SwitchDBInstanceHAResponse.class);
     }
 
     /**
@@ -1037,14 +689,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateDedicatedDBInstance", TerminateDedicatedDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateDedicatedDBInstance", TerminateDedicatedDBInstanceResponse.class);
     }
 
     /**
@@ -1054,14 +700,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstance(UpgradeDedicatedDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpgradeDedicatedDCDBInstance", UpgradeDedicatedDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpgradeDedicatedDCDBInstance", UpgradeDedicatedDCDBInstanceResponse.class);
     }
 
     /**
@@ -1071,14 +711,8 @@ Note: accounts with the same username but different hosts are different accounts
      * @throws TencentCloudSDKException
      */
     public UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstance(UpgradeHourDCDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpgradeHourDCDBInstance", UpgradeHourDCDBInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpgradeHourDCDBInstance", UpgradeHourDCDBInstanceResponse.class);
     }
 
 }

@@ -45,14 +45,8 @@ public class DataintegrationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendMessageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
     }
 
 }

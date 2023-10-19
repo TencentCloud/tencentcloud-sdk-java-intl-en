@@ -49,14 +49,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyDiskBackupResponse ApplyDiskBackup(ApplyDiskBackupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyDiskBackup", ApplyDiskBackupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyDiskBackup", ApplyDiskBackupResponse.class);
     }
 
     /**
@@ -70,14 +64,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplySnapshotResponse ApplySnapshot(ApplySnapshotRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplySnapshotResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplySnapshot", ApplySnapshotResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplySnapshot", ApplySnapshotResponse.class);
     }
 
     /**
@@ -90,14 +78,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachDisks", AttachDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachDisks", AttachDisksResponse.class);
     }
 
     /**
@@ -110,14 +92,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindAutoSnapshotPolicy", BindAutoSnapshotPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindAutoSnapshotPolicy", BindAutoSnapshotPolicyResponse.class);
     }
 
     /**
@@ -130,14 +106,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(CopySnapshotCrossRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CopySnapshotCrossRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CopySnapshotCrossRegions", CopySnapshotCrossRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CopySnapshotCrossRegions", CopySnapshotCrossRegionsResponse.class);
     }
 
     /**
@@ -150,14 +120,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAutoSnapshotPolicy", CreateAutoSnapshotPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAutoSnapshotPolicy", CreateAutoSnapshotPolicyResponse.class);
     }
 
     /**
@@ -167,14 +131,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDiskBackupResponse CreateDiskBackup(CreateDiskBackupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDiskBackupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDiskBackup", CreateDiskBackupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDiskBackup", CreateDiskBackupResponse.class);
     }
 
     /**
@@ -187,14 +145,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDisks", CreateDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDisks", CreateDisksResponse.class);
     }
 
     /**
@@ -208,14 +160,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSnapshotResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSnapshot", CreateSnapshotResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSnapshot", CreateSnapshotResponse.class);
     }
 
     /**
@@ -227,14 +173,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(DeleteAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAutoSnapshotPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAutoSnapshotPolicies", DeleteAutoSnapshotPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAutoSnapshotPolicies", DeleteAutoSnapshotPoliciesResponse.class);
     }
 
     /**
@@ -244,14 +184,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDiskBackupsResponse DeleteDiskBackups(DeleteDiskBackupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDiskBackups", DeleteDiskBackupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDiskBackups", DeleteDiskBackupsResponse.class);
     }
 
     /**
@@ -264,14 +198,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSnapshots", DeleteSnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSnapshots", DeleteSnapshotsResponse.class);
     }
 
     /**
@@ -284,14 +212,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAutoSnapshotPolicies", DescribeAutoSnapshotPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAutoSnapshotPolicies", DescribeAutoSnapshotPoliciesResponse.class);
     }
 
     /**
@@ -301,14 +223,8 @@ public class CbsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDiskAssociatedAutoSnapshotPolicyResponse DescribeDiskAssociatedAutoSnapshotPolicy(DescribeDiskAssociatedAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDiskAssociatedAutoSnapshotPolicy", DescribeDiskAssociatedAutoSnapshotPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDiskAssociatedAutoSnapshotPolicy", DescribeDiskAssociatedAutoSnapshotPolicyResponse.class);
     }
 
     /**
@@ -321,14 +237,8 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
      * @throws TencentCloudSDKException
      */
     public DescribeDiskBackupsResponse DescribeDiskBackups(DescribeDiskBackupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDiskBackups", DescribeDiskBackupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDiskBackups", DescribeDiskBackupsResponse.class);
     }
 
     /**
@@ -338,14 +248,8 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
      * @throws TencentCloudSDKException
      */
     public DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(DescribeDiskConfigQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDiskConfigQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDiskConfigQuota", DescribeDiskConfigQuotaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDiskConfigQuota", DescribeDiskConfigQuotaResponse.class);
     }
 
     /**
@@ -359,14 +263,8 @@ This API is used to query the operation logs of a cloud disk. It will be disused
      * @throws TencentCloudSDKException
      */
     public DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDiskOperationLogs", DescribeDiskOperationLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDiskOperationLogs", DescribeDiskOperationLogsResponse.class);
     }
 
     /**
@@ -379,14 +277,8 @@ This API is used to query the operation logs of a cloud disk. It will be disused
      * @throws TencentCloudSDKException
      */
     public DescribeDisksResponse DescribeDisks(DescribeDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDisks", DescribeDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDisks", DescribeDisksResponse.class);
     }
 
     /**
@@ -398,14 +290,8 @@ This API is used to query the operation logs of a cloud disk. It will be disused
      * @throws TencentCloudSDKException
      */
     public DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstancesDiskNum", DescribeInstancesDiskNumResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstancesDiskNum", DescribeInstancesDiskNumResponse.class);
     }
 
     /**
@@ -420,14 +306,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSnapshotOperationLogs", DescribeSnapshotOperationLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSnapshotOperationLogs", DescribeSnapshotOperationLogsResponse.class);
     }
 
     /**
@@ -437,14 +317,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(DescribeSnapshotSharePermissionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSnapshotSharePermissionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSnapshotSharePermission", DescribeSnapshotSharePermissionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSnapshotSharePermission", DescribeSnapshotSharePermissionResponse.class);
     }
 
     /**
@@ -457,14 +331,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSnapshots", DescribeSnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSnapshots", DescribeSnapshotsResponse.class);
     }
 
     /**
@@ -477,14 +345,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public DetachDisksResponse DetachDisks(DetachDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetachDisks", DetachDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetachDisks", DetachDisksResponse.class);
     }
 
     /**
@@ -494,14 +356,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public GetSnapOverviewResponse GetSnapOverview(GetSnapOverviewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSnapOverviewResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSnapOverview", GetSnapOverviewResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSnapOverview", GetSnapOverviewResponse.class);
     }
 
     /**
@@ -515,14 +371,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public InitializeDisksResponse InitializeDisks(InitializeDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InitializeDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InitializeDisks", InitializeDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InitializeDisks", InitializeDisksResponse.class);
     }
 
     /**
@@ -532,14 +382,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(InquirePriceModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquirePriceModifyDiskBackupQuota", InquirePriceModifyDiskBackupQuotaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquirePriceModifyDiskBackupQuota", InquirePriceModifyDiskBackupQuotaResponse.class);
     }
 
     /**
@@ -549,14 +393,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquirePriceModifyDiskExtraPerformance", InquirePriceModifyDiskExtraPerformanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquirePriceModifyDiskExtraPerformance", InquirePriceModifyDiskExtraPerformanceResponse.class);
     }
 
     /**
@@ -568,14 +406,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(InquiryPriceCreateDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceCreateDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceCreateDisks", InquiryPriceCreateDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceCreateDisks", InquiryPriceCreateDisksResponse.class);
     }
 
     /**
@@ -585,14 +417,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(InquiryPriceResizeDiskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceResizeDiskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceResizeDisk", InquiryPriceResizeDiskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceResizeDisk", InquiryPriceResizeDiskResponse.class);
     }
 
     /**
@@ -605,14 +431,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(ModifyAutoSnapshotPolicyAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAutoSnapshotPolicyAttribute", ModifyAutoSnapshotPolicyAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAutoSnapshotPolicyAttribute", ModifyAutoSnapshotPolicyAttributeResponse.class);
     }
 
     /**
@@ -624,14 +444,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public ModifyDiskAttributesResponse ModifyDiskAttributes(ModifyDiskAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDiskAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDiskAttributes", ModifyDiskAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDiskAttributes", ModifyDiskAttributesResponse.class);
     }
 
     /**
@@ -641,14 +455,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(ModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDiskBackupQuota", ModifyDiskBackupQuotaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDiskBackupQuota", ModifyDiskBackupQuotaResponse.class);
     }
 
     /**
@@ -660,14 +468,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(ModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDiskExtraPerformance", ModifyDiskExtraPerformanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDiskExtraPerformance", ModifyDiskExtraPerformanceResponse.class);
     }
 
     /**
@@ -680,14 +482,8 @@ This API is used to query the operation logs of a snapshot. It will be disused s
      * @throws TencentCloudSDKException
      */
     public ModifySnapshotAttributeResponse ModifySnapshotAttribute(ModifySnapshotAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySnapshotAttribute", ModifySnapshotAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySnapshotAttribute", ModifySnapshotAttributeResponse.class);
     }
 
     /**
@@ -703,14 +499,8 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
      * @throws TencentCloudSDKException
      */
     public ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermission(ModifySnapshotsSharePermissionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySnapshotsSharePermissionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySnapshotsSharePermission", ModifySnapshotsSharePermissionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySnapshotsSharePermission", ModifySnapshotsSharePermissionResponse.class);
     }
 
     /**
@@ -722,14 +512,8 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
      * @throws TencentCloudSDKException
      */
     public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResizeDiskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResizeDisk", ResizeDiskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResizeDisk", ResizeDiskResponse.class);
     }
 
     /**
@@ -743,14 +527,8 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
      * @throws TencentCloudSDKException
      */
     public TerminateDisksResponse TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateDisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateDisks", TerminateDisksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateDisks", TerminateDisksResponse.class);
     }
 
     /**
@@ -763,14 +541,8 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
      * @throws TencentCloudSDKException
      */
     public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnbindAutoSnapshotPolicy", UnbindAutoSnapshotPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnbindAutoSnapshotPolicy", UnbindAutoSnapshotPolicyResponse.class);
     }
 
 }

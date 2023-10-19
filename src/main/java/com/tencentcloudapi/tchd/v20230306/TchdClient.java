@@ -45,14 +45,8 @@ public class TchdClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEventsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEvents", DescribeEventsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEvents", DescribeEventsResponse.class);
     }
 
 }

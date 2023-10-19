@@ -45,14 +45,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssociateDDoSEipAddressResponse AssociateDDoSEipAddress(AssociateDDoSEipAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssociateDDoSEipAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AssociateDDoSEipAddress", AssociateDDoSEipAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AssociateDDoSEipAddress", AssociateDDoSEipAddressResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(AssociateDDoSEipLoadBalancerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AssociateDDoSEipLoadBalancer", AssociateDDoSEipLoadBalancerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AssociateDDoSEipLoadBalancer", AssociateDDoSEipLoadBalancerResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(CreateBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateBlackWhiteIpList", CreateBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateBlackWhiteIpList", CreateBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBoundIPResponse CreateBoundIP(CreateBoundIPRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBoundIPResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateBoundIP", CreateBoundIPResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateBoundIP", CreateBoundIPResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(CreateCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCCPrecisionPolicy", CreateCCPrecisionPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCCPrecisionPolicy", CreateCCPrecisionPolicyResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(CreateCCReqLimitPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCCReqLimitPolicy", CreateCCReqLimitPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCCReqLimitPolicy", CreateCCReqLimitPolicyResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpList(CreateCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCcBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCcBlackWhiteIpList", CreateCcBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCcBlackWhiteIpList", CreateCcBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(CreateCcGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCcGeoIPBlockConfig", CreateCcGeoIPBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCcGeoIPBlockConfig", CreateCcGeoIPBlockConfigResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDDoSAIResponse CreateDDoSAI(CreateDDoSAIRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDDoSAIResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDDoSAI", CreateDDoSAIResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDDoSAI", CreateDDoSAIResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDDoSGeoIPBlockConfigResponse CreateDDoSGeoIPBlockConfig(CreateDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDDoSGeoIPBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDDoSGeoIPBlockConfig", CreateDDoSGeoIPBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDDoSGeoIPBlockConfig", CreateDDoSGeoIPBlockConfigResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDDoSSpeedLimitConfigResponse CreateDDoSSpeedLimitConfig(CreateDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDDoSSpeedLimitConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDDoSSpeedLimitConfig", CreateDDoSSpeedLimitConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDDoSSpeedLimitConfig", CreateDDoSSpeedLimitConfigResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(CreateDefaultAlarmThresholdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDefaultAlarmThresholdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDefaultAlarmThreshold", CreateDefaultAlarmThresholdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDefaultAlarmThreshold", CreateDefaultAlarmThresholdResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(CreateIPAlarmThresholdConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateIPAlarmThresholdConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateIPAlarmThresholdConfig", CreateIPAlarmThresholdConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateIPAlarmThresholdConfig", CreateIPAlarmThresholdConfigResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateL7RuleCertsResponse CreateL7RuleCerts(CreateL7RuleCertsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateL7RuleCertsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateL7RuleCerts", CreateL7RuleCertsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateL7RuleCerts", CreateL7RuleCertsResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateNewL7RulesResponse CreateNewL7Rules(CreateNewL7RulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateNewL7Rules", CreateNewL7RulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateNewL7Rules", CreateNewL7RulesResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePacketFilterConfigResponse CreatePacketFilterConfig(CreatePacketFilterConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePacketFilterConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePacketFilterConfig", CreatePacketFilterConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePacketFilterConfig", CreatePacketFilterConfigResponse.class);
     }
 
     /**
@@ -317,14 +221,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateProtocolBlockConfigResponse CreateProtocolBlockConfig(CreateProtocolBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProtocolBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateProtocolBlockConfig", CreateProtocolBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateProtocolBlockConfig", CreateProtocolBlockConfigResponse.class);
     }
 
     /**
@@ -334,14 +232,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSchedulingDomainResponse CreateSchedulingDomain(CreateSchedulingDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSchedulingDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSchedulingDomain", CreateSchedulingDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSchedulingDomain", CreateSchedulingDomainResponse.class);
     }
 
     /**
@@ -351,14 +243,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateWaterPrintConfigResponse CreateWaterPrintConfig(CreateWaterPrintConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWaterPrintConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWaterPrintConfig", CreateWaterPrintConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWaterPrintConfig", CreateWaterPrintConfigResponse.class);
     }
 
     /**
@@ -368,14 +254,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateWaterPrintKeyResponse CreateWaterPrintKey(CreateWaterPrintKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWaterPrintKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWaterPrintKey", CreateWaterPrintKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWaterPrintKey", CreateWaterPrintKeyResponse.class);
     }
 
     /**
@@ -385,14 +265,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(DeleteCCLevelPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCCLevelPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCCLevelPolicy", DeleteCCLevelPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCCLevelPolicy", DeleteCCLevelPolicyResponse.class);
     }
 
     /**
@@ -402,14 +276,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(DeleteCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCCPrecisionPolicy", DeleteCCPrecisionPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCCPrecisionPolicy", DeleteCCPrecisionPolicyResponse.class);
     }
 
     /**
@@ -419,14 +287,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicy(DeleteCCThresholdPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCCThresholdPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCCThresholdPolicy", DeleteCCThresholdPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCCThresholdPolicy", DeleteCCThresholdPolicyResponse.class);
     }
 
     /**
@@ -436,14 +298,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpList(DeleteCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCcBlackWhiteIpList", DeleteCcBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCcBlackWhiteIpList", DeleteCcBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -453,14 +309,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfig(DeleteCcGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCcGeoIPBlockConfig", DeleteCcGeoIPBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCcGeoIPBlockConfig", DeleteCcGeoIPBlockConfigResponse.class);
     }
 
     /**
@@ -470,14 +320,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDDoSGeoIPBlockConfigResponse DeleteDDoSGeoIPBlockConfig(DeleteDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDDoSGeoIPBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDDoSGeoIPBlockConfig", DeleteDDoSGeoIPBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDDoSGeoIPBlockConfig", DeleteDDoSGeoIPBlockConfigResponse.class);
     }
 
     /**
@@ -487,14 +331,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDDoSSpeedLimitConfigResponse DeleteDDoSSpeedLimitConfig(DeleteDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDDoSSpeedLimitConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDDoSSpeedLimitConfig", DeleteDDoSSpeedLimitConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDDoSSpeedLimitConfig", DeleteDDoSSpeedLimitConfigResponse.class);
     }
 
     /**
@@ -504,14 +342,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeletePacketFilterConfigResponse DeletePacketFilterConfig(DeletePacketFilterConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePacketFilterConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePacketFilterConfig", DeletePacketFilterConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePacketFilterConfig", DeletePacketFilterConfigResponse.class);
     }
 
     /**
@@ -521,14 +353,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(DeleteWaterPrintConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWaterPrintConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWaterPrintConfig", DeleteWaterPrintConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWaterPrintConfig", DeleteWaterPrintConfigResponse.class);
     }
 
     /**
@@ -538,14 +364,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteWaterPrintKeyResponse DeleteWaterPrintKey(DeleteWaterPrintKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWaterPrintKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWaterPrintKey", DeleteWaterPrintKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWaterPrintKey", DeleteWaterPrintKeyResponse.class);
     }
 
     /**
@@ -555,14 +375,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(DescribeBasicDeviceStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBasicDeviceStatus", DescribeBasicDeviceStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBasicDeviceStatus", DescribeBasicDeviceStatusResponse.class);
     }
 
     /**
@@ -572,14 +386,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBgpBizTrendResponse DescribeBgpBizTrend(DescribeBgpBizTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBgpBizTrend", DescribeBgpBizTrendResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBgpBizTrend", DescribeBgpBizTrendResponse.class);
     }
 
     /**
@@ -589,14 +397,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBizHttpStatusResponse DescribeBizHttpStatus(DescribeBizHttpStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBizHttpStatus", DescribeBizHttpStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBizHttpStatus", DescribeBizHttpStatusResponse.class);
     }
 
     /**
@@ -606,14 +408,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBizTrendResponse DescribeBizTrend(DescribeBizTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBizTrendResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBizTrend", DescribeBizTrendResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBizTrend", DescribeBizTrendResponse.class);
     }
 
     /**
@@ -623,14 +419,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(DescribeBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBlackWhiteIpList", DescribeBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBlackWhiteIpList", DescribeBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -640,14 +430,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCCLevelListResponse DescribeCCLevelList(DescribeCCLevelListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCCLevelListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCCLevelList", DescribeCCLevelListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCCLevelList", DescribeCCLevelListResponse.class);
     }
 
     /**
@@ -657,14 +441,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(DescribeCCLevelPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCCLevelPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCCLevelPolicy", DescribeCCLevelPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCCLevelPolicy", DescribeCCLevelPolicyResponse.class);
     }
 
     /**
@@ -674,14 +452,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCCPrecisionPlyList", DescribeCCPrecisionPlyListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCCPrecisionPlyList", DescribeCCPrecisionPlyListResponse.class);
     }
 
     /**
@@ -691,14 +463,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCCThresholdListResponse DescribeCCThresholdList(DescribeCCThresholdListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCCThresholdListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCCThresholdList", DescribeCCThresholdListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCCThresholdList", DescribeCCThresholdListResponse.class);
     }
 
     /**
@@ -708,14 +474,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCCTrendResponse DescribeCCTrend(DescribeCCTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCCTrendResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCCTrend", DescribeCCTrendResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCCTrend", DescribeCCTrendResponse.class);
     }
 
     /**
@@ -725,14 +485,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCcBlackWhiteIpList", DescribeCcBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCcBlackWhiteIpList", DescribeCcBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -742,14 +496,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCcGeoIPBlockConfigList", DescribeCcGeoIPBlockConfigListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCcGeoIPBlockConfigList", DescribeCcGeoIPBlockConfigListResponse.class);
     }
 
     /**
@@ -759,14 +507,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDoSTrendResponse DescribeDDoSTrend(DescribeDDoSTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDoSTrend", DescribeDDoSTrendResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDoSTrend", DescribeDDoSTrendResponse.class);
     }
 
     /**
@@ -776,14 +518,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(DescribeDefaultAlarmThresholdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDefaultAlarmThresholdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDefaultAlarmThreshold", DescribeDefaultAlarmThresholdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDefaultAlarmThreshold", DescribeDefaultAlarmThresholdResponse.class);
     }
 
     /**
@@ -793,14 +529,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(DescribeL7RulesBySSLCertIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeL7RulesBySSLCertIdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeL7RulesBySSLCertId", DescribeL7RulesBySSLCertIdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeL7RulesBySSLCertId", DescribeL7RulesBySSLCertIdResponse.class);
     }
 
     /**
@@ -811,14 +541,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(DescribeListBGPIPInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListBGPIPInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListBGPIPInstances", DescribeListBGPIPInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListBGPIPInstances", DescribeListBGPIPInstancesResponse.class);
     }
 
     /**
@@ -828,14 +552,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListBGPInstancesResponse DescribeListBGPInstances(DescribeListBGPInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListBGPInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListBGPInstances", DescribeListBGPInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListBGPInstances", DescribeListBGPInstancesResponse.class);
     }
 
     /**
@@ -845,14 +563,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListBlackWhiteIpListResponse DescribeListBlackWhiteIpList(DescribeListBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListBlackWhiteIpList", DescribeListBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListBlackWhiteIpList", DescribeListBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -862,14 +574,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListDDoSAIResponse DescribeListDDoSAI(DescribeListDDoSAIRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListDDoSAIResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListDDoSAI", DescribeListDDoSAIResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListDDoSAI", DescribeListDDoSAIResponse.class);
     }
 
     /**
@@ -879,14 +585,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListDDoSGeoIPBlockConfigResponse DescribeListDDoSGeoIPBlockConfig(DescribeListDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListDDoSGeoIPBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListDDoSGeoIPBlockConfig", DescribeListDDoSGeoIPBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListDDoSGeoIPBlockConfig", DescribeListDDoSGeoIPBlockConfigResponse.class);
     }
 
     /**
@@ -896,14 +596,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListDDoSSpeedLimitConfigResponse DescribeListDDoSSpeedLimitConfig(DescribeListDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListDDoSSpeedLimitConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListDDoSSpeedLimitConfig", DescribeListDDoSSpeedLimitConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListDDoSSpeedLimitConfig", DescribeListDDoSSpeedLimitConfigResponse.class);
     }
 
     /**
@@ -913,14 +607,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListIPAlarmConfigResponse DescribeListIPAlarmConfig(DescribeListIPAlarmConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListIPAlarmConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListIPAlarmConfig", DescribeListIPAlarmConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListIPAlarmConfig", DescribeListIPAlarmConfigResponse.class);
     }
 
     /**
@@ -930,14 +618,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListListenerResponse DescribeListListener(DescribeListListenerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListListenerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListListener", DescribeListListenerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListListener", DescribeListListenerResponse.class);
     }
 
     /**
@@ -947,14 +629,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(DescribeListPacketFilterConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListPacketFilterConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListPacketFilterConfig", DescribeListPacketFilterConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListPacketFilterConfig", DescribeListPacketFilterConfigResponse.class);
     }
 
     /**
@@ -964,14 +640,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(DescribeListProtectThresholdConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListProtectThresholdConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListProtectThresholdConfig", DescribeListProtectThresholdConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListProtectThresholdConfig", DescribeListProtectThresholdConfigResponse.class);
     }
 
     /**
@@ -981,14 +651,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(DescribeListProtocolBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListProtocolBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListProtocolBlockConfig", DescribeListProtocolBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListProtocolBlockConfig", DescribeListProtocolBlockConfigResponse.class);
     }
 
     /**
@@ -998,14 +662,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(DescribeListSchedulingDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListSchedulingDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListSchedulingDomain", DescribeListSchedulingDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListSchedulingDomain", DescribeListSchedulingDomainResponse.class);
     }
 
     /**
@@ -1015,14 +673,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(DescribeListWaterPrintConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListWaterPrintConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListWaterPrintConfig", DescribeListWaterPrintConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListWaterPrintConfig", DescribeListWaterPrintConfigResponse.class);
     }
 
     /**
@@ -1032,14 +684,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeNewL7RulesResponse DescribeNewL7Rules(DescribeNewL7RulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeNewL7Rules", DescribeNewL7RulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeNewL7Rules", DescribeNewL7RulesResponse.class);
     }
 
     /**
@@ -1049,14 +695,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeNewL7RulesErrHealth", DescribeNewL7RulesErrHealthResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeNewL7RulesErrHealth", DescribeNewL7RulesErrHealthResponse.class);
     }
 
     /**
@@ -1066,14 +706,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(DescribeOverviewDDoSEventListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeOverviewDDoSEventList", DescribeOverviewDDoSEventListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeOverviewDDoSEventList", DescribeOverviewDDoSEventListResponse.class);
     }
 
     /**
@@ -1083,14 +717,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePendingRiskInfoResponse DescribePendingRiskInfo(DescribePendingRiskInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePendingRiskInfo", DescribePendingRiskInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePendingRiskInfo", DescribePendingRiskInfoResponse.class);
     }
 
     /**
@@ -1100,14 +728,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(DisassociateDDoSEipAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisassociateDDoSEipAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisassociateDDoSEipAddress", DisassociateDDoSEipAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisassociateDDoSEipAddress", DisassociateDDoSEipAddressResponse.class);
     }
 
     /**
@@ -1117,14 +739,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(ModifyCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCCPrecisionPolicy", ModifyCCPrecisionPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCCPrecisionPolicy", ModifyCCPrecisionPolicyResponse.class);
     }
 
     /**
@@ -1134,14 +750,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(ModifyCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCcBlackWhiteIpList", ModifyCcBlackWhiteIpListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCcBlackWhiteIpList", ModifyCcBlackWhiteIpListResponse.class);
     }
 
     /**
@@ -1151,14 +761,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDDoSGeoIPBlockConfigResponse ModifyDDoSGeoIPBlockConfig(ModifyDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDDoSGeoIPBlockConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDDoSGeoIPBlockConfig", ModifyDDoSGeoIPBlockConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDDoSGeoIPBlockConfig", ModifyDDoSGeoIPBlockConfigResponse.class);
     }
 
     /**
@@ -1168,14 +772,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(ModifyDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDDoSSpeedLimitConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDDoSSpeedLimitConfig", ModifyDDoSSpeedLimitConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDDoSSpeedLimitConfig", ModifyDDoSSpeedLimitConfigResponse.class);
     }
 
     /**
@@ -1185,14 +783,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDomainUsrNameResponse ModifyDomainUsrName(ModifyDomainUsrNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDomainUsrNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDomainUsrName", ModifyDomainUsrNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDomainUsrName", ModifyDomainUsrNameResponse.class);
     }
 
     /**
@@ -1202,14 +794,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyNewDomainRulesResponse ModifyNewDomainRules(ModifyNewDomainRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyNewDomainRules", ModifyNewDomainRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyNewDomainRules", ModifyNewDomainRulesResponse.class);
     }
 
     /**
@@ -1219,14 +805,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(ModifyPacketFilterConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPacketFilterConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPacketFilterConfig", ModifyPacketFilterConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPacketFilterConfig", ModifyPacketFilterConfigResponse.class);
     }
 
     /**
@@ -1236,14 +816,8 @@ public class AntiddosClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(SwitchWaterPrintConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchWaterPrintConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SwitchWaterPrintConfig", SwitchWaterPrintConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SwitchWaterPrintConfig", SwitchWaterPrintConfigResponse.class);
     }
 
 }

@@ -45,14 +45,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchSendEmailResponse BatchSendEmail(BatchSendEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchSendEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchSendEmail", BatchSendEmailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchSendEmail", BatchSendEmailResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEmailAddressResponse CreateEmailAddress(CreateEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateEmailAddress", CreateEmailAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateEmailAddress", CreateEmailAddressResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEmailIdentityResponse CreateEmailIdentity(CreateEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateEmailIdentity", CreateEmailIdentityResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateEmailIdentity", CreateEmailIdentityResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public CreateEmailTemplateResponse CreateEmailTemplate(CreateEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateEmailTemplate", CreateEmailTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateEmailTemplate", CreateEmailTemplateResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public CreateReceiverResponse CreateReceiver(CreateReceiverRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReceiverResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateReceiver", CreateReceiverResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateReceiver", CreateReceiverResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public CreateReceiverDetailResponse CreateReceiverDetail(CreateReceiverDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateReceiverDetail", CreateReceiverDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateReceiverDetail", CreateReceiverDetailResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public DeleteBlackListResponse DeleteBlackList(DeleteBlackListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteBlackListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteBlackList", DeleteBlackListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteBlackList", DeleteBlackListResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public DeleteEmailAddressResponse DeleteEmailAddress(DeleteEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteEmailAddress", DeleteEmailAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteEmailAddress", DeleteEmailAddressResponse.class);
     }
 
     /**
@@ -182,14 +134,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public DeleteEmailIdentityResponse DeleteEmailIdentity(DeleteEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteEmailIdentity", DeleteEmailIdentityResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteEmailIdentity", DeleteEmailIdentityResponse.class);
     }
 
     /**
@@ -199,14 +145,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public DeleteEmailTemplateResponse DeleteEmailTemplate(DeleteEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteEmailTemplate", DeleteEmailTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteEmailTemplate", DeleteEmailTemplateResponse.class);
     }
 
     /**
@@ -216,14 +156,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteReceiverResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteReceiver", DeleteReceiverResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteReceiver", DeleteReceiverResponse.class);
     }
 
     /**
@@ -233,14 +167,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public GetEmailIdentityResponse GetEmailIdentity(GetEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetEmailIdentity", GetEmailIdentityResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetEmailIdentity", GetEmailIdentityResponse.class);
     }
 
     /**
@@ -250,14 +178,8 @@ Note: Only an approved template can be used to send emails.
      * @throws TencentCloudSDKException
      */
     public GetEmailTemplateResponse GetEmailTemplate(GetEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetEmailTemplate", GetEmailTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetEmailTemplate", GetEmailTemplateResponse.class);
     }
 
     /**
@@ -268,14 +190,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public GetSendEmailStatusResponse GetSendEmailStatus(GetSendEmailStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSendEmailStatus", GetSendEmailStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSendEmailStatus", GetSendEmailStatusResponse.class);
     }
 
     /**
@@ -285,14 +201,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public GetStatisticsReportResponse GetStatisticsReport(GetStatisticsReportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetStatisticsReportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetStatisticsReport", GetStatisticsReportResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetStatisticsReport", GetStatisticsReportResponse.class);
     }
 
     /**
@@ -302,14 +212,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public ListBlackEmailAddressResponse ListBlackEmailAddress(ListBlackEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListBlackEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListBlackEmailAddress", ListBlackEmailAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListBlackEmailAddress", ListBlackEmailAddressResponse.class);
     }
 
     /**
@@ -319,14 +223,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public ListEmailAddressResponse ListEmailAddress(ListEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListEmailAddress", ListEmailAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListEmailAddress", ListEmailAddressResponse.class);
     }
 
     /**
@@ -336,14 +234,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public ListEmailIdentitiesResponse ListEmailIdentities(ListEmailIdentitiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEmailIdentitiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListEmailIdentities", ListEmailIdentitiesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListEmailIdentities", ListEmailIdentitiesResponse.class);
     }
 
     /**
@@ -353,14 +245,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public ListEmailTemplatesResponse ListEmailTemplates(ListEmailTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEmailTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListEmailTemplates", ListEmailTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListEmailTemplates", ListEmailTemplatesResponse.class);
     }
 
     /**
@@ -370,14 +256,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public ListReceiversResponse ListReceivers(ListReceiversRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListReceiversResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListReceivers", ListReceiversResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListReceivers", ListReceiversResponse.class);
     }
 
     /**
@@ -387,14 +267,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public ListSendTasksResponse ListSendTasks(ListSendTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListSendTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListSendTasks", ListSendTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListSendTasks", ListSendTasksResponse.class);
     }
 
     /**
@@ -404,14 +278,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
     }
 
     /**
@@ -421,14 +289,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public UpdateEmailIdentityResponse UpdateEmailIdentity(UpdateEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateEmailIdentity", UpdateEmailIdentityResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateEmailIdentity", UpdateEmailIdentityResponse.class);
     }
 
     /**
@@ -438,14 +300,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(UpdateEmailSmtpPassWordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateEmailSmtpPassWord", UpdateEmailSmtpPassWordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateEmailSmtpPassWord", UpdateEmailSmtpPassWordResponse.class);
     }
 
     /**
@@ -455,14 +311,8 @@ Default API request rate limit: 1 request/sec.
      * @throws TencentCloudSDKException
      */
     public UpdateEmailTemplateResponse UpdateEmailTemplate(UpdateEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateEmailTemplate", UpdateEmailTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateEmailTemplate", UpdateEmailTemplateResponse.class);
     }
 
 }

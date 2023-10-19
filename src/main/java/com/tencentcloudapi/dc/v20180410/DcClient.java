@@ -45,14 +45,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AcceptDirectConnectTunnel", AcceptDirectConnectTunnelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AcceptDirectConnectTunnel", AcceptDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyInternetAddressResponse ApplyInternetAddress(ApplyInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyInternetAddress", ApplyInternetAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyInternetAddress", ApplyInternetAddressResponse.class);
     }
 
     /**
@@ -82,14 +70,8 @@ If there is any connection in arrears under your account, you cannot apply for m
      * @throws TencentCloudSDKException
      */
     public CreateDirectConnectResponse CreateDirectConnect(CreateDirectConnectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDirectConnectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDirectConnect", CreateDirectConnectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDirectConnect", CreateDirectConnectResponse.class);
     }
 
     /**
@@ -99,14 +81,8 @@ If there is any connection in arrears under your account, you cannot apply for m
      * @throws TencentCloudSDKException
      */
     public CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDirectConnectTunnel", CreateDirectConnectTunnelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDirectConnectTunnel", CreateDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -117,14 +93,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteDirectConnectResponse DeleteDirectConnect(DeleteDirectConnectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDirectConnect", DeleteDirectConnectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDirectConnect", DeleteDirectConnectResponse.class);
     }
 
     /**
@@ -134,14 +104,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDirectConnectTunnel", DeleteDirectConnectTunnelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDirectConnectTunnel", DeleteDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -152,14 +116,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAccessPoints", DescribeAccessPointsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAccessPoints", DescribeAccessPointsResponse.class);
     }
 
     /**
@@ -169,14 +127,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDirectConnectTunnels", DescribeDirectConnectTunnelsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDirectConnectTunnels", DescribeDirectConnectTunnelsResponse.class);
     }
 
     /**
@@ -186,14 +138,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeDirectConnectsResponse DescribeDirectConnects(DescribeDirectConnectsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDirectConnects", DescribeDirectConnectsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDirectConnects", DescribeDirectConnectsResponse.class);
     }
 
     /**
@@ -203,14 +149,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInternetAddressResponse DescribeInternetAddress(DescribeInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInternetAddress", DescribeInternetAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInternetAddress", DescribeInternetAddressResponse.class);
     }
 
     /**
@@ -220,14 +160,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInternetAddressQuota", DescribeInternetAddressQuotaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInternetAddressQuota", DescribeInternetAddressQuotaResponse.class);
     }
 
     /**
@@ -237,14 +171,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInternetAddressStatistics", DescribeInternetAddressStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInternetAddressStatistics", DescribeInternetAddressStatisticsResponse.class);
     }
 
     /**
@@ -254,14 +182,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public DisableInternetAddressResponse DisableInternetAddress(DisableInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableInternetAddress", DisableInternetAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableInternetAddress", DisableInternetAddressResponse.class);
     }
 
     /**
@@ -271,14 +193,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public EnableInternetAddressResponse EnableInternetAddress(EnableInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableInternetAddress", EnableInternetAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableInternetAddress", EnableInternetAddressResponse.class);
     }
 
     /**
@@ -288,14 +204,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDirectConnectAttribute", ModifyDirectConnectAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDirectConnectAttribute", ModifyDirectConnectAttributeResponse.class);
     }
 
     /**
@@ -305,14 +215,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDirectConnectTunnelAttribute", ModifyDirectConnectTunnelAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDirectConnectTunnelAttribute", ModifyDirectConnectTunnelAttributeResponse.class);
     }
 
     /**
@@ -322,14 +226,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RejectDirectConnectTunnel", RejectDirectConnectTunnelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RejectDirectConnectTunnel", RejectDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -339,14 +237,8 @@ Only connected connections can be deleted.
      * @throws TencentCloudSDKException
      */
     public ReleaseInternetAddressResponse ReleaseInternetAddress(ReleaseInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReleaseInternetAddress", ReleaseInternetAddressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReleaseInternetAddress", ReleaseInternetAddressResponse.class);
     }
 
 }

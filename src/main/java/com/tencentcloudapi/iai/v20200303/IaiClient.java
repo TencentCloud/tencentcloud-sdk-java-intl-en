@@ -48,14 +48,8 @@ public class IaiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AnalyzeFaceResponse AnalyzeFace(AnalyzeFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AnalyzeFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AnalyzeFace", AnalyzeFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AnalyzeFace", AnalyzeFaceResponse.class);
     }
 
     /**
@@ -70,14 +64,8 @@ If you need to judge "whether the person in the image is someone specified" in s
      * @throws TencentCloudSDKException
      */
     public CompareFaceResponse CompareFace(CompareFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CompareFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CompareFace", CompareFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CompareFace", CompareFaceResponse.class);
     }
 
     /**
@@ -89,14 +77,8 @@ If you need to judge "whether the person in the image is someone specified" in s
      * @throws TencentCloudSDKException
      */
     public CopyPersonResponse CopyPerson(CopyPersonRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CopyPersonResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CopyPerson", CopyPersonResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CopyPerson", CopyPersonResponse.class);
     }
 
     /**
@@ -109,14 +91,8 @@ If you need to judge "whether the person in the image is someone specified" in s
      * @throws TencentCloudSDKException
      */
     public CreateFaceResponse CreateFace(CreateFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateFace", CreateFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateFace", CreateFaceResponse.class);
     }
 
     /**
@@ -131,14 +107,8 @@ The maximum number of faces that can be included in one group varies by algorith
      * @throws TencentCloudSDKException
      */
     public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
     }
 
     /**
@@ -151,14 +121,8 @@ The maximum number of faces that can be included in one group varies by algorith
      * @throws TencentCloudSDKException
      */
     public CreatePersonResponse CreatePerson(CreatePersonRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePersonResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePerson", CreatePersonResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePerson", CreatePersonResponse.class);
     }
 
     /**
@@ -168,14 +132,8 @@ The maximum number of faces that can be included in one group varies by algorith
      * @throws TencentCloudSDKException
      */
     public DeleteFaceResponse DeleteFace(DeleteFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteFace", DeleteFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteFace", DeleteFaceResponse.class);
     }
 
     /**
@@ -186,14 +144,8 @@ The maximum number of faces that can be included in one group varies by algorith
      * @throws TencentCloudSDKException
      */
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
     }
 
     /**
@@ -203,14 +155,8 @@ The maximum number of faces that can be included in one group varies by algorith
      * @throws TencentCloudSDKException
      */
     public DeletePersonResponse DeletePerson(DeletePersonRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePersonResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePerson", DeletePersonResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePerson", DeletePersonResponse.class);
     }
 
     /**
@@ -220,14 +166,8 @@ The maximum number of faces that can be included in one group varies by algorith
      * @throws TencentCloudSDKException
      */
     public DeletePersonFromGroupResponse DeletePersonFromGroup(DeletePersonFromGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePersonFromGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePersonFromGroup", DeletePersonFromGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePersonFromGroup", DeletePersonFromGroupResponse.class);
     }
 
     /**
@@ -253,14 +193,8 @@ The face quality information is mainly used to evaluate the quality of the input
      * @throws TencentCloudSDKException
      */
     public DetectFaceResponse DetectFace(DetectFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetectFace", DetectFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetectFace", DetectFaceResponse.class);
     }
 
     /**
@@ -290,14 +224,8 @@ Use this API for corresponding face detection and attribute analysis.
      * @throws TencentCloudSDKException
      */
     public DetectFaceAttributesResponse DetectFaceAttributes(DetectFaceAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectFaceAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetectFaceAttributes", DetectFaceAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetectFaceAttributes", DetectFaceAttributesResponse.class);
     }
 
     /**
@@ -318,14 +246,8 @@ Image-based liveness detection is suitable for scenarios where the image is a se
      * @throws TencentCloudSDKException
      */
     public DetectLiveFaceResponse DetectLiveFace(DetectLiveFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectLiveFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetectLiveFace", DetectLiveFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetectLiveFace", DetectLiveFaceResponse.class);
     }
 
     /**
@@ -339,14 +261,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public DetectLiveFaceAccurateResponse DetectLiveFaceAccurate(DetectLiveFaceAccurateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectLiveFaceAccurateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetectLiveFaceAccurate", DetectLiveFaceAccurateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetectLiveFaceAccurate", DetectLiveFaceAccurateResponse.class);
     }
 
     /**
@@ -356,14 +272,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public GetGroupInfoResponse GetGroupInfo(GetGroupInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetGroupInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetGroupInfo", GetGroupInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetGroupInfo", GetGroupInfoResponse.class);
     }
 
     /**
@@ -373,14 +283,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetGroupListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetGroupList", GetGroupListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetGroupList", GetGroupListResponse.class);
     }
 
     /**
@@ -390,14 +294,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public GetPersonBaseInfoResponse GetPersonBaseInfo(GetPersonBaseInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPersonBaseInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPersonBaseInfo", GetPersonBaseInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPersonBaseInfo", GetPersonBaseInfoResponse.class);
     }
 
     /**
@@ -407,14 +305,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public GetPersonGroupInfoResponse GetPersonGroupInfo(GetPersonGroupInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPersonGroupInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPersonGroupInfo", GetPersonGroupInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPersonGroupInfo", GetPersonGroupInfoResponse.class);
     }
 
     /**
@@ -424,14 +316,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public GetPersonListResponse GetPersonList(GetPersonListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPersonListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPersonList", GetPersonListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPersonList", GetPersonListResponse.class);
     }
 
     /**
@@ -441,14 +327,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public GetPersonListNumResponse GetPersonListNum(GetPersonListNumRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPersonListNumResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPersonListNum", GetPersonListNumResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPersonListNum", GetPersonListNumResponse.class);
     }
 
     /**
@@ -458,14 +338,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
     }
 
     /**
@@ -475,14 +349,8 @@ Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. 
      * @throws TencentCloudSDKException
      */
     public ModifyPersonGroupInfoResponse ModifyPersonGroupInfo(ModifyPersonGroupInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPersonGroupInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPersonGroupInfo", ModifyPersonGroupInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPersonGroupInfo", ModifyPersonGroupInfoResponse.class);
     }
 
     /**
@@ -507,14 +375,8 @@ This API should be used together with [Group Management APIs](https://intl.cloud
      * @throws TencentCloudSDKException
      */
     public SearchFacesResponse SearchFaces(SearchFacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchFacesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SearchFaces", SearchFacesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SearchFaces", SearchFacesResponse.class);
     }
 
     /**
@@ -539,14 +401,8 @@ This API should be used together with [Group Management APIs](https://intl.cloud
      * @throws TencentCloudSDKException
      */
     public SearchFacesReturnsByGroupResponse SearchFacesReturnsByGroup(SearchFacesReturnsByGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchFacesReturnsByGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SearchFacesReturnsByGroup", SearchFacesReturnsByGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SearchFacesReturnsByGroup", SearchFacesReturnsByGroupResponse.class);
     }
 
     /**
@@ -566,14 +422,8 @@ This API fuses the features of all face images of a person; for example, if a pe
      * @throws TencentCloudSDKException
      */
     public SearchPersonsResponse SearchPersons(SearchPersonsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchPersonsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SearchPersons", SearchPersonsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SearchPersons", SearchPersonsResponse.class);
     }
 
     /**
@@ -592,14 +442,8 @@ This API fuses the features of all face images of a person; for example, if a pe
      * @throws TencentCloudSDKException
      */
     public SearchPersonsReturnsByGroupResponse SearchPersonsReturnsByGroup(SearchPersonsReturnsByGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchPersonsReturnsByGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SearchPersonsReturnsByGroup", SearchPersonsReturnsByGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SearchPersonsReturnsByGroup", SearchPersonsReturnsByGroupResponse.class);
     }
 
     /**
@@ -616,14 +460,8 @@ This API recognizes each face image of a person as an independent one. By contra
      * @throws TencentCloudSDKException
      */
     public VerifyFaceResponse VerifyFace(VerifyFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VerifyFace", VerifyFaceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VerifyFace", VerifyFaceResponse.class);
     }
 
     /**
@@ -641,14 +479,8 @@ This API fuses the features of all face images of a person; for example, if a pe
      * @throws TencentCloudSDKException
      */
     public VerifyPersonResponse VerifyPerson(VerifyPersonRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyPersonResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VerifyPerson", VerifyPersonResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VerifyPerson", VerifyPersonResponse.class);
     }
 
 }

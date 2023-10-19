@@ -48,14 +48,8 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
      * @throws TencentCloudSDKException
      */
     public CompleteMigrateJobResponse CompleteMigrateJob(CompleteMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CompleteMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CompleteMigrateJob", CompleteMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CompleteMigrateJob", CompleteMigrateJobResponse.class);
     }
 
     /**
@@ -65,14 +59,8 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
      * @throws TencentCloudSDKException
      */
     public ConfigureSyncJobResponse ConfigureSyncJob(ConfigureSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ConfigureSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ConfigureSyncJob", ConfigureSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ConfigureSyncJob", ConfigureSyncJobResponse.class);
     }
 
     /**
@@ -82,14 +70,8 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
      * @throws TencentCloudSDKException
      */
     public ContinueMigrateJobResponse ContinueMigrateJob(ContinueMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ContinueMigrateJob", ContinueMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ContinueMigrateJob", ContinueMigrateJobResponse.class);
     }
 
     /**
@@ -99,14 +81,8 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
      * @throws TencentCloudSDKException
      */
     public ContinueSyncJobResponse ContinueSyncJob(ContinueSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ContinueSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ContinueSyncJob", ContinueSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ContinueSyncJob", ContinueSyncJobResponse.class);
     }
 
     /**
@@ -116,14 +92,8 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
      * @throws TencentCloudSDKException
      */
     public CreateCheckSyncJobResponse CreateCheckSyncJob(CreateCheckSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCheckSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCheckSyncJob", CreateCheckSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCheckSyncJob", CreateCheckSyncJobResponse.class);
     }
 
     /**
@@ -133,14 +103,8 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
      * @throws TencentCloudSDKException
      */
     public CreateCompareTaskResponse CreateCompareTask(CreateCompareTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCompareTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCompareTask", CreateCompareTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCompareTask", CreateCompareTaskResponse.class);
     }
 
     /**
@@ -153,14 +117,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public CreateMigrateCheckJobResponse CreateMigrateCheckJob(CreateMigrateCheckJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMigrateCheckJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateMigrateCheckJob", CreateMigrateCheckJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateMigrateCheckJob", CreateMigrateCheckJobResponse.class);
     }
 
     /**
@@ -170,14 +128,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public CreateMigrationServiceResponse CreateMigrationService(CreateMigrationServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMigrationServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateMigrationService", CreateMigrationServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateMigrationService", CreateMigrationServiceResponse.class);
     }
 
     /**
@@ -187,14 +139,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJob(CreateModifyCheckSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateModifyCheckSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateModifyCheckSyncJob", CreateModifyCheckSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateModifyCheckSyncJob", CreateModifyCheckSyncJobResponse.class);
     }
 
     /**
@@ -204,14 +150,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public CreateSyncJobResponse CreateSyncJob(CreateSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSyncJob", CreateSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSyncJob", CreateSyncJobResponse.class);
     }
 
     /**
@@ -221,14 +161,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public DeleteCompareTaskResponse DeleteCompareTask(DeleteCompareTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCompareTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCompareTask", DeleteCompareTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCompareTask", DeleteCompareTaskResponse.class);
     }
 
     /**
@@ -238,14 +172,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public DescribeCheckSyncJobResultResponse DescribeCheckSyncJobResult(DescribeCheckSyncJobResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCheckSyncJobResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCheckSyncJobResult", DescribeCheckSyncJobResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCheckSyncJobResult", DescribeCheckSyncJobResultResponse.class);
     }
 
     /**
@@ -255,14 +183,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public DescribeCompareReportResponse DescribeCompareReport(DescribeCompareReportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCompareReportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCompareReport", DescribeCompareReportResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCompareReport", DescribeCompareReportResponse.class);
     }
 
     /**
@@ -272,14 +194,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public DescribeCompareTasksResponse DescribeCompareTasks(DescribeCompareTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCompareTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCompareTasks", DescribeCompareTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCompareTasks", DescribeCompareTasksResponse.class);
     }
 
     /**
@@ -289,14 +205,8 @@ After successful check, if the migration task needs to be modified, a new check 
      * @throws TencentCloudSDKException
      */
     public DescribeMigrateDBInstancesResponse DescribeMigrateDBInstances(DescribeMigrateDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMigrateDBInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMigrateDBInstances", DescribeMigrateDBInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMigrateDBInstances", DescribeMigrateDBInstancesResponse.class);
     }
 
     /**
@@ -308,14 +218,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DescribeMigrationCheckJobResponse DescribeMigrationCheckJob(DescribeMigrationCheckJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMigrationCheckJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMigrationCheckJob", DescribeMigrationCheckJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMigrationCheckJob", DescribeMigrationCheckJobResponse.class);
     }
 
     /**
@@ -325,14 +229,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DescribeMigrationDetailResponse DescribeMigrationDetail(DescribeMigrationDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMigrationDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMigrationDetail", DescribeMigrationDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMigrationDetail", DescribeMigrationDetailResponse.class);
     }
 
     /**
@@ -342,14 +240,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DescribeMigrationJobsResponse DescribeMigrationJobs(DescribeMigrationJobsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMigrationJobsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMigrationJobs", DescribeMigrationJobsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMigrationJobs", DescribeMigrationJobsResponse.class);
     }
 
     /**
@@ -359,14 +251,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DescribeModifyCheckSyncJobResultResponse DescribeModifyCheckSyncJobResult(DescribeModifyCheckSyncJobResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeModifyCheckSyncJobResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeModifyCheckSyncJobResult", DescribeModifyCheckSyncJobResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeModifyCheckSyncJobResult", DescribeModifyCheckSyncJobResultResponse.class);
     }
 
     /**
@@ -376,14 +262,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DescribeSyncJobsResponse DescribeSyncJobs(DescribeSyncJobsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSyncJobsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSyncJobs", DescribeSyncJobsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSyncJobs", DescribeSyncJobsResponse.class);
     }
 
     /**
@@ -393,14 +273,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DestroyMigrateJobResponse DestroyMigrateJob(DestroyMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyMigrateJob", DestroyMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyMigrateJob", DestroyMigrateJobResponse.class);
     }
 
     /**
@@ -410,14 +284,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public DestroySyncJobResponse DestroySyncJob(DestroySyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroySyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroySyncJob", DestroySyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroySyncJob", DestroySyncJobResponse.class);
     }
 
     /**
@@ -427,14 +295,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public IsolateMigrateJobResponse IsolateMigrateJob(IsolateMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IsolateMigrateJob", IsolateMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IsolateMigrateJob", IsolateMigrateJobResponse.class);
     }
 
     /**
@@ -444,14 +306,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public IsolateSyncJobResponse IsolateSyncJob(IsolateSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IsolateSyncJob", IsolateSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IsolateSyncJob", IsolateSyncJobResponse.class);
     }
 
     /**
@@ -461,14 +317,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ModifyCompareTaskResponse ModifyCompareTask(ModifyCompareTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCompareTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCompareTask", ModifyCompareTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCompareTask", ModifyCompareTaskResponse.class);
     }
 
     /**
@@ -478,14 +328,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ModifyCompareTaskNameResponse ModifyCompareTaskName(ModifyCompareTaskNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCompareTaskNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCompareTaskName", ModifyCompareTaskNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCompareTaskName", ModifyCompareTaskNameResponse.class);
     }
 
     /**
@@ -495,14 +339,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ModifyMigrateJobSpecResponse ModifyMigrateJobSpec(ModifyMigrateJobSpecRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMigrateJobSpecResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMigrateJobSpec", ModifyMigrateJobSpecResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMigrateJobSpec", ModifyMigrateJobSpecResponse.class);
     }
 
     /**
@@ -512,14 +350,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ModifyMigrateNameResponse ModifyMigrateName(ModifyMigrateNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMigrateNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMigrateName", ModifyMigrateNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMigrateName", ModifyMigrateNameResponse.class);
     }
 
     /**
@@ -529,14 +361,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ModifyMigrationJobResponse ModifyMigrationJob(ModifyMigrationJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMigrationJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMigrationJob", ModifyMigrationJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMigrationJob", ModifyMigrationJobResponse.class);
     }
 
     /**
@@ -546,14 +372,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ModifySyncJobConfigResponse ModifySyncJobConfig(ModifySyncJobConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySyncJobConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySyncJobConfig", ModifySyncJobConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySyncJobConfig", ModifySyncJobConfigResponse.class);
     }
 
     /**
@@ -563,14 +383,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public PauseMigrateJobResponse PauseMigrateJob(PauseMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PauseMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PauseMigrateJob", PauseMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PauseMigrateJob", PauseMigrateJobResponse.class);
     }
 
     /**
@@ -580,14 +394,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public PauseSyncJobResponse PauseSyncJob(PauseSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PauseSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PauseSyncJob", PauseSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PauseSyncJob", PauseSyncJobResponse.class);
     }
 
     /**
@@ -597,14 +405,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public RecoverMigrateJobResponse RecoverMigrateJob(RecoverMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecoverMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecoverMigrateJob", RecoverMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecoverMigrateJob", RecoverMigrateJobResponse.class);
     }
 
     /**
@@ -614,14 +416,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public RecoverSyncJobResponse RecoverSyncJob(RecoverSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecoverSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecoverSyncJob", RecoverSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecoverSyncJob", RecoverSyncJobResponse.class);
     }
 
     /**
@@ -631,14 +427,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ResizeSyncJobResponse ResizeSyncJob(ResizeSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResizeSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResizeSyncJob", ResizeSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResizeSyncJob", ResizeSyncJobResponse.class);
     }
 
     /**
@@ -648,14 +438,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ResumeMigrateJobResponse ResumeMigrateJob(ResumeMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResumeMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResumeMigrateJob", ResumeMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResumeMigrateJob", ResumeMigrateJobResponse.class);
     }
 
     /**
@@ -665,14 +449,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public ResumeSyncJobResponse ResumeSyncJob(ResumeSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResumeSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResumeSyncJob", ResumeSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResumeSyncJob", ResumeSyncJobResponse.class);
     }
 
     /**
@@ -682,14 +460,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public SkipCheckItemResponse SkipCheckItem(SkipCheckItemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SkipCheckItemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SkipCheckItem", SkipCheckItemResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SkipCheckItem", SkipCheckItemResponse.class);
     }
 
     /**
@@ -699,14 +471,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public SkipSyncCheckItemResponse SkipSyncCheckItem(SkipSyncCheckItemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SkipSyncCheckItem", SkipSyncCheckItemResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SkipSyncCheckItem", SkipSyncCheckItemResponse.class);
     }
 
     /**
@@ -716,14 +482,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public StartCompareResponse StartCompare(StartCompareRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartCompareResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartCompare", StartCompareResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartCompare", StartCompareResponse.class);
     }
 
     /**
@@ -733,14 +493,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public StartMigrateJobResponse StartMigrateJob(StartMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartMigrateJob", StartMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartMigrateJob", StartMigrateJobResponse.class);
     }
 
     /**
@@ -750,14 +504,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public StartModifySyncJobResponse StartModifySyncJob(StartModifySyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartModifySyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartModifySyncJob", StartModifySyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartModifySyncJob", StartModifySyncJobResponse.class);
     }
 
     /**
@@ -767,14 +515,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public StartSyncJobResponse StartSyncJob(StartSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartSyncJob", StartSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartSyncJob", StartSyncJobResponse.class);
     }
 
     /**
@@ -784,14 +526,8 @@ If the check fails, the cause can be queried. Modify the migration configuration
      * @throws TencentCloudSDKException
      */
     public StopCompareResponse StopCompare(StopCompareRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopCompareResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopCompare", StopCompareResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopCompare", StopCompareResponse.class);
     }
 
     /**
@@ -802,14 +538,8 @@ After calling this API, you can call the `DescribeMigrationJobs` API to query th
      * @throws TencentCloudSDKException
      */
     public StopMigrateJobResponse StopMigrateJob(StopMigrateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMigrateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopMigrateJob", StopMigrateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopMigrateJob", StopMigrateJobResponse.class);
     }
 
     /**
@@ -819,14 +549,8 @@ After calling this API, you can call the `DescribeMigrationJobs` API to query th
      * @throws TencentCloudSDKException
      */
     public StopSyncJobResponse StopSyncJob(StopSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopSyncJob", StopSyncJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopSyncJob", StopSyncJobResponse.class);
     }
 
 }

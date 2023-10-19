@@ -46,14 +46,8 @@ public class VodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyUploadResponse ApplyUpload(ApplyUploadRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyUploadResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyUpload", ApplyUploadResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyUpload", ApplyUploadResponse.class);
     }
 
     /**
@@ -63,14 +57,8 @@ public class VodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachMediaSubtitlesResponse AttachMediaSubtitles(AttachMediaSubtitlesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachMediaSubtitlesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachMediaSubtitles", AttachMediaSubtitlesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachMediaSubtitles", AttachMediaSubtitlesResponse.class);
     }
 
     /**
@@ -80,14 +68,8 @@ public class VodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CloneCDNDomainResponse CloneCDNDomain(CloneCDNDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloneCDNDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CloneCDNDomain", CloneCDNDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CloneCDNDomain", CloneCDNDomainResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ public class VodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CommitUploadResponse CommitUpload(CommitUploadRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CommitUploadResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CommitUpload", CommitUploadResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CommitUpload", CommitUploadResponse.class);
     }
 
     /**
@@ -125,14 +101,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public ComposeMediaResponse ComposeMedia(ComposeMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ComposeMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ComposeMedia", ComposeMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ComposeMedia", ComposeMediaResponse.class);
     }
 
     /**
@@ -144,14 +114,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public ConfirmEventsResponse ConfirmEvents(ConfirmEventsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ConfirmEventsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ConfirmEvents", ConfirmEventsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ConfirmEvents", ConfirmEventsResponse.class);
     }
 
     /**
@@ -161,14 +125,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAIAnalysisTemplate", CreateAIAnalysisTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAIAnalysisTemplate", CreateAIAnalysisTemplateResponse.class);
     }
 
     /**
@@ -178,14 +136,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAIRecognitionTemplate", CreateAIRecognitionTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAIRecognitionTemplate", CreateAIRecognitionTemplateResponse.class);
     }
 
     /**
@@ -195,14 +147,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate", CreateAdaptiveDynamicStreamingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate", CreateAdaptiveDynamicStreamingTemplateResponse.class);
     }
 
     /**
@@ -212,14 +158,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(CreateAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAnimatedGraphicsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAnimatedGraphicsTemplate", CreateAnimatedGraphicsTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAnimatedGraphicsTemplate", CreateAnimatedGraphicsTemplateResponse.class);
     }
 
     /**
@@ -229,14 +169,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public CreateCDNDomainResponse CreateCDNDomain(CreateCDNDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCDNDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCDNDomain", CreateCDNDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCDNDomain", CreateCDNDomainResponse.class);
     }
 
     /**
@@ -249,14 +183,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
      * @throws TencentCloudSDKException
      */
     public CreateClassResponse CreateClass(CreateClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateClass", CreateClassResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateClass", CreateClassResponse.class);
     }
 
     /**
@@ -267,14 +195,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateContentReviewTemplate", CreateContentReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateContentReviewTemplate", CreateContentReviewTemplateResponse.class);
     }
 
     /**
@@ -284,14 +206,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(CreateImageProcessingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateImageProcessingTemplate", CreateImageProcessingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateImageProcessingTemplate", CreateImageProcessingTemplateResponse.class);
     }
 
     /**
@@ -301,14 +217,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(CreateImageSpriteTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateImageSpriteTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateImageSpriteTemplate", CreateImageSpriteTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateImageSpriteTemplate", CreateImageSpriteTemplateResponse.class);
     }
 
     /**
@@ -318,14 +228,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePersonSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
     }
 
     /**
@@ -335,14 +239,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreateProcedureTemplateResponse CreateProcedureTemplate(CreateProcedureTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProcedureTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateProcedureTemplate", CreateProcedureTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateProcedureTemplate", CreateProcedureTemplateResponse.class);
     }
 
     /**
@@ -352,14 +250,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplate(CreateRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRebuildMediaTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateRebuildMediaTemplate", CreateRebuildMediaTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateRebuildMediaTemplate", CreateRebuildMediaTemplateResponse.class);
     }
 
     /**
@@ -370,14 +262,8 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
      * @throws TencentCloudSDKException
      */
     public CreateReviewTemplateResponse CreateReviewTemplate(CreateReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateReviewTemplate", CreateReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateReviewTemplate", CreateReviewTemplateResponse.class);
     }
 
     /**
@@ -389,14 +275,8 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
      * @throws TencentCloudSDKException
      */
     public CreateRoundPlayResponse CreateRoundPlay(CreateRoundPlayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRoundPlayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateRoundPlay", CreateRoundPlayResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateRoundPlay", CreateRoundPlayResponse.class);
     }
 
     /**
@@ -406,14 +286,8 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
      * @throws TencentCloudSDKException
      */
     public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSampleSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSampleSnapshotTemplate", CreateSampleSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSampleSnapshotTemplate", CreateSampleSnapshotTemplateResponse.class);
     }
 
     /**
@@ -423,14 +297,8 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
      * @throws TencentCloudSDKException
      */
     public CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(CreateSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate", CreateSnapshotByTimeOffsetTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate", CreateSnapshotByTimeOffsetTemplateResponse.class);
     }
 
     /**
@@ -442,14 +310,8 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
      * @throws TencentCloudSDKException
      */
     public CreateStorageRegionResponse CreateStorageRegion(CreateStorageRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateStorageRegionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateStorageRegion", CreateStorageRegionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateStorageRegion", CreateStorageRegionResponse.class);
     }
 
     /**
@@ -459,14 +321,8 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
      * @throws TencentCloudSDKException
      */
     public CreateSubAppIdResponse CreateSubAppId(CreateSubAppIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSubAppIdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSubAppId", CreateSubAppIdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSubAppId", CreateSubAppIdResponse.class);
     }
 
     /**
@@ -477,14 +333,8 @@ This API is used to create a player configuration. Up to 100 configurations can 
      * @throws TencentCloudSDKException
      */
     public CreateSuperPlayerConfigResponse CreateSuperPlayerConfig(CreateSuperPlayerConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSuperPlayerConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSuperPlayerConfig", CreateSuperPlayerConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSuperPlayerConfig", CreateSuperPlayerConfigResponse.class);
     }
 
     /**
@@ -494,14 +344,8 @@ This API is used to create a player configuration. Up to 100 configurations can 
      * @throws TencentCloudSDKException
      */
     public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTranscodeTemplate", CreateTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTranscodeTemplate", CreateTranscodeTemplateResponse.class);
     }
 
     /**
@@ -512,14 +356,8 @@ This API is used to create a player configuration. Up to 100 configurations can 
      * @throws TencentCloudSDKException
      */
     public CreateVodDomainResponse CreateVodDomain(CreateVodDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateVodDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateVodDomain", CreateVodDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateVodDomain", CreateVodDomainResponse.class);
     }
 
     /**
@@ -529,14 +367,8 @@ This API is used to create a player configuration. Up to 100 configurations can 
      * @throws TencentCloudSDKException
      */
     public CreateWatermarkTemplateResponse CreateWatermarkTemplate(CreateWatermarkTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWatermarkTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWatermarkTemplate", CreateWatermarkTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWatermarkTemplate", CreateWatermarkTemplateResponse.class);
     }
 
     /**
@@ -546,14 +378,8 @@ This API is used to create a player configuration. Up to 100 configurations can 
      * @throws TencentCloudSDKException
      */
     public CreateWordSamplesResponse CreateWordSamples(CreateWordSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWordSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWordSamples", CreateWordSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWordSamples", CreateWordSamplesResponse.class);
     }
 
     /**
@@ -565,14 +391,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAIAnalysisTemplate", DeleteAIAnalysisTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAIAnalysisTemplate", DeleteAIAnalysisTemplateResponse.class);
     }
 
     /**
@@ -582,14 +402,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAIRecognitionTemplate", DeleteAIRecognitionTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAIRecognitionTemplate", DeleteAIRecognitionTemplateResponse.class);
     }
 
     /**
@@ -599,14 +413,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate", DeleteAdaptiveDynamicStreamingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate", DeleteAdaptiveDynamicStreamingTemplateResponse.class);
     }
 
     /**
@@ -616,14 +424,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAnimatedGraphicsTemplate", DeleteAnimatedGraphicsTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAnimatedGraphicsTemplate", DeleteAnimatedGraphicsTemplateResponse.class);
     }
 
     /**
@@ -633,14 +435,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteCDNDomainResponse DeleteCDNDomain(DeleteCDNDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCDNDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCDNDomain", DeleteCDNDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCDNDomain", DeleteCDNDomainResponse.class);
     }
 
     /**
@@ -651,14 +447,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteClassResponse DeleteClass(DeleteClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteClass", DeleteClassResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteClass", DeleteClassResponse.class);
     }
 
     /**
@@ -669,14 +459,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteContentReviewTemplate", DeleteContentReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteContentReviewTemplate", DeleteContentReviewTemplateResponse.class);
     }
 
     /**
@@ -686,14 +470,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(DeleteImageProcessingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteImageProcessingTemplate", DeleteImageProcessingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteImageProcessingTemplate", DeleteImageProcessingTemplateResponse.class);
     }
 
     /**
@@ -703,14 +481,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteImageSpriteTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
     }
 
     /**
@@ -722,14 +494,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteMediaResponse DeleteMedia(DeleteMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteMedia", DeleteMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteMedia", DeleteMediaResponse.class);
     }
 
     /**
@@ -739,14 +505,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePersonSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
     }
 
     /**
@@ -756,14 +516,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteProcedureTemplateResponse DeleteProcedureTemplate(DeleteProcedureTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteProcedureTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteProcedureTemplate", DeleteProcedureTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteProcedureTemplate", DeleteProcedureTemplateResponse.class);
     }
 
     /**
@@ -773,14 +527,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(DeleteRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRebuildMediaTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRebuildMediaTemplate", DeleteRebuildMediaTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRebuildMediaTemplate", DeleteRebuildMediaTemplateResponse.class);
     }
 
     /**
@@ -791,14 +539,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteReviewTemplateResponse DeleteReviewTemplate(DeleteReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteReviewTemplate", DeleteReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteReviewTemplate", DeleteReviewTemplateResponse.class);
     }
 
     /**
@@ -808,14 +550,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteRoundPlayResponse DeleteRoundPlay(DeleteRoundPlayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRoundPlay", DeleteRoundPlayResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRoundPlay", DeleteRoundPlayResponse.class);
     }
 
     /**
@@ -825,14 +561,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(DeleteSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSampleSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSampleSnapshotTemplate", DeleteSampleSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSampleSnapshotTemplate", DeleteSampleSnapshotTemplateResponse.class);
     }
 
     /**
@@ -842,14 +572,8 @@ This API is used to delete a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate", DeleteSnapshotByTimeOffsetTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate", DeleteSnapshotByTimeOffsetTemplateResponse.class);
     }
 
     /**
@@ -861,14 +585,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DeleteSuperPlayerConfigResponse DeleteSuperPlayerConfig(DeleteSuperPlayerConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSuperPlayerConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSuperPlayerConfig", DeleteSuperPlayerConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSuperPlayerConfig", DeleteSuperPlayerConfigResponse.class);
     }
 
     /**
@@ -878,14 +596,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTranscodeTemplate", DeleteTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTranscodeTemplate", DeleteTranscodeTemplateResponse.class);
     }
 
     /**
@@ -896,14 +608,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DeleteVodDomainResponse DeleteVodDomain(DeleteVodDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteVodDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteVodDomain", DeleteVodDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteVodDomain", DeleteVodDomainResponse.class);
     }
 
     /**
@@ -913,14 +619,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(DeleteWatermarkTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWatermarkTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWatermarkTemplate", DeleteWatermarkTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWatermarkTemplate", DeleteWatermarkTemplateResponse.class);
     }
 
     /**
@@ -930,14 +630,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DeleteWordSamplesResponse DeleteWordSamples(DeleteWordSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWordSamples", DeleteWordSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWordSamples", DeleteWordSamplesResponse.class);
     }
 
     /**
@@ -947,14 +641,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAIAnalysisTemplates", DescribeAIAnalysisTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAIAnalysisTemplates", DescribeAIAnalysisTemplatesResponse.class);
     }
 
     /**
@@ -964,14 +652,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAIRecognitionTemplates", DescribeAIRecognitionTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAIRecognitionTemplates", DescribeAIRecognitionTemplatesResponse.class);
     }
 
     /**
@@ -981,14 +663,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
     }
 
     /**
@@ -998,14 +674,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeAllClassResponse DescribeAllClass(DescribeAllClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAllClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAllClass", DescribeAllClassResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAllClass", DescribeAllClassResponse.class);
     }
 
     /**
@@ -1015,14 +685,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
     }
 
     /**
@@ -1032,14 +696,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeCDNDomainsResponse DescribeCDNDomains(DescribeCDNDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCDNDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCDNDomains", DescribeCDNDomainsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCDNDomains", DescribeCDNDomainsResponse.class);
     }
 
     /**
@@ -1052,14 +710,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeCDNStatDetailsResponse DescribeCDNStatDetails(DescribeCDNStatDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCDNStatDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCDNStatDetails", DescribeCDNStatDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCDNStatDetails", DescribeCDNStatDetailsResponse.class);
     }
 
     /**
@@ -1073,14 +725,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeCDNUsageDataResponse DescribeCDNUsageData(DescribeCDNUsageDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCDNUsageDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCDNUsageData", DescribeCDNUsageDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCDNUsageData", DescribeCDNUsageDataResponse.class);
     }
 
     /**
@@ -1093,14 +739,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeCdnLogsResponse DescribeCdnLogs(DescribeCdnLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCdnLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCdnLogs", DescribeCdnLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCdnLogs", DescribeCdnLogsResponse.class);
     }
 
     /**
@@ -1114,14 +754,8 @@ This API is used to delete a player configuration.
      * @throws TencentCloudSDKException
      */
     public DescribeClientUploadAccelerationUsageDataResponse DescribeClientUploadAccelerationUsageData(DescribeClientUploadAccelerationUsageDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeClientUploadAccelerationUsageData", DescribeClientUploadAccelerationUsageDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeClientUploadAccelerationUsageData", DescribeClientUploadAccelerationUsageDataResponse.class);
     }
 
     /**
@@ -1132,14 +766,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
     }
 
     /**
@@ -1156,14 +784,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(DescribeDailyPlayStatFileListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDailyPlayStatFileListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDailyPlayStatFileList", DescribeDailyPlayStatFileListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDailyPlayStatFileList", DescribeDailyPlayStatFileListResponse.class);
     }
 
     /**
@@ -1173,14 +795,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeDrmKeyProviderInfoResponse DescribeDrmKeyProviderInfo(DescribeDrmKeyProviderInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDrmKeyProviderInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDrmKeyProviderInfo", DescribeDrmKeyProviderInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDrmKeyProviderInfo", DescribeDrmKeyProviderInfoResponse.class);
     }
 
     /**
@@ -1192,14 +808,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeFileAttributesResponse DescribeFileAttributes(DescribeFileAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeFileAttributes", DescribeFileAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeFileAttributes", DescribeFileAttributesResponse.class);
     }
 
     /**
@@ -1209,14 +819,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(DescribeImageProcessingTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeImageProcessingTemplates", DescribeImageProcessingTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeImageProcessingTemplates", DescribeImageProcessingTemplatesResponse.class);
     }
 
     /**
@@ -1230,14 +834,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(DescribeImageReviewUsageDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeImageReviewUsageData", DescribeImageReviewUsageDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeImageReviewUsageData", DescribeImageReviewUsageDataResponse.class);
     }
 
     /**
@@ -1247,14 +845,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeImageSpriteTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
     }
 
     /**
@@ -1268,14 +860,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeLicenseUsageDataResponse DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLicenseUsageData", DescribeLicenseUsageDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLicenseUsageData", DescribeLicenseUsageDataResponse.class);
     }
 
     /**
@@ -1296,14 +882,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeMediaInfosResponse DescribeMediaInfos(DescribeMediaInfosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaInfosResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMediaInfos", DescribeMediaInfosResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMediaInfos", DescribeMediaInfosResponse.class);
     }
 
     /**
@@ -1316,14 +896,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(DescribeMediaPlayStatDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaPlayStatDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMediaPlayStatDetails", DescribeMediaPlayStatDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMediaPlayStatDetails", DescribeMediaPlayStatDetailsResponse.class);
     }
 
     /**
@@ -1335,14 +909,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(DescribeMediaProcessUsageDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaProcessUsageDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMediaProcessUsageData", DescribeMediaProcessUsageDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMediaProcessUsageData", DescribeMediaProcessUsageDataResponse.class);
     }
 
     /**
@@ -1352,14 +920,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
     }
 
     /**
@@ -1369,14 +931,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeProcedureTemplatesResponse DescribeProcedureTemplates(DescribeProcedureTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProcedureTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProcedureTemplates", DescribeProcedureTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProcedureTemplates", DescribeProcedureTemplatesResponse.class);
     }
 
     /**
@@ -1386,14 +942,8 @@ This API is used to get the information of custom and [preset](https://intl.clou
      * @throws TencentCloudSDKException
      */
     public DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplates(DescribeRebuildMediaTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRebuildMediaTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRebuildMediaTemplates", DescribeRebuildMediaTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRebuildMediaTemplates", DescribeRebuildMediaTemplatesResponse.class);
     }
 
     /**
@@ -1408,14 +958,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeReviewDetailsResponse DescribeReviewDetails(DescribeReviewDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeReviewDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeReviewDetails", DescribeReviewDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeReviewDetails", DescribeReviewDetailsResponse.class);
     }
 
     /**
@@ -1426,14 +970,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeReviewTemplatesResponse DescribeReviewTemplates(DescribeReviewTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeReviewTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeReviewTemplates", DescribeReviewTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeReviewTemplates", DescribeReviewTemplatesResponse.class);
     }
 
     /**
@@ -1443,14 +981,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeRoundPlaysResponse DescribeRoundPlays(DescribeRoundPlaysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRoundPlays", DescribeRoundPlaysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRoundPlays", DescribeRoundPlaysResponse.class);
     }
 
     /**
@@ -1460,14 +992,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(DescribeSampleSnapshotTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSampleSnapshotTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSampleSnapshotTemplates", DescribeSampleSnapshotTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSampleSnapshotTemplates", DescribeSampleSnapshotTemplatesResponse.class);
     }
 
     /**
@@ -1477,14 +1003,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates", DescribeSnapshotByTimeOffsetTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates", DescribeSnapshotByTimeOffsetTemplatesResponse.class);
     }
 
     /**
@@ -1494,14 +1014,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeStorageDataResponse DescribeStorageData(DescribeStorageDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStorageDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStorageData", DescribeStorageDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStorageData", DescribeStorageDataResponse.class);
     }
 
     /**
@@ -1514,14 +1028,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeStorageDetailsResponse DescribeStorageDetails(DescribeStorageDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStorageDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStorageDetails", DescribeStorageDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStorageDetails", DescribeStorageDetailsResponse.class);
     }
 
     /**
@@ -1534,14 +1042,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeStorageRegionsResponse DescribeStorageRegions(DescribeStorageRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStorageRegions", DescribeStorageRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStorageRegions", DescribeStorageRegionsResponse.class);
     }
 
     /**
@@ -1551,14 +1053,8 @@ This API returns the video content duration for intelligent recognition in secon
      * @throws TencentCloudSDKException
      */
     public DescribeSubAppIdsResponse DescribeSubAppIds(DescribeSubAppIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubAppIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSubAppIds", DescribeSubAppIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSubAppIds", DescribeSubAppIdsResponse.class);
     }
 
     /**
@@ -1569,14 +1065,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeSuperPlayerConfigsResponse DescribeSuperPlayerConfigs(DescribeSuperPlayerConfigsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSuperPlayerConfigsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSuperPlayerConfigs", DescribeSuperPlayerConfigsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSuperPlayerConfigs", DescribeSuperPlayerConfigsResponse.class);
     }
 
     /**
@@ -1586,14 +1076,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
     }
 
     /**
@@ -1605,14 +1089,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
     }
 
     /**
@@ -1622,14 +1100,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTranscodeTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTranscodeTemplates", DescribeTranscodeTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTranscodeTemplates", DescribeTranscodeTemplatesResponse.class);
     }
 
     /**
@@ -1639,14 +1111,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeVodDomainsResponse DescribeVodDomains(DescribeVodDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeVodDomains", DescribeVodDomainsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeVodDomains", DescribeVodDomainsResponse.class);
     }
 
     /**
@@ -1656,14 +1122,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(DescribeWatermarkTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWatermarkTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWatermarkTemplates", DescribeWatermarkTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWatermarkTemplates", DescribeWatermarkTemplatesResponse.class);
     }
 
     /**
@@ -1673,14 +1133,8 @@ This API is used to query player configurations. It supports pagination.
      * @throws TencentCloudSDKException
      */
     public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
     }
 
     /**
@@ -1700,14 +1154,8 @@ You can also specify whether to perform a task flow for the generated new video.
      * @throws TencentCloudSDKException
      */
     public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EditMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EditMedia", EditMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EditMedia", EditMediaResponse.class);
     }
 
     /**
@@ -1717,14 +1165,8 @@ You can also specify whether to perform a task flow for the generated new video.
      * @throws TencentCloudSDKException
      */
     public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ExecuteFunctionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ExecuteFunction", ExecuteFunctionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ExecuteFunction", ExecuteFunctionResponse.class);
     }
 
     /**
@@ -1734,14 +1176,8 @@ You can also specify whether to perform a task flow for the generated new video.
      * @throws TencentCloudSDKException
      */
     public ExtractTraceWatermarkResponse ExtractTraceWatermark(ExtractTraceWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ExtractTraceWatermark", ExtractTraceWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ExtractTraceWatermark", ExtractTraceWatermarkResponse.class);
     }
 
     /**
@@ -1752,14 +1188,8 @@ You can also specify whether to perform a task flow for the generated new video.
      * @throws TencentCloudSDKException
      */
     public ForbidMediaDistributionResponse ForbidMediaDistribution(ForbidMediaDistributionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ForbidMediaDistributionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ForbidMediaDistribution", ForbidMediaDistributionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ForbidMediaDistribution", ForbidMediaDistributionResponse.class);
     }
 
     /**
@@ -1792,14 +1222,8 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
      * @throws TencentCloudSDKException
      */
     public LiveRealTimeClipResponse LiveRealTimeClip(LiveRealTimeClipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LiveRealTimeClipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "LiveRealTimeClip", LiveRealTimeClipResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "LiveRealTimeClip", LiveRealTimeClipResponse.class);
     }
 
     /**
@@ -1809,14 +1233,8 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
      * @throws TencentCloudSDKException
      */
     public ManageTaskResponse ManageTask(ManageTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManageTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ManageTask", ManageTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ManageTask", ManageTaskResponse.class);
     }
 
     /**
@@ -1828,14 +1246,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAIAnalysisTemplate", ModifyAIAnalysisTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAIAnalysisTemplate", ModifyAIAnalysisTemplateResponse.class);
     }
 
     /**
@@ -1845,14 +1257,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAIRecognitionTemplate", ModifyAIRecognitionTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAIRecognitionTemplate", ModifyAIRecognitionTemplateResponse.class);
     }
 
     /**
@@ -1862,14 +1268,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
     }
 
     /**
@@ -1879,14 +1279,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
     }
 
     /**
@@ -1896,14 +1290,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyCDNDomainConfigResponse ModifyCDNDomainConfig(ModifyCDNDomainConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCDNDomainConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCDNDomainConfig", ModifyCDNDomainConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCDNDomainConfig", ModifyCDNDomainConfigResponse.class);
     }
 
     /**
@@ -1913,14 +1301,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyClassResponse ModifyClass(ModifyClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyClass", ModifyClassResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyClass", ModifyClassResponse.class);
     }
 
     /**
@@ -1931,14 +1313,8 @@ This API is used to modify a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyContentReviewTemplate", ModifyContentReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyContentReviewTemplate", ModifyContentReviewTemplateResponse.class);
     }
 
     /**
@@ -1948,14 +1324,8 @@ This API is used to modify a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegion(ModifyDefaultStorageRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDefaultStorageRegion", ModifyDefaultStorageRegionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDefaultStorageRegion", ModifyDefaultStorageRegionResponse.class);
     }
 
     /**
@@ -1965,14 +1335,8 @@ This API is used to modify a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyImageSpriteTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
     }
 
     /**
@@ -1982,14 +1346,8 @@ This API is used to modify a custom audio/video moderation template.
      * @throws TencentCloudSDKException
      */
     public ModifyMediaInfoResponse ModifyMediaInfo(ModifyMediaInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMediaInfo", ModifyMediaInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMediaInfo", ModifyMediaInfoResponse.class);
     }
 
     /**
@@ -2011,14 +1369,8 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
      * @throws TencentCloudSDKException
      */
     public ModifyMediaStorageClassResponse ModifyMediaStorageClass(ModifyMediaStorageClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMediaStorageClass", ModifyMediaStorageClassResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMediaStorageClass", ModifyMediaStorageClassResponse.class);
     }
 
     /**
@@ -2028,14 +1380,8 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
      * @throws TencentCloudSDKException
      */
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
     }
 
     /**
@@ -2045,14 +1391,8 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
      * @throws TencentCloudSDKException
      */
     public ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplate(ModifyRebuildMediaTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRebuildMediaTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyRebuildMediaTemplate", ModifyRebuildMediaTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyRebuildMediaTemplate", ModifyRebuildMediaTemplateResponse.class);
     }
 
     /**
@@ -2063,14 +1403,8 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
      * @throws TencentCloudSDKException
      */
     public ModifyReviewTemplateResponse ModifyReviewTemplate(ModifyReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyReviewTemplate", ModifyReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyReviewTemplate", ModifyReviewTemplateResponse.class);
     }
 
     /**
@@ -2081,14 +1415,8 @@ The modification will only take effect for new playback requests. For ongoing pl
      * @throws TencentCloudSDKException
      */
     public ModifyRoundPlayResponse ModifyRoundPlay(ModifyRoundPlayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyRoundPlay", ModifyRoundPlayResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyRoundPlay", ModifyRoundPlayResponse.class);
     }
 
     /**
@@ -2098,14 +1426,8 @@ The modification will only take effect for new playback requests. For ongoing pl
      * @throws TencentCloudSDKException
      */
     public ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(ModifySampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySampleSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySampleSnapshotTemplate", ModifySampleSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySampleSnapshotTemplate", ModifySampleSnapshotTemplateResponse.class);
     }
 
     /**
@@ -2115,14 +1437,8 @@ The modification will only take effect for new playback requests. For ongoing pl
      * @throws TencentCloudSDKException
      */
     public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate", ModifySnapshotByTimeOffsetTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate", ModifySnapshotByTimeOffsetTemplateResponse.class);
     }
 
     /**
@@ -2132,14 +1448,8 @@ The modification will only take effect for new playback requests. For ongoing pl
      * @throws TencentCloudSDKException
      */
     public ModifySubAppIdInfoResponse ModifySubAppIdInfo(ModifySubAppIdInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySubAppIdInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySubAppIdInfo", ModifySubAppIdInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySubAppIdInfo", ModifySubAppIdInfoResponse.class);
     }
 
     /**
@@ -2149,14 +1459,8 @@ The modification will only take effect for new playback requests. For ongoing pl
      * @throws TencentCloudSDKException
      */
     public ModifySubAppIdStatusResponse ModifySubAppIdStatus(ModifySubAppIdStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySubAppIdStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySubAppIdStatus", ModifySubAppIdStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySubAppIdStatus", ModifySubAppIdStatusResponse.class);
     }
 
     /**
@@ -2167,14 +1471,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ModifySuperPlayerConfigResponse ModifySuperPlayerConfig(ModifySuperPlayerConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySuperPlayerConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySuperPlayerConfig", ModifySuperPlayerConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySuperPlayerConfig", ModifySuperPlayerConfigResponse.class);
     }
 
     /**
@@ -2184,14 +1482,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTranscodeTemplate", ModifyTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTranscodeTemplate", ModifyTranscodeTemplateResponse.class);
     }
 
     /**
@@ -2202,14 +1494,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(ModifyVodDomainAccelerateConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVodDomainAccelerateConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyVodDomainAccelerateConfig", ModifyVodDomainAccelerateConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyVodDomainAccelerateConfig", ModifyVodDomainAccelerateConfigResponse.class);
     }
 
     /**
@@ -2220,14 +1506,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ModifyVodDomainConfigResponse ModifyVodDomainConfig(ModifyVodDomainConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVodDomainConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyVodDomainConfig", ModifyVodDomainConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyVodDomainConfig", ModifyVodDomainConfigResponse.class);
     }
 
     /**
@@ -2237,14 +1517,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(ModifyWatermarkTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyWatermarkTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyWatermarkTemplate", ModifyWatermarkTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyWatermarkTemplate", ModifyWatermarkTemplateResponse.class);
     }
 
     /**
@@ -2254,14 +1528,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ModifyWordSampleResponse ModifyWordSample(ModifyWordSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyWordSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyWordSample", ModifyWordSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyWordSample", ModifyWordSampleResponse.class);
     }
 
     /**
@@ -2271,14 +1539,8 @@ This API is used to modify a player configuration.
      * @throws TencentCloudSDKException
      */
     public ParseStreamingManifestResponse ParseStreamingManifest(ParseStreamingManifestRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ParseStreamingManifestResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ParseStreamingManifest", ParseStreamingManifestResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ParseStreamingManifest", ParseStreamingManifestResponse.class);
     }
 
     /**
@@ -2293,14 +1555,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public ProcessMediaByProcedureResponse ProcessMediaByProcedure(ProcessMediaByProcedureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ProcessMediaByProcedureResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ProcessMediaByProcedure", ProcessMediaByProcedureResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ProcessMediaByProcedure", ProcessMediaByProcedureResponse.class);
     }
 
     /**
@@ -2310,14 +1566,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public ProcessMediaByUrlResponse ProcessMediaByUrl(ProcessMediaByUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ProcessMediaByUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ProcessMediaByUrl", ProcessMediaByUrlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ProcessMediaByUrl", ProcessMediaByUrlResponse.class);
     }
 
     /**
@@ -2332,14 +1582,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public PullEventsResponse PullEvents(PullEventsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PullEventsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PullEvents", PullEventsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PullEvents", PullEventsResponse.class);
     }
 
     /**
@@ -2349,14 +1593,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public PullUploadResponse PullUpload(PullUploadRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PullUploadResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PullUpload", PullUploadResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PullUpload", PullUploadResponse.class);
     }
 
     /**
@@ -2369,14 +1607,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public PushUrlCacheResponse PushUrlCache(PushUrlCacheRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PushUrlCacheResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PushUrlCache", PushUrlCacheResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PushUrlCache", PushUrlCacheResponse.class);
     }
 
     /**
@@ -2386,14 +1618,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public RebuildMediaResponse RebuildMedia(RebuildMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RebuildMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RebuildMedia", RebuildMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RebuildMedia", RebuildMediaResponse.class);
     }
 
     /**
@@ -2403,14 +1629,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public RebuildMediaByTemplateResponse RebuildMediaByTemplate(RebuildMediaByTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RebuildMediaByTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RebuildMediaByTemplate", RebuildMediaByTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RebuildMediaByTemplate", RebuildMediaByTemplateResponse.class);
     }
 
     /**
@@ -2423,14 +1643,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public RefreshUrlCacheResponse RefreshUrlCache(RefreshUrlCacheRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RefreshUrlCache", RefreshUrlCacheResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RefreshUrlCache", RefreshUrlCacheResponse.class);
     }
 
     /**
@@ -2440,14 +1654,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public RemoveWatermarkResponse RemoveWatermark(RemoveWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RemoveWatermark", RemoveWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RemoveWatermark", RemoveWatermarkResponse.class);
     }
 
     /**
@@ -2457,14 +1665,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public ResetProcedureTemplateResponse ResetProcedureTemplate(ResetProcedureTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetProcedureTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResetProcedureTemplate", ResetProcedureTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResetProcedureTemplate", ResetProcedureTemplateResponse.class);
     }
 
     /**
@@ -2474,14 +1676,8 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
      * @throws TencentCloudSDKException
      */
     public RestoreMediaResponse RestoreMedia(RestoreMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RestoreMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RestoreMedia", RestoreMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RestoreMedia", RestoreMediaResponse.class);
     }
 
     /**
@@ -2493,14 +1689,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
      * @throws TencentCloudSDKException
      */
     public ReviewAudioVideoResponse ReviewAudioVideo(ReviewAudioVideoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReviewAudioVideo", ReviewAudioVideoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReviewAudioVideo", ReviewAudioVideoResponse.class);
     }
 
     /**
@@ -2510,14 +1700,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
      * @throws TencentCloudSDKException
      */
     public ReviewImageResponse ReviewImage(ReviewImageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReviewImageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReviewImage", ReviewImageResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReviewImage", ReviewImageResponse.class);
     }
 
     /**
@@ -2563,14 +1747,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
      * @throws TencentCloudSDKException
      */
     public SearchMediaResponse SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SearchMedia", SearchMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SearchMedia", SearchMediaResponse.class);
     }
 
     /**
@@ -2580,14 +1758,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
      * @throws TencentCloudSDKException
      */
     public SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(SetDrmKeyProviderInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetDrmKeyProviderInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetDrmKeyProviderInfo", SetDrmKeyProviderInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetDrmKeyProviderInfo", SetDrmKeyProviderInfoResponse.class);
     }
 
     /**
@@ -2619,14 +1791,8 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
      * @throws TencentCloudSDKException
      */
     public SimpleHlsClipResponse SimpleHlsClip(SimpleHlsClipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SimpleHlsClipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SimpleHlsClip", SimpleHlsClipResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SimpleHlsClip", SimpleHlsClipResponse.class);
     }
 
     /**
@@ -2636,14 +1802,8 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
      * @throws TencentCloudSDKException
      */
     public StartCDNDomainResponse StartCDNDomain(StartCDNDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartCDNDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartCDNDomain", StartCDNDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartCDNDomain", StartCDNDomainResponse.class);
     }
 
 }

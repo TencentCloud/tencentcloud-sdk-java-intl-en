@@ -45,14 +45,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyCertificateResponse ApplyCertificate(ApplyCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyCertificate", ApplyCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyCertificate", ApplyCertificateResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchDeleteCSRResponse BatchDeleteCSR(BatchDeleteCSRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchDeleteCSRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchDeleteCSR", BatchDeleteCSRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchDeleteCSR", BatchDeleteCSRResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelAuditCertificateResponse CancelAuditCertificate(CancelAuditCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelAuditCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelAuditCertificate", CancelAuditCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelAuditCertificate", CancelAuditCertificateResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelCertificateOrderResponse CancelCertificateOrder(CancelCertificateOrderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelCertificateOrderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelCertificateOrder", CancelCertificateOrderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelCertificateOrder", CancelCertificateOrderResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CommitCertificateInformationResponse CommitCertificateInformation(CommitCertificateInformationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CommitCertificateInformationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CommitCertificateInformation", CommitCertificateInformationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CommitCertificateInformation", CommitCertificateInformationResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCSRResponse CreateCSR(CreateCSRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCSRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCSR", CreateCSRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCSR", CreateCSRResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCertificateResponse CreateCertificate(CreateCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCertificate", CreateCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCertificate", CreateCertificateResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCertificateBindResourceSyncTask", CreateCertificateBindResourceSyncTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCertificateBindResourceSyncTask", CreateCertificateBindResourceSyncTaskResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCertificateResponse DeleteCertificate(DeleteCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCertificate", DeleteCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCertificate", DeleteCertificateResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCSRResponse DescribeCSR(DescribeCSRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCSRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCSR", DescribeCSRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCSR", DescribeCSRResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCSRSetResponse DescribeCSRSet(DescribeCSRSetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCSRSetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCSRSet", DescribeCSRSetResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCSRSet", DescribeCSRSetResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertificateResponse DescribeCertificate(DescribeCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificate", DescribeCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificate", DescribeCertificateResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificateBindResourceTaskDetail", DescribeCertificateBindResourceTaskDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificateBindResourceTaskDetail", DescribeCertificateBindResourceTaskDetailResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificateBindResourceTaskResult", DescribeCertificateBindResourceTaskResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificateBindResourceTaskResult", DescribeCertificateBindResourceTaskResultResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertificateDetailResponse DescribeCertificateDetail(DescribeCertificateDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificateDetail", DescribeCertificateDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificateDetail", DescribeCertificateDetailResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogs(DescribeCertificateOperateLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificateOperateLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificateOperateLogs", DescribeCertificateOperateLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificateOperateLogs", DescribeCertificateOperateLogsResponse.class);
     }
 
     /**
@@ -317,14 +221,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertificatesResponse DescribeCertificates(DescribeCertificatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificates", DescribeCertificatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificates", DescribeCertificatesResponse.class);
     }
 
     /**
@@ -334,14 +232,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeHostTeoInstanceList", DescribeHostTeoInstanceListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeHostTeoInstanceList", DescribeHostTeoInstanceListResponse.class);
     }
 
     /**
@@ -351,14 +243,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DownloadCertificateResponse DownloadCertificate(DownloadCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DownloadCertificate", DownloadCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DownloadCertificate", DownloadCertificateResponse.class);
     }
 
     /**
@@ -368,14 +254,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCSRResponse ModifyCSR(ModifyCSRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCSRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCSR", ModifyCSRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCSR", ModifyCSRResponse.class);
     }
 
     /**
@@ -385,14 +265,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCertificateAliasResponse ModifyCertificateAlias(ModifyCertificateAliasRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCertificateAliasResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCertificateAlias", ModifyCertificateAliasResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCertificateAlias", ModifyCertificateAliasResponse.class);
     }
 
     /**
@@ -402,14 +276,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCertificateProjectResponse ModifyCertificateProject(ModifyCertificateProjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCertificateProjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCertificateProject", ModifyCertificateProjectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCertificateProject", ModifyCertificateProjectResponse.class);
     }
 
     /**
@@ -419,14 +287,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCertificateResubmitResponse ModifyCertificateResubmit(ModifyCertificateResubmitRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCertificateResubmitResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCertificateResubmit", ModifyCertificateResubmitResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCertificateResubmit", ModifyCertificateResubmitResponse.class);
     }
 
     /**
@@ -436,14 +298,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ReplaceCertificateResponse ReplaceCertificate(ReplaceCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReplaceCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReplaceCertificate", ReplaceCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReplaceCertificate", ReplaceCertificateResponse.class);
     }
 
     /**
@@ -453,14 +309,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SubmitCertificateInformationResponse SubmitCertificateInformation(SubmitCertificateInformationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SubmitCertificateInformationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SubmitCertificateInformation", SubmitCertificateInformationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SubmitCertificateInformation", SubmitCertificateInformationResponse.class);
     }
 
     /**
@@ -470,14 +320,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UploadCertificateResponse UploadCertificate(UploadCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UploadCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UploadCertificate", UploadCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UploadCertificate", UploadCertificateResponse.class);
     }
 
     /**
@@ -487,14 +331,8 @@ public class SslClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UploadConfirmLetterResponse UploadConfirmLetter(UploadConfirmLetterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UploadConfirmLetter", UploadConfirmLetterResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UploadConfirmLetter", UploadConfirmLetterResponse.class);
     }
 
 }

@@ -45,14 +45,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckCertificateResponse CheckCertificate(CheckCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CheckCertificate", CheckCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CheckCertificate", CheckCertificateResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateApplicationProxyResponse CreateApplicationProxy(CreateApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApplicationProxy", CreateApplicationProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApplicationProxy", CreateApplicationProxyResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateApplicationProxyRuleResponse CreateApplicationProxyRule(CreateApplicationProxyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationProxyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApplicationProxyRule", CreateApplicationProxyRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApplicationProxyRule", CreateApplicationProxyRuleResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateApplicationProxyRulesResponse CreateApplicationProxyRules(CreateApplicationProxyRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationProxyRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApplicationProxyRules", CreateApplicationProxyRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApplicationProxyRules", CreateApplicationProxyRulesResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCustomErrorPageResponse CreateCustomErrorPage(CreateCustomErrorPageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCustomErrorPageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCustomErrorPage", CreateCustomErrorPageResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCustomErrorPage", CreateCustomErrorPageResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDnsRecord", CreateDnsRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDnsRecord", CreateDnsRecordResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateLoadBalancingResponse CreateLoadBalancing(CreateLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLoadBalancing", CreateLoadBalancingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLoadBalancing", CreateLoadBalancingResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateOriginGroupResponse CreateOriginGroup(CreateOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateOriginGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateOriginGroup", CreateOriginGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateOriginGroup", CreateOriginGroupResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePrefetchTaskResponse CreatePrefetchTask(CreatePrefetchTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePrefetchTask", CreatePrefetchTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePrefetchTask", CreatePrefetchTaskResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePurgeTaskResponse CreatePurgeTask(CreatePurgeTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePurgeTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePurgeTask", CreatePurgeTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePurgeTask", CreatePurgeTaskResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateZoneResponse CreateZone(CreateZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateZone", CreateZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateZone", CreateZoneResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationProxyResponse DeleteApplicationProxy(DeleteApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApplicationProxy", DeleteApplicationProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApplicationProxy", DeleteApplicationProxyResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationProxyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDnsRecords", DeleteDnsRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDnsRecords", DeleteDnsRecordsResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteLoadBalancingResponse DeleteLoadBalancing(DeleteLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLoadBalancing", DeleteLoadBalancingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLoadBalancing", DeleteLoadBalancingResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteOriginGroupResponse DeleteOriginGroup(DeleteOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteOriginGroup", DeleteOriginGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteOriginGroup", DeleteOriginGroupResponse.class);
     }
 
     /**
@@ -317,14 +221,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteZoneResponse DeleteZone(DeleteZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteZone", DeleteZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteZone", DeleteZoneResponse.class);
     }
 
     /**
@@ -334,14 +232,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationProxyResponse DescribeApplicationProxy(DescribeApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationProxy", DescribeApplicationProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationProxy", DescribeApplicationProxyResponse.class);
     }
 
     /**
@@ -351,14 +243,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationProxyDetailResponse DescribeApplicationProxyDetail(DescribeApplicationProxyDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationProxyDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationProxyDetail", DescribeApplicationProxyDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationProxyDetail", DescribeApplicationProxyDetailResponse.class);
     }
 
     /**
@@ -368,14 +254,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBotLogResponse DescribeBotLog(DescribeBotLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBotLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBotLog", DescribeBotLogResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBotLog", DescribeBotLogResponse.class);
     }
 
     /**
@@ -385,14 +265,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBotManagedRulesResponse DescribeBotManagedRules(DescribeBotManagedRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBotManagedRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBotManagedRules", DescribeBotManagedRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBotManagedRules", DescribeBotManagedRulesResponse.class);
     }
 
     /**
@@ -402,14 +276,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCnameStatusResponse DescribeCnameStatus(DescribeCnameStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCnameStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCnameStatus", DescribeCnameStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCnameStatus", DescribeCnameStatusResponse.class);
     }
 
     /**
@@ -419,14 +287,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDoSPolicyResponse DescribeDDoSPolicy(DescribeDDoSPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDoSPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDoSPolicy", DescribeDDoSPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDoSPolicy", DescribeDDoSPolicyResponse.class);
     }
 
     /**
@@ -436,14 +298,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDosAttackDataResponse DescribeDDosAttackData(DescribeDDosAttackDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDosAttackDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDosAttackData", DescribeDDosAttackDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDosAttackData", DescribeDDosAttackDataResponse.class);
     }
 
     /**
@@ -453,14 +309,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDosAttackEventResponse DescribeDDosAttackEvent(DescribeDDosAttackEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDosAttackEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDosAttackEvent", DescribeDDosAttackEventResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDosAttackEvent", DescribeDDosAttackEventResponse.class);
     }
 
     /**
@@ -470,14 +320,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDosAttackEventDetailResponse DescribeDDosAttackEventDetail(DescribeDDosAttackEventDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDosAttackEventDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDosAttackEventDetail", DescribeDDosAttackEventDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDosAttackEventDetail", DescribeDDosAttackEventDetailResponse.class);
     }
 
     /**
@@ -487,14 +331,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDosAttackSourceEventResponse DescribeDDosAttackSourceEvent(DescribeDDosAttackSourceEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDosAttackSourceEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDosAttackSourceEvent", DescribeDDosAttackSourceEventResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDosAttackSourceEvent", DescribeDDosAttackSourceEventResponse.class);
     }
 
     /**
@@ -504,14 +342,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDosAttackTopDataResponse DescribeDDosAttackTopData(DescribeDDosAttackTopDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDosAttackTopDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDosAttackTopData", DescribeDDosAttackTopDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDosAttackTopData", DescribeDDosAttackTopDataResponse.class);
     }
 
     /**
@@ -521,14 +353,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEvent(DescribeDDosMajorAttackEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDosMajorAttackEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDDosMajorAttackEvent", DescribeDDosMajorAttackEventResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDDosMajorAttackEvent", DescribeDDosMajorAttackEventResponse.class);
     }
 
     /**
@@ -538,14 +364,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDefaultCertificatesResponse DescribeDefaultCertificates(DescribeDefaultCertificatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDefaultCertificatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDefaultCertificates", DescribeDefaultCertificatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDefaultCertificates", DescribeDefaultCertificatesResponse.class);
     }
 
     /**
@@ -555,14 +375,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDnsDataResponse DescribeDnsData(DescribeDnsDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDnsDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDnsData", DescribeDnsDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDnsData", DescribeDnsDataResponse.class);
     }
 
     /**
@@ -572,14 +386,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDnsRecords", DescribeDnsRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDnsRecords", DescribeDnsRecordsResponse.class);
     }
 
     /**
@@ -589,14 +397,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDnssecResponse DescribeDnssec(DescribeDnssecRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDnssecResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDnssec", DescribeDnssecResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDnssec", DescribeDnssecResponse.class);
     }
 
     /**
@@ -606,14 +408,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeHostsCertificateResponse DescribeHostsCertificate(DescribeHostsCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHostsCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeHostsCertificate", DescribeHostsCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeHostsCertificate", DescribeHostsCertificateResponse.class);
     }
 
     /**
@@ -623,14 +419,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeHostsSettingResponse DescribeHostsSetting(DescribeHostsSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHostsSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeHostsSetting", DescribeHostsSettingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeHostsSetting", DescribeHostsSettingResponse.class);
     }
 
     /**
@@ -640,14 +430,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIdentificationResponse DescribeIdentification(DescribeIdentificationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIdentificationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIdentification", DescribeIdentificationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIdentification", DescribeIdentificationResponse.class);
     }
 
     /**
@@ -657,14 +441,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLoadBalancingResponse DescribeLoadBalancing(DescribeLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLoadBalancing", DescribeLoadBalancingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLoadBalancing", DescribeLoadBalancingResponse.class);
     }
 
     /**
@@ -674,14 +452,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLoadBalancingDetailResponse DescribeLoadBalancingDetail(DescribeLoadBalancingDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLoadBalancingDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLoadBalancingDetail", DescribeLoadBalancingDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLoadBalancingDetail", DescribeLoadBalancingDetailResponse.class);
     }
 
     /**
@@ -691,14 +463,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeOriginGroupResponse DescribeOriginGroup(DescribeOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOriginGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeOriginGroup", DescribeOriginGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeOriginGroup", DescribeOriginGroupResponse.class);
     }
 
     /**
@@ -708,14 +474,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeOriginGroupDetailResponse DescribeOriginGroupDetail(DescribeOriginGroupDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOriginGroupDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeOriginGroupDetail", DescribeOriginGroupDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeOriginGroupDetail", DescribeOriginGroupDetailResponse.class);
     }
 
     /**
@@ -725,14 +485,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeOverviewL7DataResponse DescribeOverviewL7Data(DescribeOverviewL7DataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOverviewL7DataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeOverviewL7Data", DescribeOverviewL7DataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeOverviewL7Data", DescribeOverviewL7DataResponse.class);
     }
 
     /**
@@ -742,14 +496,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePrefetchTasksResponse DescribePrefetchTasks(DescribePrefetchTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePrefetchTasks", DescribePrefetchTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePrefetchTasks", DescribePrefetchTasksResponse.class);
     }
 
     /**
@@ -759,14 +507,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePurgeTasksResponse DescribePurgeTasks(DescribePurgeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePurgeTasks", DescribePurgeTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePurgeTasks", DescribePurgeTasksResponse.class);
     }
 
     /**
@@ -776,14 +518,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPolicyResponse DescribeSecurityPolicy(DescribeSecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPolicy", DescribeSecurityPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPolicy", DescribeSecurityPolicyResponse.class);
     }
 
     /**
@@ -793,14 +529,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPolicyListResponse DescribeSecurityPolicyList(DescribeSecurityPolicyListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPolicyListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPolicyList", DescribeSecurityPolicyListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPolicyList", DescribeSecurityPolicyListResponse.class);
     }
 
     /**
@@ -810,14 +540,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPolicyManagedRulesResponse DescribeSecurityPolicyManagedRules(DescribeSecurityPolicyManagedRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPolicyManagedRules", DescribeSecurityPolicyManagedRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPolicyManagedRules", DescribeSecurityPolicyManagedRulesResponse.class);
     }
 
     /**
@@ -827,14 +551,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPolicyManagedRulesIdResponse DescribeSecurityPolicyManagedRulesId(DescribeSecurityPolicyManagedRulesIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPolicyManagedRulesId", DescribeSecurityPolicyManagedRulesIdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPolicyManagedRulesId", DescribeSecurityPolicyManagedRulesIdResponse.class);
     }
 
     /**
@@ -844,14 +562,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegions(DescribeSecurityPolicyRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPolicyRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPolicyRegions", DescribeSecurityPolicyRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPolicyRegions", DescribeSecurityPolicyRegionsResponse.class);
     }
 
     /**
@@ -861,14 +573,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(DescribeSecurityPortraitRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPortraitRules", DescribeSecurityPortraitRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPortraitRules", DescribeSecurityPortraitRulesResponse.class);
     }
 
     /**
@@ -878,14 +584,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTimingL4DataResponse DescribeTimingL4Data(DescribeTimingL4DataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimingL4DataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTimingL4Data", DescribeTimingL4DataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTimingL4Data", DescribeTimingL4DataResponse.class);
     }
 
     /**
@@ -895,14 +595,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(DescribeTimingL7AnalysisDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimingL7AnalysisDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTimingL7AnalysisData", DescribeTimingL7AnalysisDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTimingL7AnalysisData", DescribeTimingL7AnalysisDataResponse.class);
     }
 
     /**
@@ -912,14 +606,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(DescribeTimingL7CacheDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTimingL7CacheData", DescribeTimingL7CacheDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTimingL7CacheData", DescribeTimingL7CacheDataResponse.class);
     }
 
     /**
@@ -929,14 +617,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(DescribeTopL7AnalysisDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopL7AnalysisDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopL7AnalysisData", DescribeTopL7AnalysisDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopL7AnalysisData", DescribeTopL7AnalysisDataResponse.class);
     }
 
     /**
@@ -946,14 +628,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTopL7CacheDataResponse DescribeTopL7CacheData(DescribeTopL7CacheDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopL7CacheData", DescribeTopL7CacheDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopL7CacheData", DescribeTopL7CacheDataResponse.class);
     }
 
     /**
@@ -963,14 +639,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEvents(DescribeWebManagedRulesAttackEventsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebManagedRulesAttackEvents", DescribeWebManagedRulesAttackEventsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebManagedRulesAttackEvents", DescribeWebManagedRulesAttackEventsResponse.class);
     }
 
     /**
@@ -980,14 +650,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebManagedRulesDataResponse DescribeWebManagedRulesData(DescribeWebManagedRulesDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebManagedRulesDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebManagedRulesData", DescribeWebManagedRulesDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebManagedRulesData", DescribeWebManagedRulesDataResponse.class);
     }
 
     /**
@@ -997,14 +661,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLog(DescribeWebManagedRulesLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebManagedRulesLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebManagedRulesLog", DescribeWebManagedRulesLogResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebManagedRulesLog", DescribeWebManagedRulesLogResponse.class);
     }
 
     /**
@@ -1014,14 +672,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopData(DescribeWebManagedRulesTopDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebManagedRulesTopDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebManagedRulesTopData", DescribeWebManagedRulesTopDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebManagedRulesTopData", DescribeWebManagedRulesTopDataResponse.class);
     }
 
     /**
@@ -1031,14 +683,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebProtectionAttackEventsResponse DescribeWebProtectionAttackEvents(DescribeWebProtectionAttackEventsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebProtectionAttackEventsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebProtectionAttackEvents", DescribeWebProtectionAttackEventsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebProtectionAttackEvents", DescribeWebProtectionAttackEventsResponse.class);
     }
 
     /**
@@ -1048,14 +694,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebProtectionDataResponse DescribeWebProtectionData(DescribeWebProtectionDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebProtectionDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebProtectionData", DescribeWebProtectionDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebProtectionData", DescribeWebProtectionDataResponse.class);
     }
 
     /**
@@ -1065,14 +705,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWebProtectionLogResponse DescribeWebProtectionLog(DescribeWebProtectionLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWebProtectionLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWebProtectionLog", DescribeWebProtectionLogResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWebProtectionLog", DescribeWebProtectionLogResponse.class);
     }
 
     /**
@@ -1082,14 +716,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeZoneDDoSPolicyResponse DescribeZoneDDoSPolicy(DescribeZoneDDoSPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZoneDDoSPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeZoneDDoSPolicy", DescribeZoneDDoSPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeZoneDDoSPolicy", DescribeZoneDDoSPolicyResponse.class);
     }
 
     /**
@@ -1099,14 +727,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeZoneDetailsResponse DescribeZoneDetails(DescribeZoneDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZoneDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeZoneDetails", DescribeZoneDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeZoneDetails", DescribeZoneDetailsResponse.class);
     }
 
     /**
@@ -1116,14 +738,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeZoneSettingResponse DescribeZoneSetting(DescribeZoneSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZoneSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeZoneSetting", DescribeZoneSettingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeZoneSetting", DescribeZoneSettingResponse.class);
     }
 
     /**
@@ -1133,14 +749,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZonesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeZones", DescribeZonesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeZones", DescribeZonesResponse.class);
     }
 
     /**
@@ -1150,14 +760,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DownloadL7LogsResponse DownloadL7Logs(DownloadL7LogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadL7LogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DownloadL7Logs", DownloadL7LogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DownloadL7Logs", DownloadL7LogsResponse.class);
     }
 
     /**
@@ -1167,14 +771,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IdentifyZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
     }
 
     /**
@@ -1184,14 +782,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImportDnsRecordsResponse ImportDnsRecords(ImportDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImportDnsRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ImportDnsRecords", ImportDnsRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ImportDnsRecords", ImportDnsRecordsResponse.class);
     }
 
     /**
@@ -1201,14 +793,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyResponse ModifyApplicationProxy(ModifyApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationProxy", ModifyApplicationProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationProxy", ModifyApplicationProxyResponse.class);
     }
 
     /**
@@ -1218,14 +804,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyRuleResponse ModifyApplicationProxyRule(ModifyApplicationProxyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationProxyRule", ModifyApplicationProxyRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationProxyRule", ModifyApplicationProxyRuleResponse.class);
     }
 
     /**
@@ -1235,14 +815,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyRuleStatusResponse ModifyApplicationProxyRuleStatus(ModifyApplicationProxyRuleStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyRuleStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationProxyRuleStatus", ModifyApplicationProxyRuleStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationProxyRuleStatus", ModifyApplicationProxyRuleStatusResponse.class);
     }
 
     /**
@@ -1252,14 +826,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(ModifyApplicationProxyStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationProxyStatus", ModifyApplicationProxyStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationProxyStatus", ModifyApplicationProxyStatusResponse.class);
     }
 
     /**
@@ -1269,14 +837,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDDoSPolicyResponse ModifyDDoSPolicy(ModifyDDoSPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDDoSPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDDoSPolicy", ModifyDDoSPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDDoSPolicy", ModifyDDoSPolicyResponse.class);
     }
 
     /**
@@ -1286,14 +848,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDDoSPolicyHostResponse ModifyDDoSPolicyHost(ModifyDDoSPolicyHostRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDDoSPolicyHostResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDDoSPolicyHost", ModifyDDoSPolicyHostResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDDoSPolicyHost", ModifyDDoSPolicyHostResponse.class);
     }
 
     /**
@@ -1303,14 +859,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDefaultCertificateResponse ModifyDefaultCertificate(ModifyDefaultCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDefaultCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDefaultCertificate", ModifyDefaultCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDefaultCertificate", ModifyDefaultCertificateResponse.class);
     }
 
     /**
@@ -1320,14 +870,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDnsRecordResponse ModifyDnsRecord(ModifyDnsRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDnsRecord", ModifyDnsRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDnsRecord", ModifyDnsRecordResponse.class);
     }
 
     /**
@@ -1337,14 +881,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDnssecResponse ModifyDnssec(ModifyDnssecRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDnssecResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDnssec", ModifyDnssecResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDnssec", ModifyDnssecResponse.class);
     }
 
     /**
@@ -1354,14 +892,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyHostsCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyHostsCertificate", ModifyHostsCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyHostsCertificate", ModifyHostsCertificateResponse.class);
     }
 
     /**
@@ -1371,14 +903,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLoadBalancingResponse ModifyLoadBalancing(ModifyLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLoadBalancing", ModifyLoadBalancingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLoadBalancing", ModifyLoadBalancingResponse.class);
     }
 
     /**
@@ -1388,14 +914,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLoadBalancingStatus", ModifyLoadBalancingStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLoadBalancingStatus", ModifyLoadBalancingStatusResponse.class);
     }
 
     /**
@@ -1405,14 +925,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyOriginGroupResponse ModifyOriginGroup(ModifyOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyOriginGroup", ModifyOriginGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyOriginGroup", ModifyOriginGroupResponse.class);
     }
 
     /**
@@ -1422,14 +936,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifySecurityPolicyResponse ModifySecurityPolicy(ModifySecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySecurityPolicy", ModifySecurityPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySecurityPolicy", ModifySecurityPolicyResponse.class);
     }
 
     /**
@@ -1439,14 +947,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyZoneResponse ModifyZone(ModifyZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyZone", ModifyZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyZone", ModifyZoneResponse.class);
     }
 
     /**
@@ -1456,14 +958,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyZoneCnameSpeedUpResponse ModifyZoneCnameSpeedUp(ModifyZoneCnameSpeedUpRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneCnameSpeedUpResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyZoneCnameSpeedUp", ModifyZoneCnameSpeedUpResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyZoneCnameSpeedUp", ModifyZoneCnameSpeedUpResponse.class);
     }
 
     /**
@@ -1473,14 +969,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyZoneSettingResponse ModifyZoneSetting(ModifyZoneSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyZoneSetting", ModifyZoneSettingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyZoneSetting", ModifyZoneSettingResponse.class);
     }
 
     /**
@@ -1490,14 +980,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
     }
 
     /**
@@ -1507,14 +991,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ReclaimZoneResponse ReclaimZone(ReclaimZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReclaimZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReclaimZone", ReclaimZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReclaimZone", ReclaimZoneResponse.class);
     }
 
     /**
@@ -1524,14 +1002,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ScanDnsRecordsResponse ScanDnsRecords(ScanDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ScanDnsRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ScanDnsRecords", ScanDnsRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ScanDnsRecords", ScanDnsRecordsResponse.class);
     }
 
 }

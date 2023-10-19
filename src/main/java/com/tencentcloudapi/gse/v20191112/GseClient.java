@@ -45,14 +45,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CopyFleetResponse CopyFleet(CopyFleetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CopyFleetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CopyFleet", CopyFleetResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CopyFleet", CopyFleetResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateGameServerSessionResponse CreateGameServerSession(CreateGameServerSessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateGameServerSessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateGameServerSession", CreateGameServerSessionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateGameServerSession", CreateGameServerSessionResponse.class);
     }
 
     /**
@@ -80,14 +68,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(DeleteTimerScalingPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTimerScalingPolicy", DeleteTimerScalingPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTimerScalingPolicy", DeleteTimerScalingPolicyResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(DescribeGameServerSessionDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGameServerSessionDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGameServerSessionDetails", DescribeGameServerSessionDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGameServerSessionDetails", DescribeGameServerSessionDetailsResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(DescribeGameServerSessionPlacementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGameServerSessionPlacementResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGameServerSessionPlacement", DescribeGameServerSessionPlacementResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGameServerSessionPlacement", DescribeGameServerSessionPlacementResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGameServerSessionsResponse DescribeGameServerSessions(DescribeGameServerSessionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGameServerSessionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGameServerSessions", DescribeGameServerSessionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGameServerSessions", DescribeGameServerSessionsResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceTypesResponse DescribeInstanceTypes(DescribeInstanceTypesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceTypesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstanceTypes", DescribeInstanceTypesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstanceTypes", DescribeInstanceTypesResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePlayerSessionsResponse DescribePlayerSessions(DescribePlayerSessionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePlayerSessionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePlayerSessions", DescribePlayerSessionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePlayerSessions", DescribePlayerSessionsResponse.class);
     }
 
     /**
@@ -183,14 +135,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(DescribeTimerScalingPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTimerScalingPolicies", DescribeTimerScalingPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTimerScalingPolicies", DescribeTimerScalingPoliciesResponse.class);
     }
 
     /**
@@ -200,14 +146,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(EndGameServerSessionAndProcessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EndGameServerSessionAndProcess", EndGameServerSessionAndProcessResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EndGameServerSessionAndProcess", EndGameServerSessionAndProcessResponse.class);
     }
 
     /**
@@ -217,14 +157,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(GetGameServerSessionLogUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetGameServerSessionLogUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetGameServerSessionLogUrl", GetGameServerSessionLogUrlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetGameServerSessionLogUrl", GetGameServerSessionLogUrlResponse.class);
     }
 
     /**
@@ -234,14 +168,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetInstanceAccessResponse GetInstanceAccess(GetInstanceAccessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetInstanceAccessResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetInstanceAccess", GetInstanceAccessResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetInstanceAccess", GetInstanceAccessResponse.class);
     }
 
     /**
@@ -251,14 +179,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public JoinGameServerSessionResponse JoinGameServerSession(JoinGameServerSessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<JoinGameServerSessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "JoinGameServerSession", JoinGameServerSessionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "JoinGameServerSession", JoinGameServerSessionResponse.class);
     }
 
     /**
@@ -268,14 +190,8 @@ public class GseClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(JoinGameServerSessionBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<JoinGameServerSessionBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "JoinGameServerSessionBatch", JoinGameServerSessionBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "JoinGameServerSessionBatch", JoinGameServerSessionBatchResponse.class);
     }
 
     /**
@@ -288,14 +204,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public PutTimerScalingPolicyResponse PutTimerScalingPolicy(PutTimerScalingPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PutTimerScalingPolicy", PutTimerScalingPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PutTimerScalingPolicy", PutTimerScalingPolicyResponse.class);
     }
 
     /**
@@ -305,14 +215,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public SearchGameServerSessionsResponse SearchGameServerSessions(SearchGameServerSessionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchGameServerSessionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SearchGameServerSessions", SearchGameServerSessionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SearchGameServerSessions", SearchGameServerSessionsResponse.class);
     }
 
     /**
@@ -325,14 +229,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public SetServerReservedResponse SetServerReserved(SetServerReservedRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetServerReservedResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetServerReserved", SetServerReservedResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetServerReserved", SetServerReservedResponse.class);
     }
 
     /**
@@ -342,14 +240,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(StartGameServerSessionPlacementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartGameServerSessionPlacementResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartGameServerSessionPlacement", StartGameServerSessionPlacementResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartGameServerSessionPlacement", StartGameServerSessionPlacementResponse.class);
     }
 
     /**
@@ -359,14 +251,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(StopGameServerSessionPlacementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopGameServerSessionPlacementResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopGameServerSessionPlacement", StopGameServerSessionPlacementResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopGameServerSessionPlacement", StopGameServerSessionPlacementResponse.class);
     }
 
     /**
@@ -376,14 +262,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(UpdateBucketAccelerateOptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateBucketAccelerateOpt", UpdateBucketAccelerateOptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateBucketAccelerateOpt", UpdateBucketAccelerateOptResponse.class);
     }
 
     /**
@@ -393,14 +273,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public UpdateBucketCORSOptResponse UpdateBucketCORSOpt(UpdateBucketCORSOptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateBucketCORSOpt", UpdateBucketCORSOptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateBucketCORSOpt", UpdateBucketCORSOptResponse.class);
     }
 
     /**
@@ -410,14 +284,8 @@ If the field `timerID` is filled in, the specified policy will be updated, and i
      * @throws TencentCloudSDKException
      */
     public UpdateGameServerSessionResponse UpdateGameServerSession(UpdateGameServerSessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateGameServerSessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateGameServerSession", UpdateGameServerSessionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateGameServerSession", UpdateGameServerSessionResponse.class);
     }
 
 }

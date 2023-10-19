@@ -45,14 +45,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeregisterMigrationTaskResponse DeregisterMigrationTask(DeregisterMigrationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeregisterMigrationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeregisterMigrationTask", DeregisterMigrationTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeregisterMigrationTask", DeregisterMigrationTaskResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMigrationTaskResponse DescribeMigrationTask(DescribeMigrationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMigrationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMigrationTask", DescribeMigrationTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMigrationTask", DescribeMigrationTaskResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListMigrationProjectResponse ListMigrationProject(ListMigrationProjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListMigrationProjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListMigrationProject", ListMigrationProjectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListMigrationProject", ListMigrationProjectResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListMigrationTaskResponse ListMigrationTask(ListMigrationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListMigrationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListMigrationTask", ListMigrationTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListMigrationTask", ListMigrationTaskResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyMigrationTaskBelongToProjectResponse ModifyMigrationTaskBelongToProject(ModifyMigrationTaskBelongToProjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMigrationTaskBelongToProject", ModifyMigrationTaskBelongToProjectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMigrationTaskBelongToProject", ModifyMigrationTaskBelongToProjectResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyMigrationTaskStatusResponse ModifyMigrationTaskStatus(ModifyMigrationTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMigrationTaskStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyMigrationTaskStatus", ModifyMigrationTaskStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyMigrationTaskStatus", ModifyMigrationTaskStatusResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class MspClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RegisterMigrationTaskResponse RegisterMigrationTask(RegisterMigrationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterMigrationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RegisterMigrationTask", RegisterMigrationTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RegisterMigrationTask", RegisterMigrationTaskResponse.class);
     }
 
 }

@@ -45,14 +45,8 @@ public class GaapClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddRealServersResponse AddRealServers(AddRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddRealServers", AddRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddRealServers", AddRealServersResponse.class);
     }
 
     /**
@@ -63,14 +57,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public BindListenerRealServersResponse BindListenerRealServers(BindListenerRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindListenerRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindListenerRealServers", BindListenerRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindListenerRealServers", BindListenerRealServersResponse.class);
     }
 
     /**
@@ -80,14 +68,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public BindRuleRealServersResponse BindRuleRealServers(BindRuleRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindRuleRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindRuleRealServers", BindRuleRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindRuleRealServers", BindRuleRealServersResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public CheckProxyCreateResponse CheckProxyCreate(CheckProxyCreateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckProxyCreateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CheckProxyCreate", CheckProxyCreateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CheckProxyCreate", CheckProxyCreateResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public CloseProxiesResponse CloseProxies(CloseProxiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloseProxiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CloseProxies", CloseProxiesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CloseProxies", CloseProxiesResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public CloseProxyGroupResponse CloseProxyGroup(CloseProxyGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloseProxyGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CloseProxyGroup", CloseProxyGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CloseProxyGroup", CloseProxyGroupResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public CloseSecurityPolicyResponse CloseSecurityPolicy(CloseSecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloseSecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CloseSecurityPolicy", CloseSecurityPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CloseSecurityPolicy", CloseSecurityPolicyResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public CreateCertificateResponse CreateCertificate(CreateCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCertificate", CreateCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCertificate", CreateCertificateResponse.class);
     }
 
     /**
@@ -182,14 +134,8 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
      * @throws TencentCloudSDKException
      */
     public CreateCustomHeaderResponse CreateCustomHeader(CreateCustomHeaderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCustomHeader", CreateCustomHeaderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCustomHeader", CreateCustomHeaderResponse.class);
     }
 
     /**
@@ -200,14 +146,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDomain", CreateDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDomain", CreateDomainResponse.class);
     }
 
     /**
@@ -217,14 +157,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(CreateDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDomainErrorPageInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDomainErrorPageInfo", CreateDomainErrorPageInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDomainErrorPageInfo", CreateDomainErrorPageInfoResponse.class);
     }
 
     /**
@@ -234,14 +168,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateHTTPListenerResponse CreateHTTPListener(CreateHTTPListenerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHTTPListenerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateHTTPListener", CreateHTTPListenerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateHTTPListener", CreateHTTPListenerResponse.class);
     }
 
     /**
@@ -251,14 +179,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateHTTPSListenerResponse CreateHTTPSListener(CreateHTTPSListenerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHTTPSListenerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateHTTPSListener", CreateHTTPSListenerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateHTTPSListener", CreateHTTPSListenerResponse.class);
     }
 
     /**
@@ -268,14 +190,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateProxyResponse CreateProxy(CreateProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateProxy", CreateProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateProxy", CreateProxyResponse.class);
     }
 
     /**
@@ -285,14 +201,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateProxyGroupResponse CreateProxyGroup(CreateProxyGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProxyGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateProxyGroup", CreateProxyGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateProxyGroup", CreateProxyGroupResponse.class);
     }
 
     /**
@@ -302,14 +212,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateProxyGroupDomainResponse CreateProxyGroupDomain(CreateProxyGroupDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProxyGroupDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateProxyGroupDomain", CreateProxyGroupDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateProxyGroupDomain", CreateProxyGroupDomainResponse.class);
     }
 
     /**
@@ -319,14 +223,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateRule", CreateRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateRule", CreateRuleResponse.class);
     }
 
     /**
@@ -336,14 +234,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateSecurityPolicyResponse CreateSecurityPolicy(CreateSecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSecurityPolicy", CreateSecurityPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSecurityPolicy", CreateSecurityPolicyResponse.class);
     }
 
     /**
@@ -353,14 +245,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateSecurityRulesResponse CreateSecurityRules(CreateSecurityRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSecurityRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSecurityRules", CreateSecurityRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSecurityRules", CreateSecurityRulesResponse.class);
     }
 
     /**
@@ -370,14 +256,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateTCPListenersResponse CreateTCPListeners(CreateTCPListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTCPListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTCPListeners", CreateTCPListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTCPListeners", CreateTCPListenersResponse.class);
     }
 
     /**
@@ -387,14 +267,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public CreateUDPListenersResponse CreateUDPListeners(CreateUDPListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUDPListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUDPListeners", CreateUDPListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUDPListeners", CreateUDPListenersResponse.class);
     }
 
     /**
@@ -404,14 +278,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteCertificateResponse DeleteCertificate(DeleteCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCertificate", DeleteCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCertificate", DeleteCertificateResponse.class);
     }
 
     /**
@@ -421,14 +289,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteDomainResponse DeleteDomain(DeleteDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDomain", DeleteDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDomain", DeleteDomainResponse.class);
     }
 
     /**
@@ -438,14 +300,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(DeleteDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDomainErrorPageInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDomainErrorPageInfo", DeleteDomainErrorPageInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDomainErrorPageInfo", DeleteDomainErrorPageInfoResponse.class);
     }
 
     /**
@@ -455,14 +311,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteListenersResponse DeleteListeners(DeleteListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteListeners", DeleteListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteListeners", DeleteListenersResponse.class);
     }
 
     /**
@@ -472,14 +322,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteProxyGroupResponse DeleteProxyGroup(DeleteProxyGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteProxyGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteProxyGroup", DeleteProxyGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteProxyGroup", DeleteProxyGroupResponse.class);
     }
 
     /**
@@ -489,14 +333,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRule", DeleteRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRule", DeleteRuleResponse.class);
     }
 
     /**
@@ -506,14 +344,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteSecurityPolicyResponse DeleteSecurityPolicy(DeleteSecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSecurityPolicy", DeleteSecurityPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSecurityPolicy", DeleteSecurityPolicyResponse.class);
     }
 
     /**
@@ -523,14 +355,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DeleteSecurityRulesResponse DeleteSecurityRules(DeleteSecurityRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSecurityRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSecurityRules", DeleteSecurityRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSecurityRules", DeleteSecurityRulesResponse.class);
     }
 
     /**
@@ -540,14 +366,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeAccessRegionsResponse DescribeAccessRegions(DescribeAccessRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccessRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAccessRegions", DescribeAccessRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAccessRegions", DescribeAccessRegionsResponse.class);
     }
 
     /**
@@ -557,14 +377,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(DescribeAccessRegionsByDestRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccessRegionsByDestRegionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAccessRegionsByDestRegion", DescribeAccessRegionsByDestRegionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAccessRegionsByDestRegion", DescribeAccessRegionsByDestRegionResponse.class);
     }
 
     /**
@@ -574,14 +388,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeAuthSignatureResponse DescribeAuthSignature(DescribeAuthSignatureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAuthSignature", DescribeAuthSignatureResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAuthSignature", DescribeAuthSignatureResponse.class);
     }
 
     /**
@@ -591,14 +399,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeBlackHeaderResponse DescribeBlackHeader(DescribeBlackHeaderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBlackHeader", DescribeBlackHeaderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBlackHeader", DescribeBlackHeaderResponse.class);
     }
 
     /**
@@ -608,14 +410,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeCertificateDetailResponse DescribeCertificateDetail(DescribeCertificateDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificateDetail", DescribeCertificateDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificateDetail", DescribeCertificateDetailResponse.class);
     }
 
     /**
@@ -625,14 +421,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeCertificatesResponse DescribeCertificates(DescribeCertificatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertificatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCertificates", DescribeCertificatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCertificates", DescribeCertificatesResponse.class);
     }
 
     /**
@@ -642,14 +432,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(DescribeCountryAreaMappingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCountryAreaMappingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCountryAreaMapping", DescribeCountryAreaMappingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCountryAreaMapping", DescribeCountryAreaMappingResponse.class);
     }
 
     /**
@@ -659,14 +443,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeCustomHeaderResponse DescribeCustomHeader(DescribeCustomHeaderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCustomHeader", DescribeCustomHeaderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCustomHeader", DescribeCustomHeaderResponse.class);
     }
 
     /**
@@ -676,14 +454,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeDestRegionsResponse DescribeDestRegions(DescribeDestRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDestRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDestRegions", DescribeDestRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDestRegions", DescribeDestRegionsResponse.class);
     }
 
     /**
@@ -693,14 +465,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(DescribeDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainErrorPageInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDomainErrorPageInfo", DescribeDomainErrorPageInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDomainErrorPageInfo", DescribeDomainErrorPageInfoResponse.class);
     }
 
     /**
@@ -710,14 +476,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDomainErrorPageInfoByIds", DescribeDomainErrorPageInfoByIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDomainErrorPageInfoByIds", DescribeDomainErrorPageInfoByIdsResponse.class);
     }
 
     /**
@@ -727,14 +487,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(DescribeGroupAndStatisticsProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupAndStatisticsProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupAndStatisticsProxy", DescribeGroupAndStatisticsProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupAndStatisticsProxy", DescribeGroupAndStatisticsProxyResponse.class);
     }
 
     /**
@@ -744,14 +498,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(DescribeGroupDomainConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupDomainConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupDomainConfig", DescribeGroupDomainConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupDomainConfig", DescribeGroupDomainConfigResponse.class);
     }
 
     /**
@@ -761,14 +509,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeHTTPListenersResponse DescribeHTTPListeners(DescribeHTTPListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHTTPListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeHTTPListeners", DescribeHTTPListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeHTTPListeners", DescribeHTTPListenersResponse.class);
     }
 
     /**
@@ -778,14 +520,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeHTTPSListenersResponse DescribeHTTPSListeners(DescribeHTTPSListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHTTPSListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeHTTPSListeners", DescribeHTTPSListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeHTTPSListeners", DescribeHTTPSListenersResponse.class);
     }
 
     /**
@@ -795,14 +531,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeListenerRealServersResponse DescribeListenerRealServers(DescribeListenerRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListenerRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListenerRealServers", DescribeListenerRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListenerRealServers", DescribeListenerRealServersResponse.class);
     }
 
     /**
@@ -812,14 +542,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeListenerStatisticsResponse DescribeListenerStatistics(DescribeListenerStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListenerStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeListenerStatistics", DescribeListenerStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeListenerStatistics", DescribeListenerStatisticsResponse.class);
     }
 
     /**
@@ -829,14 +553,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxiesResponse DescribeProxies(DescribeProxiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxies", DescribeProxiesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxies", DescribeProxiesResponse.class);
     }
 
     /**
@@ -846,14 +564,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxiesStatusResponse DescribeProxiesStatus(DescribeProxiesStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxiesStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxiesStatus", DescribeProxiesStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxiesStatus", DescribeProxiesStatusResponse.class);
     }
 
     /**
@@ -863,14 +575,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxyAndStatisticsListenersResponse DescribeProxyAndStatisticsListeners(DescribeProxyAndStatisticsListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyAndStatisticsListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxyAndStatisticsListeners", DescribeProxyAndStatisticsListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxyAndStatisticsListeners", DescribeProxyAndStatisticsListenersResponse.class);
     }
 
     /**
@@ -880,14 +586,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxyDetailResponse DescribeProxyDetail(DescribeProxyDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxyDetail", DescribeProxyDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxyDetail", DescribeProxyDetailResponse.class);
     }
 
     /**
@@ -897,14 +597,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxyGroupDetailsResponse DescribeProxyGroupDetails(DescribeProxyGroupDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyGroupDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxyGroupDetails", DescribeProxyGroupDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxyGroupDetails", DescribeProxyGroupDetailsResponse.class);
     }
 
     /**
@@ -914,14 +608,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxyGroupListResponse DescribeProxyGroupList(DescribeProxyGroupListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyGroupListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxyGroupList", DescribeProxyGroupListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxyGroupList", DescribeProxyGroupListResponse.class);
     }
 
     /**
@@ -931,14 +619,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxyGroupStatisticsResponse DescribeProxyGroupStatistics(DescribeProxyGroupStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyGroupStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxyGroupStatistics", DescribeProxyGroupStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxyGroupStatistics", DescribeProxyGroupStatisticsResponse.class);
     }
 
     /**
@@ -948,14 +630,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeProxyStatisticsResponse DescribeProxyStatistics(DescribeProxyStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProxyStatistics", DescribeProxyStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProxyStatistics", DescribeProxyStatisticsResponse.class);
     }
 
     /**
@@ -965,14 +641,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRealServerStatisticsResponse DescribeRealServerStatistics(DescribeRealServerStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRealServerStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRealServerStatistics", DescribeRealServerStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRealServerStatistics", DescribeRealServerStatisticsResponse.class);
     }
 
     /**
@@ -982,14 +652,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRealServersResponse DescribeRealServers(DescribeRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRealServers", DescribeRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRealServers", DescribeRealServersResponse.class);
     }
 
     /**
@@ -999,14 +663,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRealServersStatusResponse DescribeRealServersStatus(DescribeRealServersStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRealServersStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRealServersStatus", DescribeRealServersStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRealServersStatus", DescribeRealServersStatusResponse.class);
     }
 
     /**
@@ -1016,14 +674,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRegionAndPriceResponse DescribeRegionAndPrice(DescribeRegionAndPriceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRegionAndPriceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRegionAndPrice", DescribeRegionAndPriceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRegionAndPrice", DescribeRegionAndPriceResponse.class);
     }
 
     /**
@@ -1033,14 +685,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeResourcesByTagResponse DescribeResourcesByTag(DescribeResourcesByTagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeResourcesByTagResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeResourcesByTag", DescribeResourcesByTagResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeResourcesByTag", DescribeResourcesByTagResponse.class);
     }
 
     /**
@@ -1050,14 +696,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRuleRealServersResponse DescribeRuleRealServers(DescribeRuleRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRuleRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRuleRealServers", DescribeRuleRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRuleRealServers", DescribeRuleRealServersResponse.class);
     }
 
     /**
@@ -1067,14 +707,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRules", DescribeRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRules", DescribeRulesResponse.class);
     }
 
     /**
@@ -1084,14 +718,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(DescribeRulesByRuleIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRulesByRuleIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRulesByRuleIds", DescribeRulesByRuleIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRulesByRuleIds", DescribeRulesByRuleIdsResponse.class);
     }
 
     /**
@@ -1101,14 +729,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityPolicyDetailResponse DescribeSecurityPolicyDetail(DescribeSecurityPolicyDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityPolicyDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityPolicyDetail", DescribeSecurityPolicyDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityPolicyDetail", DescribeSecurityPolicyDetailResponse.class);
     }
 
     /**
@@ -1118,14 +740,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeSecurityRulesResponse DescribeSecurityRules(DescribeSecurityRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecurityRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecurityRules", DescribeSecurityRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecurityRules", DescribeSecurityRulesResponse.class);
     }
 
     /**
@@ -1135,14 +751,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeTCPListenersResponse DescribeTCPListeners(DescribeTCPListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTCPListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTCPListeners", DescribeTCPListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTCPListeners", DescribeTCPListenersResponse.class);
     }
 
     /**
@@ -1152,14 +762,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DescribeUDPListenersResponse DescribeUDPListeners(DescribeUDPListenersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUDPListenersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUDPListeners", DescribeUDPListenersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUDPListeners", DescribeUDPListenersResponse.class);
     }
 
     /**
@@ -1169,14 +773,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public DestroyProxiesResponse DestroyProxies(DestroyProxiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyProxiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyProxies", DestroyProxiesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyProxies", DestroyProxiesResponse.class);
     }
 
     /**
@@ -1186,14 +784,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public InquiryPriceCreateProxyResponse InquiryPriceCreateProxy(InquiryPriceCreateProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceCreateProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceCreateProxy", InquiryPriceCreateProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceCreateProxy", InquiryPriceCreateProxyResponse.class);
     }
 
     /**
@@ -1203,14 +795,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public ModifyCertificateResponse ModifyCertificate(ModifyCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCertificate", ModifyCertificateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCertificate", ModifyCertificateResponse.class);
     }
 
     /**
@@ -1220,14 +806,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public ModifyCertificateAttributesResponse ModifyCertificateAttributes(ModifyCertificateAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCertificateAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCertificateAttributes", ModifyCertificateAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCertificateAttributes", ModifyCertificateAttributesResponse.class);
     }
 
     /**
@@ -1237,14 +817,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public ModifyDomainResponse ModifyDomain(ModifyDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDomain", ModifyDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDomain", ModifyDomainResponse.class);
     }
 
     /**
@@ -1254,14 +828,8 @@ This API only supports connections of version 3.0.
      * @throws TencentCloudSDKException
      */
     public ModifyGroupDomainConfigResponse ModifyGroupDomainConfig(ModifyGroupDomainConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyGroupDomainConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyGroupDomainConfig", ModifyGroupDomainConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyGroupDomainConfig", ModifyGroupDomainConfigResponse.class);
     }
 
     /**
@@ -1272,14 +840,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyHTTPListenerAttributeResponse ModifyHTTPListenerAttribute(ModifyHTTPListenerAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyHTTPListenerAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyHTTPListenerAttribute", ModifyHTTPListenerAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyHTTPListenerAttribute", ModifyHTTPListenerAttributeResponse.class);
     }
 
     /**
@@ -1289,14 +851,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyHTTPSListenerAttributeResponse ModifyHTTPSListenerAttribute(ModifyHTTPSListenerAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyHTTPSListenerAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyHTTPSListenerAttribute", ModifyHTTPSListenerAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyHTTPSListenerAttribute", ModifyHTTPSListenerAttributeResponse.class);
     }
 
     /**
@@ -1306,14 +862,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyProxiesAttributeResponse ModifyProxiesAttribute(ModifyProxiesAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyProxiesAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyProxiesAttribute", ModifyProxiesAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyProxiesAttribute", ModifyProxiesAttributeResponse.class);
     }
 
     /**
@@ -1323,14 +873,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyProxiesProjectResponse ModifyProxiesProject(ModifyProxiesProjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyProxiesProjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyProxiesProject", ModifyProxiesProjectResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyProxiesProject", ModifyProxiesProjectResponse.class);
     }
 
     /**
@@ -1340,14 +884,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyProxyConfigurationResponse ModifyProxyConfiguration(ModifyProxyConfigurationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyProxyConfigurationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyProxyConfiguration", ModifyProxyConfigurationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyProxyConfiguration", ModifyProxyConfigurationResponse.class);
     }
 
     /**
@@ -1357,14 +895,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyProxyGroupAttributeResponse ModifyProxyGroupAttribute(ModifyProxyGroupAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyProxyGroupAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyProxyGroupAttribute", ModifyProxyGroupAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyProxyGroupAttribute", ModifyProxyGroupAttributeResponse.class);
     }
 
     /**
@@ -1374,14 +906,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyRealServerNameResponse ModifyRealServerName(ModifyRealServerNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRealServerNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyRealServerName", ModifyRealServerNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyRealServerName", ModifyRealServerNameResponse.class);
     }
 
     /**
@@ -1391,14 +917,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyRuleAttributeResponse ModifyRuleAttribute(ModifyRuleAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRuleAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyRuleAttribute", ModifyRuleAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyRuleAttribute", ModifyRuleAttributeResponse.class);
     }
 
     /**
@@ -1408,14 +928,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifySecurityRuleResponse ModifySecurityRule(ModifySecurityRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySecurityRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySecurityRule", ModifySecurityRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySecurityRule", ModifySecurityRuleResponse.class);
     }
 
     /**
@@ -1425,14 +939,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyTCPListenerAttributeResponse ModifyTCPListenerAttribute(ModifyTCPListenerAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTCPListenerAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTCPListenerAttribute", ModifyTCPListenerAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTCPListenerAttribute", ModifyTCPListenerAttributeResponse.class);
     }
 
     /**
@@ -1442,14 +950,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public ModifyUDPListenerAttributeResponse ModifyUDPListenerAttribute(ModifyUDPListenerAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUDPListenerAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyUDPListenerAttribute", ModifyUDPListenerAttributeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyUDPListenerAttribute", ModifyUDPListenerAttributeResponse.class);
     }
 
     /**
@@ -1459,14 +961,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public OpenProxiesResponse OpenProxies(OpenProxiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenProxiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "OpenProxies", OpenProxiesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "OpenProxies", OpenProxiesResponse.class);
     }
 
     /**
@@ -1476,14 +972,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public OpenProxyGroupResponse OpenProxyGroup(OpenProxyGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenProxyGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "OpenProxyGroup", OpenProxyGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "OpenProxyGroup", OpenProxyGroupResponse.class);
     }
 
     /**
@@ -1493,14 +983,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public OpenSecurityPolicyResponse OpenSecurityPolicy(OpenSecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenSecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "OpenSecurityPolicy", OpenSecurityPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "OpenSecurityPolicy", OpenSecurityPolicyResponse.class);
     }
 
     /**
@@ -1510,14 +994,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public RemoveRealServersResponse RemoveRealServers(RemoveRealServersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveRealServersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RemoveRealServers", RemoveRealServersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RemoveRealServers", RemoveRealServersResponse.class);
     }
 
     /**
@@ -1527,14 +1005,8 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
      * @throws TencentCloudSDKException
      */
     public SetAuthenticationResponse SetAuthentication(SetAuthenticationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetAuthenticationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetAuthentication", SetAuthenticationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetAuthentication", SetAuthenticationResponse.class);
     }
 
 }

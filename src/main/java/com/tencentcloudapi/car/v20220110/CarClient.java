@@ -45,14 +45,8 @@ public class CarClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyConcurrentResponse ApplyConcurrent(ApplyConcurrentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyConcurrentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyConcurrent", ApplyConcurrentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyConcurrent", ApplyConcurrentResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class CarClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSessionResponse CreateSession(CreateSessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSession", CreateSessionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSession", CreateSessionResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class CarClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DestroySessionResponse DestroySession(DestroySessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroySessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroySession", DestroySessionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroySession", DestroySessionResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class CarClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StartPublishStreamResponse StartPublishStream(StartPublishStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartPublishStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartPublishStream", StartPublishStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartPublishStream", StartPublishStreamResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class CarClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopPublishStreamResponse StopPublishStream(StopPublishStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopPublishStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopPublishStream", StopPublishStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopPublishStream", StopPublishStreamResponse.class);
     }
 
 }

@@ -45,14 +45,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachPluginResponse AttachPlugin(AttachPluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachPluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachPlugin", AttachPluginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachPlugin", AttachPluginResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindApiAppResponse BindApiApp(BindApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindApiApp", BindApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindApiApp", BindApiAppResponse.class);
     }
 
     /**
@@ -81,14 +69,8 @@ Currently, a usage plan can be bound to an API; however, under the same service,
      * @throws TencentCloudSDKException
      */
     public BindEnvironmentResponse BindEnvironment(BindEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindEnvironment", BindEnvironmentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindEnvironment", BindEnvironmentResponse.class);
     }
 
     /**
@@ -98,14 +80,8 @@ Currently, a usage plan can be bound to an API; however, under the same service,
      * @throws TencentCloudSDKException
      */
     public BindIPStrategyResponse BindIPStrategy(BindIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindIPStrategy", BindIPStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindIPStrategy", BindIPStrategyResponse.class);
     }
 
     /**
@@ -116,14 +92,8 @@ You can bind a key to a usage plan and bind the usage plan to an environment whe
      * @throws TencentCloudSDKException
      */
     public BindSecretIdsResponse BindSecretIds(BindSecretIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindSecretIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindSecretIds", BindSecretIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindSecretIds", BindSecretIdsResponse.class);
     }
 
     /**
@@ -134,14 +104,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public BindSubDomainResponse BindSubDomain(BindSubDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindSubDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindSubDomain", BindSubDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindSubDomain", BindSubDomainResponse.class);
     }
 
     /**
@@ -151,14 +115,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public BuildAPIDocResponse BuildAPIDoc(BuildAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BuildAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BuildAPIDoc", BuildAPIDocResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BuildAPIDoc", BuildAPIDocResponse.class);
     }
 
     /**
@@ -168,14 +126,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public CreateAPIDocResponse CreateAPIDoc(CreateAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAPIDoc", CreateAPIDocResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAPIDoc", CreateAPIDocResponse.class);
     }
 
     /**
@@ -185,14 +137,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public CreateApiResponse CreateApi(CreateApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApi", CreateApiResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApi", CreateApiResponse.class);
     }
 
     /**
@@ -202,14 +148,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public CreateApiAppResponse CreateApiApp(CreateApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApiApp", CreateApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApiApp", CreateApiAppResponse.class);
     }
 
     /**
@@ -219,14 +159,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
     }
 
     /**
@@ -236,14 +170,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public CreateIPStrategyResponse CreateIPStrategy(CreateIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateIPStrategy", CreateIPStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateIPStrategy", CreateIPStrategyResponse.class);
     }
 
     /**
@@ -253,14 +181,8 @@ Each service in API Gateway provides a default domain name for users to call. If
      * @throws TencentCloudSDKException
      */
     public CreatePluginResponse CreatePlugin(CreatePluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePlugin", CreatePluginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePlugin", CreatePluginResponse.class);
     }
 
     /**
@@ -271,14 +193,8 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
      * @throws TencentCloudSDKException
      */
     public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateService", CreateServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateService", CreateServiceResponse.class);
     }
 
     /**
@@ -288,14 +204,8 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
      * @throws TencentCloudSDKException
      */
     public CreateUpstreamResponse CreateUpstream(CreateUpstreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUpstreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUpstream", CreateUpstreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUpstream", CreateUpstreamResponse.class);
     }
 
     /**
@@ -306,14 +216,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public CreateUsagePlanResponse CreateUsagePlan(CreateUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUsagePlan", CreateUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUsagePlan", CreateUsagePlanResponse.class);
     }
 
     /**
@@ -323,14 +227,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeleteAPIDocResponse DeleteAPIDoc(DeleteAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAPIDoc", DeleteAPIDocResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAPIDoc", DeleteAPIDocResponse.class);
     }
 
     /**
@@ -340,14 +238,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeleteApiResponse DeleteApi(DeleteApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApi", DeleteApiResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApi", DeleteApiResponse.class);
     }
 
     /**
@@ -357,14 +249,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeleteApiAppResponse DeleteApiApp(DeleteApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApiApp", DeleteApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApiApp", DeleteApiAppResponse.class);
     }
 
     /**
@@ -374,14 +260,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
     }
 
     /**
@@ -391,14 +271,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeleteIPStrategyResponse DeleteIPStrategy(DeleteIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteIPStrategy", DeleteIPStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteIPStrategy", DeleteIPStrategyResponse.class);
     }
 
     /**
@@ -408,14 +282,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
     }
 
     /**
@@ -425,14 +293,8 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
      * @throws TencentCloudSDKException
      */
     public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteService", DeleteServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteService", DeleteServiceResponse.class);
     }
 
     /**
@@ -443,14 +305,8 @@ You can use this API if you use a custom domain name and custom mapping. Please 
      * @throws TencentCloudSDKException
      */
     public DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(DeleteServiceSubDomainMappingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteServiceSubDomainMappingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteServiceSubDomainMapping", DeleteServiceSubDomainMappingResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteServiceSubDomainMapping", DeleteServiceSubDomainMappingResponse.class);
     }
 
     /**
@@ -460,14 +316,8 @@ You can use this API if you use a custom domain name and custom mapping. Please 
      * @throws TencentCloudSDKException
      */
     public DeleteUpstreamResponse DeleteUpstream(DeleteUpstreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUpstreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteUpstream", DeleteUpstreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteUpstream", DeleteUpstreamResponse.class);
     }
 
     /**
@@ -477,14 +327,8 @@ You can use this API if you use a custom domain name and custom mapping. Please 
      * @throws TencentCloudSDKException
      */
     public DeleteUsagePlanResponse DeleteUsagePlan(DeleteUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteUsagePlan", DeleteUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteUsagePlan", DeleteUsagePlanResponse.class);
     }
 
     /**
@@ -496,14 +340,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(DemoteServiceUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DemoteServiceUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DemoteServiceUsagePlan", DemoteServiceUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DemoteServiceUsagePlan", DemoteServiceUsagePlanResponse.class);
     }
 
     /**
@@ -513,14 +351,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeAPIDocDetailResponse DescribeAPIDocDetail(DescribeAPIDocDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAPIDocDetail", DescribeAPIDocDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAPIDocDetail", DescribeAPIDocDetailResponse.class);
     }
 
     /**
@@ -530,14 +362,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeAPIDocsResponse DescribeAPIDocs(DescribeAPIDocsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAPIDocs", DescribeAPIDocsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAPIDocs", DescribeAPIDocsResponse.class);
     }
 
     /**
@@ -547,14 +373,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeAllPluginApisResponse DescribeAllPluginApis(DescribeAllPluginApisRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAllPluginApis", DescribeAllPluginApisResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAllPluginApis", DescribeAllPluginApisResponse.class);
     }
 
     /**
@@ -564,14 +384,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiResponse DescribeApi(DescribeApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApi", DescribeApiResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApi", DescribeApiResponse.class);
     }
 
     /**
@@ -581,14 +395,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiAppResponse DescribeApiApp(DescribeApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiApp", DescribeApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiApp", DescribeApiAppResponse.class);
     }
 
     /**
@@ -598,14 +406,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiAppBindApisStatus", DescribeApiAppBindApisStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiAppBindApisStatus", DescribeApiAppBindApisStatusResponse.class);
     }
 
     /**
@@ -615,14 +417,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiAppsStatusResponse DescribeApiAppsStatus(DescribeApiAppsStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiAppsStatus", DescribeApiAppsStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiAppsStatus", DescribeApiAppsStatusResponse.class);
     }
 
     /**
@@ -632,14 +428,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiBindApiAppsStatus", DescribeApiBindApiAppsStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiBindApiAppsStatus", DescribeApiBindApiAppsStatusResponse.class);
     }
 
     /**
@@ -649,14 +439,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(DescribeApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiEnvironmentStrategy", DescribeApiEnvironmentStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiEnvironmentStrategy", DescribeApiEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -666,14 +450,8 @@ This operation will also be denied if the current environment has not been publi
      * @throws TencentCloudSDKException
      */
     public DescribeApiForApiAppResponse DescribeApiForApiApp(DescribeApiForApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiForApiApp", DescribeApiForApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiForApiApp", DescribeApiForApiAppResponse.class);
     }
 
     /**
@@ -684,14 +462,8 @@ After creating an API key, you can query its details by using this API.
      * @throws TencentCloudSDKException
      */
     public DescribeApiKeyResponse DescribeApiKey(DescribeApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiKey", DescribeApiKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiKey", DescribeApiKeyResponse.class);
     }
 
     /**
@@ -702,14 +474,8 @@ After creating an API key, you can query its details by using this API.
      * @throws TencentCloudSDKException
      */
     public DescribeApiKeysStatusResponse DescribeApiKeysStatus(DescribeApiKeysStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiKeysStatus", DescribeApiKeysStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiKeysStatus", DescribeApiKeysStatusResponse.class);
     }
 
     /**
@@ -720,14 +486,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeApiUsagePlanResponse DescribeApiUsagePlan(DescribeApiUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApiUsagePlan", DescribeApiUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApiUsagePlan", DescribeApiUsagePlanResponse.class);
     }
 
     /**
@@ -737,14 +497,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeApisStatusResponse DescribeApisStatus(DescribeApisStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApisStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApisStatus", DescribeApisStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApisStatus", DescribeApisStatusResponse.class);
     }
 
     /**
@@ -754,14 +508,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeIPStrategyResponse DescribeIPStrategy(DescribeIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIPStrategy", DescribeIPStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIPStrategy", DescribeIPStrategyResponse.class);
     }
 
     /**
@@ -771,14 +519,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(DescribeIPStrategyApisStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIPStrategyApisStatus", DescribeIPStrategyApisStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIPStrategyApisStatus", DescribeIPStrategyApisStatusResponse.class);
     }
 
     /**
@@ -788,14 +530,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIPStrategysStatus", DescribeIPStrategysStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIPStrategysStatus", DescribeIPStrategysStatusResponse.class);
     }
 
     /**
@@ -805,14 +541,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeLogSearchResponse DescribeLogSearch(DescribeLogSearchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLogSearchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLogSearch", DescribeLogSearchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLogSearch", DescribeLogSearchResponse.class);
     }
 
     /**
@@ -822,14 +552,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribePluginResponse DescribePlugin(DescribePluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePlugin", DescribePluginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePlugin", DescribePluginResponse.class);
     }
 
     /**
@@ -839,14 +563,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribePluginApisResponse DescribePluginApis(DescribePluginApisRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginApisResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePluginApis", DescribePluginApisResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePluginApis", DescribePluginApisResponse.class);
     }
 
     /**
@@ -856,14 +574,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribePluginsByApiResponse DescribePluginsByApi(DescribePluginsByApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePluginsByApi", DescribePluginsByApiResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePluginsByApi", DescribePluginsByApiResponse.class);
     }
 
     /**
@@ -873,14 +585,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeServiceResponse DescribeService(DescribeServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeService", DescribeServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeService", DescribeServiceResponse.class);
     }
 
     /**
@@ -890,14 +596,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(DescribeServiceEnvironmentListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceEnvironmentListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceEnvironmentList", DescribeServiceEnvironmentListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceEnvironmentList", DescribeServiceEnvironmentListResponse.class);
     }
 
     /**
@@ -908,14 +608,8 @@ A service can only be used when it is published to an environment after creation
      * @throws TencentCloudSDKException
      */
     public DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(DescribeServiceEnvironmentReleaseHistoryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceEnvironmentReleaseHistory", DescribeServiceEnvironmentReleaseHistoryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceEnvironmentReleaseHistory", DescribeServiceEnvironmentReleaseHistoryResponse.class);
     }
 
     /**
@@ -925,14 +619,8 @@ A service can only be used when it is published to an environment after creation
      * @throws TencentCloudSDKException
      */
     public DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(DescribeServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceEnvironmentStrategy", DescribeServiceEnvironmentStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceEnvironmentStrategy", DescribeServiceEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -942,14 +630,8 @@ A service can only be used when it is published to an environment after creation
      * @throws TencentCloudSDKException
      */
     public DescribeServiceForApiAppResponse DescribeServiceForApiApp(DescribeServiceForApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceForApiApp", DescribeServiceForApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceForApiApp", DescribeServiceForApiAppResponse.class);
     }
 
     /**
@@ -960,14 +642,8 @@ A service is generally published on several versions. This API can be used to qu
      * @throws TencentCloudSDKException
      */
     public DescribeServiceReleaseVersionResponse DescribeServiceReleaseVersion(DescribeServiceReleaseVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceReleaseVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceReleaseVersion", DescribeServiceReleaseVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceReleaseVersion", DescribeServiceReleaseVersionResponse.class);
     }
 
     /**
@@ -978,14 +654,8 @@ In API Gateway, you can bind a custom domain name to a service and map its paths
      * @throws TencentCloudSDKException
      */
     public DescribeServiceSubDomainMappingsResponse DescribeServiceSubDomainMappings(DescribeServiceSubDomainMappingsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceSubDomainMappingsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceSubDomainMappings", DescribeServiceSubDomainMappingsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceSubDomainMappings", DescribeServiceSubDomainMappingsResponse.class);
     }
 
     /**
@@ -996,14 +666,8 @@ In API Gateway, you can bind custom domain names to a service for service call. 
      * @throws TencentCloudSDKException
      */
     public DescribeServiceSubDomainsResponse DescribeServiceSubDomains(DescribeServiceSubDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceSubDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceSubDomains", DescribeServiceSubDomainsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceSubDomains", DescribeServiceSubDomainsResponse.class);
     }
 
     /**
@@ -1014,14 +678,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(DescribeServiceUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServiceUsagePlan", DescribeServiceUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServiceUsagePlan", DescribeServiceUsagePlanResponse.class);
     }
 
     /**
@@ -1031,14 +689,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeServicesStatusResponse DescribeServicesStatus(DescribeServicesStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeServicesStatus", DescribeServicesStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeServicesStatus", DescribeServicesStatusResponse.class);
     }
 
     /**
@@ -1048,14 +700,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUpstreamBindApis", DescribeUpstreamBindApisResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUpstreamBindApis", DescribeUpstreamBindApisResponse.class);
     }
 
     /**
@@ -1065,14 +711,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeUpstreamsResponse DescribeUpstreams(DescribeUpstreamsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUpstreams", DescribeUpstreamsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUpstreams", DescribeUpstreamsResponse.class);
     }
 
     /**
@@ -1082,14 +722,8 @@ To make authentication and throttling for a service take effect, you need to bin
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlanResponse DescribeUsagePlan(DescribeUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUsagePlan", DescribeUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUsagePlan", DescribeUsagePlanResponse.class);
     }
 
     /**
@@ -1100,14 +734,8 @@ After binding a usage plan to environments, you can use this API to query all se
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(DescribeUsagePlanEnvironmentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlanEnvironmentsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUsagePlanEnvironments", DescribeUsagePlanEnvironmentsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUsagePlanEnvironments", DescribeUsagePlanEnvironmentsResponse.class);
     }
 
     /**
@@ -1118,14 +746,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(DescribeUsagePlanSecretIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlanSecretIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUsagePlanSecretIds", DescribeUsagePlanSecretIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUsagePlanSecretIds", DescribeUsagePlanSecretIdsResponse.class);
     }
 
     /**
@@ -1135,14 +757,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(DescribeUsagePlansStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUsagePlansStatus", DescribeUsagePlansStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUsagePlansStatus", DescribeUsagePlansStatusResponse.class);
     }
 
     /**
@@ -1152,14 +768,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public DetachPluginResponse DetachPlugin(DetachPluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachPluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetachPlugin", DetachPluginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetachPlugin", DetachPluginResponse.class);
     }
 
     /**
@@ -1169,14 +779,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public DisableApiKeyResponse DisableApiKey(DisableApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableApiKey", DisableApiKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableApiKey", DisableApiKeyResponse.class);
     }
 
     /**
@@ -1186,14 +790,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public EnableApiKeyResponse EnableApiKey(EnableApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableApiKey", EnableApiKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableApiKey", EnableApiKeyResponse.class);
     }
 
     /**
@@ -1203,14 +801,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ImportOpenApiResponse ImportOpenApi(ImportOpenApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImportOpenApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ImportOpenApi", ImportOpenApiResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ImportOpenApi", ImportOpenApiResponse.class);
     }
 
     /**
@@ -1220,14 +812,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyAPIDocResponse ModifyAPIDoc(ModifyAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAPIDoc", ModifyAPIDocResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAPIDoc", ModifyAPIDocResponse.class);
     }
 
     /**
@@ -1237,14 +823,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyApiResponse ModifyApi(ModifyApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApi", ModifyApiResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApi", ModifyApiResponse.class);
     }
 
     /**
@@ -1254,14 +834,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyApiAppResponse ModifyApiApp(ModifyApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApiApp", ModifyApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApiApp", ModifyApiAppResponse.class);
     }
 
     /**
@@ -1271,14 +845,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(ModifyApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApiEnvironmentStrategy", ModifyApiEnvironmentStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApiEnvironmentStrategy", ModifyApiEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -1288,14 +856,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyApiIncrementResponse ModifyApiIncrement(ModifyApiIncrementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiIncrementResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApiIncrement", ModifyApiIncrementResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApiIncrement", ModifyApiIncrementResponse.class);
     }
 
     /**
@@ -1305,14 +867,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyIPStrategyResponse ModifyIPStrategy(ModifyIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyIPStrategy", ModifyIPStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyIPStrategy", ModifyIPStrategyResponse.class);
     }
 
     /**
@@ -1322,14 +878,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
     }
 
     /**
@@ -1339,14 +889,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyServiceResponse ModifyService(ModifyServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyService", ModifyServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyService", ModifyServiceResponse.class);
     }
 
     /**
@@ -1356,14 +900,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(ModifyServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyServiceEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyServiceEnvironmentStrategy", ModifyServiceEnvironmentStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyServiceEnvironmentStrategy", ModifyServiceEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -1373,14 +911,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifySubDomainResponse ModifySubDomain(ModifySubDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySubDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySubDomain", ModifySubDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySubDomain", ModifySubDomainResponse.class);
     }
 
     /**
@@ -1390,14 +922,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyUpstreamResponse ModifyUpstream(ModifyUpstreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUpstreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyUpstream", ModifyUpstreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyUpstream", ModifyUpstreamResponse.class);
     }
 
     /**
@@ -1407,14 +933,8 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
      * @throws TencentCloudSDKException
      */
     public ModifyUsagePlanResponse ModifyUsagePlan(ModifyUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyUsagePlan", ModifyUsagePlanResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyUsagePlan", ModifyUsagePlanResponse.class);
     }
 
     /**
@@ -1425,14 +945,8 @@ An API Gateway service can only be called when it is published to an environment
      * @throws TencentCloudSDKException
      */
     public ReleaseServiceResponse ReleaseService(ReleaseServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReleaseServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReleaseService", ReleaseServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReleaseService", ReleaseServiceResponse.class);
     }
 
     /**
@@ -1442,14 +956,8 @@ An API Gateway service can only be called when it is published to an environment
      * @throws TencentCloudSDKException
      */
     public ResetAPIDocPasswordResponse ResetAPIDocPassword(ResetAPIDocPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResetAPIDocPassword", ResetAPIDocPasswordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResetAPIDocPassword", ResetAPIDocPasswordResponse.class);
     }
 
     /**
@@ -1459,14 +967,8 @@ An API Gateway service can only be called when it is published to an environment
      * @throws TencentCloudSDKException
      */
     public UnBindEnvironmentResponse UnBindEnvironment(UnBindEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnBindEnvironment", UnBindEnvironmentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnBindEnvironment", UnBindEnvironmentResponse.class);
     }
 
     /**
@@ -1476,14 +978,8 @@ An API Gateway service can only be called when it is published to an environment
      * @throws TencentCloudSDKException
      */
     public UnBindIPStrategyResponse UnBindIPStrategy(UnBindIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnBindIPStrategy", UnBindIPStrategyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnBindIPStrategy", UnBindIPStrategyResponse.class);
     }
 
     /**
@@ -1493,14 +989,8 @@ An API Gateway service can only be called when it is published to an environment
      * @throws TencentCloudSDKException
      */
     public UnBindSecretIdsResponse UnBindSecretIds(UnBindSecretIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindSecretIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnBindSecretIds", UnBindSecretIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnBindSecretIds", UnBindSecretIdsResponse.class);
     }
 
     /**
@@ -1511,14 +1001,8 @@ After binding a custom domain name to a service by using API Gateway, you can us
      * @throws TencentCloudSDKException
      */
     public UnBindSubDomainResponse UnBindSubDomain(UnBindSubDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindSubDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnBindSubDomain", UnBindSubDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnBindSubDomain", UnBindSubDomainResponse.class);
     }
 
     /**
@@ -1529,14 +1013,8 @@ Only after a service is published to an environment can its APIs be called. You 
      * @throws TencentCloudSDKException
      */
     public UnReleaseServiceResponse UnReleaseService(UnReleaseServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnReleaseServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnReleaseService", UnReleaseServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnReleaseService", UnReleaseServiceResponse.class);
     }
 
     /**
@@ -1546,14 +1024,8 @@ Only after a service is published to an environment can its APIs be called. You 
      * @throws TencentCloudSDKException
      */
     public UnbindApiAppResponse UnbindApiApp(UnbindApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnbindApiApp", UnbindApiAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnbindApiApp", UnbindApiAppResponse.class);
     }
 
     /**
@@ -1563,14 +1035,8 @@ Only after a service is published to an environment can its APIs be called. You 
      * @throws TencentCloudSDKException
      */
     public UpdateApiAppKeyResponse UpdateApiAppKey(UpdateApiAppKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateApiAppKey", UpdateApiAppKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateApiAppKey", UpdateApiAppKeyResponse.class);
     }
 
     /**
@@ -1580,14 +1046,8 @@ Only after a service is published to an environment can its APIs be called. You 
      * @throws TencentCloudSDKException
      */
     public UpdateApiKeyResponse UpdateApiKey(UpdateApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateApiKey", UpdateApiKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateApiKey", UpdateApiKeyResponse.class);
     }
 
     /**
@@ -1597,14 +1057,8 @@ Only after a service is published to an environment can its APIs be called. You 
      * @throws TencentCloudSDKException
      */
     public UpdateServiceResponse UpdateService(UpdateServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateService", UpdateServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateService", UpdateServiceResponse.class);
     }
 
 }

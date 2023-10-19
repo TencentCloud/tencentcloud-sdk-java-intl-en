@@ -47,14 +47,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public BankCardOCRResponse BankCardOCR(BankCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BankCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BankCardOCR", BankCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BankCardOCR", BankCardOCRResponse.class);
     }
 
     /**
@@ -70,14 +64,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public GeneralAccurateOCRResponse GeneralAccurateOCR(GeneralAccurateOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GeneralAccurateOCR", GeneralAccurateOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GeneralAccurateOCR", GeneralAccurateOCRResponse.class);
     }
 
     /**
@@ -93,14 +81,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public GeneralBasicOCRResponse GeneralBasicOCR(GeneralBasicOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GeneralBasicOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GeneralBasicOCR", GeneralBasicOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GeneralBasicOCR", GeneralBasicOCRResponse.class);
     }
 
     /**
@@ -112,14 +94,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public HKIDCardOCRResponse HKIDCardOCR(HKIDCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<HKIDCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "HKIDCardOCR", HKIDCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "HKIDCardOCR", HKIDCardOCRResponse.class);
     }
 
     /**
@@ -131,14 +107,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public HmtResidentPermitOCRResponse HmtResidentPermitOCR(HmtResidentPermitOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "HmtResidentPermitOCR", HmtResidentPermitOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "HmtResidentPermitOCR", HmtResidentPermitOCRResponse.class);
     }
 
     /**
@@ -195,14 +165,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public IDCardOCRResponse IDCardOCR(IDCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IDCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "IDCardOCR", IDCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "IDCardOCR", IDCardOCRResponse.class);
     }
 
     /**
@@ -214,14 +178,8 @@ A maximum of 10 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public LicensePlateOCRResponse LicensePlateOCR(LicensePlateOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LicensePlateOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "LicensePlateOCR", LicensePlateOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "LicensePlateOCR", LicensePlateOCRResponse.class);
     }
 
     /**
@@ -233,14 +191,8 @@ This API is not fully available for the time being. For more information, contac
      * @throws TencentCloudSDKException
      */
     public MLIDCardOCRResponse MLIDCardOCR(MLIDCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MLIDCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "MLIDCardOCR", MLIDCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "MLIDCardOCR", MLIDCardOCRResponse.class);
     }
 
     /**
@@ -252,14 +204,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public MLIDPassportOCRResponse MLIDPassportOCR(MLIDPassportOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "MLIDPassportOCR", MLIDPassportOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "MLIDPassportOCR", MLIDPassportOCRResponse.class);
     }
 
     /**
@@ -271,14 +217,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public MainlandPermitOCRResponse MainlandPermitOCR(MainlandPermitOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "MainlandPermitOCR", MainlandPermitOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "MainlandPermitOCR", MainlandPermitOCRResponse.class);
     }
 
     /**
@@ -290,14 +230,8 @@ A maximum of 10 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public PermitOCRResponse PermitOCR(PermitOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PermitOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PermitOCR", PermitOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PermitOCR", PermitOCRResponse.class);
     }
 
     /**
@@ -433,14 +367,8 @@ The invoice/ticket subtype (SubType), subtype description (TypeDescription), and
      * @throws TencentCloudSDKException
      */
     public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeGeneralInvoice", RecognizeGeneralInvoiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeGeneralInvoice", RecognizeGeneralInvoiceResponse.class);
     }
 
     /**
@@ -452,14 +380,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeIndonesiaIDCardOCR", RecognizeIndonesiaIDCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeIndonesiaIDCardOCR", RecognizeIndonesiaIDCardOCRResponse.class);
     }
 
     /**
@@ -469,14 +391,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR", RecognizeKoreanDrivingLicenseOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR", RecognizeKoreanDrivingLicenseOCRResponse.class);
     }
 
     /**
@@ -486,14 +402,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeKoreanIDCardOCR", RecognizeKoreanIDCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeKoreanIDCardOCR", RecognizeKoreanIDCardOCRResponse.class);
     }
 
     /**
@@ -503,14 +413,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR", RecognizePhilippinesDrivingLicenseOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR", RecognizePhilippinesDrivingLicenseOCRResponse.class);
     }
 
     /**
@@ -520,14 +424,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizePhilippinesSssIDOCR", RecognizePhilippinesSssIDOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizePhilippinesSssIDOCR", RecognizePhilippinesSssIDOCRResponse.class);
     }
 
     /**
@@ -537,14 +435,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizePhilippinesTinIDOCR", RecognizePhilippinesTinIDOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizePhilippinesTinIDOCR", RecognizePhilippinesTinIDOCRResponse.class);
     }
 
     /**
@@ -554,14 +446,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizePhilippinesUMIDOCR", RecognizePhilippinesUMIDOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizePhilippinesUMIDOCR", RecognizePhilippinesUMIDOCRResponse.class);
     }
 
     /**
@@ -573,14 +459,8 @@ The API request rate is limited to 20 requests/sec by default.
      * @throws TencentCloudSDKException
      */
     public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizePhilippinesVoteIDOCR", RecognizePhilippinesVoteIDOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizePhilippinesVoteIDOCR", RecognizePhilippinesVoteIDOCRResponse.class);
     }
 
     /**
@@ -592,14 +472,8 @@ A maximum of 2 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeTableAccurateOCR", RecognizeTableAccurateOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeTableAccurateOCR", RecognizeTableAccurateOCRResponse.class);
     }
 
     /**
@@ -612,14 +486,8 @@ A maximum of 10 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeThaiIDCardOCR", RecognizeThaiIDCardOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeThaiIDCardOCR", RecognizeThaiIDCardOCRResponse.class);
     }
 
     /**
@@ -631,14 +499,8 @@ A maximum of 5 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public SealOCRResponse SealOCR(SealOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SealOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SealOCR", SealOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SealOCR", SealOCRResponse.class);
     }
 
     /**
@@ -650,14 +512,8 @@ A maximum of 10 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
-        JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SmartStructuralOCRV2", SmartStructuralOCRV2Response.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SmartStructuralOCRV2", SmartStructuralOCRV2Response.class);
     }
 
     /**
@@ -669,14 +525,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public TableOCRResponse TableOCR(TableOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TableOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TableOCR", TableOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TableOCR", TableOCRResponse.class);
     }
 
     /**
@@ -686,14 +536,8 @@ This API is not fully available for the time being. For more information, please
      * @throws TencentCloudSDKException
      */
     public VinOCRResponse VinOCR(VinOCRRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VinOCRResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VinOCR", VinOCRResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VinOCR", VinOCRResponse.class);
     }
 
 }

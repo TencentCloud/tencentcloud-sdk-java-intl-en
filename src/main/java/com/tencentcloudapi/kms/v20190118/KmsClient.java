@@ -45,14 +45,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ArchiveKeyResponse ArchiveKey(ArchiveKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ArchiveKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ArchiveKey", ArchiveKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ArchiveKey", ArchiveKeyResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AsymmetricRsaDecrypt", AsymmetricRsaDecryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AsymmetricRsaDecrypt", AsymmetricRsaDecryptResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AsymmetricSm2Decrypt", AsymmetricSm2DecryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AsymmetricSm2Decrypt", AsymmetricSm2DecryptResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindCloudResourceResponse BindCloudResource(BindCloudResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindCloudResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindCloudResource", BindCloudResourceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindCloudResource", BindCloudResourceResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelKeyArchiveResponse CancelKeyArchive(CancelKeyArchiveRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelKeyArchive", CancelKeyArchiveResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelKeyArchive", CancelKeyArchiveResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelKeyDeletionResponse CancelKeyDeletion(CancelKeyDeletionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelKeyDeletion", CancelKeyDeletionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelKeyDeletion", CancelKeyDeletionResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateKeyResponse CreateKey(CreateKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateKey", CreateKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateKey", CreateKeyResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateWhiteBoxKeyResponse CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWhiteBoxKey", CreateWhiteBoxKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWhiteBoxKey", CreateWhiteBoxKeyResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DecryptResponse Decrypt(DecryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DecryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "Decrypt", DecryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "Decrypt", DecryptResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterial(DeleteImportedKeyMaterialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteImportedKeyMaterialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteImportedKeyMaterial", DeleteImportedKeyMaterialResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteImportedKeyMaterial", DeleteImportedKeyMaterialResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWhiteBoxKey", DeleteWhiteBoxKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWhiteBoxKey", DeleteWhiteBoxKeyResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeKeyResponse DescribeKey(DescribeKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeKey", DescribeKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeKey", DescribeKeyResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeKeys", DescribeKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeKeys", DescribeKeysResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWhiteBoxDecryptKey", DescribeWhiteBoxDecryptKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWhiteBoxDecryptKey", DescribeWhiteBoxDecryptKeyResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprints(DescribeWhiteBoxDeviceFingerprintsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWhiteBoxDeviceFingerprints", DescribeWhiteBoxDeviceFingerprintsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWhiteBoxDeviceFingerprints", DescribeWhiteBoxDeviceFingerprintsResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWhiteBoxKey", DescribeWhiteBoxKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWhiteBoxKey", DescribeWhiteBoxKeyResponse.class);
     }
 
     /**
@@ -317,14 +221,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWhiteBoxKeyDetails", DescribeWhiteBoxKeyDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWhiteBoxKeyDetails", DescribeWhiteBoxKeyDetailsResponse.class);
     }
 
     /**
@@ -334,14 +232,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWhiteBoxServiceStatus", DescribeWhiteBoxServiceStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWhiteBoxServiceStatus", DescribeWhiteBoxServiceStatusResponse.class);
     }
 
     /**
@@ -351,14 +243,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableKeyResponse DisableKey(DisableKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableKey", DisableKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableKey", DisableKeyResponse.class);
     }
 
     /**
@@ -368,14 +254,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableKeyRotationResponse DisableKeyRotation(DisableKeyRotationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableKeyRotationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableKeyRotation", DisableKeyRotationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableKeyRotation", DisableKeyRotationResponse.class);
     }
 
     /**
@@ -385,14 +265,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableKeysResponse DisableKeys(DisableKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableKeys", DisableKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableKeys", DisableKeysResponse.class);
     }
 
     /**
@@ -402,14 +276,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableWhiteBoxKeyResponse DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableWhiteBoxKey", DisableWhiteBoxKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableWhiteBoxKey", DisableWhiteBoxKeyResponse.class);
     }
 
     /**
@@ -419,14 +287,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableWhiteBoxKeys", DisableWhiteBoxKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableWhiteBoxKeys", DisableWhiteBoxKeysResponse.class);
     }
 
     /**
@@ -436,14 +298,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableKeyResponse EnableKey(EnableKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableKey", EnableKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableKey", EnableKeyResponse.class);
     }
 
     /**
@@ -453,14 +309,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableKeyRotationResponse EnableKeyRotation(EnableKeyRotationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableKeyRotationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableKeyRotation", EnableKeyRotationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableKeyRotation", EnableKeyRotationResponse.class);
     }
 
     /**
@@ -470,14 +320,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableKeysResponse EnableKeys(EnableKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableKeys", EnableKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableKeys", EnableKeysResponse.class);
     }
 
     /**
@@ -487,14 +331,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableWhiteBoxKeyResponse EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableWhiteBoxKey", EnableWhiteBoxKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableWhiteBoxKey", EnableWhiteBoxKeyResponse.class);
     }
 
     /**
@@ -504,14 +342,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableWhiteBoxKeysResponse EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableWhiteBoxKeys", EnableWhiteBoxKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableWhiteBoxKeys", EnableWhiteBoxKeysResponse.class);
     }
 
     /**
@@ -521,14 +353,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EncryptResponse Encrypt(EncryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EncryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "Encrypt", EncryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "Encrypt", EncryptResponse.class);
     }
 
     /**
@@ -538,14 +364,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EncryptByWhiteBoxResponse EncryptByWhiteBox(EncryptByWhiteBoxRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EncryptByWhiteBox", EncryptByWhiteBoxResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EncryptByWhiteBox", EncryptByWhiteBoxResponse.class);
     }
 
     /**
@@ -555,14 +375,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GenerateDataKeyResponse GenerateDataKey(GenerateDataKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GenerateDataKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GenerateDataKey", GenerateDataKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GenerateDataKey", GenerateDataKeyResponse.class);
     }
 
     /**
@@ -572,14 +386,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GenerateRandomResponse GenerateRandom(GenerateRandomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GenerateRandomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GenerateRandom", GenerateRandomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GenerateRandom", GenerateRandomResponse.class);
     }
 
     /**
@@ -589,14 +397,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetKeyRotationStatusResponse GetKeyRotationStatus(GetKeyRotationStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetKeyRotationStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetKeyRotationStatus", GetKeyRotationStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetKeyRotationStatus", GetKeyRotationStatusResponse.class);
     }
 
     /**
@@ -606,14 +408,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetParametersForImportResponse GetParametersForImport(GetParametersForImportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetParametersForImportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetParametersForImport", GetParametersForImportResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetParametersForImport", GetParametersForImportResponse.class);
     }
 
     /**
@@ -623,14 +419,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPublicKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPublicKey", GetPublicKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPublicKey", GetPublicKeyResponse.class);
     }
 
     /**
@@ -640,14 +430,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetRegionsResponse GetRegions(GetRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetRegions", GetRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetRegions", GetRegionsResponse.class);
     }
 
     /**
@@ -657,14 +441,8 @@ public class KmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetServiceStatusResponse GetServiceStatus(GetServiceStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetServiceStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetServiceStatus", GetServiceStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetServiceStatus", GetServiceStatusResponse.class);
     }
 
     /**
@@ -675,14 +453,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public ImportKeyMaterialResponse ImportKeyMaterial(ImportKeyMaterialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImportKeyMaterialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ImportKeyMaterial", ImportKeyMaterialResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ImportKeyMaterial", ImportKeyMaterialResponse.class);
     }
 
     /**
@@ -692,14 +464,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAlgorithmsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListAlgorithms", ListAlgorithmsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListAlgorithms", ListAlgorithmsResponse.class);
     }
 
     /**
@@ -709,14 +475,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public ListKeyDetailResponse ListKeyDetail(ListKeyDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListKeyDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListKeyDetail", ListKeyDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListKeyDetail", ListKeyDetailResponse.class);
     }
 
     /**
@@ -726,14 +486,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public ListKeysResponse ListKeys(ListKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListKeys", ListKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListKeys", ListKeysResponse.class);
     }
 
     /**
@@ -743,14 +497,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(OverwriteWhiteBoxDeviceFingerprintsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "OverwriteWhiteBoxDeviceFingerprints", OverwriteWhiteBoxDeviceFingerprintsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "OverwriteWhiteBoxDeviceFingerprints", OverwriteWhiteBoxDeviceFingerprintsResponse.class);
     }
 
     /**
@@ -760,14 +508,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public PostQuantumCryptoDecryptResponse PostQuantumCryptoDecrypt(PostQuantumCryptoDecryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PostQuantumCryptoDecrypt", PostQuantumCryptoDecryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PostQuantumCryptoDecrypt", PostQuantumCryptoDecryptResponse.class);
     }
 
     /**
@@ -777,14 +519,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public PostQuantumCryptoEncryptResponse PostQuantumCryptoEncrypt(PostQuantumCryptoEncryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PostQuantumCryptoEncrypt", PostQuantumCryptoEncryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PostQuantumCryptoEncrypt", PostQuantumCryptoEncryptResponse.class);
     }
 
     /**
@@ -794,14 +530,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public PostQuantumCryptoSignResponse PostQuantumCryptoSign(PostQuantumCryptoSignRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PostQuantumCryptoSign", PostQuantumCryptoSignResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PostQuantumCryptoSign", PostQuantumCryptoSignResponse.class);
     }
 
     /**
@@ -811,14 +541,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(PostQuantumCryptoVerifyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PostQuantumCryptoVerify", PostQuantumCryptoVerifyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PostQuantumCryptoVerify", PostQuantumCryptoVerifyResponse.class);
     }
 
     /**
@@ -828,14 +552,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public ReEncryptResponse ReEncrypt(ReEncryptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReEncryptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ReEncrypt", ReEncryptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ReEncrypt", ReEncryptResponse.class);
     }
 
     /**
@@ -845,14 +563,8 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
      * @throws TencentCloudSDKException
      */
     public ScheduleKeyDeletionResponse ScheduleKeyDeletion(ScheduleKeyDeletionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ScheduleKeyDeletion", ScheduleKeyDeletionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ScheduleKeyDeletion", ScheduleKeyDeletionResponse.class);
     }
 
     /**
@@ -863,14 +575,8 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
      * @throws TencentCloudSDKException
      */
     public SignByAsymmetricKeyResponse SignByAsymmetricKey(SignByAsymmetricKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SignByAsymmetricKey", SignByAsymmetricKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SignByAsymmetricKey", SignByAsymmetricKeyResponse.class);
     }
 
     /**
@@ -880,14 +586,8 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
      * @throws TencentCloudSDKException
      */
     public UnbindCloudResourceResponse UnbindCloudResource(UnbindCloudResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnbindCloudResource", UnbindCloudResourceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnbindCloudResource", UnbindCloudResourceResponse.class);
     }
 
     /**
@@ -897,14 +597,8 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
      * @throws TencentCloudSDKException
      */
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateAliasResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
     }
 
     /**
@@ -914,14 +608,8 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
      * @throws TencentCloudSDKException
      */
     public UpdateKeyDescriptionResponse UpdateKeyDescription(UpdateKeyDescriptionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateKeyDescriptionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateKeyDescription", UpdateKeyDescriptionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateKeyDescription", UpdateKeyDescriptionResponse.class);
     }
 
     /**
@@ -931,14 +619,8 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
      * @throws TencentCloudSDKException
      */
     public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VerifyByAsymmetricKey", VerifyByAsymmetricKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VerifyByAsymmetricKey", VerifyByAsymmetricKeyResponse.class);
     }
 
 }

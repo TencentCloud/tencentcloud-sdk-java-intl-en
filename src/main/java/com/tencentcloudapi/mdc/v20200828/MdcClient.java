@@ -45,14 +45,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateStreamLinkFlowResponse CreateStreamLinkFlow(CreateStreamLinkFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateStreamLinkFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateStreamLinkFlow", CreateStreamLinkFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateStreamLinkFlow", CreateStreamLinkFlowResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(CreateStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateStreamLinkOutputInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateStreamLinkOutputInfo", CreateStreamLinkOutputInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateStreamLinkOutputInfo", CreateStreamLinkOutputInfoResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(DeleteStreamLinkFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteStreamLinkFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteStreamLinkFlow", DeleteStreamLinkFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteStreamLinkFlow", DeleteStreamLinkFlowResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(DeleteStreamLinkOutputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteStreamLinkOutputResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteStreamLinkOutput", DeleteStreamLinkOutputResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteStreamLinkOutput", DeleteStreamLinkOutputResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(DescribeStreamLinkFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlow", DescribeStreamLinkFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlow", DescribeStreamLinkFlowResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(DescribeStreamLinkFlowLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlowLogs", DescribeStreamLinkFlowLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlowLogs", DescribeStreamLinkFlowLogsResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(DescribeStreamLinkFlowMediaStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlowMediaStatistics", DescribeStreamLinkFlowMediaStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlowMediaStatistics", DescribeStreamLinkFlowMediaStatisticsResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatus(DescribeStreamLinkFlowRealtimeStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlowRealtimeStatus", DescribeStreamLinkFlowRealtimeStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlowRealtimeStatus", DescribeStreamLinkFlowRealtimeStatusResponse.class);
     }
 
     /**
@@ -182,14 +134,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatistics(DescribeStreamLinkFlowSRTStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlowSRTStatistics", DescribeStreamLinkFlowSRTStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlowSRTStatistics", DescribeStreamLinkFlowSRTStatisticsResponse.class);
     }
 
     /**
@@ -200,14 +146,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatistics(DescribeStreamLinkFlowStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlowStatistics", DescribeStreamLinkFlowStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlowStatistics", DescribeStreamLinkFlowStatisticsResponse.class);
     }
 
     /**
@@ -217,14 +157,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(DescribeStreamLinkFlowsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkFlowsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkFlows", DescribeStreamLinkFlowsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkFlows", DescribeStreamLinkFlowsResponse.class);
     }
 
     /**
@@ -234,14 +168,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(DescribeStreamLinkRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamLinkRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamLinkRegions", DescribeStreamLinkRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamLinkRegions", DescribeStreamLinkRegionsResponse.class);
     }
 
     /**
@@ -251,14 +179,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(ModifyStreamLinkFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyStreamLinkFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyStreamLinkFlow", ModifyStreamLinkFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyStreamLinkFlow", ModifyStreamLinkFlowResponse.class);
     }
 
     /**
@@ -268,14 +190,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyStreamLinkInputResponse ModifyStreamLinkInput(ModifyStreamLinkInputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyStreamLinkInputResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyStreamLinkInput", ModifyStreamLinkInputResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyStreamLinkInput", ModifyStreamLinkInputResponse.class);
     }
 
     /**
@@ -285,14 +201,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(ModifyStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyStreamLinkOutputInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyStreamLinkOutputInfo", ModifyStreamLinkOutputInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyStreamLinkOutputInfo", ModifyStreamLinkOutputInfoResponse.class);
     }
 
     /**
@@ -302,14 +212,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StartStreamLinkFlowResponse StartStreamLinkFlow(StartStreamLinkFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartStreamLinkFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartStreamLinkFlow", StartStreamLinkFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartStreamLinkFlow", StartStreamLinkFlowResponse.class);
     }
 
     /**
@@ -319,14 +223,8 @@ public class MdcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopStreamLinkFlowResponse StopStreamLinkFlow(StopStreamLinkFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopStreamLinkFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopStreamLinkFlow", StopStreamLinkFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopStreamLinkFlow", StopStreamLinkFlowResponse.class);
     }
 
 }

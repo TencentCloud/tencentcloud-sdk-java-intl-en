@@ -46,14 +46,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public AddGroupMemberResponse AddGroupMember(AddGroupMemberRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddGroupMemberResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddGroupMember", AddGroupMemberResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddGroupMember", AddGroupMemberResponse.class);
     }
 
     /**
@@ -64,14 +58,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchAddGroupMemberResponse BatchAddGroupMember(BatchAddGroupMemberRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchAddGroupMember", BatchAddGroupMemberResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchAddGroupMember", BatchAddGroupMemberResponse.class);
     }
 
     /**
@@ -82,14 +70,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembers(BatchCreateGroupWithMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchCreateGroupWithMembers", BatchCreateGroupWithMembersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchCreateGroupWithMembers", BatchCreateGroupWithMembersResponse.class);
     }
 
     /**
@@ -99,14 +81,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchCreateRoomResponse BatchCreateRoom(BatchCreateRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchCreateRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchCreateRoom", BatchCreateRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchCreateRoom", BatchCreateRoomResponse.class);
     }
 
     /**
@@ -117,14 +93,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchDeleteGroupMemberResponse BatchDeleteGroupMember(BatchDeleteGroupMemberRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchDeleteGroupMember", BatchDeleteGroupMemberResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchDeleteGroupMember", BatchDeleteGroupMemberResponse.class);
     }
 
     /**
@@ -135,14 +105,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchDeleteRecordResponse BatchDeleteRecord(BatchDeleteRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchDeleteRecord", BatchDeleteRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchDeleteRecord", BatchDeleteRecordResponse.class);
     }
 
     /**
@@ -152,14 +116,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchDescribeDocumentResponse BatchDescribeDocument(BatchDescribeDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchDescribeDocument", BatchDescribeDocumentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchDescribeDocument", BatchDescribeDocumentResponse.class);
     }
 
     /**
@@ -170,14 +128,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BatchRegisterResponse BatchRegister(BatchRegisterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchRegisterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchRegister", BatchRegisterResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchRegister", BatchRegisterResponse.class);
     }
 
     /**
@@ -187,14 +139,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public BindDocumentToRoomResponse BindDocumentToRoom(BindDocumentToRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindDocumentToRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BindDocumentToRoom", BindDocumentToRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BindDocumentToRoom", BindDocumentToRoomResponse.class);
     }
 
     /**
@@ -204,14 +150,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public CreateDocumentResponse CreateDocument(CreateDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDocumentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDocument", CreateDocumentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDocument", CreateDocumentResponse.class);
     }
 
     /**
@@ -222,14 +162,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public CreateGroupWithMembersResponse CreateGroupWithMembers(CreateGroupWithMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateGroupWithMembers", CreateGroupWithMembersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateGroupWithMembers", CreateGroupWithMembersResponse.class);
     }
 
     /**
@@ -240,14 +174,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(CreateGroupWithSubGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateGroupWithSubGroup", CreateGroupWithSubGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateGroupWithSubGroup", CreateGroupWithSubGroupResponse.class);
     }
 
     /**
@@ -258,14 +186,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public CreateRoomResponse CreateRoom(CreateRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateRoom", CreateRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateRoom", CreateRoomResponse.class);
     }
 
     /**
@@ -275,14 +197,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public CreateSupervisorResponse CreateSupervisor(CreateSupervisorRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSupervisorResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSupervisor", CreateSupervisorResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSupervisor", CreateSupervisorResponse.class);
     }
 
     /**
@@ -292,14 +208,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteAppCustomContentResponse DeleteAppCustomContent(DeleteAppCustomContentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAppCustomContent", DeleteAppCustomContentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAppCustomContent", DeleteAppCustomContentResponse.class);
     }
 
     /**
@@ -310,14 +220,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteDocumentResponse DeleteDocument(DeleteDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDocumentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteDocument", DeleteDocumentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteDocument", DeleteDocumentResponse.class);
     }
 
     /**
@@ -328,14 +232,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
     }
 
     /**
@@ -346,14 +244,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteGroupMemberResponse DeleteGroupMember(DeleteGroupMemberRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteGroupMember", DeleteGroupMemberResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteGroupMember", DeleteGroupMemberResponse.class);
     }
 
     /**
@@ -364,14 +256,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteRecordResponse DeleteRecord(DeleteRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRecord", DeleteRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRecord", DeleteRecordResponse.class);
     }
 
     /**
@@ -381,14 +267,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteRoomResponse DeleteRoom(DeleteRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRoom", DeleteRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRoom", DeleteRoomResponse.class);
     }
 
     /**
@@ -398,14 +278,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DeleteSupervisorResponse DeleteSupervisor(DeleteSupervisorRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSupervisorResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSupervisor", DeleteSupervisorResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSupervisor", DeleteSupervisorResponse.class);
     }
 
     /**
@@ -415,14 +289,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeAnswerListResponse DescribeAnswerList(DescribeAnswerListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAnswerListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAnswerList", DescribeAnswerListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAnswerList", DescribeAnswerListResponse.class);
     }
 
     /**
@@ -433,14 +301,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeCurrentMemberListResponse DescribeCurrentMemberList(DescribeCurrentMemberListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCurrentMemberList", DescribeCurrentMemberListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCurrentMemberList", DescribeCurrentMemberListResponse.class);
     }
 
     /**
@@ -450,14 +312,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeDeveloperResponse DescribeDeveloper(DescribeDeveloperRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDeveloperResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDeveloper", DescribeDeveloperResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDeveloper", DescribeDeveloperResponse.class);
     }
 
     /**
@@ -468,14 +324,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeDocumentResponse DescribeDocument(DescribeDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDocumentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDocument", DescribeDocumentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDocument", DescribeDocumentResponse.class);
     }
 
     /**
@@ -489,14 +339,8 @@ This API is used to query courseware. It has been deprecated. Please use `BatchD
      * @throws TencentCloudSDKException
      */
     public DescribeDocumentsResponse DescribeDocuments(DescribeDocumentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDocumentsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDocuments", DescribeDocumentsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDocuments", DescribeDocumentsResponse.class);
     }
 
     /**
@@ -507,14 +351,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(DescribeDocumentsByRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDocumentsByRoom", DescribeDocumentsByRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDocumentsByRoom", DescribeDocumentsByRoomResponse.class);
     }
 
     /**
@@ -525,14 +363,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroup", DescribeGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroup", DescribeGroupResponse.class);
     }
 
     /**
@@ -543,14 +375,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeGroupListResponse DescribeGroupList(DescribeGroupListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupList", DescribeGroupListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupList", DescribeGroupListResponse.class);
     }
 
     /**
@@ -561,14 +387,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeGroupMemberListResponse DescribeGroupMemberList(DescribeGroupMemberListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupMemberList", DescribeGroupMemberListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupMemberList", DescribeGroupMemberListResponse.class);
     }
 
     /**
@@ -578,14 +398,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeQuestionListResponse DescribeQuestionList(DescribeQuestionListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeQuestionListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeQuestionList", DescribeQuestionListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeQuestionList", DescribeQuestionListResponse.class);
     }
 
     /**
@@ -596,14 +410,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeRoomResponse DescribeRoom(DescribeRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRoom", DescribeRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRoom", DescribeRoomResponse.class);
     }
 
     /**
@@ -614,14 +422,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeRoomStatisticsResponse DescribeRoomStatistics(DescribeRoomStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoomStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRoomStatistics", DescribeRoomStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRoomStatistics", DescribeRoomStatisticsResponse.class);
     }
 
     /**
@@ -632,14 +434,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(DescribeSdkAppIdUsersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSdkAppIdUsers", DescribeSdkAppIdUsersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSdkAppIdUsers", DescribeSdkAppIdUsersResponse.class);
     }
 
     /**
@@ -649,14 +445,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeSupervisorsResponse DescribeSupervisors(DescribeSupervisorsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSupervisorsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSupervisors", DescribeSupervisorsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSupervisors", DescribeSupervisorsResponse.class);
     }
 
     /**
@@ -666,14 +456,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
     }
 
     /**
@@ -683,14 +467,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public EndRoomResponse EndRoom(EndRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EndRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EndRoom", EndRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EndRoom", EndRoomResponse.class);
     }
 
     /**
@@ -700,14 +478,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public GetRoomEventResponse GetRoomEvent(GetRoomEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRoomEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetRoomEvent", GetRoomEventResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetRoomEvent", GetRoomEventResponse.class);
     }
 
     /**
@@ -717,14 +489,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public GetRoomMessageResponse GetRoomMessage(GetRoomMessageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRoomMessageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetRoomMessage", GetRoomMessageResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetRoomMessage", GetRoomMessageResponse.class);
     }
 
     /**
@@ -734,14 +500,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public GetRoomsResponse GetRooms(GetRoomsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRoomsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetRooms", GetRoomsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetRooms", GetRoomsResponse.class);
     }
 
     /**
@@ -752,14 +512,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public GetWatermarkResponse GetWatermark(GetWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetWatermark", GetWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetWatermark", GetWatermarkResponse.class);
     }
 
     /**
@@ -769,14 +523,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public KickUserFromRoomResponse KickUserFromRoom(KickUserFromRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<KickUserFromRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "KickUserFromRoom", KickUserFromRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "KickUserFromRoom", KickUserFromRoomResponse.class);
     }
 
     /**
@@ -786,14 +534,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public LoginOriginIdResponse LoginOriginId(LoginOriginIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LoginOriginIdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "LoginOriginId", LoginOriginIdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "LoginOriginId", LoginOriginIdResponse.class);
     }
 
     /**
@@ -803,14 +545,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public LoginUserResponse LoginUser(LoginUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LoginUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "LoginUser", LoginUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "LoginUser", LoginUserResponse.class);
     }
 
     /**
@@ -821,14 +557,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public ModifyAppResponse ModifyApp(ModifyAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApp", ModifyAppResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApp", ModifyAppResponse.class);
     }
 
     /**
@@ -839,14 +569,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
     }
 
     /**
@@ -857,14 +581,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyRoom", ModifyRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyRoom", ModifyRoomResponse.class);
     }
 
     /**
@@ -875,14 +593,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public ModifyUserProfileResponse ModifyUserProfile(ModifyUserProfileRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUserProfileResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyUserProfile", ModifyUserProfileResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyUserProfile", ModifyUserProfileResponse.class);
     }
 
     /**
@@ -892,14 +604,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public RegisterUserResponse RegisterUser(RegisterUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RegisterUser", RegisterUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RegisterUser", RegisterUserResponse.class);
     }
 
     /**
@@ -909,14 +615,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public SetAppCustomContentResponse SetAppCustomContent(SetAppCustomContentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetAppCustomContentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetAppCustomContent", SetAppCustomContentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetAppCustomContent", SetAppCustomContentResponse.class);
     }
 
     /**
@@ -927,14 +627,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public SetWatermarkResponse SetWatermark(SetWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetWatermark", SetWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetWatermark", SetWatermarkResponse.class);
     }
 
     /**
@@ -944,14 +638,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public StartRoomResponse StartRoom(StartRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartRoom", StartRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartRoom", StartRoomResponse.class);
     }
 
     /**
@@ -961,14 +649,8 @@ A maximum of 20 requests can be initiated per second for this API.
      * @throws TencentCloudSDKException
      */
     public UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(UnbindDocumentFromRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindDocumentFromRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnbindDocumentFromRoom", UnbindDocumentFromRoomResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnbindDocumentFromRoom", UnbindDocumentFromRoomResponse.class);
     }
 
 }

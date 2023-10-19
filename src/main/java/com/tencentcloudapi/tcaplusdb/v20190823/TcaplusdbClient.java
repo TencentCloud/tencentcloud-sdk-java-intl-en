@@ -45,14 +45,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ClearTablesResponse ClearTables(ClearTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ClearTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ClearTables", ClearTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ClearTables", ClearTablesResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CompareIdlFilesResponse CompareIdlFiles(CompareIdlFilesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CompareIdlFilesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CompareIdlFiles", CompareIdlFilesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CompareIdlFiles", CompareIdlFilesResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBackupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateBackup", CreateBackupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateBackup", CreateBackupResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClusterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSnapshotsResponse CreateSnapshots(CreateSnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSnapshots", CreateSnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSnapshots", CreateSnapshotsResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTableGroupResponse CreateTableGroup(CreateTableGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTableGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTableGroup", CreateTableGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTableGroup", CreateTableGroupResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTablesResponse CreateTables(CreateTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTables", CreateTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTables", CreateTablesResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteBackupRecordsResponse DeleteBackupRecords(DeleteBackupRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteBackupRecords", DeleteBackupRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteBackupRecords", DeleteBackupRecordsResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteClusterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCluster", DeleteClusterResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCluster", DeleteClusterResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteIdlFilesResponse DeleteIdlFiles(DeleteIdlFilesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteIdlFilesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteIdlFiles", DeleteIdlFilesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteIdlFiles", DeleteIdlFilesResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSnapshots", DeleteSnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSnapshots", DeleteSnapshotsResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTableDataFlowResponse DeleteTableDataFlow(DeleteTableDataFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTableDataFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTableDataFlow", DeleteTableDataFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTableDataFlow", DeleteTableDataFlowResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTableGroupResponse DeleteTableGroup(DeleteTableGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTableGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTableGroup", DeleteTableGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTableGroup", DeleteTableGroupResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTableIndexResponse DeleteTableIndex(DeleteTableIndexRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTableIndexResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTableIndex", DeleteTableIndexResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTableIndex", DeleteTableIndexResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class TcaplusdbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTablesResponse DeleteTables(DeleteTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTables", DeleteTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTables", DeleteTablesResponse.class);
     }
 
     /**
@@ -304,14 +214,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeBackupRecordsResponse DescribeBackupRecords(DescribeBackupRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBackupRecords", DescribeBackupRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBackupRecords", DescribeBackupRecordsResponse.class);
     }
 
     /**
@@ -321,14 +225,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeClusterTagsResponse DescribeClusterTags(DescribeClusterTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClusterTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeClusterTags", DescribeClusterTagsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeClusterTags", DescribeClusterTagsResponse.class);
     }
 
     /**
@@ -338,14 +236,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClustersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeClusters", DescribeClustersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeClusters", DescribeClustersResponse.class);
     }
 
     /**
@@ -355,14 +247,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeIdlFileInfosResponse DescribeIdlFileInfos(DescribeIdlFileInfosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIdlFileInfosResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIdlFileInfos", DescribeIdlFileInfosResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIdlFileInfos", DescribeIdlFileInfosResponse.class);
     }
 
     /**
@@ -372,14 +258,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeMachineResponse DescribeMachine(DescribeMachineRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMachineResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMachine", DescribeMachineResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMachine", DescribeMachineResponse.class);
     }
 
     /**
@@ -389,14 +269,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
     }
 
     /**
@@ -406,14 +280,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSnapshots", DescribeSnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSnapshots", DescribeSnapshotsResponse.class);
     }
 
     /**
@@ -423,14 +291,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeTableGroupTagsResponse DescribeTableGroupTags(DescribeTableGroupTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTableGroupTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTableGroupTags", DescribeTableGroupTagsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTableGroupTags", DescribeTableGroupTagsResponse.class);
     }
 
     /**
@@ -440,14 +302,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeTableGroupsResponse DescribeTableGroups(DescribeTableGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTableGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTableGroups", DescribeTableGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTableGroups", DescribeTableGroupsResponse.class);
     }
 
     /**
@@ -457,14 +313,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeTableTagsResponse DescribeTableTags(DescribeTableTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTableTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTableTags", DescribeTableTagsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTableTags", DescribeTableTagsResponse.class);
     }
 
     /**
@@ -474,14 +324,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTables", DescribeTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTables", DescribeTablesResponse.class);
     }
 
     /**
@@ -491,14 +335,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeTablesInRecycleResponse DescribeTablesInRecycle(DescribeTablesInRecycleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTablesInRecycleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTablesInRecycle", DescribeTablesInRecycleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTablesInRecycle", DescribeTablesInRecycleResponse.class);
     }
 
     /**
@@ -508,14 +346,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
     }
 
     /**
@@ -525,14 +357,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DescribeUinInWhitelistResponse DescribeUinInWhitelist(DescribeUinInWhitelistRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUinInWhitelistResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUinInWhitelist", DescribeUinInWhitelistResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUinInWhitelist", DescribeUinInWhitelistResponse.class);
     }
 
     /**
@@ -542,14 +368,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public DisableRestProxyResponse DisableRestProxy(DisableRestProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableRestProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableRestProxy", DisableRestProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableRestProxy", DisableRestProxyResponse.class);
     }
 
     /**
@@ -559,14 +379,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public EnableRestProxyResponse EnableRestProxy(EnableRestProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableRestProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableRestProxy", EnableRestProxyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableRestProxy", EnableRestProxyResponse.class);
     }
 
     /**
@@ -576,14 +390,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ImportSnapshotsResponse ImportSnapshots(ImportSnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImportSnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ImportSnapshots", ImportSnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ImportSnapshots", ImportSnapshotsResponse.class);
     }
 
     /**
@@ -593,14 +401,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public MergeTablesDataResponse MergeTablesData(MergeTablesDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MergeTablesDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "MergeTablesData", MergeTablesDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "MergeTablesData", MergeTablesDataResponse.class);
     }
 
     /**
@@ -610,14 +412,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyCensorshipResponse ModifyCensorship(ModifyCensorshipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCensorshipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCensorship", ModifyCensorshipResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCensorship", ModifyCensorshipResponse.class);
     }
 
     /**
@@ -627,14 +423,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyClusterMachineResponse ModifyClusterMachine(ModifyClusterMachineRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyClusterMachine", ModifyClusterMachineResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyClusterMachine", ModifyClusterMachineResponse.class);
     }
 
     /**
@@ -644,14 +434,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyClusterNameResponse ModifyClusterName(ModifyClusterNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyClusterNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyClusterName", ModifyClusterNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyClusterName", ModifyClusterNameResponse.class);
     }
 
     /**
@@ -661,14 +445,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyClusterPasswordResponse ModifyClusterPassword(ModifyClusterPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyClusterPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyClusterPassword", ModifyClusterPasswordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyClusterPassword", ModifyClusterPasswordResponse.class);
     }
 
     /**
@@ -678,14 +456,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyClusterTagsResponse ModifyClusterTags(ModifyClusterTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyClusterTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyClusterTags", ModifyClusterTagsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyClusterTags", ModifyClusterTagsResponse.class);
     }
 
     /**
@@ -695,14 +467,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifySnapshotsResponse ModifySnapshots(ModifySnapshotsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySnapshotsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySnapshots", ModifySnapshotsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySnapshots", ModifySnapshotsResponse.class);
     }
 
     /**
@@ -712,14 +478,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyTableGroupNameResponse ModifyTableGroupName(ModifyTableGroupNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTableGroupNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTableGroupName", ModifyTableGroupNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTableGroupName", ModifyTableGroupNameResponse.class);
     }
 
     /**
@@ -729,14 +489,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyTableGroupTagsResponse ModifyTableGroupTags(ModifyTableGroupTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTableGroupTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTableGroupTags", ModifyTableGroupTagsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTableGroupTags", ModifyTableGroupTagsResponse.class);
     }
 
     /**
@@ -746,14 +500,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyTableMemosResponse ModifyTableMemos(ModifyTableMemosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTableMemosResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTableMemos", ModifyTableMemosResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTableMemos", ModifyTableMemosResponse.class);
     }
 
     /**
@@ -763,14 +511,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyTableQuotasResponse ModifyTableQuotas(ModifyTableQuotasRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTableQuotasResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTableQuotas", ModifyTableQuotasResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTableQuotas", ModifyTableQuotasResponse.class);
     }
 
     /**
@@ -780,14 +522,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyTableTagsResponse ModifyTableTags(ModifyTableTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTableTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTableTags", ModifyTableTagsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTableTags", ModifyTableTagsResponse.class);
     }
 
     /**
@@ -797,14 +533,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public ModifyTablesResponse ModifyTables(ModifyTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTables", ModifyTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTables", ModifyTablesResponse.class);
     }
 
     /**
@@ -814,14 +544,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public RecoverRecycleTablesResponse RecoverRecycleTables(RecoverRecycleTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecoverRecycleTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecoverRecycleTables", RecoverRecycleTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecoverRecycleTables", RecoverRecycleTablesResponse.class);
     }
 
     /**
@@ -831,14 +555,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public RollbackTablesResponse RollbackTables(RollbackTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RollbackTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RollbackTables", RollbackTablesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RollbackTables", RollbackTablesResponse.class);
     }
 
     /**
@@ -848,14 +566,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public SetBackupExpireRuleResponse SetBackupExpireRule(SetBackupExpireRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetBackupExpireRule", SetBackupExpireRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetBackupExpireRule", SetBackupExpireRuleResponse.class);
     }
 
     /**
@@ -865,14 +577,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public SetTableDataFlowResponse SetTableDataFlow(SetTableDataFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetTableDataFlowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetTableDataFlow", SetTableDataFlowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetTableDataFlow", SetTableDataFlowResponse.class);
     }
 
     /**
@@ -882,14 +588,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public SetTableIndexResponse SetTableIndex(SetTableIndexRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetTableIndexResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetTableIndex", SetTableIndexResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetTableIndex", SetTableIndexResponse.class);
     }
 
     /**
@@ -899,14 +599,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public UpdateApplyResponse UpdateApply(UpdateApplyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateApplyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateApply", UpdateApplyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateApply", UpdateApplyResponse.class);
     }
 
     /**
@@ -916,14 +610,8 @@ When querying the cluster, table group, and table levels, both `TableGroupId` an
      * @throws TencentCloudSDKException
      */
     public VerifyIdlFilesResponse VerifyIdlFiles(VerifyIdlFilesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyIdlFilesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VerifyIdlFiles", VerifyIdlFilesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VerifyIdlFiles", VerifyIdlFilesResponse.class);
     }
 
 }

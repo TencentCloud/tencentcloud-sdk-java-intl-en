@@ -49,14 +49,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AllocateCustomerCreditResponse AllocateCustomerCredit(AllocateCustomerCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AllocateCustomerCreditResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AllocateCustomerCredit", AllocateCustomerCreditResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AllocateCustomerCredit", AllocateCustomerCreditResponse.class);
     }
 
     /**
@@ -70,14 +64,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
     }
 
     /**
@@ -87,14 +75,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeBillDetailResponse DescribeBillDetail(DescribeBillDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBillDetail", DescribeBillDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBillDetail", DescribeBillDetailResponse.class);
     }
 
     /**
@@ -104,14 +86,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBillSummaryByPayMode", DescribeBillSummaryByPayModeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBillSummaryByPayMode", DescribeBillSummaryByPayModeResponse.class);
     }
 
     /**
@@ -121,14 +97,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBillSummaryByProduct", DescribeBillSummaryByProductResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBillSummaryByProduct", DescribeBillSummaryByProductResponse.class);
     }
 
     /**
@@ -138,14 +108,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBillSummaryByRegion", DescribeBillSummaryByRegionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBillSummaryByRegion", DescribeBillSummaryByRegionResponse.class);
     }
 
     /**
@@ -155,14 +119,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(DescribeCustomerBillDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomerBillDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCustomerBillDetail", DescribeCustomerBillDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCustomerBillDetail", DescribeCustomerBillDetailResponse.class);
     }
 
     /**
@@ -172,14 +130,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(DescribeCustomerBillSummaryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomerBillSummaryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCustomerBillSummary", DescribeCustomerBillSummaryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCustomerBillSummary", DescribeCustomerBillSummaryResponse.class);
     }
 
     /**
@@ -189,14 +141,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeCustomerInfoResponse DescribeCustomerInfo(DescribeCustomerInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomerInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCustomerInfo", DescribeCustomerInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCustomerInfo", DescribeCustomerInfoResponse.class);
     }
 
     /**
@@ -206,14 +152,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public DescribeCustomerUinResponse DescribeCustomerUin(DescribeCustomerUinRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomerUinResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCustomerUin", DescribeCustomerUinResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCustomerUin", DescribeCustomerUinResponse.class);
     }
 
     /**
@@ -223,14 +163,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public GetCountryCodesResponse GetCountryCodes(GetCountryCodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCountryCodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCountryCodes", GetCountryCodesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCountryCodes", GetCountryCodesResponse.class);
     }
 
     /**
@@ -240,14 +174,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryAccountVerificationStatusResponse QueryAccountVerificationStatus(QueryAccountVerificationStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryAccountVerificationStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryAccountVerificationStatus", QueryAccountVerificationStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryAccountVerificationStatus", QueryAccountVerificationStatusResponse.class);
     }
 
     /**
@@ -257,14 +185,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(QueryCreditAllocationHistoryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCreditAllocationHistoryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryCreditAllocationHistory", QueryCreditAllocationHistoryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryCreditAllocationHistory", QueryCreditAllocationHistoryResponse.class);
     }
 
     /**
@@ -274,14 +196,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryCreditByUinListResponse QueryCreditByUinList(QueryCreditByUinListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCreditByUinListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryCreditByUinList", QueryCreditByUinListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryCreditByUinList", QueryCreditByUinListResponse.class);
     }
 
     /**
@@ -291,14 +207,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryCreditQuotaResponse QueryCreditQuota(QueryCreditQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCreditQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryCreditQuota", QueryCreditQuotaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryCreditQuota", QueryCreditQuotaResponse.class);
     }
 
     /**
@@ -308,14 +218,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryCustomersCreditResponse QueryCustomersCredit(QueryCustomersCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCustomersCreditResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryCustomersCredit", QueryCustomersCreditResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryCustomersCredit", QueryCustomersCreditResponse.class);
     }
 
     /**
@@ -325,14 +229,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryDirectCustomersCreditResponse QueryDirectCustomersCredit(QueryDirectCustomersCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryDirectCustomersCreditResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryDirectCustomersCredit", QueryDirectCustomersCreditResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryDirectCustomersCredit", QueryDirectCustomersCreditResponse.class);
     }
 
     /**
@@ -342,14 +240,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryPartnerCreditResponse QueryPartnerCredit(QueryPartnerCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryPartnerCreditResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryPartnerCredit", QueryPartnerCreditResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryPartnerCredit", QueryPartnerCreditResponse.class);
     }
 
     /**
@@ -359,14 +251,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(QueryVoucherAmountByUinRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryVoucherAmountByUinResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryVoucherAmountByUin", QueryVoucherAmountByUinResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryVoucherAmountByUin", QueryVoucherAmountByUinResponse.class);
     }
 
     /**
@@ -376,14 +262,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryVoucherListByUinResponse QueryVoucherListByUin(QueryVoucherListByUinRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryVoucherListByUinResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryVoucherListByUin", QueryVoucherListByUinResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryVoucherListByUin", QueryVoucherListByUinResponse.class);
     }
 
     /**
@@ -393,14 +273,8 @@ Notes:<br>
      * @throws TencentCloudSDKException
      */
     public QueryVoucherPoolResponse QueryVoucherPool(QueryVoucherPoolRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryVoucherPoolResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryVoucherPool", QueryVoucherPoolResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryVoucherPool", QueryVoucherPoolResponse.class);
     }
 
 }

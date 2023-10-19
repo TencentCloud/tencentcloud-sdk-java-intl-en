@@ -49,14 +49,8 @@ Default API request rate limit: 20 requests/sec.
      * @throws TencentCloudSDKException
      */
     public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToVoiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TextToVoice", TextToVoiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TextToVoice", TextToVoiceResponse.class);
     }
 
 }

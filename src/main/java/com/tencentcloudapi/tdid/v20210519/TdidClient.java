@@ -46,14 +46,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddLabelResponse AddLabel(AddLabelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddLabelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddLabel", AddLabelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddLabel", AddLabelResponse.class);
     }
 
     /**
@@ -63,14 +57,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelAuthorityIssuerResponse CancelAuthorityIssuer(CancelAuthorityIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelAuthorityIssuerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelAuthorityIssuer", CancelAuthorityIssuerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelAuthorityIssuer", CancelAuthorityIssuerResponse.class);
     }
 
     /**
@@ -80,14 +68,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckChainResponse CheckChain(CheckChainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckChainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CheckChain", CheckChainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CheckChain", CheckChainResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckDidDeployResponse CheckDidDeploy(CheckDidDeployRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckDidDeployResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CheckDidDeploy", CheckDidDeployResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CheckDidDeploy", CheckDidDeployResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCredentialResponse CreateCredential(CreateCredentialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCredentialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCredential", CreateCredentialResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCredential", CreateCredentialResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDidServiceResponse CreateDidService(CreateDidServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDidServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDidService", CreateDidServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDidService", CreateDidServiceResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateLabelResponse CreateLabel(CreateLabelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLabelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLabel", CreateLabelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLabel", CreateLabelResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSelectiveCredentialResponse CreateSelectiveCredential(CreateSelectiveCredentialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSelectiveCredentialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSelectiveCredential", CreateSelectiveCredentialResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSelectiveCredential", CreateSelectiveCredentialResponse.class);
     }
 
     /**
@@ -182,14 +134,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTDidResponse CreateTDid(CreateTDidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTDidResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTDid", CreateTDidResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTDid", CreateTDidResponse.class);
     }
 
     /**
@@ -199,14 +145,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTDidByPrivateKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTDidByPrivateKey", CreateTDidByPrivateKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTDidByPrivateKey", CreateTDidByPrivateKeyResponse.class);
     }
 
     /**
@@ -216,14 +156,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTDidByPublicKeyResponse CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTDidByPublicKey", CreateTDidByPublicKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTDidByPublicKey", CreateTDidByPublicKeyResponse.class);
     }
 
     /**
@@ -233,14 +167,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeployByNameResponse DeployByName(DeployByNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeployByNameResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeployByName", DeployByNameResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeployByName", DeployByNameResponse.class);
     }
 
     /**
@@ -250,14 +178,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DownCptResponse DownCpt(DownCptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownCptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DownCpt", DownCptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DownCpt", DownCptResponse.class);
     }
 
     /**
@@ -267,14 +189,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableHashResponse EnableHash(EnableHashRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableHashResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableHash", EnableHashResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableHash", EnableHashResponse.class);
     }
 
     /**
@@ -286,14 +202,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetAgencyTDidResponse GetAgencyTDid(GetAgencyTDidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAgencyTDidResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetAgencyTDid", GetAgencyTDidResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetAgencyTDid", GetAgencyTDidResponse.class);
     }
 
     /**
@@ -303,14 +213,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetAuthoritiesListResponse GetAuthoritiesList(GetAuthoritiesListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAuthoritiesListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetAuthoritiesList", GetAuthoritiesListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetAuthoritiesList", GetAuthoritiesListResponse.class);
     }
 
     /**
@@ -320,14 +224,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetAuthorityIssuerResponse GetAuthorityIssuer(GetAuthorityIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetAuthorityIssuer", GetAuthorityIssuerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetAuthorityIssuer", GetAuthorityIssuerResponse.class);
     }
 
     /**
@@ -337,14 +235,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetConsortiumClusterListResponse GetConsortiumClusterList(GetConsortiumClusterListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetConsortiumClusterListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetConsortiumClusterList", GetConsortiumClusterListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetConsortiumClusterList", GetConsortiumClusterListResponse.class);
     }
 
     /**
@@ -354,14 +246,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetConsortiumListResponse GetConsortiumList(GetConsortiumListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetConsortiumListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetConsortiumList", GetConsortiumListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetConsortiumList", GetConsortiumListResponse.class);
     }
 
     /**
@@ -371,14 +257,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetCptInfoResponse GetCptInfo(GetCptInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCptInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCptInfo", GetCptInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCptInfo", GetCptInfoResponse.class);
     }
 
     /**
@@ -388,14 +268,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetCptListResponse GetCptList(GetCptListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCptListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCptList", GetCptListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCptList", GetCptListResponse.class);
     }
 
     /**
@@ -405,14 +279,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetCredentialCptRankResponse GetCredentialCptRank(GetCredentialCptRankRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialCptRankResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCredentialCptRank", GetCredentialCptRankResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCredentialCptRank", GetCredentialCptRankResponse.class);
     }
 
     /**
@@ -422,14 +290,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetCredentialIssueRankResponse GetCredentialIssueRank(GetCredentialIssueRankRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialIssueRankResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCredentialIssueRank", GetCredentialIssueRankResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCredentialIssueRank", GetCredentialIssueRankResponse.class);
     }
 
     /**
@@ -439,14 +301,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetCredentialIssueTrendResponse GetCredentialIssueTrend(GetCredentialIssueTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialIssueTrendResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCredentialIssueTrend", GetCredentialIssueTrendResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCredentialIssueTrend", GetCredentialIssueTrendResponse.class);
     }
 
     /**
@@ -456,14 +312,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetCredentialStatusResponse GetCredentialStatus(GetCredentialStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCredentialStatus", GetCredentialStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCredentialStatus", GetCredentialStatusResponse.class);
     }
 
     /**
@@ -474,14 +324,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDataPanelResponse GetDataPanel(GetDataPanelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDataPanelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDataPanel", GetDataPanelResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDataPanel", GetDataPanelResponse.class);
     }
 
     /**
@@ -492,14 +336,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDeployInfoResponse GetDeployInfo(GetDeployInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDeployInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDeployInfo", GetDeployInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDeployInfo", GetDeployInfoResponse.class);
     }
 
     /**
@@ -509,14 +347,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDeployListResponse GetDeployList(GetDeployListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDeployListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDeployList", GetDeployListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDeployList", GetDeployListResponse.class);
     }
 
     /**
@@ -526,14 +358,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidClusterDetailResponse GetDidClusterDetail(GetDidClusterDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidClusterDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidClusterDetail", GetDidClusterDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidClusterDetail", GetDidClusterDetailResponse.class);
     }
 
     /**
@@ -543,14 +369,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidClusterListResponse GetDidClusterList(GetDidClusterListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidClusterListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidClusterList", GetDidClusterListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidClusterList", GetDidClusterListResponse.class);
     }
 
     /**
@@ -560,14 +380,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidDetailResponse GetDidDetail(GetDidDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidDetail", GetDidDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidDetail", GetDidDetailResponse.class);
     }
 
     /**
@@ -578,14 +392,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidDocumentResponse GetDidDocument(GetDidDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidDocumentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidDocument", GetDidDocumentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidDocument", GetDidDocumentResponse.class);
     }
 
     /**
@@ -595,14 +403,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidListResponse GetDidList(GetDidListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidList", GetDidListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidList", GetDidListResponse.class);
     }
 
     /**
@@ -612,14 +414,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidRegisterTrendResponse GetDidRegisterTrend(GetDidRegisterTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidRegisterTrendResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidRegisterTrend", GetDidRegisterTrendResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidRegisterTrend", GetDidRegisterTrendResponse.class);
     }
 
     /**
@@ -629,14 +425,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidServiceDetailResponse GetDidServiceDetail(GetDidServiceDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidServiceDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidServiceDetail", GetDidServiceDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidServiceDetail", GetDidServiceDetailResponse.class);
     }
 
     /**
@@ -646,14 +436,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetDidServiceListResponse GetDidServiceList(GetDidServiceListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidServiceListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetDidServiceList", GetDidServiceListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetDidServiceList", GetDidServiceListResponse.class);
     }
 
     /**
@@ -663,14 +447,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetGroupListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetGroupList", GetGroupListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetGroupList", GetGroupListResponse.class);
     }
 
     /**
@@ -680,14 +458,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetLabelListResponse GetLabelList(GetLabelListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetLabelListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetLabelList", GetLabelListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetLabelList", GetLabelListResponse.class);
     }
 
     /**
@@ -697,14 +469,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetPolicyListResponse GetPolicyList(GetPolicyListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPolicyListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPolicyList", GetPolicyListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPolicyList", GetPolicyListResponse.class);
     }
 
     /**
@@ -714,14 +480,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPublicKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPublicKey", GetPublicKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPublicKey", GetPublicKeyResponse.class);
     }
 
     /**
@@ -731,14 +491,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public QueryPolicyResponse QueryPolicy(QueryPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "QueryPolicy", QueryPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "QueryPolicy", QueryPolicyResponse.class);
     }
 
     /**
@@ -748,14 +502,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public RecognizeAuthorityIssuerResponse RecognizeAuthorityIssuer(RecognizeAuthorityIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeAuthorityIssuerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RecognizeAuthorityIssuer", RecognizeAuthorityIssuerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RecognizeAuthorityIssuer", RecognizeAuthorityIssuerResponse.class);
     }
 
     /**
@@ -765,14 +513,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public RegisterClaimPolicyResponse RegisterClaimPolicy(RegisterClaimPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterClaimPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RegisterClaimPolicy", RegisterClaimPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RegisterClaimPolicy", RegisterClaimPolicyResponse.class);
     }
 
     /**
@@ -782,14 +524,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public RegisterCptResponse RegisterCpt(RegisterCptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterCptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RegisterCpt", RegisterCptResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RegisterCpt", RegisterCptResponse.class);
     }
 
     /**
@@ -799,14 +535,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public RegisterIssuerResponse RegisterIssuer(RegisterIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterIssuerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RegisterIssuer", RegisterIssuerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RegisterIssuer", RegisterIssuerResponse.class);
     }
 
     /**
@@ -816,14 +546,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public RemoveHashResponse RemoveHash(RemoveHashRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveHashResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RemoveHash", RemoveHashResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RemoveHash", RemoveHashResponse.class);
     }
 
     /**
@@ -833,14 +557,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public SetCredentialStatusResponse SetCredentialStatus(SetCredentialStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetCredentialStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetCredentialStatus", SetCredentialStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetCredentialStatus", SetCredentialStatusResponse.class);
     }
 
     /**
@@ -850,14 +568,8 @@ This API is used to get the DID details of the current organization.
      * @throws TencentCloudSDKException
      */
     public VerifyCredentialResponse VerifyCredential(VerifyCredentialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyCredentialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VerifyCredential", VerifyCredentialResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VerifyCredential", VerifyCredentialResponse.class);
     }
 
 }

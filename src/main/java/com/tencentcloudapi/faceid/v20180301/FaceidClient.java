@@ -45,14 +45,8 @@ public class FaceidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyLivenessTokenResponse ApplyLivenessToken(ApplyLivenessTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyLivenessToken", ApplyLivenessTokenResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyLivenessToken", ApplyLivenessTokenResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class FaceidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplySdkVerificationTokenResponse ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplySdkVerificationToken", ApplySdkVerificationTokenResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplySdkVerificationToken", ApplySdkVerificationTokenResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class FaceidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyWebVerificationBizTokenIntlResponse ApplyWebVerificationBizTokenIntl(ApplyWebVerificationBizTokenIntlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyWebVerificationBizTokenIntl", ApplyWebVerificationBizTokenIntlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyWebVerificationBizTokenIntl", ApplyWebVerificationBizTokenIntlResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class FaceidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyWebVerificationTokenResponse ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ApplyWebVerificationToken", ApplyWebVerificationTokenResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ApplyWebVerificationToken", ApplyWebVerificationTokenResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ The data will be stored in a COS bucket in the region specified by the parameter
      * @throws TencentCloudSDKException
      */
     public CreateUploadUrlResponse CreateUploadUrl(CreateUploadUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUploadUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUploadUrl", CreateUploadUrlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUploadUrl", CreateUploadUrlResponse.class);
     }
 
     /**
@@ -132,14 +102,8 @@ The image and the data generated with the SDK must be stored in COS, and the reg
      * @throws TencentCloudSDKException
      */
     public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetectReflectLivenessAndCompare", DetectReflectLivenessAndCompareResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetectReflectLivenessAndCompare", DetectReflectLivenessAndCompareResponse.class);
     }
 
     /**
@@ -150,14 +114,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GenerateReflectSequenceResponse GenerateReflectSequence(GenerateReflectSequenceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GenerateReflectSequenceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GenerateReflectSequence", GenerateReflectSequenceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GenerateReflectSequence", GenerateReflectSequenceResponse.class);
     }
 
     /**
@@ -167,14 +125,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GetFaceIdResultIntlResponse GetFaceIdResultIntl(GetFaceIdResultIntlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetFaceIdResultIntlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetFaceIdResultIntl", GetFaceIdResultIntlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetFaceIdResultIntl", GetFaceIdResultIntlResponse.class);
     }
 
     /**
@@ -184,14 +136,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GetFaceIdTokenIntlResponse GetFaceIdTokenIntl(GetFaceIdTokenIntlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetFaceIdTokenIntlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetFaceIdTokenIntl", GetFaceIdTokenIntlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetFaceIdTokenIntl", GetFaceIdTokenIntlResponse.class);
     }
 
     /**
@@ -201,14 +147,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GetLivenessResultResponse GetLivenessResult(GetLivenessResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetLivenessResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetLivenessResult", GetLivenessResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetLivenessResult", GetLivenessResultResponse.class);
     }
 
     /**
@@ -218,14 +158,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GetSdkVerificationResultResponse GetSdkVerificationResult(GetSdkVerificationResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSdkVerificationResult", GetSdkVerificationResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSdkVerificationResult", GetSdkVerificationResultResponse.class);
     }
 
     /**
@@ -235,14 +169,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GetWebVerificationResultResponse GetWebVerificationResult(GetWebVerificationResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetWebVerificationResult", GetWebVerificationResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetWebVerificationResult", GetWebVerificationResultResponse.class);
     }
 
     /**
@@ -252,14 +180,8 @@ The data generated with the SDK must be stored in COS, and the region of the COS
      * @throws TencentCloudSDKException
      */
     public GetWebVerificationResultIntlResponse GetWebVerificationResultIntl(GetWebVerificationResultIntlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetWebVerificationResultIntlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetWebVerificationResultIntl", GetWebVerificationResultIntlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetWebVerificationResultIntl", GetWebVerificationResultIntlResponse.class);
     }
 
     /**
@@ -270,14 +192,8 @@ This API on the legacy version will continue to serve existing users but will be
      * @throws TencentCloudSDKException
      */
     public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LivenessCompareResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "LivenessCompare", LivenessCompareResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "LivenessCompare", LivenessCompareResponse.class);
     }
 
     /**
@@ -287,14 +203,8 @@ This API on the legacy version will continue to serve existing users but will be
      * @throws TencentCloudSDKException
      */
     public VideoLivenessCompareResponse VideoLivenessCompare(VideoLivenessCompareRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "VideoLivenessCompare", VideoLivenessCompareResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "VideoLivenessCompare", VideoLivenessCompareResponse.class);
     }
 
 }

@@ -45,14 +45,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(CreatePrivateDNSAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePrivateDNSAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePrivateDNSAccount", CreatePrivateDNSAccountResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePrivateDNSAccount", CreatePrivateDNSAccountResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePrivateZoneResponse CreatePrivateZone(CreatePrivateZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePrivateZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePrivateZone", CreatePrivateZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePrivateZone", CreatePrivateZoneResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(CreatePrivateZoneRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePrivateZoneRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePrivateZoneRecord", CreatePrivateZoneRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePrivateZoneRecord", CreatePrivateZoneRecordResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAccountVpcListResponse DescribeAccountVpcList(DescribeAccountVpcListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccountVpcListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAccountVpcList", DescribeAccountVpcListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAccountVpcList", DescribeAccountVpcListResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAuditLogResponse DescribeAuditLog(DescribeAuditLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAuditLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAuditLog", DescribeAuditLogResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAuditLog", DescribeAuditLogResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDashboardResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDashboard", DescribeDashboardResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDashboard", DescribeDashboardResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(DescribePrivateDNSAccountListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePrivateDNSAccountListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePrivateDNSAccountList", DescribePrivateDNSAccountListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePrivateDNSAccountList", DescribePrivateDNSAccountListResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePrivateZoneServiceResponse DescribePrivateZoneService(DescribePrivateZoneServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePrivateZoneServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePrivateZoneService", DescribePrivateZoneServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePrivateZoneService", DescribePrivateZoneServiceResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeQuotaUsageResponse DescribeQuotaUsage(DescribeQuotaUsageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeQuotaUsage", DescribeQuotaUsageResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeQuotaUsage", DescribeQuotaUsageResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRequestDataResponse DescribeRequestData(DescribeRequestDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRequestDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRequestData", DescribeRequestDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRequestData", DescribeRequestDataResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyPrivateZoneResponse ModifyPrivateZone(ModifyPrivateZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPrivateZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPrivateZone", ModifyPrivateZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPrivateZone", ModifyPrivateZoneResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(ModifyPrivateZoneRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPrivateZoneRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPrivateZoneRecord", ModifyPrivateZoneRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPrivateZoneRecord", ModifyPrivateZoneRecordResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyPrivateZoneVpcResponse ModifyPrivateZoneVpc(ModifyPrivateZoneVpcRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPrivateZoneVpcResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPrivateZoneVpc", ModifyPrivateZoneVpcResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPrivateZoneVpc", ModifyPrivateZoneVpcResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRecordsStatusResponse ModifyRecordsStatus(ModifyRecordsStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyRecordsStatus", ModifyRecordsStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyRecordsStatus", ModifyRecordsStatusResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class PrivatednsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SubscribePrivateZoneServiceResponse SubscribePrivateZoneService(SubscribePrivateZoneServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SubscribePrivateZoneServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SubscribePrivateZoneService", SubscribePrivateZoneServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SubscribePrivateZoneService", SubscribePrivateZoneServiceResponse.class);
     }
 
 }

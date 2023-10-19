@@ -47,14 +47,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddEcdnDomainResponse AddEcdnDomain(AddEcdnDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddEcdnDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddEcdnDomain", AddEcdnDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddEcdnDomain", AddEcdnDomainResponse.class);
     }
 
     /**
@@ -66,14 +60,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteEcdnDomainResponse DeleteEcdnDomain(DeleteEcdnDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEcdnDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteEcdnDomain", DeleteEcdnDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteEcdnDomain", DeleteEcdnDomainResponse.class);
     }
 
     /**
@@ -85,14 +73,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDomains", DescribeDomainsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDomains", DescribeDomainsResponse.class);
     }
 
     /**
@@ -104,14 +86,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainsConfigResponse DescribeDomainsConfig(DescribeDomainsConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainsConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDomainsConfig", DescribeDomainsConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDomainsConfig", DescribeDomainsConfigResponse.class);
     }
 
     /**
@@ -121,14 +97,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEcdnDomainLogsResponse DescribeEcdnDomainLogs(DescribeEcdnDomainLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEcdnDomainLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEcdnDomainLogs", DescribeEcdnDomainLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEcdnDomainLogs", DescribeEcdnDomainLogsResponse.class);
     }
 
     /**
@@ -138,14 +108,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEcdnDomainStatisticsResponse DescribeEcdnDomainStatistics(DescribeEcdnDomainStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEcdnDomainStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEcdnDomainStatistics", DescribeEcdnDomainStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEcdnDomainStatistics", DescribeEcdnDomainStatisticsResponse.class);
     }
 
     /**
@@ -163,14 +127,8 @@ public class EcdnClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEcdnStatisticsResponse DescribeEcdnStatistics(DescribeEcdnStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEcdnStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEcdnStatistics", DescribeEcdnStatisticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEcdnStatistics", DescribeEcdnStatisticsResponse.class);
     }
 
     /**
@@ -182,14 +140,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIpStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIpStatus", DescribeIpStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIpStatus", DescribeIpStatusResponse.class);
     }
 
     /**
@@ -201,14 +153,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public DescribePurgeQuotaResponse DescribePurgeQuota(DescribePurgeQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePurgeQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePurgeQuota", DescribePurgeQuotaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePurgeQuota", DescribePurgeQuotaResponse.class);
     }
 
     /**
@@ -220,14 +166,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public DescribePurgeTasksResponse DescribePurgeTasks(DescribePurgeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePurgeTasks", DescribePurgeTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePurgeTasks", DescribePurgeTasksResponse.class);
     }
 
     /**
@@ -239,14 +179,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public PurgePathCacheResponse PurgePathCache(PurgePathCacheRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PurgePathCacheResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PurgePathCache", PurgePathCacheResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PurgePathCache", PurgePathCacheResponse.class);
     }
 
     /**
@@ -258,14 +192,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public PurgeUrlsCacheResponse PurgeUrlsCache(PurgeUrlsCacheRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PurgeUrlsCacheResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PurgeUrlsCache", PurgeUrlsCacheResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PurgeUrlsCache", PurgeUrlsCacheResponse.class);
     }
 
     /**
@@ -277,14 +205,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public StartEcdnDomainResponse StartEcdnDomain(StartEcdnDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartEcdnDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartEcdnDomain", StartEcdnDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartEcdnDomain", StartEcdnDomainResponse.class);
     }
 
     /**
@@ -296,14 +218,8 @@ If you need to add the node IPs to your origin allowlist, keep querying the upda
      * @throws TencentCloudSDKException
      */
     public StopEcdnDomainResponse StopEcdnDomain(StopEcdnDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopEcdnDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopEcdnDomain", StopEcdnDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopEcdnDomain", StopEcdnDomainResponse.class);
     }
 
     /**
@@ -317,14 +233,8 @@ Note: if you need to update complex configuration items, you must pass all the a
      * @throws TencentCloudSDKException
      */
     public UpdateDomainConfigResponse UpdateDomainConfig(UpdateDomainConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateDomainConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateDomainConfig", UpdateDomainConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateDomainConfig", UpdateDomainConfigResponse.class);
     }
 
 }

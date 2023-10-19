@@ -46,14 +46,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public AddUsersForUserManagerResponse AddUsersForUserManager(AddUsersForUserManagerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddUsersForUserManager", AddUsersForUserManagerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddUsersForUserManager", AddUsersForUserManagerResponse.class);
     }
 
     /**
@@ -63,14 +57,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClusterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
     }
 
     /**
@@ -80,14 +68,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateInstance", CreateInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateInstance", CreateInstanceResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public DescribeClusterNodesResponse DescribeClusterNodes(DescribeClusterNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeClusterNodes", DescribeClusterNodesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeClusterNodes", DescribeClusterNodesResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEmrApplicationStatics", DescribeEmrApplicationStaticsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEmrApplicationStatics", DescribeEmrApplicationStaticsResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
     }
 
     /**
@@ -148,14 +112,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public DescribeInstancesListResponse DescribeInstancesList(DescribeInstancesListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstancesListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstancesList", DescribeInstancesListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstancesList", DescribeInstancesListResponse.class);
     }
 
     /**
@@ -165,14 +123,8 @@ This API is used to add user lists (user management).
      * @throws TencentCloudSDKException
      */
     public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeResourceSchedule", DescribeResourceScheduleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeResourceSchedule", DescribeResourceScheduleResponse.class);
     }
 
     /**
@@ -183,14 +135,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public DescribeUsersForUserManagerResponse DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUsersForUserManager", DescribeUsersForUserManagerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUsersForUserManager", DescribeUsersForUserManagerResponse.class);
     }
 
     /**
@@ -200,14 +146,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceCreateInstance", InquiryPriceCreateInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceCreateInstance", InquiryPriceCreateInstanceResponse.class);
     }
 
     /**
@@ -217,14 +157,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceRenewInstance", InquiryPriceRenewInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceRenewInstance", InquiryPriceRenewInstanceResponse.class);
     }
 
     /**
@@ -234,14 +168,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceScaleOutInstance", InquiryPriceScaleOutInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceScaleOutInstance", InquiryPriceScaleOutInstanceResponse.class);
     }
 
     /**
@@ -251,14 +179,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquiryPriceUpdateInstance", InquiryPriceUpdateInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquiryPriceUpdateInstance", InquiryPriceUpdateInstanceResponse.class);
     }
 
     /**
@@ -268,14 +190,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyResourceScheduleConfig", ModifyResourceScheduleConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyResourceScheduleConfig", ModifyResourceScheduleConfigResponse.class);
     }
 
     /**
@@ -285,14 +201,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public ModifyResourceSchedulerResponse ModifyResourceScheduler(ModifyResourceSchedulerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyResourceScheduler", ModifyResourceSchedulerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyResourceScheduler", ModifyResourceSchedulerResponse.class);
     }
 
     /**
@@ -302,14 +212,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public ScaleOutClusterResponse ScaleOutCluster(ScaleOutClusterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ScaleOutClusterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ScaleOutCluster", ScaleOutClusterResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ScaleOutCluster", ScaleOutClusterResponse.class);
     }
 
     /**
@@ -319,14 +223,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
     }
 
     /**
@@ -336,14 +234,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(StartStopServiceOrMonitorRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StartStopServiceOrMonitor", StartStopServiceOrMonitorResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StartStopServiceOrMonitor", StartStopServiceOrMonitorResponse.class);
     }
 
     /**
@@ -353,14 +245,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public TerminateClusterNodesResponse TerminateClusterNodes(TerminateClusterNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateClusterNodes", TerminateClusterNodesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateClusterNodes", TerminateClusterNodesResponse.class);
     }
 
     /**
@@ -370,14 +256,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateInstance", TerminateInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateInstance", TerminateInstanceResponse.class);
     }
 
     /**
@@ -387,14 +267,8 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
      * @throws TencentCloudSDKException
      */
     public TerminateTasksResponse TerminateTasks(TerminateTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateTasks", TerminateTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateTasks", TerminateTasksResponse.class);
     }
 
 }

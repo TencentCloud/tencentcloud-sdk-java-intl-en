@@ -45,14 +45,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchModifyIntlDomainDNSResponse BatchModifyIntlDomainDNS(BatchModifyIntlDomainDNSRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchModifyIntlDomainDNSResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchModifyIntlDomainDNS", BatchModifyIntlDomainDNSResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchModifyIntlDomainDNS", BatchModifyIntlDomainDNSResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchModifyIntlDomainInfoResponse BatchModifyIntlDomainInfo(BatchModifyIntlDomainInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchModifyIntlDomainInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchModifyIntlDomainInfo", BatchModifyIntlDomainInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchModifyIntlDomainInfo", BatchModifyIntlDomainInfoResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckIntlDomainNewResponse CheckIntlDomainNew(CheckIntlDomainNewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckIntlDomainNewResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CheckIntlDomainNew", CheckIntlDomainNewResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CheckIntlDomainNew", CheckIntlDomainNewResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateIntlDomainBatchResponse CreateIntlDomainBatch(CreateIntlDomainBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateIntlDomainBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateIntlDomainBatch", CreateIntlDomainBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateIntlDomainBatch", CreateIntlDomainBatchResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateIntlPhoneEmailResponse CreateIntlPhoneEmail(CreateIntlPhoneEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateIntlPhoneEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateIntlPhoneEmail", CreateIntlPhoneEmailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateIntlPhoneEmail", CreateIntlPhoneEmailResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateIntlTemplateResponse CreateIntlTemplate(CreateIntlTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateIntlTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateIntlTemplate", CreateIntlTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateIntlTemplate", CreateIntlTemplateResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteIntlPhoneEmailResponse DeleteIntlPhoneEmail(DeleteIntlPhoneEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteIntlPhoneEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteIntlPhoneEmail", DeleteIntlPhoneEmailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteIntlPhoneEmail", DeleteIntlPhoneEmailResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteIntlTemplateResponse DeleteIntlTemplate(DeleteIntlTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteIntlTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteIntlTemplate", DeleteIntlTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteIntlTemplate", DeleteIntlTemplateResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlBatchDetailStatusResponse DescribeIntlBatchDetailStatus(DescribeIntlBatchDetailStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlBatchDetailStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlBatchDetailStatus", DescribeIntlBatchDetailStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlBatchDetailStatus", DescribeIntlBatchDetailStatusResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlBatchOperationLogsResponse DescribeIntlBatchOperationLogs(DescribeIntlBatchOperationLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlBatchOperationLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlBatchOperationLogs", DescribeIntlBatchOperationLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlBatchOperationLogs", DescribeIntlBatchOperationLogsResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlDomainResponse DescribeIntlDomain(DescribeIntlDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlDomain", DescribeIntlDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlDomain", DescribeIntlDomainResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlDomainBatchDetailsResponse DescribeIntlDomainBatchDetails(DescribeIntlDomainBatchDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlDomainBatchDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlDomainBatchDetails", DescribeIntlDomainBatchDetailsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlDomainBatchDetails", DescribeIntlDomainBatchDetailsResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlDomainListResponse DescribeIntlDomainList(DescribeIntlDomainListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlDomainListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlDomainList", DescribeIntlDomainListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlDomainList", DescribeIntlDomainListResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlDomainPriceNewListResponse DescribeIntlDomainPriceNewList(DescribeIntlDomainPriceNewListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlDomainPriceNewListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlDomainPriceNewList", DescribeIntlDomainPriceNewListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlDomainPriceNewList", DescribeIntlDomainPriceNewListResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlPhoneEmailListResponse DescribeIntlPhoneEmailList(DescribeIntlPhoneEmailListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlPhoneEmailListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlPhoneEmailList", DescribeIntlPhoneEmailListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlPhoneEmailList", DescribeIntlPhoneEmailListResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlTemplateResponse DescribeIntlTemplate(DescribeIntlTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlTemplate", DescribeIntlTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlTemplate", DescribeIntlTemplateResponse.class);
     }
 
     /**
@@ -317,14 +221,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIntlTemplateListResponse DescribeIntlTemplateList(DescribeIntlTemplateListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIntlTemplateListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIntlTemplateList", DescribeIntlTemplateListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIntlTemplateList", DescribeIntlTemplateListResponse.class);
     }
 
     /**
@@ -334,14 +232,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyOwnerIntlBatchResponse ModifyOwnerIntlBatch(ModifyOwnerIntlBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyOwnerIntlBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyOwnerIntlBatch", ModifyOwnerIntlBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyOwnerIntlBatch", ModifyOwnerIntlBatchResponse.class);
     }
 
     /**
@@ -351,14 +243,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RenewIntlDomainBatchResponse RenewIntlDomainBatch(RenewIntlDomainBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RenewIntlDomainBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RenewIntlDomainBatch", RenewIntlDomainBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RenewIntlDomainBatch", RenewIntlDomainBatchResponse.class);
     }
 
     /**
@@ -368,14 +254,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SendIntlPhoneEmailCodeResponse SendIntlPhoneEmailCode(SendIntlPhoneEmailCodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendIntlPhoneEmailCodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SendIntlPhoneEmailCode", SendIntlPhoneEmailCodeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SendIntlPhoneEmailCode", SendIntlPhoneEmailCodeResponse.class);
     }
 
     /**
@@ -385,14 +265,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SetIntlDomainAutoRenewResponse SetIntlDomainAutoRenew(SetIntlDomainAutoRenewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetIntlDomainAutoRenewResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetIntlDomainAutoRenew", SetIntlDomainAutoRenewResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetIntlDomainAutoRenew", SetIntlDomainAutoRenewResponse.class);
     }
 
     /**
@@ -402,14 +276,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TransferInIntlDomainBatchResponse TransferInIntlDomainBatch(TransferInIntlDomainBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TransferInIntlDomainBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TransferInIntlDomainBatch", TransferInIntlDomainBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TransferInIntlDomainBatch", TransferInIntlDomainBatchResponse.class);
     }
 
     /**
@@ -419,14 +287,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TransferProhibitionIntlBatchResponse TransferProhibitionIntlBatch(TransferProhibitionIntlBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TransferProhibitionIntlBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TransferProhibitionIntlBatch", TransferProhibitionIntlBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TransferProhibitionIntlBatch", TransferProhibitionIntlBatchResponse.class);
     }
 
     /**
@@ -436,14 +298,8 @@ public class DomainClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpdateProhibitionIntlBatchResponse UpdateProhibitionIntlBatch(UpdateProhibitionIntlBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateProhibitionIntlBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateProhibitionIntlBatch", UpdateProhibitionIntlBatchResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateProhibitionIntlBatch", UpdateProhibitionIntlBatchResponse.class);
     }
 
 }

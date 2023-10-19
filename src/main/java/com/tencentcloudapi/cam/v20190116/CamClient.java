@@ -45,14 +45,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddUserResponse AddUser(AddUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddUser", AddUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddUser", AddUserResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddUserToGroupResponse AddUserToGroup(AddUserToGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddUserToGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddUserToGroup", AddUserToGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddUserToGroup", AddUserToGroupResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachGroupPolicyResponse AttachGroupPolicy(AttachGroupPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachGroupPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachGroupPolicy", AttachGroupPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachGroupPolicy", AttachGroupPolicyResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachRolePolicyResponse AttachRolePolicy(AttachRolePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachRolePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachRolePolicy", AttachRolePolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachRolePolicy", AttachRolePolicyResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachUserPolicyResponse AttachUserPolicy(AttachUserPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachUserPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachUserPolicy", AttachUserPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachUserPolicy", AttachUserPolicyResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(ConsumeCustomMFATokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ConsumeCustomMFATokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ConsumeCustomMFAToken", ConsumeCustomMFATokenResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ConsumeCustomMFAToken", ConsumeCustomMFATokenResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAccessKeyResponse CreateAccessKey(CreateAccessKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAccessKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAccessKey", CreateAccessKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAccessKey", CreateAccessKeyResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateOIDCConfigResponse CreateOIDCConfig(CreateOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateOIDCConfig", CreateOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateOIDCConfig", CreateOIDCConfigResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePolicyResponse CreatePolicy(CreatePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePolicy", CreatePolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePolicy", CreatePolicyResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePolicyVersionResponse CreatePolicyVersion(CreatePolicyVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePolicyVersion", CreatePolicyVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePolicyVersion", CreatePolicyVersionResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateRoleResponse CreateRole(CreateRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateRole", CreateRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateRole", CreateRoleResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSAMLProviderResponse CreateSAMLProvider(CreateSAMLProviderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSAMLProviderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSAMLProvider", CreateSAMLProviderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSAMLProvider", CreateSAMLProviderResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateServiceLinkedRole", CreateServiceLinkedRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateServiceLinkedRole", CreateServiceLinkedRoleResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateUserOIDCConfigResponse CreateUserOIDCConfig(CreateUserOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUserOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUserOIDCConfig", CreateUserOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUserOIDCConfig", CreateUserOIDCConfigResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class CamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateUserSAMLConfigResponse CreateUserSAMLConfig(CreateUserSAMLConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUserSAMLConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUserSAMLConfig", CreateUserSAMLConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUserSAMLConfig", CreateUserSAMLConfigResponse.class);
     }
 
     /**
@@ -318,14 +222,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteAccessKeyResponse DeleteAccessKey(DeleteAccessKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAccessKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAccessKey", DeleteAccessKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAccessKey", DeleteAccessKeyResponse.class);
     }
 
     /**
@@ -335,14 +233,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
     }
 
     /**
@@ -352,14 +244,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteOIDCConfigResponse DeleteOIDCConfig(DeleteOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteOIDCConfig", DeleteOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteOIDCConfig", DeleteOIDCConfigResponse.class);
     }
 
     /**
@@ -369,14 +255,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeletePolicyResponse DeletePolicy(DeletePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePolicy", DeletePolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePolicy", DeletePolicyResponse.class);
     }
 
     /**
@@ -386,14 +266,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeletePolicyVersionResponse DeletePolicyVersion(DeletePolicyVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePolicyVersion", DeletePolicyVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePolicyVersion", DeletePolicyVersionResponse.class);
     }
 
     /**
@@ -403,14 +277,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteRoleResponse DeleteRole(DeleteRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRole", DeleteRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRole", DeleteRoleResponse.class);
     }
 
     /**
@@ -420,14 +288,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteRolePermissionsBoundaryResponse DeleteRolePermissionsBoundary(DeleteRolePermissionsBoundaryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRolePermissionsBoundaryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRolePermissionsBoundary", DeleteRolePermissionsBoundaryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRolePermissionsBoundary", DeleteRolePermissionsBoundaryResponse.class);
     }
 
     /**
@@ -437,14 +299,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteSAMLProviderResponse DeleteSAMLProvider(DeleteSAMLProviderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSAMLProviderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSAMLProvider", DeleteSAMLProviderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSAMLProvider", DeleteSAMLProviderResponse.class);
     }
 
     /**
@@ -454,14 +310,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(DeleteServiceLinkedRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteServiceLinkedRole", DeleteServiceLinkedRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteServiceLinkedRole", DeleteServiceLinkedRoleResponse.class);
     }
 
     /**
@@ -471,14 +321,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
     }
 
     /**
@@ -488,14 +332,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(DeleteUserPermissionsBoundaryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUserPermissionsBoundaryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteUserPermissionsBoundary", DeleteUserPermissionsBoundaryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteUserPermissionsBoundary", DeleteUserPermissionsBoundaryResponse.class);
     }
 
     /**
@@ -505,14 +343,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeOIDCConfigResponse DescribeOIDCConfig(DescribeOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeOIDCConfig", DescribeOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeOIDCConfig", DescribeOIDCConfigResponse.class);
     }
 
     /**
@@ -522,14 +354,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeRoleListResponse DescribeRoleList(DescribeRoleListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoleListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRoleList", DescribeRoleListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRoleList", DescribeRoleListResponse.class);
     }
 
     /**
@@ -539,14 +365,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(DescribeSafeAuthFlagCollRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSafeAuthFlagCollResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSafeAuthFlagColl", DescribeSafeAuthFlagCollResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSafeAuthFlagColl", DescribeSafeAuthFlagCollResponse.class);
     }
 
     /**
@@ -556,14 +376,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(DescribeSafeAuthFlagIntlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSafeAuthFlagIntlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSafeAuthFlagIntl", DescribeSafeAuthFlagIntlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSafeAuthFlagIntl", DescribeSafeAuthFlagIntlResponse.class);
     }
 
     /**
@@ -573,14 +387,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeSubAccountsResponse DescribeSubAccounts(DescribeSubAccountsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSubAccounts", DescribeSubAccountsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSubAccounts", DescribeSubAccountsResponse.class);
     }
 
     /**
@@ -590,14 +398,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeUserOIDCConfigResponse DescribeUserOIDCConfig(DescribeUserOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUserOIDCConfig", DescribeUserOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUserOIDCConfig", DescribeUserOIDCConfigResponse.class);
     }
 
     /**
@@ -607,14 +409,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(DescribeUserSAMLConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserSAMLConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUserSAMLConfig", DescribeUserSAMLConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUserSAMLConfig", DescribeUserSAMLConfigResponse.class);
     }
 
     /**
@@ -624,14 +420,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DetachGroupPolicyResponse DetachGroupPolicy(DetachGroupPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachGroupPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetachGroupPolicy", DetachGroupPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetachGroupPolicy", DetachGroupPolicyResponse.class);
     }
 
     /**
@@ -641,14 +431,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DetachRolePolicyResponse DetachRolePolicy(DetachRolePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachRolePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetachRolePolicy", DetachRolePolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetachRolePolicy", DetachRolePolicyResponse.class);
     }
 
     /**
@@ -658,14 +442,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DetachUserPolicyResponse DetachUserPolicy(DetachUserPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachUserPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetachUserPolicy", DetachUserPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetachUserPolicy", DetachUserPolicyResponse.class);
     }
 
     /**
@@ -675,14 +453,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public DisableUserSSOResponse DisableUserSSO(DisableUserSSORequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableUserSSOResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableUserSSO", DisableUserSSOResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableUserSSO", DisableUserSSOResponse.class);
     }
 
     /**
@@ -692,14 +464,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetAccountSummaryResponse GetAccountSummary(GetAccountSummaryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAccountSummaryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetAccountSummary", GetAccountSummaryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetAccountSummary", GetAccountSummaryResponse.class);
     }
 
     /**
@@ -709,14 +475,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(GetCustomMFATokenInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCustomMFATokenInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCustomMFATokenInfo", GetCustomMFATokenInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCustomMFATokenInfo", GetCustomMFATokenInfoResponse.class);
     }
 
     /**
@@ -726,14 +486,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetGroupResponse GetGroup(GetGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetGroup", GetGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetGroup", GetGroupResponse.class);
     }
 
     /**
@@ -743,14 +497,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetPolicyResponse GetPolicy(GetPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPolicy", GetPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPolicy", GetPolicyResponse.class);
     }
 
     /**
@@ -760,14 +508,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetPolicyVersionResponse GetPolicyVersion(GetPolicyVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPolicyVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetPolicyVersion", GetPolicyVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetPolicyVersion", GetPolicyVersionResponse.class);
     }
 
     /**
@@ -777,14 +519,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetRoleResponse GetRole(GetRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetRole", GetRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetRole", GetRoleResponse.class);
     }
 
     /**
@@ -794,14 +530,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetSAMLProviderResponse GetSAMLProvider(GetSAMLProviderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSAMLProviderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSAMLProvider", GetSAMLProviderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSAMLProvider", GetSAMLProviderResponse.class);
     }
 
     /**
@@ -811,14 +541,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetSecurityLastUsedResponse GetSecurityLastUsed(GetSecurityLastUsedRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSecurityLastUsed", GetSecurityLastUsedResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSecurityLastUsed", GetSecurityLastUsedResponse.class);
     }
 
     /**
@@ -828,14 +552,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetServiceLinkedRoleDeletionStatus", GetServiceLinkedRoleDeletionStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetServiceLinkedRoleDeletionStatus", GetServiceLinkedRoleDeletionStatusResponse.class);
     }
 
     /**
@@ -845,14 +563,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetUserResponse GetUser(GetUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetUser", GetUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetUser", GetUserResponse.class);
     }
 
     /**
@@ -862,14 +574,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public GetUserAppIdResponse GetUserAppId(GetUserAppIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetUserAppIdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetUserAppId", GetUserAppIdResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetUserAppId", GetUserAppIdResponse.class);
     }
 
     /**
@@ -879,14 +585,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListAccessKeysResponse ListAccessKeys(ListAccessKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAccessKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListAccessKeys", ListAccessKeysResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListAccessKeys", ListAccessKeysResponse.class);
     }
 
     /**
@@ -896,14 +596,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(ListAttachedGroupPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAttachedGroupPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListAttachedGroupPolicies", ListAttachedGroupPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListAttachedGroupPolicies", ListAttachedGroupPoliciesResponse.class);
     }
 
     /**
@@ -913,14 +607,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListAttachedRolePoliciesResponse ListAttachedRolePolicies(ListAttachedRolePoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAttachedRolePoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListAttachedRolePolicies", ListAttachedRolePoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListAttachedRolePolicies", ListAttachedRolePoliciesResponse.class);
     }
 
     /**
@@ -930,14 +618,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(ListAttachedUserAllPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListAttachedUserAllPolicies", ListAttachedUserAllPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListAttachedUserAllPolicies", ListAttachedUserAllPoliciesResponse.class);
     }
 
     /**
@@ -947,14 +629,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListAttachedUserPoliciesResponse ListAttachedUserPolicies(ListAttachedUserPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAttachedUserPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListAttachedUserPolicies", ListAttachedUserPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListAttachedUserPolicies", ListAttachedUserPoliciesResponse.class);
     }
 
     /**
@@ -964,14 +640,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListCollaboratorsResponse ListCollaborators(ListCollaboratorsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListCollaboratorsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListCollaborators", ListCollaboratorsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListCollaborators", ListCollaboratorsResponse.class);
     }
 
     /**
@@ -981,14 +651,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListEntitiesForPolicyResponse ListEntitiesForPolicy(ListEntitiesForPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEntitiesForPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListEntitiesForPolicy", ListEntitiesForPolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListEntitiesForPolicy", ListEntitiesForPolicyResponse.class);
     }
 
     /**
@@ -998,14 +662,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListGroupsResponse ListGroups(ListGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListGroups", ListGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListGroups", ListGroupsResponse.class);
     }
 
     /**
@@ -1015,14 +673,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListGroupsForUserResponse ListGroupsForUser(ListGroupsForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListGroupsForUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListGroupsForUser", ListGroupsForUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListGroupsForUser", ListGroupsForUserResponse.class);
     }
 
     /**
@@ -1032,14 +684,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListPoliciesResponse ListPolicies(ListPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListPoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListPolicies", ListPoliciesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListPolicies", ListPoliciesResponse.class);
     }
 
     /**
@@ -1049,14 +695,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListPolicyVersionsResponse ListPolicyVersions(ListPolicyVersionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListPolicyVersions", ListPolicyVersionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListPolicyVersions", ListPolicyVersionsResponse.class);
     }
 
     /**
@@ -1066,14 +706,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListSAMLProvidersResponse ListSAMLProviders(ListSAMLProvidersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListSAMLProvidersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListSAMLProviders", ListSAMLProvidersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListSAMLProviders", ListSAMLProvidersResponse.class);
     }
 
     /**
@@ -1083,14 +717,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListUsersResponse ListUsers(ListUsersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListUsersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListUsers", ListUsersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListUsers", ListUsersResponse.class);
     }
 
     /**
@@ -1100,14 +728,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public ListUsersForGroupResponse ListUsersForGroup(ListUsersForGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListUsersForGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListUsersForGroup", ListUsersForGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListUsersForGroup", ListUsersForGroupResponse.class);
     }
 
     /**
@@ -1117,14 +739,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public PutRolePermissionsBoundaryResponse PutRolePermissionsBoundary(PutRolePermissionsBoundaryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutRolePermissionsBoundaryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PutRolePermissionsBoundary", PutRolePermissionsBoundaryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PutRolePermissionsBoundary", PutRolePermissionsBoundaryResponse.class);
     }
 
     /**
@@ -1134,14 +750,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public PutUserPermissionsBoundaryResponse PutUserPermissionsBoundary(PutUserPermissionsBoundaryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutUserPermissionsBoundaryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PutUserPermissionsBoundary", PutUserPermissionsBoundaryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PutUserPermissionsBoundary", PutUserPermissionsBoundaryResponse.class);
     }
 
     /**
@@ -1151,14 +761,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public RemoveUserFromGroupResponse RemoveUserFromGroup(RemoveUserFromGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveUserFromGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RemoveUserFromGroup", RemoveUserFromGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RemoveUserFromGroup", RemoveUserFromGroupResponse.class);
     }
 
     /**
@@ -1168,14 +772,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(SetDefaultPolicyVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetDefaultPolicyVersion", SetDefaultPolicyVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetDefaultPolicyVersion", SetDefaultPolicyVersionResponse.class);
     }
 
     /**
@@ -1185,14 +783,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public SetMfaFlagResponse SetMfaFlag(SetMfaFlagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetMfaFlagResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SetMfaFlag", SetMfaFlagResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SetMfaFlag", SetMfaFlagResponse.class);
     }
 
     /**
@@ -1202,14 +794,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public TagRoleResponse TagRole(TagRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TagRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TagRole", TagRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TagRole", TagRoleResponse.class);
     }
 
     /**
@@ -1219,14 +805,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public UntagRoleResponse UntagRole(UntagRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UntagRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UntagRole", UntagRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UntagRole", UntagRoleResponse.class);
     }
 
     /**
@@ -1236,14 +816,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public UpdateAccessKeyResponse UpdateAccessKey(UpdateAccessKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateAccessKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateAccessKey", UpdateAccessKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateAccessKey", UpdateAccessKeyResponse.class);
     }
 
     /**
@@ -1253,14 +827,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(UpdateAssumeRolePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateAssumeRolePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateAssumeRolePolicy", UpdateAssumeRolePolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateAssumeRolePolicy", UpdateAssumeRolePolicyResponse.class);
     }
 
     /**
@@ -1270,14 +838,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public UpdateGroupResponse UpdateGroup(UpdateGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateGroup", UpdateGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateGroup", UpdateGroupResponse.class);
     }
 
     /**
@@ -1287,14 +849,8 @@ Calling this API is a high-risk operation because the key cannot be recovered on
      * @throws TencentCloudSDKException
      */
     public UpdateOIDCConfigResponse UpdateOIDCConfig(UpdateOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateOIDCConfig", UpdateOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateOIDCConfig", UpdateOIDCConfigResponse.class);
     }
 
     /**
@@ -1305,14 +861,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdatePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdatePolicy", UpdatePolicyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdatePolicy", UpdatePolicyResponse.class);
     }
 
     /**
@@ -1322,14 +872,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(UpdateRoleConsoleLoginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateRoleConsoleLogin", UpdateRoleConsoleLoginResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateRoleConsoleLogin", UpdateRoleConsoleLoginResponse.class);
     }
 
     /**
@@ -1339,14 +883,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdateRoleDescriptionResponse UpdateRoleDescription(UpdateRoleDescriptionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateRoleDescriptionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateRoleDescription", UpdateRoleDescriptionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateRoleDescription", UpdateRoleDescriptionResponse.class);
     }
 
     /**
@@ -1356,14 +894,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdateSAMLProviderResponse UpdateSAMLProvider(UpdateSAMLProviderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateSAMLProviderResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateSAMLProvider", UpdateSAMLProviderResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateSAMLProvider", UpdateSAMLProviderResponse.class);
     }
 
     /**
@@ -1373,14 +905,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdateUserResponse UpdateUser(UpdateUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateUser", UpdateUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateUser", UpdateUserResponse.class);
     }
 
     /**
@@ -1390,14 +916,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdateUserOIDCConfigResponse UpdateUserOIDCConfig(UpdateUserOIDCConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateUserOIDCConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateUserOIDCConfig", UpdateUserOIDCConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateUserOIDCConfig", UpdateUserOIDCConfigResponse.class);
     }
 
     /**
@@ -1407,14 +927,8 @@ This API will update the default version of an existing policy instead of creati
      * @throws TencentCloudSDKException
      */
     public UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(UpdateUserSAMLConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateUserSAMLConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateUserSAMLConfig", UpdateUserSAMLConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateUserSAMLConfig", UpdateUserSAMLConfigResponse.class);
     }
 
 }

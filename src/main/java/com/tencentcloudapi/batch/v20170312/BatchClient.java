@@ -51,14 +51,8 @@ For instances added to the compute environment, their UserData will be reset, an
      * @throws TencentCloudSDKException
      */
     public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AttachInstances", AttachInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AttachInstances", AttachInstancesResponse.class);
     }
 
     /**
@@ -68,14 +62,8 @@ For instances added to the compute environment, their UserData will be reset, an
      * @throws TencentCloudSDKException
      */
     public CreateComputeEnvResponse CreateComputeEnv(CreateComputeEnvRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateComputeEnvResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateComputeEnv", CreateComputeEnvResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateComputeEnv", CreateComputeEnvResponse.class);
     }
 
     /**
@@ -85,14 +73,8 @@ For instances added to the compute environment, their UserData will be reset, an
      * @throws TencentCloudSDKException
      */
     public CreateTaskTemplateResponse CreateTaskTemplate(CreateTaskTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTaskTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTaskTemplate", CreateTaskTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTaskTemplate", CreateTaskTemplateResponse.class);
     }
 
     /**
@@ -102,14 +84,8 @@ For instances added to the compute environment, their UserData will be reset, an
      * @throws TencentCloudSDKException
      */
     public DeleteComputeEnvResponse DeleteComputeEnv(DeleteComputeEnvRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteComputeEnvResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteComputeEnv", DeleteComputeEnvResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteComputeEnv", DeleteComputeEnvResponse.class);
     }
 
     /**
@@ -121,14 +97,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteJob", DeleteJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteJob", DeleteJobResponse.class);
     }
 
     /**
@@ -138,14 +108,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DeleteTaskTemplatesResponse DeleteTaskTemplates(DeleteTaskTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTaskTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTaskTemplates", DeleteTaskTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTaskTemplates", DeleteTaskTemplatesResponse.class);
     }
 
     /**
@@ -155,14 +119,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeAvailableCvmInstanceTypesResponse DescribeAvailableCvmInstanceTypes(DescribeAvailableCvmInstanceTypesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAvailableCvmInstanceTypes", DescribeAvailableCvmInstanceTypesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAvailableCvmInstanceTypes", DescribeAvailableCvmInstanceTypesResponse.class);
     }
 
     /**
@@ -172,14 +130,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeComputeEnvResponse DescribeComputeEnv(DescribeComputeEnvRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComputeEnvResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeComputeEnv", DescribeComputeEnvResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeComputeEnv", DescribeComputeEnvResponse.class);
     }
 
     /**
@@ -189,14 +141,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeComputeEnvActivitiesResponse DescribeComputeEnvActivities(DescribeComputeEnvActivitiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComputeEnvActivitiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeComputeEnvActivities", DescribeComputeEnvActivitiesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeComputeEnvActivities", DescribeComputeEnvActivitiesResponse.class);
     }
 
     /**
@@ -206,14 +152,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfo(DescribeComputeEnvCreateInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComputeEnvCreateInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeComputeEnvCreateInfo", DescribeComputeEnvCreateInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeComputeEnvCreateInfo", DescribeComputeEnvCreateInfoResponse.class);
     }
 
     /**
@@ -223,14 +163,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(DescribeComputeEnvCreateInfosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComputeEnvCreateInfosResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeComputeEnvCreateInfos", DescribeComputeEnvCreateInfosResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeComputeEnvCreateInfos", DescribeComputeEnvCreateInfosResponse.class);
     }
 
     /**
@@ -240,14 +174,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeComputeEnvsResponse DescribeComputeEnvs(DescribeComputeEnvsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComputeEnvsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeComputeEnvs", DescribeComputeEnvsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeComputeEnvs", DescribeComputeEnvsResponse.class);
     }
 
     /**
@@ -257,14 +185,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(DescribeCvmZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCvmZoneInstanceConfigInfos", DescribeCvmZoneInstanceConfigInfosResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCvmZoneInstanceConfigInfos", DescribeCvmZoneInstanceConfigInfosResponse.class);
     }
 
     /**
@@ -274,14 +196,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceCategoriesResponse DescribeInstanceCategories(DescribeInstanceCategoriesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceCategoriesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstanceCategories", DescribeInstanceCategoriesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstanceCategories", DescribeInstanceCategoriesResponse.class);
     }
 
     /**
@@ -291,14 +207,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeJob", DescribeJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeJob", DescribeJobResponse.class);
     }
 
     /**
@@ -308,14 +218,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeJobSubmitInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeJobSubmitInfo", DescribeJobSubmitInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeJobSubmitInfo", DescribeJobSubmitInfoResponse.class);
     }
 
     /**
@@ -325,14 +229,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeJobsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeJobs", DescribeJobsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeJobs", DescribeJobsResponse.class);
     }
 
     /**
@@ -342,14 +240,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTask", DescribeTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTask", DescribeTaskResponse.class);
     }
 
     /**
@@ -359,14 +251,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeTaskLogsResponse DescribeTaskLogs(DescribeTaskLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTaskLogs", DescribeTaskLogsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTaskLogs", DescribeTaskLogsResponse.class);
     }
 
     /**
@@ -376,14 +262,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DescribeTaskTemplatesResponse DescribeTaskTemplates(DescribeTaskTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTaskTemplates", DescribeTaskTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTaskTemplates", DescribeTaskTemplatesResponse.class);
     }
 
     /**
@@ -393,14 +273,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DetachInstances", DetachInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DetachInstances", DetachInstancesResponse.class);
     }
 
     /**
@@ -410,14 +284,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public ModifyComputeEnvResponse ModifyComputeEnv(ModifyComputeEnvRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyComputeEnvResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyComputeEnv", ModifyComputeEnvResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyComputeEnv", ModifyComputeEnvResponse.class);
     }
 
     /**
@@ -427,14 +295,8 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
      * @throws TencentCloudSDKException
      */
     public ModifyTaskTemplateResponse ModifyTaskTemplate(ModifyTaskTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTaskTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTaskTemplate", ModifyTaskTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTaskTemplate", ModifyTaskTemplateResponse.class);
     }
 
     /**
@@ -445,14 +307,8 @@ Job retry is supported only if a job is in the "FAILED" state. After the retry o
      * @throws TencentCloudSDKException
      */
     public RetryJobsResponse RetryJobs(RetryJobsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RetryJobsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RetryJobs", RetryJobsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RetryJobs", RetryJobsResponse.class);
     }
 
     /**
@@ -463,14 +319,8 @@ Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABN
      * @throws TencentCloudSDKException
      */
     public TerminateComputeNodeResponse TerminateComputeNode(TerminateComputeNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateComputeNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateComputeNode", TerminateComputeNodeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateComputeNode", TerminateComputeNodeResponse.class);
     }
 
     /**
@@ -480,14 +330,8 @@ Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABN
      * @throws TencentCloudSDKException
      */
     public TerminateComputeNodesResponse TerminateComputeNodes(TerminateComputeNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateComputeNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateComputeNodes", TerminateComputeNodesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateComputeNodes", TerminateComputeNodesResponse.class);
     }
 
     /**
@@ -499,14 +343,8 @@ Job termination is an asynchronous process, and the time it takes to complete th
      * @throws TencentCloudSDKException
      */
     public TerminateJobResponse TerminateJob(TerminateJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateJob", TerminateJobResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateJob", TerminateJobResponse.class);
     }
 
     /**
@@ -520,14 +358,8 @@ Job termination is an asynchronous process, and the time it takes to complete th
      * @throws TencentCloudSDKException
      */
     public TerminateTaskInstanceResponse TerminateTaskInstance(TerminateTaskInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateTaskInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TerminateTaskInstance", TerminateTaskInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TerminateTaskInstance", TerminateTaskInstanceResponse.class);
     }
 
 }

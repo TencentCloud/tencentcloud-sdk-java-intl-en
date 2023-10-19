@@ -47,14 +47,8 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
      * @throws TencentCloudSDKException
      */
     public AddDelayLiveStreamResponse AddDelayLiveStream(AddDelayLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddDelayLiveStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddDelayLiveStream", AddDelayLiveStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddDelayLiveStream", AddDelayLiveStreamResponse.class);
     }
 
     /**
@@ -64,14 +58,8 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
      * @throws TencentCloudSDKException
      */
     public AddLiveDomainResponse AddLiveDomain(AddLiveDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddLiveDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddLiveDomain", AddLiveDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddLiveDomain", AddLiveDomainResponse.class);
     }
 
     /**
@@ -82,14 +70,8 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
      * @throws TencentCloudSDKException
      */
     public AddLiveWatermarkResponse AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AddLiveWatermark", AddLiveWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AddLiveWatermark", AddLiveWatermarkResponse.class);
     }
 
     /**
@@ -99,14 +81,8 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
      * @throws TencentCloudSDKException
      */
     public AuthenticateDomainOwnerResponse AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AuthenticateDomainOwner", AuthenticateDomainOwnerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AuthenticateDomainOwner", AuthenticateDomainOwnerResponse.class);
     }
 
     /**
@@ -116,14 +92,8 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
      * @throws TencentCloudSDKException
      */
     public CancelCommonMixStreamResponse CancelCommonMixStream(CancelCommonMixStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelCommonMixStream", CancelCommonMixStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelCommonMixStream", CancelCommonMixStreamResponse.class);
     }
 
     /**
@@ -135,14 +105,8 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
      * @throws TencentCloudSDKException
      */
     public CreateCommonMixStreamResponse CreateCommonMixStream(CreateCommonMixStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCommonMixStream", CreateCommonMixStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCommonMixStream", CreateCommonMixStreamResponse.class);
     }
 
     /**
@@ -153,14 +117,8 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
      * @throws TencentCloudSDKException
      */
     public CreateLiveCallbackRuleResponse CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveCallbackRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveCallbackRule", CreateLiveCallbackRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveCallbackRule", CreateLiveCallbackRuleResponse.class);
     }
 
     /**
@@ -172,14 +130,8 @@ Note: You need to specify at least one callback URL.
      * @throws TencentCloudSDKException
      */
     public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveCallbackTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveCallbackTemplate", CreateLiveCallbackTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveCallbackTemplate", CreateLiveCallbackTemplateResponse.class);
     }
 
     /**
@@ -196,14 +148,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public CreateLivePullStreamTaskResponse CreateLivePullStreamTask(CreateLivePullStreamTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLivePullStreamTask", CreateLivePullStreamTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLivePullStreamTask", CreateLivePullStreamTaskResponse.class);
     }
 
     /**
@@ -228,14 +174,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public CreateLiveRecordResponse CreateLiveRecord(CreateLiveRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveRecord", CreateLiveRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveRecord", CreateLiveRecordResponse.class);
     }
 
     /**
@@ -246,14 +186,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public CreateLiveRecordRuleResponse CreateLiveRecordRule(CreateLiveRecordRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveRecordRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveRecordRule", CreateLiveRecordRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveRecordRule", CreateLiveRecordRuleResponse.class);
     }
 
     /**
@@ -264,14 +198,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveRecordTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveRecordTemplate", CreateLiveRecordTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveRecordTemplate", CreateLiveRecordTemplateResponse.class);
     }
 
     /**
@@ -283,14 +211,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveSnapshotRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveSnapshotRule", CreateLiveSnapshotRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveSnapshotRule", CreateLiveSnapshotRuleResponse.class);
     }
 
     /**
@@ -301,14 +223,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveSnapshotTemplate", CreateLiveSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveSnapshotTemplate", CreateLiveSnapshotTemplateResponse.class);
     }
 
     /**
@@ -319,14 +235,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRule(CreateLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveTimeShiftRule", CreateLiveTimeShiftRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveTimeShiftRule", CreateLiveTimeShiftRuleResponse.class);
     }
 
     /**
@@ -336,14 +246,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplate(CreateLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveTimeShiftTemplate", CreateLiveTimeShiftTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveTimeShiftTemplate", CreateLiveTimeShiftTemplateResponse.class);
     }
 
     /**
@@ -354,14 +258,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(CreateLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveTranscodeRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveTranscodeRule", CreateLiveTranscodeRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveTranscodeRule", CreateLiveTranscodeRuleResponse.class);
     }
 
     /**
@@ -372,14 +270,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveTranscodeTemplate", CreateLiveTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveTranscodeTemplate", CreateLiveTranscodeTemplateResponse.class);
     }
 
     /**
@@ -389,14 +281,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveWatermarkRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLiveWatermarkRule", CreateLiveWatermarkRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLiveWatermarkRule", CreateLiveWatermarkRuleResponse.class);
     }
 
     /**
@@ -415,14 +301,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateRecordTaskResponse CreateRecordTask(CreateRecordTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRecordTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateRecordTask", CreateRecordTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateRecordTask", CreateRecordTaskResponse.class);
     }
 
     /**
@@ -438,14 +318,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public CreateScreenshotTaskResponse CreateScreenshotTask(CreateScreenshotTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateScreenshotTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateScreenshotTask", CreateScreenshotTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateScreenshotTask", CreateScreenshotTaskResponse.class);
     }
 
     /**
@@ -455,14 +329,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveCallbackRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveCallbackRule", DeleteLiveCallbackRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveCallbackRule", DeleteLiveCallbackRuleResponse.class);
     }
 
     /**
@@ -472,14 +340,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveCallbackTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveCallbackTemplate", DeleteLiveCallbackTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveCallbackTemplate", DeleteLiveCallbackTemplateResponse.class);
     }
 
     /**
@@ -489,14 +351,8 @@ Note: only one screencapturing template can be associated with one domain name.
      * @throws TencentCloudSDKException
      */
     public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveDomain", DeleteLiveDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveDomain", DeleteLiveDomainResponse.class);
     }
 
     /**
@@ -509,14 +365,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLivePullStreamTaskResponse DeleteLivePullStreamTask(DeleteLivePullStreamTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLivePullStreamTask", DeleteLivePullStreamTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLivePullStreamTask", DeleteLivePullStreamTaskResponse.class);
     }
 
     /**
@@ -526,14 +376,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveRecordResponse DeleteLiveRecord(DeleteLiveRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveRecord", DeleteLiveRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveRecord", DeleteLiveRecordResponse.class);
     }
 
     /**
@@ -543,14 +387,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveRecordRuleResponse DeleteLiveRecordRule(DeleteLiveRecordRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveRecordRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveRecordRule", DeleteLiveRecordRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveRecordRule", DeleteLiveRecordRuleResponse.class);
     }
 
     /**
@@ -560,14 +398,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveRecordTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
     }
 
     /**
@@ -577,14 +409,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveSnapshotRuleResponse DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveSnapshotRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveSnapshotRule", DeleteLiveSnapshotRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveSnapshotRule", DeleteLiveSnapshotRuleResponse.class);
     }
 
     /**
@@ -594,14 +420,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveSnapshotTemplateResponse DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveSnapshotTemplate", DeleteLiveSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveSnapshotTemplate", DeleteLiveSnapshotTemplateResponse.class);
     }
 
     /**
@@ -611,14 +431,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveTimeShiftRuleResponse DeleteLiveTimeShiftRule(DeleteLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveTimeShiftRule", DeleteLiveTimeShiftRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveTimeShiftRule", DeleteLiveTimeShiftRuleResponse.class);
     }
 
     /**
@@ -628,14 +442,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveTimeShiftTemplateResponse DeleteLiveTimeShiftTemplate(DeleteLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveTimeShiftTemplate", DeleteLiveTimeShiftTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveTimeShiftTemplate", DeleteLiveTimeShiftTemplateResponse.class);
     }
 
     /**
@@ -646,14 +454,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveTranscodeRuleResponse DeleteLiveTranscodeRule(DeleteLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveTranscodeRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveTranscodeRule", DeleteLiveTranscodeRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveTranscodeRule", DeleteLiveTranscodeRuleResponse.class);
     }
 
     /**
@@ -663,14 +465,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveTranscodeTemplateResponse DeleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveTranscodeTemplate", DeleteLiveTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveTranscodeTemplate", DeleteLiveTranscodeTemplateResponse.class);
     }
 
     /**
@@ -680,14 +476,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveWatermarkResponse DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveWatermark", DeleteLiveWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveWatermark", DeleteLiveWatermarkResponse.class);
     }
 
     /**
@@ -697,14 +487,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteLiveWatermarkRuleResponse DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveWatermarkRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteLiveWatermarkRule", DeleteLiveWatermarkRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteLiveWatermarkRule", DeleteLiveWatermarkRuleResponse.class);
     }
 
     /**
@@ -714,14 +498,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DeleteRecordTaskResponse DeleteRecordTask(DeleteRecordTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRecordTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRecordTask", DeleteRecordTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRecordTask", DeleteRecordTaskResponse.class);
     }
 
     /**
@@ -731,14 +509,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAllStreamPlayInfoList", DescribeAllStreamPlayInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAllStreamPlayInfoList", DescribeAllStreamPlayInfoListResponse.class);
     }
 
     /**
@@ -748,14 +520,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeBillBandwidthAndFluxList", DescribeBillBandwidthAndFluxListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeBillBandwidthAndFluxList", DescribeBillBandwidthAndFluxListResponse.class);
     }
 
     /**
@@ -765,14 +531,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(DescribeConcurrentRecordStreamNumRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeConcurrentRecordStreamNum", DescribeConcurrentRecordStreamNumResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeConcurrentRecordStreamNum", DescribeConcurrentRecordStreamNumResponse.class);
     }
 
     /**
@@ -782,14 +542,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDeliverBandwidthList", DescribeDeliverBandwidthListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDeliverBandwidthList", DescribeDeliverBandwidthListResponse.class);
     }
 
     /**
@@ -799,14 +553,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeGroupProIspPlayInfoListResponse DescribeGroupProIspPlayInfoList(DescribeGroupProIspPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupProIspPlayInfoList", DescribeGroupProIspPlayInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupProIspPlayInfoList", DescribeGroupProIspPlayInfoListResponse.class);
     }
 
     /**
@@ -817,14 +565,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoList(DescribeHttpStatusInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHttpStatusInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeHttpStatusInfoList", DescribeHttpStatusInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeHttpStatusInfoList", DescribeHttpStatusInfoListResponse.class);
     }
 
     /**
@@ -834,14 +576,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveCallbackRulesResponse DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveCallbackRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveCallbackRules", DescribeLiveCallbackRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveCallbackRules", DescribeLiveCallbackRulesResponse.class);
     }
 
     /**
@@ -851,14 +587,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveCallbackTemplateResponse DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveCallbackTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveCallbackTemplate", DescribeLiveCallbackTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveCallbackTemplate", DescribeLiveCallbackTemplateResponse.class);
     }
 
     /**
@@ -868,14 +598,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveCallbackTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveCallbackTemplates", DescribeLiveCallbackTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveCallbackTemplates", DescribeLiveCallbackTemplatesResponse.class);
     }
 
     /**
@@ -885,14 +609,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveCertResponse DescribeLiveCert(DescribeLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveCert", DescribeLiveCertResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveCert", DescribeLiveCertResponse.class);
     }
 
     /**
@@ -902,14 +620,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveCertsResponse DescribeLiveCerts(DescribeLiveCertsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveCertsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveCerts", DescribeLiveCertsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveCerts", DescribeLiveCertsResponse.class);
     }
 
     /**
@@ -919,14 +631,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(DescribeLiveDelayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDelayInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveDelayInfoList", DescribeLiveDelayInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveDelayInfoList", DescribeLiveDelayInfoListResponse.class);
     }
 
     /**
@@ -936,14 +642,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveDomainResponse DescribeLiveDomain(DescribeLiveDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveDomain", DescribeLiveDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveDomain", DescribeLiveDomainResponse.class);
     }
 
     /**
@@ -953,14 +653,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveDomainCertResponse DescribeLiveDomainCert(DescribeLiveDomainCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveDomainCert", DescribeLiveDomainCertResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveDomainCert", DescribeLiveDomainCertResponse.class);
     }
 
     /**
@@ -970,14 +664,8 @@ Note: data can be queried one hour after it is generated. For example, data betw
      * @throws TencentCloudSDKException
      */
     public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveDomainCertBindings", DescribeLiveDomainCertBindingsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveDomainCertBindings", DescribeLiveDomainCertBindingsResponse.class);
     }
 
     /**
@@ -988,14 +676,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveDomainReferer", DescribeLiveDomainRefererResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveDomainReferer", DescribeLiveDomainRefererResponse.class);
     }
 
     /**
@@ -1005,14 +687,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveDomains", DescribeLiveDomainsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveDomains", DescribeLiveDomainsResponse.class);
     }
 
     /**
@@ -1024,14 +700,8 @@ Note: this API is used for query only and should not be relied too much upon in 
      * @throws TencentCloudSDKException
      */
     public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveForbidStreamListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveForbidStreamList", DescribeLiveForbidStreamListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveForbidStreamList", DescribeLiveForbidStreamListResponse.class);
     }
 
     /**
@@ -1041,14 +711,8 @@ Note: this API is used for query only and should not be relied too much upon in 
      * @throws TencentCloudSDKException
      */
     public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLivePlayAuthKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLivePlayAuthKey", DescribeLivePlayAuthKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLivePlayAuthKey", DescribeLivePlayAuthKeyResponse.class);
     }
 
     /**
@@ -1059,14 +723,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasks(DescribeLivePullStreamTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLivePullStreamTasks", DescribeLivePullStreamTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLivePullStreamTasks", DescribeLivePullStreamTasksResponse.class);
     }
 
     /**
@@ -1076,14 +734,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLivePushAuthKeyResponse DescribeLivePushAuthKey(DescribeLivePushAuthKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLivePushAuthKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLivePushAuthKey", DescribeLivePushAuthKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLivePushAuthKey", DescribeLivePushAuthKeyResponse.class);
     }
 
     /**
@@ -1093,14 +745,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLiveRecordRulesResponse DescribeLiveRecordRules(DescribeLiveRecordRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveRecordRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveRecordRules", DescribeLiveRecordRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveRecordRules", DescribeLiveRecordRulesResponse.class);
     }
 
     /**
@@ -1110,14 +756,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLiveRecordTemplateResponse DescribeLiveRecordTemplate(DescribeLiveRecordTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveRecordTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveRecordTemplate", DescribeLiveRecordTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveRecordTemplate", DescribeLiveRecordTemplateResponse.class);
     }
 
     /**
@@ -1127,14 +767,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveRecordTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
     }
 
     /**
@@ -1144,14 +778,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveSnapshotRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveSnapshotRules", DescribeLiveSnapshotRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveSnapshotRules", DescribeLiveSnapshotRulesResponse.class);
     }
 
     /**
@@ -1161,14 +789,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveSnapshotTemplate", DescribeLiveSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveSnapshotTemplate", DescribeLiveSnapshotTemplateResponse.class);
     }
 
     /**
@@ -1178,14 +800,8 @@ The tasks returned are sorted by last updated time in descending order.
      * @throws TencentCloudSDKException
      */
     public DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveSnapshotTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveSnapshotTemplates", DescribeLiveSnapshotTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveSnapshotTemplates", DescribeLiveSnapshotTemplatesResponse.class);
     }
 
     /**
@@ -1199,14 +815,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(DescribeLiveStreamEventListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveStreamEventListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveStreamEventList", DescribeLiveStreamEventListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveStreamEventList", DescribeLiveStreamEventListResponse.class);
     }
 
     /**
@@ -1221,14 +831,8 @@ Notes:
      * @throws TencentCloudSDKException
      */
     public DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveStreamOnlineListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveStreamOnlineList", DescribeLiveStreamOnlineListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveStreamOnlineList", DescribeLiveStreamOnlineListResponse.class);
     }
 
     /**
@@ -1239,14 +843,8 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
      * @throws TencentCloudSDKException
      */
     public DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(DescribeLiveStreamPublishedListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveStreamPublishedListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveStreamPublishedList", DescribeLiveStreamPublishedListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveStreamPublishedList", DescribeLiveStreamPublishedListResponse.class);
     }
 
     /**
@@ -1256,14 +854,8 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
      * @throws TencentCloudSDKException
      */
     public DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(DescribeLiveStreamPushInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveStreamPushInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveStreamPushInfoList", DescribeLiveStreamPushInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveStreamPushInfoList", DescribeLiveStreamPushInfoListResponse.class);
     }
 
     /**
@@ -1282,14 +874,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveStreamStateResponse DescribeLiveStreamState(DescribeLiveStreamStateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveStreamStateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveStreamState", DescribeLiveStreamStateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveStreamState", DescribeLiveStreamStateResponse.class);
     }
 
     /**
@@ -1299,14 +885,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(DescribeLiveTimeShiftBillInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTimeShiftBillInfoList", DescribeLiveTimeShiftBillInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTimeShiftBillInfoList", DescribeLiveTimeShiftBillInfoListResponse.class);
     }
 
     /**
@@ -1316,14 +896,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRules(DescribeLiveTimeShiftRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTimeShiftRules", DescribeLiveTimeShiftRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTimeShiftRules", DescribeLiveTimeShiftRulesResponse.class);
     }
 
     /**
@@ -1333,14 +907,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplates(DescribeLiveTimeShiftTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTimeShiftTemplates", DescribeLiveTimeShiftTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTimeShiftTemplates", DescribeLiveTimeShiftTemplatesResponse.class);
     }
 
     /**
@@ -1350,14 +918,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(DescribeLiveTranscodeDetailInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTranscodeDetailInfo", DescribeLiveTranscodeDetailInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTranscodeDetailInfo", DescribeLiveTranscodeDetailInfoResponse.class);
     }
 
     /**
@@ -1367,14 +929,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(DescribeLiveTranscodeRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTranscodeRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTranscodeRules", DescribeLiveTranscodeRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTranscodeRules", DescribeLiveTranscodeRulesResponse.class);
     }
 
     /**
@@ -1384,14 +940,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(DescribeLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTranscodeTemplate", DescribeLiveTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTranscodeTemplate", DescribeLiveTranscodeTemplateResponse.class);
     }
 
     /**
@@ -1401,14 +951,8 @@ This API allows you to query the status of a stream in real time. Given external
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(DescribeLiveTranscodeTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTranscodeTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTranscodeTemplates", DescribeLiveTranscodeTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTranscodeTemplates", DescribeLiveTranscodeTemplatesResponse.class);
     }
 
     /**
@@ -1421,14 +965,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveTranscodeTotalInfo", DescribeLiveTranscodeTotalInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveTranscodeTotalInfo", DescribeLiveTranscodeTotalInfoResponse.class);
     }
 
     /**
@@ -1438,14 +976,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeLiveWatermarkResponse DescribeLiveWatermark(DescribeLiveWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveWatermark", DescribeLiveWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveWatermark", DescribeLiveWatermarkResponse.class);
     }
 
     /**
@@ -1455,14 +987,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveWatermarkRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveWatermarkRules", DescribeLiveWatermarkRulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveWatermarkRules", DescribeLiveWatermarkRulesResponse.class);
     }
 
     /**
@@ -1472,14 +998,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeLiveWatermarksResponse DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLiveWatermarks", DescribeLiveWatermarksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLiveWatermarks", DescribeLiveWatermarksResponse.class);
     }
 
     /**
@@ -1489,14 +1009,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(DescribePlayErrorCodeDetailInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePlayErrorCodeDetailInfoList", DescribePlayErrorCodeDetailInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePlayErrorCodeDetailInfoList", DescribePlayErrorCodeDetailInfoListResponse.class);
     }
 
     /**
@@ -1506,14 +1020,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(DescribePlayErrorCodeSumInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePlayErrorCodeSumInfoList", DescribePlayErrorCodeSumInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePlayErrorCodeSumInfoList", DescribePlayErrorCodeSumInfoListResponse.class);
     }
 
     /**
@@ -1523,14 +1031,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(DescribeProvinceIspPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProvinceIspPlayInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeProvinceIspPlayInfoList", DescribeProvinceIspPlayInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeProvinceIspPlayInfoList", DescribeProvinceIspPlayInfoListResponse.class);
     }
 
     /**
@@ -1543,14 +1045,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeRecordTaskResponse DescribeRecordTask(DescribeRecordTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRecordTask", DescribeRecordTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRecordTask", DescribeRecordTaskResponse.class);
     }
 
     /**
@@ -1560,14 +1056,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(DescribeScreenShotSheetNumListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeScreenShotSheetNumListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeScreenShotSheetNumList", DescribeScreenShotSheetNumListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeScreenShotSheetNumList", DescribeScreenShotSheetNumListResponse.class);
     }
 
     /**
@@ -1577,14 +1067,8 @@ If the start time and end time are not on the same day or if the data of specifi
      * @throws TencentCloudSDKException
      */
     public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamDayPlayInfoList", DescribeStreamDayPlayInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamDayPlayInfoList", DescribeStreamDayPlayInfoListResponse.class);
     }
 
     /**
@@ -1595,14 +1079,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamPlayInfoList", DescribeStreamPlayInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamPlayInfoList", DescribeStreamPlayInfoListResponse.class);
     }
 
     /**
@@ -1612,14 +1090,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeStreamPushInfoList", DescribeStreamPushInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeStreamPushInfoList", DescribeStreamPushInfoListResponse.class);
     }
 
     /**
@@ -1629,14 +1101,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTimeShiftRecordDetail", DescribeTimeShiftRecordDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTimeShiftRecordDetail", DescribeTimeShiftRecordDetailResponse.class);
     }
 
     /**
@@ -1646,14 +1112,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTimeShiftStreamList", DescribeTimeShiftStreamListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTimeShiftStreamList", DescribeTimeShiftStreamListResponse.class);
     }
 
     /**
@@ -1663,14 +1123,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeTopClientIpSumInfoListResponse DescribeTopClientIpSumInfoList(DescribeTopClientIpSumInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopClientIpSumInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopClientIpSumInfoList", DescribeTopClientIpSumInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopClientIpSumInfoList", DescribeTopClientIpSumInfoListResponse.class);
     }
 
     /**
@@ -1680,14 +1134,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTranscodeTaskNum", DescribeTranscodeTaskNumResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTranscodeTaskNum", DescribeTranscodeTaskNumResponse.class);
     }
 
     /**
@@ -1697,14 +1145,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeUploadStreamNumsResponse DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUploadStreamNums", DescribeUploadStreamNumsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUploadStreamNums", DescribeUploadStreamNumsResponse.class);
     }
 
     /**
@@ -1714,14 +1156,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
      * @throws TencentCloudSDKException
      */
     public DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(DescribeVisitTopSumInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVisitTopSumInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeVisitTopSumInfoList", DescribeVisitTopSumInfoListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeVisitTopSumInfoList", DescribeVisitTopSumInfoListResponse.class);
     }
 
     /**
@@ -1732,14 +1168,8 @@ Note: If you call this API to pause an inactive stream, the request will be cons
      * @throws TencentCloudSDKException
      */
     public DropLiveStreamResponse DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DropLiveStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DropLiveStream", DropLiveStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DropLiveStream", DropLiveStreamResponse.class);
     }
 
     /**
@@ -1749,14 +1179,8 @@ Note: If you call this API to pause an inactive stream, the request will be cons
      * @throws TencentCloudSDKException
      */
     public EnableLiveDomainResponse EnableLiveDomain(EnableLiveDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableLiveDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableLiveDomain", EnableLiveDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableLiveDomain", EnableLiveDomainResponse.class);
     }
 
     /**
@@ -1766,14 +1190,8 @@ Note: If you call this API to pause an inactive stream, the request will be cons
      * @throws TencentCloudSDKException
      */
     public ForbidLiveDomainResponse ForbidLiveDomain(ForbidLiveDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ForbidLiveDomain", ForbidLiveDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ForbidLiveDomain", ForbidLiveDomainResponse.class);
     }
 
     /**
@@ -1787,14 +1205,8 @@ Note:
      * @throws TencentCloudSDKException
      */
     public ForbidLiveStreamResponse ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ForbidLiveStream", ForbidLiveStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ForbidLiveStream", ForbidLiveStreamResponse.class);
     }
 
     /**
@@ -1804,14 +1216,8 @@ Note:
      * @throws TencentCloudSDKException
      */
     public ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveCallbackTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveCallbackTemplate", ModifyLiveCallbackTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveCallbackTemplate", ModifyLiveCallbackTemplateResponse.class);
     }
 
     /**
@@ -1822,14 +1228,8 @@ If a self-owned certificate is used, it will be automatically uploaded to Tencen
      * @throws TencentCloudSDKException
      */
     public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveDomainCertBindings", ModifyLiveDomainCertBindingsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveDomainCertBindings", ModifyLiveDomainCertBindingsResponse.class);
     }
 
     /**
@@ -1840,14 +1240,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveDomainReferer", ModifyLiveDomainRefererResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveDomainReferer", ModifyLiveDomainRefererResponse.class);
     }
 
     /**
@@ -1857,14 +1251,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(ModifyLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLivePlayAuthKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLivePlayAuthKey", ModifyLivePlayAuthKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLivePlayAuthKey", ModifyLivePlayAuthKeyResponse.class);
     }
 
     /**
@@ -1874,14 +1262,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLivePlayDomainResponse ModifyLivePlayDomain(ModifyLivePlayDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLivePlayDomain", ModifyLivePlayDomainResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLivePlayDomain", ModifyLivePlayDomainResponse.class);
     }
 
     /**
@@ -1893,14 +1275,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLivePullStreamTaskResponse ModifyLivePullStreamTask(ModifyLivePullStreamTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLivePullStreamTask", ModifyLivePullStreamTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLivePullStreamTask", ModifyLivePullStreamTaskResponse.class);
     }
 
     /**
@@ -1910,14 +1286,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(ModifyLivePushAuthKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLivePushAuthKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLivePushAuthKey", ModifyLivePushAuthKeyResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLivePushAuthKey", ModifyLivePushAuthKeyResponse.class);
     }
 
     /**
@@ -1927,14 +1297,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveRecordTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
     }
 
     /**
@@ -1944,14 +1308,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveSnapshotTemplate", ModifyLiveSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveSnapshotTemplate", ModifyLiveSnapshotTemplateResponse.class);
     }
 
     /**
@@ -1961,14 +1319,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(ModifyLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveTimeShiftTemplate", ModifyLiveTimeShiftTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveTimeShiftTemplate", ModifyLiveTimeShiftTemplateResponse.class);
     }
 
     /**
@@ -1978,14 +1330,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(ModifyLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLiveTranscodeTemplate", ModifyLiveTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLiveTranscodeTemplate", ModifyLiveTranscodeTemplateResponse.class);
     }
 
     /**
@@ -1995,14 +1341,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public RestartLivePullStreamTaskResponse RestartLivePullStreamTask(RestartLivePullStreamTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RestartLivePullStreamTask", RestartLivePullStreamTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RestartLivePullStreamTask", RestartLivePullStreamTaskResponse.class);
     }
 
     /**
@@ -2012,14 +1352,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ResumeDelayLiveStreamResponse ResumeDelayLiveStream(ResumeDelayLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResumeDelayLiveStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResumeDelayLiveStream", ResumeDelayLiveStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResumeDelayLiveStream", ResumeDelayLiveStreamResponse.class);
     }
 
     /**
@@ -2029,14 +1363,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResumeLiveStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResumeLiveStream", ResumeLiveStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResumeLiveStream", ResumeLiveStreamResponse.class);
     }
 
     /**
@@ -2046,14 +1374,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public StopLiveRecordResponse StopLiveRecord(StopLiveRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopLiveRecordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopLiveRecord", StopLiveRecordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopLiveRecord", StopLiveRecordResponse.class);
     }
 
     /**
@@ -2063,14 +1385,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public StopRecordTaskResponse StopRecordTask(StopRecordTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopRecordTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopRecordTask", StopRecordTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopRecordTask", StopRecordTaskResponse.class);
     }
 
     /**
@@ -2080,14 +1396,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public UnBindLiveDomainCertResponse UnBindLiveDomainCert(UnBindLiveDomainCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindLiveDomainCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UnBindLiveDomainCert", UnBindLiveDomainCertResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UnBindLiveDomainCert", UnBindLiveDomainCertResponse.class);
     }
 
     /**
@@ -2097,14 +1407,8 @@ Referer information is included in HTTP requests. After you enable referer confi
      * @throws TencentCloudSDKException
      */
     public UpdateLiveWatermarkResponse UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateLiveWatermark", UpdateLiveWatermarkResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateLiveWatermark", UpdateLiveWatermarkResponse.class);
     }
 
 }

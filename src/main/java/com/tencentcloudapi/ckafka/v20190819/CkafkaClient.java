@@ -45,14 +45,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchCreateAclResponse BatchCreateAcl(BatchCreateAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchCreateAclResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchCreateAcl", BatchCreateAclResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchCreateAcl", BatchCreateAclResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchModifyGroupOffsets", BatchModifyGroupOffsetsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchModifyGroupOffsets", BatchModifyGroupOffsetsResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "BatchModifyTopicAttributes", BatchModifyTopicAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "BatchModifyTopicAttributes", BatchModifyTopicAttributesResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAclResponse CreateAcl(CreateAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAclResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAcl", CreateAclResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAcl", CreateAclResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAclRuleResponse CreateAclRule(CreateAclRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAclRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAclRule", CreateAclRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAclRule", CreateAclRuleResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateConsumerResponse CreateConsumer(CreateConsumerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateConsumerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateConsumer", CreateConsumerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateConsumer", CreateConsumerResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDatahubTopicResponse CreateDatahubTopic(CreateDatahubTopicRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateDatahubTopic", CreateDatahubTopicResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateDatahubTopic", CreateDatahubTopicResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateInstancePostResponse CreateInstancePost(CreateInstancePostRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateInstancePostResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateInstancePost", CreateInstancePostResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateInstancePost", CreateInstancePostResponse.class);
     }
 
     /**
@@ -181,14 +133,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePartitionResponse CreatePartition(CreatePartitionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePartitionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePartition", CreatePartitionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePartition", CreatePartitionResponse.class);
     }
 
     /**
@@ -198,14 +144,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePostPaidInstanceResponse CreatePostPaidInstance(CreatePostPaidInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePostPaidInstance", CreatePostPaidInstanceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePostPaidInstance", CreatePostPaidInstanceResponse.class);
     }
 
     /**
@@ -215,14 +155,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTopicResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
     }
 
     /**
@@ -232,14 +166,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(CreateTopicIpWhiteListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTopicIpWhiteListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTopicIpWhiteList", CreateTopicIpWhiteListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTopicIpWhiteList", CreateTopicIpWhiteListResponse.class);
     }
 
     /**
@@ -249,14 +177,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
     }
 
     /**
@@ -266,14 +188,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteAclResponse DeleteAcl(DeleteAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAclResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAcl", DeleteAclResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAcl", DeleteAclResponse.class);
     }
 
     /**
@@ -283,14 +199,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteInstancePreResponse DeleteInstancePre(DeleteInstancePreRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteInstancePreResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteInstancePre", DeleteInstancePreResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteInstancePre", DeleteInstancePreResponse.class);
     }
 
     /**
@@ -300,14 +210,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteRouteResponse DeleteRoute(DeleteRouteRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRouteResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRoute", DeleteRouteResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRoute", DeleteRouteResponse.class);
     }
 
     /**
@@ -317,14 +221,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteRouteTriggerTime", DeleteRouteTriggerTimeResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteRouteTriggerTime", DeleteRouteTriggerTimeResponse.class);
     }
 
     /**
@@ -334,14 +232,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTopicResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
     }
 
     /**
@@ -351,14 +243,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTopicIpWhiteListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTopicIpWhiteList", DeleteTopicIpWhiteListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTopicIpWhiteList", DeleteTopicIpWhiteListResponse.class);
     }
 
     /**
@@ -368,14 +254,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
     }
 
     /**
@@ -385,14 +265,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeACLResponse DescribeACL(DescribeACLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeACLResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeACL", DescribeACLResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeACL", DescribeACLResponse.class);
     }
 
     /**
@@ -402,14 +276,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAclRuleResponse DescribeAclRule(DescribeAclRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAclRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAclRule", DescribeAclRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAclRule", DescribeAclRuleResponse.class);
     }
 
     /**
@@ -419,14 +287,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAppInfoResponse DescribeAppInfo(DescribeAppInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAppInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAppInfo", DescribeAppInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAppInfo", DescribeAppInfoResponse.class);
     }
 
     /**
@@ -436,14 +298,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCkafkaZoneResponse DescribeCkafkaZone(DescribeCkafkaZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCkafkaZone", DescribeCkafkaZoneResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCkafkaZone", DescribeCkafkaZoneResponse.class);
     }
 
     /**
@@ -453,14 +309,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeConsumerGroupResponse DescribeConsumerGroup(DescribeConsumerGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeConsumerGroup", DescribeConsumerGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeConsumerGroup", DescribeConsumerGroupResponse.class);
     }
 
     /**
@@ -470,14 +320,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDatahubTopicResponse DescribeDatahubTopic(DescribeDatahubTopicRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDatahubTopic", DescribeDatahubTopicResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDatahubTopic", DescribeDatahubTopicResponse.class);
     }
 
     /**
@@ -487,14 +331,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDatahubTopicsResponse DescribeDatahubTopics(DescribeDatahubTopicsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeDatahubTopics", DescribeDatahubTopicsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeDatahubTopics", DescribeDatahubTopicsResponse.class);
     }
 
     /**
@@ -504,14 +342,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroup", DescribeGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroup", DescribeGroupResponse.class);
     }
 
     /**
@@ -521,14 +353,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGroupInfoResponse DescribeGroupInfo(DescribeGroupInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupInfo", DescribeGroupInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupInfo", DescribeGroupInfoResponse.class);
     }
 
     /**
@@ -538,14 +364,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGroupOffsetsResponse DescribeGroupOffsets(DescribeGroupOffsetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGroupOffsetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeGroupOffsets", DescribeGroupOffsetsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeGroupOffsets", DescribeGroupOffsetsResponse.class);
     }
 
     /**
@@ -555,14 +375,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceAttributesResponse DescribeInstanceAttributes(DescribeInstanceAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstanceAttributes", DescribeInstanceAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstanceAttributes", DescribeInstanceAttributesResponse.class);
     }
 
     /**
@@ -572,14 +386,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
     }
 
     /**
@@ -589,14 +397,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstancesDetailResponse DescribeInstancesDetail(DescribeInstancesDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstancesDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInstancesDetail", DescribeInstancesDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInstancesDetail", DescribeInstancesDetailResponse.class);
     }
 
     /**
@@ -606,14 +408,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRegionResponse DescribeRegion(DescribeRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRegionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRegion", DescribeRegionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRegion", DescribeRegionResponse.class);
     }
 
     /**
@@ -623,14 +419,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRouteResponse DescribeRoute(DescribeRouteRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRouteResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRoute", DescribeRouteResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRoute", DescribeRouteResponse.class);
     }
 
     /**
@@ -640,14 +430,8 @@ public class CkafkaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTaskStatus", DescribeTaskStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTaskStatus", DescribeTaskStatusResponse.class);
     }
 
     /**
@@ -658,14 +442,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeTopicResponse DescribeTopic(DescribeTopicRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopicResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopic", DescribeTopicResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopic", DescribeTopicResponse.class);
     }
 
     /**
@@ -676,14 +454,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeTopicAttributesResponse DescribeTopicAttributes(DescribeTopicAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopicAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopicAttributes", DescribeTopicAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopicAttributes", DescribeTopicAttributesResponse.class);
     }
 
     /**
@@ -693,14 +465,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeTopicDetailResponse DescribeTopicDetail(DescribeTopicDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopicDetail", DescribeTopicDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopicDetail", DescribeTopicDetailResponse.class);
     }
 
     /**
@@ -710,14 +476,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeTopicProduceConnectionResponse DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopicProduceConnection", DescribeTopicProduceConnectionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopicProduceConnection", DescribeTopicProduceConnectionResponse.class);
     }
 
     /**
@@ -727,14 +487,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopicSubscribeGroup", DescribeTopicSubscribeGroupResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopicSubscribeGroup", DescribeTopicSubscribeGroupResponse.class);
     }
 
     /**
@@ -744,14 +498,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTopicSyncReplica", DescribeTopicSyncReplicaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTopicSyncReplica", DescribeTopicSyncReplicaResponse.class);
     }
 
     /**
@@ -761,14 +509,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
     }
 
     /**
@@ -778,14 +520,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public FetchMessageByOffsetResponse FetchMessageByOffset(FetchMessageByOffsetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "FetchMessageByOffset", FetchMessageByOffsetResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "FetchMessageByOffset", FetchMessageByOffsetResponse.class);
     }
 
     /**
@@ -795,14 +531,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public FetchMessageListByOffsetResponse FetchMessageListByOffset(FetchMessageListByOffsetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "FetchMessageListByOffset", FetchMessageListByOffsetResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "FetchMessageListByOffset", FetchMessageListByOffsetResponse.class);
     }
 
     /**
@@ -812,14 +542,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public InquireCkafkaPriceResponse InquireCkafkaPrice(InquireCkafkaPriceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InquireCkafkaPrice", InquireCkafkaPriceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InquireCkafkaPrice", InquireCkafkaPriceResponse.class);
     }
 
     /**
@@ -829,14 +553,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyAclRuleResponse ModifyAclRule(ModifyAclRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAclRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAclRule", ModifyAclRuleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAclRule", ModifyAclRuleResponse.class);
     }
 
     /**
@@ -846,14 +564,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyDatahubTopicResponse ModifyDatahubTopic(ModifyDatahubTopicRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyDatahubTopic", ModifyDatahubTopicResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyDatahubTopic", ModifyDatahubTopicResponse.class);
     }
 
     /**
@@ -863,14 +575,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyGroupOffsetsResponse ModifyGroupOffsets(ModifyGroupOffsetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyGroupOffsetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyGroupOffsets", ModifyGroupOffsetsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyGroupOffsets", ModifyGroupOffsetsResponse.class);
     }
 
     /**
@@ -880,14 +586,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceAttributesResponse ModifyInstanceAttributes(ModifyInstanceAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyInstanceAttributes", ModifyInstanceAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyInstanceAttributes", ModifyInstanceAttributesResponse.class);
     }
 
     /**
@@ -897,14 +597,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyInstancePreResponse ModifyInstancePre(ModifyInstancePreRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstancePreResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyInstancePre", ModifyInstancePreResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyInstancePre", ModifyInstancePreResponse.class);
     }
 
     /**
@@ -914,14 +608,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyPasswordResponse ModifyPassword(ModifyPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPassword", ModifyPasswordResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPassword", ModifyPasswordResponse.class);
     }
 
     /**
@@ -931,14 +619,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public ModifyTopicAttributesResponse ModifyTopicAttributes(ModifyTopicAttributesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTopicAttributesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTopicAttributes", ModifyTopicAttributesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTopicAttributes", ModifyTopicAttributesResponse.class);
     }
 
     /**
@@ -948,14 +630,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
      * @throws TencentCloudSDKException
      */
     public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendMessageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
     }
 
 }

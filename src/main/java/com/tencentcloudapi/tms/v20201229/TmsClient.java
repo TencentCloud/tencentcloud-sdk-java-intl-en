@@ -62,14 +62,8 @@ public class TmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextModerationResponse TextModeration(TextModerationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextModerationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TextModeration", TextModerationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TextModeration", TextModerationResponse.class);
     }
 
 }

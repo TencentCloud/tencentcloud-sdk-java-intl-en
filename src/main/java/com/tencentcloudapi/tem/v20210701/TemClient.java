@@ -45,14 +45,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApplication", CreateApplicationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApplication", CreateApplicationResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateApplicationAutoscalerResponse CreateApplicationAutoscaler(CreateApplicationAutoscalerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationAutoscalerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApplicationAutoscaler", CreateApplicationAutoscalerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApplicationAutoscaler", CreateApplicationAutoscalerResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateApplicationServiceResponse CreateApplicationService(CreateApplicationServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateApplicationService", CreateApplicationServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateApplicationService", CreateApplicationServiceResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateConfigDataResponse CreateConfigData(CreateConfigDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateConfigDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateConfigData", CreateConfigDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateConfigData", CreateConfigDataResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCosTokenResponse CreateCosToken(CreateCosTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCosTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCosToken", CreateCosTokenResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCosToken", CreateCosTokenResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEnvironmentResponse CreateEnvironment(CreateEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateEnvironment", CreateEnvironmentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateEnvironment", CreateEnvironmentResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateLogConfigResponse CreateLogConfig(CreateLogConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLogConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateLogConfig", CreateLogConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateLogConfig", CreateLogConfigResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateResourceResponse CreateResource(CreateResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateResource", CreateResourceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateResource", CreateResourceResponse.class);
     }
 
     /**
@@ -184,14 +136,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApplication", DeleteApplicationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApplication", DeleteApplicationResponse.class);
     }
 
     /**
@@ -201,14 +147,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationAutoscalerResponse DeleteApplicationAutoscaler(DeleteApplicationAutoscalerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationAutoscalerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApplicationAutoscaler", DeleteApplicationAutoscalerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApplicationAutoscaler", DeleteApplicationAutoscalerResponse.class);
     }
 
     /**
@@ -218,14 +158,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationServiceResponse DeleteApplicationService(DeleteApplicationServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteApplicationService", DeleteApplicationServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteApplicationService", DeleteApplicationServiceResponse.class);
     }
 
     /**
@@ -235,14 +169,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteIngressResponse DeleteIngress(DeleteIngressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteIngressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteIngress", DeleteIngressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteIngress", DeleteIngressResponse.class);
     }
 
     /**
@@ -252,14 +180,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeployApplicationResponse DeployApplication(DeployApplicationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeployApplicationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeployApplication", DeployApplicationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeployApplication", DeployApplicationResponse.class);
     }
 
     /**
@@ -269,14 +191,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationAutoscalerListResponse DescribeApplicationAutoscalerList(DescribeApplicationAutoscalerListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationAutoscalerListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationAutoscalerList", DescribeApplicationAutoscalerListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationAutoscalerList", DescribeApplicationAutoscalerListResponse.class);
     }
 
     /**
@@ -286,14 +202,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationInfoResponse DescribeApplicationInfo(DescribeApplicationInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationInfo", DescribeApplicationInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationInfo", DescribeApplicationInfoResponse.class);
     }
 
     /**
@@ -303,14 +213,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationPodsResponse DescribeApplicationPods(DescribeApplicationPodsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationPodsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationPods", DescribeApplicationPodsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationPods", DescribeApplicationPodsResponse.class);
     }
 
     /**
@@ -320,14 +224,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationServiceListResponse DescribeApplicationServiceList(DescribeApplicationServiceListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationServiceListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationServiceList", DescribeApplicationServiceListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationServiceList", DescribeApplicationServiceListResponse.class);
     }
 
     /**
@@ -337,14 +235,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplications", DescribeApplicationsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplications", DescribeApplicationsResponse.class);
     }
 
     /**
@@ -354,14 +246,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationsStatusResponse DescribeApplicationsStatus(DescribeApplicationsStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationsStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeApplicationsStatus", DescribeApplicationsStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeApplicationsStatus", DescribeApplicationsStatusResponse.class);
     }
 
     /**
@@ -371,14 +257,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeConfigDataResponse DescribeConfigData(DescribeConfigDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConfigDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeConfigData", DescribeConfigDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeConfigData", DescribeConfigDataResponse.class);
     }
 
     /**
@@ -388,14 +268,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeConfigDataListResponse DescribeConfigDataList(DescribeConfigDataListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConfigDataListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeConfigDataList", DescribeConfigDataListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeConfigDataList", DescribeConfigDataListResponse.class);
     }
 
     /**
@@ -405,14 +279,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEnvironmentResponse DescribeEnvironment(DescribeEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEnvironment", DescribeEnvironmentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEnvironment", DescribeEnvironmentResponse.class);
     }
 
     /**
@@ -422,14 +290,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEnvironmentStatusResponse DescribeEnvironmentStatus(DescribeEnvironmentStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEnvironmentStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEnvironmentStatus", DescribeEnvironmentStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEnvironmentStatus", DescribeEnvironmentStatusResponse.class);
     }
 
     /**
@@ -439,14 +301,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
     }
 
     /**
@@ -456,14 +312,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIngressResponse DescribeIngress(DescribeIngressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIngressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIngress", DescribeIngressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIngress", DescribeIngressResponse.class);
     }
 
     /**
@@ -473,14 +323,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIngressesResponse DescribeIngresses(DescribeIngressesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIngressesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeIngresses", DescribeIngressesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeIngresses", DescribeIngressesResponse.class);
     }
 
     /**
@@ -490,14 +334,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLogConfigResponse DescribeLogConfig(DescribeLogConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLogConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeLogConfig", DescribeLogConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeLogConfig", DescribeLogConfigResponse.class);
     }
 
     /**
@@ -507,14 +345,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePagedLogConfigListResponse DescribePagedLogConfigList(DescribePagedLogConfigListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePagedLogConfigListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePagedLogConfigList", DescribePagedLogConfigListResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePagedLogConfigList", DescribePagedLogConfigListResponse.class);
     }
 
     /**
@@ -524,14 +356,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRelatedIngressesResponse DescribeRelatedIngresses(DescribeRelatedIngressesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRelatedIngressesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRelatedIngresses", DescribeRelatedIngressesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRelatedIngresses", DescribeRelatedIngressesResponse.class);
     }
 
     /**
@@ -541,14 +367,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DestroyConfigDataResponse DestroyConfigData(DestroyConfigDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyConfigDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyConfigData", DestroyConfigDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyConfigData", DestroyConfigDataResponse.class);
     }
 
     /**
@@ -558,14 +378,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DestroyEnvironmentResponse DestroyEnvironment(DestroyEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyEnvironment", DestroyEnvironmentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyEnvironment", DestroyEnvironmentResponse.class);
     }
 
     /**
@@ -575,14 +389,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DestroyLogConfigResponse DestroyLogConfig(DestroyLogConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyLogConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DestroyLogConfig", DestroyLogConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DestroyLogConfig", DestroyLogConfigResponse.class);
     }
 
     /**
@@ -592,14 +400,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableApplicationAutoscalerResponse DisableApplicationAutoscaler(DisableApplicationAutoscalerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableApplicationAutoscalerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableApplicationAutoscaler", DisableApplicationAutoscalerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableApplicationAutoscaler", DisableApplicationAutoscalerResponse.class);
     }
 
     /**
@@ -609,14 +411,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableApplicationAutoscalerResponse EnableApplicationAutoscaler(EnableApplicationAutoscalerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableApplicationAutoscalerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableApplicationAutoscaler", EnableApplicationAutoscalerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableApplicationAutoscaler", EnableApplicationAutoscalerResponse.class);
     }
 
     /**
@@ -626,14 +422,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(GenerateApplicationPackageDownloadUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GenerateApplicationPackageDownloadUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GenerateApplicationPackageDownloadUrl", GenerateApplicationPackageDownloadUrlResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GenerateApplicationPackageDownloadUrl", GenerateApplicationPackageDownloadUrlResponse.class);
     }
 
     /**
@@ -643,14 +433,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationAutoscalerResponse ModifyApplicationAutoscaler(ModifyApplicationAutoscalerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationAutoscalerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationAutoscaler", ModifyApplicationAutoscalerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationAutoscaler", ModifyApplicationAutoscalerResponse.class);
     }
 
     /**
@@ -660,14 +444,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationInfoResponse ModifyApplicationInfo(ModifyApplicationInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationInfo", ModifyApplicationInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationInfo", ModifyApplicationInfoResponse.class);
     }
 
     /**
@@ -677,14 +455,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationServiceResponse ModifyApplicationService(ModifyApplicationServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyApplicationService", ModifyApplicationServiceResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyApplicationService", ModifyApplicationServiceResponse.class);
     }
 
     /**
@@ -694,14 +466,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyConfigDataResponse ModifyConfigData(ModifyConfigDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyConfigDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyConfigData", ModifyConfigDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyConfigData", ModifyConfigDataResponse.class);
     }
 
     /**
@@ -711,14 +477,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyEnvironmentResponse ModifyEnvironment(ModifyEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyEnvironment", ModifyEnvironmentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyEnvironment", ModifyEnvironmentResponse.class);
     }
 
     /**
@@ -728,14 +488,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyIngressResponse ModifyIngress(ModifyIngressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyIngressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyIngress", ModifyIngressResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyIngress", ModifyIngressResponse.class);
     }
 
     /**
@@ -745,14 +499,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLogConfigResponse ModifyLogConfig(ModifyLogConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLogConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyLogConfig", ModifyLogConfigResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyLogConfig", ModifyLogConfigResponse.class);
     }
 
     /**
@@ -762,14 +510,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RestartApplicationResponse RestartApplication(RestartApplicationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RestartApplicationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RestartApplication", RestartApplicationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RestartApplication", RestartApplicationResponse.class);
     }
 
     /**
@@ -779,14 +521,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RestartApplicationPodResponse RestartApplicationPod(RestartApplicationPodRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RestartApplicationPodResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RestartApplicationPod", RestartApplicationPodResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RestartApplicationPod", RestartApplicationPodResponse.class);
     }
 
     /**
@@ -796,14 +532,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(RollingUpdateApplicationByVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RollingUpdateApplicationByVersion", RollingUpdateApplicationByVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RollingUpdateApplicationByVersion", RollingUpdateApplicationByVersionResponse.class);
     }
 
     /**
@@ -813,14 +543,8 @@ public class TemClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopApplicationResponse StopApplication(StopApplicationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopApplicationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "StopApplication", StopApplicationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "StopApplication", StopApplicationResponse.class);
     }
 
 }

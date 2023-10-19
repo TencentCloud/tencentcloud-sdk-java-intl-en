@@ -45,14 +45,8 @@ public class SsmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateProductSecretResponse CreateProductSecret(CreateProductSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProductSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateProductSecret", CreateProductSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateProductSecret", CreateProductSecretResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class SsmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSSHKeyPairSecretResponse CreateSSHKeyPairSecret(CreateSSHKeyPairSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSSHKeyPairSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSSHKeyPairSecret", CreateSSHKeyPairSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSSHKeyPairSecret", CreateSSHKeyPairSecretResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class SsmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSecretResponse CreateSecret(CreateSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSecret", CreateSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSecret", CreateSecretResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class SsmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteSecretResponse DeleteSecret(DeleteSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSecret", DeleteSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSecret", DeleteSecretResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
      * @throws TencentCloudSDKException
      */
     public DeleteSecretVersionResponse DeleteSecretVersion(DeleteSecretVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSecretVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSecretVersion", DeleteSecretVersionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSecretVersion", DeleteSecretVersionResponse.class);
     }
 
     /**
@@ -131,14 +101,8 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
      * @throws TencentCloudSDKException
      */
     public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAsyncRequestInfo", DescribeAsyncRequestInfoResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAsyncRequestInfo", DescribeAsyncRequestInfoResponse.class);
     }
 
     /**
@@ -149,14 +113,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public DescribeRotationDetailResponse DescribeRotationDetail(DescribeRotationDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRotationDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRotationDetail", DescribeRotationDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRotationDetail", DescribeRotationDetailResponse.class);
     }
 
     /**
@@ -167,14 +125,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public DescribeRotationHistoryResponse DescribeRotationHistory(DescribeRotationHistoryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRotationHistoryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRotationHistory", DescribeRotationHistoryResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRotationHistory", DescribeRotationHistoryResponse.class);
     }
 
     /**
@@ -184,14 +136,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public DescribeSecretResponse DescribeSecret(DescribeSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSecret", DescribeSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSecret", DescribeSecretResponse.class);
     }
 
     /**
@@ -201,14 +147,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public DescribeSupportedProductsResponse DescribeSupportedProducts(DescribeSupportedProductsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSupportedProductsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSupportedProducts", DescribeSupportedProductsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSupportedProducts", DescribeSupportedProductsResponse.class);
     }
 
     /**
@@ -218,14 +158,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public DisableSecretResponse DisableSecret(DisableSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableSecret", DisableSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableSecret", DisableSecretResponse.class);
     }
 
     /**
@@ -235,14 +169,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public EnableSecretResponse EnableSecret(EnableSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableSecret", EnableSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableSecret", EnableSecretResponse.class);
     }
 
     /**
@@ -252,14 +180,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public GetRegionsResponse GetRegions(GetRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetRegions", GetRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetRegions", GetRegionsResponse.class);
     }
 
     /**
@@ -269,14 +191,8 @@ This API is only applicable to Tencent Cloud service credentials.
      * @throws TencentCloudSDKException
      */
     public GetSSHKeyPairValueResponse GetSSHKeyPairValue(GetSSHKeyPairValueRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSSHKeyPairValueResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSSHKeyPairValue", GetSSHKeyPairValueResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSSHKeyPairValue", GetSSHKeyPairValueResponse.class);
     }
 
     /**
@@ -287,14 +203,8 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
      * @throws TencentCloudSDKException
      */
     public GetSecretValueResponse GetSecretValue(GetSecretValueRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSecretValueResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetSecretValue", GetSecretValueResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetSecretValue", GetSecretValueResponse.class);
     }
 
     /**
@@ -304,14 +214,8 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
      * @throws TencentCloudSDKException
      */
     public GetServiceStatusResponse GetServiceStatus(GetServiceStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetServiceStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetServiceStatus", GetServiceStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetServiceStatus", GetServiceStatusResponse.class);
     }
 
     /**
@@ -321,14 +225,8 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
      * @throws TencentCloudSDKException
      */
     public ListSecretVersionIdsResponse ListSecretVersionIds(ListSecretVersionIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListSecretVersionIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListSecretVersionIds", ListSecretVersionIdsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListSecretVersionIds", ListSecretVersionIdsResponse.class);
     }
 
     /**
@@ -338,14 +236,8 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
      * @throws TencentCloudSDKException
      */
     public ListSecretsResponse ListSecrets(ListSecretsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListSecretsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListSecrets", ListSecretsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListSecrets", ListSecretsResponse.class);
     }
 
     /**
@@ -356,14 +248,8 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
      * @throws TencentCloudSDKException
      */
     public PutSecretValueResponse PutSecretValue(PutSecretValueRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutSecretValueResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PutSecretValue", PutSecretValueResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PutSecretValue", PutSecretValueResponse.class);
     }
 
     /**
@@ -373,14 +259,8 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
      * @throws TencentCloudSDKException
      */
     public RestoreSecretResponse RestoreSecret(RestoreSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RestoreSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RestoreSecret", RestoreSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RestoreSecret", RestoreSecretResponse.class);
     }
 
     /**
@@ -391,14 +271,8 @@ Note that only the secrets with the "Enabled" status can be rotated.
      * @throws TencentCloudSDKException
      */
     public RotateProductSecretResponse RotateProductSecret(RotateProductSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RotateProductSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RotateProductSecret", RotateProductSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RotateProductSecret", RotateProductSecretResponse.class);
     }
 
     /**
@@ -408,14 +282,8 @@ Note that only the secrets with the "Enabled" status can be rotated.
      * @throws TencentCloudSDKException
      */
     public UpdateDescriptionResponse UpdateDescription(UpdateDescriptionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateDescriptionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateDescription", UpdateDescriptionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateDescription", UpdateDescriptionResponse.class);
     }
 
     /**
@@ -428,14 +296,8 @@ Rotation start time
      * @throws TencentCloudSDKException
      */
     public UpdateRotationStatusResponse UpdateRotationStatus(UpdateRotationStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateRotationStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateRotationStatus", UpdateRotationStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateRotationStatus", UpdateRotationStatusResponse.class);
     }
 
     /**
@@ -446,14 +308,8 @@ This API is only applicable to user-defined credentials but not Tencent Cloud se
      * @throws TencentCloudSDKException
      */
     public UpdateSecretResponse UpdateSecret(UpdateSecretRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateSecretResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "UpdateSecret", UpdateSecretResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "UpdateSecret", UpdateSecretResponse.class);
     }
 
 }

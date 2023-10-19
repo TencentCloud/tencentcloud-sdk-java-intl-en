@@ -45,14 +45,8 @@ public class CaptchaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCaptchaResultResponse DescribeCaptchaResult(DescribeCaptchaResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCaptchaResult", DescribeCaptchaResultResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCaptchaResult", DescribeCaptchaResultResponse.class);
     }
 
 }

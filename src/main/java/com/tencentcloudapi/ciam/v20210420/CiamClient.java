@@ -45,14 +45,8 @@ public class CiamClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListUserGroupsResponse ListUserGroups(ListUserGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListUserGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ListUserGroups", ListUserGroupsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ListUserGroups", ListUserGroupsResponse.class);
     }
 
 }

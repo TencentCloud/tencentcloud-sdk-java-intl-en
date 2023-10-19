@@ -45,14 +45,8 @@ public class VmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelTask", CancelTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelTask", CancelTaskResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class VmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateVideoModerationTaskResponse CreateVideoModerationTask(CreateVideoModerationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateVideoModerationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateVideoModerationTask", CreateVideoModerationTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateVideoModerationTask", CreateVideoModerationTaskResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class VmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
     }
 
     /**
@@ -98,14 +80,8 @@ Default request rate limit: **20 requests/sec**.
      * @throws TencentCloudSDKException
      */
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
     }
 
 }

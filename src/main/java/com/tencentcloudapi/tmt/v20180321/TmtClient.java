@@ -47,14 +47,8 @@ Note: We recommend that you simplify your development with the SDK integration m
      * @throws TencentCloudSDKException
      */
     public TextTranslateResponse TextTranslate(TextTranslateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextTranslateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "TextTranslate", TextTranslateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "TextTranslate", TextTranslateResponse.class);
     }
 
 }

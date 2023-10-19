@@ -45,14 +45,8 @@ public class DmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class DmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SendTemplatedEmailResponse SendTemplatedEmail(SendTemplatedEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendTemplatedEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "SendTemplatedEmail", SendTemplatedEmailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "SendTemplatedEmail", SendTemplatedEmailResponse.class);
     }
 
 }

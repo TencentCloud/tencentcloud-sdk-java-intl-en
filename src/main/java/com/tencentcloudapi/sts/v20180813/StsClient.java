@@ -45,14 +45,8 @@ public class StsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssumeRoleResponse AssumeRole(AssumeRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssumeRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "AssumeRole", AssumeRoleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AssumeRole", AssumeRoleResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class StsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssumeRoleWithSAMLResponse AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(true);
-        try {
-                return this.internalRequest(req, "AssumeRoleWithSAML", AssumeRoleWithSAMLResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AssumeRoleWithSAML", AssumeRoleWithSAMLResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class StsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssumeRoleWithWebIdentityResponse AssumeRoleWithWebIdentity(AssumeRoleWithWebIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(true);
-        try {
-                return this.internalRequest(req, "AssumeRoleWithWebIdentity", AssumeRoleWithWebIdentityResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "AssumeRoleWithWebIdentity", AssumeRoleWithWebIdentityResponse.class);
     }
 
     /**
@@ -97,14 +79,8 @@ The persistent keys of the root account and sub-account as well as the temporary
      * @throws TencentCloudSDKException
      */
     public GetCallerIdentityResponse GetCallerIdentity(GetCallerIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCallerIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetCallerIdentity", GetCallerIdentityResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetCallerIdentity", GetCallerIdentityResponse.class);
     }
 
     /**
@@ -114,14 +90,8 @@ The persistent keys of the root account and sub-account as well as the temporary
      * @throws TencentCloudSDKException
      */
     public GetFederationTokenResponse GetFederationToken(GetFederationTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetFederationTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "GetFederationToken", GetFederationTokenResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "GetFederationToken", GetFederationTokenResponse.class);
     }
 
 }

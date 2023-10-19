@@ -45,14 +45,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAIAnalysisTemplate", CreateAIAnalysisTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAIAnalysisTemplate", CreateAIAnalysisTemplateResponse.class);
     }
 
     /**
@@ -62,14 +56,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAIRecognitionTemplate", CreateAIRecognitionTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAIRecognitionTemplate", CreateAIRecognitionTemplateResponse.class);
     }
 
     /**
@@ -79,14 +67,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate", CreateAdaptiveDynamicStreamingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate", CreateAdaptiveDynamicStreamingTemplateResponse.class);
     }
 
     /**
@@ -96,14 +78,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(CreateAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAnimatedGraphicsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateAnimatedGraphicsTemplate", CreateAnimatedGraphicsTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateAnimatedGraphicsTemplate", CreateAnimatedGraphicsTemplateResponse.class);
     }
 
     /**
@@ -113,14 +89,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateContentReviewTemplate", CreateContentReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateContentReviewTemplate", CreateContentReviewTemplateResponse.class);
     }
 
     /**
@@ -130,14 +100,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(CreateImageSpriteTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateImageSpriteTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateImageSpriteTemplate", CreateImageSpriteTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateImageSpriteTemplate", CreateImageSpriteTemplateResponse.class);
     }
 
     /**
@@ -147,14 +111,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePersonSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
     }
 
     /**
@@ -164,14 +122,8 @@ public class MpsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSampleSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSampleSnapshotTemplate", CreateSampleSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSampleSnapshotTemplate", CreateSampleSnapshotTemplateResponse.class);
     }
 
     /**
@@ -192,14 +144,8 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
      * @throws TencentCloudSDKException
      */
     public CreateScheduleResponse CreateSchedule(CreateScheduleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateScheduleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSchedule", CreateScheduleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSchedule", CreateScheduleResponse.class);
     }
 
     /**
@@ -209,14 +155,8 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
      * @throws TencentCloudSDKException
      */
     public CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(CreateSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate", CreateSnapshotByTimeOffsetTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate", CreateSnapshotByTimeOffsetTemplateResponse.class);
     }
 
     /**
@@ -226,14 +166,8 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
      * @throws TencentCloudSDKException
      */
     public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateTranscodeTemplate", CreateTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateTranscodeTemplate", CreateTranscodeTemplateResponse.class);
     }
 
     /**
@@ -243,14 +177,8 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
      * @throws TencentCloudSDKException
      */
     public CreateWatermarkTemplateResponse CreateWatermarkTemplate(CreateWatermarkTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWatermarkTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWatermarkTemplate", CreateWatermarkTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWatermarkTemplate", CreateWatermarkTemplateResponse.class);
     }
 
     /**
@@ -260,14 +188,8 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
      * @throws TencentCloudSDKException
      */
     public CreateWordSamplesResponse CreateWordSamples(CreateWordSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWordSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWordSamples", CreateWordSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWordSamples", CreateWordSamplesResponse.class);
     }
 
     /**
@@ -288,14 +210,8 @@ Note: A workflow is disabled upon creation. You need to manually enable it.
      * @throws TencentCloudSDKException
      */
     public CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWorkflowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateWorkflow", CreateWorkflowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateWorkflow", CreateWorkflowResponse.class);
     }
 
     /**
@@ -307,14 +223,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAIAnalysisTemplate", DeleteAIAnalysisTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAIAnalysisTemplate", DeleteAIAnalysisTemplateResponse.class);
     }
 
     /**
@@ -324,14 +234,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAIRecognitionTemplate", DeleteAIRecognitionTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAIRecognitionTemplate", DeleteAIRecognitionTemplateResponse.class);
     }
 
     /**
@@ -341,14 +245,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate", DeleteAdaptiveDynamicStreamingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate", DeleteAdaptiveDynamicStreamingTemplateResponse.class);
     }
 
     /**
@@ -358,14 +256,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteAnimatedGraphicsTemplate", DeleteAnimatedGraphicsTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteAnimatedGraphicsTemplate", DeleteAnimatedGraphicsTemplateResponse.class);
     }
 
     /**
@@ -375,14 +267,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteContentReviewTemplate", DeleteContentReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteContentReviewTemplate", DeleteContentReviewTemplateResponse.class);
     }
 
     /**
@@ -392,14 +278,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteImageSpriteTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
     }
 
     /**
@@ -409,14 +289,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePersonSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
     }
 
     /**
@@ -426,14 +300,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(DeleteSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSampleSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSampleSnapshotTemplate", DeleteSampleSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSampleSnapshotTemplate", DeleteSampleSnapshotTemplateResponse.class);
     }
 
     /**
@@ -443,14 +311,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteScheduleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSchedule", DeleteScheduleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSchedule", DeleteScheduleResponse.class);
     }
 
     /**
@@ -460,14 +322,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate", DeleteSnapshotByTimeOffsetTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate", DeleteSnapshotByTimeOffsetTemplateResponse.class);
     }
 
     /**
@@ -477,14 +333,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteTranscodeTemplate", DeleteTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteTranscodeTemplate", DeleteTranscodeTemplateResponse.class);
     }
 
     /**
@@ -494,14 +344,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(DeleteWatermarkTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWatermarkTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWatermarkTemplate", DeleteWatermarkTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWatermarkTemplate", DeleteWatermarkTemplateResponse.class);
     }
 
     /**
@@ -511,14 +355,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteWordSamplesResponse DeleteWordSamples(DeleteWordSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWordSamples", DeleteWordSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWordSamples", DeleteWordSamplesResponse.class);
     }
 
     /**
@@ -528,14 +366,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteWorkflowResponse DeleteWorkflow(DeleteWorkflowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteWorkflowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteWorkflow", DeleteWorkflowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteWorkflow", DeleteWorkflowResponse.class);
     }
 
     /**
@@ -545,14 +377,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAIAnalysisTemplates", DescribeAIAnalysisTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAIAnalysisTemplates", DescribeAIAnalysisTemplatesResponse.class);
     }
 
     /**
@@ -562,14 +388,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAIRecognitionTemplates", DescribeAIRecognitionTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAIRecognitionTemplates", DescribeAIRecognitionTemplatesResponse.class);
     }
 
     /**
@@ -579,14 +399,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
     }
 
     /**
@@ -596,14 +410,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
     }
 
     /**
@@ -613,14 +421,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
     }
 
     /**
@@ -630,14 +432,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeImageSpriteTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
     }
 
     /**
@@ -647,14 +443,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeMediaMetaDataResponse DescribeMediaMetaData(DescribeMediaMetaDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaMetaDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeMediaMetaData", DescribeMediaMetaDataResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeMediaMetaData", DescribeMediaMetaDataResponse.class);
     }
 
     /**
@@ -664,14 +454,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
     }
 
     /**
@@ -681,14 +465,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(DescribeSampleSnapshotTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSampleSnapshotTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSampleSnapshotTemplates", DescribeSampleSnapshotTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSampleSnapshotTemplates", DescribeSampleSnapshotTemplatesResponse.class);
     }
 
     /**
@@ -698,14 +476,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSchedulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSchedules", DescribeSchedulesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSchedules", DescribeSchedulesResponse.class);
     }
 
     /**
@@ -715,14 +487,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates", DescribeSnapshotByTimeOffsetTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates", DescribeSnapshotByTimeOffsetTemplatesResponse.class);
     }
 
     /**
@@ -732,14 +498,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
     }
 
     /**
@@ -751,14 +511,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
     }
 
     /**
@@ -768,14 +522,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTranscodeTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeTranscodeTemplates", DescribeTranscodeTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeTranscodeTemplates", DescribeTranscodeTemplatesResponse.class);
     }
 
     /**
@@ -785,14 +533,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(DescribeWatermarkTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWatermarkTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWatermarkTemplates", DescribeWatermarkTemplatesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWatermarkTemplates", DescribeWatermarkTemplatesResponse.class);
     }
 
     /**
@@ -802,14 +544,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
     }
 
     /**
@@ -819,14 +555,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeWorkflowsResponse DescribeWorkflows(DescribeWorkflowsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWorkflowsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeWorkflows", DescribeWorkflowsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeWorkflows", DescribeWorkflowsResponse.class);
     }
 
     /**
@@ -836,14 +566,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DisableScheduleResponse DisableSchedule(DisableScheduleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableScheduleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableSchedule", DisableScheduleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableSchedule", DisableScheduleResponse.class);
     }
 
     /**
@@ -853,14 +577,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DisableWorkflowResponse DisableWorkflow(DisableWorkflowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableWorkflowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableWorkflow", DisableWorkflowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableWorkflow", DisableWorkflowResponse.class);
     }
 
     /**
@@ -882,14 +600,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EditMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EditMedia", EditMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EditMedia", EditMediaResponse.class);
     }
 
     /**
@@ -899,14 +611,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public EnableScheduleResponse EnableSchedule(EnableScheduleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableScheduleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableSchedule", EnableScheduleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableSchedule", EnableScheduleResponse.class);
     }
 
     /**
@@ -916,14 +622,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public EnableWorkflowResponse EnableWorkflow(EnableWorkflowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableWorkflowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableWorkflow", EnableWorkflowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableWorkflow", EnableWorkflowResponse.class);
     }
 
     /**
@@ -933,14 +633,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ExecuteFunctionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ExecuteFunction", ExecuteFunctionResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ExecuteFunction", ExecuteFunctionResponse.class);
     }
 
     /**
@@ -950,14 +644,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public ManageTaskResponse ManageTask(ManageTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManageTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ManageTask", ManageTaskResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ManageTask", ManageTaskResponse.class);
     }
 
     /**
@@ -969,14 +657,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAIAnalysisTemplate", ModifyAIAnalysisTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAIAnalysisTemplate", ModifyAIAnalysisTemplateResponse.class);
     }
 
     /**
@@ -986,14 +668,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAIRecognitionTemplate", ModifyAIRecognitionTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAIRecognitionTemplate", ModifyAIRecognitionTemplateResponse.class);
     }
 
     /**
@@ -1003,14 +679,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
     }
 
     /**
@@ -1020,14 +690,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
     }
 
     /**
@@ -1037,14 +701,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyContentReviewTemplate", ModifyContentReviewTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyContentReviewTemplate", ModifyContentReviewTemplateResponse.class);
     }
 
     /**
@@ -1054,14 +712,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyImageSpriteTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
     }
 
     /**
@@ -1071,14 +723,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
     }
 
     /**
@@ -1088,14 +734,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(ModifySampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySampleSnapshotTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySampleSnapshotTemplate", ModifySampleSnapshotTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySampleSnapshotTemplate", ModifySampleSnapshotTemplateResponse.class);
     }
 
     /**
@@ -1105,14 +745,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyScheduleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySchedule", ModifyScheduleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySchedule", ModifyScheduleResponse.class);
     }
 
     /**
@@ -1122,14 +756,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate", ModifySnapshotByTimeOffsetTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate", ModifySnapshotByTimeOffsetTemplateResponse.class);
     }
 
     /**
@@ -1139,14 +767,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTranscodeTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyTranscodeTemplate", ModifyTranscodeTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyTranscodeTemplate", ModifyTranscodeTemplateResponse.class);
     }
 
     /**
@@ -1156,14 +778,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(ModifyWatermarkTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyWatermarkTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyWatermarkTemplate", ModifyWatermarkTemplateResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyWatermarkTemplate", ModifyWatermarkTemplateResponse.class);
     }
 
     /**
@@ -1173,14 +789,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
      * @throws TencentCloudSDKException
      */
     public ModifyWordSampleResponse ModifyWordSample(ModifyWordSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyWordSampleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyWordSample", ModifyWordSampleResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyWordSample", ModifyWordSampleResponse.class);
     }
 
     /**
@@ -1191,14 +801,8 @@ Instead of initiating a video processing task, this API is used to help generate
      * @throws TencentCloudSDKException
      */
     public ParseLiveStreamProcessNotificationResponse ParseLiveStreamProcessNotification(ParseLiveStreamProcessNotificationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ParseLiveStreamProcessNotificationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ParseLiveStreamProcessNotification", ParseLiveStreamProcessNotificationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ParseLiveStreamProcessNotification", ParseLiveStreamProcessNotificationResponse.class);
     }
 
     /**
@@ -1209,14 +813,8 @@ Instead of initiating a video processing task, this API is used to help generate
      * @throws TencentCloudSDKException
      */
     public ParseNotificationResponse ParseNotification(ParseNotificationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ParseNotificationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ParseNotification", ParseNotificationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ParseNotification", ParseNotificationResponse.class);
     }
 
     /**
@@ -1234,14 +832,8 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
      * @throws TencentCloudSDKException
      */
     public ProcessLiveStreamResponse ProcessLiveStream(ProcessLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ProcessLiveStreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ProcessLiveStream", ProcessLiveStreamResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ProcessLiveStream", ProcessLiveStreamResponse.class);
     }
 
     /**
@@ -1260,14 +852,8 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
      * @throws TencentCloudSDKException
      */
     public ProcessMediaResponse ProcessMedia(ProcessMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ProcessMediaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ProcessMedia", ProcessMediaResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ProcessMedia", ProcessMediaResponse.class);
     }
 
     /**
@@ -1277,14 +863,8 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
      * @throws TencentCloudSDKException
      */
     public ResetWorkflowResponse ResetWorkflow(ResetWorkflowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetWorkflowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ResetWorkflow", ResetWorkflowResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ResetWorkflow", ResetWorkflowResponse.class);
     }
 
 }

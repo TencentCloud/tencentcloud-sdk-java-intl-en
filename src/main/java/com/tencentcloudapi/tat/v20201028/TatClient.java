@@ -48,14 +48,8 @@ public class TatClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelInvocationResponse CancelInvocation(CancelInvocationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelInvocationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CancelInvocation", CancelInvocationResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CancelInvocation", CancelInvocationResponse.class);
     }
 
     /**
@@ -65,14 +59,8 @@ public class TatClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCommandResponse CreateCommand(CreateCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateCommand", CreateCommandResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateCommand", CreateCommandResponse.class);
     }
 
     /**
@@ -82,14 +70,8 @@ public class TatClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateInvokerResponse CreateInvoker(CreateInvokerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateInvokerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "CreateInvoker", CreateInvokerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "CreateInvoker", CreateInvokerResponse.class);
     }
 
     /**
@@ -100,14 +82,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteCommandResponse DeleteCommand(DeleteCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteCommand", DeleteCommandResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteCommand", DeleteCommandResponse.class);
     }
 
     /**
@@ -117,14 +93,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DeleteInvokerResponse DeleteInvoker(DeleteInvokerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteInvokerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DeleteInvoker", DeleteInvokerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DeleteInvoker", DeleteInvokerResponse.class);
     }
 
     /**
@@ -134,14 +104,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeAutomationAgentStatusResponse DescribeAutomationAgentStatus(DescribeAutomationAgentStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAutomationAgentStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeAutomationAgentStatus", DescribeAutomationAgentStatusResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeAutomationAgentStatus", DescribeAutomationAgentStatusResponse.class);
     }
 
     /**
@@ -151,14 +115,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeCommandsResponse DescribeCommands(DescribeCommandsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCommandsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeCommands", DescribeCommandsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeCommands", DescribeCommandsResponse.class);
     }
 
     /**
@@ -168,14 +126,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInvocationTasksResponse DescribeInvocationTasks(DescribeInvocationTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInvocationTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInvocationTasks", DescribeInvocationTasksResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInvocationTasks", DescribeInvocationTasksResponse.class);
     }
 
     /**
@@ -185,14 +137,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInvocationsResponse DescribeInvocations(DescribeInvocationsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInvocationsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInvocations", DescribeInvocationsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInvocations", DescribeInvocationsResponse.class);
     }
 
     /**
@@ -202,14 +148,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInvokerRecordsResponse DescribeInvokerRecords(DescribeInvokerRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInvokerRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInvokerRecords", DescribeInvokerRecordsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInvokerRecords", DescribeInvokerRecordsResponse.class);
     }
 
     /**
@@ -219,14 +159,8 @@ Commands bound to an invoker cannot be deleted.
      * @throws TencentCloudSDKException
      */
     public DescribeInvokersResponse DescribeInvokers(DescribeInvokersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInvokersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeInvokers", DescribeInvokersResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeInvokers", DescribeInvokersResponse.class);
     }
 
     /**
@@ -237,14 +171,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRegionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
     }
 
     /**
@@ -254,14 +182,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public DisableInvokerResponse DisableInvoker(DisableInvokerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableInvokerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "DisableInvoker", DisableInvokerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "DisableInvoker", DisableInvokerResponse.class);
     }
 
     /**
@@ -271,14 +193,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public EnableInvokerResponse EnableInvoker(EnableInvokerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableInvokerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "EnableInvoker", EnableInvokerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "EnableInvoker", EnableInvokerResponse.class);
     }
 
     /**
@@ -294,14 +210,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public InvokeCommandResponse InvokeCommand(InvokeCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InvokeCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "InvokeCommand", InvokeCommandResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "InvokeCommand", InvokeCommandResponse.class);
     }
 
     /**
@@ -311,14 +221,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public ModifyCommandResponse ModifyCommand(ModifyCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyCommand", ModifyCommandResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyCommand", ModifyCommandResponse.class);
     }
 
     /**
@@ -328,14 +232,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public ModifyInvokerResponse ModifyInvoker(ModifyInvokerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInvokerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "ModifyInvoker", ModifyInvokerResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "ModifyInvoker", ModifyInvokerResponse.class);
     }
 
     /**
@@ -345,14 +243,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public PreviewReplacedCommandContentResponse PreviewReplacedCommandContent(PreviewReplacedCommandContentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PreviewReplacedCommandContentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "PreviewReplacedCommandContent", PreviewReplacedCommandContentResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "PreviewReplacedCommandContent", PreviewReplacedCommandContentResponse.class);
     }
 
     /**
@@ -368,14 +260,8 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
      * @throws TencentCloudSDKException
      */
     public RunCommandResponse RunCommand(RunCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RunCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                return this.internalRequest(req, "RunCommand", RunCommandResponse.class);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
+        return this.internalRequest(req, "RunCommand", RunCommandResponse.class);
     }
 
 }
