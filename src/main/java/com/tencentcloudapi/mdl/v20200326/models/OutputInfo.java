@@ -63,6 +63,13 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String [] AVTemplateNames;
 
     /**
+    * Meta information controls configuration.
+    */
+    @SerializedName("TimedMetadataSettings")
+    @Expose
+    private TimedMetadataSettingInfo TimedMetadataSettings;
+
+    /**
      * Get Output name. 
      * @return Name Output name.
      */
@@ -158,6 +165,22 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.AVTemplateNames = AVTemplateNames;
     }
 
+    /**
+     * Get Meta information controls configuration. 
+     * @return TimedMetadataSettings Meta information controls configuration.
+     */
+    public TimedMetadataSettingInfo getTimedMetadataSettings() {
+        return this.TimedMetadataSettings;
+    }
+
+    /**
+     * Set Meta information controls configuration.
+     * @param TimedMetadataSettings Meta information controls configuration.
+     */
+    public void setTimedMetadataSettings(TimedMetadataSettingInfo TimedMetadataSettings) {
+        this.TimedMetadataSettings = TimedMetadataSettings;
+    }
+
     public OutputInfo() {
     }
 
@@ -190,6 +213,9 @@ Note: this field may return `null`, indicating that no valid value was found.
                 this.AVTemplateNames[i] = new String(source.AVTemplateNames[i]);
             }
         }
+        if (source.TimedMetadataSettings != null) {
+            this.TimedMetadataSettings = new TimedMetadataSettingInfo(source.TimedMetadataSettings);
+        }
     }
 
 
@@ -202,6 +228,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "VideoTemplateNames.", this.VideoTemplateNames);
         this.setParamObj(map, prefix + "Scte35Settings.", this.Scte35Settings);
         this.setParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
+        this.setParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
 
     }
 }

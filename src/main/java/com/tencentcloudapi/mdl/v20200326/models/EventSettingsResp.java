@@ -80,6 +80,13 @@ public class EventSettingsResp extends AbstractModel {
     private String SpliceDuration;
 
     /**
+    * Meta information plan configuration.
+    */
+    @SerializedName("TimedMetadataSetting")
+    @Expose
+    private TimedMetadataInfo TimedMetadataSetting;
+
+    /**
      * Get Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. 
      * @return EventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
      */
@@ -207,6 +214,22 @@ public class EventSettingsResp extends AbstractModel {
         this.SpliceDuration = SpliceDuration;
     }
 
+    /**
+     * Get Meta information plan configuration. 
+     * @return TimedMetadataSetting Meta information plan configuration.
+     */
+    public TimedMetadataInfo getTimedMetadataSetting() {
+        return this.TimedMetadataSetting;
+    }
+
+    /**
+     * Set Meta information plan configuration.
+     * @param TimedMetadataSetting Meta information plan configuration.
+     */
+    public void setTimedMetadataSetting(TimedMetadataInfo TimedMetadataSetting) {
+        this.TimedMetadataSetting = TimedMetadataSetting;
+    }
+
     public EventSettingsResp() {
     }
 
@@ -245,6 +268,9 @@ public class EventSettingsResp extends AbstractModel {
         if (source.SpliceDuration != null) {
             this.SpliceDuration = new String(source.SpliceDuration);
         }
+        if (source.TimedMetadataSetting != null) {
+            this.TimedMetadataSetting = new TimedMetadataInfo(source.TimedMetadataSetting);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class EventSettingsResp extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SCTE35SegmentationDescriptor.", this.SCTE35SegmentationDescriptor);
         this.setParamSimple(map, prefix + "SpliceEventID", this.SpliceEventID);
         this.setParamSimple(map, prefix + "SpliceDuration", this.SpliceDuration);
+        this.setParamObj(map, prefix + "TimedMetadataSetting.", this.TimedMetadataSetting);
 
     }
 }
