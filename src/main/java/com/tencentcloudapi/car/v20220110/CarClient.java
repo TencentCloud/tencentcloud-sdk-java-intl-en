@@ -83,6 +83,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+     * @param req StartPublishStreamWithURLRequest
+     * @return StartPublishStreamWithURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishStreamWithURLResponse StartPublishStreamWithURL(StartPublishStreamWithURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartPublishStreamWithURL", StartPublishStreamWithURLResponse.class);
+    }
+
+    /**
      *This API is used to stop stream push.
      * @param req StopPublishStreamRequest
      * @return StopPublishStreamResponse
