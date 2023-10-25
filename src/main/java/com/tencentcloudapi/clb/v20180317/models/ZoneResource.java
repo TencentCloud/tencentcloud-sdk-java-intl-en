@@ -82,6 +82,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean EdgeZone;
 
     /**
+    * Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get Primary AZ, such as "ap-guangzhou-1". 
      * @return MasterZone Primary AZ, such as "ap-guangzhou-1".
      */
@@ -217,6 +225,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EdgeZone = EdgeZone;
     }
 
+    /**
+     * Get Network egress
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public ZoneResource() {
     }
 
@@ -252,6 +280,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EdgeZone != null) {
             this.EdgeZone = new Boolean(source.EdgeZone);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -267,6 +298,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
         this.setParamSimple(map, prefix + "ZoneResourceType", this.ZoneResourceType);
         this.setParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

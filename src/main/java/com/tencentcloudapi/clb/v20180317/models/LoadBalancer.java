@@ -452,6 +452,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LoadBalancerDomain;
 
     /**
+    * Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -1515,6 +1523,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
+    /**
+     * Get Network egress
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1709,6 +1737,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LoadBalancerDomain != null) {
             this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -1770,6 +1801,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

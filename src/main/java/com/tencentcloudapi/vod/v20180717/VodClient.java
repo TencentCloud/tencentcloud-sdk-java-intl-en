@@ -1544,6 +1544,17 @@ This API is used to modify a player configuration.
     }
 
     /**
+     *
+     * @param req ProcessMediaRequest
+     * @return ProcessMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessMediaResponse ProcessMedia(ProcessMediaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessMedia", ProcessMediaResponse.class);
+    }
+
+    /**
      *This API is used to start a task flow on a video.
 There are two ways to create a task flow template:
 1. Create and modify a task flow template in the console;

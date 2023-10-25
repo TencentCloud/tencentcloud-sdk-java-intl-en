@@ -659,6 +659,50 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
+     *This API is used to query the price of creating a CLB instance.
+     * @param req InquiryPriceCreateLoadBalancerRequest
+     * @return InquiryPriceCreateLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceCreateLoadBalancerResponse InquiryPriceCreateLoadBalancer(InquiryPriceCreateLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceCreateLoadBalancer", InquiryPriceCreateLoadBalancerResponse.class);
+    }
+
+    /**
+     *This API is used to query the price of adjusting the specification of a CLB instance.
+     * @param req InquiryPriceModifyLoadBalancerRequest
+     * @return InquiryPriceModifyLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceModifyLoadBalancerResponse InquiryPriceModifyLoadBalancer(InquiryPriceModifyLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceModifyLoadBalancer", InquiryPriceModifyLoadBalancerResponse.class);
+    }
+
+    /**
+     *This API is used to query the refund amount of returning a CLB instance. 
+     * @param req InquiryPriceRefundLoadBalancerRequest
+     * @return InquiryPriceRefundLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRefundLoadBalancerResponse InquiryPriceRefundLoadBalancer(InquiryPriceRefundLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceRefundLoadBalancer", InquiryPriceRefundLoadBalancerResponse.class);
+    }
+
+    /**
+     *This API is used to query the price of renewing a CLB instance. It's only available to prepaid CLB instances.
+     * @param req InquiryPriceRenewLoadBalancerRequest
+     * @return InquiryPriceRenewLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewLoadBalancerResponse InquiryPriceRenewLoadBalancer(InquiryPriceRenewLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceRenewLoadBalancer", InquiryPriceRenewLoadBalancerResponse.class);
+    }
+
+    /**
      *After the original access address and the address to be redirected are configured manually, the system will automatically redirect requests made to the original access address to the target address of the corresponding path. Multiple paths can be configured as a redirection policy under one domain name to achieve automatic redirection between HTTP and HTTPS. A redirection policy should meet the following rules: if A has already been redirected to B, then it cannot be redirected to C (unless the original redirection relationship is deleted and a new one is created), and B cannot be redirected to any other addresses.
      * @param req ManualRewriteRequest
      * @return ManualRewriteResponse
@@ -765,6 +809,17 @@ Limits
     public ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(ModifyLoadBalancerSlaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLoadBalancerSla", ModifyLoadBalancerSlaResponse.class);
+    }
+
+    /**
+     *This API is used to modify the projects of CLB instances. 
+     * @param req ModifyLoadBalancersProjectRequest
+     * @return ModifyLoadBalancersProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancersProjectResponse ModifyLoadBalancersProject(ModifyLoadBalancersProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoadBalancersProject", ModifyLoadBalancersProjectResponse.class);
     }
 
     /**

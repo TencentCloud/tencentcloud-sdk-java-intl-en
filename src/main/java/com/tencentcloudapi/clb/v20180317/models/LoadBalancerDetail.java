@@ -312,8 +312,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] Zones;
 
     /**
-    * Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("SniSwitch")
     @Expose
@@ -326,6 +326,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("LoadBalancerDomain")
     @Expose
     private String LoadBalancerDomain;
+
+    /**
+    * Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
 
     /**
      * Get CLB instance ID. 
@@ -1048,20 +1056,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getSniSwitch() {
         return this.SniSwitch;
     }
 
     /**
-     * Set Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setSniSwitch(Long SniSwitch) {
         this.SniSwitch = SniSwitch;
@@ -1085,6 +1093,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;
+    }
+
+    /**
+     * Get Network egress
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
     }
 
     public LoadBalancerDetail() {
@@ -1221,6 +1249,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LoadBalancerDomain != null) {
             this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -1266,6 +1297,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

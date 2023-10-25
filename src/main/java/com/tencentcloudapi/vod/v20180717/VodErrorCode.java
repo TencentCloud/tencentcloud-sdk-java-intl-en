@@ -39,6 +39,9 @@ public enum VodErrorCode {
     // Network error.
      FAILEDOPERATION_NETWORKERROR("FailedOperation.NetWorkError"),
      
+    // No need to reduce the bitrate.
+     FAILEDOPERATION_NONEEDTOREDUCEMEDIABITRATE("FailedOperation.NoNeedToReduceMediaBitrate"),
+     
     // Operation failed: the parent category ID does not exist.
      FAILEDOPERATION_PARENTIDNOFOUND("FailedOperation.ParentIdNoFound"),
      

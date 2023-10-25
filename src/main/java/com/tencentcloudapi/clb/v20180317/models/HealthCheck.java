@@ -81,8 +81,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpCheckPath;
 
     /**
-    * Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckDomain")
     @Expose
@@ -305,20 +305,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return HttpCheckDomain Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckDomain() {
         return this.HttpCheckDomain;
     }
 
     /**
-     * Set Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param HttpCheckDomain Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
         this.HttpCheckDomain = HttpCheckDomain;

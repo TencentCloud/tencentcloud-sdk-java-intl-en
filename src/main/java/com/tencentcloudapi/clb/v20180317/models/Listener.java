@@ -77,8 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SessionExpireTime;
 
     /**
-    * Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("SniSwitch")
     @Expose
@@ -333,20 +333,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SniSwitch Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getSniSwitch() {
         return this.SniSwitch;
     }
 
     /**
-     * Set Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SniSwitch Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setSniSwitch(Long SniSwitch) {
         this.SniSwitch = SniSwitch;

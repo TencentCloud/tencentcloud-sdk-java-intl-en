@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
-    * Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-    */
-    @SerializedName("ImgReviewInfo")
-    @Expose
-    private TerrorismImgReviewTemplateInfo ImgReviewInfo;
-
-    /**
     * Parameters for OCR-based recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
     */
@@ -40,24 +32,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+    * Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
-     */
-    public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
-        return this.ImgReviewInfo;
-    }
-
-    /**
-     * Set Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     */
-    public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
-        this.ImgReviewInfo = ImgReviewInfo;
-    }
+    */
+    @SerializedName("ImgReviewInfo")
+    @Expose
+    private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
      * Get Parameters for OCR-based recognition of terrorism content
@@ -79,6 +59,26 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    /**
+     * Get Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
+        return this.ImgReviewInfo;
+    }
+
+    /**
+     * Set Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
+        this.ImgReviewInfo = ImgReviewInfo;
+    }
+
     public TerrorismConfigureInfo() {
     }
 
@@ -87,11 +87,11 @@ Note: This field may return `null`, indicating that no valid value can be found.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TerrorismConfigureInfo(TerrorismConfigureInfo source) {
-        if (source.ImgReviewInfo != null) {
-            this.ImgReviewInfo = new TerrorismImgReviewTemplateInfo(source.ImgReviewInfo);
-        }
         if (source.OcrReviewInfo != null) {
             this.OcrReviewInfo = new TerrorismOcrReviewTemplateInfo(source.OcrReviewInfo);
+        }
+        if (source.ImgReviewInfo != null) {
+            this.ImgReviewInfo = new TerrorismImgReviewTemplateInfo(source.ImgReviewInfo);
         }
     }
 
@@ -100,8 +100,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
         this.setParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+        this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
 
     }
 }

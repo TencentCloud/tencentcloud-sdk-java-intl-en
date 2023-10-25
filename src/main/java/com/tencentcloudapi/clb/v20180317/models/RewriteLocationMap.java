@@ -31,7 +31,7 @@ public class RewriteLocationMap extends AbstractModel {
     private String SourceLocationId;
 
     /**
-    * Forwarding rule ID of a redirect target
+    * ID of the forwarding rule of the destination
     */
     @SerializedName("TargetLocationId")
     @Expose
@@ -75,16 +75,16 @@ public class RewriteLocationMap extends AbstractModel {
     }
 
     /**
-     * Get Forwarding rule ID of a redirect target 
-     * @return TargetLocationId Forwarding rule ID of a redirect target
+     * Get ID of the forwarding rule of the destination 
+     * @return TargetLocationId ID of the forwarding rule of the destination
      */
     public String getTargetLocationId() {
         return this.TargetLocationId;
     }
 
     /**
-     * Set Forwarding rule ID of a redirect target
-     * @param TargetLocationId Forwarding rule ID of a redirect target
+     * Set ID of the forwarding rule of the destination
+     * @param TargetLocationId ID of the forwarding rule of the destination
      */
     public void setTargetLocationId(String TargetLocationId) {
         this.TargetLocationId = TargetLocationId;
