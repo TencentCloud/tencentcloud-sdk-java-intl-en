@@ -87,6 +87,13 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     private InputLossBehaviorInfo InputLossBehavior;
 
     /**
+    * Pipeline configuration.
+    */
+    @SerializedName("PipelineInputSettings")
+    @Expose
+    private PipelineInputSettingsInfo PipelineInputSettings;
+
+    /**
      * Get Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level 
      * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      */
@@ -230,6 +237,22 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         this.InputLossBehavior = InputLossBehavior;
     }
 
+    /**
+     * Get Pipeline configuration. 
+     * @return PipelineInputSettings Pipeline configuration.
+     */
+    public PipelineInputSettingsInfo getPipelineInputSettings() {
+        return this.PipelineInputSettings;
+    }
+
+    /**
+     * Set Pipeline configuration.
+     * @param PipelineInputSettings Pipeline configuration.
+     */
+    public void setPipelineInputSettings(PipelineInputSettingsInfo PipelineInputSettings) {
+        this.PipelineInputSettings = PipelineInputSettings;
+    }
+
     public CreateStreamLiveChannelRequest() {
     }
 
@@ -280,6 +303,9 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         if (source.InputLossBehavior != null) {
             this.InputLossBehavior = new InputLossBehaviorInfo(source.InputLossBehavior);
         }
+        if (source.PipelineInputSettings != null) {
+            this.PipelineInputSettings = new PipelineInputSettingsInfo(source.PipelineInputSettings);
+        }
     }
 
 
@@ -296,6 +322,7 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
         this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
         this.setParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
+        this.setParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
 
     }
 }

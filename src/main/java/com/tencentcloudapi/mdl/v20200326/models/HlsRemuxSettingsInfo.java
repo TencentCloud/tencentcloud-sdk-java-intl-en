@@ -74,25 +74,39 @@ Currently, fMP4 segments do not support DRM or time shifting.
     private String H265PackageType;
 
     /**
-    * 
+    * Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
     */
     @SerializedName("LowLatency")
     @Expose
     private Long LowLatency;
 
     /**
-    * 
+    * Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
     */
     @SerializedName("PartialSegmentDuration")
     @Expose
     private Long PartialSegmentDuration;
 
     /**
-    * 
+    * Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
     */
     @SerializedName("PartialSegmentPlaySite")
     @Expose
     private Long PartialSegmentPlaySite;
+
+    /**
+    * Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+    */
+    @SerializedName("StreamOrder")
+    @Expose
+    private Long StreamOrder;
+
+    /**
+    * Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+    */
+    @SerializedName("VideoResolution")
+    @Expose
+    private Long VideoResolution;
 
     /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
@@ -211,51 +225,83 @@ Currently, fMP4 segments do not support DRM or time shifting.
     }
 
     /**
-     * Get  
-     * @return LowLatency 
+     * Get Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0. 
+     * @return LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
      */
     public Long getLowLatency() {
         return this.LowLatency;
     }
 
     /**
-     * Set 
-     * @param LowLatency 
+     * Set Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+     * @param LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
      */
     public void setLowLatency(Long LowLatency) {
         this.LowLatency = LowLatency;
     }
 
     /**
-     * Get  
-     * @return PartialSegmentDuration 
+     * Get Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms. 
+     * @return PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
      */
     public Long getPartialSegmentDuration() {
         return this.PartialSegmentDuration;
     }
 
     /**
-     * Set 
-     * @param PartialSegmentDuration 
+     * Set Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+     * @param PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
      */
     public void setPartialSegmentDuration(Long PartialSegmentDuration) {
         this.PartialSegmentDuration = PartialSegmentDuration;
     }
 
     /**
-     * Get  
-     * @return PartialSegmentPlaySite 
+     * Get Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration. 
+     * @return PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
      */
     public Long getPartialSegmentPlaySite() {
         return this.PartialSegmentPlaySite;
     }
 
     /**
-     * Set 
-     * @param PartialSegmentPlaySite 
+     * Set Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+     * @param PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
      */
     public void setPartialSegmentPlaySite(Long PartialSegmentPlaySite) {
         this.PartialSegmentPlaySite = PartialSegmentPlaySite;
+    }
+
+    /**
+     * Get Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1. 
+     * @return StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     */
+    public Long getStreamOrder() {
+        return this.StreamOrder;
+    }
+
+    /**
+     * Set Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     * @param StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     */
+    public void setStreamOrder(Long StreamOrder) {
+        this.StreamOrder = StreamOrder;
+    }
+
+    /**
+     * Get Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1. 
+     * @return VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     */
+    public Long getVideoResolution() {
+        return this.VideoResolution;
+    }
+
+    /**
+     * Set Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     * @param VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     */
+    public void setVideoResolution(Long VideoResolution) {
+        this.VideoResolution = VideoResolution;
     }
 
     public HlsRemuxSettingsInfo() {
@@ -296,6 +342,12 @@ Currently, fMP4 segments do not support DRM or time shifting.
         if (source.PartialSegmentPlaySite != null) {
             this.PartialSegmentPlaySite = new Long(source.PartialSegmentPlaySite);
         }
+        if (source.StreamOrder != null) {
+            this.StreamOrder = new Long(source.StreamOrder);
+        }
+        if (source.VideoResolution != null) {
+            this.VideoResolution = new Long(source.VideoResolution);
+        }
     }
 
 
@@ -313,6 +365,8 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.setParamSimple(map, prefix + "LowLatency", this.LowLatency);
         this.setParamSimple(map, prefix + "PartialSegmentDuration", this.PartialSegmentDuration);
         this.setParamSimple(map, prefix + "PartialSegmentPlaySite", this.PartialSegmentPlaySite);
+        this.setParamSimple(map, prefix + "StreamOrder", this.StreamOrder);
+        this.setParamSimple(map, prefix + "VideoResolution", this.VideoResolution);
 
     }
 }

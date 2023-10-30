@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
-    * The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+    * The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
     */
     @SerializedName("VerificationUrl")
     @Expose
     private String VerificationUrl;
 
     /**
-    * The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+    * The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
     */
     @SerializedName("BizToken")
     @Expose
@@ -52,8 +52,8 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The URL of this verification process, which will be returned to the frontend of the browser for starting the process. 
-     * @return VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+     * Get The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed. 
+     * @return VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
     }
 
     /**
-     * Set The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
-     * @param VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+     * Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * @param VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
      * @deprecated
      */
     @Deprecated
@@ -72,16 +72,16 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
     }
 
     /**
-     * Get The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed. 
-     * @return BizToken The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * Get The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API. 
+     * @return BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-     * @param BizToken The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * Set The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+     * @param BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;

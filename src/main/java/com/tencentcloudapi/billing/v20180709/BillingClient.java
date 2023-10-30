@@ -39,6 +39,28 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *This API is used to batch set cost allocation tags.
+     * @param req CreateAllocationTagRequest
+     * @return CreateAllocationTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllocationTagResponse CreateAllocationTag(CreateAllocationTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAllocationTag", CreateAllocationTagResponse.class);
+    }
+
+    /**
+     *u200cThis API is used to batch cancel cost allocation tags.
+     * @param req DeleteAllocationTagRequest
+     * @return DeleteAllocationTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAllocationTagResponse DeleteAllocationTag(DeleteAllocationTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAllocationTag", DeleteAllocationTagResponse.class);
+    }
+
+    /**
      *This API is used to check the Tencent Cloud account balance.
      * @param req DescribeAccountBalanceRequest
      * @return DescribeAccountBalanceResponse
@@ -50,8 +72,10 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get bill details. 
-Notes: 1. The API request may fail due to network instability or other network exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), querying bill data via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
+     *u200cThis API is used to get bill details.
+Note:
+1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+2.If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
      * @param req DescribeBillDetailRequest
      * @return DescribeBillDetailResponse
      * @throws TencentCloudSDKException
@@ -62,7 +86,30 @@ Notes: 1. The API request may fail due to network instability or other network e
     }
 
     /**
-     *This API is used to query bill resources summary.
+     *This API is used to get pay-on-behalf bills of the admin account (bill details).
+Note: The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+     * @param req DescribeBillDetailForOrganizationRequest
+     * @return DescribeBillDetailForOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillDetailForOrganizationResponse DescribeBillDetailForOrganization(DescribeBillDetailForOrganizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillDetailForOrganization", DescribeBillDetailForOrganizationResponse.class);
+    }
+
+    /**
+     *This API is used to get bill download URLs for L0, L1, L2, and L3 bills and bill packs.
+     * @param req DescribeBillDownloadUrlRequest
+     * @return DescribeBillDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillDownloadUrlResponse DescribeBillDownloadUrl(DescribeBillDownloadUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillDownloadUrl", DescribeBillDownloadUrlResponse.class);
+    }
+
+    /**
+     *This API is used to get the bill summarized by instance.
      * @param req DescribeBillResourceSummaryRequest
      * @return DescribeBillResourceSummaryResponse
      * @throws TencentCloudSDKException
@@ -70,6 +117,17 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeBillResourceSummaryResponse DescribeBillResourceSummary(DescribeBillResourceSummaryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBillResourceSummary", DescribeBillResourceSummaryResponse.class);
+    }
+
+    /**
+     *This API is used to get pay-on-behalf bills of the admin account (bills by instance).
+     * @param req DescribeBillResourceSummaryForOrganizationRequest
+     * @return DescribeBillResourceSummaryForOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillResourceSummaryForOrganizationResponse DescribeBillResourceSummaryForOrganization(DescribeBillResourceSummaryForOrganizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillResourceSummaryForOrganization", DescribeBillResourceSummaryForOrganizationResponse.class);
     }
 
     /**
@@ -139,6 +197,17 @@ Notes: 1. The API request may fail due to network instability or other network e
     }
 
     /**
+     *This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+     * @param req DescribeBillSummaryForOrganizationRequest
+     * @return DescribeBillSummaryForOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganization(DescribeBillSummaryForOrganizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillSummaryForOrganization", DescribeBillSummaryForOrganizationResponse.class);
+    }
+
+    /**
      *This API is used to query COS usage details.
      * @param req DescribeDosageCosDetailByDateRequest
      * @return DescribeDosageCosDetailByDateResponse
@@ -147,6 +216,17 @@ Notes: 1. The API request may fail due to network instability or other network e
     public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDosageCosDetailByDate", DescribeDosageCosDetailByDateResponse.class);
+    }
+
+    /**
+     *This API is used to get cost allocation tags.
+     * @param req DescribeTagListRequest
+     * @return DescribeTagListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagListResponse DescribeTagList(DescribeTagListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTagList", DescribeTagListResponse.class);
     }
 
     /**

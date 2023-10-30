@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WebVerificationConfigIntl extends AbstractModel {
+public class CreateAllocationTagResponse extends AbstractModel {
 
     /**
-    * Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("AutoSkip")
+    @SerializedName("RequestId")
     @Expose
-    private Boolean AutoSkip;
+    private String RequestId;
 
     /**
-     * Get Whether to automatically redirect to RedirectUrl after successful verification. Default value: false. 
-     * @return AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public Boolean getAutoSkip() {
-        return this.AutoSkip;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
-     * @param AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setAutoSkip(Boolean AutoSkip) {
-        this.AutoSkip = AutoSkip;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public WebVerificationConfigIntl() {
+    public CreateAllocationTagResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public WebVerificationConfigIntl(WebVerificationConfigIntl source) {
-        if (source.AutoSkip != null) {
-            this.AutoSkip = new Boolean(source.AutoSkip);
+    public CreateAllocationTagResponse(CreateAllocationTagResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -64,7 +64,7 @@ public class WebVerificationConfigIntl extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AutoSkip", this.AutoSkip);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

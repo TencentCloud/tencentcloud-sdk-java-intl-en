@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WebVerificationConfigIntl extends AbstractModel {
+public class DeleteAllocationTagRequest extends AbstractModel {
 
     /**
-    * Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+    * Cost allocation tag key
     */
-    @SerializedName("AutoSkip")
+    @SerializedName("TagKey")
     @Expose
-    private Boolean AutoSkip;
+    private String [] TagKey;
 
     /**
-     * Get Whether to automatically redirect to RedirectUrl after successful verification. Default value: false. 
-     * @return AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * Get Cost allocation tag key 
+     * @return TagKey Cost allocation tag key
      */
-    public Boolean getAutoSkip() {
-        return this.AutoSkip;
+    public String [] getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
-     * @param AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * Set Cost allocation tag key
+     * @param TagKey Cost allocation tag key
      */
-    public void setAutoSkip(Boolean AutoSkip) {
-        this.AutoSkip = AutoSkip;
+    public void setTagKey(String [] TagKey) {
+        this.TagKey = TagKey;
     }
 
-    public WebVerificationConfigIntl() {
+    public DeleteAllocationTagRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public WebVerificationConfigIntl(WebVerificationConfigIntl source) {
-        if (source.AutoSkip != null) {
-            this.AutoSkip = new Boolean(source.AutoSkip);
+    public DeleteAllocationTagRequest(DeleteAllocationTagRequest source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String[source.TagKey.length];
+            for (int i = 0; i < source.TagKey.length; i++) {
+                this.TagKey[i] = new String(source.TagKey[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class WebVerificationConfigIntl extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AutoSkip", this.AutoSkip);
+        this.setParamArraySimple(map, prefix + "TagKey.", this.TagKey);
 
     }
 }

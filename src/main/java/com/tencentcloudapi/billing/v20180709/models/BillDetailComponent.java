@@ -227,6 +227,14 @@ public class BillDetailComponent extends AbstractModel {
     private String BlendedDiscount;
 
     /**
+    * Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ComponentConfig")
+    @Expose
+    private BillDetailComponentConfig [] ComponentConfig;
+
+    /**
      * Get Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory. 
      * @return ComponentCodeName Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
      */
@@ -698,6 +706,26 @@ public class BillDetailComponent extends AbstractModel {
         this.BlendedDiscount = BlendedDiscount;
     }
 
+    /**
+     * Get Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ComponentConfig Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public BillDetailComponentConfig [] getComponentConfig() {
+        return this.ComponentConfig;
+    }
+
+    /**
+     * Set Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ComponentConfig Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setComponentConfig(BillDetailComponentConfig [] ComponentConfig) {
+        this.ComponentConfig = ComponentConfig;
+    }
+
     public BillDetailComponent() {
     }
 
@@ -793,6 +821,12 @@ public class BillDetailComponent extends AbstractModel {
         if (source.BlendedDiscount != null) {
             this.BlendedDiscount = new String(source.BlendedDiscount);
         }
+        if (source.ComponentConfig != null) {
+            this.ComponentConfig = new BillDetailComponentConfig[source.ComponentConfig.length];
+            for (int i = 0; i < source.ComponentConfig.length; i++) {
+                this.ComponentConfig[i] = new BillDetailComponentConfig(source.ComponentConfig[i]);
+            }
+        }
     }
 
 
@@ -829,6 +863,7 @@ public class BillDetailComponent extends AbstractModel {
         this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
         this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
         this.setParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
+        this.setParamArrayObj(map, prefix + "ComponentConfig.", this.ComponentConfig);
 
     }
 }

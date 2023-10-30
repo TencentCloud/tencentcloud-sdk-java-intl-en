@@ -115,6 +115,21 @@ Note: To query the product codes used in the current month, call <a href="https:
     private String PayerUin;
 
     /**
+    * Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+    */
+    @SerializedName("TagKey")
+    @Expose
+    private String TagKey;
+
+    /**
+    * Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
      * Get Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on. 
      * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
      */
@@ -358,6 +373,42 @@ Note: To query the product codes used in the current month, call <a href="https:
         this.PayerUin = PayerUin;
     }
 
+    /**
+     * Get Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021. 
+     * @return TagKey Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+     */
+    public String getTagKey() {
+        return this.TagKey;
+    }
+
+    /**
+     * Set Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+     * @param TagKey Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+     */
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
+    }
+
+    /**
+     * Get Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021. 
+     * @return TagValue Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+     * @param TagValue Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
+    }
+
     public DescribeBillResourceSummaryRequest() {
     }
 
@@ -396,6 +447,12 @@ Note: To query the product codes used in the current month, call <a href="https:
         if (source.PayerUin != null) {
             this.PayerUin = new String(source.PayerUin);
         }
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
     }
 
 
@@ -413,6 +470,8 @@ Note: To query the product codes used in the current month, call <a href="https:
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

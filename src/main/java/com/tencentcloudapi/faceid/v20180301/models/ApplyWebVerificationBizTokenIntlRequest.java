@@ -31,15 +31,16 @@ public class ApplyWebVerificationBizTokenIntlRequest extends AbstractModel {
     private String CompareImageBase64;
 
     /**
-    * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+    * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
     */
     @SerializedName("RedirectURL")
     @Expose
     private String RedirectURL;
 
     /**
-    * The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+    * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
     */
     @SerializedName("Extra")
     @Expose
@@ -69,36 +70,40 @@ After the verification process is completed, the `BizToken` of this process will
     }
 
     /**
-     * Get The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect. 
-     * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+     * Get The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect. 
+     * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
      */
     public String getRedirectURL() {
         return this.RedirectURL;
     }
 
     /**
-     * Set The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-     * @param RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+     * Set The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+     * @param RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
      */
     public void setRedirectURL(String RedirectURL) {
         this.RedirectURL = RedirectURL;
     }
 
     /**
-     * Get The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`. 
-     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+     * Get The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl. 
+     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
-     * @param Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+     * Set The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     * @param Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

@@ -40,8 +40,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String PlayDomain;
 
     /**
-    * Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+    * Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("StartoverWindow")
     @Expose
@@ -88,20 +87,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return StartoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found. 
+     * @return StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getStartoverWindow() {
         return this.StartoverWindow;
     }
 
     /**
-     * Set Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param StartoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+     * @param StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setStartoverWindow(Long StartoverWindow) {
         this.StartoverWindow = StartoverWindow;
