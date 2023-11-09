@@ -31,6 +31,13 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel {
     private String Md5;
 
     /**
+    * 
+    */
+    @SerializedName("Sha1")
+    @Expose
+    private String Sha1;
+
+    /**
      * Get The MD5 hash of the file. 
      * @return Md5 The MD5 hash of the file.
      */
@@ -46,6 +53,22 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel {
         this.Md5 = Md5;
     }
 
+    /**
+     * Get  
+     * @return Sha1 
+     */
+    public String getSha1() {
+        return this.Sha1;
+    }
+
+    /**
+     * Set 
+     * @param Sha1 
+     */
+    public void setSha1(String Sha1) {
+        this.Sha1 = Sha1;
+    }
+
     public DescribeFileAttributesTaskOutput() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel {
         if (source.Md5 != null) {
             this.Md5 = new String(source.Md5);
         }
+        if (source.Sha1 != null) {
+            this.Sha1 = new String(source.Sha1);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Md5", this.Md5);
+        this.setParamSimple(map, prefix + "Sha1", this.Sha1);
 
     }
 }

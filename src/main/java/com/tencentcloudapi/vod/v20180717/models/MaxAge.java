@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MaxAge extends AbstractModel {
 
     /**
-    * MaxAge rule.
+    * MaxAge rule
     */
     @SerializedName("MaxAgeRules")
     @Expose
     private MaxAgeRule [] MaxAgeRules;
 
     /**
-     * Get MaxAge rule. 
-     * @return MaxAgeRules MaxAge rule.
+     * Get MaxAge rule 
+     * @return MaxAgeRules MaxAge rule
      */
     public MaxAgeRule [] getMaxAgeRules() {
         return this.MaxAgeRules;
     }
 
     /**
-     * Set MaxAge rule.
-     * @param MaxAgeRules MaxAge rule.
+     * Set MaxAge rule
+     * @param MaxAgeRules MaxAge rule
      */
     public void setMaxAgeRules(MaxAgeRule [] MaxAgeRules) {
         this.MaxAgeRules = MaxAgeRules;

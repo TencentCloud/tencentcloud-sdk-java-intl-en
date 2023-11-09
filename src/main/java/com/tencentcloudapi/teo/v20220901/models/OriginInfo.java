@@ -26,10 +26,11 @@ public class OriginInfo extends AbstractModel {
     /**
     * The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
     */
     @SerializedName("OriginType")
     @Expose
@@ -43,16 +44,16 @@ public class OriginInfo extends AbstractModel {
     private String Origin;
 
     /**
-    * ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+    * ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
     */
     @SerializedName("BackupOrigin")
     @Expose
     private String BackupOrigin;
 
     /**
-    * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+    * Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -68,16 +69,18 @@ public class OriginInfo extends AbstractModel {
     /**
      * Get The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li> 
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>   
      * @return OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
      */
     public String getOriginType() {
         return this.OriginType;
@@ -86,16 +89,18 @@ public class OriginInfo extends AbstractModel {
     /**
      * Set The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
      * @param OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
@@ -118,40 +123,40 @@ public class OriginInfo extends AbstractModel {
     }
 
     /**
-     * Get ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used. 
-     * @return BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+     * Get ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins. 
+     * @return BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
      */
     public String getBackupOrigin() {
         return this.BackupOrigin;
     }
 
     /**
-     * Set ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-     * @param BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+     * Set ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+     * @param BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
      */
     public void setBackupOrigin(String BackupOrigin) {
         this.BackupOrigin = BackupOrigin;
     }
 
     /**
-     * Get Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used. 
-     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+     * Get Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li> 
+     * @return PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-     * @param PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+     * Set Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
+     * @param PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;

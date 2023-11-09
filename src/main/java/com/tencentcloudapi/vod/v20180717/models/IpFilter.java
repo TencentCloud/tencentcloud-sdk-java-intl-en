@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel {
 
     /**
-    * IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+    * 
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+    * 
     */
     @SerializedName("Filters")
     @Expose
@@ -52,48 +52,48 @@ public class IpFilter extends AbstractModel {
     private IpFilterPathRule [] FilterRules;
 
     /**
-     * Get IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li> 
-     * @return Switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
-     * @param Switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li> 
-     * @return FilterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+     * Get  
+     * @return FilterType 
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
-     * @param FilterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+     * Set 
+     * @param FilterType 
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered 
-     * @return Filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+     * Get  
+     * @return Filters 
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
-     * @param Filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+     * Set 
+     * @param Filters 
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;

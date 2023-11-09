@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class Quic extends AbstractModel {
 
     /**
-    * Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li> 
-     * @return Switch Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
-     * @param Switch Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

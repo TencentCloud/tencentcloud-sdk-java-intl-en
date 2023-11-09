@@ -64,9 +64,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private Long Size;
 
     /**
-    * The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+    * 
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
@@ -78,6 +76,13 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     @SerializedName("SubStreamSet")
     @Expose
     private MediaSubStreamInfoItem [] SubStreamSet;
+
+    /**
+    * 
+    */
+    @SerializedName("CopyRightWatermarkText")
+    @Expose
+    private String CopyRightWatermarkText;
 
     /**
      * Get Adaptive bitrate streaming specification. 
@@ -180,24 +185,16 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     }
 
     /**
-     * Get The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li> 
-     * @return DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+     * Get  
+     * @return DigitalWatermarkType 
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-     * @param DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+     * Set 
+     * @param DigitalWatermarkType 
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
@@ -217,6 +214,22 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
      */
     public void setSubStreamSet(MediaSubStreamInfoItem [] SubStreamSet) {
         this.SubStreamSet = SubStreamSet;
+    }
+
+    /**
+     * Get  
+     * @return CopyRightWatermarkText 
+     */
+    public String getCopyRightWatermarkText() {
+        return this.CopyRightWatermarkText;
+    }
+
+    /**
+     * Set 
+     * @param CopyRightWatermarkText 
+     */
+    public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
+        this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     public AdaptiveDynamicStreamingInfoItem() {
@@ -251,6 +264,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
                 this.SubStreamSet[i] = new MediaSubStreamInfoItem(source.SubStreamSet[i]);
             }
         }
+        if (source.CopyRightWatermarkText != null) {
+            this.CopyRightWatermarkText = new String(source.CopyRightWatermarkText);
+        }
     }
 
 
@@ -265,6 +281,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         this.setParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
+        this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Referer extends AbstractModel {
 
     /**
-    * Referer blacklist/whitelist configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
@@ -38,16 +38,16 @@ public class Referer extends AbstractModel {
     private RefererRule [] RefererRules;
 
     /**
-     * Get Referer blacklist/whitelist configuration switch:<li>on:Enable;</li> <li>off:Disable.</li> 
-     * @return Switch Referer blacklist/whitelist configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Referer blacklist/whitelist configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
-     * @param Switch Referer blacklist/whitelist configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

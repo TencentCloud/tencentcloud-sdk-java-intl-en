@@ -52,14 +52,14 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * The video remaster parameters.
+    * 
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * The audio remaster parameters.
+    * 
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
@@ -169,32 +169,32 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The video remaster parameters. 
-     * @return RebuildVideoInfo The video remaster parameters.
+     * Get  
+     * @return RebuildVideoInfo 
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set The video remaster parameters.
-     * @param RebuildVideoInfo The video remaster parameters.
+     * Set 
+     * @param RebuildVideoInfo 
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get The audio remaster parameters. 
-     * @return RebuildAudioInfo The audio remaster parameters.
+     * Get  
+     * @return RebuildAudioInfo 
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set The audio remaster parameters.
-     * @param RebuildAudioInfo The audio remaster parameters.
+     * Set 
+     * @param RebuildAudioInfo 
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;

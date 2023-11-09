@@ -67,6 +67,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AiRecognitionTaskAsrFullTextResultOutput Output;
 
     /**
+    * 
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
+    * 
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * 
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -166,6 +187,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Output = Output;
     }
 
+    /**
+     * Get  
+     * @return Progress 
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 
+     * @param Progress 
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
+     * Get  
+     * @return BeginProcessTime 
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set 
+     * @param BeginProcessTime 
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get  
+     * @return FinishTime 
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 
+     * @param FinishTime 
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public AiRecognitionTaskAsrFullTextResult() {
     }
 
@@ -192,6 +261,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Output != null) {
             this.Output = new AiRecognitionTaskAsrFullTextResultOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -205,6 +283,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

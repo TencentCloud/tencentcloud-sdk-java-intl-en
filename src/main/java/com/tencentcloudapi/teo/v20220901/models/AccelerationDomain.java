@@ -24,19 +24,11 @@ import java.util.HashMap;
 public class AccelerationDomain extends AbstractModel {
 
     /**
-    * Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the site.
     */
-    @SerializedName("OriginDetail")
+    @SerializedName("ZoneId")
     @Expose
-    private OriginDetail OriginDetail;
-
-    /**
-    * Creation time of the accelerated domain name.
-    */
-    @SerializedName("CreatedOn")
-    @Expose
-    private String CreatedOn;
+    private String ZoneId;
 
     /**
     * Accelerated domain name
@@ -44,20 +36,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
-
-    /**
-    * Modification time of the accelerated domain name.
-    */
-    @SerializedName("ModifiedOn")
-    @Expose
-    private String ModifiedOn;
-
-    /**
-    * ID of the site.
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private String ZoneId;
 
     /**
     * Status of the accelerated domain name. Values:
@@ -70,6 +48,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DomainStatus")
     @Expose
     private String DomainStatus;
+
+    /**
+    * Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OriginDetail")
+    @Expose
+    private OriginDetail OriginDetail;
+
+    /**
+    * 
+    */
+    @SerializedName("OriginProtocol")
+    @Expose
+    private String OriginProtocol;
+
+    /**
+    * 
+    */
+    @SerializedName("HttpOriginPort")
+    @Expose
+    private Long HttpOriginPort;
+
+    /**
+    * 
+    */
+    @SerializedName("HttpsOriginPort")
+    @Expose
+    private Long HttpsOriginPort;
+
+    /**
+    * 
+    */
+    @SerializedName("IPv6Status")
+    @Expose
+    private String IPv6Status;
 
     /**
     * The CNAME address.
@@ -87,39 +101,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IdentificationStatus;
 
     /**
-     * Get Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time of the accelerated domain name.
+    */
+    @SerializedName("CreatedOn")
+    @Expose
+    private String CreatedOn;
+
+    /**
+    * Modification time of the accelerated domain name.
+    */
+    @SerializedName("ModifiedOn")
+    @Expose
+    private String ModifiedOn;
+
+    /**
+    * Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerification OwnershipVerification;
+
+    /**
+    * Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Certificate")
+    @Expose
+    private AccelerationDomainCertificate Certificate;
+
+    /**
+     * Get ID of the site. 
+     * @return ZoneId ID of the site.
      */
-    public OriginDetail getOriginDetail() {
-        return this.OriginDetail;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the site.
+     * @param ZoneId ID of the site.
      */
-    public void setOriginDetail(OriginDetail OriginDetail) {
-        this.OriginDetail = OriginDetail;
-    }
-
-    /**
-     * Get Creation time of the accelerated domain name. 
-     * @return CreatedOn Creation time of the accelerated domain name.
-     */
-    public String getCreatedOn() {
-        return this.CreatedOn;
-    }
-
-    /**
-     * Set Creation time of the accelerated domain name.
-     * @param CreatedOn Creation time of the accelerated domain name.
-     */
-    public void setCreatedOn(String CreatedOn) {
-        this.CreatedOn = CreatedOn;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     /**
@@ -136,38 +160,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
-    }
-
-    /**
-     * Get Modification time of the accelerated domain name. 
-     * @return ModifiedOn Modification time of the accelerated domain name.
-     */
-    public String getModifiedOn() {
-        return this.ModifiedOn;
-    }
-
-    /**
-     * Set Modification time of the accelerated domain name.
-     * @param ModifiedOn Modification time of the accelerated domain name.
-     */
-    public void setModifiedOn(String ModifiedOn) {
-        this.ModifiedOn = ModifiedOn;
-    }
-
-    /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
-     */
-    public String getZoneId() {
-        return this.ZoneId;
-    }
-
-    /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
-     */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
     }
 
     /**
@@ -207,6 +199,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginDetail Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OriginDetail getOriginDetail() {
+        return this.OriginDetail;
+    }
+
+    /**
+     * Set Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginDetail Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOriginDetail(OriginDetail OriginDetail) {
+        this.OriginDetail = OriginDetail;
+    }
+
+    /**
+     * Get  
+     * @return OriginProtocol 
+     */
+    public String getOriginProtocol() {
+        return this.OriginProtocol;
+    }
+
+    /**
+     * Set 
+     * @param OriginProtocol 
+     */
+    public void setOriginProtocol(String OriginProtocol) {
+        this.OriginProtocol = OriginProtocol;
+    }
+
+    /**
+     * Get  
+     * @return HttpOriginPort 
+     */
+    public Long getHttpOriginPort() {
+        return this.HttpOriginPort;
+    }
+
+    /**
+     * Set 
+     * @param HttpOriginPort 
+     */
+    public void setHttpOriginPort(Long HttpOriginPort) {
+        this.HttpOriginPort = HttpOriginPort;
+    }
+
+    /**
+     * Get  
+     * @return HttpsOriginPort 
+     */
+    public Long getHttpsOriginPort() {
+        return this.HttpsOriginPort;
+    }
+
+    /**
+     * Set 
+     * @param HttpsOriginPort 
+     */
+    public void setHttpsOriginPort(Long HttpsOriginPort) {
+        this.HttpsOriginPort = HttpsOriginPort;
+    }
+
+    /**
+     * Get  
+     * @return IPv6Status 
+     */
+    public String getIPv6Status() {
+        return this.IPv6Status;
+    }
+
+    /**
+     * Set 
+     * @param IPv6Status 
+     */
+    public void setIPv6Status(String IPv6Status) {
+        this.IPv6Status = IPv6Status;
+    }
+
+    /**
      * Get The CNAME address. 
      * @return Cname The CNAME address.
      */
@@ -242,6 +318,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IdentificationStatus = IdentificationStatus;
     }
 
+    /**
+     * Get Creation time of the accelerated domain name. 
+     * @return CreatedOn Creation time of the accelerated domain name.
+     */
+    public String getCreatedOn() {
+        return this.CreatedOn;
+    }
+
+    /**
+     * Set Creation time of the accelerated domain name.
+     * @param CreatedOn Creation time of the accelerated domain name.
+     */
+    public void setCreatedOn(String CreatedOn) {
+        this.CreatedOn = CreatedOn;
+    }
+
+    /**
+     * Get Modification time of the accelerated domain name. 
+     * @return ModifiedOn Modification time of the accelerated domain name.
+     */
+    public String getModifiedOn() {
+        return this.ModifiedOn;
+    }
+
+    /**
+     * Set Modification time of the accelerated domain name.
+     * @param ModifiedOn Modification time of the accelerated domain name.
+     */
+    public void setModifiedOn(String ModifiedOn) {
+        this.ModifiedOn = ModifiedOn;
+    }
+
+    /**
+     * Get Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return OwnershipVerification Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public OwnershipVerification getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param OwnershipVerification Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
+    }
+
+    /**
+     * Get Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Certificate Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public AccelerationDomainCertificate getCertificate() {
+        return this.Certificate;
+    }
+
+    /**
+     * Set Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Certificate Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setCertificate(AccelerationDomainCertificate Certificate) {
+        this.Certificate = Certificate;
+    }
+
     public AccelerationDomain() {
     }
 
@@ -250,29 +398,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccelerationDomain(AccelerationDomain source) {
-        if (source.OriginDetail != null) {
-            this.OriginDetail = new OriginDetail(source.OriginDetail);
-        }
-        if (source.CreatedOn != null) {
-            this.CreatedOn = new String(source.CreatedOn);
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
         }
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
-        if (source.ModifiedOn != null) {
-            this.ModifiedOn = new String(source.ModifiedOn);
-        }
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
-        }
         if (source.DomainStatus != null) {
             this.DomainStatus = new String(source.DomainStatus);
+        }
+        if (source.OriginDetail != null) {
+            this.OriginDetail = new OriginDetail(source.OriginDetail);
+        }
+        if (source.OriginProtocol != null) {
+            this.OriginProtocol = new String(source.OriginProtocol);
+        }
+        if (source.HttpOriginPort != null) {
+            this.HttpOriginPort = new Long(source.HttpOriginPort);
+        }
+        if (source.HttpsOriginPort != null) {
+            this.HttpsOriginPort = new Long(source.HttpsOriginPort);
+        }
+        if (source.IPv6Status != null) {
+            this.IPv6Status = new String(source.IPv6Status);
         }
         if (source.Cname != null) {
             this.Cname = new String(source.Cname);
         }
         if (source.IdentificationStatus != null) {
             this.IdentificationStatus = new String(source.IdentificationStatus);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+        if (source.ModifiedOn != null) {
+            this.ModifiedOn = new String(source.ModifiedOn);
+        }
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new AccelerationDomainCertificate(source.Certificate);
         }
     }
 
@@ -281,14 +447,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
-        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
-        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+        this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
+        this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+        this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+        this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
         this.setParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
+        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
+        this.setParamObj(map, prefix + "Certificate.", this.Certificate);
 
     }
 }

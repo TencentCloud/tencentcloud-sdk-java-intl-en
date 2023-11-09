@@ -61,7 +61,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an offline recording task.
+     *课后录制服务已下线
+
+This API is used to create an offline recording task.
      * @param req CreateOfflineRecordRequest
      * @return CreateOfflineRecordResponse
      * @throws TencentCloudSDKException
@@ -160,7 +162,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information about an offline recording task, including the recording progress and recording result.
+     *课后录制服务已下线
+
+This API is used to query the information about an offline recording task, including the recording progress and recording result.
      * @param req DescribeOfflineRecordRequest
      * @return DescribeOfflineRecordResponse
      * @throws TencentCloudSDKException
@@ -171,7 +175,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the offline recording callback URL.
+     *课后录制服务已下线
+
+This API is used to query the offline recording callback URL.
      * @param req DescribeOfflineRecordCallbackRequest
      * @return DescribeOfflineRecordCallbackResponse
      * @throws TencentCloudSDKException
@@ -508,7 +514,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set the offline recording callback URL.
+     *课后录制服务已下线
+
+This API is used to set the offline recording callback URL.
      * @param req SetOfflineRecordCallbackRequest
      * @return SetOfflineRecordCallbackResponse
      * @throws TencentCloudSDKException

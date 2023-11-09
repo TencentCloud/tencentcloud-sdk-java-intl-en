@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsResponse extends AbstractModel {
 
     /**
-    * Total number of matched accelerated domain names.
+    * Total of matched alias domain names.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of accelerated domain names.
+    * Information of all matched acceleration domain names
     */
     @SerializedName("AccelerationDomains")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccelerationDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of matched accelerated domain names. 
-     * @return TotalCount Total number of matched accelerated domain names.
+     * Get Total of matched alias domain names. 
+     * @return TotalCount Total of matched alias domain names.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of matched accelerated domain names.
-     * @param TotalCount Total number of matched accelerated domain names.
+     * Set Total of matched alias domain names.
+     * @param TotalCount Total of matched alias domain names.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of accelerated domain names. 
-     * @return AccelerationDomains List of accelerated domain names.
+     * Get Information of all matched acceleration domain names 
+     * @return AccelerationDomains Information of all matched acceleration domain names
      */
     public AccelerationDomain [] getAccelerationDomains() {
         return this.AccelerationDomains;
     }
 
     /**
-     * Set List of accelerated domain names.
-     * @param AccelerationDomains List of accelerated domain names.
+     * Set Information of all matched acceleration domain names
+     * @param AccelerationDomains Information of all matched acceleration domain names
      */
     public void setAccelerationDomains(AccelerationDomain [] AccelerationDomains) {
         this.AccelerationDomains = AccelerationDomains;

@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class ImageOperation extends AbstractModel {
 
     /**
-    * The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
@@ -54,24 +52,16 @@ public class ImageOperation extends AbstractModel {
     private ImageBlur Blur;
 
     /**
-     * Get The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li> 
-     * @return Type The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
-     * @param Type The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

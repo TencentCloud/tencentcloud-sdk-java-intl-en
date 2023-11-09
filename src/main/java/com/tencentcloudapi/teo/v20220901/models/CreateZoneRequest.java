@@ -24,31 +24,48 @@ import java.util.HashMap;
 public class CreateZoneRequest extends AbstractModel {
 
     /**
-    * The site name.
-    */
-    @SerializedName("ZoneName")
-    @Expose
-    private String ZoneName;
-
-    /**
-    * The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+    * Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Whether to skip scanning the existing DNS records of the site. Default value: false.
+    * Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
     */
-    @SerializedName("JumpStart")
+    @SerializedName("ZoneName")
     @Expose
-    private Boolean JumpStart;
+    private String ZoneName;
 
     /**
-    * The resource tag.
+    * The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+    */
+    @SerializedName("PlanId")
+    @Expose
+    private String PlanId;
+
+    /**
+    * The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
+    * Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
     */
     @SerializedName("Tags")
     @Expose
@@ -64,83 +81,127 @@ If not specified, this field uses the default value `full`.
     private Boolean AllowDuplicates;
 
     /**
-    * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+    * Whether to skip scanning the existing DNS records of the site. Default value: false.
     */
-    @SerializedName("AliasZoneName")
+    @SerializedName("JumpStart")
     @Expose
-    private String AliasZoneName;
+    private Boolean JumpStart;
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
-     */
-    public String getZoneName() {
-        return this.ZoneName;
-    }
-
-    /**
-     * Set The site name.
-     * @param ZoneName The site name.
-     */
-    public void setZoneName(String ZoneName) {
-        this.ZoneName = ZoneName;
-    }
-
-    /**
-     * Get The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`. 
-     * @return Type The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+     * Get Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li> 
+     * @return Type Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
-     * @param Type The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+     * Set Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
+     * @param Type Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Whether to skip scanning the existing DNS records of the site. Default value: false. 
-     * @return JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * Get Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name.  
+     * @return ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
      */
-    public Boolean getJumpStart() {
-        return this.JumpStart;
+    public String getZoneName() {
+        return this.ZoneName;
     }
 
     /**
-     * Set Whether to skip scanning the existing DNS records of the site. Default value: false.
-     * @param JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * Set Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+     * @param ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
      */
-    public void setJumpStart(Boolean JumpStart) {
-        this.JumpStart = JumpStart;
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
     }
 
     /**
-     * Get The resource tag. 
-     * @return Tags The resource tag.
+     * Get The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li> 
+     * @return Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     * @param Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console. 
+     * @return PlanId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     */
+    public String getPlanId() {
+        return this.PlanId;
+    }
+
+    /**
+     * Set ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     * @param PlanId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     */
+    public void setPlanId(String PlanId) {
+        this.PlanId = PlanId;
+    }
+
+    /**
+     * Get The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank. 
+     * @return AliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     * @param AliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
+    /**
+     * Get Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist). 
+     * @return Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The resource tag.
-     * @param Tags The resource tag.
+     * Set Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+     * @param Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -153,7 +214,9 @@ If not specified, this field uses the default value `full`.
      * @return AllowDuplicates Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAllowDuplicates() {
         return this.AllowDuplicates;
     }
@@ -165,25 +228,31 @@ If not specified, this field uses the default value `full`.
      * @param AllowDuplicates Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * @deprecated
      */
+    @Deprecated
     public void setAllowDuplicates(Boolean AllowDuplicates) {
         this.AllowDuplicates = AllowDuplicates;
     }
 
     /**
-     * Get The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_). 
-     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * Get Whether to skip scanning the existing DNS records of the site. Default value: false. 
+     * @return JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @deprecated
      */
-    public String getAliasZoneName() {
-        return this.AliasZoneName;
+    @Deprecated
+    public Boolean getJumpStart() {
+        return this.JumpStart;
     }
 
     /**
-     * Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * Set Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @param JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @deprecated
      */
-    public void setAliasZoneName(String AliasZoneName) {
-        this.AliasZoneName = AliasZoneName;
+    @Deprecated
+    public void setJumpStart(Boolean JumpStart) {
+        this.JumpStart = JumpStart;
     }
 
     public CreateZoneRequest() {
@@ -194,14 +263,20 @@ If not specified, this field uses the default value `full`.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateZoneRequest(CreateZoneRequest source) {
-        if (source.ZoneName != null) {
-            this.ZoneName = new String(source.ZoneName);
-        }
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
-        if (source.JumpStart != null) {
-            this.JumpStart = new Boolean(source.JumpStart);
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -212,8 +287,8 @@ If not specified, this field uses the default value `full`.
         if (source.AllowDuplicates != null) {
             this.AllowDuplicates = new Boolean(source.AllowDuplicates);
         }
-        if (source.AliasZoneName != null) {
-            this.AliasZoneName = new String(source.AliasZoneName);
+        if (source.JumpStart != null) {
+            this.JumpStart = new Boolean(source.JumpStart);
         }
     }
 
@@ -222,12 +297,14 @@ If not specified, this field uses the default value `full`.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "JumpStart", this.JumpStart);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
-        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+        this.setParamSimple(map, prefix + "JumpStart", this.JumpStart);
 
     }
 }

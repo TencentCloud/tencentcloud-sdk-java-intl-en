@@ -35,14 +35,7 @@ public class RuleCondition extends AbstractModel {
     private String Operator;
 
     /**
-    * The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+    * Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
     */
     @SerializedName("Target")
     @Expose
@@ -121,44 +114,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li> 
-     * @return Target The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+     * Get Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li> 
+     * @return Target Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
-     * @param Target The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+     * Set Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
+     * @param Target Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
      */
     public void setTarget(String Target) {
         this.Target = Target;
@@ -261,7 +226,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIgnoreNameCase() {
         return this.IgnoreNameCase;
     }
@@ -271,7 +238,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setIgnoreNameCase(Boolean IgnoreNameCase) {
         this.IgnoreNameCase = IgnoreNameCase;
     }

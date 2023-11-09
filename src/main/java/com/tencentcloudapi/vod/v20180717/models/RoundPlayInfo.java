@@ -59,6 +59,27 @@ public class RoundPlayInfo extends AbstractModel {
     private String Desc;
 
     /**
+    * 
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 
+    */
+    @SerializedName("PlayBackMode")
+    @Expose
+    private String PlayBackMode;
+
+    /**
+    * 
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get The playlist ID. 
      * @return RoundPlayId The playlist ID.
      */
@@ -138,6 +159,54 @@ public class RoundPlayInfo extends AbstractModel {
         this.Desc = Desc;
     }
 
+    /**
+     * Get  
+     * @return Status 
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 
+     * @param Status 
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get  
+     * @return PlayBackMode 
+     */
+    public String getPlayBackMode() {
+        return this.PlayBackMode;
+    }
+
+    /**
+     * Set 
+     * @param PlayBackMode 
+     */
+    public void setPlayBackMode(String PlayBackMode) {
+        this.PlayBackMode = PlayBackMode;
+    }
+
+    /**
+     * Get  
+     * @return Url 
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 
+     * @param Url 
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public RoundPlayInfo() {
     }
 
@@ -164,6 +233,15 @@ public class RoundPlayInfo extends AbstractModel {
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PlayBackMode != null) {
+            this.PlayBackMode = new String(source.PlayBackMode);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -176,6 +254,9 @@ public class RoundPlayInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

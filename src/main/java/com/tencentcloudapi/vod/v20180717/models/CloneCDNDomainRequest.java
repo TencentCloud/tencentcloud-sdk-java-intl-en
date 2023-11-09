@@ -38,7 +38,7 @@ public class CloneCDNDomainRequest extends AbstractModel {
     private String ReferenceDomain;
 
     /**
-    * VOD[Subapplication](https://www.tencentcloud.com/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
@@ -77,16 +77,16 @@ public class CloneCDNDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get VOD[Subapplication](https://www.tencentcloud.com/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field. 
-     * @return SubAppId VOD[Subapplication](https://www.tencentcloud.com/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set VOD[Subapplication](https://www.tencentcloud.com/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
-     * @param SubAppId VOD[Subapplication](https://www.tencentcloud.com/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

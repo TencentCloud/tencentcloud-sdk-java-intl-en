@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CDNDomainConfig extends AbstractModel {
 
     /**
-    * Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+    * 
     */
     @SerializedName("Area")
     @Expose
@@ -157,16 +157,16 @@ public class CDNDomainConfig extends AbstractModel {
     private OthersPrivateAccess OthersPrivateAccess;
 
     /**
-     * Get Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li> 
-     * @return Area Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+     * Get  
+     * @return Area 
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
-     * @param Area Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+     * Set 
+     * @param Area 
      */
     public void setArea(String Area) {
         this.Area = Area;

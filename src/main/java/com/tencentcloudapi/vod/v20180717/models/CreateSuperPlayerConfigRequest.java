@@ -94,14 +94,7 @@ This parameter is required if `AudioVideoType` is `Transcode`.
     private Long ImageSpriteDefinition;
 
     /**
-    * Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
+    * 
     */
     @SerializedName("ResolutionNames")
     @Expose
@@ -315,44 +308,16 @@ This parameter is required if `AudioVideoType` is `Transcode`.
     }
 
     /**
-     * Get Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li> 
-     * @return ResolutionNames Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
+     * Get  
+     * @return ResolutionNames 
      */
     public ResolutionNameInfo [] getResolutionNames() {
         return this.ResolutionNames;
     }
 
     /**
-     * Set Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
-     * @param ResolutionNames Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
+     * Set 
+     * @param ResolutionNames 
      */
     public void setResolutionNames(ResolutionNameInfo [] ResolutionNames) {
         this.ResolutionNames = ResolutionNames;

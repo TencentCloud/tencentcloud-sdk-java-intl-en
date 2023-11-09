@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class Origin extends AbstractModel {
 
     /**
-    * Primary origin server list When modifying the origin server, you need to enter the corresponding OriginType. Note: This field may return null, indicating that no valid value was found.
+    * 
     */
     @SerializedName("Origins")
     @Expose
     private String [] Origins;
 
     /**
-    * Primary origin server type The following types are supported for input parameters: <li> domain:domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
+    * 
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.When the origin server type is object storage, the ServerName field is required.
+    * 
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * Origin-pull protocol configuration http: forced HTTP origin-pull follow: protocol follow origin-pull https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull. Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("OriginPullProtocol")
     @Expose
     private String OriginPullProtocol;
 
     /**
-    * Backup origin server list When modifying the backup origin server, you need to enter the corresponding BackupOriginType. Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("BackupOrigins")
     @Expose
     private String [] BackupOrigins;
 
     /**
-    *  Backup origin server type, which supports the following types: <li>domain：Domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
+    * 
     */
     @SerializedName("BackupOriginType")
     @Expose
@@ -73,103 +73,103 @@ public class Origin extends AbstractModel {
     private String BackupServerName;
 
     /**
-    * The object storage returns to the source vendor. It is required when the source site type is a third-party storage source site (third_party). The optional values include the following:<li>aws_s3：AWS S3;</li> <li>ali_oss：Alibaba Cloud OSS;</li> <li>hw_obs：Huawei OBS;</li> <li>others：Object storage from other vendors only supports object storage compatible with the AWS signature algorithm, such as Tencent Cloud COS.</li>
+    * 
     */
     @SerializedName("OriginCompany")
     @Expose
     private String OriginCompany;
 
     /**
-     * Get Primary origin server list When modifying the origin server, you need to enter the corresponding OriginType. Note: This field may return null, indicating that no valid value was found. 
-     * @return Origins Primary origin server list When modifying the origin server, you need to enter the corresponding OriginType. Note: This field may return null, indicating that no valid value was found.
+     * Get  
+     * @return Origins 
      */
     public String [] getOrigins() {
         return this.Origins;
     }
 
     /**
-     * Set Primary origin server list When modifying the origin server, you need to enter the corresponding OriginType. Note: This field may return null, indicating that no valid value was found.
-     * @param Origins Primary origin server list When modifying the origin server, you need to enter the corresponding OriginType. Note: This field may return null, indicating that no valid value was found.
+     * Set 
+     * @param Origins 
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
     }
 
     /**
-     * Get Primary origin server type The following types are supported for input parameters: <li> domain:domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li> 
-     * @return OriginType Primary origin server type The following types are supported for input parameters: <li> domain:domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
+     * Get  
+     * @return OriginType 
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set Primary origin server type The following types are supported for input parameters: <li> domain:domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
-     * @param OriginType Primary origin server type The following types are supported for input parameters: <li> domain:domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
+     * Set 
+     * @param OriginType 
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.When the origin server type is object storage, the ServerName field is required. 
-     * @return ServerName Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.When the origin server type is object storage, the ServerName field is required.
+     * Get  
+     * @return ServerName 
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.When the origin server type is object storage, the ServerName field is required.
-     * @param ServerName Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.When the origin server type is object storage, the ServerName field is required.
+     * Set 
+     * @param ServerName 
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get Origin-pull protocol configuration http: forced HTTP origin-pull follow: protocol follow origin-pull https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull. Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return OriginPullProtocol Origin-pull protocol configuration http: forced HTTP origin-pull follow: protocol follow origin-pull https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull. Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return OriginPullProtocol 
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
     }
 
     /**
-     * Set Origin-pull protocol configuration http: forced HTTP origin-pull follow: protocol follow origin-pull https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull. Note: This field may return null, indicating that no valid value can be obtained.
-     * @param OriginPullProtocol Origin-pull protocol configuration http: forced HTTP origin-pull follow: protocol follow origin-pull https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull. Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param OriginPullProtocol 
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
     }
 
     /**
-     * Get Backup origin server list When modifying the backup origin server, you need to enter the corresponding BackupOriginType. Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BackupOrigins Backup origin server list When modifying the backup origin server, you need to enter the corresponding BackupOriginType. Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return BackupOrigins 
      */
     public String [] getBackupOrigins() {
         return this.BackupOrigins;
     }
 
     /**
-     * Set Backup origin server list When modifying the backup origin server, you need to enter the corresponding BackupOriginType. Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BackupOrigins Backup origin server list When modifying the backup origin server, you need to enter the corresponding BackupOriginType. Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param BackupOrigins 
      */
     public void setBackupOrigins(String [] BackupOrigins) {
         this.BackupOrigins = BackupOrigins;
     }
 
     /**
-     * Get  Backup origin server type, which supports the following types: <li>domain：Domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li> 
-     * @return BackupOriginType  Backup origin server type, which supports the following types: <li>domain：Domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
+     * Get  
+     * @return BackupOriginType 
      */
     public String getBackupOriginType() {
         return this.BackupOriginType;
     }
 
     /**
-     * Set  Backup origin server type, which supports the following types: <li>domain：Domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
-     * @param BackupOriginType  Backup origin server type, which supports the following types: <li>domain：Domain；</li> <li>ip：IP address；</li> <li>third_party：third-party object storage origin.</li>
+     * Set 
+     * @param BackupOriginType 
      */
     public void setBackupOriginType(String BackupOriginType) {
         this.BackupOriginType = BackupOriginType;
@@ -192,16 +192,16 @@ public class Origin extends AbstractModel {
     }
 
     /**
-     * Get The object storage returns to the source vendor. It is required when the source site type is a third-party storage source site (third_party). The optional values include the following:<li>aws_s3：AWS S3;</li> <li>ali_oss：Alibaba Cloud OSS;</li> <li>hw_obs：Huawei OBS;</li> <li>others：Object storage from other vendors only supports object storage compatible with the AWS signature algorithm, such as Tencent Cloud COS.</li> 
-     * @return OriginCompany The object storage returns to the source vendor. It is required when the source site type is a third-party storage source site (third_party). The optional values include the following:<li>aws_s3：AWS S3;</li> <li>ali_oss：Alibaba Cloud OSS;</li> <li>hw_obs：Huawei OBS;</li> <li>others：Object storage from other vendors only supports object storage compatible with the AWS signature algorithm, such as Tencent Cloud COS.</li>
+     * Get  
+     * @return OriginCompany 
      */
     public String getOriginCompany() {
         return this.OriginCompany;
     }
 
     /**
-     * Set The object storage returns to the source vendor. It is required when the source site type is a third-party storage source site (third_party). The optional values include the following:<li>aws_s3：AWS S3;</li> <li>ali_oss：Alibaba Cloud OSS;</li> <li>hw_obs：Huawei OBS;</li> <li>others：Object storage from other vendors only supports object storage compatible with the AWS signature algorithm, such as Tencent Cloud COS.</li>
-     * @param OriginCompany The object storage returns to the source vendor. It is required when the source site type is a third-party storage source site (third_party). The optional values include the following:<li>aws_s3：AWS S3;</li> <li>ali_oss：Alibaba Cloud OSS;</li> <li>hw_obs：Huawei OBS;</li> <li>others：Object storage from other vendors only supports object storage compatible with the AWS signature algorithm, such as Tencent Cloud COS.</li>
+     * Set 
+     * @param OriginCompany 
      */
     public void setOriginCompany(String OriginCompany) {
         this.OriginCompany = OriginCompany;

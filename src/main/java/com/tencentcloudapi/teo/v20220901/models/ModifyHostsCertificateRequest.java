@@ -31,14 +31,24 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * List of domain names that the certificate will be attached to.
+    * Domain names that you need to modify the certificate configuration
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-    * Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+    * Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
     */
     @SerializedName("ServerCertInfo")
     @Expose
@@ -46,8 +56,9 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
 
     /**
     * Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
     */
     @SerializedName("ApplyType")
     @Expose
@@ -70,32 +81,60 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get List of domain names that the certificate will be attached to. 
-     * @return Hosts List of domain names that the certificate will be attached to.
+     * Get Domain names that you need to modify the certificate configuration 
+     * @return Hosts Domain names that you need to modify the certificate configuration
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set List of domain names that the certificate will be attached to.
-     * @param Hosts List of domain names that the certificate will be attached to.
+     * Set Domain names that you need to modify the certificate configuration
+     * @param Hosts Domain names that you need to modify the certificate configuration
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used. 
-     * @return ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+     * Get Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li> 
+     * @return Mode Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+     * @param Mode Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console. 
+     * @return ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
      */
     public ServerCertInfo [] getServerCertInfo() {
         return this.ServerCertInfo;
     }
 
     /**
-     * Set Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
-     * @param ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+     * Set ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+     * @param ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
      */
     public void setServerCertInfo(ServerCertInfo [] ServerCertInfo) {
         this.ServerCertInfo = ServerCertInfo;
@@ -103,24 +142,32 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
 
     /**
      * Get Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`. 
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`. 
      * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
+     * @deprecated
      */
+    @Deprecated
     public String getApplyType() {
         return this.ApplyType;
     }
 
     /**
      * Set Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
      * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
+     * @deprecated
      */
+    @Deprecated
     public void setApplyType(String ApplyType) {
         this.ApplyType = ApplyType;
     }
@@ -142,6 +189,9 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
                 this.Hosts[i] = new String(source.Hosts[i]);
             }
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
         if (source.ServerCertInfo != null) {
             this.ServerCertInfo = new ServerCertInfo[source.ServerCertInfo.length];
             for (int i = 0; i < source.ServerCertInfo.length; i++) {
@@ -160,6 +210,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
 

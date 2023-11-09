@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteCDNDomainRequest extends AbstractModel {
 
     /**
-    * Domain.
+    * 
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Domain. 
-     * @return Domain Domain.
+     * Get  
+     * @return Domain 
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain.
-     * @param Domain Domain.
+     * Set 
+     * @param Domain 
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field. 
-     * @return SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
-     * @param SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

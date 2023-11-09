@@ -31,16 +31,14 @@ public class EditMediaFileInfo extends AbstractModel {
     private String FileId;
 
     /**
-    * Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -63,40 +61,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StartTimeOffset Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StartTimeOffset Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndTimeOffset End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndTimeOffset End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

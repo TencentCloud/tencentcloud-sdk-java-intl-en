@@ -24,59 +24,46 @@ import java.util.HashMap;
 public class OriginGroup extends AbstractModel {
 
     /**
-    * The site ID.
+    * 
     */
-    @SerializedName("ZoneId")
+    @SerializedName("GroupId")
     @Expose
-    private String ZoneId;
+    private String GroupId;
 
     /**
-    * The site name.
+    * 
     */
-    @SerializedName("ZoneName")
+    @SerializedName("Name")
     @Expose
-    private String ZoneName;
+    private String Name;
 
     /**
-    * The ID of the origin group.
+    * 
     */
-    @SerializedName("OriginGroupId")
+    @SerializedName("Type")
     @Expose
-    private String OriginGroupId;
+    private String Type;
 
     /**
-    * The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+    * 
     */
-    @SerializedName("OriginType")
+    @SerializedName("Records")
     @Expose
-    private String OriginType;
+    private OriginRecord [] Records;
 
     /**
-    * The name of the origin group.
+    * 
     */
-    @SerializedName("OriginGroupName")
+    @SerializedName("References")
     @Expose
-    private String OriginGroupName;
+    private OriginGroupReference [] References;
 
     /**
-    * The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+    * 
     */
-    @SerializedName("ConfigurationType")
+    @SerializedName("CreateTime")
     @Expose
-    private String ConfigurationType;
-
-    /**
-    * The origin record information.
-    */
-    @SerializedName("OriginRecords")
-    @Expose
-    private OriginRecord [] OriginRecords;
+    private String CreateTime;
 
     /**
     * The update time of the origin group.
@@ -86,147 +73,107 @@ public class OriginGroup extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostHeader")
     @Expose
     private String HostHeader;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get  
+     * @return GroupId 
      */
-    public String getZoneId() {
-        return this.ZoneId;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set 
+     * @param GroupId 
      */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+     * Get  
+     * @return Name 
      */
-    public String getZoneName() {
-        return this.ZoneName;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set 
+     * @param Name 
      */
-    public void setZoneName(String ZoneName) {
-        this.ZoneName = ZoneName;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get The ID of the origin group. 
-     * @return OriginGroupId The ID of the origin group.
+     * Get  
+     * @return Type 
      */
-    public String getOriginGroupId() {
-        return this.OriginGroupId;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set The ID of the origin group.
-     * @param OriginGroupId The ID of the origin group.
+     * Set 
+     * @param Type 
      */
-    public void setOriginGroupId(String OriginGroupId) {
-        this.OriginGroupId = OriginGroupId;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
-     * Get The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li> 
-     * @return OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+     * Get  
+     * @return Records 
      */
-    public String getOriginType() {
-        return this.OriginType;
+    public OriginRecord [] getRecords() {
+        return this.Records;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
-     * @param OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+     * Set 
+     * @param Records 
      */
-    public void setOriginType(String OriginType) {
-        this.OriginType = OriginType;
+    public void setRecords(OriginRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
-     * Get The name of the origin group. 
-     * @return OriginGroupName The name of the origin group.
+     * Get  
+     * @return References 
      */
-    public String getOriginGroupName() {
-        return this.OriginGroupName;
+    public OriginGroupReference [] getReferences() {
+        return this.References;
     }
 
     /**
-     * Set The name of the origin group.
-     * @param OriginGroupName The name of the origin group.
+     * Set 
+     * @param References 
      */
-    public void setOriginGroupName(String OriginGroupName) {
-        this.OriginGroupName = OriginGroupName;
+    public void setReferences(OriginGroupReference [] References) {
+        this.References = References;
     }
 
     /**
-     * Get The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty. 
-     * @return ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+     * Get  
+     * @return CreateTime 
      */
-    public String getConfigurationType() {
-        return this.ConfigurationType;
+    public String getCreateTime() {
+        return this.CreateTime;
     }
 
     /**
-     * Set The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
-     * @param ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+     * Set 
+     * @param CreateTime 
      */
-    public void setConfigurationType(String ConfigurationType) {
-        this.ConfigurationType = ConfigurationType;
-    }
-
-    /**
-     * Get The origin record information. 
-     * @return OriginRecords The origin record information.
-     */
-    public OriginRecord [] getOriginRecords() {
-        return this.OriginRecords;
-    }
-
-    /**
-     * Set The origin record information.
-     * @param OriginRecords The origin record information.
-     */
-    public void setOriginRecords(OriginRecord [] OriginRecords) {
-        this.OriginRecords = OriginRecords;
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -246,20 +193,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return HostHeader The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return HostHeader Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param HostHeader The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param HostHeader Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;
@@ -273,29 +220,29 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OriginGroup(OriginGroup source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
-        if (source.ZoneName != null) {
-            this.ZoneName = new String(source.ZoneName);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.OriginGroupId != null) {
-            this.OriginGroupId = new String(source.OriginGroupId);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
-        if (source.OriginType != null) {
-            this.OriginType = new String(source.OriginType);
-        }
-        if (source.OriginGroupName != null) {
-            this.OriginGroupName = new String(source.OriginGroupName);
-        }
-        if (source.ConfigurationType != null) {
-            this.ConfigurationType = new String(source.ConfigurationType);
-        }
-        if (source.OriginRecords != null) {
-            this.OriginRecords = new OriginRecord[source.OriginRecords.length];
-            for (int i = 0; i < source.OriginRecords.length; i++) {
-                this.OriginRecords[i] = new OriginRecord(source.OriginRecords[i]);
+        if (source.Records != null) {
+            this.Records = new OriginRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new OriginRecord(source.Records[i]);
             }
+        }
+        if (source.References != null) {
+            this.References = new OriginGroupReference[source.References.length];
+            for (int i = 0; i < source.References.length; i++) {
+                this.References[i] = new OriginGroupReference(source.References[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
@@ -310,13 +257,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
-        this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
-        this.setParamSimple(map, prefix + "OriginType", this.OriginType);
-        this.setParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
-        this.setParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
-        this.setParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamArrayObj(map, prefix + "References.", this.References);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 

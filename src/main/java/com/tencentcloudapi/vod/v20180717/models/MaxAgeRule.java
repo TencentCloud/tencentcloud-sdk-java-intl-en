@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class MaxAgeRule extends AbstractModel {
 
     /**
-    * Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+    * 
     */
     @SerializedName("MaxAgeType")
     @Expose
     private String MaxAgeType;
 
     /**
-    * Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+    * 
     */
     @SerializedName("MaxAgeContents")
     @Expose
     private String [] MaxAgeContents;
 
     /**
-    * Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+    * 
     */
     @SerializedName("MaxAgeTime")
     @Expose
@@ -52,48 +52,48 @@ public class MaxAgeRule extends AbstractModel {
     private String FollowOrigin;
 
     /**
-     * Get Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li> 
-     * @return MaxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+     * Get  
+     * @return MaxAgeType 
      */
     public String getMaxAgeType() {
         return this.MaxAgeType;
     }
 
     /**
-     * Set Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
-     * @param MaxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+     * Set 
+     * @param MaxAgeType 
      */
     public void setMaxAgeType(String MaxAgeType) {
         this.MaxAgeType = MaxAgeType;
     }
 
     /**
-     * Get Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b> 
-     * @return MaxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+     * Get  
+     * @return MaxAgeContents 
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
     }
 
     /**
-     * Set Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
-     * @param MaxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+     * Set 
+     * @param MaxAgeContents 
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
     }
 
     /**
-     * Get Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b> 
-     * @return MaxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+     * Get  
+     * @return MaxAgeTime 
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
     /**
-     * Set Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
-     * @param MaxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+     * Set 
+     * @param MaxAgeTime 
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;

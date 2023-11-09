@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OthersPrivateAccess extends AbstractModel {
 
     /**
-    * Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
@@ -59,16 +59,16 @@ public class OthersPrivateAccess extends AbstractModel {
     private String Bucket;
 
     /**
-     * Get Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li> 
-     * @return Switch Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
-     * @param Switch Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

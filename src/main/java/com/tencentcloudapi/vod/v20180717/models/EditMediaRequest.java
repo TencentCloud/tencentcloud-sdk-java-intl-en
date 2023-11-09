@@ -24,58 +24,63 @@ import java.util.HashMap;
 public class EditMediaRequest extends AbstractModel {
 
     /**
-    * Input video type. Valid values: File, Stream.
+    * 
     */
     @SerializedName("InputType")
     @Expose
     private String InputType;
 
     /**
-    * Information of input video file, which is required if `InputType` is `File`.
+    * 
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
+    * 
     */
     @SerializedName("FileInfos")
     @Expose
     private EditMediaFileInfo [] FileInfos;
 
     /**
-    * Input stream information, which is required if `InputType` is `Stream`.
+    * 
     */
     @SerializedName("StreamInfos")
     @Expose
     private EditMediaStreamInfo [] StreamInfos;
 
     /**
-    * Editing template ID. Valid values: 10, 20. If this parameter is left empty, template 10 will be used.
-<li>10: the input with the highest resolution will be used as the benchmark;</li>
-<li>20: the input with the highest bitrate will be used as the benchmark;</li>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name, which should be entered if you want to perform a task flow on the generated new video.
+    * 
     */
     @SerializedName("ProcedureName")
     @Expose
     private String ProcedureName;
 
     /**
-    * Configuration of file generated after editing.
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private EditMediaOutputConfig OutputConfig;
 
     /**
-    * Identifies the source context which is used to pass through the user request information. The `EditMediaComplete` callback and task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+    * 
     */
     @SerializedName("TasksPriority")
     @Expose
@@ -96,143 +101,144 @@ public class EditMediaRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
-     * Get Input video type. Valid values: File, Stream. 
-     * @return InputType Input video type. Valid values: File, Stream.
+     * Get  
+     * @return InputType 
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set Input video type. Valid values: File, Stream.
-     * @param InputType Input video type. Valid values: File, Stream.
+     * Set 
+     * @param InputType 
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get Information of input video file, which is required if `InputType` is `File`. 
-     * @return FileInfos Information of input video file, which is required if `InputType` is `File`.
+     * Get  
+     * @return SubAppId 
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set 
+     * @param SubAppId 
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get  
+     * @return FileInfos 
      */
     public EditMediaFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Information of input video file, which is required if `InputType` is `File`.
-     * @param FileInfos Information of input video file, which is required if `InputType` is `File`.
+     * Set 
+     * @param FileInfos 
      */
     public void setFileInfos(EditMediaFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get Input stream information, which is required if `InputType` is `Stream`. 
-     * @return StreamInfos Input stream information, which is required if `InputType` is `Stream`.
+     * Get  
+     * @return StreamInfos 
      */
     public EditMediaStreamInfo [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set Input stream information, which is required if `InputType` is `Stream`.
-     * @param StreamInfos Input stream information, which is required if `InputType` is `Stream`.
+     * Set 
+     * @param StreamInfos 
      */
     public void setStreamInfos(EditMediaStreamInfo [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get Editing template ID. Valid values: 10, 20. If this parameter is left empty, template 10 will be used.
-<li>10: the input with the highest resolution will be used as the benchmark;</li>
-<li>20: the input with the highest bitrate will be used as the benchmark;</li> 
-     * @return Definition Editing template ID. Valid values: 10, 20. If this parameter is left empty, template 10 will be used.
-<li>10: the input with the highest resolution will be used as the benchmark;</li>
-<li>20: the input with the highest bitrate will be used as the benchmark;</li>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Editing template ID. Valid values: 10, 20. If this parameter is left empty, template 10 will be used.
-<li>10: the input with the highest resolution will be used as the benchmark;</li>
-<li>20: the input with the highest bitrate will be used as the benchmark;</li>
-     * @param Definition Editing template ID. Valid values: 10, 20. If this parameter is left empty, template 10 will be used.
-<li>10: the input with the highest resolution will be used as the benchmark;</li>
-<li>20: the input with the highest bitrate will be used as the benchmark;</li>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name, which should be entered if you want to perform a task flow on the generated new video. 
-     * @return ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name, which should be entered if you want to perform a task flow on the generated new video.
+     * Get  
+     * @return ProcedureName 
      */
     public String getProcedureName() {
         return this.ProcedureName;
     }
 
     /**
-     * Set [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name, which should be entered if you want to perform a task flow on the generated new video.
-     * @param ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name, which should be entered if you want to perform a task flow on the generated new video.
+     * Set 
+     * @param ProcedureName 
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
     }
 
     /**
-     * Get Configuration of file generated after editing. 
-     * @return OutputConfig Configuration of file generated after editing.
+     * Get  
+     * @return OutputConfig 
      */
     public EditMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Configuration of file generated after editing.
-     * @param OutputConfig Configuration of file generated after editing.
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get Identifies the source context which is used to pass through the user request information. The `EditMediaComplete` callback and task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
-     * @return SessionContext Identifies the source context which is used to pass through the user request information. The `EditMediaComplete` callback and task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Identifies the source context which is used to pass through the user request information. The `EditMediaComplete` callback and task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param SessionContext Identifies the source context which is used to pass through the user request information. The `EditMediaComplete` callback and task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used. 
-     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * Get  
+     * @return TasksPriority 
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
-     * @param TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * Set 
+     * @param TasksPriority 
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
@@ -270,22 +276,6 @@ public class EditMediaRequest extends AbstractModel {
         this.ExtInfo = ExtInfo;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public EditMediaRequest() {
     }
 
@@ -296,6 +286,9 @@ public class EditMediaRequest extends AbstractModel {
     public EditMediaRequest(EditMediaRequest source) {
         if (source.InputType != null) {
             this.InputType = new String(source.InputType);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.FileInfos != null) {
             this.FileInfos = new EditMediaFileInfo[source.FileInfos.length];
@@ -330,9 +323,6 @@ public class EditMediaRequest extends AbstractModel {
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -341,6 +331,7 @@ public class EditMediaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputType", this.InputType);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
@@ -350,7 +341,6 @@ public class EditMediaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

@@ -46,11 +46,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+    * 
     */
-    @SerializedName("HeadTailSet")
+    @SerializedName("CopyRightWatermark")
     @Expose
-    private HeadTailTaskInput [] HeadTailSet;
+    private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
     * List of blurs. Up to 10 ones can be supported.
@@ -60,14 +60,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MosaicInput [] MosaicSet;
 
     /**
-    * End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+    * List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
     */
-    @SerializedName("EndTimeOffset")
+    @SerializedName("HeadTailSet")
     @Expose
-    private Float EndTimeOffset;
+    private HeadTailTaskInput [] HeadTailSet;
 
     /**
     * Start time offset of a transcoded video, in seconds.
@@ -78,6 +75,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
+
+    /**
+    * End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+    */
+    @SerializedName("EndTimeOffset")
+    @Expose
+    private Float EndTimeOffset;
 
     /**
      * Get Video transcoding template ID. 
@@ -132,19 +139,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs. 
-     * @return HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     * Get  
+     * @return CopyRightWatermark 
      */
-    public HeadTailTaskInput [] getHeadTailSet() {
-        return this.HeadTailSet;
+    public CopyRightWatermarkInput getCopyRightWatermark() {
+        return this.CopyRightWatermark;
     }
 
     /**
-     * Set List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
-     * @param HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     * Set 
+     * @param CopyRightWatermark 
      */
-    public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
-        this.HeadTailSet = HeadTailSet;
+    public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
+        this.CopyRightWatermark = CopyRightWatermark;
     }
 
     /**
@@ -164,31 +171,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li> 
-     * @return EndTimeOffset End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * Get List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs. 
+     * @return HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
      */
-    public Float getEndTimeOffset() {
-        return this.EndTimeOffset;
+    public HeadTailTaskInput [] getHeadTailSet() {
+        return this.HeadTailSet;
     }
 
     /**
-     * Set End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * Set List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     * @param HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
      */
-    public void setEndTimeOffset(Float EndTimeOffset) {
-        this.EndTimeOffset = EndTimeOffset;
+    public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
+        this.HeadTailSet = HeadTailSet;
     }
 
     /**
@@ -219,6 +214,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.StartTimeOffset = StartTimeOffset;
     }
 
+    /**
+     * Get End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li> 
+     * @return EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     */
+    public Float getEndTimeOffset() {
+        return this.EndTimeOffset;
+    }
+
+    /**
+     * Set End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     */
+    public void setEndTimeOffset(Float EndTimeOffset) {
+        this.EndTimeOffset = EndTimeOffset;
+    }
+
     public TranscodeTaskInput() {
     }
 
@@ -239,11 +262,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TraceWatermark != null) {
             this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
         }
-        if (source.HeadTailSet != null) {
-            this.HeadTailSet = new HeadTailTaskInput[source.HeadTailSet.length];
-            for (int i = 0; i < source.HeadTailSet.length; i++) {
-                this.HeadTailSet[i] = new HeadTailTaskInput(source.HeadTailSet[i]);
-            }
+        if (source.CopyRightWatermark != null) {
+            this.CopyRightWatermark = new CopyRightWatermarkInput(source.CopyRightWatermark);
         }
         if (source.MosaicSet != null) {
             this.MosaicSet = new MosaicInput[source.MosaicSet.length];
@@ -251,11 +271,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
             }
         }
-        if (source.EndTimeOffset != null) {
-            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        if (source.HeadTailSet != null) {
+            this.HeadTailSet = new HeadTailTaskInput[source.HeadTailSet.length];
+            for (int i = 0; i < source.HeadTailSet.length; i++) {
+                this.HeadTailSet[i] = new HeadTailTaskInput(source.HeadTailSet[i]);
+            }
         }
         if (source.StartTimeOffset != null) {
             this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
     }
 
@@ -267,10 +293,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
-        this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
+        this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
-        this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+        this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
 
     }
 }

@@ -68,6 +68,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private AiReviewPoliticalOcrTaskOutput Output;
 
     /**
+    * 
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -171,6 +178,22 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.Output = Output;
     }
 
+    /**
+     * Get  
+     * @return Progress 
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 
+     * @param Progress 
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public AiReviewTaskPoliticalOcrResult() {
     }
 
@@ -197,6 +220,9 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.Output != null) {
             this.Output = new AiReviewPoliticalOcrTaskOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -210,6 +236,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

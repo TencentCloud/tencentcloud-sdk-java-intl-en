@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HeuristicCacheConfig extends AbstractModel {
 
     /**
-    * Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+    * 
     */
     @SerializedName("HeuristicCacheTimeSwitch")
     @Expose
@@ -38,16 +38,16 @@ public class HeuristicCacheConfig extends AbstractModel {
     private Long HeuristicCacheTime;
 
     /**
-     * Get Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li> 
-     * @return HeuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+     * Get  
+     * @return HeuristicCacheTimeSwitch 
      */
     public String getHeuristicCacheTimeSwitch() {
         return this.HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Set Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
-     * @param HeuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+     * Set 
+     * @param HeuristicCacheTimeSwitch 
      */
     public void setHeuristicCacheTimeSwitch(String HeuristicCacheTimeSwitch) {
         this.HeuristicCacheTimeSwitch = HeuristicCacheTimeSwitch;

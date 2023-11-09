@@ -588,7 +588,7 @@ public enum VodErrorCode {
     // Limit exceeded: the total number of new and old tags exceeds the limit.
      LIMITEXCEEDED_TAGCOUNTREACHMAX("LimitExceeded.TagCountReachMax"),
      
-    // Limit exceeded: the number of templates exceeds the limit.
+    // 
      LIMITEXCEEDED_TOOMUCHTEMPLATE("LimitExceeded.TooMuchTemplate"),
      
     // Missing parameter.

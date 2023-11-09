@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel {
 
     /**
-    * No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+    * 
     */
     @SerializedName("Revalidate")
     @Expose
     private String Revalidate;
 
     /**
-     * Get No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li> 
-     * @return Switch No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
-     * @param Switch No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li> 
-     * @return Revalidate Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+     * Get  
+     * @return Revalidate 
      */
     public String getRevalidate() {
         return this.Revalidate;
     }
 
     /**
-     * Set Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
-     * @param Revalidate Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+     * Set 
+     * @param Revalidate 
      */
     public void setRevalidate(String Revalidate) {
         this.Revalidate = Revalidate;

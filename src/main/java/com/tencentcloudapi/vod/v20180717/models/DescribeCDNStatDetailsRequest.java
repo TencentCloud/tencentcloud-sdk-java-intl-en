@@ -24,10 +24,7 @@ import java.util.HashMap;
 public class DescribeCDNStatDetailsRequest extends AbstractModel {
 
     /**
-    * Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+    * 
     */
     @SerializedName("Metric")
     @Expose
@@ -145,28 +142,16 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
     private Long DataInterval;
 
     /**
-     * Get Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li> 
-     * @return Metric Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+     * Get  
+     * @return Metric 
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
-     * @param Metric Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+     * Set 
+     * @param Metric 
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

@@ -6,6 +6,9 @@ public enum TeoErrorCode {
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
+    // Failed to publish: The certificate has expired. 
+     FAILEDOPERATION_CERTIFICATEHASEXPIRED("FailedOperation.CertificateHasExpired"),
+     
     // The certificate does not exist.
      FAILEDOPERATION_CERTIFICATENOTFOUND("FailedOperation.CertificateNotFound"),
      
@@ -57,11 +60,17 @@ public enum TeoErrorCode {
     // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
      
+    // The regex is not in the standard RE2 format.
+     INVALIDPARAMETER_ACCESSREDIRECTREGEXERROR("InvalidParameter.AccessRedirectRegexError"),
+     
     // Too many attempts. Please try again later.
      INVALIDPARAMETER_ACTIONINPROGRESS("InvalidParameter.ActionInProgress"),
      
     // Cu200dhinese SM certificates are not supported for alias domain names.
      INVALIDPARAMETER_ALIASDOMAINNOTSUPPORTSMCERT("InvalidParameter.AliasDomainNotSupportSMCert"),
+     
+    // Invalid query string.
+     INVALIDPARAMETER_CACHEKEYQUERYSTRINGREQUIRESFULLURLCACHEOFF("InvalidParameter.CacheKeyQueryStringRequiresFullUrlCacheOff"),
      
     // The query string has too many values.
      INVALIDPARAMETER_CACHEKEYQUERYSTRINGTOOMANYVALUE("InvalidParameter.CacheKeyQueryStringTooManyValue"),
@@ -99,6 +108,9 @@ public enum TeoErrorCode {
     // Invalid operation.
      INVALIDPARAMETER_ERRINVALIDACTION("InvalidParameter.ErrInvalidAction"),
      
+    // Invalid operation: Duplicate operation configuration.
+     INVALIDPARAMETER_ERRINVALIDACTIONDUPLICATEACTION("InvalidParameter.ErrInvalidActionDuplicateAction"),
+     
     // Invalid operation: Invalid parameter.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAM("InvalidParameter.ErrInvalidActionParam"),
      
@@ -117,11 +129,17 @@ public enum TeoErrorCode {
     // Invalid parameter: The parameter has too many values.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMTOOMANYVALUES("InvalidParameter.ErrInvalidActionParamTooManyValues"),
      
-    // 
+    // Invalid action.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMVALUE("InvalidParameter.ErrInvalidActionParamValue"),
      
     // Invalid action type.
      INVALIDPARAMETER_ERRINVALIDACTIONTYPE("InvalidParameter.ErrInvalidActionType"),
+     
+    // Invalid conditions.
+     INVALIDPARAMETER_ERRINVALIDCONDITION("InvalidParameter.ErrInvalidCondition"),
+     
+    // You can only configure one host matching type when modifying the origin.
+     INVALIDPARAMETER_ERRINVALIDCONDITIONHOSTTOOMANYWHENMODIFYORIGINACTIONCONFIGURED("InvalidParameter.ErrInvalidConditionHostTooManyWhenModifyOriginActionConfigured"),
      
     // Invalid condition: The letter case is ignored.
      INVALIDPARAMETER_ERRINVALIDCONDITIONIGNORECASE("InvalidParameter.ErrInvalidConditionIgnoreCase"),
@@ -165,6 +183,9 @@ public enum TeoErrorCode {
     // To enable gRPC support, HTTP/2 support must be enabled as well.
      INVALIDPARAMETER_GRPCREQUIREHTTP2("InvalidParameter.GrpcRequireHttp2"),
      
+    // 
+     INVALIDPARAMETER_HOSTHEADERINVALID("InvalidParameter.HostHeaderInvalid"),
+     
     // The domain name does not exist.
      INVALIDPARAMETER_HOSTNOTFOUND("InvalidParameter.HostNotFound"),
      
@@ -192,6 +213,12 @@ public enum TeoErrorCode {
     // Invalid third-party object storage.
      INVALIDPARAMETER_INVALIDAWSPRIVATEACCESS("InvalidParameter.InvalidAwsPrivateAccess"),
      
+    // Invalid region. Please fill in a correct region of the third-party object storage service.
+     INVALIDPARAMETER_INVALIDAWSREGION("InvalidParameter.InvalidAwsRegion"),
+     
+    // 
+     INVALIDPARAMETER_INVALIDAWSSECRETKEY("InvalidParameter.InvalidAwsSecretKey"),
+     
     // Invalid secondary origin domain.
      INVALIDPARAMETER_INVALIDBACKUPSERVERNAME("InvalidParameter.InvalidBackupServerName"),
      
@@ -204,7 +231,7 @@ public enum TeoErrorCode {
     // Invalid cache key.
      INVALIDPARAMETER_INVALIDCACHEKEY("InvalidParameter.InvalidCacheKey"),
      
-    // 
+    // Invalid cache key cookie.
      INVALIDPARAMETER_INVALIDCACHEKEYCOOKIE("InvalidParameter.InvalidCacheKeyCookie"),
      
     // Cases are ignored in the cache key.
@@ -231,6 +258,9 @@ public enum TeoErrorCode {
     // Invalid origin for region-specific origin-pull.
      INVALIDPARAMETER_INVALIDCLIENTIPORIGIN("InvalidParameter.InvalidClientIpOrigin"),
      
+    // Invalid origin-pull configuration. When `OriginType` is `COS` or `AWS_S3`, the origin address must be an object storage domain name.
+     INVALIDPARAMETER_INVALIDCOSDOMAIN("InvalidParameter.InvalidCosDomain"),
+     
     // Invalid smart acceleration.
      INVALIDPARAMETER_INVALIDDYNAMICROUTINE("InvalidParameter.InvalidDynamicRoutine"),
      
@@ -242,6 +272,9 @@ public enum TeoErrorCode {
      
     // Invalid custom error page.
      INVALIDPARAMETER_INVALIDERRORPAGEREDIRECTURL("InvalidParameter.InvalidErrorPageRedirectUrl"),
+     
+    // Invalid forced HTTPS direction settings
+     INVALIDPARAMETER_INVALIDFORCEREDIRECTTYPE("InvalidParameter.InvalidForceRedirectType"),
      
     // Invalid parameter "https".
      INVALIDPARAMETER_INVALIDHTTPS("InvalidParameter.InvalidHttps"),
@@ -281,6 +314,9 @@ public enum TeoErrorCode {
      
     // AccessKeyId and SecretAccessKey u200dare required to access the third-party object storage.
      INVALIDPARAMETER_INVALIDPRIVATEACCESSPARAMS("InvalidParameter.InvalidPrivateAccessParams"),
+     
+    // 
+     INVALIDPARAMETER_INVALIDPRIVATEACCESSSWITCH("InvalidParameter.InvalidPrivateAccessSwitch"),
      
     // The plan does not support QUIC.
      INVALIDPARAMETER_INVALIDQUICBILLING("InvalidParameter.InvalidQuicBilling"),
@@ -363,8 +399,14 @@ public enum TeoErrorCode {
     // The origin address cannot be a private IP address.
      INVALIDPARAMETER_ORIGINISINNERIP("InvalidParameter.OriginIsInnerIp"),
      
+    // 
+     INVALIDPARAMETER_ORIGINNAMEEXISTS("InvalidParameter.OriginNameExists"),
+     
     // The origin group ID is required.
      INVALIDPARAMETER_ORIGINORIGINGROUPIDISREQUIRED("InvalidParameter.OriginOriginGroupIdIsRequired"),
+     
+    // 
+     INVALIDPARAMETER_ORIGINRECORDFORMATERROR("InvalidParameter.OriginRecordFormatError"),
      
     // Parameter error: Invalid “End time”. The interval between the start and end time cannot exceed 7 days.
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
@@ -375,13 +417,28 @@ public enum TeoErrorCode {
     // Maximum upload size exceeded.
      INVALIDPARAMETER_POSTMAXSIZELIMITEXCEEDED("InvalidParameter.PostMaxSizeLimitExceeded"),
      
+    // 
+     INVALIDPARAMETER_PROXYNAMEDUPLICATING("InvalidParameter.ProxyNameDuplicating"),
+     
+    // 
+     INVALIDPARAMETER_RULEORIGINMULTIDOMAIN("InvalidParameter.RuleOriginMultiDomain"),
+     
+    // 
+     INVALIDPARAMETER_RULEORIGINPORTINTEGER("InvalidParameter.RuleOriginPortInteger"),
+     
+    // Invalid origin in the rule.
+     INVALIDPARAMETER_RULEORIGINVALUEERROR("InvalidParameter.RuleOriginValueError"),
+     
+    // 
+     INVALIDPARAMETER_RULEPORTDUPLICATING("InvalidParameter.RulePortDuplicating"),
+     
     // Invalid parameter.
      INVALIDPARAMETER_SECURITY("InvalidParameter.Security"),
      
     // Configuration parameter error.
      INVALIDPARAMETER_SETTINGINVALIDPARAM("InvalidParameter.SettingInvalidParam"),
      
-    // 
+    // Shield Space is not bound with an origin. 
      INVALIDPARAMETER_SPACENOTBINDORIGIN("InvalidParameter.SpaceNotBindOrigin"),
      
     // Resource error
@@ -393,14 +450,20 @@ public enum TeoErrorCode {
     // Internal error.
      INVALIDPARAMETER_TASKSYSTEMERROR("InvalidParameter.TaskSystemError"),
      
+    // Too many filter values.
+     INVALIDPARAMETER_TOOMANYFILTERVALUES("InvalidParameter.TooManyFilterValues"),
+     
     // Invalid file upload link.
      INVALIDPARAMETER_UPLOADURL("InvalidParameter.UploadUrl"),
      
     // The site is already bound.
      INVALIDPARAMETER_ZONEHASBEENBOUND("InvalidParameter.ZoneHasBeenBound"),
      
-    // 
+    // The site is being upgraded. Changing is not supported. Please try again later.
      INVALIDPARAMETER_ZONEISGRAYPUBLISHING("InvalidParameter.ZoneIsGrayPublishing"),
+     
+    // To switch a site from connecting without a domain name to connecting via the CNAME, the site name is required.
+     INVALIDPARAMETER_ZONENAMEISREQUIRED("InvalidParameter.ZoneNameIsRequired"),
      
     // The site does not exist.
      INVALIDPARAMETER_ZONENOTFOUND("InvalidParameter.ZoneNotFound"),
@@ -423,6 +486,9 @@ public enum TeoErrorCode {
     // The specified domain name does not match the site. 
      INVALIDPARAMETERVALUE_DOMAINNOTMATCHZONE("InvalidParameterValue.DomainNotMatchZone"),
      
+    // 
+     INVALIDPARAMETERVALUE_INVALIDALIASNAMESUFFIX("InvalidParameterValue.InvalidAliasNameSuffix"),
+     
     // Incorrect DNS record.
      INVALIDPARAMETERVALUE_INVALIDDNSCONTENT("InvalidParameterValue.InvalidDNSContent"),
      
@@ -438,8 +504,14 @@ public enum TeoErrorCode {
     // Incorrect DNS proxy
      INVALIDPARAMETERVALUE_INVALIDPROXYORIGIN("InvalidParameterValue.InvalidProxyOrigin"),
      
-    // 
+    // Wildcard domain CNAMEs are not supported.
+     INVALIDPARAMETERVALUE_NOTALLOWEDWILDCARDSHAREDCNAME("InvalidParameterValue.NotAllowedWildcardSharedCNAME"),
+     
+    // The specified origin group does not exist.
      INVALIDPARAMETERVALUE_ORIGINGROUPNOTEXISTS("InvalidParameterValue.OriginGroupNotExists"),
+     
+    // Enter a valid shared CNAME prefix of up to 50 characters.
+     INVALIDPARAMETERVALUE_SHAREDCNAMEPREFIXNOTMATCH("InvalidParameterValue.SharedCNAMEPrefixNotMatch"),
      
     // The site alias already exists. 
      INVALIDPARAMETERVALUE_ZONESAMEASNAME("InvalidParameterValue.ZoneSameAsName"),
@@ -462,6 +534,12 @@ public enum TeoErrorCode {
     // Reached the API rate limit.
      LIMITEXCEEDED_RATELIMITEXCEEDED("LimitExceeded.RateLimitExceeded"),
      
+    // Limit exceeded
+     LIMITEXCEEDED_SECURITY("LimitExceeded.Security"),
+     
+    // Reached the upper limit of sites of the plan
+     LIMITEXCEEDED_ZONEBINDPLAN("LimitExceeded.ZoneBindPlan"),
+     
     // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
@@ -472,6 +550,9 @@ public enum TeoErrorCode {
      OPERATIONDENIED_ACCELERATEMAINLANDIPV6CONFLICT("OperationDenied.AccelerateMainlandIpv6Conflict"),
      
     // 
+     OPERATIONDENIED_ACCELERATIONDOMAINSTATUSNOTINONLINE("OperationDenied.AccelerationDomainStatusNotInOnline"),
+     
+    // The configuration is locked. Please unlock and try again.
      OPERATIONDENIED_CONFIGLOCKED("OperationDenied.ConfigLocked"),
      
     // The EdgeOne service of the site is being disabled. Please try again later.
@@ -513,11 +594,29 @@ public enum TeoErrorCode {
     // The EdgeOne service cannot be disabled for the site: An accelerated domain name is being deployed.
      OPERATIONDENIED_L7HOSTINPROCESSSTATUS("OperationDenied.L7HostInProcessStatus"),
      
+    // 
+     OPERATIONDENIED_LOADBALANCINGZONEISNOTACTIVE("OperationDenied.LoadBalancingZoneIsNotActive"),
+     
     // Unable to switch to NS for multiple sites using CNAME.
      OPERATIONDENIED_MULTIPLECNAMEZONE("OperationDenied.MultipleCnameZone"),
      
     // Domain traffic scheduling is not supported in NS access mode.
      OPERATIONDENIED_NSNOTALLOWTRAFFICSTRATEGY("OperationDenied.NSNotAllowTrafficStrategy"),
+     
+    // You can only switch a site connected without a domain name to connecting via the CNAME
+     OPERATIONDENIED_NODOMAINACCESSZONEONLYALLOWMODIFIEDTOCNAME("OperationDenied.NoDomainAccessZoneOnlyAllowModifiedToCNAME"),
+     
+    // You can only switch a site connected without a domain name to connecting via the CNAME. Other operations are not allowed.
+     OPERATIONDENIED_NODOMAINACCESSZONEONLYSUPPORTMODIFYTYPE("OperationDenied.NoDomainAccessZoneOnlySupportModifyType"),
+     
+    // 
+     OPERATIONDENIED_ORIGINGROUPACCELERATIONDOMAINUSED("OperationDenied.OriginGroupAccelerationDomainUsed"),
+     
+    // The specified plan does not support changing the service area of the site.
+     OPERATIONDENIED_PLANNOTSUPPORTMODIFYZONEAREA("OperationDenied.PlanNotSupportModifyZoneArea"),
+     
+    // 
+     OPERATIONDENIED_PLATTYPEIPACCELERATEMAINLANDNOTSUPPORT("OperationDenied.PlatTypeIPAccelerateMainlandNotSupport"),
      
     // The DNS record cannot be added.
      OPERATIONDENIED_RECORDISFORBIDDEN("OperationDenied.RecordIsForbidden"),
@@ -525,14 +624,20 @@ public enum TeoErrorCode {
     // This operation conflicts with concurrent operations. Try again later.
      OPERATIONDENIED_RESOURCELOCKEDTEMPORARY("OperationDenied.ResourceLockedTemporary"),
      
-    // 
+    // The domain name is bound with a shared CNAME and cannot be changed to "Cross-MLC-border acceleration". Please unbind the domain name from the shared CNAME first.
      OPERATIONDENIED_SHAREDCNAMEUNSUPPORTEDACCELERATEMAINLAND("OperationDenied.SharedCNAMEUnsupportedAccelerateMainland"),
      
-    // 
+    // The domain name is bound with a shared CNAME and cannot be changed to "IPv6 access". Please unbind the domain name from the shared CNAME first.
      OPERATIONDENIED_SHAREDCNAMEUNSUPPORTEDIPV6("OperationDenied.SharedCNAMEUnsupportedIPv6"),
      
-    // 
+    // There is a test version in use. Please release the test version to the live environment, or roll back the test version and try again.
+     OPERATIONDENIED_VERSIONCONTROLISGRAYING("OperationDenied.VersionControlIsGraying"),
+     
+    // The shared CNAME has been bound to another site. Please unbind first.
      OPERATIONDENIED_ZONEISBINDINGSHAREDCNAME("OperationDenied.ZoneIsBindingSharedCNAME"),
+     
+    // 
+     OPERATIONDENIED_ZONEISREFERENCECUSTOMERRORPAGE("OperationDenied.ZoneIsReferenceCustomErrorPage"),
      
     // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),
@@ -582,6 +687,9 @@ public enum TeoErrorCode {
     // Resources occupied by this account and others via CNAME.
      RESOURCEINUSE_SELFANDOTHERSCNAME("ResourceInUse.SelfAndOthersCname"),
      
+    // Unable to delete the shared CNAME: It is bound to an acceleration domain name. Please remove the binding first.
+     RESOURCEINUSE_SHAREDCNAME("ResourceInUse.SharedCNAME"),
+     
     // The alias domain name is already added.
      RESOURCEINUSE_ZONE("ResourceInUse.Zone"),
      
@@ -608,6 +716,9 @@ public enum TeoErrorCode {
      
     // The domain name does not exist or not use a proxy.
      RESOURCEUNAVAILABLE_HOSTNOTFOUND("ResourceUnavailable.HostNotFound"),
+     
+    // The shared CNAME is used by others.
+     RESOURCEUNAVAILABLE_SHAREDCNAMEALREADYEXISTS("ResourceUnavailable.SharedCNAMEAlreadyExists"),
      
     // The site does not exist or is not belong to this account.
      RESOURCEUNAVAILABLE_ZONENOTFOUND("ResourceUnavailable.ZoneNotFound"),

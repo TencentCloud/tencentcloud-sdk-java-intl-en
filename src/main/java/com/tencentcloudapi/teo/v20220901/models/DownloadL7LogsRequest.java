@@ -52,7 +52,7 @@ public class DownloadL7LogsRequest extends AbstractModel {
     private String [] Domains;
 
     /**
-    * Limit on paginated queries. Default value: 20. Maximum value: 1000.
+    * Limit on paginated queries. Default value: 20. Maximum value: 300.
     */
     @SerializedName("Limit")
     @Expose
@@ -130,16 +130,16 @@ public class DownloadL7LogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 20. Maximum value: 1000. 
-     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * Get Limit on paginated queries. Default value: 20. Maximum value: 300. 
+     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
-     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * Set Limit on paginated queries. Default value: 20. Maximum value: 300.
+     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

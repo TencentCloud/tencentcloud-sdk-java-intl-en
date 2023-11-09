@@ -33,7 +33,7 @@ public class StandardDebug extends AbstractModel {
     private String Switch;
 
     /**
-    * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+    * Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
     */
     @SerializedName("AllowClientIPList")
     @Expose
@@ -71,16 +71,16 @@ public class StandardDebug extends AbstractModel {
     }
 
     /**
-     * Get The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP 
-     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * Get Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks. 
+     * @return AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
      */
     public String [] getAllowClientIPList() {
         return this.AllowClientIPList;
     }
 
     /**
-     * Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-     * @param AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * Set Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+     * @param AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
      */
     public void setAllowClientIPList(String [] AllowClientIPList) {
         this.AllowClientIPList = AllowClientIPList;

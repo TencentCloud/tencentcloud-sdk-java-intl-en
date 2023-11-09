@@ -75,148 +75,144 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private String FinishTime;
 
     /**
-    * Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ProcedureTask")
     @Expose
     private ProcedureTask ProcedureTask;
 
     /**
-    * Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EditMediaTask")
     @Expose
     private EditMediaTask EditMediaTask;
 
     /**
-    * Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WechatPublishTask")
     @Expose
     private WechatPublishTask WechatPublishTask;
 
     /**
-    * Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ComposeMediaTask")
     @Expose
     private ComposeMediaTask ComposeMediaTask;
 
     /**
-    * Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SplitMediaTask")
     @Expose
     private SplitMediaTask SplitMediaTask;
 
     /**
-    * Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WechatMiniProgramPublishTask")
     @Expose
     private WechatMiniProgramPublishTask WechatMiniProgramPublishTask;
 
     /**
-    * Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("PullUploadTask")
     @Expose
     private PullUploadTask PullUploadTask;
 
     /**
-    * Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TranscodeTask")
     @Expose
     private TranscodeTask2017 TranscodeTask;
 
     /**
-    * Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ConcatTask")
     @Expose
     private ConcatTask2017 ConcatTask;
 
     /**
-    * Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ClipTask")
     @Expose
     private ClipTask2017 ClipTask;
 
     /**
-    * Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CreateImageSpriteTask")
     @Expose
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
-    * Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask;
 
     /**
-    * The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RemoveWatermarkTask")
     @Expose
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
-    * The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RebuildMediaTask")
     @Expose
     private RebuildMediaTask RebuildMediaTask;
 
     /**
-    * The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ExtractTraceWatermarkTask")
     @Expose
     private ExtractTraceWatermarkTask ExtractTraceWatermarkTask;
 
     /**
-    * The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+    */
+    @SerializedName("ExtractCopyRightWatermarkTask")
+    @Expose
+    private ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask;
+
+    /**
+    * 
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
     private ReviewAudioVideoTask ReviewAudioVideoTask;
 
     /**
-    * This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ReduceMediaBitrateTask")
     @Expose
     private ReduceMediaBitrateTask ReduceMediaBitrateTask;
 
     /**
-    * The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DescribeFileAttributesTask")
     @Expose
     private DescribeFileAttributesTask DescribeFileAttributesTask;
+
+    /**
+    * 
+    */
+    @SerializedName("QualityInspectTask")
+    @Expose
+    private QualityInspectTask QualityInspectTask;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -370,363 +366,323 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProcedureTask Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ProcedureTask 
      */
     public ProcedureTask getProcedureTask() {
         return this.ProcedureTask;
     }
 
     /**
-     * Set Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProcedureTask Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ProcedureTask 
      */
     public void setProcedureTask(ProcedureTask ProcedureTask) {
         this.ProcedureTask = ProcedureTask;
     }
 
     /**
-     * Get Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EditMediaTask 
      */
     public EditMediaTask getEditMediaTask() {
         return this.EditMediaTask;
     }
 
     /**
-     * Set Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EditMediaTask 
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
         this.EditMediaTask = EditMediaTask;
     }
 
     /**
-     * Get Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatPublishTask Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WechatPublishTask 
      */
     public WechatPublishTask getWechatPublishTask() {
         return this.WechatPublishTask;
     }
 
     /**
-     * Set Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatPublishTask Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WechatPublishTask 
      */
     public void setWechatPublishTask(WechatPublishTask WechatPublishTask) {
         this.WechatPublishTask = WechatPublishTask;
     }
 
     /**
-     * Get Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ComposeMediaTask Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ComposeMediaTask 
      */
     public ComposeMediaTask getComposeMediaTask() {
         return this.ComposeMediaTask;
     }
 
     /**
-     * Set Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComposeMediaTask Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ComposeMediaTask 
      */
     public void setComposeMediaTask(ComposeMediaTask ComposeMediaTask) {
         this.ComposeMediaTask = ComposeMediaTask;
     }
 
     /**
-     * Get Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get  
+     * @return SplitMediaTask 
      */
     public SplitMediaTask getSplitMediaTask() {
         return this.SplitMediaTask;
     }
 
     /**
-     * Set Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set 
+     * @param SplitMediaTask 
      */
     public void setSplitMediaTask(SplitMediaTask SplitMediaTask) {
         this.SplitMediaTask = SplitMediaTask;
     }
 
     /**
-     * Get Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WechatMiniProgramPublishTask 
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
         return this.WechatMiniProgramPublishTask;
     }
 
     /**
-     * Set Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WechatMiniProgramPublishTask 
      */
     public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
         this.WechatMiniProgramPublishTask = WechatMiniProgramPublishTask;
     }
 
     /**
-     * Get Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return PullUploadTask 
      */
     public PullUploadTask getPullUploadTask() {
         return this.PullUploadTask;
     }
 
     /**
-     * Set Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param PullUploadTask 
      */
     public void setPullUploadTask(PullUploadTask PullUploadTask) {
         this.PullUploadTask = PullUploadTask;
     }
 
     /**
-     * Get Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TranscodeTask Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TranscodeTask 
      */
     public TranscodeTask2017 getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTask Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TranscodeTask 
      */
     public void setTranscodeTask(TranscodeTask2017 TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConcatTask Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ConcatTask 
      */
     public ConcatTask2017 getConcatTask() {
         return this.ConcatTask;
     }
 
     /**
-     * Set Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConcatTask Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ConcatTask 
      */
     public void setConcatTask(ConcatTask2017 ConcatTask) {
         this.ConcatTask = ConcatTask;
     }
 
     /**
-     * Get Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClipTask Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ClipTask 
      */
     public ClipTask2017 getClipTask() {
         return this.ClipTask;
     }
 
     /**
-     * Set Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClipTask Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ClipTask 
      */
     public void setClipTask(ClipTask2017 ClipTask) {
         this.ClipTask = ClipTask;
     }
 
     /**
-     * Get Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreateImageSpriteTask Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CreateImageSpriteTask 
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteTask() {
         return this.CreateImageSpriteTask;
     }
 
     /**
-     * Set Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateImageSpriteTask Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CreateImageSpriteTask 
      */
     public void setCreateImageSpriteTask(CreateImageSpriteTask2017 CreateImageSpriteTask) {
         this.CreateImageSpriteTask = CreateImageSpriteTask;
     }
 
     /**
-     * Get Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SnapshotByTimeOffsetTask 
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SnapshotByTimeOffsetTask 
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RemoveWatermarkTask 
      */
     public RemoveWatermarkTask getRemoveWatermarkTask() {
         return this.RemoveWatermarkTask;
     }
 
     /**
-     * Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RemoveWatermarkTask 
      */
     public void setRemoveWatermarkTask(RemoveWatermarkTask RemoveWatermarkTask) {
         this.RemoveWatermarkTask = RemoveWatermarkTask;
     }
 
     /**
-     * Get The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RebuildMediaTask 
      */
     public RebuildMediaTask getRebuildMediaTask() {
         return this.RebuildMediaTask;
     }
 
     /**
-     * Set The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RebuildMediaTask 
      */
     public void setRebuildMediaTask(RebuildMediaTask RebuildMediaTask) {
         this.RebuildMediaTask = RebuildMediaTask;
     }
 
     /**
-     * Get The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ExtractTraceWatermarkTask 
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkTask() {
         return this.ExtractTraceWatermarkTask;
     }
 
     /**
-     * Set The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ExtractTraceWatermarkTask 
      */
     public void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask ExtractTraceWatermarkTask) {
         this.ExtractTraceWatermarkTask = ExtractTraceWatermarkTask;
     }
 
     /**
-     * Get The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ExtractCopyRightWatermarkTask 
+     */
+    public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() {
+        return this.ExtractCopyRightWatermarkTask;
+    }
+
+    /**
+     * Set 
+     * @param ExtractCopyRightWatermarkTask 
+     */
+    public void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask) {
+        this.ExtractCopyRightWatermarkTask = ExtractCopyRightWatermarkTask;
+    }
+
+    /**
+     * Get  
+     * @return ReviewAudioVideoTask 
      */
     public ReviewAudioVideoTask getReviewAudioVideoTask() {
         return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ReviewAudioVideoTask 
      */
     public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;
     }
 
     /**
-     * Get This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReduceMediaBitrateTask This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ReduceMediaBitrateTask 
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateTask() {
         return this.ReduceMediaBitrateTask;
     }
 
     /**
-     * Set This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateTask This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ReduceMediaBitrateTask 
      */
     public void setReduceMediaBitrateTask(ReduceMediaBitrateTask ReduceMediaBitrateTask) {
         this.ReduceMediaBitrateTask = ReduceMediaBitrateTask;
     }
 
     /**
-     * Get The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DescribeFileAttributesTask 
      */
     public DescribeFileAttributesTask getDescribeFileAttributesTask() {
         return this.DescribeFileAttributesTask;
     }
 
     /**
-     * Set The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DescribeFileAttributesTask 
      */
     public void setDescribeFileAttributesTask(DescribeFileAttributesTask DescribeFileAttributesTask) {
         this.DescribeFileAttributesTask = DescribeFileAttributesTask;
+    }
+
+    /**
+     * Get  
+     * @return QualityInspectTask 
+     */
+    public QualityInspectTask getQualityInspectTask() {
+        return this.QualityInspectTask;
+    }
+
+    /**
+     * Set 
+     * @param QualityInspectTask 
+     */
+    public void setQualityInspectTask(QualityInspectTask QualityInspectTask) {
+        this.QualityInspectTask = QualityInspectTask;
     }
 
     /**
@@ -813,6 +769,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ExtractTraceWatermarkTask != null) {
             this.ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkTask);
         }
+        if (source.ExtractCopyRightWatermarkTask != null) {
+            this.ExtractCopyRightWatermarkTask = new ExtractCopyRightWatermarkTask(source.ExtractCopyRightWatermarkTask);
+        }
         if (source.ReviewAudioVideoTask != null) {
             this.ReviewAudioVideoTask = new ReviewAudioVideoTask(source.ReviewAudioVideoTask);
         }
@@ -821,6 +780,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.DescribeFileAttributesTask != null) {
             this.DescribeFileAttributesTask = new DescribeFileAttributesTask(source.DescribeFileAttributesTask);
+        }
+        if (source.QualityInspectTask != null) {
+            this.QualityInspectTask = new QualityInspectTask(source.QualityInspectTask);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -852,9 +814,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
         this.setParamObj(map, prefix + "RebuildMediaTask.", this.RebuildMediaTask);
         this.setParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
+        this.setParamObj(map, prefix + "ExtractCopyRightWatermarkTask.", this.ExtractCopyRightWatermarkTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
         this.setParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
+        this.setParamObj(map, prefix + "QualityInspectTask.", this.QualityInspectTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

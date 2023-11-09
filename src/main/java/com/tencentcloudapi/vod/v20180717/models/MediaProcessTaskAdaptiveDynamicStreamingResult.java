@@ -73,6 +73,20 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     private AdaptiveDynamicStreamingInfoItem Output;
 
     /**
+    * 
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * 
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -184,6 +198,38 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         this.Output = Output;
     }
 
+    /**
+     * Get  
+     * @return BeginProcessTime 
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set 
+     * @param BeginProcessTime 
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get  
+     * @return FinishTime 
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 
+     * @param FinishTime 
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public MediaProcessTaskAdaptiveDynamicStreamingResult() {
     }
 
@@ -213,6 +259,12 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         if (source.Output != null) {
             this.Output = new AdaptiveDynamicStreamingInfoItem(source.Output);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

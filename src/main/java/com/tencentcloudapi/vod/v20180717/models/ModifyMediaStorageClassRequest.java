@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyMediaStorageClassRequest extends AbstractModel {
 
     /**
-    * The unique IDs of media files
+    * 
     */
     @SerializedName("FileIds")
     @Expose
@@ -63,16 +63,16 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     private String RestoreTier;
 
     /**
-     * Get The unique IDs of media files 
-     * @return FileIds The unique IDs of media files
+     * Get  
+     * @return FileIds 
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set The unique IDs of media files
-     * @param FileIds The unique IDs of media files
+     * Set 
+     * @param FileIds 
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;

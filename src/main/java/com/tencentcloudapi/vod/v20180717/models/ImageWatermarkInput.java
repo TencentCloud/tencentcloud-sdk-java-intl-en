@@ -61,6 +61,13 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
     private String RepeatType;
 
     /**
+    * 
+    */
+    @SerializedName("Transparency")
+    @Expose
+    private Long Transparency;
+
+    /**
      * Get The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported. 
      * @return ImageContent The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
      */
@@ -160,6 +167,22 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
         this.RepeatType = RepeatType;
     }
 
+    /**
+     * Get  
+     * @return Transparency 
+     */
+    public Long getTransparency() {
+        return this.Transparency;
+    }
+
+    /**
+     * Set 
+     * @param Transparency 
+     */
+    public void setTransparency(Long Transparency) {
+        this.Transparency = Transparency;
+    }
+
     public ImageWatermarkInput() {
     }
 
@@ -180,6 +203,9 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
         if (source.RepeatType != null) {
             this.RepeatType = new String(source.RepeatType);
         }
+        if (source.Transparency != null) {
+            this.Transparency = new Long(source.Transparency);
+        }
     }
 
 
@@ -191,6 +217,7 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "RepeatType", this.RepeatType);
+        this.setParamSimple(map, prefix + "Transparency", this.Transparency);
 
     }
 }

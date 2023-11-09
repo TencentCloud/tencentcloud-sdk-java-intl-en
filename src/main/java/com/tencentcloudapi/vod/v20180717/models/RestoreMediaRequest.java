@@ -31,6 +31,13 @@ public class RestoreMediaRequest extends AbstractModel {
     private String [] FileIds;
 
     /**
+    * The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * The number of days during which the restored files will remain available.
     */
     @SerializedName("RestoreDay")
@@ -51,13 +58,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     private String RestoreTier;
 
     /**
-    * The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get The IDs of media files. 
      * @return FileIds The IDs of media files.
      */
@@ -71,6 +71,22 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
+    }
+
+    /**
+     * Get The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty. 
+     * @return SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     * @param SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -129,22 +145,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
         this.RestoreTier = RestoreTier;
     }
 
-    /**
-     * Get The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty. 
-     * @return SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     * @param SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public RestoreMediaRequest() {
     }
 
@@ -159,14 +159,14 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.RestoreDay != null) {
             this.RestoreDay = new Long(source.RestoreDay);
         }
         if (source.RestoreTier != null) {
             this.RestoreTier = new String(source.RestoreTier);
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
     }
 
@@ -176,9 +176,9 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
         this.setParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

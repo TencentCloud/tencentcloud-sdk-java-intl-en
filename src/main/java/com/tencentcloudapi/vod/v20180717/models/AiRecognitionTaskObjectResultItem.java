@@ -38,6 +38,13 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     private AiRecognitionTaskObjectSeqmentItem [] SegmentSet;
 
     /**
+    * 
+    */
+    @SerializedName("RecognitionSegmentSet")
+    @Expose
+    private AiRecognitionTaskObjectSegmentItem [] RecognitionSegmentSet;
+
+    /**
      * Get Name of recognized object. 
      * @return Name Name of recognized object.
      */
@@ -56,7 +63,9 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     /**
      * Get List of segments that contain an object. 
      * @return SegmentSet List of segments that contain an object.
+     * @deprecated
      */
+    @Deprecated
     public AiRecognitionTaskObjectSeqmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
@@ -64,9 +73,27 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     /**
      * Set List of segments that contain an object.
      * @param SegmentSet List of segments that contain an object.
+     * @deprecated
      */
+    @Deprecated
     public void setSegmentSet(AiRecognitionTaskObjectSeqmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get  
+     * @return RecognitionSegmentSet 
+     */
+    public AiRecognitionTaskObjectSegmentItem [] getRecognitionSegmentSet() {
+        return this.RecognitionSegmentSet;
+    }
+
+    /**
+     * Set 
+     * @param RecognitionSegmentSet 
+     */
+    public void setRecognitionSegmentSet(AiRecognitionTaskObjectSegmentItem [] RecognitionSegmentSet) {
+        this.RecognitionSegmentSet = RecognitionSegmentSet;
     }
 
     public AiRecognitionTaskObjectResultItem() {
@@ -86,6 +113,12 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
                 this.SegmentSet[i] = new AiRecognitionTaskObjectSeqmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.RecognitionSegmentSet != null) {
+            this.RecognitionSegmentSet = new AiRecognitionTaskObjectSegmentItem[source.RecognitionSegmentSet.length];
+            for (int i = 0; i < source.RecognitionSegmentSet.length; i++) {
+                this.RecognitionSegmentSet[i] = new AiRecognitionTaskObjectSegmentItem(source.RecognitionSegmentSet[i]);
+            }
+        }
     }
 
 
@@ -95,6 +128,7 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamArrayObj(map, prefix + "RecognitionSegmentSet.", this.RecognitionSegmentSet);
 
     }
 }

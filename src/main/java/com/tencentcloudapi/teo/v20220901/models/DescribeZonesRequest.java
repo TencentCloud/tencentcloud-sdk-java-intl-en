@@ -31,37 +31,37 @@ public class DescribeZonesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * The paginated query limit. Default value: 20. Maximum value: 1000.
+    * Limit on paginated queries. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+    * Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * The sorting field. Values:
-<li>`type`: Access mode</li>
+    * Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+    * Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
     */
     @SerializedName("Direction")
     @Expose
@@ -84,100 +84,100 @@ public class DescribeZonesRequest extends AbstractModel {
     }
 
     /**
-     * Get The paginated query limit. Default value: 20. Maximum value: 1000. 
-     * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Get Limit on paginated queries. Default value: 20. Maximum value: 100. 
+     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Set Limit on paginated queries. Default value: 20. Maximum value: 100.
+     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query. 
-     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+     * Get Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query. 
+     * @return Filters Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
-     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+     * Set Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
+     * @param Filters Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The sorting field. Values:
-<li>`type`: Access mode</li>
+     * Get Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used. 
-     * @return Order The sorting field. Values:
-<li>`type`: Access mode</li>
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time` 
+     * @return Order Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set The sorting field. Values:
-<li>`type`: Access mode</li>
+     * Set Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
-     * @param Order The sorting field. Values:
-<li>`type`: Access mode</li>
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
+     * @param Order Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used. 
-     * @return Direction The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     * Get Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc` 
+     * @return Direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
-     * @param Direction The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     * Set Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+     * @param Direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

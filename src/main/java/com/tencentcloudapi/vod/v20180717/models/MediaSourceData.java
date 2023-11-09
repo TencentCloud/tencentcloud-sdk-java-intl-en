@@ -24,24 +24,25 @@ import java.util.HashMap;
 public class MediaSourceData extends AbstractModel {
 
     /**
-    * Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
+    * Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * User-transparent transmission field when creating a file.
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
+
+    /**
+    * Live streaming recording information, valid when the file source is Record.
+    */
+    @SerializedName("LiveRecordInfo")
+    @Expose
+    private LiveRecordInfo LiveRecordInfo;
 
     /**
     * The TRTC recording information.
@@ -52,59 +53,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TrtcRecordInfo TrtcRecordInfo;
 
     /**
-     * Get Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li> 
-     * @return SourceType Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
+    * Panoramic recording information, valid when the file source is WebPageRecord.
+    */
+    @SerializedName("WebPageRecordInfo")
+    @Expose
+    private WebPageRecordInfo WebPageRecordInfo;
+
+    /**
+     * Get Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li> 
+     * @return SourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
-     * @param SourceType Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
+     * Set Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+     * @param SourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SourceContext Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get User-transparent transmission field when creating a file. 
+     * @return SourceContext User-transparent transmission field when creating a file.
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SourceContext Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set User-transparent transmission field when creating a file.
+     * @param SourceContext User-transparent transmission field when creating a file.
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;
+    }
+
+    /**
+     * Get Live streaming recording information, valid when the file source is Record. 
+     * @return LiveRecordInfo Live streaming recording information, valid when the file source is Record.
+     */
+    public LiveRecordInfo getLiveRecordInfo() {
+        return this.LiveRecordInfo;
+    }
+
+    /**
+     * Set Live streaming recording information, valid when the file source is Record.
+     * @param LiveRecordInfo Live streaming recording information, valid when the file source is Record.
+     */
+    public void setLiveRecordInfo(LiveRecordInfo LiveRecordInfo) {
+        this.LiveRecordInfo = LiveRecordInfo;
     }
 
     /**
@@ -127,6 +127,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TrtcRecordInfo = TrtcRecordInfo;
     }
 
+    /**
+     * Get Panoramic recording information, valid when the file source is WebPageRecord. 
+     * @return WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+     */
+    public WebPageRecordInfo getWebPageRecordInfo() {
+        return this.WebPageRecordInfo;
+    }
+
+    /**
+     * Set Panoramic recording information, valid when the file source is WebPageRecord.
+     * @param WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+     */
+    public void setWebPageRecordInfo(WebPageRecordInfo WebPageRecordInfo) {
+        this.WebPageRecordInfo = WebPageRecordInfo;
+    }
+
     public MediaSourceData() {
     }
 
@@ -141,8 +157,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.LiveRecordInfo != null) {
+            this.LiveRecordInfo = new LiveRecordInfo(source.LiveRecordInfo);
+        }
         if (source.TrtcRecordInfo != null) {
             this.TrtcRecordInfo = new TrtcRecordInfo(source.TrtcRecordInfo);
+        }
+        if (source.WebPageRecordInfo != null) {
+            this.WebPageRecordInfo = new WebPageRecordInfo(source.WebPageRecordInfo);
         }
     }
 
@@ -153,7 +175,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamObj(map, prefix + "LiveRecordInfo.", this.LiveRecordInfo);
         this.setParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
+        this.setParamObj(map, prefix + "WebPageRecordInfo.", this.WebPageRecordInfo);
 
     }
 }

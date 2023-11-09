@@ -47,8 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VodTaskId;
 
     /**
-    * Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
@@ -125,20 +124,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MetaData Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MetaData Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

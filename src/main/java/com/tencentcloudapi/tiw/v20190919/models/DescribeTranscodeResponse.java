@@ -119,6 +119,30 @@ Note: This parameter may return null, indicating that no valid values can be obt
     private String Ext;
 
     /**
+    * Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AssignTime")
+    @Expose
+    private Long AssignTime;
+
+    /**
+    * Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FinishedTime")
+    @Expose
+    private Long FinishedTime;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -362,6 +386,66 @@ Note: This parameter may return null, indicating that no valid values can be obt
     }
 
     /**
+     * Get Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return CreateTime Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param CreateTime Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return AssignTime Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAssignTime() {
+        return this.AssignTime;
+    }
+
+    /**
+     * Set Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param AssignTime Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setAssignTime(Long AssignTime) {
+        this.AssignTime = AssignTime;
+    }
+
+    /**
+     * Get Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained. 
+     * @return FinishedTime Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFinishedTime() {
+        return this.FinishedTime;
+    }
+
+    /**
+     * Set Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param FinishedTime Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public void setFinishedTime(Long FinishedTime) {
+        this.FinishedTime = FinishedTime;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -421,6 +505,15 @@ Note: This parameter may return null, indicating that no valid values can be obt
         if (source.Ext != null) {
             this.Ext = new String(source.Ext);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.AssignTime != null) {
+            this.AssignTime = new Long(source.AssignTime);
+        }
+        if (source.FinishedTime != null) {
+            this.FinishedTime = new Long(source.FinishedTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -443,6 +536,9 @@ Note: This parameter may return null, indicating that no valid values can be obt
         this.setParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
         this.setParamSimple(map, prefix + "ResourceListUrl", this.ResourceListUrl);
         this.setParamSimple(map, prefix + "Ext", this.Ext);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AssignTime", this.AssignTime);
+        this.setParamSimple(map, prefix + "FinishedTime", this.FinishedTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

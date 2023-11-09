@@ -38,7 +38,7 @@ public class DescribeCDNDomainsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * The starting offset for page fetching. Default value: 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeCDNDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get The starting offset for page fetching. Default value: 0. 
-     * @return Offset The starting offset for page fetching. Default value: 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The starting offset for page fetching. Default value: 0.
-     * @param Offset The starting offset for page fetching. Default value: 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

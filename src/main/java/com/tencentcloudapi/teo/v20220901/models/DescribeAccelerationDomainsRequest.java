@@ -24,29 +24,52 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsRequest extends AbstractModel {
 
     /**
-    * ID of the site related with the accelerated domain name.
+    * ID of the site related with the acceleration domain name.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+    * Offset for paginated queries. Default value: 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Limit on paginated queries. Default value: 20. Maximum value: 200.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * The sorting order. Values:
+    * Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
+<li>`desc`: Descending order.</li> Default value: `asc`.
     */
     @SerializedName("Direction")
     @Expose
@@ -62,104 +85,136 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
     private String Match;
 
     /**
-    * Limit on paginated queries. Default value: 20. Maximum value: 200.
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * Offset for paginated queries. Default value: 0.
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-    */
-    @SerializedName("Order")
-    @Expose
-    private String Order;
-
-    /**
-     * Get ID of the site related with the accelerated domain name. 
-     * @return ZoneId ID of the site related with the accelerated domain name.
+     * Get ID of the site related with the acceleration domain name. 
+     * @return ZoneId ID of the site related with the acceleration domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the accelerated domain name.
-     * @param ZoneId ID of the site related with the accelerated domain name.
+     * Set ID of the site related with the acceleration domain name.
+     * @param ZoneId ID of the site related with the acceleration domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No 
-     * @return Filters Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+     * Get Offset for paginated queries. Default value: 0. 
+     * @return Offset Offset for paginated queries. Default value: 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset for paginated queries. Default value: 0.
+     * @param Offset Offset for paginated queries. Default value: 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Limit on paginated queries. Default value: 20. Maximum value: 200. 
+     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Limit on paginated queries. Default value: 20. Maximum value: 200.
+     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li> 
+     * @return Filters Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
-     * @param Filters Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+     * Set Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
+     * @param Filters Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The sorting order. Values:
+     * Get Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li>  
+     * @return Order Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+     * @param Order Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`. 
-     * @return Direction The sorting order. Values:
+<li>`desc`: Descending order.</li> Default value: `asc`. 
+     * @return Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
+<li>`desc`: Descending order.</li> Default value: `asc`.
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set The sorting order. Values:
+     * Set Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
-     * @param Direction The sorting order. Values:
+<li>`desc`: Descending order.</li> Default value: `asc`.
+     * @param Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
+<li>`desc`: Descending order.</li> Default value: `asc`.
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
@@ -189,66 +244,6 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
         this.Match = Match;
     }
 
-    /**
-     * Get Limit on paginated queries. Default value: 20. Maximum value: 200. 
-     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set Limit on paginated queries. Default value: 20. Maximum value: 200.
-     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get Offset for paginated queries. Default value: 0. 
-     * @return Offset Offset for paginated queries. Default value: 0.
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set Offset for paginated queries. Default value: 0.
-     * @param Offset Offset for paginated queries. Default value: 0.
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * Get The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`. 
-     * @return Order The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-     */
-    public String getOrder() {
-        return this.Order;
-    }
-
-    /**
-     * Set The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-     * @param Order The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-     */
-    public void setOrder(String Order) {
-        this.Order = Order;
-    }
-
     public DescribeAccelerationDomainsRequest() {
     }
 
@@ -260,26 +255,26 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
         if (source.Filters != null) {
             this.Filters = new AdvancedFilter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new AdvancedFilter(source.Filters[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
         if (source.Direction != null) {
             this.Direction = new String(source.Direction);
         }
         if (source.Match != null) {
             this.Match = new String(source.Match);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
-        if (source.Order != null) {
-            this.Order = new String(source.Order);
         }
     }
 
@@ -289,12 +284,12 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "Match", this.Match);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

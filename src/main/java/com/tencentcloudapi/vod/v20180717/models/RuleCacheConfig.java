@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RuleCacheConfig extends AbstractModel {
 
     /**
-    * Cache configuration
+    * 
     */
     @SerializedName("Cache")
     @Expose
     private CacheConfigCache Cache;
 
     /**
-    * No cache configuration
+    * 
     */
     @SerializedName("NoCache")
     @Expose
     private CacheConfigNoCache NoCache;
 
     /**
-    * Follows the origin server configuration
+    * 
     */
     @SerializedName("FollowOrigin")
     @Expose
     private CacheConfigFollowOrigin FollowOrigin;
 
     /**
-     * Get Cache configuration 
-     * @return Cache Cache configuration
+     * Get  
+     * @return Cache 
      */
     public CacheConfigCache getCache() {
         return this.Cache;
     }
 
     /**
-     * Set Cache configuration
-     * @param Cache Cache configuration
+     * Set 
+     * @param Cache 
      */
     public void setCache(CacheConfigCache Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get No cache configuration 
-     * @return NoCache No cache configuration
+     * Get  
+     * @return NoCache 
      */
     public CacheConfigNoCache getNoCache() {
         return this.NoCache;
     }
 
     /**
-     * Set No cache configuration
-     * @param NoCache No cache configuration
+     * Set 
+     * @param NoCache 
      */
     public void setNoCache(CacheConfigNoCache NoCache) {
         this.NoCache = NoCache;
     }
 
     /**
-     * Get Follows the origin server configuration 
-     * @return FollowOrigin Follows the origin server configuration
+     * Get  
+     * @return FollowOrigin 
      */
     public CacheConfigFollowOrigin getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Follows the origin server configuration
-     * @param FollowOrigin Follows the origin server configuration
+     * Set 
+     * @param FollowOrigin 
      */
     public void setFollowOrigin(CacheConfigFollowOrigin FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

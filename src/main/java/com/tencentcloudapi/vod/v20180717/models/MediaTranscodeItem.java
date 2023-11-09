@@ -32,8 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Definition")
     @Expose
@@ -121,6 +120,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DigitalWatermarkType;
 
     /**
+    * 
+    */
+    @SerializedName("CopyRightWatermarkText")
+    @Expose
+    private String CopyRightWatermarkText;
+
+    /**
      * Get Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Url Address of output video file.
@@ -141,20 +147,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -364,6 +366,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
+    /**
+     * Get  
+     * @return CopyRightWatermarkText 
+     */
+    public String getCopyRightWatermarkText() {
+        return this.CopyRightWatermarkText;
+    }
+
+    /**
+     * Set 
+     * @param CopyRightWatermarkText 
+     */
+    public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
+        this.CopyRightWatermarkText = CopyRightWatermarkText;
+    }
+
     public MediaTranscodeItem() {
     }
 
@@ -414,6 +432,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DigitalWatermarkType != null) {
             this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
         }
+        if (source.CopyRightWatermarkText != null) {
+            this.CopyRightWatermarkText = new String(source.CopyRightWatermarkText);
+        }
     }
 
 
@@ -433,6 +454,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+        this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
 
     }
 }

@@ -60,6 +60,13 @@ public class CreateRoundPlayRequest extends AbstractModel {
     private String Desc;
 
     /**
+    * 
+    */
+    @SerializedName("PlayBackMode")
+    @Expose
+    private String PlayBackMode;
+
+    /**
      * Get The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=). 
      * @return StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
@@ -143,6 +150,22 @@ public class CreateRoundPlayRequest extends AbstractModel {
         this.Desc = Desc;
     }
 
+    /**
+     * Get  
+     * @return PlayBackMode 
+     */
+    public String getPlayBackMode() {
+        return this.PlayBackMode;
+    }
+
+    /**
+     * Set 
+     * @param PlayBackMode 
+     */
+    public void setPlayBackMode(String PlayBackMode) {
+        this.PlayBackMode = PlayBackMode;
+    }
+
     public CreateRoundPlayRequest() {
     }
 
@@ -169,6 +192,9 @@ public class CreateRoundPlayRequest extends AbstractModel {
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.PlayBackMode != null) {
+            this.PlayBackMode = new String(source.PlayBackMode);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class CreateRoundPlayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
 
     }
 }

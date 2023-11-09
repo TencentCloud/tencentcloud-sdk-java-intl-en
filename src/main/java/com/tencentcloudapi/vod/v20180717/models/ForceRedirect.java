@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel {
 
     /**
-    * Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+    * 
     */
     @SerializedName("RedirectType")
     @Expose
@@ -52,32 +52,32 @@ public class ForceRedirect extends AbstractModel {
     private String CarryHeaders;
 
     /**
-     * Get Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li> 
-     * @return Switch Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
-     * @param Switch Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li> 
-     * @return RedirectType Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+     * Get  
+     * @return RedirectType 
      */
     public String getRedirectType() {
         return this.RedirectType;
     }
 
     /**
-     * Set Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
-     * @param RedirectType Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+     * Set 
+     * @param RedirectType 
      */
     public void setRedirectType(String RedirectType) {
         this.RedirectType = RedirectType;

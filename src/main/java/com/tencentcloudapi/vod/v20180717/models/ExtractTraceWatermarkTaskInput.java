@@ -31,6 +31,13 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel {
     private String Url;
 
     /**
+    * 
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get The URL of the media on which digital watermark extraction is to be performed. 
      * @return Url The URL of the media on which digital watermark extraction is to be performed.
      */
@@ -46,6 +53,22 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get  
+     * @return FileId 
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 
+     * @param FileId 
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public ExtractTraceWatermarkTaskInput() {
     }
 
@@ -57,6 +80,9 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

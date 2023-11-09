@@ -46,6 +46,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TraceWatermarkInput TraceWatermark;
 
     /**
+    * 
+    */
+    @SerializedName("CopyRightWatermark")
+    @Expose
+    private CopyRightWatermarkInput CopyRightWatermark;
+
+    /**
     * List of subtitle IDs (maximum: 16)
     */
     @SerializedName("SubtitleSet")
@@ -105,6 +112,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return CopyRightWatermark 
+     */
+    public CopyRightWatermarkInput getCopyRightWatermark() {
+        return this.CopyRightWatermark;
+    }
+
+    /**
+     * Set 
+     * @param CopyRightWatermark 
+     */
+    public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
+        this.CopyRightWatermark = CopyRightWatermark;
+    }
+
+    /**
      * Get List of subtitle IDs (maximum: 16) 
      * @return SubtitleSet List of subtitle IDs (maximum: 16)
      */
@@ -140,6 +163,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TraceWatermark != null) {
             this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
         }
+        if (source.CopyRightWatermark != null) {
+            this.CopyRightWatermark = new CopyRightWatermarkInput(source.CopyRightWatermark);
+        }
         if (source.SubtitleSet != null) {
             this.SubtitleSet = new String[source.SubtitleSet.length];
             for (int i = 0; i < source.SubtitleSet.length; i++) {
@@ -156,6 +182,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
+        this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Authentication extends AbstractModel {
 
     /**
-    * Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
@@ -59,16 +59,16 @@ public class Authentication extends AbstractModel {
     private AuthenticationTypeD TypeD;
 
     /**
-     * Get Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li> 
-     * @return Switch Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-     * @param Switch Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

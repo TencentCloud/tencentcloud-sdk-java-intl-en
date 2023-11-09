@@ -55,11 +55,7 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     private String Name;
 
     /**
-    * The DRM type. Valid values:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-If this parameter is an empty string, it indicates that the video is not protected by DRM.
+    * 
     */
     @SerializedName("DrmType")
     @Expose
@@ -189,32 +185,16 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     }
 
     /**
-     * Get The DRM type. Valid values:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-If this parameter is an empty string, it indicates that the video is not protected by DRM. 
-     * @return DrmType The DRM type. Valid values:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-If this parameter is an empty string, it indicates that the video is not protected by DRM.
+     * Get  
+     * @return DrmType 
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set The DRM type. Valid values:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-If this parameter is an empty string, it indicates that the video is not protected by DRM.
-     * @param DrmType The DRM type. Valid values:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-If this parameter is an empty string, it indicates that the video is not protected by DRM.
+     * Set 
+     * @param DrmType 
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;

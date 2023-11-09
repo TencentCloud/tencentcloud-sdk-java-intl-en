@@ -41,10 +41,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -124,15 +124,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return Type Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -140,15 +140,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Type Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Https extends AbstractModel {
 
     /**
-    * HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+    * 
     */
     @SerializedName("Http2")
     @Expose
@@ -45,32 +45,32 @@ public class Https extends AbstractModel {
     private CDNCertInfo CertInfo;
 
     /**
-     * Get HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li> 
-     * @return Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-     * @param Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li> 
-     * @return Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+     * Get  
+     * @return Http2 
      */
     public String getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
-     * @param Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+     * Set 
+     * @param Http2 
      */
     public void setHttp2(String Http2) {
         this.Http2 = Http2;

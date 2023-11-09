@@ -39,6 +39,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
+     * @param req BindSharedCNAMERequest
+     * @return BindSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindSharedCNAMEResponse BindSharedCNAME(BindSharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindSharedCNAME", BindSharedCNAMEResponse.class);
+    }
+
+    /**
      *This API is used to bind a site to a plan.
      * @param req BindZoneToPlanRequest
      * @return BindZoneToPlanResponse
@@ -61,7 +72,9 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to connect a domain to EdgeOne.
+     *This API is used to create an acceleration domain name. 
+
+For sites connected via the CNAME, if you have not verified the ownership of the domain name, the ownership verification information of the domain name is returned. To verify your ownership of the domain name, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
      * @param req CreateAccelerationDomainRequest
      * @return CreateAccelerationDomainResponse
      * @throws TencentCloudSDKException
@@ -138,9 +151,9 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+     *When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
 
-</li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
+For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
      * @param req CreatePurgeTaskRequest
      * @return CreatePurgeTaskResponse
      * @throws TencentCloudSDKException
@@ -173,7 +186,20 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to access a new site.
+     *This API is used to create a shared CNAME. It is now only available to beta users.
+     * @param req CreateSharedCNAMERequest
+     * @return CreateSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSharedCNAMEResponse CreateSharedCNAME(CreateSharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSharedCNAME", CreateSharedCNAMEResponse.class);
+    }
+
+    /**
+     *This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
+
+If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
      * @param req CreateZoneRequest
      * @return CreateZoneResponse
      * @throws TencentCloudSDKException
@@ -261,6 +287,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a shared CNAME. It is now only available to beta users.
+     * @param req DeleteSharedCNAMERequest
+     * @return DeleteSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSharedCNAMEResponse DeleteSharedCNAME(DeleteSharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSharedCNAME", DeleteSharedCNAMEResponse.class);
+    }
+
+    /**
      *This API is used to delete a site.
      * @param req DeleteZoneRequest
      * @return DeleteZoneResponse
@@ -272,7 +309,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+     *This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
      * @param req DescribeAccelerationDomainsRequest
      * @return DescribeAccelerationDomainsResponse
      * @throws TencentCloudSDKException
@@ -536,7 +573,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of user sites.
+     *This API is used to query the information of sites that you have access to. You can filter sites based on different query criteria.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
@@ -668,7 +705,9 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the certificate of a domain name.
+     *This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
+To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
+ 
      * @param req ModifyHostsCertificateRequest
      * @return ModifyHostsCertificateResponse
      * @throws TencentCloudSDKException
@@ -753,6 +792,19 @@ public class TeoClient extends AbstractClient{
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
+    }
+
+    /**
+     *This API is used to verify your ownership of a site or domain name. It's required in the CNAME access mode. After a site is verified, you don't need to verify the ownership again for domain names added to it in the future. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+
+For sites connected via the NS, you can query whether the NS is successfully switched through this API. For details, see [Modifying DNS Servers](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+     * @param req VerifyOwnershipRequest
+     * @return VerifyOwnershipResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyOwnershipResponse VerifyOwnership(VerifyOwnershipRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyOwnership", VerifyOwnershipResponse.class);
     }
 
 }

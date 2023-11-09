@@ -59,7 +59,7 @@ public class RebuildMediaByTemplateRequest extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * The parameters for the output file of remastering.
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -174,16 +174,16 @@ public class RebuildMediaByTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The parameters for the output file of remastering. 
-     * @return OutputConfig The parameters for the output file of remastering.
+     * Get  
+     * @return OutputConfig 
      */
     public RebuildMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set The parameters for the output file of remastering.
-     * @param OutputConfig The parameters for the output file of remastering.
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(RebuildMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

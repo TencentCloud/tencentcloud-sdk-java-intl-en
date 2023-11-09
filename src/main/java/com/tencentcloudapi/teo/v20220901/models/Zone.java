@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Zone extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -53,20 +53,21 @@ public class Zone extends AbstractModel {
 
     /**
     * The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+    * Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name</li>
     */
     @SerializedName("Type")
     @Expose
@@ -179,23 +180,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsFake;
 
     /**
-    * Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+    * Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
     */
     @SerializedName("LockStatus")
     @Expose
     private String LockStatus;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+    * Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerification OwnershipVerification;
+
+    /**
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -251,15 +260,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li> 
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li> 
      * @return Status The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
      */
     public String getStatus() {
         return this.Status;
@@ -267,43 +278,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
      * @param Status The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li> 
-     * @return Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+     * Get Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name</li> 
+     * @return Type Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
-     * @param Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+     * Set Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name</li>
+     * @param Type Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -578,19 +591,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li> 
-     * @return LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     * Get Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li>  
+     * @return LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
      */
     public String getLockStatus() {
         return this.LockStatus;
     }
 
     /**
-     * Set Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
-     * @param LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     * Set Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+     * @param LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
      */
     public void setLockStatus(String LockStatus) {
         this.LockStatus = LockStatus;
+    }
+
+    /**
+     * Get Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return OwnershipVerification Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public OwnershipVerification getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param OwnershipVerification Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
     }
 
     public Zone() {
@@ -676,6 +709,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LockStatus != null) {
             this.LockStatus = new String(source.LockStatus);
         }
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
+        }
     }
 
 
@@ -703,6 +739,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         this.setParamSimple(map, prefix + "IsFake", this.IsFake);
         this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
 
     }
 }

@@ -67,6 +67,20 @@ public class ModifyRoundPlayRequest extends AbstractModel {
     private String Desc;
 
     /**
+    * 
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 
+    */
+    @SerializedName("PlayBackMode")
+    @Expose
+    private String PlayBackMode;
+
+    /**
      * Get The playlist ID, which is unique. 
      * @return RoundPlayId The playlist ID, which is unique.
      */
@@ -166,6 +180,38 @@ public class ModifyRoundPlayRequest extends AbstractModel {
         this.Desc = Desc;
     }
 
+    /**
+     * Get  
+     * @return Status 
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 
+     * @param Status 
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get  
+     * @return PlayBackMode 
+     */
+    public String getPlayBackMode() {
+        return this.PlayBackMode;
+    }
+
+    /**
+     * Set 
+     * @param PlayBackMode 
+     */
+    public void setPlayBackMode(String PlayBackMode) {
+        this.PlayBackMode = PlayBackMode;
+    }
+
     public ModifyRoundPlayRequest() {
     }
 
@@ -195,6 +241,12 @@ public class ModifyRoundPlayRequest extends AbstractModel {
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PlayBackMode != null) {
+            this.PlayBackMode = new String(source.PlayBackMode);
+        }
     }
 
 
@@ -208,6 +260,8 @@ public class ModifyRoundPlayRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
 
     }
 }

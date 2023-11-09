@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAccelerationDomainRequest extends AbstractModel {
 
     /**
-    * ID of the site related with the accelerated domain name.
+    * ID of the site related with the acceleration domain name.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Accelerated domain name
+    * Acceleration domain name
     */
     @SerializedName("DomainName")
     @Expose
@@ -45,32 +45,60 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
     private OriginInfo OriginInfo;
 
     /**
-     * Get ID of the site related with the accelerated domain name. 
-     * @return ZoneId ID of the site related with the accelerated domain name.
+    * 
+    */
+    @SerializedName("OriginProtocol")
+    @Expose
+    private String OriginProtocol;
+
+    /**
+    * 
+    */
+    @SerializedName("HttpOriginPort")
+    @Expose
+    private Long HttpOriginPort;
+
+    /**
+    * 
+    */
+    @SerializedName("HttpsOriginPort")
+    @Expose
+    private Long HttpsOriginPort;
+
+    /**
+    * 
+    */
+    @SerializedName("IPv6Status")
+    @Expose
+    private String IPv6Status;
+
+    /**
+     * Get ID of the site related with the acceleration domain name. 
+     * @return ZoneId ID of the site related with the acceleration domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the accelerated domain name.
-     * @param ZoneId ID of the site related with the accelerated domain name.
+     * Set ID of the site related with the acceleration domain name.
+     * @param ZoneId ID of the site related with the acceleration domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Accelerated domain name 
-     * @return DomainName Accelerated domain name
+     * Get Acceleration domain name 
+     * @return DomainName Acceleration domain name
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Accelerated domain name
-     * @param DomainName Accelerated domain name
+     * Set Acceleration domain name
+     * @param DomainName Acceleration domain name
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -92,6 +120,70 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
         this.OriginInfo = OriginInfo;
     }
 
+    /**
+     * Get  
+     * @return OriginProtocol 
+     */
+    public String getOriginProtocol() {
+        return this.OriginProtocol;
+    }
+
+    /**
+     * Set 
+     * @param OriginProtocol 
+     */
+    public void setOriginProtocol(String OriginProtocol) {
+        this.OriginProtocol = OriginProtocol;
+    }
+
+    /**
+     * Get  
+     * @return HttpOriginPort 
+     */
+    public Long getHttpOriginPort() {
+        return this.HttpOriginPort;
+    }
+
+    /**
+     * Set 
+     * @param HttpOriginPort 
+     */
+    public void setHttpOriginPort(Long HttpOriginPort) {
+        this.HttpOriginPort = HttpOriginPort;
+    }
+
+    /**
+     * Get  
+     * @return HttpsOriginPort 
+     */
+    public Long getHttpsOriginPort() {
+        return this.HttpsOriginPort;
+    }
+
+    /**
+     * Set 
+     * @param HttpsOriginPort 
+     */
+    public void setHttpsOriginPort(Long HttpsOriginPort) {
+        this.HttpsOriginPort = HttpsOriginPort;
+    }
+
+    /**
+     * Get  
+     * @return IPv6Status 
+     */
+    public String getIPv6Status() {
+        return this.IPv6Status;
+    }
+
+    /**
+     * Set 
+     * @param IPv6Status 
+     */
+    public void setIPv6Status(String IPv6Status) {
+        this.IPv6Status = IPv6Status;
+    }
+
     public CreateAccelerationDomainRequest() {
     }
 
@@ -109,6 +201,18 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
         if (source.OriginInfo != null) {
             this.OriginInfo = new OriginInfo(source.OriginInfo);
         }
+        if (source.OriginProtocol != null) {
+            this.OriginProtocol = new String(source.OriginProtocol);
+        }
+        if (source.HttpOriginPort != null) {
+            this.HttpOriginPort = new Long(source.HttpOriginPort);
+        }
+        if (source.HttpsOriginPort != null) {
+            this.HttpsOriginPort = new Long(source.HttpsOriginPort);
+        }
+        if (source.IPv6Status != null) {
+            this.IPv6Status = new String(source.IPv6Status);
+        }
     }
 
 
@@ -119,6 +223,10 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamObj(map, prefix + "OriginInfo.", this.OriginInfo);
+        this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+        this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+        this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
 
     }
 }

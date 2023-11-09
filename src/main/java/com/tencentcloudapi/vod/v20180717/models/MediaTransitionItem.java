@@ -39,6 +39,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TransitionOpertion [] Transitions;
 
     /**
+    * 
+    */
+    @SerializedName("MediaTransitions")
+    @Expose
+    private TransitionOperation [] MediaTransitions;
+
+    /**
      * Get Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration. 
      * @return Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
      */
@@ -59,7 +66,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public TransitionOpertion [] getTransitions() {
         return this.Transitions;
     }
@@ -69,9 +78,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setTransitions(TransitionOpertion [] Transitions) {
         this.Transitions = Transitions;
+    }
+
+    /**
+     * Get  
+     * @return MediaTransitions 
+     */
+    public TransitionOperation [] getMediaTransitions() {
+        return this.MediaTransitions;
+    }
+
+    /**
+     * Set 
+     * @param MediaTransitions 
+     */
+    public void setMediaTransitions(TransitionOperation [] MediaTransitions) {
+        this.MediaTransitions = MediaTransitions;
     }
 
     public MediaTransitionItem() {
@@ -91,6 +118,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Transitions[i] = new TransitionOpertion(source.Transitions[i]);
             }
         }
+        if (source.MediaTransitions != null) {
+            this.MediaTransitions = new TransitionOperation[source.MediaTransitions.length];
+            for (int i = 0; i < source.MediaTransitions.length; i++) {
+                this.MediaTransitions[i] = new TransitionOperation(source.MediaTransitions[i]);
+            }
+        }
     }
 
 
@@ -100,6 +133,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArrayObj(map, prefix + "Transitions.", this.Transitions);
+        this.setParamArrayObj(map, prefix + "MediaTransitions.", this.MediaTransitions);
 
     }
 }

@@ -60,6 +60,13 @@ public class ImageWatermarkTemplate extends AbstractModel {
     private String RepeatType;
 
     /**
+    * 
+    */
+    @SerializedName("Transparency")
+    @Expose
+    private Long Transparency;
+
+    /**
      * Get Watermark image address. 
      * @return ImageUrl Watermark image address.
      */
@@ -155,6 +162,22 @@ public class ImageWatermarkTemplate extends AbstractModel {
         this.RepeatType = RepeatType;
     }
 
+    /**
+     * Get  
+     * @return Transparency 
+     */
+    public Long getTransparency() {
+        return this.Transparency;
+    }
+
+    /**
+     * Set 
+     * @param Transparency 
+     */
+    public void setTransparency(Long Transparency) {
+        this.Transparency = Transparency;
+    }
+
     public ImageWatermarkTemplate() {
     }
 
@@ -175,6 +198,9 @@ public class ImageWatermarkTemplate extends AbstractModel {
         if (source.RepeatType != null) {
             this.RepeatType = new String(source.RepeatType);
         }
+        if (source.Transparency != null) {
+            this.Transparency = new Long(source.Transparency);
+        }
     }
 
 
@@ -186,6 +212,7 @@ public class ImageWatermarkTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "RepeatType", this.RepeatType);
+        this.setParamSimple(map, prefix + "Transparency", this.Transparency);
 
     }
 }

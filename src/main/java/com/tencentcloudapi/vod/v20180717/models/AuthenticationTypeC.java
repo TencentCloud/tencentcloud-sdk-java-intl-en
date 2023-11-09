@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AuthenticationTypeC extends AbstractModel {
 
     /**
-    * The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+    * 
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * Signature expiration time;Unit: second. The maximum value is 630720000.
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+    * 
     */
     @SerializedName("FileExtensions")
     @Expose
     private String [] FileExtensions;
 
     /**
-    * whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+    * 
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+    * 
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-    * Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+    * 
     */
     @SerializedName("BackupSecretKey")
     @Expose
     private String BackupSecretKey;
 
     /**
-     * Get The key for signature calculation 6-32 characters. Only digits and letters are allowed. 
-     * @return SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+     * Get  
+     * @return SecretKey 
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set The key for signature calculation 6-32 characters. Only digits and letters are allowed.
-     * @param SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+     * Set 
+     * @param SecretKey 
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get Signature expiration time;Unit: second. The maximum value is 630720000. 
-     * @return ExpireTime Signature expiration time;Unit: second. The maximum value is 630720000.
+     * Get  
+     * @return ExpireTime 
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Signature expiration time;Unit: second. The maximum value is 630720000.
-     * @param ExpireTime Signature expiration time;Unit: second. The maximum value is 630720000.
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files. 
-     * @return FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+     * Get  
+     * @return FileExtensions 
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
     }
 
     /**
-     * Set File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
-     * @param FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+     * Set 
+     * @param FileExtensions 
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
     }
 
     /**
-     * Get whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated. 
-     * @return FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+     * Get  
+     * @return FilterType 
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
-     * @param FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+     * Set 
+     * @param FilterType 
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li> 
-     * @return TimeFormat Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+     * Get  
+     * @return TimeFormat 
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
-     * @param TimeFormat Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+     * Set 
+     * @param TimeFormat 
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed. 
-     * @return BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+     * Get  
+     * @return BackupSecretKey 
      */
     public String getBackupSecretKey() {
         return this.BackupSecretKey;
     }
 
     /**
-     * Set Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
-     * @param BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+     * Set 
+     * @param BackupSecretKey 
      */
     public void setBackupSecretKey(String BackupSecretKey) {
         this.BackupSecretKey = BackupSecretKey;
