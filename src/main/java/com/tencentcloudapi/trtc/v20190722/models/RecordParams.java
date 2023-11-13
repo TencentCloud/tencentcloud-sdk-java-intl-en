@@ -57,7 +57,7 @@ public class RecordParams extends AbstractModel {
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-    * The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+    * The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
     */
     @SerializedName("OutputFormat")
     @Expose
@@ -170,16 +170,16 @@ This parameter is invalid if the output format is HLS.
     }
 
     /**
-     * Get The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`. 
-     * @return OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * Get The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`. 
+     * @return OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public Long getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
-     * @param OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * Set The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * @param OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public void setOutputFormat(Long OutputFormat) {
         this.OutputFormat = OutputFormat;
