@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTagListRequest extends AbstractModel {
 
     /**
-    * Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+    * The number of entries returned at a time. The maximum value is `1000`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The number of entries returned at a time. The maximum value is `1000`.
+    * Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
     */
     @SerializedName("Offset")
     @Expose
@@ -59,32 +59,32 @@ public class DescribeTagListRequest extends AbstractModel {
     private String OrderType;
 
     /**
-     * Get Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on. 
-     * @return Limit Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+     * Get The number of entries returned at a time. The maximum value is `1000`. 
+     * @return Limit The number of entries returned at a time. The maximum value is `1000`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-     * @param Limit Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+     * Set The number of entries returned at a time. The maximum value is `1000`.
+     * @param Limit The number of entries returned at a time. The maximum value is `1000`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The number of entries returned at a time. The maximum value is `1000`. 
-     * @return Offset The number of entries returned at a time. The maximum value is `1000`.
+     * Get Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on. 
+     * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The number of entries returned at a time. The maximum value is `1000`.
-     * @param Offset The number of entries returned at a time. The maximum value is `1000`.
+     * Set Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+     * @param Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
