@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeStreamPackageHarvestJobRequest extends AbstractModel {
 
     /**
-    * Task ID, a globally unique identifier.
+    * HarvestJob ID, a globally unique identifier.
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-     * Get Task ID, a globally unique identifier. 
-     * @return ID Task ID, a globally unique identifier.
+     * Get HarvestJob ID, a globally unique identifier. 
+     * @return ID HarvestJob ID, a globally unique identifier.
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set Task ID, a globally unique identifier.
-     * @param ID Task ID, a globally unique identifier.
+     * Set HarvestJob ID, a globally unique identifier.
+     * @param ID HarvestJob ID, a globally unique identifier.
      */
     public void setID(String ID) {
         this.ID = ID;

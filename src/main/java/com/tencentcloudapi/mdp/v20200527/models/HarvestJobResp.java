@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HarvestJobResp extends AbstractModel {
 
     /**
-    * Job ID, a globally unique identifier.
+    * HarvestJob ID, a globally unique identifier.
     */
     @SerializedName("ID")
     @Expose
@@ -52,14 +52,14 @@ public class HarvestJobResp extends AbstractModel {
     private String TimeFormat;
 
     /**
-    * Job start time.
+    * HarvestJob start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Job end time.
+    * HarvestJob end time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -87,14 +87,14 @@ public class HarvestJobResp extends AbstractModel {
     private String Status;
 
     /**
-    * Job error message.
+    * HarvestJob error message.
     */
     @SerializedName("ErrMessage")
     @Expose
     private String ErrMessage;
 
     /**
-    * Job creation time, timestamp in seconds.
+    * HarvestJob creation time, timestamp in seconds.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -115,16 +115,16 @@ public class HarvestJobResp extends AbstractModel {
     private String Region;
 
     /**
-     * Get Job ID, a globally unique identifier. 
-     * @return ID Job ID, a globally unique identifier.
+     * Get HarvestJob ID, a globally unique identifier. 
+     * @return ID HarvestJob ID, a globally unique identifier.
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set Job ID, a globally unique identifier.
-     * @param ID Job ID, a globally unique identifier.
+     * Set HarvestJob ID, a globally unique identifier.
+     * @param ID HarvestJob ID, a globally unique identifier.
      */
     public void setID(String ID) {
         this.ID = ID;
@@ -179,32 +179,32 @@ public class HarvestJobResp extends AbstractModel {
     }
 
     /**
-     * Get Job start time. 
-     * @return StartTime Job start time.
+     * Get HarvestJob start time. 
+     * @return StartTime HarvestJob start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Job start time.
-     * @param StartTime Job start time.
+     * Set HarvestJob start time.
+     * @param StartTime HarvestJob start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Job end time. 
-     * @return EndTime Job end time.
+     * Get HarvestJob end time. 
+     * @return EndTime HarvestJob end time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Job end time.
-     * @param EndTime Job end time.
+     * Set HarvestJob end time.
+     * @param EndTime HarvestJob end time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -259,32 +259,32 @@ public class HarvestJobResp extends AbstractModel {
     }
 
     /**
-     * Get Job error message. 
-     * @return ErrMessage Job error message.
+     * Get HarvestJob error message. 
+     * @return ErrMessage HarvestJob error message.
      */
     public String getErrMessage() {
         return this.ErrMessage;
     }
 
     /**
-     * Set Job error message.
-     * @param ErrMessage Job error message.
+     * Set HarvestJob error message.
+     * @param ErrMessage HarvestJob error message.
      */
     public void setErrMessage(String ErrMessage) {
         this.ErrMessage = ErrMessage;
     }
 
     /**
-     * Get Job creation time, timestamp in seconds. 
-     * @return CreateTime Job creation time, timestamp in seconds.
+     * Get HarvestJob creation time, timestamp in seconds. 
+     * @return CreateTime HarvestJob creation time, timestamp in seconds.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Job creation time, timestamp in seconds.
-     * @param CreateTime Job creation time, timestamp in seconds.
+     * Set HarvestJob creation time, timestamp in seconds.
+     * @param CreateTime HarvestJob creation time, timestamp in seconds.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
