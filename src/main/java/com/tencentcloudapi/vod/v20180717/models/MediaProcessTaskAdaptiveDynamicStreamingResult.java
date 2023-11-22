@@ -73,14 +73,14 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     private AdaptiveDynamicStreamingInfoItem Output;
 
     /**
-    * 
+    * The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * 
+    * The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -199,32 +199,32 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     }
 
     /**
-     * Get  
-     * @return BeginProcessTime 
+     * Get The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return BeginProcessTime The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set 
-     * @param BeginProcessTime 
+     * Set The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param BeginProcessTime The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get  
-     * @return FinishTime 
+     * Get The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return FinishTime The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 
-     * @param FinishTime 
+     * Set The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param FinishTime The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

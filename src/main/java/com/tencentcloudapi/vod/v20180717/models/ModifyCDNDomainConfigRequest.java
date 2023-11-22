@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyCDNDomainConfigRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * Domain Config.
     */
     @SerializedName("Config")
     @Expose
     private CDNDomainConfigForUpdate Config;
 
     /**
-    * 
+    * VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain. 
+     * @return Domain Domain.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain.
+     * @param Domain Domain.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Config 
+     * Get Domain Config. 
+     * @return Config Domain Config.
      */
     public CDNDomainConfigForUpdate getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 
-     * @param Config 
+     * Set Domain Config.
+     * @param Config Domain Config.
      */
     public void setConfig(CDNDomainConfigForUpdate Config) {
         this.Config = Config;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field. 
+     * @return SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @param SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

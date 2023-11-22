@@ -38,7 +38,7 @@ public class CloneCDNDomainRequest extends AbstractModel {
     private String ReferenceDomain;
 
     /**
-    * 
+    * VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
     */
     @SerializedName("SubAppId")
     @Expose
@@ -77,16 +77,16 @@ public class CloneCDNDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field. 
+     * @return SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @param SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteCDNDomainRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain. 
+     * @return Domain Domain.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain.
+     * @param Domain Domain.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field. 
+     * @return SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @param SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

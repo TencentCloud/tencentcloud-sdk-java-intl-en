@@ -48,6 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("MetaData")
     @Expose
@@ -124,8 +125,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return MetaData 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
@@ -133,7 +136,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param MetaData 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

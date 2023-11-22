@@ -24,42 +24,44 @@ import java.util.HashMap;
 public class OriginGroup extends AbstractModel {
 
     /**
-    * 
+    * The ID of the origin group.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 
+    * The name of the origin group.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Details of the origin record.
     */
     @SerializedName("Records")
     @Expose
     private OriginRecord [] Records;
 
     /**
-    * 
+    * List of instances referencing this origin group.	
     */
     @SerializedName("References")
     @Expose
     private OriginGroupReference [] References;
 
     /**
-    * 
+    * Creation time of the origin group.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,96 +83,104 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String HostHeader;
 
     /**
-     * Get  
-     * @return GroupId 
+     * Get The ID of the origin group. 
+     * @return GroupId The ID of the origin group.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 
-     * @param GroupId 
+     * Set The ID of the origin group.
+     * @param GroupId The ID of the origin group.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get The name of the origin group. 
+     * @return Name The name of the origin group.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set The name of the origin group.
+     * @param Name The name of the origin group.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li> 
+     * @return Type The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
+     * @param Type The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Records 
+     * Get Details of the origin record. 
+     * @return Records Details of the origin record.
      */
     public OriginRecord [] getRecords() {
         return this.Records;
     }
 
     /**
-     * Set 
-     * @param Records 
+     * Set Details of the origin record.
+     * @param Records Details of the origin record.
      */
     public void setRecords(OriginRecord [] Records) {
         this.Records = Records;
     }
 
     /**
-     * Get  
-     * @return References 
+     * Get List of instances referencing this origin group.	 
+     * @return References List of instances referencing this origin group.	
      */
     public OriginGroupReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set 
-     * @param References 
+     * Set List of instances referencing this origin group.	
+     * @param References List of instances referencing this origin group.	
      */
     public void setReferences(OriginGroupReference [] References) {
         this.References = References;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Creation time of the origin group. 
+     * @return CreateTime Creation time of the origin group.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Creation time of the origin group.
+     * @param CreateTime Creation time of the origin group.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

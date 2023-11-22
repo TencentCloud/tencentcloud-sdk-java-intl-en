@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class DescribeCDNStatDetailsRequest extends AbstractModel {
 
     /**
-    * 
+    * Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
     */
     @SerializedName("Metric")
     @Expose
@@ -142,16 +147,36 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
     private Long DataInterval;
 
     /**
-     * Get  
-     * @return Metric 
+     * Get Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li> 
+     * @return Metric Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 
-     * @param Metric 
+     * Set Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
+     * @param Metric Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

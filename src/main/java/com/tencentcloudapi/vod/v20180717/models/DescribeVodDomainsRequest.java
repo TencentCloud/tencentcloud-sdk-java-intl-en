@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DescribeVodDomainsRequest extends AbstractModel {
 
     /**
-    * List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+    * Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
     */
     @SerializedName("Domains")
     @Expose
@@ -53,20 +53,20 @@ public class DescribeVodDomainsRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-     * Get List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li> 
-     * @return Domains List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+     * Get Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li> 
+     * @return Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
-     * @param Domains List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+     * Set Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
+     * @param Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

@@ -24,92 +24,157 @@ import java.util.HashMap;
 public class EditMediaVideoStream extends AbstractModel {
 
     /**
-    * 
+    * Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
     private String ResolutionAdaptive;
 
     /**
-    * 
+    * Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-     * Get  
-     * @return ResolutionAdaptive 
+     * Get Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open. 
+     * @return ResolutionAdaptive Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
     }
 
     /**
-     * Set 
-     * @param ResolutionAdaptive 
+     * Set Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+     * @param ResolutionAdaptive Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open. 
+     * @return Width Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+     * @param Width Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+     * @return Height The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
+     * @param Height The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Fps 
+     * Get Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0. 
+     * @return Fps Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 
-     * @param Fps 
+     * Set Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
+     * @param Fps Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

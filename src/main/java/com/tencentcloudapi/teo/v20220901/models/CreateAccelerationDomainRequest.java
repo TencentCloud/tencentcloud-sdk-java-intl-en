@@ -45,28 +45,36 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
     private OriginInfo OriginInfo;
 
     /**
-    * 
+    * Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * 
+    * Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
     */
     @SerializedName("HttpOriginPort")
     @Expose
     private Long HttpOriginPort;
 
     /**
-    * 
+    * Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
     */
     @SerializedName("HttpsOriginPort")
     @Expose
     private Long HttpsOriginPort;
 
     /**
-    * 
+    * IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
     */
     @SerializedName("IPv6Status")
     @Expose
@@ -121,64 +129,96 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OriginProtocol 
+     * Get Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li> 
+     * @return OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
     }
 
     /**
-     * Set 
-     * @param OriginProtocol 
+     * Set Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
+     * @param OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get  
-     * @return HttpOriginPort 
+     * Get Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified.  
+     * @return HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
      */
     public Long getHttpOriginPort() {
         return this.HttpOriginPort;
     }
 
     /**
-     * Set 
-     * @param HttpOriginPort 
+     * Set Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+     * @param HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
         this.HttpOriginPort = HttpOriginPort;
     }
 
     /**
-     * Get  
-     * @return HttpsOriginPort 
+     * Get Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified.  
+     * @return HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
      */
     public Long getHttpsOriginPort() {
         return this.HttpsOriginPort;
     }
 
     /**
-     * Set 
-     * @param HttpsOriginPort 
+     * Set Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+     * @param HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
         this.HttpsOriginPort = HttpsOriginPort;
     }
 
     /**
-     * Get  
-     * @return IPv6Status 
+     * Get IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li> 
+     * @return IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
      */
     public String getIPv6Status() {
         return this.IPv6Status;
     }
 
     /**
-     * Set 
-     * @param IPv6Status 
+     * Set IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
+     * @param IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
      */
     public void setIPv6Status(String IPv6Status) {
         this.IPv6Status = IPv6Status;

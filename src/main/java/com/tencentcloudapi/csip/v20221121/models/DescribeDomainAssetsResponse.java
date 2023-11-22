@@ -40,7 +40,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private DomainAssetVO [] Data;
 
     /**
-    * List of protection status
+    * List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefenseStatusList")
@@ -119,9 +119,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get List of protection status
+     * Get List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DefenseStatusList List of protection status
+     * @return DefenseStatusList List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public FilterDataObject [] getDefenseStatusList() {
@@ -129,9 +129,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set List of protection status
+     * Set List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DefenseStatusList List of protection status
+     * @param DefenseStatusList List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setDefenseStatusList(FilterDataObject [] DefenseStatusList) {

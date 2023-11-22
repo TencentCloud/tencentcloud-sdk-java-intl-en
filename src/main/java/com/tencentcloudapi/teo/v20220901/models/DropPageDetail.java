@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class DropPageDetail extends AbstractModel {
 
     /**
-    * The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+    * The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
     */
     @SerializedName("PageId")
     @Expose
     private Long PageId;
 
     /**
-    * The HTTP status code of the block page. Value range: 100-600.
+    * The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
     */
     @SerializedName("StatusCode")
     @Expose
@@ -47,44 +47,51 @@ If 0 is passed, the default block page will be used.
 
     /**
     * Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used. 
-     * @return PageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+    * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+    */
+    @SerializedName("CustomResponseId")
+    @Expose
+    private String CustomResponseId;
+
+    /**
+     * Get The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used. 
+     * @return PageId The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
-     * @param PageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+     * Set The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
+     * @param PageId The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get The HTTP status code of the block page. Value range: 100-600. 
-     * @return StatusCode The HTTP status code of the block page. Value range: 100-600.
+     * Get The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules). 
+     * @return StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set The HTTP status code of the block page. Value range: 100-600.
-     * @param StatusCode The HTTP status code of the block page. Value range: 100-600.
+     * Set The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+     * @param StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
@@ -108,11 +115,11 @@ If 0 is passed, the default block page will be used.
 
     /**
      * Get Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li> 
+<li>`page`: Return the specified page.</li>
+ 
      * @return Type Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
      */
     public String getType() {
         return this.Type;
@@ -120,14 +127,30 @@ If 0 is passed, the default block page will be used.
 
     /**
      * Set Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
      * @param Type Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`. 
+     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     */
+    public String getCustomResponseId() {
+        return this.CustomResponseId;
+    }
+
+    /**
+     * Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     * @param CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     */
+    public void setCustomResponseId(String CustomResponseId) {
+        this.CustomResponseId = CustomResponseId;
     }
 
     public DropPageDetail() {
@@ -150,6 +173,9 @@ If 0 is passed, the default block page will be used.
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.CustomResponseId != null) {
+            this.CustomResponseId = new String(source.CustomResponseId);
+        }
     }
 
 
@@ -161,6 +187,7 @@ If 0 is passed, the default block page will be used.
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
 
     }
 }

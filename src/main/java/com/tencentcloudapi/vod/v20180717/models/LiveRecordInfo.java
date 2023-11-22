@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class LiveRecordInfo extends AbstractModel {
 
     /**
-    * Live streaming recording ID
+    * Live recording stream ID.
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("RecordStartTime")
     @Expose
     private String RecordStartTime;
 
     /**
-    * Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("RecordEndTime")
     @Expose
     private String RecordEndTime;
 
     /**
-     * Get Live streaming recording ID 
-     * @return StreamId Live streaming recording ID
+     * Get Live recording stream ID. 
+     * @return StreamId Live recording stream ID.
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set Live streaming recording ID
-     * @param StreamId Live streaming recording ID
+     * Set Live recording stream ID.
+     * @param StreamId Live recording stream ID.
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return RecordStartTime Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return RecordStartTime Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getRecordStartTime() {
         return this.RecordStartTime;
     }
 
     /**
-     * Set Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param RecordStartTime Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param RecordStartTime Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setRecordStartTime(String RecordStartTime) {
         this.RecordStartTime = RecordStartTime;
     }
 
     /**
-     * Get Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return RecordEndTime Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return RecordEndTime Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getRecordEndTime() {
         return this.RecordEndTime;
     }
 
     /**
-     * Set Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param RecordEndTime Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param RecordEndTime Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setRecordEndTime(String RecordEndTime) {
         this.RecordEndTime = RecordEndTime;

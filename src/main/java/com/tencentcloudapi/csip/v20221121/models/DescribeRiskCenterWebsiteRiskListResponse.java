@@ -38,7 +38,7 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     private WebsiteRisk [] Data;
 
     /**
-    * List of status
+    * List of risk handling status
     */
     @SerializedName("StatusLists")
     @Expose
@@ -105,16 +105,16 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get List of status 
-     * @return StatusLists List of status
+     * Get List of risk handling status 
+     * @return StatusLists List of risk handling status
      */
     public FilterDataObject [] getStatusLists() {
         return this.StatusLists;
     }
 
     /**
-     * Set List of status
-     * @param StatusLists List of status
+     * Set List of risk handling status
+     * @param StatusLists List of risk handling status
      */
     public void setStatusLists(FilterDataObject [] StatusLists) {
         this.StatusLists = StatusLists;

@@ -38,7 +38,7 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     private AiRecognitionTaskObjectSeqmentItem [] SegmentSet;
 
     /**
-    * 
+    * List of fragments in which the object appears.
     */
     @SerializedName("RecognitionSegmentSet")
     @Expose
@@ -81,16 +81,16 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RecognitionSegmentSet 
+     * Get List of fragments in which the object appears. 
+     * @return RecognitionSegmentSet List of fragments in which the object appears.
      */
     public AiRecognitionTaskObjectSegmentItem [] getRecognitionSegmentSet() {
         return this.RecognitionSegmentSet;
     }
 
     /**
-     * Set 
-     * @param RecognitionSegmentSet 
+     * Set List of fragments in which the object appears.
+     * @param RecognitionSegmentSet List of fragments in which the object appears.
      */
     public void setRecognitionSegmentSet(AiRecognitionTaskObjectSegmentItem [] RecognitionSegmentSet) {
         this.RecognitionSegmentSet = RecognitionSegmentSet;

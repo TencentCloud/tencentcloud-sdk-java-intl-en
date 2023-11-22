@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel {
 
     /**
-    * 
+    * Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Revalidate")
     @Expose
     private String Revalidate;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Revalidate 
+     * Get Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li> 
+     * @return Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
      */
     public String getRevalidate() {
         return this.Revalidate;
     }
 
     /**
-     * Set 
-     * @param Revalidate 
+     * Set Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+     * @param Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
      */
     public void setRevalidate(String Revalidate) {
         this.Revalidate = Revalidate;

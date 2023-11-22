@@ -45,6 +45,42 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
     private OriginInfo OriginInfo;
 
     /**
+    * Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+    */
+    @SerializedName("OriginProtocol")
+    @Expose
+    private String OriginProtocol;
+
+    /**
+    * Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+    */
+    @SerializedName("HttpOriginPort")
+    @Expose
+    private Long HttpOriginPort;
+
+    /**
+    * Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+    */
+    @SerializedName("HttpsOriginPort")
+    @Expose
+    private Long HttpsOriginPort;
+
+    /**
+    * IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
+    */
+    @SerializedName("IPv6Status")
+    @Expose
+    private String IPv6Status;
+
+    /**
      * Get ID of the site related with the accelerated domain name. 
      * @return ZoneId ID of the site related with the accelerated domain name.
      */
@@ -92,6 +128,102 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
         this.OriginInfo = OriginInfo;
     }
 
+    /**
+     * Get Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li> 
+     * @return OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+     */
+    public String getOriginProtocol() {
+        return this.OriginProtocol;
+    }
+
+    /**
+     * Set Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+     * @param OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+     */
+    public void setOriginProtocol(String OriginProtocol) {
+        this.OriginProtocol = OriginProtocol;
+    }
+
+    /**
+     * Get Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified. 
+     * @return HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     */
+    public Long getHttpOriginPort() {
+        return this.HttpOriginPort;
+    }
+
+    /**
+     * Set Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     * @param HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     */
+    public void setHttpOriginPort(Long HttpOriginPort) {
+        this.HttpOriginPort = HttpOriginPort;
+    }
+
+    /**
+     * Get Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified. 
+     * @return HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     */
+    public Long getHttpsOriginPort() {
+        return this.HttpsOriginPort;
+    }
+
+    /**
+     * Set Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     * @param HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     */
+    public void setHttpsOriginPort(Long HttpsOriginPort) {
+        this.HttpsOriginPort = HttpsOriginPort;
+    }
+
+    /**
+     * Get IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li> 
+     * @return IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
+     */
+    public String getIPv6Status() {
+        return this.IPv6Status;
+    }
+
+    /**
+     * Set IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
+     * @param IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
+     */
+    public void setIPv6Status(String IPv6Status) {
+        this.IPv6Status = IPv6Status;
+    }
+
     public ModifyAccelerationDomainRequest() {
     }
 
@@ -109,6 +241,18 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
         if (source.OriginInfo != null) {
             this.OriginInfo = new OriginInfo(source.OriginInfo);
         }
+        if (source.OriginProtocol != null) {
+            this.OriginProtocol = new String(source.OriginProtocol);
+        }
+        if (source.HttpOriginPort != null) {
+            this.HttpOriginPort = new Long(source.HttpOriginPort);
+        }
+        if (source.HttpsOriginPort != null) {
+            this.HttpsOriginPort = new Long(source.HttpsOriginPort);
+        }
+        if (source.IPv6Status != null) {
+            this.IPv6Status = new String(source.IPv6Status);
+        }
     }
 
 
@@ -119,6 +263,10 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamObj(map, prefix + "OriginInfo.", this.OriginInfo);
+        this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+        this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+        this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
 
     }
 }

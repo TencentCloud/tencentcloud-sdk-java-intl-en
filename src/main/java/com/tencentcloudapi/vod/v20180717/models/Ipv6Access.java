@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class Ipv6Access extends AbstractModel {
 
     /**
-    * 
+    * Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RebuildMediaByTemplateResponse extends AbstractModel {
 
     /**
-    * The ID of the remaster task. You need to provide this ID to query the task status.
+    * The task ID of the rebuild, through which the status of the rebuild task can be queried.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class RebuildMediaByTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The ID of the remaster task. You need to provide this ID to query the task status. 
-     * @return TaskId The ID of the remaster task. You need to provide this ID to query the task status.
+     * Get The task ID of the rebuild, through which the status of the rebuild task can be queried. 
+     * @return TaskId The task ID of the rebuild, through which the status of the rebuild task can be queried.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of the remaster task. You need to provide this ID to query the task status.
-     * @param TaskId The ID of the remaster task. You need to provide this ID to query the task status.
+     * Set The task ID of the rebuild, through which the status of the rebuild task can be queried.
+     * @param TaskId The task ID of the rebuild, through which the status of the rebuild task can be queried.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

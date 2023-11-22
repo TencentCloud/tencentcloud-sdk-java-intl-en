@@ -24,196 +24,148 @@ import java.util.HashMap;
 public class ModifyOriginGroupRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The ID of the origin group.
+    * (Required) Origin group ID
     */
-    @SerializedName("OriginGroupId")
+    @SerializedName("GroupId")
     @Expose
-    private String OriginGroupId;
+    private String GroupId;
 
     /**
-    * The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+    * Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
     */
-    @SerializedName("OriginType")
+    @SerializedName("Name")
     @Expose
-    private String OriginType;
+    private String Name;
 
     /**
-    * The name of the origin group.
+    * The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
     */
-    @SerializedName("OriginGroupName")
+    @SerializedName("Type")
     @Expose
-    private String OriginGroupName;
+    private String Type;
 
     /**
-    * The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
+    * Origin information. The original configuration is used if it's not specified.
     */
-    @SerializedName("ConfigurationType")
+    @SerializedName("Records")
     @Expose
-    private String ConfigurationType;
+    private OriginRecord [] Records;
 
     /**
-    * Details of the origin record.
-    */
-    @SerializedName("OriginRecords")
-    @Expose
-    private OriginRecord [] OriginRecords;
-
-    /**
-    * The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
+    * Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
     */
     @SerializedName("HostHeader")
     @Expose
     private String HostHeader;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID 
+     * @return ZoneId Site ID
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID
+     * @param ZoneId Site ID
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The ID of the origin group. 
-     * @return OriginGroupId The ID of the origin group.
+     * Get (Required) Origin group ID 
+     * @return GroupId (Required) Origin group ID
      */
-    public String getOriginGroupId() {
-        return this.OriginGroupId;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set The ID of the origin group.
-     * @param OriginGroupId The ID of the origin group.
+     * Set (Required) Origin group ID
+     * @param GroupId (Required) Origin group ID
      */
-    public void setOriginGroupId(String OriginGroupId) {
-        this.OriginGroupId = OriginGroupId;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
-     * Get The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li> 
-     * @return OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+     * Get Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	 
+     * @return Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
      */
-    public String getOriginType() {
-        return this.OriginType;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
-     * @param OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+     * Set Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
+     * @param Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
      */
-    public void setOriginType(String OriginType) {
-        this.OriginType = OriginType;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get The name of the origin group. 
-     * @return OriginGroupName The name of the origin group.
+     * Get The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified. 
+     * @return Type The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
      */
-    public String getOriginGroupName() {
-        return this.OriginGroupName;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set The name of the origin group.
-     * @param OriginGroupName The name of the origin group.
+     * Set The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
+     * @param Type The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
      */
-    public void setOriginGroupName(String OriginGroupName) {
-        this.OriginGroupName = OriginGroupName;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
-     * Get The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty. 
-     * @return ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
+     * Get Origin information. The original configuration is used if it's not specified. 
+     * @return Records Origin information. The original configuration is used if it's not specified.
      */
-    public String getConfigurationType() {
-        return this.ConfigurationType;
+    public OriginRecord [] getRecords() {
+        return this.Records;
     }
 
     /**
-     * Set The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
-     * @param ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
+     * Set Origin information. The original configuration is used if it's not specified.
+     * @param Records Origin information. The original configuration is used if it's not specified.
      */
-    public void setConfigurationType(String ConfigurationType) {
-        this.ConfigurationType = ConfigurationType;
+    public void setRecords(OriginRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
-     * Get Details of the origin record. 
-     * @return OriginRecords Details of the origin record.
-     */
-    public OriginRecord [] getOriginRecords() {
-        return this.OriginRecords;
-    }
-
-    /**
-     * Set Details of the origin record.
-     * @param OriginRecords Details of the origin record.
-     */
-    public void setOriginRecords(OriginRecord [] OriginRecords) {
-        this.OriginRecords = OriginRecords;
-    }
-
-    /**
-     * Get The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used. 
-     * @return HostHeader The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
+     * Get Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.  
+     * @return HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
-     * @param HostHeader The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
+     * Set Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
+     * @param HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;
@@ -230,22 +182,19 @@ If it is left empty, the existing configuration is used.
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
-        if (source.OriginGroupId != null) {
-            this.OriginGroupId = new String(source.OriginGroupId);
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
-        if (source.OriginType != null) {
-            this.OriginType = new String(source.OriginType);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.OriginGroupName != null) {
-            this.OriginGroupName = new String(source.OriginGroupName);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
-        if (source.ConfigurationType != null) {
-            this.ConfigurationType = new String(source.ConfigurationType);
-        }
-        if (source.OriginRecords != null) {
-            this.OriginRecords = new OriginRecord[source.OriginRecords.length];
-            for (int i = 0; i < source.OriginRecords.length; i++) {
-                this.OriginRecords[i] = new OriginRecord(source.OriginRecords[i]);
+        if (source.Records != null) {
+            this.Records = new OriginRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new OriginRecord(source.Records[i]);
             }
         }
         if (source.HostHeader != null) {
@@ -259,11 +208,10 @@ If it is left empty, the existing configuration is used.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
-        this.setParamSimple(map, prefix + "OriginType", this.OriginType);
-        this.setParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
-        this.setParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
-        this.setParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }

@@ -60,7 +60,10 @@ public class CreateRoundPlayRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * 
+    * Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
     */
     @SerializedName("PlayBackMode")
     @Expose
@@ -151,16 +154,28 @@ public class CreateRoundPlayRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return PlayBackMode 
+     * Get Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。 
+     * @return PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
      */
     public String getPlayBackMode() {
         return this.PlayBackMode;
     }
 
     /**
-     * Set 
-     * @param PlayBackMode 
+     * Set Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
+     * @param PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
      */
     public void setPlayBackMode(String PlayBackMode) {
         this.PlayBackMode = PlayBackMode;

@@ -39,6 +39,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind/unbind a domain name to/from a specific policy template. 
+     * @param req BindSecurityTemplateToEntityRequest
+     * @return BindSecurityTemplateToEntityResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntity(BindSecurityTemplateToEntityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindSecurityTemplateToEntity", BindSecurityTemplateToEntityResponse.class);
+    }
+
+    /**
      *This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
      * @param req BindSharedCNAMERequest
      * @return BindSharedCNAMEResponse
@@ -118,7 +129,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
-     *This API is used to create an origin group.
+     *This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
      * @throws TencentCloudSDKException
@@ -254,7 +265,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to delete an origin group.
+     *This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
      * @param req DeleteOriginGroupRequest
      * @return DeleteOriginGroupResponse
      * @throws TencentCloudSDKException
@@ -507,6 +518,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to query bindings of a policy template.
+     * @param req DescribeSecurityTemplateBindingsRequest
+     * @return DescribeSecurityTemplateBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(DescribeSecurityTemplateBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityTemplateBindings", DescribeSecurityTemplateBindingsResponse.class);
+    }
+
+    /**
      *This API is used to query the list of L4 traffic data recorded over time.
      * @param req DescribeTimingL4DataRequest
      * @return DescribeTimingL4DataResponse
@@ -718,7 +740,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
-     *This API is used to modify an origin group.
+     *This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
      * @param req ModifyOriginGroupRequest
      * @return ModifyOriginGroupResponse
      * @throws TencentCloudSDKException

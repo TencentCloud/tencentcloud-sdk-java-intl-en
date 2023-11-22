@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class OriginGroupReference extends AbstractModel {
 
     /**
-    * 
+    * Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * ID of the instances referencing the origin group
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Name of the instance referencing the origin group
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li> 
+     * @return InstanceType Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
+     * @param InstanceType Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get ID of the instances referencing the origin group 
+     * @return InstanceId ID of the instances referencing the origin group
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set ID of the instances referencing the origin group
+     * @param InstanceId ID of the instances referencing the origin group
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return InstanceName 
+     * Get Name of the instance referencing the origin group 
+     * @return InstanceName Name of the instance referencing the origin group
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 
-     * @param InstanceName 
+     * Set Name of the instance referencing the origin group
+     * @param InstanceName Name of the instance referencing the origin group
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

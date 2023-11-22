@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AuthenticationTypeC extends AbstractModel {
 
     /**
-    * 
+    * The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 
+    * Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 
+    * File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
     */
     @SerializedName("FileExtensions")
     @Expose
     private String [] FileExtensions;
 
     /**
-    * 
+    * whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-    * 
+    * Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
     */
     @SerializedName("BackupSecretKey")
     @Expose
     private String BackupSecretKey;
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters. 
+     * @return SecretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+     * @param SecretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000. 
+     * @return ExpireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+     * @param ExpireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return FileExtensions 
+     * Get File extension list settings for authentication/non-authentication; if the character * is included, it means all files. 
+     * @return FileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
     }
 
     /**
-     * Set 
-     * @param FileExtensions 
+     * Set File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+     * @param FileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
     }
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated. 
+     * @return FilterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+     * @param FilterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return TimeFormat 
+     * Get Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li> 
+     * @return TimeFormat Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set 
-     * @param TimeFormat 
+     * Set Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
+     * @param TimeFormat Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get  
-     * @return BackupSecretKey 
+     * Get Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters. 
+     * @return BackupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
      */
     public String getBackupSecretKey() {
         return this.BackupSecretKey;
     }
 
     /**
-     * Set 
-     * @param BackupSecretKey 
+     * Set Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+     * @param BackupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
      */
     public void setBackupSecretKey(String BackupSecretKey) {
         this.BackupSecretKey = BackupSecretKey;

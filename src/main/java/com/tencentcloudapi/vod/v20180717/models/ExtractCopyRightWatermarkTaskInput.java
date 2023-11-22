@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExtractCopyRightWatermarkTaskInput extends AbstractModel {
 
     /**
-    * 
+    * The media URL from which the watermark needs to be extracted.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Url 
+     * Get The media URL from which the watermark needs to be extracted. 
+     * @return Url The media URL from which the watermark needs to be extracted.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set The media URL from which the watermark needs to be extracted.
+     * @param Url The media URL from which the watermark needs to be extracted.
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -81,6 +81,20 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
     private String [] AllowIpList;
 
     /**
+    * 
+    */
+    @SerializedName("MaxConcurrent")
+    @Expose
+    private Long MaxConcurrent;
+
+    /**
+    * The bound security group IDs.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get The output name. 
      * @return OutputName The output name.
      */
@@ -212,6 +226,38 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
         this.AllowIpList = AllowIpList;
     }
 
+    /**
+     * Get  
+     * @return MaxConcurrent 
+     */
+    public Long getMaxConcurrent() {
+        return this.MaxConcurrent;
+    }
+
+    /**
+     * Set 
+     * @param MaxConcurrent 
+     */
+    public void setMaxConcurrent(Long MaxConcurrent) {
+        this.MaxConcurrent = MaxConcurrent;
+    }
+
+    /**
+     * Get The bound security group IDs. 
+     * @return SecurityGroupIds The bound security group IDs.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set The bound security group IDs.
+     * @param SecurityGroupIds The bound security group IDs.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public CreateOutputInfo() {
     }
 
@@ -247,6 +293,15 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                 this.AllowIpList[i] = new String(source.AllowIpList[i]);
             }
         }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -262,6 +317,8 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
+        this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

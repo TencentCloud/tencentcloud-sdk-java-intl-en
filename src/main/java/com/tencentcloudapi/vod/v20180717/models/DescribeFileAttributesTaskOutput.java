@@ -31,7 +31,7 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel {
     private String Md5;
 
     /**
-    * 
+    * The Sha1 value of the media file.
     */
     @SerializedName("Sha1")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Sha1 
+     * Get The Sha1 value of the media file. 
+     * @return Sha1 The Sha1 value of the media file.
      */
     public String getSha1() {
         return this.Sha1;
     }
 
     /**
-     * Set 
-     * @param Sha1 
+     * Set The Sha1 value of the media file.
+     * @param Sha1 The Sha1 value of the media file.
      */
     public void setSha1(String Sha1) {
         this.Sha1 = Sha1;

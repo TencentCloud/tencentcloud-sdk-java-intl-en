@@ -31,7 +31,7 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel {
     private String Url;
 
     /**
-    * 
+    * Media file ID. The original media file ID corresponding to the URL.
     */
     @SerializedName("FileId")
     @Expose
@@ -54,16 +54,16 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. The original media file ID corresponding to the URL. 
+     * @return FileId Media file ID. The original media file ID corresponding to the URL.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID. The original media file ID corresponding to the URL.
+     * @param FileId Media file ID. The original media file ID corresponding to the URL.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

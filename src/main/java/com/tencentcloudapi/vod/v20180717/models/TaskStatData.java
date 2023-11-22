@@ -24,19 +24,21 @@ import java.util.HashMap;
 public class TaskStatData extends AbstractModel {
 
     /**
-    * The task type.
-<li>`Transcoding`: General transcoding</li>
-<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
-<li>`Editing`: Video editing</li>
-<li>`Editing-TESHD`: Top Speed Codec editing</li>
-<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>`ContentRecognition`: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`AddTraceWatermark`: Digital watermarking</li>
-<li>`RebuildMedia`: Remaster</li>
-<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+    * Task Type.
+<li> Transcoding: Normal transcoding</li>
+<li> Transcoding-TESHD: Extremely fast high-definition transcoding</li>
+<li> Editing: Video editing</li>
+< li> Editing-TESHD: Extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li> ContentAudit: Content audit</li>
+<li> ContentRecognition: Content Recognize</li>
+<li> RemoveWatermark: Remove watermark</li>
+<li> ExtractTraceWatermark: Extract watermark</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia : Audio and video quality reborn</li>
+<li> QualityInspect: Media quality inspection</li>
+<li>Transcode: transcoding, including normal transcoding, ultra-fast high-definition and video editing (not recommended)</li>
+<li>Transcode: li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -109,64 +111,72 @@ The watermark removal/remaster specifications. Valid values:
     private SpecificationDataItem [] Details;
 
     /**
-     * Get The task type.
-<li>`Transcoding`: General transcoding</li>
-<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
-<li>`Editing`: Video editing</li>
-<li>`Editing-TESHD`: Top Speed Codec editing</li>
-<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>`ContentRecognition`: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`AddTraceWatermark`: Digital watermarking</li>
-<li>`RebuildMedia`: Remaster</li>
-<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li> 
-     * @return TaskType The task type.
-<li>`Transcoding`: General transcoding</li>
-<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
-<li>`Editing`: Video editing</li>
-<li>`Editing-TESHD`: Top Speed Codec editing</li>
-<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>`ContentRecognition`: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`AddTraceWatermark`: Digital watermarking</li>
-<li>`RebuildMedia`: Remaster</li>
-<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+     * Get Task Type.
+<li> Transcoding: Normal transcoding</li>
+<li> Transcoding-TESHD: Extremely fast high-definition transcoding</li>
+<li> Editing: Video editing</li>
+< li> Editing-TESHD: Extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li> ContentAudit: Content audit</li>
+<li> ContentRecognition: Content Recognize</li>
+<li> RemoveWatermark: Remove watermark</li>
+<li> ExtractTraceWatermark: Extract watermark</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia : Audio and video quality reborn</li>
+<li> QualityInspect: Media quality inspection</li>
+<li>Transcode: transcoding, including normal transcoding, ultra-fast high-definition and video editing (not recommended)</li>
+<li>Transcode: li> 
+     * @return TaskType Task Type.
+<li> Transcoding: Normal transcoding</li>
+<li> Transcoding-TESHD: Extremely fast high-definition transcoding</li>
+<li> Editing: Video editing</li>
+< li> Editing-TESHD: Extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li> ContentAudit: Content audit</li>
+<li> ContentRecognition: Content Recognize</li>
+<li> RemoveWatermark: Remove watermark</li>
+<li> ExtractTraceWatermark: Extract watermark</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia : Audio and video quality reborn</li>
+<li> QualityInspect: Media quality inspection</li>
+<li>Transcode: transcoding, including normal transcoding, ultra-fast high-definition and video editing (not recommended)</li>
+<li>Transcode: li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set The task type.
-<li>`Transcoding`: General transcoding</li>
-<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
-<li>`Editing`: Video editing</li>
-<li>`Editing-TESHD`: Top Speed Codec editing</li>
-<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>`ContentRecognition`: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`AddTraceWatermark`: Digital watermarking</li>
-<li>`RebuildMedia`: Remaster</li>
-<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
-     * @param TaskType The task type.
-<li>`Transcoding`: General transcoding</li>
-<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
-<li>`Editing`: Video editing</li>
-<li>`Editing-TESHD`: Top Speed Codec editing</li>
-<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>`ContentRecognition`: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`AddTraceWatermark`: Digital watermarking</li>
-<li>`RebuildMedia`: Remaster</li>
-<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+     * Set Task Type.
+<li> Transcoding: Normal transcoding</li>
+<li> Transcoding-TESHD: Extremely fast high-definition transcoding</li>
+<li> Editing: Video editing</li>
+< li> Editing-TESHD: Extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li> ContentAudit: Content audit</li>
+<li> ContentRecognition: Content Recognize</li>
+<li> RemoveWatermark: Remove watermark</li>
+<li> ExtractTraceWatermark: Extract watermark</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia : Audio and video quality reborn</li>
+<li> QualityInspect: Media quality inspection</li>
+<li>Transcode: transcoding, including normal transcoding, ultra-fast high-definition and video editing (not recommended)</li>
+<li>Transcode: li>
+     * @param TaskType Task Type.
+<li> Transcoding: Normal transcoding</li>
+<li> Transcoding-TESHD: Extremely fast high-definition transcoding</li>
+<li> Editing: Video editing</li>
+< li> Editing-TESHD: Extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li> ContentAudit: Content audit</li>
+<li> ContentRecognition: Content Recognize</li>
+<li> RemoveWatermark: Remove watermark</li>
+<li> ExtractTraceWatermark: Extract watermark</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia : Audio and video quality reborn</li>
+<li> QualityInspect: Media quality inspection</li>
+<li>Transcode: transcoding, including normal transcoding, ultra-fast high-definition and video editing (not recommended)</li>
+<li>Transcode: li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

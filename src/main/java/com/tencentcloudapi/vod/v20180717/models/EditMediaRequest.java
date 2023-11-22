@@ -24,253 +24,263 @@ import java.util.HashMap;
 public class EditMediaRequest extends AbstractModel {
 
     /**
-    * 
+    * Input the type of video. The possible values u200bu200bare File and Stream.
     */
     @SerializedName("InputType")
     @Expose
     private String InputType;
 
     /**
-    * 
+    * </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Input video file information, required when InputType is File.
     */
     @SerializedName("FileInfos")
     @Expose
     private EditMediaFileInfo [] FileInfos;
 
     /**
-    * 
+    * nput stream information, required when InputType is Stream.
     */
     @SerializedName("StreamInfos")
     @Expose
     private EditMediaStreamInfo [] StreamInfos;
 
     /**
-    * 
+    * EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Task flow template name, if you want Fill in when executing the task flow on the generated new video.
     */
     @SerializedName("ProcedureName")
     @Expose
     private String ProcedureName;
 
     /**
-    * 
+    * The file configuration generated after editing.
     */
     @SerializedName("OutputConfig")
     @Expose
     private EditMediaOutputConfig OutputConfig;
 
     /**
-    * 
+    * Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+    * The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Reserved field for special purposes.
+    * Reserved fields, used for special purposes.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return InputType 
+     * Get Input the type of video. The possible values u200bu200bare File and Stream. 
+     * @return InputType Input the type of video. The possible values u200bu200bare File and Stream.
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set 
-     * @param InputType 
+     * Set Input the type of video. The possible values u200bu200bare File and Stream.
+     * @param InputType Input the type of video. The possible values u200bu200bare File and Stream.
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b> 
+     * @return SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @param SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return FileInfos 
+     * Get Input video file information, required when InputType is File. 
+     * @return FileInfos Input video file information, required when InputType is File.
      */
     public EditMediaFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 
-     * @param FileInfos 
+     * Set Input video file information, required when InputType is File.
+     * @param FileInfos Input video file information, required when InputType is File.
      */
     public void setFileInfos(EditMediaFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get  
-     * @return StreamInfos 
+     * Get nput stream information, required when InputType is Stream. 
+     * @return StreamInfos nput stream information, required when InputType is Stream.
      */
     public EditMediaStreamInfo [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set 
-     * @param StreamInfos 
+     * Set nput stream information, required when InputType is Stream.
+     * @param StreamInfos nput stream information, required when InputType is Stream.
      */
     public void setStreamInfos(EditMediaStreamInfo [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li> 
+     * @return Definition EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+     * @param Definition EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ProcedureName 
+     * Get Task flow template name, if you want Fill in when executing the task flow on the generated new video. 
+     * @return ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
      */
     public String getProcedureName() {
         return this.ProcedureName;
     }
 
     /**
-     * Set 
-     * @param ProcedureName 
+     * Set Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+     * @param ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get The file configuration generated after editing. 
+     * @return OutputConfig The file configuration generated after editing.
      */
     public EditMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set The file configuration generated after editing.
+     * @param OutputConfig The file configuration generated after editing.
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters. 
+     * @return SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+     * @param SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0. 
+     * @return TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * @param TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed. 
-     * @return SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * Get The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
+     * @return SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
-     * @param SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * Set The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * @param SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Reserved field for special purposes. 
-     * @return ExtInfo Reserved field for special purposes.
+     * Get Reserved fields, used for special purposes. 
+     * @return ExtInfo Reserved fields, used for special purposes.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field for special purposes.
-     * @param ExtInfo Reserved field for special purposes.
+     * Set Reserved fields, used for special purposes.
+     * @param ExtInfo Reserved fields, used for special purposes.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

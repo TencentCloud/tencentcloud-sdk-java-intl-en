@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Authentication extends AbstractModel {
 
     /**
-    * 
+    * Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
@@ -59,16 +59,16 @@ public class Authentication extends AbstractModel {
     private AuthenticationTypeD TypeD;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

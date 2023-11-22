@@ -31,7 +31,7 @@ public class RebuildMediaByTemplateRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * The remaster template ID.
+    * Rebuild Media Template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -59,7 +59,7 @@ public class RebuildMediaByTemplateRequest extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * 
+    * New file configuration after rebuild.
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -110,16 +110,16 @@ public class RebuildMediaByTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The remaster template ID. 
-     * @return Definition The remaster template ID.
+     * Get Rebuild Media Template ID. 
+     * @return Definition Rebuild Media Template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The remaster template ID.
-     * @param Definition The remaster template ID.
+     * Set Rebuild Media Template ID.
+     * @param Definition Rebuild Media Template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -174,16 +174,16 @@ public class RebuildMediaByTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get New file configuration after rebuild. 
+     * @return OutputConfig New file configuration after rebuild.
      */
     public RebuildMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set New file configuration after rebuild.
+     * @param OutputConfig New file configuration after rebuild.
      */
     public void setOutputConfig(RebuildMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

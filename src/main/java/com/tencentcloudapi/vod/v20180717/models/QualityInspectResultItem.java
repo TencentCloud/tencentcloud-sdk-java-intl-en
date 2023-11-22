@@ -45,7 +45,7 @@ public class QualityInspectResultItem extends AbstractModel {
     private String SegmentSetFileUrl;
 
     /**
-    * Abnormal segment List file URL expiration time, using [ISO date supported](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
@@ -100,16 +100,16 @@ public class QualityInspectResultItem extends AbstractModel {
     }
 
     /**
-     * Get Abnormal segment List file URL expiration time, using [ISO date supported](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime Abnormal segment List file URL expiration time, using [ISO date supported](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return SegmentSetFileUrlExpireTime Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Abnormal segment List file URL expiration time, using [ISO date supported](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime Abnormal segment List file URL expiration time, using [ISO date supported](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param SegmentSetFileUrlExpireTime Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

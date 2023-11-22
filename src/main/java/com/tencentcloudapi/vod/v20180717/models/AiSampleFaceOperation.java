@@ -38,7 +38,10 @@ public class AiSampleFaceOperation extends AbstractModel {
     private String [] FaceIds;
 
     /**
-    * 
+    * Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
     */
     @SerializedName("FaceContents")
     @Expose
@@ -77,16 +80,28 @@ public class AiSampleFaceOperation extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return FaceContents 
+     * Get Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200. 
+     * @return FaceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
      */
     public String [] getFaceContents() {
         return this.FaceContents;
     }
 
     /**
-     * Set 
-     * @param FaceContents 
+     * Set Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+     * @param FaceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
      */
     public void setFaceContents(String [] FaceContents) {
         this.FaceContents = FaceContents;

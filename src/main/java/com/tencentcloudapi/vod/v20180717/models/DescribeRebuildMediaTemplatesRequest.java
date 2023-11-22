@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRebuildMediaTemplatesRequest extends AbstractModel {
 
     /**
-    * The remaster template IDs.
+    * List of rebuild media templates.
     */
     @SerializedName("Definitions")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeRebuildMediaTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get The remaster template IDs. 
-     * @return Definitions The remaster template IDs.
+     * Get List of rebuild media templates. 
+     * @return Definitions List of rebuild media templates.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set The remaster template IDs.
-     * @param Definitions The remaster template IDs.
+     * Set List of rebuild media templates.
+     * @param Definitions List of rebuild media templates.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

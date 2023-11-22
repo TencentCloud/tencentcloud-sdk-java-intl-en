@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AwsPrivateAccess extends AbstractModel {
 
     /**
-    * 
+    * AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
@@ -59,16 +59,16 @@ public class AwsPrivateAccess extends AbstractModel {
     private String Bucket;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -34,14 +34,16 @@ Default value: Black.
     private String Color;
 
     /**
-    * 
+    * Canvas width, that is, the width of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video width is the same as the first video clip of the first video track.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Canvas height, that is, the height (or long side) of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video height is consistent with the first video clip of the first video track.
     */
     @SerializedName("Height")
     @Expose
@@ -76,32 +78,40 @@ Default value: Black.
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Canvas width, that is, the width of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video width is the same as the first video clip of the first video track. 
+     * @return Width Canvas width, that is, the width of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video width is the same as the first video clip of the first video track.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Canvas width, that is, the width of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video width is the same as the first video clip of the first video track.
+     * @param Width Canvas width, that is, the width of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video width is the same as the first video clip of the first video track.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Canvas height, that is, the height (or long side) of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video height is consistent with the first video clip of the first video track. 
+     * @return Height Canvas height, that is, the height (or long side) of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video height is consistent with the first video clip of the first video track.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Canvas height, that is, the height (or long side) of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video height is consistent with the first video clip of the first video track.
+     * @param Height Canvas height, that is, the height (or long side) of the output video, value range: 0~3840, unit: px. 
+Default value: 0, which means the video height is consistent with the first video clip of the first video track.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

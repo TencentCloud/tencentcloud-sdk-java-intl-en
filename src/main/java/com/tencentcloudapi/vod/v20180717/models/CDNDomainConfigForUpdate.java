@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CDNDomainConfigForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
     */
     @SerializedName("Area")
     @Expose
@@ -157,16 +157,16 @@ public class CDNDomainConfigForUpdate extends AbstractModel {
     private OthersPrivateAccess OthersPrivateAccess;
 
     /**
-     * Get  
-     * @return Area 
+     * Get Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li> 
+     * @return Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 
-     * @param Area 
+     * Set Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+     * @param Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
      */
     public void setArea(String Area) {
         this.Area = Area;

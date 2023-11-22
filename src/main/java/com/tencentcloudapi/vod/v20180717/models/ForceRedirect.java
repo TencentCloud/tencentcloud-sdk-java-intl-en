@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel {
 
     /**
-    * 
+    * Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
     */
     @SerializedName("RedirectType")
     @Expose
@@ -52,32 +52,32 @@ public class ForceRedirect extends AbstractModel {
     private String CarryHeaders;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return RedirectType 
+     * Get Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li> 
+     * @return RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
      */
     public String getRedirectType() {
         return this.RedirectType;
     }
 
     /**
-     * Set 
-     * @param RedirectType 
+     * Set Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+     * @param RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
      */
     public void setRedirectType(String RedirectType) {
         this.RedirectType = RedirectType;

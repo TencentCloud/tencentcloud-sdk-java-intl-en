@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CacheConfigFollowOrigin extends AbstractModel {
 
     /**
-    * 
+    * The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
@@ -38,16 +38,16 @@ public class CacheConfigFollowOrigin extends AbstractModel {
     private HeuristicCache HeuristicCache;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

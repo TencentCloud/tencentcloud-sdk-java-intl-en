@@ -59,21 +59,27 @@ public class RoundPlayInfo extends AbstractModel {
     private String Desc;
 
     /**
-    * 
+    * Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
     */
     @SerializedName("PlayBackMode")
     @Expose
     private String PlayBackMode;
 
     /**
-    * 
+    * Carousel playback address.
     */
     @SerializedName("Url")
     @Expose
@@ -160,48 +166,72 @@ public class RoundPlayInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled. 
+     * @return Status Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
+     * @param Status Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return PlayBackMode 
+     * Get Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop. 
+     * @return PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
      */
     public String getPlayBackMode() {
         return this.PlayBackMode;
     }
 
     /**
-     * Set 
-     * @param PlayBackMode 
+     * Set Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
+     * @param PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
      */
     public void setPlayBackMode(String PlayBackMode) {
         this.PlayBackMode = PlayBackMode;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Carousel playback address. 
+     * @return Url Carousel playback address.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Carousel playback address.
+     * @param Url Carousel playback address.
      */
     public void setUrl(String Url) {
         this.Url = Url;

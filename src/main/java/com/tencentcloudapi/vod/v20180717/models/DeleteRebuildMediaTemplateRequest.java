@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
-    * The remaster template ID.
+    * Rebuild Media Template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteRebuildMediaTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-     * Get The remaster template ID. 
-     * @return Definition The remaster template ID.
+     * Get Rebuild Media Template ID. 
+     * @return Definition Rebuild Media Template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The remaster template ID.
-     * @param Definition The remaster template ID.
+     * Set Rebuild Media Template ID.
+     * @param Definition Rebuild Media Template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

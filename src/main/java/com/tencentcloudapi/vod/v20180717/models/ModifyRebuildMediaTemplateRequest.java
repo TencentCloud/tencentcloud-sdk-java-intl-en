@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
-    * The remaster template ID.
+    * Rebuild Media Template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,28 +38,28 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     private String SubAppId;
 
     /**
-    * The remaster template name.
+    * Rebuild Media Template Name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The template description.
+    * Rebuild media template description.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Rebuild media video control information.
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * 
+    * Rebuild media audio control information.
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
@@ -105,16 +105,16 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     private Long RemoveAudio;
 
     /**
-     * Get The remaster template ID. 
-     * @return Definition The remaster template ID.
+     * Get Rebuild Media Template ID. 
+     * @return Definition Rebuild Media Template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The remaster template ID.
-     * @param Definition The remaster template ID.
+     * Set Rebuild Media Template ID.
+     * @param Definition Rebuild Media Template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -137,64 +137,64 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The remaster template name. 
-     * @return Name The remaster template name.
+     * Get Rebuild Media Template Name. 
+     * @return Name Rebuild Media Template Name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The remaster template name.
-     * @param Name The remaster template name.
+     * Set Rebuild Media Template Name.
+     * @param Name Rebuild Media Template Name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The template description. 
-     * @return Comment The template description.
+     * Get Rebuild media template description. 
+     * @return Comment Rebuild media template description.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set The template description.
-     * @param Comment The template description.
+     * Set Rebuild media template description.
+     * @param Comment Rebuild media template description.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return RebuildVideoInfo 
+     * Get Rebuild media video control information. 
+     * @return RebuildVideoInfo Rebuild media video control information.
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set 
-     * @param RebuildVideoInfo 
+     * Set Rebuild media video control information.
+     * @param RebuildVideoInfo Rebuild media video control information.
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get  
-     * @return RebuildAudioInfo 
+     * Get Rebuild media audio control information. 
+     * @return RebuildAudioInfo Rebuild media audio control information.
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set 
-     * @param RebuildAudioInfo 
+     * Set Rebuild media audio control information.
+     * @param RebuildAudioInfo Rebuild media audio control information.
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;

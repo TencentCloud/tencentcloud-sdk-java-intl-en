@@ -42,14 +42,16 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel {
     private Long SampleInterval;
 
     /**
-    * 
+    * The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
     */
     @SerializedName("RowCount")
     @Expose
     private Long RowCount;
 
     /**
-    * 
+    * The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
     */
     @SerializedName("ColumnCount")
     @Expose
@@ -87,14 +89,26 @@ Default value: black.
     private String FillType;
 
     /**
-    * 
+    * The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
     */
     @SerializedName("Height")
     @Expose
@@ -170,32 +184,40 @@ Default: jpg
     }
 
     /**
-     * Get  
-     * @return RowCount 
+     * Get The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image. 
+     * @return RowCount The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
      */
     public Long getRowCount() {
         return this.RowCount;
     }
 
     /**
-     * Set 
-     * @param RowCount 
+     * Set The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+     * @param RowCount The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
      */
     public void setRowCount(Long RowCount) {
         this.RowCount = RowCount;
     }
 
     /**
-     * Get  
-     * @return ColumnCount 
+     * Get The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image. 
+     * @return ColumnCount The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
      */
     public Long getColumnCount() {
         return this.ColumnCount;
     }
 
     /**
-     * Set 
-     * @param ColumnCount 
+     * Set The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+     * @param ColumnCount The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
      */
     public void setColumnCount(Long ColumnCount) {
         this.ColumnCount = ColumnCount;
@@ -278,32 +300,80 @@ Default value: black.
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image. 
+     * @return Width The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+     * @param Width The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image. 
+     * @return Height The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+     * @param Height The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

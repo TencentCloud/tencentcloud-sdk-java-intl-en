@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HttpHeaderPathRule extends AbstractModel {
 
     /**
-    * 
+    * http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
     */
     @SerializedName("HeaderMode")
     @Expose
@@ -38,37 +38,37 @@ public class HttpHeaderPathRule extends AbstractModel {
     private String HeaderName;
 
     /**
-    * 
+    * http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
     */
     @SerializedName("HeaderValue")
     @Expose
     private String HeaderValue;
 
     /**
-    * 
+    * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * 
+    * Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
     */
     @SerializedName("RulePaths")
     @Expose
     private String [] RulePaths;
 
     /**
-     * Get  
-     * @return HeaderMode 
+     * Get http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li> 
+     * @return HeaderMode http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
      */
     public String getHeaderMode() {
         return this.HeaderMode;
     }
 
     /**
-     * Set 
-     * @param HeaderMode 
+     * Set http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
+     * @param HeaderMode http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
      */
     public void setHeaderMode(String HeaderMode) {
         this.HeaderMode = HeaderMode;
@@ -91,48 +91,48 @@ public class HttpHeaderPathRule extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return HeaderValue 
+     * Get http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set. 
+     * @return HeaderValue http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
      */
     public String getHeaderValue() {
         return this.HeaderValue;
     }
 
     /**
-     * Set 
-     * @param HeaderValue 
+     * Set http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+     * @param HeaderValue http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
      */
     public void setHeaderValue(String HeaderValue) {
         this.HeaderValue = HeaderValue;
     }
 
     /**
-     * Get  
-     * @return RuleType 
+     * Get Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li> 
+     * @return RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 
-     * @param RuleType 
+     * Set Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+     * @param RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get  
-     * @return RulePaths 
+     * Get Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> 
+     * @return RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
      */
     public String [] getRulePaths() {
         return this.RulePaths;
     }
 
     /**
-     * Set 
-     * @param RulePaths 
+     * Set Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+     * @param RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;

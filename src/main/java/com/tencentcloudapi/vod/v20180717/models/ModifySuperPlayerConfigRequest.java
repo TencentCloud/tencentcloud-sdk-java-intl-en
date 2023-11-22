@@ -85,7 +85,7 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel {
     private Long ImageSpriteDefinition;
 
     /**
-    * 
+    * The player displays names for substreams of different resolutions.
     */
     @SerializedName("ResolutionNames")
     @Expose
@@ -264,16 +264,16 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ResolutionNames 
+     * Get The player displays names for substreams of different resolutions. 
+     * @return ResolutionNames The player displays names for substreams of different resolutions.
      */
     public ResolutionNameInfo [] getResolutionNames() {
         return this.ResolutionNames;
     }
 
     /**
-     * Set 
-     * @param ResolutionNames 
+     * Set The player displays names for substreams of different resolutions.
+     * @param ResolutionNames The player displays names for substreams of different resolutions.
      */
     public void setResolutionNames(ResolutionNameInfo [] ResolutionNames) {
         this.ResolutionNames = ResolutionNames;

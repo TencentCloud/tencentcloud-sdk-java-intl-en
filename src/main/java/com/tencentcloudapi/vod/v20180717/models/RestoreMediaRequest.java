@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RestoreMediaRequest extends AbstractModel {
 
     /**
-    * The IDs of media files.
+    * Media file unique identifier list, maximum length: 100.
     */
     @SerializedName("FileIds")
     @Expose
@@ -38,7 +38,7 @@ public class RestoreMediaRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * The number of days during which the restored files will remain available.
+    * The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
     */
     @SerializedName("RestoreDay")
     @Expose
@@ -58,16 +58,16 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     private String RestoreTier;
 
     /**
-     * Get The IDs of media files. 
-     * @return FileIds The IDs of media files.
+     * Get Media file unique identifier list, maximum length: 100. 
+     * @return FileIds Media file unique identifier list, maximum length: 100.
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set The IDs of media files.
-     * @param FileIds The IDs of media files.
+     * Set Media file unique identifier list, maximum length: 100.
+     * @param FileIds Media file unique identifier list, maximum length: 100.
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
@@ -90,16 +90,16 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     }
 
     /**
-     * Get The number of days during which the restored files will remain available. 
-     * @return RestoreDay The number of days during which the restored files will remain available.
+     * Get The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days". 
+     * @return RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
      */
     public Long getRestoreDay() {
         return this.RestoreDay;
     }
 
     /**
-     * Set The number of days during which the restored files will remain available.
-     * @param RestoreDay The number of days during which the restored files will remain available.
+     * Set The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+     * @param RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;

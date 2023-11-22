@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class MaxAgeRule extends AbstractModel {
 
     /**
-    * 
+    * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
     */
     @SerializedName("MaxAgeType")
     @Expose
     private String MaxAgeType;
 
     /**
-    * 
+    * Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
     */
     @SerializedName("MaxAgeContents")
     @Expose
     private String [] MaxAgeContents;
 
     /**
-    * 
+    * MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
     */
     @SerializedName("MaxAgeTime")
     @Expose
@@ -52,48 +52,48 @@ public class MaxAgeRule extends AbstractModel {
     private String FollowOrigin;
 
     /**
-     * Get  
-     * @return MaxAgeType 
+     * Get Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li> 
+     * @return MaxAgeType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
      */
     public String getMaxAgeType() {
         return this.MaxAgeType;
     }
 
     /**
-     * Set 
-     * @param MaxAgeType 
+     * Set Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+     * @param MaxAgeType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
      */
     public void setMaxAgeType(String MaxAgeType) {
         this.MaxAgeType = MaxAgeType;
     }
 
     /**
-     * Get  
-     * @return MaxAgeContents 
+     * Get Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b> 
+     * @return MaxAgeContents Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
     }
 
     /**
-     * Set 
-     * @param MaxAgeContents 
+     * Set Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
+     * @param MaxAgeContents Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
     }
 
     /**
-     * Get  
-     * @return MaxAgeTime 
+     * Get MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b> 
+     * @return MaxAgeTime MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
     /**
-     * Set 
-     * @param MaxAgeTime 
+     * Set MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
+     * @param MaxAgeTime MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;

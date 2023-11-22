@@ -45,7 +45,7 @@ public class RateLimitUserRule extends AbstractModel {
     private String RuleName;
 
     /**
-    * Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+    * Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
     */
     @SerializedName("Action")
     @Expose
@@ -71,7 +71,7 @@ public class RateLimitUserRule extends AbstractModel {
     /**
     * The rule status. Values:
 <li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: on
+<li>`off`: Disabled</li>Default value: `on`
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -93,7 +93,6 @@ public class RateLimitUserRule extends AbstractModel {
 
     /**
     * Rule ID, which is only used as an output parameter.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleID")
     @Expose
@@ -102,29 +101,56 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     /**
     * The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+This parameter is left empty by default.
     */
     @SerializedName("FreqFields")
     @Expose
     private String [] FreqFields;
 
     /**
-    * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update time. It is only used as a response parameter, and defaults to the current time. 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+    * Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
 <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Default: `source_to_eo`.
     */
     @SerializedName("FreqScope")
     @Expose
     private String [] FreqScope;
+
+    /**
+    * Name of the custom return page. It's required when `Action=page`.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+    */
+    @SerializedName("CustomResponseId")
+    @Expose
+    private String CustomResponseId;
+
+    /**
+    * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+    */
+    @SerializedName("ResponseCode")
+    @Expose
+    private Long ResponseCode;
+
+    /**
+    * The redirection URL. It's required when `Action=redirect`.
+    */
+    @SerializedName("RedirectUrl")
+    @Expose
+    private String RedirectUrl;
 
     /**
      * Get The request threshold. Value range: 0-4294967294. 
@@ -175,16 +201,16 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     }
 
     /**
-     * Get Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	 
-     * @return Action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+     * Get Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	 
+     * @return Action Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
-     * @param Action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+     * Set Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
+     * @param Action Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -237,10 +263,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     /**
      * Get The rule status. Values:
 <li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: on 
+<li>`off`: Disabled</li>Default value: `on` 
      * @return RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: on
+<li>`off`: Disabled</li>Default value: `on`
      */
     public String getRuleStatus() {
         return this.RuleStatus;
@@ -249,10 +275,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     /**
      * Set The rule status. Values:
 <li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: on
+<li>`off`: Disabled</li>Default value: `on`
      * @param RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: on
+<li>`off`: Disabled</li>Default value: `on`
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
@@ -291,10 +317,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     }
 
     /**
-     * Get Rule ID, which is only used as an output parameter.
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * Get Rule ID, which is only used as an output parameter. 
      * @return RuleID Rule ID, which is only used as an output parameter.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public Long getRuleID() {
         return this.RuleID;
@@ -302,9 +326,7 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 
     /**
      * Set Rule ID, which is only used as an output parameter.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param RuleID Rule ID, which is only used as an output parameter.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
@@ -313,10 +335,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     /**
      * Get The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+This parameter is left empty by default. 
      * @return FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+This parameter is left empty by default.
      */
     public String [] getFreqFields() {
         return this.FreqFields;
@@ -325,61 +347,121 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+This parameter is left empty by default.
      * @param FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+This parameter is left empty by default.
      */
     public void setFreqFields(String [] FreqFields) {
         this.FreqFields = FreqFields;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update time. It is only used as a response parameter, and defaults to the current time.  
+     * @return UpdateTime Update time. It is only used as a response parameter, and defaults to the current time. 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update time. It is only used as a response parameter, and defaults to the current time. 
+     * @param UpdateTime Update time. It is only used as a response parameter, and defaults to the current time. 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+     * Get Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
 <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return FreqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+Default: `source_to_eo`. 
+     * @return FreqScope Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
 <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Default: `source_to_eo`.
      */
     public String [] getFreqScope() {
         return this.FreqScope;
     }
 
     /**
-     * Set Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+     * Set Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
 <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param FreqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+Default: `source_to_eo`.
+     * @param FreqScope Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
 <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Default: `source_to_eo`.
      */
     public void setFreqScope(String [] FreqScope) {
         this.FreqScope = FreqScope;
+    }
+
+    /**
+     * Get Name of the custom return page. It's required when `Action=page`. 
+     * @return Name Name of the custom return page. It's required when `Action=page`.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Name of the custom return page. It's required when `Action=page`.
+     * @param Name Name of the custom return page. It's required when `Action=page`.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	 
+     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     */
+    public String getCustomResponseId() {
+        return this.CustomResponseId;
+    }
+
+    /**
+     * Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * @param CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     */
+    public void setCustomResponseId(String CustomResponseId) {
+        this.CustomResponseId = CustomResponseId;
+    }
+
+    /**
+     * Get The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567. 
+     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     */
+    public Long getResponseCode() {
+        return this.ResponseCode;
+    }
+
+    /**
+     * Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * @param ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     */
+    public void setResponseCode(Long ResponseCode) {
+        this.ResponseCode = ResponseCode;
+    }
+
+    /**
+     * Get The redirection URL. It's required when `Action=redirect`. 
+     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     */
+    public String getRedirectUrl() {
+        return this.RedirectUrl;
+    }
+
+    /**
+     * Set The redirection URL. It's required when `Action=redirect`.
+     * @param RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     */
+    public void setRedirectUrl(String RedirectUrl) {
+        this.RedirectUrl = RedirectUrl;
     }
 
     public RateLimitUserRule() {
@@ -438,6 +520,18 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                 this.FreqScope[i] = new String(source.FreqScope[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CustomResponseId != null) {
+            this.CustomResponseId = new String(source.CustomResponseId);
+        }
+        if (source.ResponseCode != null) {
+            this.ResponseCode = new Long(source.ResponseCode);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
     }
 
 
@@ -458,6 +552,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
         this.setParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
+        this.setParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
 
     }
 }

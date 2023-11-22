@@ -76,6 +76,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ProcedureTask")
     @Expose
@@ -83,6 +84,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("EditMediaTask")
     @Expose
@@ -90,6 +92,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WechatPublishTask")
     @Expose
@@ -97,6 +100,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ComposeMediaTask")
     @Expose
@@ -104,6 +108,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SplitMediaTask")
     @Expose
@@ -111,6 +116,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WechatMiniProgramPublishTask")
     @Expose
@@ -118,6 +124,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("PullUploadTask")
     @Expose
@@ -125,6 +132,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("TranscodeTask")
     @Expose
@@ -132,6 +140,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ConcatTask")
     @Expose
@@ -139,6 +148,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ClipTask")
     @Expose
@@ -146,6 +156,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CreateImageSpriteTask")
     @Expose
@@ -153,6 +164,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
@@ -160,6 +172,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RemoveWatermarkTask")
     @Expose
@@ -167,6 +180,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RebuildMediaTask")
     @Expose
@@ -174,6 +188,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ExtractTraceWatermarkTask")
     @Expose
@@ -181,6 +196,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ExtractCopyRightWatermarkTask")
     @Expose
@@ -188,6 +204,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
@@ -195,6 +212,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ReduceMediaBitrateTask")
     @Expose
@@ -202,6 +220,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DescribeFileAttributesTask")
     @Expose
@@ -209,6 +228,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("QualityInspectTask")
     @Expose
@@ -366,8 +386,10 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ProcedureTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ProcedureTask getProcedureTask() {
         return this.ProcedureTask;
@@ -375,15 +397,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ProcedureTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setProcedureTask(ProcedureTask ProcedureTask) {
         this.ProcedureTask = ProcedureTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return EditMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public EditMediaTask getEditMediaTask() {
         return this.EditMediaTask;
@@ -391,15 +417,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param EditMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
         this.EditMediaTask = EditMediaTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return WechatPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public WechatPublishTask getWechatPublishTask() {
         return this.WechatPublishTask;
@@ -407,15 +437,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWechatPublishTask(WechatPublishTask WechatPublishTask) {
         this.WechatPublishTask = WechatPublishTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ComposeMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ComposeMediaTask getComposeMediaTask() {
         return this.ComposeMediaTask;
@@ -423,15 +457,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ComposeMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setComposeMediaTask(ComposeMediaTask ComposeMediaTask) {
         this.ComposeMediaTask = ComposeMediaTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SplitMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SplitMediaTask getSplitMediaTask() {
         return this.SplitMediaTask;
@@ -439,15 +477,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SplitMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSplitMediaTask(SplitMediaTask SplitMediaTask) {
         this.SplitMediaTask = SplitMediaTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return WechatMiniProgramPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
         return this.WechatMiniProgramPublishTask;
@@ -455,15 +497,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatMiniProgramPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
         this.WechatMiniProgramPublishTask = WechatMiniProgramPublishTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return PullUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public PullUploadTask getPullUploadTask() {
         return this.PullUploadTask;
@@ -471,15 +517,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param PullUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPullUploadTask(PullUploadTask PullUploadTask) {
         this.PullUploadTask = PullUploadTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return TranscodeTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public TranscodeTask2017 getTranscodeTask() {
         return this.TranscodeTask;
@@ -487,15 +537,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param TranscodeTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setTranscodeTask(TranscodeTask2017 TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ConcatTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ConcatTask2017 getConcatTask() {
         return this.ConcatTask;
@@ -503,15 +557,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ConcatTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setConcatTask(ConcatTask2017 ConcatTask) {
         this.ConcatTask = ConcatTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ClipTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ClipTask2017 getClipTask() {
         return this.ClipTask;
@@ -519,15 +577,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClipTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setClipTask(ClipTask2017 ClipTask) {
         this.ClipTask = ClipTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return CreateImageSpriteTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteTask() {
         return this.CreateImageSpriteTask;
@@ -535,15 +597,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param CreateImageSpriteTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCreateImageSpriteTask(CreateImageSpriteTask2017 CreateImageSpriteTask) {
         this.CreateImageSpriteTask = CreateImageSpriteTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SnapshotByTimeOffsetTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
@@ -551,15 +617,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SnapshotByTimeOffsetTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return RemoveWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public RemoveWatermarkTask getRemoveWatermarkTask() {
         return this.RemoveWatermarkTask;
@@ -567,15 +637,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param RemoveWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRemoveWatermarkTask(RemoveWatermarkTask RemoveWatermarkTask) {
         this.RemoveWatermarkTask = RemoveWatermarkTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return RebuildMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public RebuildMediaTask getRebuildMediaTask() {
         return this.RebuildMediaTask;
@@ -583,15 +657,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param RebuildMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRebuildMediaTask(RebuildMediaTask RebuildMediaTask) {
         this.RebuildMediaTask = RebuildMediaTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ExtractTraceWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkTask() {
         return this.ExtractTraceWatermarkTask;
@@ -599,15 +677,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ExtractTraceWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask ExtractTraceWatermarkTask) {
         this.ExtractTraceWatermarkTask = ExtractTraceWatermarkTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ExtractCopyRightWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() {
         return this.ExtractCopyRightWatermarkTask;
@@ -615,15 +697,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ExtractCopyRightWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask) {
         this.ExtractCopyRightWatermarkTask = ExtractCopyRightWatermarkTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ReviewAudioVideoTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ReviewAudioVideoTask getReviewAudioVideoTask() {
         return this.ReviewAudioVideoTask;
@@ -631,15 +717,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReviewAudioVideoTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ReduceMediaBitrateTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateTask() {
         return this.ReduceMediaBitrateTask;
@@ -647,15 +737,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReduceMediaBitrateTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setReduceMediaBitrateTask(ReduceMediaBitrateTask ReduceMediaBitrateTask) {
         this.ReduceMediaBitrateTask = ReduceMediaBitrateTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return DescribeFileAttributesTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public DescribeFileAttributesTask getDescribeFileAttributesTask() {
         return this.DescribeFileAttributesTask;
@@ -663,15 +757,19 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param DescribeFileAttributesTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDescribeFileAttributesTask(DescribeFileAttributesTask DescribeFileAttributesTask) {
         this.DescribeFileAttributesTask = DescribeFileAttributesTask;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public QualityInspectTask getQualityInspectTask() {
         return this.QualityInspectTask;
@@ -679,7 +777,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setQualityInspectTask(QualityInspectTask QualityInspectTask) {
         this.QualityInspectTask = QualityInspectTask;

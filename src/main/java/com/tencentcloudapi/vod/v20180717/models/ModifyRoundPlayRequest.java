@@ -67,14 +67,18 @@ public class ModifyRoundPlayRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * 
+    * Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
     */
     @SerializedName("PlayBackMode")
     @Expose
@@ -181,32 +185,48 @@ public class ModifyRoundPlayRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+ 
+     * @return Status Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
+     * @param Status Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return PlayBackMode 
+     * Get Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li> 
+     * @return PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
      */
     public String getPlayBackMode() {
         return this.PlayBackMode;
     }
 
     /**
-     * Set 
-     * @param PlayBackMode 
+     * Set Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+     * @param PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
      */
     public void setPlayBackMode(String PlayBackMode) {
         this.PlayBackMode = PlayBackMode;

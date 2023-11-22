@@ -46,12 +46,12 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
     private String [] ChoicesValue;
 
     /**
-    * Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `ChoicesValue`.</li>
-<li>`TOGGLE`: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
-<li>`CUSTOM_NUM`: Custom integer</li>
-<li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
+    * The parameter value type.
+<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
+<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
+<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
+<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
+<li>`CUSTOM_STRING`: (String) Custom value.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -147,36 +147,36 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
     }
 
     /**
-     * Get Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `ChoicesValue`.</li>
-<li>`TOGGLE`: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
-<li>`CUSTOM_NUM`: Custom integer</li>
-<li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1). 
-     * @return Type Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `ChoicesValue`.</li>
-<li>`TOGGLE`: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
-<li>`CUSTOM_NUM`: Custom integer</li>
-<li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
+     * Get The parameter value type.
+<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
+<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
+<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
+<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
+<li>`CUSTOM_STRING`: (String) Custom value.</li> 
+     * @return Type The parameter value type.
+<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
+<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
+<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
+<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
+<li>`CUSTOM_STRING`: (String) Custom value.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `ChoicesValue`.</li>
-<li>`TOGGLE`: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
-<li>`CUSTOM_NUM`: Custom integer</li>
-<li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
-     * @param Type Parameter value type.
-<li>`CHOICE`: The parameter value can be selected only from `ChoicesValue`.</li>
-<li>`TOGGLE`: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
-<li>`CUSTOM_NUM`: Custom integer</li>
-<li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
+     * Set The parameter value type.
+<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
+<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
+<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
+<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
+<li>`CUSTOM_STRING`: (String) Custom value.</li>
+     * @param Type The parameter value type.
+<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
+<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
+<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
+<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
+<li>`CUSTOM_STRING`: (String) Custom value.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

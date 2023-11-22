@@ -116,6 +116,34 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String [] AllowIpList;
 
     /**
+    * 
+    */
+    @SerializedName("RTSPPullSettings")
+    @Expose
+    private DescribeOutputRTSPPullSettings RTSPPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("HLSPullSettings")
+    @Expose
+    private DescribeOutputHLSPullSettings HLSPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("MaxConcurrent")
+    @Expose
+    private Long MaxConcurrent;
+
+    /**
+    * The bound security group IDs.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get Output ID. 
      * @return OutputId Output ID.
      */
@@ -339,6 +367,70 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.AllowIpList = AllowIpList;
     }
 
+    /**
+     * Get  
+     * @return RTSPPullSettings 
+     */
+    public DescribeOutputRTSPPullSettings getRTSPPullSettings() {
+        return this.RTSPPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param RTSPPullSettings 
+     */
+    public void setRTSPPullSettings(DescribeOutputRTSPPullSettings RTSPPullSettings) {
+        this.RTSPPullSettings = RTSPPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return HLSPullSettings 
+     */
+    public DescribeOutputHLSPullSettings getHLSPullSettings() {
+        return this.HLSPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param HLSPullSettings 
+     */
+    public void setHLSPullSettings(DescribeOutputHLSPullSettings HLSPullSettings) {
+        this.HLSPullSettings = HLSPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return MaxConcurrent 
+     */
+    public Long getMaxConcurrent() {
+        return this.MaxConcurrent;
+    }
+
+    /**
+     * Set 
+     * @param MaxConcurrent 
+     */
+    public void setMaxConcurrent(Long MaxConcurrent) {
+        this.MaxConcurrent = MaxConcurrent;
+    }
+
+    /**
+     * Get The bound security group IDs. 
+     * @return SecurityGroupIds The bound security group IDs.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set The bound security group IDs.
+     * @param SecurityGroupIds The bound security group IDs.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public DescribeOutput() {
     }
 
@@ -389,6 +481,21 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.AllowIpList[i] = new String(source.AllowIpList[i]);
             }
         }
+        if (source.RTSPPullSettings != null) {
+            this.RTSPPullSettings = new DescribeOutputRTSPPullSettings(source.RTSPPullSettings);
+        }
+        if (source.HLSPullSettings != null) {
+            this.HLSPullSettings = new DescribeOutputHLSPullSettings(source.HLSPullSettings);
+        }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -408,6 +515,10 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
+        this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+        this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+        this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

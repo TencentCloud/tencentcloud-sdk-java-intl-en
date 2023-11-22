@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class Cache extends AbstractModel {
 
     /**
-    * 
+    * Path cache configuration.
     */
     @SerializedName("RuleCache")
     @Expose
     private RuleCache [] RuleCache;
 
     /**
-     * Get  
-     * @return RuleCache 
+     * Get Path cache configuration. 
+     * @return RuleCache Path cache configuration.
      */
     public RuleCache [] getRuleCache() {
         return this.RuleCache;
     }
 
     /**
-     * Set 
-     * @param RuleCache 
+     * Set Path cache configuration.
+     * @param RuleCache Path cache configuration.
      */
     public void setRuleCache(RuleCache [] RuleCache) {
         this.RuleCache = RuleCache;

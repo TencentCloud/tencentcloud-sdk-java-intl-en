@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UserAgentFilter extends AbstractModel {
 
     /**
-    * 
+    * UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
@@ -38,16 +38,16 @@ public class UserAgentFilter extends AbstractModel {
     private UserAgentFilterRule [] FilterRules;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

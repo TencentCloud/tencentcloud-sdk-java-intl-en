@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CDNCertInfo extends AbstractModel {
 
     /**
-    * 
+    * The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
     */
     @SerializedName("CertId")
     @Expose
@@ -45,23 +45,23 @@ public class CDNCertInfo extends AbstractModel {
     private String PrivateKey;
 
     /**
-    * 
+    * Certificate expiration time; no need to fill in when configured as an input parameter.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get  
-     * @return CertId 
+     * Get The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management. 
+     * @return CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 
-     * @param CertId 
+     * Set The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+     * @param CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -100,16 +100,16 @@ public class CDNCertInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Certificate expiration time; no need to fill in when configured as an input parameter. 
+     * @return ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Certificate expiration time; no need to fill in when configured as an input parameter.
+     * @param ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

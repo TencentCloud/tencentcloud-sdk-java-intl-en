@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BugInfoDetail extends AbstractModel {
 
     /**
-    * Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+    * Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
@@ -144,7 +144,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long ProSupport;
 
     /**
-    * Published or not, `0`: Not published; `1`: Published.
+    * Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsPublish")
@@ -152,7 +152,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long IsPublish;
 
     /**
-    * Release time
+    * Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReleaseTime")
@@ -160,7 +160,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String ReleaseTime;
 
     /**
-    * Creation time
+    * The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
@@ -168,7 +168,7 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
     private String CreateTime;
 
     /**
-    * Update time
+    * The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
@@ -184,9 +184,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String SubCategory;
 
     /**
-     * Get Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * Get Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * @return Id Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getId() {
@@ -194,9 +194,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * Set Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * @param Id Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setId(Long Id) {
@@ -484,9 +484,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Published or not, `0`: Not published; `1`: Published.
+     * Get Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsPublish Published or not, `0`: Not published; `1`: Published.
+     * @return IsPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getIsPublish() {
@@ -494,9 +494,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Published or not, `0`: Not published; `1`: Published.
+     * Set Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsPublish Published or not, `0`: Not published; `1`: Published.
+     * @param IsPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setIsPublish(Long IsPublish) {
@@ -504,9 +504,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Release time
+     * Get Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ReleaseTime Release time
+     * @return ReleaseTime Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getReleaseTime() {
@@ -514,9 +514,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Release time
+     * Set Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ReleaseTime Release time
+     * @param ReleaseTime Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setReleaseTime(String ReleaseTime) {
@@ -524,9 +524,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Creation time
+     * Get The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time
+     * @return CreateTime The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
@@ -534,9 +534,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
     }
 
     /**
-     * Set Creation time
+     * Set The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time
+     * @param CreateTime The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
@@ -544,9 +544,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
     }
 
     /**
-     * Get Update time
+     * Get The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time
+     * @return UpdateTime The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
@@ -554,9 +554,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Update time
+     * Set The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time
+     * @param UpdateTime The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {

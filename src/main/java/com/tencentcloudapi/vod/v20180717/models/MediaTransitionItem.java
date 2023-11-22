@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TransitionOpertion [] Transitions;
 
     /**
-    * 
+    * Transition operation list. Image transition operations and audio transition operations support at most one each.
     */
     @SerializedName("MediaTransitions")
     @Expose
@@ -86,16 +86,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return MediaTransitions 
+     * Get Transition operation list. Image transition operations and audio transition operations support at most one each. 
+     * @return MediaTransitions Transition operation list. Image transition operations and audio transition operations support at most one each.
      */
     public TransitionOperation [] getMediaTransitions() {
         return this.MediaTransitions;
     }
 
     /**
-     * Set 
-     * @param MediaTransitions 
+     * Set Transition operation list. Image transition operations and audio transition operations support at most one each.
+     * @param MediaTransitions Transition operation list. Image transition operations and audio transition operations support at most one each.
      */
     public void setMediaTransitions(TransitionOperation [] MediaTransitions) {
         this.MediaTransitions = MediaTransitions;

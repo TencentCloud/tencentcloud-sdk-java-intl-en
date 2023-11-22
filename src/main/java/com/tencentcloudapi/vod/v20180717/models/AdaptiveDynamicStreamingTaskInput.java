@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * 
+    * CopyRight Watermark.
     */
     @SerializedName("CopyRightWatermark")
     @Expose
@@ -112,16 +112,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return CopyRightWatermark 
+     * Get CopyRight Watermark. 
+     * @return CopyRightWatermark CopyRight Watermark.
      */
     public CopyRightWatermarkInput getCopyRightWatermark() {
         return this.CopyRightWatermark;
     }
 
     /**
-     * Set 
-     * @param CopyRightWatermark 
+     * Set CopyRight Watermark.
+     * @param CopyRightWatermark CopyRight Watermark.
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;

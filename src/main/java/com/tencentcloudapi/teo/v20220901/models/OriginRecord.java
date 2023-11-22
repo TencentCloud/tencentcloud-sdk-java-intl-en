@@ -31,6 +31,16 @@ public class OriginRecord extends AbstractModel {
     private String Record;
 
     /**
+    * The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * The origin record ID.
     */
     @SerializedName("RecordId")
@@ -38,57 +48,25 @@ public class OriginRecord extends AbstractModel {
     private String RecordId;
 
     /**
-    * The origin port. Value rang: 1-65535.
-    */
-    @SerializedName("Port")
-    @Expose
-    private Long Port;
-
-    /**
-    * The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+    * Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-    */
-    @SerializedName("Proto")
-    @Expose
-    private String Proto;
-
-    /**
-    * The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-    */
-    @SerializedName("Area")
-    @Expose
-    private String [] Area;
-
-    /**
-    * It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+    * Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
     */
     @SerializedName("Private")
     @Expose
     private Boolean Private;
 
     /**
-    * The authentication parameter, which is used when `Private=true`.
+    * Private authentication parameters. This field is valid when `Private=true`.
     */
     @SerializedName("PrivateParameters")
     @Expose
@@ -111,6 +89,34 @@ Whether the origin group is private. Values:
     }
 
     /**
+     * Get The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address 
+     * @return Type The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+     * @param Type The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get The origin record ID. 
      * @return RecordId The origin record ID.
      */
@@ -127,156 +133,64 @@ Whether the origin group is private. Values:
     }
 
     /**
-     * Get The origin port. Value rang: 1-65535. 
-     * @return Port The origin port. Value rang: 1-65535.
-     */
-    public Long getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set The origin port. Value rang: 1-65535.
-     * @param Port The origin port. Value rang: 1-65535.
-     */
-    public void setPort(Long Port) {
-        this.Port = Port;
-    }
-
-    /**
-     * Get The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight. 
-     * @return Weight The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+     * Get Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return Weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
-     * @param Weight The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+     * Set Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param Weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li> 
-     * @return Proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-     */
-    public String getProto() {
-        return this.Proto;
-    }
-
-    /**
-     * Set The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-     * @param Proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-     */
-    public void setProto(String Proto) {
-        this.Proto = Proto;
-    }
-
-    /**
-     * Get The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions. 
-     * @return Area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-     */
-    public String [] getArea() {
-        return this.Area;
-    }
-
-    /**
-     * Set The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-     * @param Area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-     */
-    public void setArea(String [] Area) {
-        this.Area = Area;
-    }
-
-    /**
-     * Get It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+     * Get Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false. 
-     * @return Private It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+<li>`false`: No.</li>Default: `false`.
+ 
+     * @return Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
      */
     public Boolean getPrivate() {
         return this.Private;
     }
 
     /**
-     * Set It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+     * Set Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
-     * @param Private It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+<li>`false`: No.</li>Default: `false`.
+
+     * @param Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
      */
     public void setPrivate(Boolean Private) {
         this.Private = Private;
     }
 
     /**
-     * Get The authentication parameter, which is used when `Private=true`. 
-     * @return PrivateParameters The authentication parameter, which is used when `Private=true`.
+     * Get Private authentication parameters. This field is valid when `Private=true`. 
+     * @return PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
     }
 
     /**
-     * Set The authentication parameter, which is used when `Private=true`.
-     * @param PrivateParameters The authentication parameter, which is used when `Private=true`.
+     * Set Private authentication parameters. This field is valid when `Private=true`.
+     * @param PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;
@@ -293,23 +207,14 @@ Whether the origin group is private. Values:
         if (source.Record != null) {
             this.Record = new String(source.Record);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
         }
-        if (source.Port != null) {
-            this.Port = new Long(source.Port);
-        }
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
-        }
-        if (source.Proto != null) {
-            this.Proto = new String(source.Proto);
-        }
-        if (source.Area != null) {
-            this.Area = new String[source.Area.length];
-            for (int i = 0; i < source.Area.length; i++) {
-                this.Area[i] = new String(source.Area[i]);
-            }
         }
         if (source.Private != null) {
             this.Private = new Boolean(source.Private);
@@ -328,11 +233,9 @@ Whether the origin group is private. Values:
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Record", this.Record);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
-        this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
-        this.setParamSimple(map, prefix + "Proto", this.Proto);
-        this.setParamArraySimple(map, prefix + "Area.", this.Area);
         this.setParamSimple(map, prefix + "Private", this.Private);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
 

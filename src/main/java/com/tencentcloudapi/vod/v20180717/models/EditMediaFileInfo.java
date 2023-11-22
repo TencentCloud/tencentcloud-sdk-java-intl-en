@@ -31,14 +31,14 @@ public class EditMediaFileInfo extends AbstractModel {
     private String FileId;
 
     /**
-    * 
+    * Offset time of the start of the video clip, unit: seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * Offset time at the end of the video clip, unit: seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -61,32 +61,32 @@ public class EditMediaFileInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Offset time of the start of the video clip, unit: seconds. 
+     * @return StartTimeOffset Offset time of the start of the video clip, unit: seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Offset time of the start of the video clip, unit: seconds.
+     * @param StartTimeOffset Offset time of the start of the video clip, unit: seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get Offset time at the end of the video clip, unit: seconds. 
+     * @return EndTimeOffset Offset time at the end of the video clip, unit: seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set Offset time at the end of the video clip, unit: seconds.
+     * @param EndTimeOffset Offset time at the end of the video clip, unit: seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

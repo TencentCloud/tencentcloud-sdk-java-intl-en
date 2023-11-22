@@ -58,28 +58,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private OriginDetail OriginDetail;
 
     /**
-    * 
+    * Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * 
+    * The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpOriginPort")
     @Expose
     private Long HttpOriginPort;
 
     /**
-    * 
+    * The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpsOriginPort")
     @Expose
     private Long HttpsOriginPort;
 
     /**
-    * 
+    * IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("IPv6Status")
     @Expose
@@ -219,64 +229,104 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return OriginProtocol 
+     * Get Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
     }
 
     /**
-     * Set 
-     * @param OriginProtocol 
+     * Set Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get  
-     * @return HttpOriginPort 
+     * Get The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return HttpOriginPort The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getHttpOriginPort() {
         return this.HttpOriginPort;
     }
 
     /**
-     * Set 
-     * @param HttpOriginPort 
+     * Set The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param HttpOriginPort The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
         this.HttpOriginPort = HttpOriginPort;
     }
 
     /**
-     * Get  
-     * @return HttpsOriginPort 
+     * Get The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return HttpsOriginPort The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getHttpsOriginPort() {
         return this.HttpsOriginPort;
     }
 
     /**
-     * Set 
-     * @param HttpsOriginPort 
+     * Set The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param HttpsOriginPort The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
         this.HttpsOriginPort = HttpsOriginPort;
     }
 
     /**
-     * Get  
-     * @return IPv6Status 
+     * Get IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained. 
+     * @return IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getIPv6Status() {
         return this.IPv6Status;
     }
 
     /**
-     * Set 
-     * @param IPv6Status 
+     * Set IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setIPv6Status(String IPv6Status) {
         this.IPv6Status = IPv6Status;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CacheConfigCache extends AbstractModel {
 
     /**
-    * 
+    * Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
@@ -38,37 +38,37 @@ public class CacheConfigCache extends AbstractModel {
     private Long CacheTime;
 
     /**
-    * 
+    * Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
     */
     @SerializedName("CompareMaxAge")
     @Expose
     private String CompareMaxAge;
 
     /**
-    * 
+    * Force caching, values: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
     private String IgnoreCacheControl;
 
     /**
-    * 
+    * When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
     */
     @SerializedName("IgnoreSetCookie")
     @Expose
     private String IgnoreSetCookie;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -91,48 +91,48 @@ public class CacheConfigCache extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CompareMaxAge 
+     * Get Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li> 
+     * @return CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
      */
     public String getCompareMaxAge() {
         return this.CompareMaxAge;
     }
 
     /**
-     * Set 
-     * @param CompareMaxAge 
+     * Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+     * @param CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
      */
     public void setCompareMaxAge(String CompareMaxAge) {
         this.CompareMaxAge = CompareMaxAge;
     }
 
     /**
-     * Get  
-     * @return IgnoreCacheControl 
+     * Get Force caching, values: <li>on: on; </li> <li>off: off. </li> 
+     * @return IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
      */
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
     }
 
     /**
-     * Set 
-     * @param IgnoreCacheControl 
+     * Set Force caching, values: <li>on: on; </li> <li>off: off. </li>
+     * @param IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;
     }
 
     /**
-     * Get  
-     * @return IgnoreSetCookie 
+     * Get When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li> 
+     * @return IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
      */
     public String getIgnoreSetCookie() {
         return this.IgnoreSetCookie;
     }
 
     /**
-     * Set 
-     * @param IgnoreSetCookie 
+     * Set When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+     * @param IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {
         this.IgnoreSetCookie = IgnoreSetCookie;

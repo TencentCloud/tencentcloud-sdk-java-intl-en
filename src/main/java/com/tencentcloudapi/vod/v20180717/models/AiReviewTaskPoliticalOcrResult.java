@@ -68,7 +68,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private AiReviewPoliticalOcrTaskOutput Output;
 
     /**
-    * 
+    * Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
     */
     @SerializedName("Progress")
     @Expose
@@ -179,16 +179,16 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100]. 
+     * @return Progress Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
+     * @param Progress Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

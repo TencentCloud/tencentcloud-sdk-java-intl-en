@@ -279,7 +279,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long PortCount;
 
     /**
-    * Network attacks
+    * Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Attack")
@@ -287,7 +287,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long Attack;
 
     /**
-    * Network access
+    * Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Access")
@@ -295,7 +295,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long Access;
 
     /**
-    * Network interception
+    * Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Intercept")
@@ -1067,9 +1067,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Network attacks
+     * Get Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Attack Network attacks
+     * @return Attack Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getAttack() {
@@ -1077,9 +1077,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Network attacks
+     * Set Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Attack Network attacks
+     * @param Attack Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAttack(Long Attack) {
@@ -1087,9 +1087,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Network access
+     * Get Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Access Network access
+     * @return Access Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getAccess() {
@@ -1097,9 +1097,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Network access
+     * Set Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Access Network access
+     * @param Access Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAccess(Long Access) {
@@ -1107,9 +1107,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Network interception
+     * Get Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Intercept Network interception
+     * @return Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getIntercept() {
@@ -1117,9 +1117,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Network interception
+     * Set Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Intercept Network interception
+     * @param Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setIntercept(Long Intercept) {

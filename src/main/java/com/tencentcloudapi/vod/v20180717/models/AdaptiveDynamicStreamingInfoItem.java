@@ -64,7 +64,10 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private Long Size;
 
     /**
-    * 
+    * Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
@@ -78,7 +81,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private MediaSubStreamInfoItem [] SubStreamSet;
 
     /**
-    * 
+    * Copyright Information.
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
@@ -185,16 +188,28 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DigitalWatermarkType 
+     * Get Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li> 
+     * @return DigitalWatermarkType Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set 
-     * @param DigitalWatermarkType 
+     * Set Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
+     * @param DigitalWatermarkType Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
@@ -217,16 +232,16 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CopyRightWatermarkText 
+     * Get Copyright Information. 
+     * @return CopyRightWatermarkText Copyright Information.
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set 
-     * @param CopyRightWatermarkText 
+     * Set Copyright Information.
+     * @param CopyRightWatermarkText Copyright Information.
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;

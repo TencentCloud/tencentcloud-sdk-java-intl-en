@@ -31,7 +31,7 @@ public class StartCDNDomainRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 
+    * Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
     */
     @SerializedName("Operation")
     @Expose
@@ -61,16 +61,16 @@ public class StartCDNDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Operation 
+     * Get Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li> 
+     * @return Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 
-     * @param Operation 
+     * Set Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * @param Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

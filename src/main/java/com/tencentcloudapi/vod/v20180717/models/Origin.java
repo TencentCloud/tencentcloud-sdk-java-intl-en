@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class Origin extends AbstractModel {
 
     /**
-    * 
+    * List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
     */
     @SerializedName("Origins")
     @Expose
     private String [] Origins;
 
     /**
-    * 
+    * Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * 
+    * When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * 
+    * Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
     */
     @SerializedName("OriginPullProtocol")
     @Expose
     private String OriginPullProtocol;
 
     /**
-    * 
+    * Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
     */
     @SerializedName("BackupOrigins")
     @Expose
     private String [] BackupOrigins;
 
     /**
-    * 
+    * Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
     */
     @SerializedName("BackupOriginType")
     @Expose
@@ -73,103 +73,103 @@ public class Origin extends AbstractModel {
     private String BackupServerName;
 
     /**
-    * 
+    * Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
     */
     @SerializedName("OriginCompany")
     @Expose
     private String OriginCompany;
 
     /**
-     * Get  
-     * @return Origins 
+     * Get List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time. 
+     * @return Origins List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
      */
     public String [] getOrigins() {
         return this.Origins;
     }
 
     /**
-     * Set 
-     * @param Origins 
+     * Set List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+     * @param Origins List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
     }
 
     /**
-     * Get  
-     * @return OriginType 
+     * Get Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li> 
+     * @return OriginType Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set 
-     * @param OriginType 
+     * Set Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+     * @param OriginType Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get  
-     * @return ServerName 
+     * Get When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required. 
+     * @return ServerName When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set 
-     * @param ServerName 
+     * Set When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+     * @param ServerName When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get  
-     * @return OriginPullProtocol 
+     * Get Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li> 
+     * @return OriginPullProtocol Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
     }
 
     /**
-     * Set 
-     * @param OriginPullProtocol 
+     * Set Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+     * @param OriginPullProtocol Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
     }
 
     /**
-     * Get  
-     * @return BackupOrigins 
+     * Get Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time. 
+     * @return BackupOrigins Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
      */
     public String [] getBackupOrigins() {
         return this.BackupOrigins;
     }
 
     /**
-     * Set 
-     * @param BackupOrigins 
+     * Set Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+     * @param BackupOrigins Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
      */
     public void setBackupOrigins(String [] BackupOrigins) {
         this.BackupOrigins = BackupOrigins;
     }
 
     /**
-     * Get  
-     * @return BackupOriginType 
+     * Get Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li> 
+     * @return BackupOriginType Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      */
     public String getBackupOriginType() {
         return this.BackupOriginType;
     }
 
     /**
-     * Set 
-     * @param BackupOriginType 
+     * Set Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+     * @param BackupOriginType Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      */
     public void setBackupOriginType(String BackupOriginType) {
         this.BackupOriginType = BackupOriginType;
@@ -192,16 +192,16 @@ public class Origin extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OriginCompany 
+     * Get Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li> 
+     * @return OriginCompany Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
      */
     public String getOriginCompany() {
         return this.OriginCompany;
     }
 
     /**
-     * Set 
-     * @param OriginCompany 
+     * Set Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
+     * @param OriginCompany Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
      */
     public void setOriginCompany(String OriginCompany) {
         this.OriginCompany = OriginCompany;

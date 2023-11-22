@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class ImageOperation extends AbstractModel {
 
     /**
-    * 
+    * Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
     */
     @SerializedName("Type")
     @Expose
@@ -52,16 +55,28 @@ public class ImageOperation extends AbstractModel {
     private ImageBlur Blur;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li> 
+     * @return Type Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
+     * @param Type Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
      */
     public void setType(String Type) {
         this.Type = Type;

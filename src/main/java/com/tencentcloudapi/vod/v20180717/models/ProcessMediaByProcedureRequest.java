@@ -66,7 +66,7 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * 
+    * Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
@@ -176,16 +176,16 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
+     * @return SessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * @param SessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

@@ -128,7 +128,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long Access;
 
     /**
-    * Network interception
+    * Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Intercept")
@@ -328,7 +328,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long VerifyStatus;
 
     /**
-    * Bot access data
+    * u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("BotAccessCount")
@@ -596,9 +596,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Network interception
+     * Get Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Intercept Network interception
+     * @return Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getIntercept() {
@@ -606,9 +606,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Network interception
+     * Set Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Intercept Network interception
+     * @param Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setIntercept(Long Intercept) {
@@ -1096,9 +1096,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Bot access data
+     * Get u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return BotAccessCount Bot access data
+     * @return BotAccessCount u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getBotAccessCount() {
@@ -1106,9 +1106,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Bot access data
+     * Set u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param BotAccessCount Bot access data
+     * @param BotAccessCount u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setBotAccessCount(Long BotAccessCount) {

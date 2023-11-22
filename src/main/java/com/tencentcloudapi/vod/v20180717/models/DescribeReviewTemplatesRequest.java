@@ -31,7 +31,7 @@ public class DescribeReviewTemplatesRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * The IDs of the moderation templates to query. Array length limit: 100.
+    * The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
     */
     @SerializedName("Definitions")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeReviewTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get The IDs of the moderation templates to query. Array length limit: 100. 
-     * @return Definitions The IDs of the moderation templates to query. Array length limit: 100.
+     * Get The audit template uniquely identifies the filtering conditions, and the array length limit is: 100. 
+     * @return Definitions The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set The IDs of the moderation templates to query. Array length limit: 100.
-     * @param Definitions The IDs of the moderation templates to query. Array length limit: 100.
+     * Set The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
+     * @param Definitions The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class HeuristicCache extends AbstractModel {
 
     /**
-    * 
+    * Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheConfig")
     @Expose
     private HeuristicCacheConfig CacheConfig;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li> 
+     * @return Switch Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
+     * @param Switch Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return CacheConfig 
+     * Get Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CacheConfig Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public HeuristicCacheConfig getCacheConfig() {
         return this.CacheConfig;
     }
 
     /**
-     * Set 
-     * @param CacheConfig 
+     * Set Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CacheConfig Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCacheConfig(HeuristicCacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;

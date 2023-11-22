@@ -73,6 +73,41 @@ public class CreateInput extends AbstractModel {
     private String FailOver;
 
     /**
+    * 
+    */
+    @SerializedName("RTMPPullSettings")
+    @Expose
+    private CreateInputRTMPPullSettings RTMPPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("RTSPPullSettings")
+    @Expose
+    private CreateInputRTSPPullSettings RTSPPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("HLSPullSettings")
+    @Expose
+    private CreateInputHLSPullSettings HLSPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("ResilientStream")
+    @Expose
+    private ResilientStreamConf ResilientStream;
+
+    /**
+    * The bound security group IDs.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get Input name, which can contain 1 to 32 letters, digits, and underscores. 
      * @return InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
      */
@@ -184,6 +219,86 @@ public class CreateInput extends AbstractModel {
         this.FailOver = FailOver;
     }
 
+    /**
+     * Get  
+     * @return RTMPPullSettings 
+     */
+    public CreateInputRTMPPullSettings getRTMPPullSettings() {
+        return this.RTMPPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param RTMPPullSettings 
+     */
+    public void setRTMPPullSettings(CreateInputRTMPPullSettings RTMPPullSettings) {
+        this.RTMPPullSettings = RTMPPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return RTSPPullSettings 
+     */
+    public CreateInputRTSPPullSettings getRTSPPullSettings() {
+        return this.RTSPPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param RTSPPullSettings 
+     */
+    public void setRTSPPullSettings(CreateInputRTSPPullSettings RTSPPullSettings) {
+        this.RTSPPullSettings = RTSPPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return HLSPullSettings 
+     */
+    public CreateInputHLSPullSettings getHLSPullSettings() {
+        return this.HLSPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param HLSPullSettings 
+     */
+    public void setHLSPullSettings(CreateInputHLSPullSettings HLSPullSettings) {
+        this.HLSPullSettings = HLSPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return ResilientStream 
+     */
+    public ResilientStreamConf getResilientStream() {
+        return this.ResilientStream;
+    }
+
+    /**
+     * Set 
+     * @param ResilientStream 
+     */
+    public void setResilientStream(ResilientStreamConf ResilientStream) {
+        this.ResilientStream = ResilientStream;
+    }
+
+    /**
+     * Get The bound security group IDs. 
+     * @return SecurityGroupIds The bound security group IDs.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set The bound security group IDs.
+     * @param SecurityGroupIds The bound security group IDs.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public CreateInput() {
     }
 
@@ -216,6 +331,24 @@ public class CreateInput extends AbstractModel {
         if (source.FailOver != null) {
             this.FailOver = new String(source.FailOver);
         }
+        if (source.RTMPPullSettings != null) {
+            this.RTMPPullSettings = new CreateInputRTMPPullSettings(source.RTMPPullSettings);
+        }
+        if (source.RTSPPullSettings != null) {
+            this.RTSPPullSettings = new CreateInputRTSPPullSettings(source.RTSPPullSettings);
+        }
+        if (source.HLSPullSettings != null) {
+            this.HLSPullSettings = new CreateInputHLSPullSettings(source.HLSPullSettings);
+        }
+        if (source.ResilientStream != null) {
+            this.ResilientStream = new ResilientStreamConf(source.ResilientStream);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -230,6 +363,11 @@ public class CreateInput extends AbstractModel {
         this.setParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamSimple(map, prefix + "FailOver", this.FailOver);
+        this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
+        this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+        this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+        this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class RuleRewriteActionParams extends AbstractModel {
 
     /**
-    * Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
+    * Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
     */
     @SerializedName("Action")
     @Expose
@@ -48,28 +48,28 @@ public class RuleRewriteActionParams extends AbstractModel {
     private String [] Values;
 
     /**
-     * Get Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li> 
-     * @return Action Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
+     * Get Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li> 
+     * @return Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
-     * @param Action Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
+     * Set Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
+     * @param Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;

@@ -47,7 +47,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private FilterDataObject [] AssetLocationList;
 
     /**
-    * List of IPs
+    * List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("IpTypeList")
@@ -150,9 +150,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get List of IPs
+     * Get List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IpTypeList List of IPs
+     * @return IpTypeList List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public FilterDataObject [] getIpTypeList() {
@@ -160,9 +160,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set List of IPs
+     * Set List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IpTypeList List of IPs
+     * @param IpTypeList List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setIpTypeList(FilterDataObject [] IpTypeList) {

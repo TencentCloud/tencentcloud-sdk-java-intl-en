@@ -38,7 +38,7 @@ public class DescribeCDNDomainsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 
+    * The starting offset of paged pull. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeCDNDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get The starting offset of paged pull. Default value: 0. 
+     * @return Offset The starting offset of paged pull. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set The starting offset of paged pull. Default value: 0.
+     * @param Offset The starting offset of paged pull. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -32,7 +32,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * 
+    * For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
     */
     @SerializedName("Definition")
     @Expose
@@ -147,16 +148,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font> 
+     * @return Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
+     * @param Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

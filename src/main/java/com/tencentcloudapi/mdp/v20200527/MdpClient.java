@@ -72,6 +72,17 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Create HarvestJob.
+     * @param req CreateStreamPackageHarvestJobRequest
+     * @return CreateStreamPackageHarvestJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJob(CreateStreamPackageHarvestJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageHarvestJob", CreateStreamPackageHarvestJobResponse.class);
+    }
+
+    /**
      *This API is used to delete endpoints from a StreamPackage channel in batches.
      * @param req DeleteStreamPackageChannelEndpointsRequest
      * @return DeleteStreamPackageChannelEndpointsResponse
@@ -94,6 +105,28 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Delete HarvestJob.
+     * @param req DeleteStreamPackageHarvestJobRequest
+     * @return DeleteStreamPackageHarvestJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageHarvestJobResponse DeleteStreamPackageHarvestJob(DeleteStreamPackageHarvestJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageHarvestJob", DeleteStreamPackageHarvestJobResponse.class);
+    }
+
+    /**
+     *Deleting HarvestJobs in Batch.
+     * @param req DeleteStreamPackageHarvestJobsRequest
+     * @return DeleteStreamPackageHarvestJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobs(DeleteStreamPackageHarvestJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageHarvestJobs", DeleteStreamPackageHarvestJobsResponse.class);
+    }
+
+    /**
      *This API is used to query the information of a StreamPackage channel.
      * @param req DescribeStreamPackageChannelRequest
      * @return DescribeStreamPackageChannelResponse
@@ -113,6 +146,28 @@ public class MdpClient extends AbstractClient{
     public DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(DescribeStreamPackageChannelsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStreamPackageChannels", DescribeStreamPackageChannelsResponse.class);
+    }
+
+    /**
+     *Query HarvestJob.
+     * @param req DescribeStreamPackageHarvestJobRequest
+     * @return DescribeStreamPackageHarvestJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageHarvestJobResponse DescribeStreamPackageHarvestJob(DescribeStreamPackageHarvestJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageHarvestJob", DescribeStreamPackageHarvestJobResponse.class);
+    }
+
+    /**
+     *Batch query HarvestJob.
+     * @param req DescribeStreamPackageHarvestJobsRequest
+     * @return DescribeStreamPackageHarvestJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageHarvestJobsResponse DescribeStreamPackageHarvestJobs(DescribeStreamPackageHarvestJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageHarvestJobs", DescribeStreamPackageHarvestJobsResponse.class);
     }
 
     /**

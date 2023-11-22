@@ -105,6 +105,41 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String FailOver;
 
     /**
+    * 
+    */
+    @SerializedName("RTMPPullSettings")
+    @Expose
+    private DescribeInputRTMPPullSettings RTMPPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("RTSPPullSettings")
+    @Expose
+    private DescribeInputRTSPPullSettings RTSPPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("HLSPullSettings")
+    @Expose
+    private DescribeInputHLSPullSettings HLSPullSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("ResilientStream")
+    @Expose
+    private ResilientStreamConf ResilientStream;
+
+    /**
+    * The bound security group ID.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get Input ID. 
      * @return InputId Input ID.
      */
@@ -296,6 +331,86 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.FailOver = FailOver;
     }
 
+    /**
+     * Get  
+     * @return RTMPPullSettings 
+     */
+    public DescribeInputRTMPPullSettings getRTMPPullSettings() {
+        return this.RTMPPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param RTMPPullSettings 
+     */
+    public void setRTMPPullSettings(DescribeInputRTMPPullSettings RTMPPullSettings) {
+        this.RTMPPullSettings = RTMPPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return RTSPPullSettings 
+     */
+    public DescribeInputRTSPPullSettings getRTSPPullSettings() {
+        return this.RTSPPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param RTSPPullSettings 
+     */
+    public void setRTSPPullSettings(DescribeInputRTSPPullSettings RTSPPullSettings) {
+        this.RTSPPullSettings = RTSPPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return HLSPullSettings 
+     */
+    public DescribeInputHLSPullSettings getHLSPullSettings() {
+        return this.HLSPullSettings;
+    }
+
+    /**
+     * Set 
+     * @param HLSPullSettings 
+     */
+    public void setHLSPullSettings(DescribeInputHLSPullSettings HLSPullSettings) {
+        this.HLSPullSettings = HLSPullSettings;
+    }
+
+    /**
+     * Get  
+     * @return ResilientStream 
+     */
+    public ResilientStreamConf getResilientStream() {
+        return this.ResilientStream;
+    }
+
+    /**
+     * Set 
+     * @param ResilientStream 
+     */
+    public void setResilientStream(ResilientStreamConf ResilientStream) {
+        this.ResilientStream = ResilientStream;
+    }
+
+    /**
+     * Get The bound security group ID. 
+     * @return SecurityGroupIds The bound security group ID.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set The bound security group ID.
+     * @param SecurityGroupIds The bound security group ID.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public DescribeInput() {
     }
 
@@ -343,6 +458,24 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.FailOver != null) {
             this.FailOver = new String(source.FailOver);
         }
+        if (source.RTMPPullSettings != null) {
+            this.RTMPPullSettings = new DescribeInputRTMPPullSettings(source.RTMPPullSettings);
+        }
+        if (source.RTSPPullSettings != null) {
+            this.RTSPPullSettings = new DescribeInputRTSPPullSettings(source.RTSPPullSettings);
+        }
+        if (source.HLSPullSettings != null) {
+            this.HLSPullSettings = new DescribeInputHLSPullSettings(source.HLSPullSettings);
+        }
+        if (source.ResilientStream != null) {
+            this.ResilientStream = new ResilientStreamConf(source.ResilientStream);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -361,6 +494,11 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamSimple(map, prefix + "FailOver", this.FailOver);
+        this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
+        this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+        this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+        this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

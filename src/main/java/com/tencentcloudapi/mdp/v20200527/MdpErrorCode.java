@@ -33,6 +33,9 @@ public enum MdpErrorCode {
     // Failed to find the channel/input/output.
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
+    // 
+     INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
+     
     // Invalid `PageNum`.
      INVALIDPARAMETER_PAGENUM("InvalidParameter.PageNum"),
      
@@ -44,6 +47,9 @@ public enum MdpErrorCode {
      
     // Invalid protocol.
      INVALIDPARAMETER_PROTOCOL("InvalidParameter.Protocol"),
+     
+    // 
+     INVALIDPARAMETER_SSAIINFO("InvalidParameter.SSAIInfo"),
      
     // Invalid `Url`.
      INVALIDPARAMETER_URL("InvalidParameter.Url");

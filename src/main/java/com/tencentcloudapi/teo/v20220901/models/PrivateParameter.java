@@ -27,6 +27,8 @@ public class PrivateParameter extends AbstractModel {
     * The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
     */
     @SerializedName("Name")
     @Expose
@@ -42,10 +44,14 @@ public class PrivateParameter extends AbstractModel {
     /**
      * Get The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li> 
+<li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li> 
      * @return Name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
      */
     public String getName() {
         return this.Name;
@@ -55,9 +61,13 @@ public class PrivateParameter extends AbstractModel {
      * Set The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
      * @param Name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
      */
     public void setName(String Name) {
         this.Name = Name;

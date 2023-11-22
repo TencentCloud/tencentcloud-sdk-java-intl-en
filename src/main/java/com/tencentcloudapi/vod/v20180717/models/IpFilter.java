@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel {
 
     /**
-    * 
+    * IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
     */
     @SerializedName("Filters")
     @Expose
@@ -52,48 +52,48 @@ public class IpFilter extends AbstractModel {
     private IpFilterPathRule [] FilterRules;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
+     * @return Switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @param Switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li> 
+     * @return FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+     * @param FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return Filters 
+     * Get IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists. 
+     * @return Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 
-     * @param Filters 
+     * Set IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+     * @param Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;

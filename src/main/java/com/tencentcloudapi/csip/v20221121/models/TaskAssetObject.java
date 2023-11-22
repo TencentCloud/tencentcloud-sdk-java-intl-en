@@ -63,7 +63,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Region;
 
     /**
-    * Unique ID of Multi-cloud asset
+    * The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Arn")
@@ -167,9 +167,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Unique ID of Multi-cloud asset
+     * Get The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Arn Unique ID of Multi-cloud asset
+     * @return Arn The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getArn() {
@@ -177,9 +177,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Set Unique ID of Multi-cloud asset
+     * Set The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Arn Unique ID of Multi-cloud asset
+     * @param Arn The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setArn(String Arn) {

@@ -24,14 +24,21 @@ import java.util.HashMap;
 public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
-    * Offset for paginated queries. Default value: 0.
+    * (Required) Site ID
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * The paginated query offset. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Value range: 1-1000. Default value: 10.
+    * Limit on paginated queries. Value range: 1-1000. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -39,39 +46,55 @@ public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
     * Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-     * Get Offset for paginated queries. Default value: 0. 
-     * @return Offset Offset for paginated queries. Default value: 0.
+     * Get (Required) Site ID 
+     * @return ZoneId (Required) Site ID
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set (Required) Site ID
+     * @param ZoneId (Required) Site ID
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get The paginated query offset. Default value: 0 
+     * @return Offset The paginated query offset. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paginated queries. Default value: 0.
-     * @param Offset Offset for paginated queries. Default value: 0.
+     * Set The paginated query offset. Default value: 0
+     * @param Offset The paginated query offset. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Value range: 1-1000. Default value: 10. 
-     * @return Limit Limit on paginated queries. Value range: 1-1000. Default value: 10.
+     * Get Limit on paginated queries. Value range: 1-1000. Default value: 20. 
+     * @return Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Value range: 1-1000. Default value: 10.
-     * @param Limit Limit on paginated queries. Value range: 1-1000. Default value: 10.
+     * Set Limit on paginated queries. Value range: 1-1000. Default value: 20.
+     * @param Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -79,9 +102,9 @@ public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
      * Get Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li> 
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li> 
      * @return Filters Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -89,9 +112,9 @@ public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
      * Set Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
      * @param Filters Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
@@ -105,6 +128,9 @@ public class DescribeOriginGroupRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeOriginGroupRequest(DescribeOriginGroupRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -124,6 +150,7 @@ public class DescribeOriginGroupRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

@@ -45,8 +45,7 @@ public class MediaSourceData extends AbstractModel {
     private LiveRecordInfo LiveRecordInfo;
 
     /**
-    * The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * TRTC recording information, valid when the file source is TrtcRecord.
     */
     @SerializedName("TrtcRecordInfo")
     @Expose
@@ -108,20 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TrtcRecordInfo The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get TRTC recording information, valid when the file source is TrtcRecord. 
+     * @return TrtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
      */
     public TrtcRecordInfo getTrtcRecordInfo() {
         return this.TrtcRecordInfo;
     }
 
     /**
-     * Set The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TrtcRecordInfo The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set TRTC recording information, valid when the file source is TrtcRecord.
+     * @param TrtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
      */
     public void setTrtcRecordInfo(TrtcRecordInfo TrtcRecordInfo) {
         this.TrtcRecordInfo = TrtcRecordInfo;

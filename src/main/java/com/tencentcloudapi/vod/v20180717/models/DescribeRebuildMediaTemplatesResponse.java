@@ -31,7 +31,7 @@ public class DescribeRebuildMediaTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * The details of the remaster templates.
+    * Rebuild media template details list.
     */
     @SerializedName("RebuildMediaTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeRebuildMediaTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get The details of the remaster templates. 
-     * @return RebuildMediaTemplateSet The details of the remaster templates.
+     * Get Rebuild media template details list. 
+     * @return RebuildMediaTemplateSet Rebuild media template details list.
      */
     public RebuildMediaTemplate [] getRebuildMediaTemplateSet() {
         return this.RebuildMediaTemplateSet;
     }
 
     /**
-     * Set The details of the remaster templates.
-     * @param RebuildMediaTemplateSet The details of the remaster templates.
+     * Set Rebuild media template details list.
+     * @param RebuildMediaTemplateSet Rebuild media template details list.
      */
     public void setRebuildMediaTemplateSet(RebuildMediaTemplate [] RebuildMediaTemplateSet) {
         this.RebuildMediaTemplateSet = RebuildMediaTemplateSet;

@@ -59,6 +59,7 @@ public class EventContent extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FileUploadEvent")
     @Expose
@@ -66,6 +67,7 @@ public class EventContent extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ProcedureStateChangeEvent")
     @Expose
@@ -73,6 +75,7 @@ public class EventContent extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FileDeleteEvent")
     @Expose
@@ -80,6 +83,7 @@ public class EventContent extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("PullCompleteEvent")
     @Expose
@@ -87,14 +91,15 @@ public class EventContent extends AbstractModel {
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("EditMediaCompleteEvent")
     @Expose
     private EditMediaTask EditMediaCompleteEvent;
 
     /**
-    * The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SplitMediaCompleteEvent")
     @Expose
@@ -102,6 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ComposeMediaCompleteEvent")
     @Expose
@@ -109,6 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ClipCompleteEvent")
     @Expose
@@ -116,6 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("TranscodeCompleteEvent")
     @Expose
@@ -123,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CreateImageSpriteCompleteEvent")
     @Expose
@@ -130,6 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ConcatCompleteEvent")
     @Expose
@@ -137,6 +147,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SnapshotByTimeOffsetCompleteEvent")
     @Expose
@@ -144,6 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WechatPublishCompleteEvent")
     @Expose
@@ -151,38 +163,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WechatMiniProgramPublishCompleteEvent")
     @Expose
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
-    * The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RemoveWatermarkCompleteEvent")
     @Expose
     private RemoveWatermarkTask RemoveWatermarkCompleteEvent;
 
     /**
-    * The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RestoreMediaCompleteEvent")
     @Expose
     private RestoreMediaTask RestoreMediaCompleteEvent;
 
     /**
-    * The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RebuildMediaCompleteEvent")
     @Expose
     private RebuildMediaTask RebuildMediaCompleteEvent;
 
     /**
-    * The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ExtractTraceWatermarkCompleteEvent")
     @Expose
@@ -190,6 +203,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ExtractCopyRightWatermarkCompleteEvent")
     @Expose
@@ -197,6 +211,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ReviewAudioVideoCompleteEvent")
     @Expose
@@ -204,6 +219,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ReduceMediaBitrateCompleteEvent")
     @Expose
@@ -211,6 +227,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DescribeFileAttributesCompleteEvent")
     @Expose
@@ -218,6 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("QualityInspectCompleteEvent")
     @Expose
@@ -336,8 +354,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return FileUploadEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public FileUploadTask getFileUploadEvent() {
         return this.FileUploadEvent;
@@ -345,15 +365,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileUploadEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFileUploadEvent(FileUploadTask FileUploadEvent) {
         this.FileUploadEvent = FileUploadEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ProcedureStateChangeEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ProcedureTask getProcedureStateChangeEvent() {
         return this.ProcedureStateChangeEvent;
@@ -361,15 +385,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ProcedureStateChangeEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setProcedureStateChangeEvent(ProcedureTask ProcedureStateChangeEvent) {
         this.ProcedureStateChangeEvent = ProcedureStateChangeEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return FileDeleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public FileDeleteTask getFileDeleteEvent() {
         return this.FileDeleteEvent;
@@ -377,15 +405,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileDeleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFileDeleteEvent(FileDeleteTask FileDeleteEvent) {
         this.FileDeleteEvent = FileDeleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return PullCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public PullUploadTask getPullCompleteEvent() {
         return this.PullCompleteEvent;
@@ -393,15 +425,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param PullCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPullCompleteEvent(PullUploadTask PullCompleteEvent) {
         this.PullCompleteEvent = PullCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return EditMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public EditMediaTask getEditMediaCompleteEvent() {
         return this.EditMediaCompleteEvent;
@@ -409,35 +445,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param EditMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setEditMediaCompleteEvent(EditMediaTask EditMediaCompleteEvent) {
         this.EditMediaCompleteEvent = EditMediaCompleteEvent;
     }
 
     /**
-     * Get The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SplitMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SplitMediaTask getSplitMediaCompleteEvent() {
         return this.SplitMediaCompleteEvent;
     }
 
     /**
-     * Set The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SplitMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSplitMediaCompleteEvent(SplitMediaTask SplitMediaCompleteEvent) {
         this.SplitMediaCompleteEvent = SplitMediaCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ComposeMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ComposeMediaTask getComposeMediaCompleteEvent() {
         return this.ComposeMediaCompleteEvent;
@@ -445,15 +485,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ComposeMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setComposeMediaCompleteEvent(ComposeMediaTask ComposeMediaCompleteEvent) {
         this.ComposeMediaCompleteEvent = ComposeMediaCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ClipCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ClipTask2017 getClipCompleteEvent() {
         return this.ClipCompleteEvent;
@@ -461,15 +505,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClipCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setClipCompleteEvent(ClipTask2017 ClipCompleteEvent) {
         this.ClipCompleteEvent = ClipCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return TranscodeCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public TranscodeTask2017 getTranscodeCompleteEvent() {
         return this.TranscodeCompleteEvent;
@@ -477,15 +525,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param TranscodeCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setTranscodeCompleteEvent(TranscodeTask2017 TranscodeCompleteEvent) {
         this.TranscodeCompleteEvent = TranscodeCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return CreateImageSpriteCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() {
         return this.CreateImageSpriteCompleteEvent;
@@ -493,15 +545,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param CreateImageSpriteCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent) {
         this.CreateImageSpriteCompleteEvent = CreateImageSpriteCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ConcatCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ConcatTask2017 getConcatCompleteEvent() {
         return this.ConcatCompleteEvent;
@@ -509,15 +565,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ConcatCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setConcatCompleteEvent(ConcatTask2017 ConcatCompleteEvent) {
         this.ConcatCompleteEvent = ConcatCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SnapshotByTimeOffsetCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() {
         return this.SnapshotByTimeOffsetCompleteEvent;
@@ -525,15 +585,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SnapshotByTimeOffsetCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent) {
         this.SnapshotByTimeOffsetCompleteEvent = SnapshotByTimeOffsetCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return WechatPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public WechatPublishTask getWechatPublishCompleteEvent() {
         return this.WechatPublishCompleteEvent;
@@ -541,15 +605,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWechatPublishCompleteEvent(WechatPublishTask WechatPublishCompleteEvent) {
         this.WechatPublishCompleteEvent = WechatPublishCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return WechatMiniProgramPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() {
         return this.WechatMiniProgramPublishCompleteEvent;
@@ -557,95 +625,99 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatMiniProgramPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent) {
         this.WechatMiniProgramPublishCompleteEvent = WechatMiniProgramPublishCompleteEvent;
     }
 
     /**
-     * Get The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RemoveWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public RemoveWatermarkTask getRemoveWatermarkCompleteEvent() {
         return this.RemoveWatermarkCompleteEvent;
     }
 
     /**
-     * Set The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RemoveWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask RemoveWatermarkCompleteEvent) {
         this.RemoveWatermarkCompleteEvent = RemoveWatermarkCompleteEvent;
     }
 
     /**
-     * Get The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RestoreMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public RestoreMediaTask getRestoreMediaCompleteEvent() {
         return this.RestoreMediaCompleteEvent;
     }
 
     /**
-     * Set The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RestoreMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRestoreMediaCompleteEvent(RestoreMediaTask RestoreMediaCompleteEvent) {
         this.RestoreMediaCompleteEvent = RestoreMediaCompleteEvent;
     }
 
     /**
-     * Get The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RebuildMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public RebuildMediaTask getRebuildMediaCompleteEvent() {
         return this.RebuildMediaCompleteEvent;
     }
 
     /**
-     * Set The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RebuildMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRebuildMediaCompleteEvent(RebuildMediaTask RebuildMediaCompleteEvent) {
         this.RebuildMediaCompleteEvent = RebuildMediaCompleteEvent;
     }
 
     /**
-     * Get The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ExtractTraceWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() {
         return this.ExtractTraceWatermarkCompleteEvent;
     }
 
     /**
-     * Set The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExtractTraceWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent) {
         this.ExtractTraceWatermarkCompleteEvent = ExtractTraceWatermarkCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ExtractCopyRightWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkCompleteEvent() {
         return this.ExtractCopyRightWatermarkCompleteEvent;
@@ -653,15 +725,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ExtractCopyRightWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setExtractCopyRightWatermarkCompleteEvent(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent) {
         this.ExtractCopyRightWatermarkCompleteEvent = ExtractCopyRightWatermarkCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ReviewAudioVideoCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() {
         return this.ReviewAudioVideoCompleteEvent;
@@ -669,15 +745,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReviewAudioVideoCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask ReviewAudioVideoCompleteEvent) {
         this.ReviewAudioVideoCompleteEvent = ReviewAudioVideoCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ReduceMediaBitrateCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() {
         return this.ReduceMediaBitrateCompleteEvent;
@@ -685,15 +765,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReduceMediaBitrateCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent) {
         this.ReduceMediaBitrateCompleteEvent = ReduceMediaBitrateCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return DescribeFileAttributesCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() {
         return this.DescribeFileAttributesCompleteEvent;
@@ -701,15 +785,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param DescribeFileAttributesCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask DescribeFileAttributesCompleteEvent) {
         this.DescribeFileAttributesCompleteEvent = DescribeFileAttributesCompleteEvent;
     }
 
     /**
-     * Get  
+     * Get 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return QualityInspectCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public QualityInspectTask getQualityInspectCompleteEvent() {
         return this.QualityInspectCompleteEvent;
@@ -717,7 +805,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityInspectCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setQualityInspectCompleteEvent(QualityInspectTask QualityInspectCompleteEvent) {
         this.QualityInspectCompleteEvent = QualityInspectCompleteEvent;

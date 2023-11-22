@@ -33,12 +33,14 @@ public class StatDataItem extends AbstractModel {
     private String Time;
 
     /**
-    * The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+    * Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
     */
     @SerializedName("Value")
     @Expose
@@ -69,36 +71,44 @@ public class StatDataItem extends AbstractModel {
     }
 
     /**
-     * Get The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li> 
-     * @return Value The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+     * Get Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li> 
+     * @return Value Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
-     * @param Value The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+     * Set Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
+     * @param Value Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
      */
     public void setValue(Long Value) {
         this.Value = Value;

@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DeleteOriginGroupRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * ID of the site.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The ID of the origin group.
+    * (Required) Origin group IDe group ID. This parameter is required.
     */
-    @SerializedName("OriginGroupId")
+    @SerializedName("GroupId")
     @Expose
-    private String OriginGroupId;
+    private String GroupId;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get ID of the site. 
+     * @return ZoneId ID of the site.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set ID of the site.
+     * @param ZoneId ID of the site.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The ID of the origin group. 
-     * @return OriginGroupId The ID of the origin group.
+     * Get (Required) Origin group IDe group ID. This parameter is required. 
+     * @return GroupId (Required) Origin group IDe group ID. This parameter is required.
      */
-    public String getOriginGroupId() {
-        return this.OriginGroupId;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set The ID of the origin group.
-     * @param OriginGroupId The ID of the origin group.
+     * Set (Required) Origin group IDe group ID. This parameter is required.
+     * @param GroupId (Required) Origin group IDe group ID. This parameter is required.
      */
-    public void setOriginGroupId(String OriginGroupId) {
-        this.OriginGroupId = OriginGroupId;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     public DeleteOriginGroupRequest() {
@@ -80,8 +80,8 @@ public class DeleteOriginGroupRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
-        if (source.OriginGroupId != null) {
-            this.OriginGroupId = new String(source.OriginGroupId);
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
     }
 
@@ -91,7 +91,7 @@ public class DeleteOriginGroupRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }
