@@ -33,7 +33,7 @@ public class StandardDebug extends AbstractModel {
     private String Switch;
 
     /**
-    * Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+    * Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
     */
     @SerializedName("AllowClientIPList")
     @Expose
@@ -71,16 +71,16 @@ public class StandardDebug extends AbstractModel {
     }
 
     /**
-     * Get Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks. 
-     * @return AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+     * Get Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged. 
+     * @return AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
      */
     public String [] getAllowClientIPList() {
         return this.AllowClientIPList;
     }
 
     /**
-     * Set Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
-     * @param AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+     * Set Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+     * @param AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
      */
     public void setAllowClientIPList(String [] AllowClientIPList) {
         this.AllowClientIPList = AllowClientIPList;

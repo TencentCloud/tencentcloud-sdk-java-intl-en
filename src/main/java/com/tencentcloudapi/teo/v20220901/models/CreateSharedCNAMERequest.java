@@ -31,11 +31,11 @@ public class CreateSharedCNAMERequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Prefix of the shared CNAME (up to 50 characters). Format: "test-api", "test-api.com". 
+    * Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
 
-The complete format of a shared CNAME: <Custom Prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
 
-For example, if the prefix is `example.com`, the generated shared CNAME is `example.com.sai2ig51kaa5.share.dnse2.com`.
+For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
     */
     @SerializedName("SharedCNAMEPrefix")
     @Expose
@@ -65,32 +65,32 @@ For example, if the prefix is `example.com`, the generated shared CNAME is `exam
     }
 
     /**
-     * Get Prefix of the shared CNAME (up to 50 characters). Format: "test-api", "test-api.com". 
+     * Get Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
 
-The complete format of a shared CNAME: <Custom Prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
 
-For example, if the prefix is `example.com`, the generated shared CNAME is `example.com.sai2ig51kaa5.share.dnse2.com`. 
-     * @return SharedCNAMEPrefix Prefix of the shared CNAME (up to 50 characters). Format: "test-api", "test-api.com". 
+For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com. 
+     * @return SharedCNAMEPrefix Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
 
-The complete format of a shared CNAME: <Custom Prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
 
-For example, if the prefix is `example.com`, the generated shared CNAME is `example.com.sai2ig51kaa5.share.dnse2.com`.
+For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
      */
     public String getSharedCNAMEPrefix() {
         return this.SharedCNAMEPrefix;
     }
 
     /**
-     * Set Prefix of the shared CNAME (up to 50 characters). Format: "test-api", "test-api.com". 
+     * Set Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
 
-The complete format of a shared CNAME: <Custom Prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
 
-For example, if the prefix is `example.com`, the generated shared CNAME is `example.com.sai2ig51kaa5.share.dnse2.com`.
-     * @param SharedCNAMEPrefix Prefix of the shared CNAME (up to 50 characters). Format: "test-api", "test-api.com". 
+For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
+     * @param SharedCNAMEPrefix Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
 
-The complete format of a shared CNAME: <Custom Prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
 
-For example, if the prefix is `example.com`, the generated shared CNAME is `example.com.sai2ig51kaa5.share.dnse2.com`.
+For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
      */
     public void setSharedCNAMEPrefix(String SharedCNAMEPrefix) {
         this.SharedCNAMEPrefix = SharedCNAMEPrefix;

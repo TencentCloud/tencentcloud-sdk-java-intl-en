@@ -49,7 +49,7 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel {
     private String MetricName;
 
     /**
-    * Specifies sites by ID. All sites will be selected if this field is not specified.
+    * ZoneId set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -162,16 +162,16 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies sites by ID. All sites will be selected if this field is not specified. 
-     * @return ZoneIds Specifies sites by ID. All sites will be selected if this field is not specified.
+     * Get ZoneId set. This parameter is required. 
+     * @return ZoneIds ZoneId set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Specifies sites by ID. All sites will be selected if this field is not specified.
-     * @param ZoneIds Specifies sites by ID. All sites will be selected if this field is not specified.
+     * Set ZoneId set. This parameter is required.
+     * @param ZoneIds ZoneId set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

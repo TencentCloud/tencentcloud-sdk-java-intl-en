@@ -53,15 +53,14 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     private String [] MetricNames;
 
     /**
-    * List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+    * ZoneId set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+    * Queried domain name set. This parameter has been discarded.
     */
     @SerializedName("Domains")
     @Expose
@@ -90,10 +89,11 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     private String Interval;
 
     /**
-    * Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+    * Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -190,36 +190,32 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     }
 
     /**
-     * Get List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days.  
-     * @return ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * Get ZoneId set. This parameter is required. 
+     * @return ZoneIds ZoneId set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-     * @param ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * Set ZoneId set. This parameter is required.
+     * @param ZoneIds ZoneId set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get List of subdomain names to be queried. All subdomain names will be selected if this field is not specified. 
-     * @return Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+     * Get Queried domain name set. This parameter has been discarded. 
+     * @return Domains Queried domain name set. This parameter has been discarded.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-     * @param Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+     * Set Queried domain name set. This parameter has been discarded.
+     * @param Domains Queried domain name set. This parameter has been discarded.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
@@ -290,28 +286,32 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     }
 
     /**
-     * Get Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li> 
-     * @return Filters Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+     * Get Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li> 
+     * @return Filters Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
-     * @param Filters Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+     * Set Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+     * @param Filters Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

@@ -38,7 +38,7 @@ public class DownloadL4LogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * List of sites. This parameter is required. A `null` will be returned if it is left empty.
+    * ZoneId set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -98,16 +98,16 @@ public class DownloadL4LogsRequest extends AbstractModel {
     }
 
     /**
-     * Get List of sites. This parameter is required. A `null` will be returned if it is left empty. 
-     * @return ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
+     * Get ZoneId set. This parameter is required. 
+     * @return ZoneIds ZoneId set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites. This parameter is required. A `null` will be returned if it is left empty.
-     * @param ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
+     * Set ZoneId set. This parameter is required.
+     * @param ZoneIds ZoneId set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

@@ -463,7 +463,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the L7 traffic summary statistics recorded over time.
+     *This API is used to query the time sequence traffic data of the monitoring category in L7. This API is to be discarded. Please use the API <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a>.
      * @param req DescribeOverviewL7DataRequest
      * @return DescribeOverviewL7DataResponse
      * @throws TencentCloudSDKException
@@ -474,7 +474,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the pre-warming task status.
+     *DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
      * @param req DescribePrefetchTasksRequest
      * @return DescribePrefetchTasksResponse
      * @throws TencentCloudSDKException
@@ -485,7 +485,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *Querying the cache purging history
+     *DescribePurgeTasks is used to query the submitted URL refreshing and directory refreshing records and execution progress. This interface can be used to query the tasks submitted by the CreatePurgeTasks API.
      * @param req DescribePurgeTasksRequest
      * @return DescribePurgeTasksResponse
      * @throws TencentCloudSDKException

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSharedCNAMEResponse extends AbstractModel {
 
     /**
-    * Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+    * Shared CNAME. Format: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'.
     */
     @SerializedName("SharedCNAME")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSharedCNAMEResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com" 
-     * @return SharedCNAME Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+     * Get Shared CNAME. Format: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+     * @return SharedCNAME Shared CNAME. Format: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'.
      */
     public String getSharedCNAME() {
         return this.SharedCNAME;
     }
 
     /**
-     * Set Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
-     * @param SharedCNAME Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
+     * Set Shared CNAME. Format: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'.
+     * @param SharedCNAME Shared CNAME. Format: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'.
      */
     public void setSharedCNAME(String SharedCNAME) {
         this.SharedCNAME = SharedCNAME;

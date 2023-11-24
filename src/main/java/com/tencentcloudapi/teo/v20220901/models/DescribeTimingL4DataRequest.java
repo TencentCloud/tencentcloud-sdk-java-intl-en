@@ -38,21 +38,18 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+    * Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+    * ZoneId set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -128,60 +125,48 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     }
 
     /**
-     * Get Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li> 
-     * @return MetricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+     * Get Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li> 
+     * @return MetricNames Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
-     * @param MetricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+     * Set Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
+     * @param MetricNames Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan.  
-     * @return ZoneIds List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+     * Get ZoneId set. This parameter is required. 
+     * @return ZoneIds ZoneId set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
-     * @param ZoneIds List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+     * Set ZoneId set. This parameter is required.
+     * @param ZoneIds ZoneId set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

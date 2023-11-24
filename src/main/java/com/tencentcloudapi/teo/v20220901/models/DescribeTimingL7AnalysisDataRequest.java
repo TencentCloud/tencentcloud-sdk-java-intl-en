@@ -38,22 +38,21 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+    * Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+    * ZoneId set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -137,64 +136,60 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     }
 
     /**
-     * Get The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li> 
-     * @return MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * Get Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li> 
+     * @return MetricNames Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-     * @param MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * Set Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
+     * @param MetricNames Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days.  
-     * @return ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * Get ZoneId set. This parameter is required. 
+     * @return ZoneIds ZoneId set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-     * @param ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * Set ZoneId set. This parameter is required.
+     * @param ZoneIds ZoneId set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
