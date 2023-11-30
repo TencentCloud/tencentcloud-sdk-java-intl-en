@@ -111,6 +111,9 @@ public enum TeoErrorCode {
     // Invalid operation: Duplicate operation configuration.
      INVALIDPARAMETER_ERRINVALIDACTIONDUPLICATEACTION("InvalidParameter.ErrInvalidActionDuplicateAction"),
      
+    // 
+     INVALIDPARAMETER_ERRINVALIDACTIONORIGINPRIVATEADDRESS("InvalidParameter.ErrInvalidActionOriginPrivateAddress"),
+     
     // Invalid operation: Invalid parameter.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAM("InvalidParameter.ErrInvalidActionParam"),
      
@@ -402,6 +405,9 @@ public enum TeoErrorCode {
     // Maximum parameter length exceeded.
      INVALIDPARAMETER_LENGTHEXCEEDSLIMIT("InvalidParameter.LengthExceedsLimit"),
      
+    // 
+     INVALIDPARAMETER_LOADBALANCEINSTANCEIDISREQUIRED("InvalidParameter.LoadBalanceInstanceIdIsRequired"),
+     
     // Smart routing is not supported.
      INVALIDPARAMETER_MULTIPLYLAYERNOTSUPPORTSMARTROUTING("InvalidParameter.MultiplyLayerNotSupportSmartRouting"),
      
@@ -419,6 +425,9 @@ public enum TeoErrorCode {
      
     // The origin group ID is required.
      INVALIDPARAMETER_ORIGINORIGINGROUPIDISREQUIRED("InvalidParameter.OriginOriginGroupIdIsRequired"),
+     
+    // 
+     INVALIDPARAMETER_ORIGINPULLPROTOCOLISREQUIRED("InvalidParameter.OriginPullProtocolIsRequired"),
      
     // Incorrect origin server format. 
      INVALIDPARAMETER_ORIGINRECORDFORMATERROR("InvalidParameter.OriginRecordFormatError"),
@@ -564,6 +573,9 @@ public enum TeoErrorCode {
     // Limit exceeded
      LIMITEXCEEDED_SECURITY("LimitExceeded.Security"),
      
+    // 
+     LIMITEXCEEDED_USERQUOTALIMITED("LimitExceeded.UserQuotaLimited"),
+     
     // Reached the upper limit of sites of the plan
      LIMITEXCEEDED_ZONEBINDPLAN("LimitExceeded.ZoneBindPlan"),
      
@@ -581,6 +593,9 @@ public enum TeoErrorCode {
      
     // The configuration is locked. Please unlock and try again.
      OPERATIONDENIED_CONFIGLOCKED("OperationDenied.ConfigLocked"),
+     
+    // 
+     OPERATIONDENIED_DELETEZONEPRECHECKFAILED("OperationDenied.DeleteZonePreCheckFailed"),
      
     // The EdgeOne service of the site is being disabled. Please try again later.
      OPERATIONDENIED_DISABLEZONENOTCOMPLETED("OperationDenied.DisableZoneNotCompleted"),

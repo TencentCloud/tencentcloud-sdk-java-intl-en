@@ -24,6 +24,25 @@ import java.util.HashMap;
 public class EditMediaVideoStream extends AbstractModel {
 
     /**
+    * The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+    */
+    @SerializedName("Codec")
+    @Expose
+    private String Codec;
+
+    /**
+    * The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
     * Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -63,6 +82,58 @@ The default value is 0.
     @SerializedName("Fps")
     @Expose
     private Long Fps;
+
+    /**
+     * Get The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li> 
+     * @return Codec The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+     */
+    public String getCodec() {
+        return this.Codec;
+    }
+
+    /**
+     * Set The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+     * @param Codec The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+     */
+    public void setCodec(String Codec) {
+        this.Codec = Codec;
+    }
+
+    /**
+     * Get The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate. 
+     * @return Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     * @param Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
 
     /**
      * Get Resolution adaptive, optional values:
@@ -188,6 +259,12 @@ The default value is 0.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public EditMediaVideoStream(EditMediaVideoStream source) {
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
         if (source.ResolutionAdaptive != null) {
             this.ResolutionAdaptive = new String(source.ResolutionAdaptive);
         }
@@ -207,6 +284,8 @@ The default value is 0.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Codec", this.Codec);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);

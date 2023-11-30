@@ -243,6 +243,9 @@ public enum VodErrorCode {
     // Incorrect parameter: the end time is invalid.
      INVALIDPARAMETERVALUE_ENDTIMEOFFSET("InvalidParameterValue.EndTimeOffset"),
      
+    // Duplicate name
+     INVALIDPARAMETERVALUE_EXISTEDNAME("InvalidParameterValue.ExistedName"),
+     
     // Incorrect parameter value: incorrect `ExpireTime` format.
      INVALIDPARAMETERVALUE_EXPIRETIME("InvalidParameterValue.ExpireTime"),
      

@@ -32,6 +32,13 @@ public class DomainHTTPSConfig extends AbstractModel {
     private String CertExpireTime;
 
     /**
+    * Certificate ID in Tencent Cloud SSL product.
+    */
+    @SerializedName("CloudCertId")
+    @Expose
+    private String CloudCertId;
+
+    /**
      * Get Time when the certificate expires
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li> 
      * @return CertExpireTime Time when the certificate expires
@@ -51,6 +58,22 @@ public class DomainHTTPSConfig extends AbstractModel {
         this.CertExpireTime = CertExpireTime;
     }
 
+    /**
+     * Get Certificate ID in Tencent Cloud SSL product. 
+     * @return CloudCertId Certificate ID in Tencent Cloud SSL product.
+     */
+    public String getCloudCertId() {
+        return this.CloudCertId;
+    }
+
+    /**
+     * Set Certificate ID in Tencent Cloud SSL product.
+     * @param CloudCertId Certificate ID in Tencent Cloud SSL product.
+     */
+    public void setCloudCertId(String CloudCertId) {
+        this.CloudCertId = CloudCertId;
+    }
+
     public DomainHTTPSConfig() {
     }
 
@@ -62,6 +85,9 @@ public class DomainHTTPSConfig extends AbstractModel {
         if (source.CertExpireTime != null) {
             this.CertExpireTime = new String(source.CertExpireTime);
         }
+        if (source.CloudCertId != null) {
+            this.CloudCertId = new String(source.CloudCertId);
+        }
     }
 
 
@@ -70,6 +96,7 @@ public class DomainHTTPSConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertExpireTime", this.CertExpireTime);
+        this.setParamSimple(map, prefix + "CloudCertId", this.CloudCertId);
 
     }
 }

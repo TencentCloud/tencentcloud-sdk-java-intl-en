@@ -171,6 +171,17 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     }
 
     /**
+     *You can query the status of the Relay task.
+     * @param req DescribeStreamIngestRequest
+     * @return DescribeStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamIngestResponse DescribeStreamIngest(DescribeStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamIngest", DescribeStreamIngestResponse.class);
+    }
+
+    /**
      *This API is used to query usage data grouped by room.
 - The queried period cannot exceed 24 hours. If the period spans two different days, the data returned may not be accurate due to a delay in data collection. You can make multiple calls to query the usage on different days.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
@@ -386,6 +397,17 @@ Usage Precautions:
     }
 
     /**
+     *Push an online media stream to the TRTC room.
+     * @param req StartStreamIngestRequest
+     * @return StartStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStreamIngestResponse StartStreamIngest(StartStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartStreamIngest", StartStreamIngestResponse.class);
+    }
+
+    /**
      *This API is used to stop a relaying task.
      * @param req StopPublishCdnStreamRequest
      * @return StopPublishCdnStreamResponse
@@ -394,6 +416,17 @@ Usage Precautions:
     public StopPublishCdnStreamResponse StopPublishCdnStream(StopPublishCdnStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopPublishCdnStream", StopPublishCdnStreamResponse.class);
+    }
+
+    /**
+     *Stop a Pull stream Relay task.
+     * @param req StopStreamIngestRequest
+     * @return StopStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopStreamIngestResponse StopStreamIngest(StopStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopStreamIngest", StopStreamIngestResponse.class);
     }
 
     /**

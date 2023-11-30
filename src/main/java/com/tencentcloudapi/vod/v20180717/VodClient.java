@@ -255,6 +255,17 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     }
 
     /**
+     *Create Just In Time Transcode Template.
+     * @param req CreateJustInTimeTranscodeTemplateRequest
+     * @return CreateJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJustInTimeTranscodeTemplate", CreateJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -549,6 +560,17 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
+    }
+
+    /**
+     *Delete Just In Time Transcode Template.
+     * @param req DeleteJustInTimeTranscodeTemplateRequest
+     * @return DeleteJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplate", DeleteJustInTimeTranscodeTemplateResponse.class);
     }
 
     /**
@@ -944,6 +966,17 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
+    }
+
+    /**
+     *Describe Just In Time Transcode Templates.
+     * @param req DescribeJustInTimeTranscodeTemplatesRequest
+     * @return DescribeJustInTimeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
     }
 
     /**
@@ -1522,6 +1555,17 @@ Developers can achieve this by calling this interface:
     }
 
     /**
+     *Modify Just In Time Transcode Template.
+     * @param req ModifyJustInTimeTranscodeTemplateRequest
+     * @return ModifyJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyJustInTimeTranscodeTemplate", ModifyJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
      *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
      * @param req ModifyMediaInfoRequest
      * @return ModifyMediaInfoResponse
@@ -1980,6 +2024,17 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
     public SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(SetDrmKeyProviderInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetDrmKeyProviderInfo", SetDrmKeyProviderInfoResponse.class);
+    }
+
+    /**
+     *Set Vod Domain Certificate.
+     * @param req SetVodDomainCertificateRequest
+     * @return SetVodDomainCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVodDomainCertificateResponse SetVodDomainCertificate(SetVodDomainCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetVodDomainCertificate", SetVodDomainCertificateResponse.class);
     }
 
     /**

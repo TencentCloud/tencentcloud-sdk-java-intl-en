@@ -56,6 +56,14 @@ Default value: 2.
     private Long AudioChannel;
 
     /**
+    * The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
 Default value: libfdk_aac. 
@@ -147,6 +155,26 @@ Default value: 2.
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set. 
+     * @return Bitrate The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+     * @param Bitrate The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public OutputAudioStream() {
     }
 
@@ -164,6 +192,9 @@ Default value: 2.
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -174,6 +205,7 @@ Default value: 2.
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }

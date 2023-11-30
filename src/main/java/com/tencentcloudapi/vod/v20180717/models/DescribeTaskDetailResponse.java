@@ -235,6 +235,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private QualityInspectTask QualityInspectTask;
 
     /**
+    * Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("QualityEnhanceTask")
+    @Expose
+    private QualityEnhanceTask QualityEnhanceTask;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -786,6 +794,26 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
+     * Get Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public QualityEnhanceTask getQualityEnhanceTask() {
+        return this.QualityEnhanceTask;
+    }
+
+    /**
+     * Set Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setQualityEnhanceTask(QualityEnhanceTask QualityEnhanceTask) {
+        this.QualityEnhanceTask = QualityEnhanceTask;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -884,6 +912,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.QualityInspectTask != null) {
             this.QualityInspectTask = new QualityInspectTask(source.QualityInspectTask);
         }
+        if (source.QualityEnhanceTask != null) {
+            this.QualityEnhanceTask = new QualityEnhanceTask(source.QualityEnhanceTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -919,6 +950,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
         this.setParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
         this.setParamObj(map, prefix + "QualityInspectTask.", this.QualityInspectTask);
+        this.setParamObj(map, prefix + "QualityEnhanceTask.", this.QualityEnhanceTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

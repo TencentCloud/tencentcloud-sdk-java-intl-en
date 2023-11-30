@@ -152,9 +152,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Category;
 
     /**
-    * The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+    * File status: Normal: normal, Forbidden: banned.
     */
     @SerializedName("Status")
     @Expose
@@ -492,24 +490,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	 
-     * @return Status The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+     * Get File status: Normal: normal, Forbidden: banned. 
+     * @return Status File status: Normal: normal, Forbidden: banned.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
-     * @param Status The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+     * Set File status: Normal: normal, Forbidden: banned.
+     * @param Status File status: Normal: normal, Forbidden: banned.
      */
     public void setStatus(String Status) {
         this.Status = Status;
