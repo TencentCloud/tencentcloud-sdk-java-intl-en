@@ -47,8 +47,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long FrequencyLimit;
 
     /**
-    * Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PunishmentSwitch")
     @Expose
@@ -87,8 +89,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ScdnSevenLayerRules [] Configure;
 
     /**
-    * Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -151,20 +155,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PunishmentSwitch Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getPunishmentSwitch() {
         return this.PunishmentSwitch;
     }
 
     /**
-     * Set Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PunishmentSwitch Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setPunishmentSwitch(String PunishmentSwitch) {
         this.PunishmentSwitch = PunishmentSwitch;
@@ -251,20 +263,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

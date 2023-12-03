@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class QueryStringKey extends AbstractModel {
 
     /**
-    * Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -40,8 +42,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Reorder;
 
     /**
-    * Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Action")
     @Expose
@@ -56,20 +62,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Value;
 
     /**
-     * Get Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -96,20 +110,36 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Action Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Action Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAction(String Action) {
         this.Action = Action;

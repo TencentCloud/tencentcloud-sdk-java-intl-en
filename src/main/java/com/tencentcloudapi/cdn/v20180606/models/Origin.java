@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class Origin extends AbstractModel {
 
     /**
-    * Primary origin server list
-When modifying the origin server, you need to enter the corresponding OriginType.
-Note: This field may return `null`, indicating that no valid value was found.
+    * List of primary origin servers
+<font color=red>When modifying the origins, you need to specify `OriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Origins")
     @Expose
@@ -34,39 +34,43 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
     * Primary origin server type
-The following types are supported for input parameters:
-`domain`: domain name
+<font color=red>This field is used together with `Origins`.</font>
+Input:
+`domain`: Domain name
 `domainv6`: IPv6 domain name
-cos: COS origin
+`cos`: COS bucket address
+`third_party`: Third-party object storage origin
+`igtm`: IGTM origin
 `ip`: IP address
-ipv6: origin server list is a single IPv6 address
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6`: One IPv6 address
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Output:
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to specify `OriginType`.
+The IPv6 feature is now only available to beta users. Submit a ticket if you need it.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * It is required when a COS origin or third-party origin is used for acceleration.
-Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
-If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Origin-pull host header.
+<font color=red>This field is required when `OriginType=cos/third-party`.</font>
+If not specified, this field defaults to the acceleration domain name.
+For a wildcard domain name, the sub-domain name during the access is used by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerName")
     @Expose
@@ -93,25 +97,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String OriginPullProtocol;
 
     /**
-    * Backup origin server list
-When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * List of secondary origin servers
+<font color=red>This field is used together with `BackupOriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupOrigins")
     @Expose
     private String [] BackupOrigins;
 
     /**
-    * Backup origin server type, which supports the following types:
+    * Secondary origin type
+<font color=red>This field is used together with `BackupOrigins`.</font>
+Values:
 `domain`: Domain name
 `ip`: IP address
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+The following secondary origin types are only available to beta users. Submit a ticket to use it.
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupOriginType")
     @Expose
@@ -150,6 +155,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private PathBasedOriginRule [] PathBasedOrigin;
 
     /**
+    * HTTPS origin-pull SNI
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Sni")
+    @Expose
+    private OriginSni Sni;
+
+    /**
     * HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
@@ -158,32 +171,39 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private AdvanceHttps AdvanceHttps;
 
     /**
-    * Object storage vendor
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Third-party object storage service vendor
+<font color=red>This field is required when `OriginType=third-party`.</font>
+Values:
+`aws_s3`: AWS S3
+`ali_oss`: Alibaba Cloud OSS
+`hw_obs`: Huawei Cloud OBS
+`Qiniu_kodo`: Qiniu Kodo
+`Others`: Other object storage service vendors. Only AWS signature-compatible object storage services are supported, such as Tencent Cloud COS for Finance Zone.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCompany")
     @Expose
     private String OriginCompany;
 
     /**
-     * Get Primary origin server list
-When modifying the origin server, you need to enter the corresponding OriginType.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Origins Primary origin server list
-When modifying the origin server, you need to enter the corresponding OriginType.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get List of primary origin servers
+<font color=red>When modifying the origins, you need to specify `OriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Origins List of primary origin servers
+<font color=red>When modifying the origins, you need to specify `OriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getOrigins() {
         return this.Origins;
     }
 
     /**
-     * Set Primary origin server list
-When modifying the origin server, you need to enter the corresponding OriginType.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Origins Primary origin server list
-When modifying the origin server, you need to enter the corresponding OriginType.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set List of primary origin servers
+<font color=red>When modifying the origins, you need to specify `OriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Origins List of primary origin servers
+<font color=red>When modifying the origins, you need to specify `OriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
@@ -191,53 +211,59 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Get Primary origin server type
-The following types are supported for input parameters:
-`domain`: domain name
+<font color=red>This field is used together with `Origins`.</font>
+Input:
+`domain`: Domain name
 `domainv6`: IPv6 domain name
-cos: COS origin
+`cos`: COS bucket address
+`third_party`: Third-party object storage origin
+`igtm`: IGTM origin
 `ip`: IP address
-ipv6: origin server list is a single IPv6 address
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6`: One IPv6 address
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Output:
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to specify `OriginType`.
+The IPv6 feature is now only available to beta users. Submit a ticket if you need it.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return OriginType Primary origin server type
-The following types are supported for input parameters:
-`domain`: domain name
+<font color=red>This field is used together with `Origins`.</font>
+Input:
+`domain`: Domain name
 `domainv6`: IPv6 domain name
-cos: COS origin
+`cos`: COS bucket address
+`third_party`: Third-party object storage origin
+`igtm`: IGTM origin
 `ip`: IP address
-ipv6: origin server list is a single IPv6 address
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6`: One IPv6 address
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Output:
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to specify `OriginType`.
+The IPv6 feature is now only available to beta users. Submit a ticket if you need it.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOriginType() {
         return this.OriginType;
@@ -245,81 +271,91 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Primary origin server type
-The following types are supported for input parameters:
-`domain`: domain name
+<font color=red>This field is used together with `Origins`.</font>
+Input:
+`domain`: Domain name
 `domainv6`: IPv6 domain name
-cos: COS origin
+`cos`: COS bucket address
+`third_party`: Third-party object storage origin
+`igtm`: IGTM origin
 `ip`: IP address
-ipv6: origin server list is a single IPv6 address
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6`: One IPv6 address
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Output:
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to specify `OriginType`.
+The IPv6 feature is now only available to beta users. Submit a ticket if you need it.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param OriginType Primary origin server type
-The following types are supported for input parameters:
-`domain`: domain name
+<font color=red>This field is used together with `Origins`.</font>
+Input:
+`domain`: Domain name
 `domainv6`: IPv6 domain name
-cos: COS origin
+`cos`: COS bucket address
+`third_party`: Third-party object storage origin
+`igtm`: IGTM origin
 `ip`: IP address
-ipv6: origin server list is a single IPv6 address
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6`: One IPv6 address
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Output:
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to specify `OriginType`.
+The IPv6 feature is now only available to beta users. Submit a ticket if you need it.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get It is required when a COS origin or third-party origin is used for acceleration.
-Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
-If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ServerName It is required when a COS origin or third-party origin is used for acceleration.
-Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
-If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Origin-pull host header.
+<font color=red>This field is required when `OriginType=cos/third-party`.</font>
+If not specified, this field defaults to the acceleration domain name.
+For a wildcard domain name, the sub-domain name during the access is used by default.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ServerName Origin-pull host header.
+<font color=red>This field is required when `OriginType=cos/third-party`.</font>
+If not specified, this field defaults to the acceleration domain name.
+For a wildcard domain name, the sub-domain name during the access is used by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set It is required when a COS origin or third-party origin is used for acceleration.
-Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
-If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ServerName It is required when a COS origin or third-party origin is used for acceleration.
-Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
-If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Origin-pull host header.
+<font color=red>This field is required when `OriginType=cos/third-party`.</font>
+If not specified, this field defaults to the acceleration domain name.
+For a wildcard domain name, the sub-domain name during the access is used by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ServerName Origin-pull host header.
+<font color=red>This field is required when `OriginType=cos/third-party`.</font>
+If not specified, this field defaults to the acceleration domain name.
+For a wildcard domain name, the sub-domain name during the access is used by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
@@ -382,76 +418,80 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Backup origin server list
-When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return BackupOrigins Backup origin server list
-When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get List of secondary origin servers
+<font color=red>This field is used together with `BackupOriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return BackupOrigins List of secondary origin servers
+<font color=red>This field is used together with `BackupOriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getBackupOrigins() {
         return this.BackupOrigins;
     }
 
     /**
-     * Set Backup origin server list
-When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param BackupOrigins Backup origin server list
-When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set List of secondary origin servers
+<font color=red>This field is used together with `BackupOriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param BackupOrigins List of secondary origin servers
+<font color=red>This field is used together with `BackupOriginType`.</font>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBackupOrigins(String [] BackupOrigins) {
         this.BackupOrigins = BackupOrigins;
     }
 
     /**
-     * Get Backup origin server type, which supports the following types:
+     * Get Secondary origin type
+<font color=red>This field is used together with `BackupOrigins`.</font>
+Values:
 `domain`: Domain name
 `ip`: IP address
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+The following secondary origin types are only available to beta users. Submit a ticket to use it.
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return BackupOriginType Backup origin server type, which supports the following types:
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return BackupOriginType Secondary origin type
+<font color=red>This field is used together with `BackupOrigins`.</font>
+Values:
 `domain`: Domain name
 `ip`: IP address
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+The following secondary origin types are only available to beta users. Submit a ticket to use it.
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getBackupOriginType() {
         return this.BackupOriginType;
     }
 
     /**
-     * Set Backup origin server type, which supports the following types:
+     * Set Secondary origin type
+<font color=red>This field is used together with `BackupOrigins`.</font>
+Values:
 `domain`: Domain name
 `ip`: IP address
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+The following secondary origin types are only available to beta users. Submit a ticket to use it.
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param BackupOriginType Backup origin server type, which supports the following types:
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param BackupOriginType Secondary origin type
+<font color=red>This field is used together with `BackupOrigins`.</font>
+Values:
 `domain`: Domain name
 `ip`: IP address
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+The following secondary origin types are only available to beta users. Submit a ticket to use it.
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBackupOriginType(String BackupOriginType) {
         this.BackupOriginType = BackupOriginType;
@@ -538,6 +578,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
+     * Get HTTPS origin-pull SNI
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Sni HTTPS origin-pull SNI
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public OriginSni getSni() {
+        return this.Sni;
+    }
+
+    /**
+     * Set HTTPS origin-pull SNI
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Sni HTTPS origin-pull SNI
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSni(OriginSni Sni) {
+        this.Sni = Sni;
+    }
+
+    /**
      * Get HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return AdvanceHttps HTTPS advanced origin-pull configuration
@@ -558,20 +618,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Object storage vendor
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return OriginCompany Object storage vendor
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Third-party object storage service vendor
+<font color=red>This field is required when `OriginType=third-party`.</font>
+Values:
+`aws_s3`: AWS S3
+`ali_oss`: Alibaba Cloud OSS
+`hw_obs`: Huawei Cloud OBS
+`Qiniu_kodo`: Qiniu Kodo
+`Others`: Other object storage service vendors. Only AWS signature-compatible object storage services are supported, such as Tencent Cloud COS for Finance Zone.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginCompany Third-party object storage service vendor
+<font color=red>This field is required when `OriginType=third-party`.</font>
+Values:
+`aws_s3`: AWS S3
+`ali_oss`: Alibaba Cloud OSS
+`hw_obs`: Huawei Cloud OBS
+`Qiniu_kodo`: Qiniu Kodo
+`Others`: Other object storage service vendors. Only AWS signature-compatible object storage services are supported, such as Tencent Cloud COS for Finance Zone.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOriginCompany() {
         return this.OriginCompany;
     }
 
     /**
-     * Set Object storage vendor
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param OriginCompany Object storage vendor
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Third-party object storage service vendor
+<font color=red>This field is required when `OriginType=third-party`.</font>
+Values:
+`aws_s3`: AWS S3
+`ali_oss`: Alibaba Cloud OSS
+`hw_obs`: Huawei Cloud OBS
+`Qiniu_kodo`: Qiniu Kodo
+`Others`: Other object storage service vendors. Only AWS signature-compatible object storage services are supported, such as Tencent Cloud COS for Finance Zone.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginCompany Third-party object storage service vendor
+<font color=red>This field is required when `OriginType=third-party`.</font>
+Values:
+`aws_s3`: AWS S3
+`ali_oss`: Alibaba Cloud OSS
+`hw_obs`: Huawei Cloud OBS
+`Qiniu_kodo`: Qiniu Kodo
+`Others`: Other object storage service vendors. Only AWS signature-compatible object storage services are supported, such as Tencent Cloud COS for Finance Zone.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginCompany(String OriginCompany) {
         this.OriginCompany = OriginCompany;
@@ -630,6 +718,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.PathBasedOrigin[i] = new PathBasedOriginRule(source.PathBasedOrigin[i]);
             }
         }
+        if (source.Sni != null) {
+            this.Sni = new OriginSni(source.Sni);
+        }
         if (source.AdvanceHttps != null) {
             this.AdvanceHttps = new AdvanceHttps(source.AdvanceHttps);
         }
@@ -654,6 +745,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
         this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         this.setParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
+        this.setParamObj(map, prefix + "Sni.", this.Sni);
         this.setParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
         this.setParamSimple(map, prefix + "OriginCompany", this.OriginCompany);
 

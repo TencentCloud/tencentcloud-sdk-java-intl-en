@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class StatusCodeCache extends AbstractModel {
 
     /**
-    * Status code cache expiration configuration switch
+    * Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -42,28 +42,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private StatusCodeCacheRule [] CacheRules;
 
     /**
-     * Get Status code cache expiration configuration switch
+     * Get Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Status code cache expiration configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Status code cache expiration configuration switch
+     * Set Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Status code cache expiration configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class OssPrivateAccess extends AbstractModel {
 
     /**
-    * Whether to enable access authentication. Valid values: `on`, `off`.
+    * Whether to enable OSS origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -63,16 +65,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Bucket;
 
     /**
-     * Get Whether to enable access authentication. Valid values: `on`, `off`. 
-     * @return Switch Whether to enable access authentication. Valid values: `on`, `off`.
+     * Get Whether to enable OSS origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable OSS origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable access authentication. Valid values: `on`, `off`.
-     * @param Switch Whether to enable access authentication. Valid values: `on`, `off`.
+     * Set Whether to enable OSS origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable OSS origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

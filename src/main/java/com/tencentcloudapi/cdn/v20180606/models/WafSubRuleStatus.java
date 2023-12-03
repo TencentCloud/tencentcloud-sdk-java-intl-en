@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class WafSubRuleStatus extends AbstractModel {
 
     /**
-    * Sub-rule status. Valid values: `on` and `off`.
+    * Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -38,16 +40,24 @@ public class WafSubRuleStatus extends AbstractModel {
     private Long [] SubIds;
 
     /**
-     * Get Sub-rule status. Valid values: `on` and `off`. 
-     * @return Switch Sub-rule status. Valid values: `on` and `off`.
+     * Get Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Sub-rule status. Valid values: `on` and `off`.
-     * @param Switch Sub-rule status. Valid values: `on` and `off`.
+     * Set Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

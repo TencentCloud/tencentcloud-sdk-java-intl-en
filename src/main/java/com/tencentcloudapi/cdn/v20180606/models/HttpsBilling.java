@@ -24,23 +24,38 @@ import java.util.HashMap;
 public class HttpsBilling extends AbstractModel {
 
     /**
-    * HTTPS (enabled by default), which will incur charges.
+    * Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get HTTPS (enabled by default), which will incur charges. 
-     * @return Switch HTTPS (enabled by default), which will incur charges.
+     * Get Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+ 
+     * @return Switch Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set HTTPS (enabled by default), which will incur charges.
-     * @param Switch HTTPS (enabled by default), which will incur charges.
+     * Set Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+
+     * @param Switch Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VideoSeek extends AbstractModel {
 
     /**
-    * Video dragging switch
+    * Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -33,10 +33,10 @@ public class VideoSeek extends AbstractModel {
     private String Switch;
 
     /**
-     * Get Video dragging switch
+     * Get Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Video dragging switch
+     * @return Switch Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -45,10 +45,10 @@ public class VideoSeek extends AbstractModel {
     }
 
     /**
-     * Set Video dragging switch
+     * Set Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Video dragging switch
+     * @param Switch Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
      */

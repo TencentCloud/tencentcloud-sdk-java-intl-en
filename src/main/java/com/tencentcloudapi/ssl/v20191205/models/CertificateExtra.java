@@ -72,6 +72,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SMCert;
 
     /**
+    * Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CompanyType")
+    @Expose
+    private Long CompanyType;
+
+    /**
      * Get Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DomainNumber Number of domain names which can be associated with the certificate
@@ -191,6 +199,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SMCert = SMCert;
     }
 
+    /**
+     * Get Company type
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CompanyType Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getCompanyType() {
+        return this.CompanyType;
+    }
+
+    /**
+     * Set Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CompanyType Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCompanyType(Long CompanyType) {
+        this.CompanyType = CompanyType;
+    }
+
     public CertificateExtra() {
     }
 
@@ -217,6 +245,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SMCert != null) {
             this.SMCert = new Long(source.SMCert);
         }
+        if (source.CompanyType != null) {
+            this.CompanyType = new Long(source.CompanyType);
+        }
     }
 
 
@@ -230,6 +261,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReplacedFor", this.ReplacedFor);
         this.setParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
         this.setParamSimple(map, prefix + "SMCert", this.SMCert);
+        this.setParamSimple(map, prefix + "CompanyType", this.CompanyType);
 
     }
 }

@@ -24,38 +24,38 @@ import java.util.HashMap;
 public class Seo extends AbstractModel {
 
     /**
-    * SEO configuration switch
+    * Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get SEO configuration switch
+     * Get Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch SEO configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set SEO configuration switch
+     * Set Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch SEO configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

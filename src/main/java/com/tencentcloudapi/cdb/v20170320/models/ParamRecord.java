@@ -66,6 +66,13 @@ public class ParamRecord extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * Indicates whether the parameter is modified successfully.
+    */
+    @SerializedName("IsSuccess")
+    @Expose
+    private Boolean IsSuccess;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -132,7 +139,9 @@ public class ParamRecord extends AbstractModel {
     /**
      * Get Whether the parameter is modified successfully 
      * @return IsSucess Whether the parameter is modified successfully
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIsSucess() {
         return this.IsSucess;
     }
@@ -140,7 +149,9 @@ public class ParamRecord extends AbstractModel {
     /**
      * Set Whether the parameter is modified successfully
      * @param IsSucess Whether the parameter is modified successfully
+     * @deprecated
      */
+    @Deprecated
     public void setIsSucess(Boolean IsSucess) {
         this.IsSucess = IsSucess;
     }
@@ -159,6 +170,22 @@ public class ParamRecord extends AbstractModel {
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get Indicates whether the parameter is modified successfully. 
+     * @return IsSuccess Indicates whether the parameter is modified successfully.
+     */
+    public Boolean getIsSuccess() {
+        return this.IsSuccess;
+    }
+
+    /**
+     * Set Indicates whether the parameter is modified successfully.
+     * @param IsSuccess Indicates whether the parameter is modified successfully.
+     */
+    public void setIsSuccess(Boolean IsSuccess) {
+        this.IsSuccess = IsSuccess;
     }
 
     public ParamRecord() {
@@ -187,6 +214,9 @@ public class ParamRecord extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.IsSuccess != null) {
+            this.IsSuccess = new Boolean(source.IsSuccess);
+        }
     }
 
 
@@ -200,6 +230,7 @@ public class ParamRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "NewValue", this.NewValue);
         this.setParamSimple(map, prefix + "IsSucess", this.IsSucess);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "IsSuccess", this.IsSuccess);
 
     }
 }

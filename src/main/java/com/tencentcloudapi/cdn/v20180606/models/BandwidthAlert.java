@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BandwidthAlert extends AbstractModel {
 
     /**
-    * Specifies whether to enable the bandwidth cap
+    * Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -58,10 +58,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String LastTriggerTime;
 
     /**
-    * Indicates whether to trigger alerts when the upper limit is reached
+    * Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AlertSwitch")
     @Expose
@@ -102,10 +102,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private StatisticItem [] StatisticItems;
 
     /**
-     * Get Specifies whether to enable the bandwidth cap
+     * Get Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Specifies whether to enable the bandwidth cap
+     * @return Switch Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -114,10 +114,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Specifies whether to enable the bandwidth cap
+     * Set Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Specifies whether to enable the bandwidth cap
+     * @param Switch Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -190,28 +190,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Indicates whether to trigger alerts when the upper limit is reached
+     * Get Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AlertSwitch Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getAlertSwitch() {
         return this.AlertSwitch;
     }
 
     /**
-     * Set Indicates whether to trigger alerts when the upper limit is reached
+     * Set Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AlertSwitch Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAlertSwitch(String AlertSwitch) {
         this.AlertSwitch = AlertSwitch;

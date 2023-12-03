@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class AwsPrivateAccess extends AbstractModel {
 
     /**
-    * Switch, which can be set to on or off.
+    * Whether to enable origin-pull authentication for S3 buckets.
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -63,16 +65,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Bucket;
 
     /**
-     * Get Switch, which can be set to on or off. 
-     * @return Switch Switch, which can be set to on or off.
+     * Get Whether to enable origin-pull authentication for S3 buckets.
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable origin-pull authentication for S3 buckets.
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch, which can be set to on or off.
-     * @param Switch Switch, which can be set to on or off.
+     * Set Whether to enable origin-pull authentication for S3 buckets.
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable origin-pull authentication for S3 buckets.
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

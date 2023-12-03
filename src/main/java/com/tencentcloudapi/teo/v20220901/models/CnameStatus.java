@@ -32,7 +32,7 @@ public class CnameStatus extends AbstractModel {
 
     /**
     * The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Cname")
     @Expose
@@ -42,7 +42,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     * The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -66,9 +66,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Cname The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCname() {
         return this.Cname;
@@ -76,9 +76,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Cname The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
@@ -88,11 +88,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
      * Get The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Status The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
         return this.Status;
@@ -102,11 +102,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
      * Set The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;

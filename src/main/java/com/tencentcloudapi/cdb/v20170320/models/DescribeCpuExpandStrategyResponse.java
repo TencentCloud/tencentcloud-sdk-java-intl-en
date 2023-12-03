@@ -25,7 +25,7 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
 
     /**
     * Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +33,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpandCpu")
     @Expose
@@ -41,7 +41,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AutoStrategy")
     @Expose
@@ -56,9 +56,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Type Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -66,9 +66,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -76,9 +76,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ExpandCpu Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpandCpu() {
         return this.ExpandCpu;
@@ -86,9 +86,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExpandCpu Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpandCpu(String ExpandCpu) {
         this.ExpandCpu = ExpandCpu;
@@ -96,9 +96,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AutoStrategy Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAutoStrategy() {
         return this.AutoStrategy;
@@ -106,9 +106,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AutoStrategy Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAutoStrategy(String AutoStrategy) {
         this.AutoStrategy = AutoStrategy;

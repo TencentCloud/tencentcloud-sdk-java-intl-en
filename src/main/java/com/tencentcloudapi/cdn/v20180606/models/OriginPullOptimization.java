@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OriginPullOptimization extends AbstractModel {
 
     /**
-    * Cross-border origin-pull optimization configuration switch
+    * Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -43,10 +43,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String OptimizationType;
 
     /**
-     * Get Cross-border origin-pull optimization configuration switch
+     * Get Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Cross-border origin-pull optimization configuration switch
+     * @return Switch Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -55,10 +55,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Cross-border origin-pull optimization configuration switch
+     * Set Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Cross-border origin-pull optimization configuration switch
+     * @param Switch Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
      */

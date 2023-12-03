@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel {
 
     /**
-    * IP blocklist/allowlist configuration switch
+    * Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -69,10 +69,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long ReturnCode;
 
     /**
-     * Get IP blocklist/allowlist configuration switch
+     * Get Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch IP blocklist/allowlist configuration switch
+     * @return Switch Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -81,10 +81,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set IP blocklist/allowlist configuration switch
+     * Set Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch IP blocklist/allowlist configuration switch
+     * @param Switch Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      */

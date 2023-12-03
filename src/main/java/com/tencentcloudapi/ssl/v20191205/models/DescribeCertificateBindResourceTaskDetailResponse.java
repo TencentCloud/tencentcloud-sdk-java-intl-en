@@ -118,6 +118,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CacheTime;
 
     /**
+    * Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("TSE")
+    @Expose
+    private TSEInstanceList [] TSE;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -357,6 +365,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return TSE Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public TSEInstanceList [] getTSE() {
+        return this.TSE;
+    }
+
+    /**
+     * Set Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param TSE Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setTSE(TSEInstanceList [] TSE) {
+        this.TSE = TSE;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -446,6 +474,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CacheTime != null) {
             this.CacheTime = new String(source.CacheTime);
         }
+        if (source.TSE != null) {
+            this.TSE = new TSEInstanceList[source.TSE.length];
+            for (int i = 0; i < source.TSE.length; i++) {
+                this.TSE[i] = new TSEInstanceList(source.TSE[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +502,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "TEO.", this.TEO);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CacheTime", this.CacheTime);
+        this.setParamArrayObj(map, prefix + "TSE.", this.TSE);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class RangeOriginPullRule extends AbstractModel {
 
     /**
-    * Specifies whether Range GETs is enabled
+    * Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -53,16 +55,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String [] RulePaths;
 
     /**
-     * Get Specifies whether Range GETs is enabled 
-     * @return Switch Specifies whether Range GETs is enabled
+     * Get Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Specifies whether Range GETs is enabled
-     * @param Switch Specifies whether Range GETs is enabled
+     * Set Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

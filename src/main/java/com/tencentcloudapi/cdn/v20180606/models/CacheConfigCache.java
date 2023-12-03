@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class CacheConfigCache extends AbstractModel {
 
     /**
-    * Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -76,28 +76,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String IgnoreSetCookie;
 
     /**
-     * Get Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

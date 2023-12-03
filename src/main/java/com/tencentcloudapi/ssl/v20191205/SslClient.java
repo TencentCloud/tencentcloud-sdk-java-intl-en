@@ -237,6 +237,28 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *Query certificate cloud resource update record list
+     * @param req DescribeHostUpdateRecordRequest
+     * @return DescribeHostUpdateRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUpdateRecordResponse DescribeHostUpdateRecord(DescribeHostUpdateRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostUpdateRecord", DescribeHostUpdateRecordResponse.class);
+    }
+
+    /**
+     *Query certificate cloud resource update record details list
+     * @param req DescribeHostUpdateRecordDetailRequest
+     * @return DescribeHostUpdateRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetail(DescribeHostUpdateRecordDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostUpdateRecordDetail", DescribeHostUpdateRecordDetailResponse.class);
+    }
+
+    /**
      *This API is used to download a certificate.
      * @param req DownloadCertificateRequest
      * @return DownloadCertificateResponse
@@ -311,6 +333,39 @@ public class SslClient extends AbstractClient{
     public SubmitCertificateInformationResponse SubmitCertificateInformation(SubmitCertificateInformationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitCertificateInformation", SubmitCertificateInformationResponse.class);
+    }
+
+    /**
+     *This API is used to update old certificate resources with one click and is an asynchronous interface. After this API is called, the returned DeployRecordId being 0 indicates that the task is in progress, and the returned DeployRecordId being greater than 0 indicates that the task is successfully created. If the creation fails, an exception is returned.
+     * @param req UpdateCertificateInstanceRequest
+     * @return UpdateCertificateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCertificateInstanceResponse UpdateCertificateInstance(UpdateCertificateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCertificateInstance", UpdateCertificateInstanceResponse.class);
+    }
+
+    /**
+     *Cloud resource update deployment retry record
+     * @param req UpdateCertificateRecordRetryRequest
+     * @return UpdateCertificateRecordRetryResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetry(UpdateCertificateRecordRetryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCertificateRecordRetry", UpdateCertificateRecordRetryResponse.class);
+    }
+
+    /**
+     *Cloud resource update one-click rollback
+     * @param req UpdateCertificateRecordRollbackRequest
+     * @return UpdateCertificateRecordRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollback(UpdateCertificateRecordRollbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCertificateRecordRollback", UpdateCertificateRecordRollbackResponse.class);
     }
 
     /**

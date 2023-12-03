@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ScdnWafConfig extends AbstractModel {
 
     /**
-    * Whether to enable WAF. Valid values: `on` and `off`.
+    * Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -47,8 +49,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ScdnErrorPage ErrorPage;
 
     /**
-    * Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("WebShellSwitch")
     @Expose
@@ -71,24 +75,34 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long Level;
 
     /**
-    * WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SubRuleSwitch")
     @Expose
     private WafSubRuleStatus [] SubRuleSwitch;
 
     /**
-     * Get Whether to enable WAF. Valid values: `on` and `off`. 
-     * @return Switch Whether to enable WAF. Valid values: `on` and `off`.
+     * Get Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable WAF. Valid values: `on` and `off`.
-     * @param Switch Whether to enable WAF. Valid values: `on` and `off`.
+     * Set Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -135,20 +149,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return WebShellSwitch Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getWebShellSwitch() {
         return this.WebShellSwitch;
     }
 
     /**
-     * Set Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param WebShellSwitch Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setWebShellSwitch(String WebShellSwitch) {
         this.WebShellSwitch = WebShellSwitch;
@@ -195,20 +217,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SubRuleSwitch WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubRuleSwitch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public WafSubRuleStatus [] getSubRuleSwitch() {
         return this.SubRuleSwitch;
     }
 
     /**
-     * Set WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SubRuleSwitch WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SubRuleSwitch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSubRuleSwitch(WafSubRuleStatus [] SubRuleSwitch) {
         this.SubRuleSwitch = SubRuleSwitch;

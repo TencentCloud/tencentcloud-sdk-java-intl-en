@@ -45,11 +45,11 @@ public class ViolationUrl extends AbstractModel {
     private String DownloadUrl;
 
     /**
-    * Current status of the resources in violation
+    * Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
     */
     @SerializedName("UrlStatus")
@@ -119,17 +119,17 @@ public class ViolationUrl extends AbstractModel {
     }
 
     /**
-     * Get Current status of the resources in violation
+     * Get Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process 
-     * @return UrlStatus Current status of the resources in violation
+     * @return UrlStatus Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
      */
     public String getUrlStatus() {
@@ -137,17 +137,17 @@ public class ViolationUrl extends AbstractModel {
     }
 
     /**
-     * Set Current status of the resources in violation
+     * Set Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
-     * @param UrlStatus Current status of the resources in violation
+     * @param UrlStatus Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
      */
     public void setUrlStatus(String UrlStatus) {

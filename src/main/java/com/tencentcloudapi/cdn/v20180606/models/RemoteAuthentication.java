@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class RemoteAuthentication extends AbstractModel {
 
     /**
-    * Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -50,28 +50,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Server;
 
     /**
-     * Get Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Switch Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Switch Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

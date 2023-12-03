@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FollowRedirect extends AbstractModel {
 
     /**
-    * Origin-pull follow-redirect switch
+    * Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RedirectConfig RedirectConfig;
 
     /**
-     * Get Origin-pull follow-redirect switch
+     * Get Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Origin-pull follow-redirect switch
+     * @return Switch Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Origin-pull follow-redirect switch
+     * Set Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Origin-pull follow-redirect switch
+     * @param Switch Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
      */

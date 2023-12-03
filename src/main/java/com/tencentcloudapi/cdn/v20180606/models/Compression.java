@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Compression extends AbstractModel {
 
     /**
-    * Smart compression configuration switch
+    * Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private CompressionRule [] CompressionRules;
 
     /**
-     * Get Smart compression configuration switch
+     * Get Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Smart compression configuration switch
+     * @return Switch Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Smart compression configuration switch
+     * Set Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Smart compression configuration switch
+     * @param Switch Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
      */

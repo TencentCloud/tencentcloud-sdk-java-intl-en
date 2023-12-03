@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RangeOriginPull extends AbstractModel {
 
     /**
-    * Range GETs configuration switch
+    * Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private RangeOriginPullRule [] RangeRules;
 
     /**
-     * Get Range GETs configuration switch
+     * Get Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Range GETs configuration switch
+     * @return Switch Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Range GETs configuration switch
+     * Set Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Range GETs configuration switch
+     * @param Switch Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
      */

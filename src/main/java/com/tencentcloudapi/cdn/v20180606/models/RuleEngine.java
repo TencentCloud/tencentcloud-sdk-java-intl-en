@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleEngine extends AbstractModel {
 
     /**
-    * Specifies whether to enable rule engine
+    * Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String Content;
 
     /**
-     * Get Specifies whether to enable rule engine
+     * Get Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Specifies whether to enable rule engine
+     * @return Switch Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Specifies whether to enable rule engine
+     * Set Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Specifies whether to enable rule engine
+     * @param Switch Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
      */

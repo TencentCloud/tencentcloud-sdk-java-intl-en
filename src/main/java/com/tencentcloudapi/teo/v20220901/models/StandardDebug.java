@@ -33,14 +33,14 @@ public class StandardDebug extends AbstractModel {
     private String Switch;
 
     /**
-    * Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+    * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
     */
     @SerializedName("AllowClientIPList")
     @Expose
     private String [] AllowClientIPList;
 
     /**
-    * The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+    * The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -71,32 +71,32 @@ public class StandardDebug extends AbstractModel {
     }
 
     /**
-     * Get Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged. 
-     * @return AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+     * Get The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP 
+     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
      */
     public String [] getAllowClientIPList() {
         return this.AllowClientIPList;
     }
 
     /**
-     * Set Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
-     * @param AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+     * Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @param AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
      */
     public void setAllowClientIPList(String [] AllowClientIPList) {
         this.AllowClientIPList = AllowClientIPList;
     }
 
     /**
-     * Get The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid. 
-     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+     * Get The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid. 
+     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
-     * @param ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+     * Set The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+     * @param ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

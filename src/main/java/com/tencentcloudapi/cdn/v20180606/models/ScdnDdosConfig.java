@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class ScdnDdosConfig extends AbstractModel {
 
     /**
-    * Whether to enable DDoS defense. Valid values: `on` and `off`.
+    * Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable DDoS defense. Valid values: `on` and `off`. 
-     * @return Switch Whether to enable DDoS defense. Valid values: `on` and `off`.
+     * Get Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable DDoS defense. Valid values: `on` and `off`.
-     * @param Switch Whether to enable DDoS defense. Valid values: `on` and `off`.
+     * Set Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

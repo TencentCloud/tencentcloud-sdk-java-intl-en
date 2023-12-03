@@ -35,13 +35,13 @@ Include/Exclude, and Include/Exclude (segment dimension) can be used to search f
 `DBName` - Database name.
 
 `Equal to` and `Not equal to` can be used to search for:
-`sqlType` - SQL u200dtype,
+`sqlType` - SQL type,
 `errCode` - Error code,
 `threadId` - Thread ID.
 
 Range search is supported for:
 `execTime`- Execution time (μs),
-`lockWaitTime`u200d - Lock wait time (μs),
+`lockWaitTime` - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
 `trxLivingTime` - Transaction duration (μs),
 `cpuTime` - CPU time (μs),
@@ -61,7 +61,7 @@ Range search is supported for:
 `EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
-u200d`RA` - Range
+`RA` - Range
     */
     @SerializedName("Compare")
     @Expose
@@ -86,13 +86,13 @@ Include/Exclude, and Include/Exclude (segment dimension) can be used to search f
 `DBName` - Database name.
 
 `Equal to` and `Not equal to` can be used to search for:
-`sqlType` - SQL u200dtype,
+`sqlType` - SQL type,
 `errCode` - Error code,
 `threadId` - Thread ID.
 
 Range search is supported for:
 `execTime`- Execution time (μs),
-`lockWaitTime`u200d - Lock wait time (μs),
+`lockWaitTime` - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
 `trxLivingTime` - Transaction duration (μs),
 `cpuTime` - CPU time (μs),
@@ -110,13 +110,13 @@ Include/Exclude, and Include/Exclude (segment dimension) can be used to search f
 `DBName` - Database name.
 
 `Equal to` and `Not equal to` can be used to search for:
-`sqlType` - SQL u200dtype,
+`sqlType` - SQL type,
 `errCode` - Error code,
 `threadId` - Thread ID.
 
 Range search is supported for:
 `execTime`- Execution time (μs),
-`lockWaitTime`u200d - Lock wait time (μs),
+`lockWaitTime` - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
 `trxLivingTime` - Transaction duration (μs),
 `cpuTime` - CPU time (μs),
@@ -140,13 +140,13 @@ Include/Exclude, and Include/Exclude (segment dimension) can be used to search f
 `DBName` - Database name.
 
 `Equal to` and `Not equal to` can be used to search for:
-`sqlType` - SQL u200dtype,
+`sqlType` - SQL type,
 `errCode` - Error code,
 `threadId` - Thread ID.
 
 Range search is supported for:
 `execTime`- Execution time (μs),
-`lockWaitTime`u200d - Lock wait time (μs),
+`lockWaitTime` - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
 `trxLivingTime` - Transaction duration (μs),
 `cpuTime` - CPU time (μs),
@@ -164,13 +164,13 @@ Include/Exclude, and Include/Exclude (segment dimension) can be used to search f
 `DBName` - Database name.
 
 `Equal to` and `Not equal to` can be used to search for:
-`sqlType` - SQL u200dtype,
+`sqlType` - SQL type,
 `errCode` - Error code,
 `threadId` - Thread ID.
 
 Range search is supported for:
 `execTime`- Execution time (μs),
-`lockWaitTime`u200d - Lock wait time (μs),
+`lockWaitTime` - Lock wait time (μs),
 `ioWaitTime` - IO wait time (μs),
 `trxLivingTime` - Transaction duration (μs),
 `cpuTime` - CPU time (μs),
@@ -190,7 +190,7 @@ Range search is supported for:
 `EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
-u200d`RA` - Range 
+`RA` - Range 
      * @return Compare Filter. Valid values:
 `WINC` - Include (segment dimension)
 `WEXC` - Exclude (segment dimension)
@@ -198,7 +198,7 @@ u200d`RA` - Range
 `EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
-u200d`RA` - Range
+`RA` - Range
      */
     public String getCompare() {
         return this.Compare;
@@ -212,7 +212,7 @@ u200d`RA` - Range
 `EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
-u200d`RA` - Range
+`RA` - Range
      * @param Compare Filter. Valid values:
 `WINC` - Include (segment dimension)
 `WEXC` - Exclude (segment dimension)
@@ -220,7 +220,7 @@ u200d`RA` - Range
 `EXC` - Exclude,
 `EQS` - Equal to,
 `NEQ` - Not equal to.
-u200d`RA` - Range
+`RA` - Range
      */
     public void setCompare(String Compare) {
         this.Compare = Compare;

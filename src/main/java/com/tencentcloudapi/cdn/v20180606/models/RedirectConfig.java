@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class RedirectConfig extends AbstractModel {
 
     /**
-    * Configuration switch
+    * Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -45,16 +47,24 @@ public class RedirectConfig extends AbstractModel {
     private String FollowRedirectBackupHost;
 
     /**
-     * Get Configuration switch 
-     * @return Switch Configuration switch
+     * Get Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Configuration switch
-     * @param Switch Configuration switch
+     * Set Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

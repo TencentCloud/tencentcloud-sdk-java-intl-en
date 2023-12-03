@@ -66,14 +66,24 @@ public class DescribeCustomerInfoData extends AbstractModel {
     private String BindTime;
 
     /**
-    * Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+    * Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
     */
     @SerializedName("AccountStatus")
     @Expose
     private String AccountStatus;
 
     /**
-    * Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
     */
     @SerializedName("AuthStatus")
     @Expose
@@ -176,32 +186,72 @@ public class DescribeCustomerInfoData extends AbstractModel {
     }
 
     /**
-     * Get Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountStatus Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained. 
+     * @return AccountStatus Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     public String getAccountStatus() {
         return this.AccountStatus;
     }
 
     /**
-     * Set Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountStatus Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param AccountStatus Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     public void setAccountStatus(String AccountStatus) {
         this.AccountStatus = AccountStatus;
     }
 
     /**
-     * Get Identity verification status Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AuthStatus Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained. 
+     * @return AuthStatus Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     public String getAuthStatus() {
         return this.AuthStatus;
     }
 
     /**
-     * Set Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AuthStatus Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param AuthStatus Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     public void setAuthStatus(String AuthStatus) {
         this.AuthStatus = AuthStatus;

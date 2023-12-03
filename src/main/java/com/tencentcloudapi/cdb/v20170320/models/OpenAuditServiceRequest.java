@@ -52,11 +52,18 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+    * Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
+
+    /**
+    * Audit type. Valid values: true: Record all; false: Record by rules (default value).
+    */
+    @SerializedName("AuditAll")
+    @Expose
+    private Boolean AuditAll;
 
     /**
      * Get TencentDB for MySQL instance ID 
@@ -123,19 +130,35 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied. 
-     * @return RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * Get Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded. 
+     * @return RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
-     * @param RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * Set Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+     * @param RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
+    }
+
+    /**
+     * Get Audit type. Valid values: true: Record all; false: Record by rules (default value). 
+     * @return AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     */
+    public Boolean getAuditAll() {
+        return this.AuditAll;
+    }
+
+    /**
+     * Set Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     * @param AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     */
+    public void setAuditAll(Boolean AuditAll) {
+        this.AuditAll = AuditAll;
     }
 
     public OpenAuditServiceRequest() {
@@ -167,6 +190,9 @@ public class OpenAuditServiceRequest extends AbstractModel {
                 this.RuleTemplateIds[i] = new String(source.RuleTemplateIds[i]);
             }
         }
+        if (source.AuditAll != null) {
+            this.AuditAll = new Boolean(source.AuditAll);
+        }
     }
 
 
@@ -179,6 +205,7 @@ public class OpenAuditServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
         this.setParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
         this.setParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+        this.setParamSimple(map, prefix + "AuditAll", this.AuditAll);
 
     }
 }

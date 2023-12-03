@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class Https extends AbstractModel {
 
     /**
-    * HTTPS configuration switch
+    * Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -121,28 +121,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String [] TlsVersion;
 
     /**
-     * Get HTTPS configuration switch
+     * Get Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Switch HTTPS configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set HTTPS configuration switch
+     * Set Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Switch HTTPS configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -64,8 +64,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long AlertPercentage;
 
     /**
-    * Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AlertSwitch")
     @Expose
@@ -87,8 +89,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long Cycle;
 
     /**
-    * Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -195,20 +199,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return AlertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AlertSwitch Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getAlertSwitch() {
         return this.AlertSwitch;
     }
 
     /**
-     * Set Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param AlertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AlertSwitch Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAlertSwitch(String AlertSwitch) {
         this.AlertSwitch = AlertSwitch;
@@ -251,20 +263,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

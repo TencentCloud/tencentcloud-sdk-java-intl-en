@@ -61,6 +61,14 @@ public class DomainLog extends AbstractModel {
     private String LogName;
 
     /**
+    * File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
      * Get Starting time of the log package 
      * @return StartTime Starting time of the log package
      */
@@ -148,6 +156,26 @@ public class DomainLog extends AbstractModel {
         this.LogName = LogName;
     }
 
+    /**
+     * Get File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return FileSize File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param FileSize File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
+    }
+
     public DomainLog() {
     }
 
@@ -171,6 +199,9 @@ public class DomainLog extends AbstractModel {
         if (source.LogName != null) {
             this.LogName = new String(source.LogName);
         }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
     }
 
 
@@ -183,6 +214,7 @@ public class DomainLog extends AbstractModel {
         this.setParamSimple(map, prefix + "LogPath", this.LogPath);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "LogName", this.LogName);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }

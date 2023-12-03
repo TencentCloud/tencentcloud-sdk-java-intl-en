@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Referer extends AbstractModel {
 
     /**
-    * Referer blacklist/whitelist configuration switch
+    * Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private RefererRule [] RefererRules;
 
     /**
-     * Get Referer blacklist/whitelist configuration switch
+     * Get Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Referer blacklist/whitelist configuration switch
+     * @return Switch Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Referer blacklist/whitelist configuration switch
+     * Set Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Referer blacklist/whitelist configuration switch
+     * @param Switch Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      */

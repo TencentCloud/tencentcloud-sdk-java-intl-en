@@ -66,8 +66,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long FrequencyLimit;
 
     /**
-    * Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PunishmentSwitch")
     @Expose
@@ -206,20 +208,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PunishmentSwitch Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getPunishmentSwitch() {
         return this.PunishmentSwitch;
     }
 
     /**
-     * Set Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PunishmentSwitch Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPunishmentSwitch(String PunishmentSwitch) {
         this.PunishmentSwitch = PunishmentSwitch;

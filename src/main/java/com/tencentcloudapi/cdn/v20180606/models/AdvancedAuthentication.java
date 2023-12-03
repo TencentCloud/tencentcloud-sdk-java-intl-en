@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class AdvancedAuthentication extends AbstractModel {
 
     /**
-    * Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+    * Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
     */
     @SerializedName("Switch")
     @Expose
@@ -79,16 +82,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private AdvancedAuthenticationTypeF TypeF;
 
     /**
-     * Get Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null. 
-     * @return Switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+     * Get Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`. 
+     * @return Switch Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
-     * @param Switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+     * Set Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
+     * @param Switch Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

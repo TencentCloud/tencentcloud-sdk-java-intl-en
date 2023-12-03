@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class Hsts extends AbstractModel {
 
     /**
-    * Whether to enable. Valid values: on, off.
+    * Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -47,16 +49,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String IncludeSubDomains;
 
     /**
-     * Get Whether to enable. Valid values: on, off. 
-     * @return Switch Whether to enable. Valid values: on, off.
+     * Get Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable. Valid values: on, off.
-     * @param Switch Whether to enable. Valid values: on, off.
+     * Set Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

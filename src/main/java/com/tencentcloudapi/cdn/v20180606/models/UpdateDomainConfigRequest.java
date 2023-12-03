@@ -101,7 +101,7 @@ public class UpdateDomainConfigRequest extends AbstractModel {
     private ErrorPage ErrorPage;
 
     /**
-    * Request header configuration
+    * Origin-pull request header configuration.
     */
     @SerializedName("RequestHeader")
     @Expose
@@ -551,16 +551,16 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Request header configuration 
-     * @return RequestHeader Request header configuration
+     * Get Origin-pull request header configuration. 
+     * @return RequestHeader Origin-pull request header configuration.
      */
     public RequestHeader getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set Request header configuration
-     * @param RequestHeader Request header configuration
+     * Set Origin-pull request header configuration.
+     * @param RequestHeader Origin-pull request header configuration.
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
         this.RequestHeader = RequestHeader;

@@ -24,14 +24,25 @@ import java.util.HashMap;
 public class Authentication extends AbstractModel {
 
     /**
-    * Hotlink protection configuration switch
+    * Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
+
+    /**
+    * Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AuthAlgorithm")
+    @Expose
+    private String AuthAlgorithm;
 
     /**
     * Timestamp hotlink protection mode A configuration
@@ -66,31 +77,63 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private AuthenticationTypeD TypeD;
 
     /**
-     * Get Hotlink protection configuration switch
+     * Get Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null. 
-     * @return Switch Hotlink protection configuration switch
+Only one advanced configuration can be enabled. Set the rests to `null`. 
+     * @return Switch Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Hotlink protection configuration switch
+     * Set Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
-     * @param Switch Hotlink protection configuration switch
+Only one advanced configuration can be enabled. Set the rests to `null`.
+     * @param Switch Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
+    }
+
+    /**
+     * Get Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return AuthAlgorithm Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public String getAuthAlgorithm() {
+        return this.AuthAlgorithm;
+    }
+
+    /**
+     * Set Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param AuthAlgorithm Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public void setAuthAlgorithm(String AuthAlgorithm) {
+        this.AuthAlgorithm = AuthAlgorithm;
     }
 
     /**
@@ -184,6 +227,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.AuthAlgorithm != null) {
+            this.AuthAlgorithm = new String(source.AuthAlgorithm);
+        }
         if (source.TypeA != null) {
             this.TypeA = new AuthenticationTypeA(source.TypeA);
         }
@@ -204,6 +250,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "AuthAlgorithm", this.AuthAlgorithm);
         this.setParamObj(map, prefix + "TypeA.", this.TypeA);
         this.setParamObj(map, prefix + "TypeB.", this.TypeB);
         this.setParamObj(map, prefix + "TypeC.", this.TypeC);

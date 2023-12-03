@@ -24,28 +24,38 @@ import java.util.HashMap;
 public class Ipv6 extends AbstractModel {
 
     /**
-    * Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class UserAgentFilter extends AbstractModel {
 
     /**
-    * Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -40,20 +42,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private UserAgentFilterRule [] FilterRules;
 
     /**
-     * Get Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

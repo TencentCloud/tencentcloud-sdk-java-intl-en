@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RequestHeader extends AbstractModel {
 
     /**
-    * Custom request header configuration switch
+    * Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private HttpHeaderPathRule [] HeaderRules;
 
     /**
-     * Get Custom request header configuration switch
+     * Get Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Custom request header configuration switch
+     * @return Switch Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Custom request header configuration switch
+     * Set Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Custom request header configuration switch
+     * @param Switch Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
      */

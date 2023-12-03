@@ -226,8 +226,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsVulnerability;
 
     /**
-    * Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RenewAble")
     @Expose
@@ -352,6 +352,98 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("HostingRenewCertId")
     @Expose
     private String HostingRenewCertId;
+
+    /**
+    * Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HasRenewOrder")
+    @Expose
+    private String HasRenewOrder;
+
+    /**
+    * Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ReplaceOriCertIsDelete")
+    @Expose
+    private Boolean ReplaceOriCertIsDelete;
+
+    /**
+    * Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("IsExpiring")
+    @Expose
+    private Boolean IsExpiring;
+
+    /**
+    * Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DVAuthDeadline")
+    @Expose
+    private String DVAuthDeadline;
+
+    /**
+    * Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ValidationPassedTime")
+    @Expose
+    private String ValidationPassedTime;
+
+    /**
+    * Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CertSANs")
+    @Expose
+    private String [] CertSANs;
+
+    /**
+    * Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AwaitingValidationMsg")
+    @Expose
+    private String AwaitingValidationMsg;
+
+    /**
+    * Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AllowDownload")
+    @Expose
+    private Boolean AllowDownload;
+
+    /**
+    * 
+    */
+    @SerializedName("IsDNSPODResolve")
+    @Expose
+    private Boolean IsDNSPODResolve;
+
+    /**
+    * 
+    */
+    @SerializedName("IsPackage")
+    @Expose
+    private Boolean IsPackage;
+
+    /**
+    * 
+    */
+    @SerializedName("KeyPasswordCustomFlag")
+    @Expose
+    private Boolean KeyPasswordCustomFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("SupportDownloadType")
+    @Expose
+    private SupportDownloadType SupportDownloadType;
 
     /**
      * Get User UIN
@@ -862,20 +954,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RenewAble Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Boolean getRenewAble() {
         return this.RenewAble;
     }
 
     /**
-     * Set Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RenewAble Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRenewAble(Boolean RenewAble) {
         this.RenewAble = RenewAble;
@@ -1181,6 +1273,230 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HostingRenewCertId = HostingRenewCertId;
     }
 
+    /**
+     * Get Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return HasRenewOrder Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getHasRenewOrder() {
+        return this.HasRenewOrder;
+    }
+
+    /**
+     * Set Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param HasRenewOrder Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setHasRenewOrder(String HasRenewOrder) {
+        this.HasRenewOrder = HasRenewOrder;
+    }
+
+    /**
+     * Get Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Boolean getReplaceOriCertIsDelete() {
+        return this.ReplaceOriCertIsDelete;
+    }
+
+    /**
+     * Set Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setReplaceOriCertIsDelete(Boolean ReplaceOriCertIsDelete) {
+        this.ReplaceOriCertIsDelete = ReplaceOriCertIsDelete;
+    }
+
+    /**
+     * Get Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Boolean getIsExpiring() {
+        return this.IsExpiring;
+    }
+
+    /**
+     * Set Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setIsExpiring(Boolean IsExpiring) {
+        this.IsExpiring = IsExpiring;
+    }
+
+    /**
+     * Get Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return DVAuthDeadline Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getDVAuthDeadline() {
+        return this.DVAuthDeadline;
+    }
+
+    /**
+     * Set Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DVAuthDeadline Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setDVAuthDeadline(String DVAuthDeadline) {
+        this.DVAuthDeadline = DVAuthDeadline;
+    }
+
+    /**
+     * Get Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ValidationPassedTime Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getValidationPassedTime() {
+        return this.ValidationPassedTime;
+    }
+
+    /**
+     * Set Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ValidationPassedTime Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setValidationPassedTime(String ValidationPassedTime) {
+        this.ValidationPassedTime = ValidationPassedTime;
+    }
+
+    /**
+     * Get Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CertSANs Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String [] getCertSANs() {
+        return this.CertSANs;
+    }
+
+    /**
+     * Set Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CertSANs Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCertSANs(String [] CertSANs) {
+        this.CertSANs = CertSANs;
+    }
+
+    /**
+     * Get Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AwaitingValidationMsg Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getAwaitingValidationMsg() {
+        return this.AwaitingValidationMsg;
+    }
+
+    /**
+     * Set Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AwaitingValidationMsg Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAwaitingValidationMsg(String AwaitingValidationMsg) {
+        this.AwaitingValidationMsg = AwaitingValidationMsg;
+    }
+
+    /**
+     * Get Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AllowDownload Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Boolean getAllowDownload() {
+        return this.AllowDownload;
+    }
+
+    /**
+     * Set Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AllowDownload Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAllowDownload(Boolean AllowDownload) {
+        this.AllowDownload = AllowDownload;
+    }
+
+    /**
+     * Get  
+     * @return IsDNSPODResolve 
+     */
+    public Boolean getIsDNSPODResolve() {
+        return this.IsDNSPODResolve;
+    }
+
+    /**
+     * Set 
+     * @param IsDNSPODResolve 
+     */
+    public void setIsDNSPODResolve(Boolean IsDNSPODResolve) {
+        this.IsDNSPODResolve = IsDNSPODResolve;
+    }
+
+    /**
+     * Get  
+     * @return IsPackage 
+     */
+    public Boolean getIsPackage() {
+        return this.IsPackage;
+    }
+
+    /**
+     * Set 
+     * @param IsPackage 
+     */
+    public void setIsPackage(Boolean IsPackage) {
+        this.IsPackage = IsPackage;
+    }
+
+    /**
+     * Get  
+     * @return KeyPasswordCustomFlag 
+     */
+    public Boolean getKeyPasswordCustomFlag() {
+        return this.KeyPasswordCustomFlag;
+    }
+
+    /**
+     * Set 
+     * @param KeyPasswordCustomFlag 
+     */
+    public void setKeyPasswordCustomFlag(Boolean KeyPasswordCustomFlag) {
+        this.KeyPasswordCustomFlag = KeyPasswordCustomFlag;
+    }
+
+    /**
+     * Get  
+     * @return SupportDownloadType 
+     */
+    public SupportDownloadType getSupportDownloadType() {
+        return this.SupportDownloadType;
+    }
+
+    /**
+     * Set 
+     * @param SupportDownloadType 
+     */
+    public void setSupportDownloadType(SupportDownloadType SupportDownloadType) {
+        this.SupportDownloadType = SupportDownloadType;
+    }
+
     public Certificates() {
     }
 
@@ -1330,6 +1646,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HostingRenewCertId != null) {
             this.HostingRenewCertId = new String(source.HostingRenewCertId);
         }
+        if (source.HasRenewOrder != null) {
+            this.HasRenewOrder = new String(source.HasRenewOrder);
+        }
+        if (source.ReplaceOriCertIsDelete != null) {
+            this.ReplaceOriCertIsDelete = new Boolean(source.ReplaceOriCertIsDelete);
+        }
+        if (source.IsExpiring != null) {
+            this.IsExpiring = new Boolean(source.IsExpiring);
+        }
+        if (source.DVAuthDeadline != null) {
+            this.DVAuthDeadline = new String(source.DVAuthDeadline);
+        }
+        if (source.ValidationPassedTime != null) {
+            this.ValidationPassedTime = new String(source.ValidationPassedTime);
+        }
+        if (source.CertSANs != null) {
+            this.CertSANs = new String[source.CertSANs.length];
+            for (int i = 0; i < source.CertSANs.length; i++) {
+                this.CertSANs[i] = new String(source.CertSANs[i]);
+            }
+        }
+        if (source.AwaitingValidationMsg != null) {
+            this.AwaitingValidationMsg = new String(source.AwaitingValidationMsg);
+        }
+        if (source.AllowDownload != null) {
+            this.AllowDownload = new Boolean(source.AllowDownload);
+        }
+        if (source.IsDNSPODResolve != null) {
+            this.IsDNSPODResolve = new Boolean(source.IsDNSPODResolve);
+        }
+        if (source.IsPackage != null) {
+            this.IsPackage = new Boolean(source.IsPackage);
+        }
+        if (source.KeyPasswordCustomFlag != null) {
+            this.KeyPasswordCustomFlag = new Boolean(source.KeyPasswordCustomFlag);
+        }
+        if (source.SupportDownloadType != null) {
+            this.SupportDownloadType = new SupportDownloadType(source.SupportDownloadType);
+        }
     }
 
 
@@ -1378,6 +1733,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
         this.setParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
         this.setParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
+        this.setParamSimple(map, prefix + "HasRenewOrder", this.HasRenewOrder);
+        this.setParamSimple(map, prefix + "ReplaceOriCertIsDelete", this.ReplaceOriCertIsDelete);
+        this.setParamSimple(map, prefix + "IsExpiring", this.IsExpiring);
+        this.setParamSimple(map, prefix + "DVAuthDeadline", this.DVAuthDeadline);
+        this.setParamSimple(map, prefix + "ValidationPassedTime", this.ValidationPassedTime);
+        this.setParamArraySimple(map, prefix + "CertSANs.", this.CertSANs);
+        this.setParamSimple(map, prefix + "AwaitingValidationMsg", this.AwaitingValidationMsg);
+        this.setParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
+        this.setParamSimple(map, prefix + "IsDNSPODResolve", this.IsDNSPODResolve);
+        this.setParamSimple(map, prefix + "IsPackage", this.IsPackage);
+        this.setParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
+        this.setParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
 
     }
 }

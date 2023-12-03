@@ -38,7 +38,7 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
     private String Month;
 
     /**
-    * A pagination parameter that specifies the number of entries per page
+    * Page parameter: Indicates the number of entries per page. The maximum value is 200.
     */
     @SerializedName("PageSize")
     @Expose
@@ -135,16 +135,16 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get A pagination parameter that specifies the number of entries per page 
-     * @return PageSize A pagination parameter that specifies the number of entries per page
+     * Get Page parameter: Indicates the number of entries per page. The maximum value is 200. 
+     * @return PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set A pagination parameter that specifies the number of entries per page
-     * @param PageSize A pagination parameter that specifies the number of entries per page
+     * Set Page parameter: Indicates the number of entries per page. The maximum value is 200.
+     * @param PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

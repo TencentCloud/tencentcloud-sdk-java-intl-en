@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UrlRedirect extends AbstractModel {
 
     /**
-    * Whether to enable URL rewriting
+    * Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private UrlRedirectRule [] PathRules;
 
     /**
-     * Get Whether to enable URL rewriting
+     * Get Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Whether to enable URL rewriting
+     * @return Switch Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Whether to enable URL rewriting
+     * Set Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Whether to enable URL rewriting
+     * @param Switch Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
      */

@@ -24,28 +24,38 @@ import java.util.HashMap;
 public class SchemeKey extends AbstractModel {
 
     /**
-    * Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable scheme as part of the cache key. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable scheme as part of the cache key. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable scheme as part of the cache key. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable scheme as part of the cache key. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable scheme as part of the cache key. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class SecurityConfig extends AbstractModel {
 
     /**
-    * on|off
+    * Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get on|off 
-     * @return Switch on|off
+     * Get Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off
-     * @param Switch on|off
+     * Set Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

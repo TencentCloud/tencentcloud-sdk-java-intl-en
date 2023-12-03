@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ScdnAclConfig extends AbstractModel {
 
     /**
-    * Whether to enable. Valid values: `on` and `off`.
+    * Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -55,16 +57,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private AdvancedScdnAclGroup [] AdvancedScriptData;
 
     /**
-     * Get Whether to enable. Valid values: `on` and `off`. 
-     * @return Switch Whether to enable. Valid values: `on` and `off`.
+     * Get Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable. Valid values: `on` and `off`.
-     * @param Switch Whether to enable. Valid values: `on` and `off`.
+     * Set Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

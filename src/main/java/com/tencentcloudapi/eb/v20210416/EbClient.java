@@ -171,6 +171,17 @@ public class EbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query log searching metric values.
+     * @param req DescribeLogTagValueRequest
+     * @return DescribeLogTagValueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogTagValueResponse DescribeLogTagValue(DescribeLogTagValueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogTagValue", DescribeLogTagValueResponse.class);
+    }
+
+    /**
      *This API is used to get the details of an event bus.
      * @param req GetEventBusRequest
      * @return GetEventBusResponse
@@ -245,6 +256,17 @@ public class EbClient extends AbstractClient{
     public ListTargetsResponse ListTargets(ListTargetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTargets", ListTargetsResponse.class);
+    }
+
+    /**
+     *This API is used to query logs. 
+     * @param req SearchLogRequest
+     * @return SearchLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchLogResponse SearchLog(SearchLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchLog", SearchLogResponse.class);
     }
 
     /**

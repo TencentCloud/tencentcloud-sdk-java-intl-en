@@ -80,7 +80,7 @@ public class ApplyCertificateRequest extends AbstractModel {
     private String CsrEncryptAlgo;
 
     /**
-    * Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+    * Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
     */
     @SerializedName("CsrKeyParameter")
     @Expose
@@ -250,16 +250,16 @@ public class ApplyCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1. 
-     * @return CsrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+     * Get Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory. 
+     * @return CsrKeyParameter Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
      */
     public String getCsrKeyParameter() {
         return this.CsrKeyParameter;
     }
 
     /**
-     * Set Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
-     * @param CsrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+     * Set Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
+     * @param CsrKeyParameter Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
      */
     public void setCsrKeyParameter(String CsrKeyParameter) {
         this.CsrKeyParameter = CsrKeyParameter;

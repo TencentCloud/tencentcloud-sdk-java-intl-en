@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class HeaderKey extends AbstractModel {
 
     /**
-    * Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -40,20 +42,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Value;
 
     /**
-     * Get Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

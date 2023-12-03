@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class ShareCname extends AbstractModel {
 
     /**
-    * Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+    * Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
     */
     @SerializedName("Switch")
     @Expose
@@ -41,24 +42,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Cname;
 
     /**
-     * Get Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+     * Get Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
+ 
+     * @return Switch Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application. 
-     * @return Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
-
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+     * Set Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
-     * @param Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+     * @param Switch Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

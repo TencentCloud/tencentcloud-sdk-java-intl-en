@@ -31,7 +31,7 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+    * Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
     */
     @SerializedName("IsRemoteZone")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no). 
-     * @return IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     * Get Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no). 
+     * @return IsRemoteZone Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
      */
     public String getIsRemoteZone() {
         return this.IsRemoteZone;
     }
 
     /**
-     * Set Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
-     * @param IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     * Set Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
+     * @param IsRemoteZone Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
      */
     public void setIsRemoteZone(String IsRemoteZone) {
         this.IsRemoteZone = IsRemoteZone;

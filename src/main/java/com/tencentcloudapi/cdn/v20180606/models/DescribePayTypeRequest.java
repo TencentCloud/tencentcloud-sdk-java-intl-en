@@ -24,10 +24,11 @@ import java.util.HashMap;
 public class DescribePayTypeRequest extends AbstractModel {
 
     /**
-    * Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+    * Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
     */
     @SerializedName("Area")
     @Expose
@@ -41,28 +42,42 @@ Default value: `mainland`.
     private String Product;
 
     /**
-     * Get Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`. 
-     * @return Area Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+    * Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+     * Get Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`. 
+     * @return Area Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
-     * @param Area Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+     * Set Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
+     * @param Area Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -84,6 +99,34 @@ Default value: `mainland`.
         this.Product = Product;
     }
 
+    /**
+     * Get Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified.  
+     * @return Type Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+     * @param Type Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DescribePayTypeRequest() {
     }
 
@@ -98,6 +141,9 @@ Default value: `mainland`.
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -107,6 +153,7 @@ Default value: `mainland`.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

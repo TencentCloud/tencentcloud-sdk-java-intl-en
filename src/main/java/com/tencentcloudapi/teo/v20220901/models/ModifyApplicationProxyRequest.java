@@ -54,9 +54,8 @@ The original configuration will apply if this field is not specified.
     private Long SessionPersistTime;
 
     /**
-    * The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+    * L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
     */
     @SerializedName("ProxyType")
     @Expose
@@ -149,24 +148,20 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`. 
-     * @return ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * Get L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default. 
+     * @return ProxyType L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
-     * @param ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * Set L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+     * @param ProxyType L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;

@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
@@ -103,11 +103,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -119,11 +119,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
      * Set Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param IgnoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated

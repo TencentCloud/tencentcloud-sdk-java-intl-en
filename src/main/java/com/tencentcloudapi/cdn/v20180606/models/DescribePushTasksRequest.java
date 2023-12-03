@@ -67,7 +67,7 @@ You must specify either a task ID or a starting time.
     private Long Limit;
 
     /**
-    * Specifies a region for your query:
+    * Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
@@ -188,11 +188,11 @@ You must specify either a task ID or a starting time.
     }
 
     /**
-     * Get Specifies a region for your query:
+     * Get Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe 
-     * @return Area Specifies a region for your query:
+     * @return Area Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
@@ -202,11 +202,11 @@ You must specify either a task ID or a starting time.
     }
 
     /**
-     * Set Specifies a region for your query:
+     * Set Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
-     * @param Area Specifies a region for your query:
+     * @param Area Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe

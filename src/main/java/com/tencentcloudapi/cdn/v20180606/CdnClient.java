@@ -450,6 +450,21 @@ Note: only data from the last 90 days will be queried.
     }
 
     /**
+     *This API is used to modify the configuration of a CDN acceleration domain name in a finer manner than `UpdateDomainConfig`.
+Notes:
+In `Route`, separate values by dots (.). The last value is called a leaf node. For non-leaf nodes, keep the configuration unchanged.
+The Value field is serialized to a JSON string {key:value}, where **key** is fixed to `update` and **value** is used to specify the value of the configuration parameter. To specify configurations with complex types, see https://intl.cloud.tencent.com/document/product/228/41116.?from_cn_redirect=1
+The input parameters of this API are not reported to CloudAudit as it may contain sensitive data, such as keys and secrets.
+     * @param req ModifyDomainConfigRequest
+     * @return ModifyDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainConfigResponse ModifyDomainConfig(ModifyDomainConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainConfig", ModifyDomainConfigResponse.class);
+    }
+
+    /**
      *This API is used to submit multiple directory purge tasks, which are carried out according to the acceleration region of the domain names.
 By default, a maximum of 100 directories can be purged per day for acceleration regions either within or outside the Chinese mainland, and up to 500 tasks can be submitted at a time.
      * @param req PurgePathCacheRequest
@@ -521,7 +536,8 @@ Note: after the acceleration service has been suspended, requests to the cache n
 
     /**
      *This API is used to modify the configuration of CDN acceleration domain names.
-Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
+Note: To update complex configuration items, all attributes of the object must be specified, or the default values are used. We recommend calling the querying API to get attributes before modifying and passing them to this API.
+The input parameters of this API are not reported to CloudAudit as it may contain sensitive data, such as keys and secrets.
      * @param req UpdateDomainConfigRequest
      * @return UpdateDomainConfigResponse
      * @throws TencentCloudSDKException

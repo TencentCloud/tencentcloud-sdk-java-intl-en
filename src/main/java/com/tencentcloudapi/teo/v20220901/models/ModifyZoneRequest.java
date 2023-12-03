@@ -33,7 +33,7 @@ public class ModifyZoneRequest extends AbstractModel {
     /**
     * Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
     */
     @SerializedName("Type")
     @Expose
@@ -89,10 +89,10 @@ public class ModifyZoneRequest extends AbstractModel {
     /**
      * Get Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified. 
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified. 
      * @return Type Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      */
     public String getType() {
         return this.Type;
@@ -101,10 +101,10 @@ public class ModifyZoneRequest extends AbstractModel {
     /**
      * Set Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      * @param Type Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      */
     public void setType(String Type) {
         this.Type = Type;

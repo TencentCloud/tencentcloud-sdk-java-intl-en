@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class HeuristicCache extends AbstractModel {
 
     /**
-    * `on`: Enable
+    * Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -33,34 +35,45 @@ public class HeuristicCache extends AbstractModel {
 
     /**
     * Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CacheConfig")
     @Expose
     private CacheConfig CacheConfig;
 
     /**
-     * Get `on`: Enable
-`off`: Disable 
-     * @return Switch `on`: Enable
+     * Get Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable heuristic caching. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set `on`: Enable
+     * Set Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
-     * @param Switch `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Heuristic cache validity configuration 
+     * Get Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
      * @return CacheConfig Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public CacheConfig getCacheConfig() {
         return this.CacheConfig;
@@ -68,7 +81,9 @@ public class HeuristicCache extends AbstractModel {
 
     /**
      * Set Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param CacheConfig Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setCacheConfig(CacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;

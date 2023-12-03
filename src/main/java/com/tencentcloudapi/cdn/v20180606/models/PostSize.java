@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class PostSize extends AbstractModel {
 
     /**
-    * Limit the size of POST requests. The default value is 32 MB.
-off: Disable
-on: Enable
+    * Maximum size of the file uploaded for streaming via a POST request. Values:
+`on`: Enable. When enabled, it is set to 32 MB by default.
+`off`: Disable
+
     */
     @SerializedName("Switch")
     @Expose
@@ -40,24 +41,28 @@ on: Enable
     private Long MaxSize;
 
     /**
-     * Get Limit the size of POST requests. The default value is 32 MB.
-off: Disable
-on: Enable 
-     * @return Switch Limit the size of POST requests. The default value is 32 MB.
-off: Disable
-on: Enable
+     * Get Maximum size of the file uploaded for streaming via a POST request. Values:
+`on`: Enable. When enabled, it is set to 32 MB by default.
+`off`: Disable
+ 
+     * @return Switch Maximum size of the file uploaded for streaming via a POST request. Values:
+`on`: Enable. When enabled, it is set to 32 MB by default.
+`off`: Disable
+
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Limit the size of POST requests. The default value is 32 MB.
-off: Disable
-on: Enable
-     * @param Switch Limit the size of POST requests. The default value is 32 MB.
-off: Disable
-on: Enable
+     * Set Maximum size of the file uploaded for streaming via a POST request. Values:
+`on`: Enable. When enabled, it is set to 32 MB by default.
+`off`: Disable
+
+     * @param Switch Maximum size of the file uploaded for streaming via a POST request. Values:
+`on`: Enable. When enabled, it is set to 32 MB by default.
+`off`: Disable
+
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

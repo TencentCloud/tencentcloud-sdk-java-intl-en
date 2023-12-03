@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DownstreamCapping extends AbstractModel {
 
     /**
-    * Downstream speed configuration switch
+    * Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private CappingRule [] CappingRules;
 
     /**
-     * Get Downstream speed configuration switch
+     * Get Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Downstream speed configuration switch
+     * @return Switch Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Downstream speed configuration switch
+     * Set Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Downstream speed configuration switch
+     * @param Switch Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
      */

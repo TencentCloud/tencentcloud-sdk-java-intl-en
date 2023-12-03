@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class MaxAge extends AbstractModel {
 
     /**
-    * Browser cache configuration switch
+    * Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -50,28 +50,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private MaxAgeCodeRule MaxAgeCodeRule;
 
     /**
-     * Get Browser cache configuration switch
+     * Get Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Browser cache configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Browser cache configuration switch
+     * Set Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Browser cache configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

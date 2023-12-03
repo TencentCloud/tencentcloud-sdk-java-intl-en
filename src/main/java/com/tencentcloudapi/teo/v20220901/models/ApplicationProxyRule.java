@@ -118,7 +118,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleTag")
     @Expose
@@ -378,9 +378,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained. 
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
      * @return RuleTag Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getRuleTag() {
         return this.RuleTag;
@@ -388,9 +388,9 @@ Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid val
 
     /**
      * Set Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param RuleTag Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

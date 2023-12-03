@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResponseHeader extends AbstractModel {
 
     /**
-    * Custom response header switch
+    * Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private HttpHeaderPathRule [] HeaderRules;
 
     /**
-     * Get Custom response header switch
+     * Get Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Custom response header switch
+     * @return Switch Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Custom response header switch
+     * Set Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Custom response header switch
+     * @param Switch Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
      */

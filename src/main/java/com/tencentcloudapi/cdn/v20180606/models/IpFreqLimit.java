@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IpFreqLimit extends AbstractModel {
 
     /**
-    * IP access limit configuration switch
+    * Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -42,10 +42,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long Qps;
 
     /**
-     * Get IP access limit configuration switch
+     * Get Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch IP access limit configuration switch
+     * @return Switch Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -54,10 +54,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set IP access limit configuration switch
+     * Set Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch IP access limit configuration switch
+     * @param Switch Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
      */

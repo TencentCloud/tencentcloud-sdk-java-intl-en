@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class CacheConfig extends AbstractModel {
 
     /**
-    * `on`: Enable
+    * Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HeuristicCacheTimeSwitch")
     @Expose
@@ -33,34 +35,45 @@ public class CacheConfig extends AbstractModel {
 
     /**
     * Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HeuristicCacheTime")
     @Expose
     private Long HeuristicCacheTime;
 
     /**
-     * Get `on`: Enable
-`off`: Disable 
-     * @return HeuristicCacheTimeSwitch `on`: Enable
+     * Get Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return HeuristicCacheTimeSwitch Whether to enable heuristic cache validity. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getHeuristicCacheTimeSwitch() {
         return this.HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Set `on`: Enable
+     * Set Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
-     * @param HeuristicCacheTimeSwitch `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param HeuristicCacheTimeSwitch Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setHeuristicCacheTimeSwitch(String HeuristicCacheTimeSwitch) {
         this.HeuristicCacheTimeSwitch = HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Get Unit: Second 
+     * Get Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
      * @return HeuristicCacheTime Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public Long getHeuristicCacheTime() {
         return this.HeuristicCacheTime;
@@ -68,7 +81,9 @@ public class CacheConfig extends AbstractModel {
 
     /**
      * Set Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param HeuristicCacheTime Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setHeuristicCacheTime(Long HeuristicCacheTime) {
         this.HeuristicCacheTime = HeuristicCacheTime;

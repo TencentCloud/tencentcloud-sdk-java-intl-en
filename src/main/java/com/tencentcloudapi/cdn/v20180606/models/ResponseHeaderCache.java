@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResponseHeaderCache extends AbstractModel {
 
     /**
-    * Origin server header cache switch
+    * Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -33,10 +33,10 @@ public class ResponseHeaderCache extends AbstractModel {
     private String Switch;
 
     /**
-     * Get Origin server header cache switch
+     * Get Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Origin server header cache switch
+     * @return Switch Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -45,10 +45,10 @@ public class ResponseHeaderCache extends AbstractModel {
     }
 
     /**
-     * Set Origin server header cache switch
+     * Set Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Origin server header cache switch
+     * @param Switch Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
      */

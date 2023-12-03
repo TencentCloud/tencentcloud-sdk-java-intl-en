@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CacheConfigFollowOrigin extends AbstractModel {
 
     /**
-    * Follow origin server switch configuration
+    * Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
     */
@@ -41,10 +41,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private HeuristicCache HeuristicCache;
 
     /**
-     * Get Follow origin server switch configuration
+     * Get Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable 
-     * @return Switch Follow origin server switch configuration
+     * @return Switch Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,10 +53,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Follow origin server switch configuration
+     * Set Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
-     * @param Switch Follow origin server switch configuration
+     * @param Switch Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
      */

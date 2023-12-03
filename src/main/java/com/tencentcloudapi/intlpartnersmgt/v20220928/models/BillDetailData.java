@@ -271,6 +271,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TotalCost;
 
     /**
+    * ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get Reseller account
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PayerAccountId Reseller account
@@ -898,6 +906,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TotalCost = TotalCost;
     }
 
+    /**
+     * Get ID
+Note: The return value may be null, indicating that no valid data can be obtained. 
+     * @return Id ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param Id ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public BillDetailData() {
     }
 
@@ -996,6 +1024,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -1033,6 +1064,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TotalAmountAfterDiscount", this.TotalAmountAfterDiscount);
         this.setParamSimple(map, prefix + "VoucherDeduction", this.VoucherDeduction);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

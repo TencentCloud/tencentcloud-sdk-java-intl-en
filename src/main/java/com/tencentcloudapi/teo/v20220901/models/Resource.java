@@ -108,7 +108,7 @@ public class Resource extends AbstractModel {
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Group")
     @Expose
@@ -116,7 +116,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneNumber")
     @Expose
@@ -327,12 +327,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Group The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroup() {
         return this.Group;
@@ -343,12 +343,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Group The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroup(String Group) {
         this.Group = Group;
@@ -356,9 +356,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ZoneNumber The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getZoneNumber() {
         return this.ZoneNumber;
@@ -366,9 +366,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ZoneNumber The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZoneNumber(Long ZoneNumber) {
         this.ZoneNumber = ZoneNumber;

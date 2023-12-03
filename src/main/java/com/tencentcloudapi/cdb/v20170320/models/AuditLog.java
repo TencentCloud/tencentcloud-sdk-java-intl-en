@@ -109,15 +109,15 @@ public class AuditLog extends AbstractModel {
 
     /**
     * Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CheckRows")
     @Expose
     private Long CheckRows;
 
     /**
-    * CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CpuTime")
     @Expose
@@ -125,7 +125,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IoWaitTime")
     @Expose
@@ -133,7 +133,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LockWaitTime")
     @Expose
@@ -141,19 +141,27 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NsTime")
     @Expose
     private Long NsTime;
 
     /**
-    * Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TrxLivingTime")
     @Expose
     private Long TrxLivingTime;
+
+    /**
+    * Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+    */
+    @SerializedName("TemplateInfo")
+    @Expose
+    private LogRuleTemplateInfo [] TemplateInfo;
 
     /**
      * Get Number of affected rows 
@@ -349,9 +357,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CheckRows Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCheckRows() {
         return this.CheckRows;
@@ -359,29 +367,29 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CheckRows Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCheckRows(Long CheckRows) {
         this.CheckRows = CheckRows;
     }
 
     /**
-     * Get CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return CpuTime CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CpuTime CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCpuTime() {
         return this.CpuTime;
     }
 
     /**
-     * Set CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param CpuTime CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CpuTime CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCpuTime(Float CpuTime) {
         this.CpuTime = CpuTime;
@@ -389,9 +397,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IoWaitTime IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIoWaitTime() {
         return this.IoWaitTime;
@@ -399,9 +407,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param IoWaitTime IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIoWaitTime(Long IoWaitTime) {
         this.IoWaitTime = IoWaitTime;
@@ -409,9 +417,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LockWaitTime Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLockWaitTime() {
         return this.LockWaitTime;
@@ -419,9 +427,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LockWaitTime Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLockWaitTime(Long LockWaitTime) {
         this.LockWaitTime = LockWaitTime;
@@ -429,9 +437,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNsTime() {
         return this.NsTime;
@@ -439,32 +447,52 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNsTime(Long NsTime) {
         this.NsTime = NsTime;
     }
 
     /**
-     * Get Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return TrxLivingTime Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TrxLivingTime Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTrxLivingTime() {
         return this.TrxLivingTime;
     }
 
     /**
-     * Set Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param TrxLivingTime Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TrxLivingTime Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrxLivingTime(Long TrxLivingTime) {
         this.TrxLivingTime = TrxLivingTime;
+    }
+
+    /**
+     * Get Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained. 
+     * @return TemplateInfo Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public LogRuleTemplateInfo [] getTemplateInfo() {
+        return this.TemplateInfo;
+    }
+
+    /**
+     * Set Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param TemplateInfo Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public void setTemplateInfo(LogRuleTemplateInfo [] TemplateInfo) {
+        this.TemplateInfo = TemplateInfo;
     }
 
     public AuditLog() {
@@ -529,6 +557,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.TrxLivingTime != null) {
             this.TrxLivingTime = new Long(source.TrxLivingTime);
         }
+        if (source.TemplateInfo != null) {
+            this.TemplateInfo = new LogRuleTemplateInfo[source.TemplateInfo.length];
+            for (int i = 0; i < source.TemplateInfo.length; i++) {
+                this.TemplateInfo[i] = new LogRuleTemplateInfo(source.TemplateInfo[i]);
+            }
+        }
     }
 
 
@@ -554,6 +588,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "LockWaitTime", this.LockWaitTime);
         this.setParamSimple(map, prefix + "NsTime", this.NsTime);
         this.setParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
+        this.setParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
 
     }
 }

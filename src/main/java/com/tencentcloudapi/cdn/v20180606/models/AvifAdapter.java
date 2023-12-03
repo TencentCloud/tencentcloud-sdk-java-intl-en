@@ -24,28 +24,38 @@ import java.util.HashMap;
 public class AvifAdapter extends AbstractModel {
 
     /**
-    * Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Switch Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Switch Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

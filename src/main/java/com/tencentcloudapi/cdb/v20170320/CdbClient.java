@@ -608,6 +608,17 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     }
 
     /**
+     *The API DescribeDBInstanceLogToCLS is used to query the configurations of sending slow and error logs of an instance (InstanceId) filtered by AppId and Region to Cloud Log Service (CLS).
+     * @param req DescribeDBInstanceLogToCLSRequest
+     * @return DescribeDBInstanceLogToCLSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLS(DescribeDBInstanceLogToCLSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceLogToCLS", DescribeDBInstanceLogToCLSResponse.class);
+    }
+
+    /**
      *This API (DescribeDBInstanceRebootTime) is used to query the estimated time needed for a TencentDB instance to restart.
      * @param req DescribeDBInstanceRebootTimeRequest
      * @return DescribeDBInstanceRebootTimeResponse
@@ -876,7 +887,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     }
 
     /**
-     *This API (DescribeSlowLogs) is used to query the slow logs of a TencentDB instance.
+     *The API DescribeSlowLogs is used to obtain slow query logs of a cloud database (CDB) instance. Note: If the size of logs to be queried is too large, the operation may time out. It is recommended that you select a shorter time range, such as one hour.
      * @param req DescribeSlowLogsRequest
      * @return DescribeSlowLogsResponse
      * @throws TencentCloudSDKException
@@ -1111,6 +1122,17 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyCdbProxyParamResponse ModifyCdbProxyParam(ModifyCdbProxyParamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCdbProxyParam", ModifyCdbProxyParamResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable the feature of sending CDB slow and error logs to CLS.
+     * @param req ModifyDBInstanceLogToCLSRequest
+     * @return ModifyDBInstanceLogToCLSResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLS(ModifyDBInstanceLogToCLSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceLogToCLS", ModifyDBInstanceLogToCLSResponse.class);
     }
 
     /**

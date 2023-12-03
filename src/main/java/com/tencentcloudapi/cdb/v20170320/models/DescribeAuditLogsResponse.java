@@ -32,7 +32,7 @@ public class DescribeAuditLogsResponse extends AbstractModel {
 
     /**
     * Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
     @Expose
@@ -63,9 +63,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Items Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AuditLog [] getItems() {
         return this.Items;
@@ -73,9 +73,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Items Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(AuditLog [] Items) {
         this.Items = Items;

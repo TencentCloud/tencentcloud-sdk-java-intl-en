@@ -52,6 +52,14 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
     private Float AllocatedCredit;
 
     /**
+    * Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+    */
+    @SerializedName("ClientCreditAfter")
+    @Expose
+    private Float ClientCreditAfter;
+
+    /**
      * Get Allocation time 
      * @return AllocatedTime Allocation time
      */
@@ -115,6 +123,26 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
         this.AllocatedCredit = AllocatedCredit;
     }
 
+    /**
+     * Get Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained. 
+     * @return ClientCreditAfter Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public Float getClientCreditAfter() {
+        return this.ClientCreditAfter;
+    }
+
+    /**
+     * Set Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param ClientCreditAfter Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public void setClientCreditAfter(Float ClientCreditAfter) {
+        this.ClientCreditAfter = ClientCreditAfter;
+    }
+
     public QueryCreditAllocationHistoryData() {
     }
 
@@ -135,6 +163,9 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
         if (source.AllocatedCredit != null) {
             this.AllocatedCredit = new Float(source.AllocatedCredit);
         }
+        if (source.ClientCreditAfter != null) {
+            this.ClientCreditAfter = new Float(source.ClientCreditAfter);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "Credit", this.Credit);
         this.setParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
+        this.setParamSimple(map, prefix + "ClientCreditAfter", this.ClientCreditAfter);
 
     }
 }

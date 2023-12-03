@@ -24,8 +24,11 @@ import java.util.HashMap;
 public class OriginAuthentication extends AbstractModel {
 
     /**
-    * Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -40,20 +43,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private OriginAuthenticationTypeA TypeA;
 
     /**
-     * Get Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Switch Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Switch Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

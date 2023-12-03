@@ -45,6 +45,20 @@ public class QueryPartnerCreditResponse extends AbstractModel {
     private Float RemainingCredit;
 
     /**
+    * Allocated quota for the client
+    */
+    @SerializedName("CustomerTotalCredit")
+    @Expose
+    private Float CustomerTotalCredit;
+
+    /**
+    * Remaining quota for the client
+    */
+    @SerializedName("CustomerRemainingCredit")
+    @Expose
+    private Float CustomerRemainingCredit;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -100,6 +114,38 @@ public class QueryPartnerCreditResponse extends AbstractModel {
     }
 
     /**
+     * Get Allocated quota for the client 
+     * @return CustomerTotalCredit Allocated quota for the client
+     */
+    public Float getCustomerTotalCredit() {
+        return this.CustomerTotalCredit;
+    }
+
+    /**
+     * Set Allocated quota for the client
+     * @param CustomerTotalCredit Allocated quota for the client
+     */
+    public void setCustomerTotalCredit(Float CustomerTotalCredit) {
+        this.CustomerTotalCredit = CustomerTotalCredit;
+    }
+
+    /**
+     * Get Remaining quota for the client 
+     * @return CustomerRemainingCredit Remaining quota for the client
+     */
+    public Float getCustomerRemainingCredit() {
+        return this.CustomerRemainingCredit;
+    }
+
+    /**
+     * Set Remaining quota for the client
+     * @param CustomerRemainingCredit Remaining quota for the client
+     */
+    public void setCustomerRemainingCredit(Float CustomerRemainingCredit) {
+        this.CustomerRemainingCredit = CustomerRemainingCredit;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -132,6 +178,12 @@ public class QueryPartnerCreditResponse extends AbstractModel {
         if (source.RemainingCredit != null) {
             this.RemainingCredit = new Float(source.RemainingCredit);
         }
+        if (source.CustomerTotalCredit != null) {
+            this.CustomerTotalCredit = new Float(source.CustomerTotalCredit);
+        }
+        if (source.CustomerRemainingCredit != null) {
+            this.CustomerRemainingCredit = new Float(source.CustomerRemainingCredit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +197,8 @@ public class QueryPartnerCreditResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
         this.setParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
         this.setParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
+        this.setParamSimple(map, prefix + "CustomerTotalCredit", this.CustomerTotalCredit);
+        this.setParamSimple(map, prefix + "CustomerRemainingCredit", this.CustomerRemainingCredit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
