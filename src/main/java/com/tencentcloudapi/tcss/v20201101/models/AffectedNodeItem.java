@@ -87,6 +87,13 @@ public class AffectedNodeItem extends AbstractModel {
     private String VerifyInfo;
 
     /**
+    * Node name
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -230,6 +237,22 @@ public class AffectedNodeItem extends AbstractModel {
         this.VerifyInfo = VerifyInfo;
     }
 
+    /**
+     * Get Node name 
+     * @return NodeName Node name
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set Node name
+     * @param NodeName Node name
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
     public AffectedNodeItem() {
     }
 
@@ -265,6 +288,9 @@ public class AffectedNodeItem extends AbstractModel {
         if (source.VerifyInfo != null) {
             this.VerifyInfo = new String(source.VerifyInfo);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class AffectedNodeItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

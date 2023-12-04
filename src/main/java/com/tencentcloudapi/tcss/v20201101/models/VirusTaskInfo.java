@@ -52,14 +52,14 @@ public class VirusTaskInfo extends AbstractModel {
     private String ImageId;
 
     /**
-    * Server name
+    * Node name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Server IP
+    * Private IP of the node
     */
     @SerializedName("HostIp")
     @Expose
@@ -128,6 +128,27 @@ public class VirusTaskInfo extends AbstractModel {
     private String ErrorMsg;
 
     /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Public IP of the node
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * Node ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
      * Get Container name 
      * @return ContainerName Container name
      */
@@ -192,32 +213,32 @@ public class VirusTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Server name 
-     * @return HostName Server name
+     * Get Node name 
+     * @return HostName Node name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-     * @param HostName Server name
+     * Set Node name
+     * @param HostName Node name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Server IP 
-     * @return HostIp Server IP
+     * Get Private IP of the node 
+     * @return HostIp Private IP of the node
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set Server IP
-     * @param HostIp Server IP
+     * Set Private IP of the node
+     * @param HostIp Private IP of the node
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
@@ -399,6 +420,54 @@ public class VirusTaskInfo extends AbstractModel {
         this.ErrorMsg = ErrorMsg;
     }
 
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Public IP of the node 
+     * @return PublicIP Public IP of the node
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set Public IP of the node
+     * @param PublicIP Public IP of the node
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get Node ID 
+     * @return NodeID Node ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Node ID
+     * @param NodeID Node ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
     public VirusTaskInfo() {
     }
 
@@ -443,6 +512,15 @@ public class VirusTaskInfo extends AbstractModel {
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
     }
 
 
@@ -462,6 +540,9 @@ public class VirusTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskCnt", this.RiskCnt);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
 
     }
 }

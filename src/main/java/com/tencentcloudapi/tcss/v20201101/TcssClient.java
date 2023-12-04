@@ -2979,6 +2979,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of repository images affected by vulnerabilities.
+     * @param req DescribeVulRegistryImageListRequest
+     * @return DescribeVulRegistryImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRegistryImageListResponse DescribeVulRegistryImageList(DescribeVulRegistryImageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRegistryImageList", DescribeVulRegistryImageListResponse.class);
+    }
+
+    /**
      *This API is used to count the number of licensed but not scanned images on the vulnerability scanning page.
      * @param req DescribeVulScanAuthorizedImageSummaryRequest
      * @return DescribeVulScanAuthorizedImageSummaryResponse

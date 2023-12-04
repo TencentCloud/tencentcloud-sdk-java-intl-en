@@ -221,6 +221,97 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IsolateTime;
 
     /**
+    * Node ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Node name
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * Node subnet ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * Node subnet name
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * Subnet IP range
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * Pod name
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod status
+    */
+    @SerializedName("PodStatus")
+    @Expose
+    private String PodStatus;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * Node type. Values: `NORMAL` (default), `SUPER`
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * UID of the super node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * Public IP
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -692,6 +783,214 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Node ID 
+     * @return NodeID Node ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Node ID
+     * @param NodeID Node ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Node name 
+     * @return NodeName Node name
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set Node name
+     * @param NodeName Node name
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get Node subnet ID 
+     * @return NodeSubNetID Node subnet ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set Node subnet ID
+     * @param NodeSubNetID Node subnet ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get Node subnet name 
+     * @return NodeSubNetName Node subnet name
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set Node subnet name
+     * @param NodeSubNetName Node subnet name
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get Subnet IP range 
+     * @return NodeSubNetCIDR Subnet IP range
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set Subnet IP range
+     * @param NodeSubNetCIDR Subnet IP range
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get Pod name 
+     * @return PodName Pod name
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod name
+     * @param PodName Pod name
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod status 
+     * @return PodStatus Pod status
+     */
+    public String getPodStatus() {
+        return this.PodStatus;
+    }
+
+    /**
+     * Set Pod status
+     * @param PodStatus Pod status
+     */
+    public void setPodStatus(String PodStatus) {
+        this.PodStatus = PodStatus;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (default), `SUPER` 
+     * @return NodeType Node type. Values: `NORMAL` (default), `SUPER`
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (default), `SUPER`
+     * @param NodeType Node type. Values: `NORMAL` (default), `SUPER`
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get UID of the super node 
+     * @return NodeUniqueID UID of the super node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of the super node
+     * @param NodeUniqueID UID of the super node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get Public IP 
+     * @return PublicIP Public IP
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set Public IP
+     * @param PublicIP Public IP
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -799,6 +1098,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodStatus != null) {
+            this.PodStatus = new String(source.PodStatus);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -836,6 +1174,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
         this.setParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodStatus", this.PodStatus);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

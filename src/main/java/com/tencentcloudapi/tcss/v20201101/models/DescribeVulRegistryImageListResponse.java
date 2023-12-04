@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel {
+public class DescribeVulRegistryImageListResponse extends AbstractModel {
+
+    /**
+    * Total number of images
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 
     */
-    @SerializedName("TaskID")
+    @SerializedName("List")
     @Expose
-    private Long TaskID;
+    private VulAffectedRegistryImageInfo [] List;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,19 +45,35 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskID 
+     * Get Total number of images 
+     * @return TotalCount Total number of images
      */
-    public Long getTaskID() {
-        return this.TaskID;
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of images
+     * @param TotalCount Total number of images
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get  
+     * @return List 
+     */
+    public VulAffectedRegistryImageInfo [] getList() {
+        return this.List;
     }
 
     /**
      * Set 
-     * @param TaskID 
+     * @param List 
      */
-    public void setTaskID(Long TaskID) {
-        this.TaskID = TaskID;
+    public void setList(VulAffectedRegistryImageInfo [] List) {
+        this.List = List;
     }
 
     /**
@@ -69,16 +92,22 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateAssetImageRegistryScanTaskResponse() {
+    public DescribeVulRegistryImageListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAssetImageRegistryScanTaskResponse(CreateAssetImageRegistryScanTaskResponse source) {
-        if (source.TaskID != null) {
-            this.TaskID = new Long(source.TaskID);
+    public DescribeVulRegistryImageListResponse(DescribeVulRegistryImageListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.List != null) {
+            this.List = new VulAffectedRegistryImageInfo[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new VulAffectedRegistryImageInfo(source.List[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -73,7 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * This field is used to return the length of an audio file in seconds.
+    * This field is used to return the length of an audio file in milliseconds.
     */
     @SerializedName("Duration")
     @Expose
@@ -248,16 +248,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the length of an audio file in seconds. 
-     * @return Duration This field is used to return the length of an audio file in seconds.
+     * Get This field is used to return the length of an audio file in milliseconds. 
+     * @return Duration This field is used to return the length of an audio file in milliseconds.
      */
     public String getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set This field is used to return the length of an audio file in seconds.
-     * @param Duration This field is used to return the length of an audio file in seconds.
+     * Set This field is used to return the length of an audio file in milliseconds.
+     * @param Duration This field is used to return the length of an audio file in milliseconds.
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;

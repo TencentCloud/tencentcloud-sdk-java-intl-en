@@ -85,7 +85,7 @@ public class AmsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to view the details of an audio moderation task, including task status, detection result, recognized text content of the audio file, maliciousness tag that corresponds to the detection result, and suggested operation. For the specific output content, see the sample output parameters.
+     *This interface is used to view the detailed information of the audio moderation tasks, including task status, detection results, corresponding text content recognized from the audio file, recommended follow-up operations of the maliciousness tags corresponding to the detection results, and so on. For specific output content, see the output parameter examples.
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
      * @throws TencentCloudSDKException

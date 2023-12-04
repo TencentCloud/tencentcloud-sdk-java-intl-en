@@ -48,6 +48,16 @@ K8s API: k8s_api
     private String [] UnBindList;
 
     /**
+    * Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
      * Get Log type
 Container bash: container_bash
 Container startup: container_launch
@@ -107,6 +117,34 @@ K8s API: k8s_api
         this.UnBindList = UnBindList;
     }
 
+    /**
+     * Get Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+ 
+     * @return NodeType Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+     * @param NodeType Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
     public ModifySecLogJoinObjectsRequest() {
     }
 
@@ -130,6 +168,9 @@ K8s API: k8s_api
                 this.UnBindList[i] = new String(source.UnBindList[i]);
             }
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
     }
 
 
@@ -140,6 +181,7 @@ K8s API: k8s_api
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamArraySimple(map, prefix + "BindList.", this.BindList);
         this.setParamArraySimple(map, prefix + "UnBindList.", this.UnBindList);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
 
     }
 }

@@ -21,70 +21,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRefreshTaskRequest extends AbstractModel {
+public class ClusterCustomParameters extends AbstractModel {
 
     /**
-    * 
+    * Parameter name
     */
-    @SerializedName("ClusterIDs")
+    @SerializedName("Name")
     @Expose
-    private String [] ClusterIDs;
+    private String Name;
 
     /**
-    * 
+    * Parameter value
     */
-    @SerializedName("IsSyncListOnly")
+    @SerializedName("Values")
     @Expose
-    private Boolean IsSyncListOnly;
+    private String [] Values;
 
     /**
-     * Get  
-     * @return ClusterIDs 
+     * Get Parameter name 
+     * @return Name Parameter name
      */
-    public String [] getClusterIDs() {
-        return this.ClusterIDs;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 
-     * @param ClusterIDs 
+     * Set Parameter name
+     * @param Name Parameter name
      */
-    public void setClusterIDs(String [] ClusterIDs) {
-        this.ClusterIDs = ClusterIDs;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return IsSyncListOnly 
+     * Get Parameter value 
+     * @return Values Parameter value
      */
-    public Boolean getIsSyncListOnly() {
-        return this.IsSyncListOnly;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set 
-     * @param IsSyncListOnly 
+     * Set Parameter value
+     * @param Values Parameter value
      */
-    public void setIsSyncListOnly(Boolean IsSyncListOnly) {
-        this.IsSyncListOnly = IsSyncListOnly;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
-    public CreateRefreshTaskRequest() {
+    public ClusterCustomParameters() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateRefreshTaskRequest(CreateRefreshTaskRequest source) {
-        if (source.ClusterIDs != null) {
-            this.ClusterIDs = new String[source.ClusterIDs.length];
-            for (int i = 0; i < source.ClusterIDs.length; i++) {
-                this.ClusterIDs[i] = new String(source.ClusterIDs[i]);
-            }
+    public ClusterCustomParameters(ClusterCustomParameters source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.IsSyncListOnly != null) {
-            this.IsSyncListOnly = new Boolean(source.IsSyncListOnly);
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
         }
     }
 
@@ -93,8 +93,8 @@ public class CreateRefreshTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
-        this.setParamSimple(map, prefix + "IsSyncListOnly", this.IsSyncListOnly);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

@@ -172,6 +172,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IsolateTime;
 
     /**
+    * Super node ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod name
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * UID of the super node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * Number of CPU cores used by the pod
+    */
+    @SerializedName("PodCpu")
+    @Expose
+    private Long PodCpu;
+
+    /**
+    * Memory specification of the Pod
+    */
+    @SerializedName("PodMem")
+    @Expose
+    private Long PodMem;
+
+    /**
+    * 
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 
+    */
+    @SerializedName("PodUid")
+    @Expose
+    private String PodUid;
+
+    /**
      * Get Container ID 
      * @return ContainerID Container ID
      */
@@ -523,6 +593,166 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IsolateTime = IsolateTime;
     }
 
+    /**
+     * Get Super node ID 
+     * @return NodeID Super node ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Super node ID
+     * @param NodeID Super node ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod name 
+     * @return PodName Pod name
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod name
+     * @param PodName Pod name
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get Node type. Valid values: `NORMAL` (general node), `SUPER` (super node) 
+     * @return NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     * @param NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get UID of the super node 
+     * @return NodeUniqueID UID of the super node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of the super node
+     * @param NodeUniqueID UID of the super node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get Number of CPU cores used by the pod 
+     * @return PodCpu Number of CPU cores used by the pod
+     */
+    public Long getPodCpu() {
+        return this.PodCpu;
+    }
+
+    /**
+     * Set Number of CPU cores used by the pod
+     * @param PodCpu Number of CPU cores used by the pod
+     */
+    public void setPodCpu(Long PodCpu) {
+        this.PodCpu = PodCpu;
+    }
+
+    /**
+     * Get Memory specification of the Pod 
+     * @return PodMem Memory specification of the Pod
+     */
+    public Long getPodMem() {
+        return this.PodMem;
+    }
+
+    /**
+     * Set Memory specification of the Pod
+     * @param PodMem Memory specification of the Pod
+     */
+    public void setPodMem(Long PodMem) {
+        this.PodMem = PodMem;
+    }
+
+    /**
+     * Get  
+     * @return ClusterName 
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 
+     * @param ClusterName 
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get  
+     * @return ClusterID 
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 
+     * @param ClusterID 
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get  
+     * @return PodUid 
+     */
+    public String getPodUid() {
+        return this.PodUid;
+    }
+
+    /**
+     * Set 
+     * @param PodUid 
+     */
+    public void setPodUid(String PodUid) {
+        this.PodUid = PodUid;
+    }
+
     public ContainerInfo() {
     }
 
@@ -591,6 +821,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PodCpu != null) {
+            this.PodCpu = new Long(source.PodCpu);
+        }
+        if (source.PodMem != null) {
+            this.PodMem = new Long(source.PodMem);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.PodUid != null) {
+            this.PodUid = new String(source.PodUid);
+        }
     }
 
 
@@ -618,6 +878,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
         this.setParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PodCpu", this.PodCpu);
+        this.setParamSimple(map, prefix + "PodMem", this.PodMem);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "PodUid", this.PodUid);
 
     }
 }

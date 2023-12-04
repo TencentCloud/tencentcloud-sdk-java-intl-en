@@ -24,13 +24,14 @@ import java.util.HashMap;
 public class EscapeEventInfo extends AbstractModel {
 
     /**
-    * Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+    * Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
     */
     @SerializedName("EventType")
     @Expose
@@ -208,40 +209,100 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ContainerStatus;
 
     /**
-     * Get Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape. 
-     * @return EventType Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+    * ID of the cluster where the node resides
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Unique node ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * Node public IP
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * Node ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Private IP of the node
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+     * Get Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape. 
+     * @return EventType Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
-     * @param EventType Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+     * Set Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
+     * @param EventType Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -691,6 +752,134 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ContainerStatus = ContainerStatus;
     }
 
+    /**
+     * Get ID of the cluster where the node resides 
+     * @return ClusterID ID of the cluster where the node resides
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set ID of the cluster where the node resides
+     * @param ClusterID ID of the cluster where the node resides
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Unique node ID 
+     * @return NodeUniqueID Unique node ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set Unique node ID
+     * @param NodeUniqueID Unique node ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get Node public IP 
+     * @return PublicIP Node public IP
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set Node public IP
+     * @param PublicIP Node public IP
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get Node ID 
+     * @return NodeID Node ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Node ID
+     * @param NodeID Node ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Private IP of the node 
+     * @return HostIP Private IP of the node
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set Private IP of the node
+     * @param HostIP Private IP of the node
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public EscapeEventInfo() {
     }
 
@@ -762,6 +951,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ContainerStatus != null) {
             this.ContainerStatus = new String(source.ContainerStatus);
         }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -790,6 +1003,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

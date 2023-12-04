@@ -103,6 +103,17 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create one or more cloud disks.
+     * @param req CreateDisksRequest
+     * @return CreateDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDisks", CreateDisksResponse.class);
+    }
+
+    /**
      *This API is used to add a firewall rule on an instance.
 
 
@@ -548,7 +559,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *This API is used to unassociate a CCN instance.
+     *This API is used to disassociate with a CCN instance.
      * @param req DetachCcnRequest
      * @return DetachCcnResponse
      * @throws TencentCloudSDKException
@@ -650,6 +661,22 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     public InquirePriceRenewInstancesResponse InquirePriceRenewInstances(InquirePriceRenewInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquirePriceRenewInstances", InquirePriceRenewInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to return one or more Lighthouse cloud disks.
+
+You can only perform this operation on `UNATTACHED` disks.
+After the successful call of the API, the cloud disk goes to the SHUTDOWN state.
+Up to 20 instances are supported at one time. 
+This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+     * @param req IsolateDisksRequest
+     * @return IsolateDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDisksResponse IsolateDisks(IsolateDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateDisks", IsolateDisksResponse.class);
     }
 
     /**
@@ -822,6 +849,35 @@ In the `FirewallRules` parameter:
     public RebootInstancesResponse RebootInstances(RebootInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RebootInstances", RebootInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to renew one or more Lighthouse cloud disks.
+
+This operation can only be performed on data disks with the status of `ATTACHED`, `UNATTACHED` or `SHUTDOWN`.
+Up to 50 cloud disks are supported at one time.
+This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+     * @param req RenewDisksRequest
+     * @return RenewDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewDisksResponse RenewDisks(RenewDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewDisks", RenewDisksResponse.class);
+    }
+
+    /**
+     *This API is used to renew one or more Lighthouse instances.
+* You can only perform this operation on instances whose status is `RUNNING`, `STOPPED` and `SHUTDOWN`.
+* Batch operations are supported. Up to 100 instances are supported in each request.
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+     * @param req RenewInstancesRequest
+     * @return RenewInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstancesResponse RenewInstances(RenewInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewInstances", RenewInstancesResponse.class);
     }
 
     /**

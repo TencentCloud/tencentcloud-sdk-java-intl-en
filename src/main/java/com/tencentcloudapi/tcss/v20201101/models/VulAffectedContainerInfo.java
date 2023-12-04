@@ -80,6 +80,48 @@ public class VulAffectedContainerInfo extends AbstractModel {
     private String PublicIP;
 
     /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * UID of a super node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * ID of a super node
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Super node name
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
      * Get Private IP 
      * @return HostIP Private IP
      */
@@ -207,6 +249,102 @@ public class VulAffectedContainerInfo extends AbstractModel {
         this.PublicIP = PublicIP;
     }
 
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get UID of a super node 
+     * @return NodeUniqueID UID of a super node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of a super node
+     * @param NodeUniqueID UID of a super node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get ID of a super node 
+     * @return NodeID ID of a super node
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set ID of a super node
+     * @param NodeID ID of a super node
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Super node name 
+     * @return NodeName Super node name
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set Super node name
+     * @param NodeName Super node name
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
     public VulAffectedContainerInfo() {
     }
 
@@ -239,6 +377,24 @@ public class VulAffectedContainerInfo extends AbstractModel {
         if (source.PublicIP != null) {
             this.PublicIP = new String(source.PublicIP);
         }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -254,6 +410,12 @@ public class VulAffectedContainerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

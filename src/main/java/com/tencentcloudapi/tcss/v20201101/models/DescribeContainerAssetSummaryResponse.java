@@ -101,6 +101,13 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel {
     private Long HostUnInstallCnt;
 
     /**
+    * Number of super nodes
+    */
+    @SerializedName("HostSuperNodeCnt")
+    @Expose
+    private Long HostSuperNodeCnt;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -284,6 +291,22 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel {
     }
 
     /**
+     * Get Number of super nodes 
+     * @return HostSuperNodeCnt Number of super nodes
+     */
+    public Long getHostSuperNodeCnt() {
+        return this.HostSuperNodeCnt;
+    }
+
+    /**
+     * Set Number of super nodes
+     * @param HostSuperNodeCnt Number of super nodes
+     */
+    public void setHostSuperNodeCnt(Long HostSuperNodeCnt) {
+        this.HostSuperNodeCnt = HostSuperNodeCnt;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -340,6 +363,9 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel {
         if (source.HostUnInstallCnt != null) {
             this.HostUnInstallCnt = new Long(source.HostUnInstallCnt);
         }
+        if (source.HostSuperNodeCnt != null) {
+            this.HostSuperNodeCnt = new Long(source.HostSuperNodeCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +387,7 @@ public class DescribeContainerAssetSummaryResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageRegistryCnt", this.ImageRegistryCnt);
         this.setParamSimple(map, prefix + "ImageTotalCnt", this.ImageTotalCnt);
         this.setParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
+        this.setParamSimple(map, prefix + "HostSuperNodeCnt", this.HostSuperNodeCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

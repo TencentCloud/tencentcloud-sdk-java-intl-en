@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
-    * This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String TaskId;
 
     /**
-    * This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataId")
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DataId;
 
     /**
-    * This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BizType")
@@ -48,7 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BizType;
 
     /**
-    * This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
@@ -56,8 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Name;
 
     /**
-    * This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -65,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
-    * This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -73,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Suggestion")
@@ -81,15 +80,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Suggestion;
 
     /**
-    * Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * 
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Labels")
     @Expose
     private TaskLabel [] Labels;
 
     /**
-    * This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InputInfo")
@@ -97,7 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private InputInfo InputInfo;
 
     /**
-    * This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioText")
@@ -105,7 +104,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AudioText;
 
     /**
-    * This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioSegments")
@@ -113,7 +112,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AudioSegments [] AudioSegments;
 
     /**
-    * If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorType")
@@ -121,7 +120,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ErrorType;
 
     /**
-    * If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorDescription")
@@ -129,7 +128,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ErrorDescription;
 
     /**
-    * This field is used to return the creation time of the queried task in ISO 8601 format.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreatedAt")
@@ -137,7 +136,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CreatedAt;
 
     /**
-    * This field is used to return the last update time of the queried task in ISO 8601 format.
+    * 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdatedAt")
@@ -145,8 +144,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UpdatedAt;
 
     /**
-    * If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * 
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Label")
     @Expose
@@ -160,9 +159,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+     * @return TaskId 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskId() {
@@ -170,9 +169,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TaskId This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+     * @param TaskId 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(String TaskId) {
@@ -180,9 +179,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DataId This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+     * @return DataId 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDataId() {
@@ -190,9 +189,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DataId This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+     * @param DataId 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDataId(String DataId) {
@@ -200,9 +199,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BizType This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+     * @return BizType 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getBizType() {
@@ -210,9 +209,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BizType This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+     * @param BizType 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBizType(String BizType) {
@@ -220,9 +219,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Name This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+     * @return Name 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
@@ -230,9 +229,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Name This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+     * @param Name 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
@@ -240,11 +239,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+     * @return Status 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
@@ -252,11 +249,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+     * @param Status 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
@@ -264,9 +259,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+     * @return Type 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -274,9 +269,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+     * @param Type 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
@@ -284,9 +279,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+     * @return Suggestion 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getSuggestion() {
@@ -294,9 +289,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+     * @param Suggestion 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSuggestion(String Suggestion) {
@@ -304,29 +299,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Labels Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get 
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Labels 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public TaskLabel [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Labels Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Labels 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLabels(TaskLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InputInfo This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+     * @return InputInfo 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public InputInfo getInputInfo() {
@@ -334,9 +329,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InputInfo This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+     * @param InputInfo 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setInputInfo(InputInfo InputInfo) {
@@ -344,9 +339,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioText This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+     * @return AudioText 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAudioText() {
@@ -354,9 +349,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioText This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+     * @param AudioText 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioText(String AudioText) {
@@ -364,9 +359,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioSegments This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+     * @return AudioSegments 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public AudioSegments [] getAudioSegments() {
@@ -374,9 +369,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioSegments This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+     * @param AudioSegments 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioSegments(AudioSegments [] AudioSegments) {
@@ -384,9 +379,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorType If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+     * @return ErrorType 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorType() {
@@ -394,9 +389,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrorType If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+     * @param ErrorType 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorType(String ErrorType) {
@@ -404,9 +399,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorDescription If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+     * @return ErrorDescription 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorDescription() {
@@ -414,9 +409,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrorDescription If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+     * @param ErrorDescription 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorDescription(String ErrorDescription) {
@@ -424,9 +419,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the creation time of the queried task in ISO 8601 format.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+     * @return CreatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCreatedAt() {
@@ -434,9 +429,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the creation time of the queried task in ISO 8601 format.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+     * @param CreatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCreatedAt(String CreatedAt) {
@@ -444,9 +439,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the last update time of the queried task in ISO 8601 format.
+     * Get 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
+     * @return UpdatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdatedAt() {
@@ -454,9 +449,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is used to return the last update time of the queried task in ISO 8601 format.
+     * Set 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
+     * @param UpdatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -464,20 +459,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Label If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get 
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Label 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Label If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Label 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLabel(String Label) {
         this.Label = Label;

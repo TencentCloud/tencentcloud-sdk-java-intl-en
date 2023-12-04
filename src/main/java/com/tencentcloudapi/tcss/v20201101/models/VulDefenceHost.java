@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VulDefenceHost extends AbstractModel {
 
     /**
-    * Server name
+    * General node/Super node name
     */
     @SerializedName("HostName")
     @Expose
@@ -38,7 +38,7 @@ public class VulDefenceHost extends AbstractModel {
     private String HostIP;
 
     /**
-    * Server QUuid
+    * Node QUuid/Super node ID
     */
     @SerializedName("HostID")
     @Expose
@@ -73,16 +73,72 @@ public class VulDefenceHost extends AbstractModel {
     private String ModifyTime;
 
     /**
-     * Get Server name 
-     * @return HostName Server name
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Super node subnet name
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * Super node subnet IP range
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * Super node subnet ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * UID of a super node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * ID of a super node
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod name
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+     * Get General node/Super node name 
+     * @return HostName General node/Super node name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-     * @param HostName Server name
+     * Set General node/Super node name
+     * @param HostName General node/Super node name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
@@ -105,16 +161,16 @@ public class VulDefenceHost extends AbstractModel {
     }
 
     /**
-     * Get Server QUuid 
-     * @return HostID Server QUuid
+     * Get Node QUuid/Super node ID 
+     * @return HostID Node QUuid/Super node ID
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set Server QUuid
-     * @param HostID Server QUuid
+     * Set Node QUuid/Super node ID
+     * @param HostID Node QUuid/Super node ID
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
@@ -184,6 +240,134 @@ public class VulDefenceHost extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Super node subnet name 
+     * @return NodeSubNetName Super node subnet name
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set Super node subnet name
+     * @param NodeSubNetName Super node subnet name
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get Super node subnet IP range 
+     * @return NodeSubNetCIDR Super node subnet IP range
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set Super node subnet IP range
+     * @param NodeSubNetCIDR Super node subnet IP range
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get Super node subnet ID 
+     * @return NodeSubNetID Super node subnet ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set Super node subnet ID
+     * @param NodeSubNetID Super node subnet ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get UID of a super node 
+     * @return NodeUniqueID UID of a super node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of a super node
+     * @param NodeUniqueID UID of a super node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get ID of a super node 
+     * @return NodeID ID of a super node
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set ID of a super node
+     * @param NodeID ID of a super node
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod name 
+     * @return PodName Pod name
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod name
+     * @param PodName Pod name
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
     public VulDefenceHost() {
     }
 
@@ -213,6 +397,30 @@ public class VulDefenceHost extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
     }
 
 
@@ -227,6 +435,14 @@ public class VulDefenceHost extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
 
     }
 }

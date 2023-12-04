@@ -38,7 +38,8 @@ public class DescribeReverseShellEventsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+    * Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
     */
     @SerializedName("Filters")
     @Expose
@@ -91,16 +92,20 @@ public class DescribeReverseShellEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+     * Get Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show) 
+     * @return Filters Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+     * Set Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
+     * @param Filters Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

@@ -24,92 +24,112 @@ import java.util.HashMap;
 public class RenewDiskChargePrepaid extends AbstractModel {
 
     /**
-    * Purchase duration.
+    * Renewal period
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Whether Auto-Renewal is enabled 
+    * Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * Duration unit. Default value: "m" (month).
+    * Unit of the period. Values: `m` (month).
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Expiration time of the current instance.
+    * Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
     */
     @SerializedName("CurInstanceDeadline")
     @Expose
     private String CurInstanceDeadline;
 
     /**
-     * Get Purchase duration. 
-     * @return Period Purchase duration.
+     * Get Renewal period 
+     * @return Period Renewal period
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Purchase duration.
-     * @param Period Purchase duration.
+     * Set Renewal period
+     * @param Period Renewal period
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Whether Auto-Renewal is enabled  
-     * @return RenewFlag Whether Auto-Renewal is enabled 
+     * Get Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient. 
+     * @return RenewFlag Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Whether Auto-Renewal is enabled 
-     * @param RenewFlag Whether Auto-Renewal is enabled 
+     * Set Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+     * @param RenewFlag Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Duration unit. Default value: "m" (month). 
-     * @return TimeUnit Duration unit. Default value: "m" (month).
+     * Get Unit of the period. Values: `m` (month). 
+     * @return TimeUnit Unit of the period. Values: `m` (month).
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Duration unit. Default value: "m" (month).
-     * @param TimeUnit Duration unit. Default value: "m" (month).
+     * Set Unit of the period. Values: `m` (month).
+     * @param TimeUnit Unit of the period. Values: `m` (month).
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Expiration time of the current instance. 
-     * @return CurInstanceDeadline Expiration time of the current instance.
+     * Get Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified. 
+     * @return CurInstanceDeadline Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
      */
     public String getCurInstanceDeadline() {
         return this.CurInstanceDeadline;
     }
 
     /**
-     * Set Expiration time of the current instance.
-     * @param CurInstanceDeadline Expiration time of the current instance.
+     * Set Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
+     * @param CurInstanceDeadline Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
      */
     public void setCurInstanceDeadline(String CurInstanceDeadline) {
         this.CurInstanceDeadline = CurInstanceDeadline;

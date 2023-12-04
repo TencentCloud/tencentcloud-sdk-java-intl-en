@@ -182,8 +182,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ContainerIsolateOperationSrc;
 
     /**
-    * Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("QUUID")
     @Expose
@@ -198,12 +198,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HostIP;
 
     /**
-    * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
+
+    /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Public IP
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * UID of a super node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * ID of a super node
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
 
     /**
      * Get Vulnerability CVE ID 
@@ -610,20 +652,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getQUUID() {
         return this.QUUID;
     }
 
     /**
-     * Set Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
@@ -650,23 +692,119 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Server name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return HostName General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param HostName General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Public IP 
+     * @return PublicIP Public IP
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set Public IP
+     * @param PublicIP Public IP
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get UID of a super node 
+     * @return NodeUniqueID UID of a super node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of a super node
+     * @param NodeUniqueID UID of a super node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get ID of a super node 
+     * @return NodeID ID of a super node
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set ID of a super node
+     * @param NodeID ID of a super node
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
     }
 
     public VulDefenceEvent() {
@@ -743,6 +881,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -772,6 +928,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "QUUID", this.QUUID);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

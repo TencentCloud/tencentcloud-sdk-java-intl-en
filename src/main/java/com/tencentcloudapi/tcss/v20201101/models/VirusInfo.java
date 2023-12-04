@@ -218,6 +218,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] CheckPlatform;
 
     /**
+    * Node ID.
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Node name
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod (instance) name
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * ID of the cluster where the node resides
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Public IP of the node
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * Node private IP
+    */
+    @SerializedName("InnerIP")
+    @Expose
+    private String InnerIP;
+
+    /**
+    * UID of the node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * ID for u200dthe general node
+    */
+    @SerializedName("HostID")
+    @Expose
+    private String HostID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get Filename 
      * @return FileName Filename
      */
@@ -741,6 +818,182 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CheckPlatform = CheckPlatform;
     }
 
+    /**
+     * Get Node ID. 
+     * @return NodeID Node ID.
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Node ID.
+     * @param NodeID Node ID.
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Node name 
+     * @return NodeName Node name
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set Node name
+     * @param NodeName Node name
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod (instance) name 
+     * @return PodName Pod (instance) name
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod (instance) name
+     * @param PodName Pod (instance) name
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get ID of the cluster where the node resides 
+     * @return ClusterID ID of the cluster where the node resides
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set ID of the cluster where the node resides
+     * @param ClusterID ID of the cluster where the node resides
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Public IP of the node 
+     * @return PublicIP Public IP of the node
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set Public IP of the node
+     * @param PublicIP Public IP of the node
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get Node private IP 
+     * @return InnerIP Node private IP
+     */
+    public String getInnerIP() {
+        return this.InnerIP;
+    }
+
+    /**
+     * Set Node private IP
+     * @param InnerIP Node private IP
+     */
+    public void setInnerIP(String InnerIP) {
+        this.InnerIP = InnerIP;
+    }
+
+    /**
+     * Get UID of the node 
+     * @return NodeUniqueID UID of the node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of the node
+     * @param NodeUniqueID UID of the node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get ID for u200dthe general node 
+     * @return HostID ID for u200dthe general node
+     */
+    public String getHostID() {
+        return this.HostID;
+    }
+
+    /**
+     * Set ID for u200dthe general node
+     * @param HostID ID for u200dthe general node
+     */
+    public void setHostID(String HostID) {
+        this.HostID = HostID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public VirusInfo() {
     }
 
@@ -815,6 +1068,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
             }
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.InnerIP != null) {
+            this.InnerIP = new String(source.InnerIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.HostID != null) {
+            this.HostID = new String(source.HostID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -843,6 +1129,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MD5", this.MD5);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "InnerIP", this.InnerIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "HostID", this.HostID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

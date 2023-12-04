@@ -31,18 +31,32 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
     private Long IsEnabled;
 
     /**
-    * Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+    * Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+    * Specified servers with exploit prevention enabled
     */
     @SerializedName("HostIDs")
     @Expose
     private String [] HostIDs;
+
+    /**
+    * Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+    */
+    @SerializedName("SuperScope")
+    @Expose
+    private Long SuperScope;
+
+    /**
+    * List of super node IDs
+    */
+    @SerializedName("NodeIds")
+    @Expose
+    private String [] NodeIds;
 
     /**
      * Get Whether it is enabled. Valid values: `0` (disabled); `1` (enabled). 
@@ -61,35 +75,67 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
     }
 
     /**
-     * Get Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`. 
-     * @return Scope Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+     * Get Servers to enable exploit prevention. Values: `0` (custom); `1` (all). 
+     * @return Scope Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
-     * @param Scope Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+     * Set Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
+     * @param Scope Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`. 
-     * @return HostIDs Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+     * Get Specified servers with exploit prevention enabled 
+     * @return HostIDs Specified servers with exploit prevention enabled
      */
     public String [] getHostIDs() {
         return this.HostIDs;
     }
 
     /**
-     * Set Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
-     * @param HostIDs Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+     * Set Specified servers with exploit prevention enabled
+     * @param HostIDs Specified servers with exploit prevention enabled
      */
     public void setHostIDs(String [] HostIDs) {
         this.HostIDs = HostIDs;
+    }
+
+    /**
+     * Get Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all). 
+     * @return SuperScope Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+     */
+    public Long getSuperScope() {
+        return this.SuperScope;
+    }
+
+    /**
+     * Set Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+     * @param SuperScope Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+     */
+    public void setSuperScope(Long SuperScope) {
+        this.SuperScope = SuperScope;
+    }
+
+    /**
+     * Get List of super node IDs 
+     * @return NodeIds List of super node IDs
+     */
+    public String [] getNodeIds() {
+        return this.NodeIds;
+    }
+
+    /**
+     * Set List of super node IDs
+     * @param NodeIds List of super node IDs
+     */
+    public void setNodeIds(String [] NodeIds) {
+        this.NodeIds = NodeIds;
     }
 
     public ModifyVulDefenceSettingRequest() {
@@ -112,6 +158,15 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
                 this.HostIDs[i] = new String(source.HostIDs[i]);
             }
         }
+        if (source.SuperScope != null) {
+            this.SuperScope = new Long(source.SuperScope);
+        }
+        if (source.NodeIds != null) {
+            this.NodeIds = new String[source.NodeIds.length];
+            for (int i = 0; i < source.NodeIds.length; i++) {
+                this.NodeIds[i] = new String(source.NodeIds[i]);
+            }
+        }
     }
 
 
@@ -122,6 +177,8 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
+        this.setParamSimple(map, prefix + "SuperScope", this.SuperScope);
+        this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
 
     }
 }

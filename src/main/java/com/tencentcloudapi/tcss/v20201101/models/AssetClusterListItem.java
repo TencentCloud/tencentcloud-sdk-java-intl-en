@@ -58,10 +58,32 @@ public class AssetClusterListItem extends AbstractModel {
     * Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
+
+    /**
+    * Cluster version
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
+    * MEM usage
+    */
+    @SerializedName("MemLimit")
+    @Expose
+    private Long MemLimit;
+
+    /**
+    * cpu
+    */
+    @SerializedName("CpuLimit")
+    @Expose
+    private Long CpuLimit;
 
     /**
      * Get Cluster ID 
@@ -142,10 +164,12 @@ public class AssetClusterListItem extends AbstractModel {
     /**
      * Get Cluster type:
 `CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster 
+`CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster 
      * @return ClusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -155,12 +179,62 @@ public class AssetClusterListItem extends AbstractModel {
      * Set Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
      * @param ClusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get Cluster version 
+     * @return ClusterVersion Cluster version
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set Cluster version
+     * @param ClusterVersion Cluster version
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
+    /**
+     * Get MEM usage 
+     * @return MemLimit MEM usage
+     */
+    public Long getMemLimit() {
+        return this.MemLimit;
+    }
+
+    /**
+     * Set MEM usage
+     * @param MemLimit MEM usage
+     */
+    public void setMemLimit(Long MemLimit) {
+        this.MemLimit = MemLimit;
+    }
+
+    /**
+     * Get cpu 
+     * @return CpuLimit cpu
+     */
+    public Long getCpuLimit() {
+        return this.CpuLimit;
+    }
+
+    /**
+     * Set cpu
+     * @param CpuLimit cpu
+     */
+    public void setCpuLimit(Long CpuLimit) {
+        this.CpuLimit = CpuLimit;
     }
 
     public AssetClusterListItem() {
@@ -186,6 +260,15 @@ public class AssetClusterListItem extends AbstractModel {
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.MemLimit != null) {
+            this.MemLimit = new Long(source.MemLimit);
+        }
+        if (source.CpuLimit != null) {
+            this.CpuLimit = new Long(source.CpuLimit);
+        }
     }
 
 
@@ -198,6 +281,9 @@ public class AssetClusterListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BindRuleName", this.BindRuleName);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+        this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);
+        this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
 
     }
 }

@@ -73,6 +73,48 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     private Long [] Id;
 
     /**
+    * Whether to scan for the latest version
+    */
+    @SerializedName("Latest")
+    @Expose
+    private Boolean Latest;
+
+    /**
+    * 
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 
+    */
+    @SerializedName("ScanEndTime")
+    @Expose
+    private String ScanEndTime;
+
+    /**
+    * 
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 
+    */
+    @SerializedName("RegistryType")
+    @Expose
+    private String [] RegistryType;
+
+    /**
+    * 
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String [] Namespace;
+
+    /**
      * Get Scheduled scan cycle 
      * @return ScanPeriod Scheduled scan cycle
      */
@@ -155,7 +197,9 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     /**
      * Get Whether to scan all 
      * @return All Whether to scan all
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -163,7 +207,9 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     /**
      * Set Whether to scan all
      * @param All Whether to scan all
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }
@@ -182,6 +228,102 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
      */
     public void setId(Long [] Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get Whether to scan for the latest version 
+     * @return Latest Whether to scan for the latest version
+     */
+    public Boolean getLatest() {
+        return this.Latest;
+    }
+
+    /**
+     * Set Whether to scan for the latest version
+     * @param Latest Whether to scan for the latest version
+     */
+    public void setLatest(Boolean Latest) {
+        this.Latest = Latest;
+    }
+
+    /**
+     * Get  
+     * @return ContainerRunning 
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 
+     * @param ContainerRunning 
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get  
+     * @return ScanEndTime 
+     */
+    public String getScanEndTime() {
+        return this.ScanEndTime;
+    }
+
+    /**
+     * Set 
+     * @param ScanEndTime 
+     */
+    public void setScanEndTime(String ScanEndTime) {
+        this.ScanEndTime = ScanEndTime;
+    }
+
+    /**
+     * Get  
+     * @return ScanScope 
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 
+     * @param ScanScope 
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get  
+     * @return RegistryType 
+     */
+    public String [] getRegistryType() {
+        return this.RegistryType;
+    }
+
+    /**
+     * Set 
+     * @param RegistryType 
+     */
+    public void setRegistryType(String [] RegistryType) {
+        this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get  
+     * @return Namespace 
+     */
+    public String [] getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 
+     * @param Namespace 
+     */
+    public void setNamespace(String [] Namespace) {
+        this.Namespace = Namespace;
     }
 
     public UpdateImageRegistryTimingScanTaskRequest() {
@@ -222,6 +364,30 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.Latest != null) {
+            this.Latest = new Boolean(source.Latest);
+        }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.ScanEndTime != null) {
+            this.ScanEndTime = new String(source.ScanEndTime);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String[source.RegistryType.length];
+            for (int i = 0; i < source.RegistryType.length; i++) {
+                this.RegistryType[i] = new String(source.RegistryType[i]);
+            }
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new String(source.Namespace[i]);
+            }
+        }
     }
 
 
@@ -236,6 +402,12 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "Latest", this.Latest);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+        this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
 
     }
 }

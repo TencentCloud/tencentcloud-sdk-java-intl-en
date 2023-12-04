@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageRegistrySummaryRequest extends AbstractModel {
+public class RenewInstancesResponse extends AbstractModel {
 
     /**
-    * 
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("Filters")
+    @SerializedName("RequestId")
     @Expose
-    private AssetFilters [] Filters;
+    private String RequestId;
 
     /**
-     * Get  
-     * @return Filters 
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public AssetFilters [] getFilters() {
-        return this.Filters;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 
-     * @param Filters 
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setFilters(AssetFilters [] Filters) {
-        this.Filters = Filters;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeAssetImageRegistrySummaryRequest() {
+    public RenewInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAssetImageRegistrySummaryRequest(DescribeAssetImageRegistrySummaryRequest source) {
-        if (source.Filters != null) {
-            this.Filters = new AssetFilters[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new AssetFilters(source.Filters[i]);
-            }
+    public RenewInstancesResponse(RenewInstancesResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -67,7 +64,7 @@ public class DescribeAssetImageRegistrySummaryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

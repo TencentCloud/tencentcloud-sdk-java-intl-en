@@ -39,14 +39,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Score;
 
     /**
-    * This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+    * This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+    * This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
     */
     @SerializedName("EndTime")
     @Expose
@@ -111,32 +111,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds. 
-     * @return StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * Get This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds. 
+     * @return StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
-     * @param StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * Set This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
+     * @param StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds. 
-     * @return EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * Get This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds. 
+     * @return EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
      */
     public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
-     * @param EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * Set This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
+     * @param EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

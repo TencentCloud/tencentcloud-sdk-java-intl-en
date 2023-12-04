@@ -24,9 +24,13 @@ import java.util.HashMap;
 public class DescribeVulDefenceHostRequest extends AbstractModel {
 
     /**
-    * Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+    * Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -61,24 +65,40 @@ public class DescribeVulDefenceHostRequest extends AbstractModel {
     private String By;
 
     /**
-     * Get Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li> 
-     * @return Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+     * Get Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li> 
+     * @return Filters Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
-     * @param Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+     * Set Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
+     * @param Filters Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

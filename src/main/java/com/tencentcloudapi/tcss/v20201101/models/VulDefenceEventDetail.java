@@ -122,7 +122,7 @@ public class VulDefenceEventDetail extends AbstractModel {
     private Long EventID;
 
     /**
-    * Server name
+    * General node/Super node name
     */
     @SerializedName("HostName")
     @Expose
@@ -227,8 +227,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ServerArg;
 
     /**
-    * Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
     */
     @SerializedName("QUUID")
     @Expose
@@ -301,6 +301,83 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("RaspDetail")
     @Expose
     private RaspInfo [] RaspDetail;
+
+    /**
+    * Super node subnet name
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * Super node subnet IP range
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * ID of a super node
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * UID of a super node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * Super node subnet ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 
+    */
+    @SerializedName("WorkloadType")
+    @Expose
+    private String WorkloadType;
 
     /**
      * Get Vulnerability CVE ID 
@@ -527,16 +604,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Server name 
-     * @return HostName Server name
+     * Get General node/Super node name 
+     * @return HostName General node/Super node name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-     * @param HostName Server name
+     * Set General node/Super node name
+     * @param HostName General node/Super node name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
@@ -779,20 +856,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public String getQUUID() {
         return this.QUUID;
     }
 
     /**
-     * Set Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
@@ -998,6 +1075,182 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.RaspDetail = RaspDetail;
     }
 
+    /**
+     * Get Super node subnet name 
+     * @return NodeSubNetName Super node subnet name
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set Super node subnet name
+     * @param NodeSubNetName Super node subnet name
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get Super node subnet IP range 
+     * @return NodeSubNetCIDR Super node subnet IP range
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set Super node subnet IP range
+     * @param NodeSubNetCIDR Super node subnet IP range
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get ID of a super node 
+     * @return NodeID ID of a super node
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set ID of a super node
+     * @param NodeID ID of a super node
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get UID of a super node 
+     * @return NodeUniqueID UID of a super node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of a super node
+     * @param NodeUniqueID UID of a super node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get Super node subnet ID 
+     * @return NodeSubNetID Super node subnet ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set Super node subnet ID
+     * @param NodeSubNetID Super node subnet ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get  
+     * @return Namespace 
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 
+     * @param Namespace 
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get  
+     * @return WorkloadType 
+     */
+    public String getWorkloadType() {
+        return this.WorkloadType;
+    }
+
+    /**
+     * Set 
+     * @param WorkloadType 
+     */
+    public void setWorkloadType(String WorkloadType) {
+        this.WorkloadType = WorkloadType;
+    }
+
     public VulDefenceEventDetail() {
     }
 
@@ -1117,6 +1370,39 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.RaspDetail[i] = new RaspInfo(source.RaspDetail[i]);
             }
         }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
     }
 
 
@@ -1159,6 +1445,17 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         this.setParamSimple(map, prefix + "JNDIUrl", this.JNDIUrl);
         this.setParamArrayObj(map, prefix + "RaspDetail.", this.RaspDetail);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
 
     }
 }

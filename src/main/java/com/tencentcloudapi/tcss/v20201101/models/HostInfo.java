@@ -145,6 +145,27 @@ Note: This field may return `null`, indicating that no valid value was found.
     private TagInfo [] Tags;
 
     /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 
+    */
+    @SerializedName("ClusterAccessedStatus")
+    @Expose
+    private String ClusterAccessedStatus;
+
+    /**
      * Get Server ID 
      * @return HostID Server ID
      */
@@ -424,6 +445,54 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.Tags = Tags;
     }
 
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get  
+     * @return ClusterName 
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 
+     * @param ClusterName 
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get  
+     * @return ClusterAccessedStatus 
+     */
+    public String getClusterAccessedStatus() {
+        return this.ClusterAccessedStatus;
+    }
+
+    /**
+     * Set 
+     * @param ClusterAccessedStatus 
+     */
+    public void setClusterAccessedStatus(String ClusterAccessedStatus) {
+        this.ClusterAccessedStatus = ClusterAccessedStatus;
+    }
+
     public HostInfo() {
     }
 
@@ -486,6 +555,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterAccessedStatus != null) {
+            this.ClusterAccessedStatus = new String(source.ClusterAccessedStatus);
+        }
     }
 
 
@@ -510,6 +588,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "RegionID", this.RegionID);
         this.setParamObj(map, prefix + "Project.", this.Project);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
 
     }
 }

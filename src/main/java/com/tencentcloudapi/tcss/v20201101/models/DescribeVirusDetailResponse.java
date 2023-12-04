@@ -200,14 +200,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SourceType;
 
     /**
-    * Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("PodName")
-    @Expose
-    private String PodName;
-
-    /**
     * Tag
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -262,6 +254,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("EventType")
     @Expose
     private String EventType;
+
+    /**
+    * Cluster name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
 
     /**
     * `DEAL_NONE`: Pending.
@@ -433,6 +433,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("FileModifyTime")
     @Expose
     private String FileModifyTime;
+
+    /**
+    * Node subnet ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * Node subnet name
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * Subnet IP range
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod status
+    */
+    @SerializedName("PodStatus")
+    @Expose
+    private String PodStatus;
+
+    /**
+    * UID of the node
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Node ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 
+    */
+    @SerializedName("WorkloadType")
+    @Expose
+    private String WorkloadType;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -882,26 +966,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getPodName() {
-        return this.PodName;
-    }
-
-    /**
-     * Set Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setPodName(String PodName) {
-        this.PodName = PodName;
-    }
-
-    /**
      * Get Tag
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Tags Tag
@@ -1039,6 +1103,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
+    }
+
+    /**
+     * Get Cluster name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PodName Cluster name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Cluster name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PodName Cluster name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
     }
 
     /**
@@ -1498,6 +1582,198 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Node subnet ID 
+     * @return NodeSubNetID Node subnet ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set Node subnet ID
+     * @param NodeSubNetID Node subnet ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get Node subnet name 
+     * @return NodeSubNetName Node subnet name
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set Node subnet name
+     * @param NodeSubNetName Node subnet name
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get Subnet IP range 
+     * @return NodeSubNetCIDR Subnet IP range
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set Subnet IP range
+     * @param NodeSubNetCIDR Subnet IP range
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod status 
+     * @return PodStatus Pod status
+     */
+    public String getPodStatus() {
+        return this.PodStatus;
+    }
+
+    /**
+     * Set Pod status
+     * @param PodStatus Pod status
+     */
+    public void setPodStatus(String PodStatus) {
+        this.PodStatus = PodStatus;
+    }
+
+    /**
+     * Get UID of the node 
+     * @return NodeUniqueID UID of the node
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set UID of the node
+     * @param NodeUniqueID UID of the node
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
+     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Node ID 
+     * @return NodeID Node ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Node ID
+     * @param NodeID Node ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get  
+     * @return Namespace 
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 
+     * @param Namespace 
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get  
+     * @return WorkloadType 
+     */
+    public String getWorkloadType() {
+        return this.WorkloadType;
+    }
+
+    /**
+     * Set 
+     * @param WorkloadType 
+     */
+    public void setWorkloadType(String WorkloadType) {
+        this.WorkloadType = WorkloadType;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1587,9 +1863,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SourceType != null) {
             this.SourceType = new Long(source.SourceType);
         }
-        if (source.PodName != null) {
-            this.PodName = new String(source.PodName);
-        }
         if (source.Tags != null) {
             this.Tags = new String[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -1613,6 +1886,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.EventType != null) {
             this.EventType = new String(source.EventType);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -1674,6 +1950,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FileModifyTime != null) {
             this.FileModifyTime = new String(source.FileModifyTime);
         }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodStatus != null) {
+            this.PodStatus = new String(source.PodStatus);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1706,7 +2018,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProcessStartAccount", this.ProcessStartAccount);
         this.setParamSimple(map, prefix + "ProcessFileAuthority", this.ProcessFileAuthority);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
-        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HarmDescribe", this.HarmDescribe);
         this.setParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
@@ -1714,6 +2025,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
         this.setParamSimple(map, prefix + "EventType", this.EventType);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
@@ -1733,6 +2045,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
         this.setParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
         this.setParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodStatus", this.PodStatus);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

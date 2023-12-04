@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulDefencePluginRequest extends AbstractModel {
 
     /**
-    * Server host ID, i.e., QUuid
+    * Host ID or unique super node ID
     */
     @SerializedName("HostID")
     @Expose
@@ -45,24 +45,26 @@ public class DescribeVulDefencePluginRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+    * Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
     */
     @SerializedName("Filters")
     @Expose
     private RunTimeFilters [] Filters;
 
     /**
-     * Get Server host ID, i.e., QUuid 
-     * @return HostID Server host ID, i.e., QUuid
+     * Get Host ID or unique super node ID 
+     * @return HostID Host ID or unique super node ID
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set Server host ID, i.e., QUuid
-     * @param HostID Server host ID, i.e., QUuid
+     * Set Host ID or unique super node ID
+     * @param HostID Host ID or unique super node ID
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
@@ -101,20 +103,28 @@ public class DescribeVulDefencePluginRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li> 
-     * @return Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+     * Get Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li> 
+     * @return Filters Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
-     * @param Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+     * Set Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
+     * @param Filters Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

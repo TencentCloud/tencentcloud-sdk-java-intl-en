@@ -76,6 +76,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SupportDefenseVulCount;
 
     /**
+    * Number of normal nodes
+    */
+    @SerializedName("HostNodeCount")
+    @Expose
+    private Long HostNodeCount;
+
+    /**
+    * Super node scope
+    */
+    @SerializedName("SuperScope")
+    @Expose
+    private Long SuperScope;
+
+    /**
+    * Number of super nodes
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
+
+    /**
+    * List of super node IDs
+    */
+    @SerializedName("SuperNodeIds")
+    @Expose
+    private String [] SuperNodeIds;
+
+    /**
+    * Total number of super nodes with TCSS activated
+    */
+    @SerializedName("NodeTotalCount")
+    @Expose
+    private Long NodeTotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -207,6 +242,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Number of normal nodes 
+     * @return HostNodeCount Number of normal nodes
+     */
+    public Long getHostNodeCount() {
+        return this.HostNodeCount;
+    }
+
+    /**
+     * Set Number of normal nodes
+     * @param HostNodeCount Number of normal nodes
+     */
+    public void setHostNodeCount(Long HostNodeCount) {
+        this.HostNodeCount = HostNodeCount;
+    }
+
+    /**
+     * Get Super node scope 
+     * @return SuperScope Super node scope
+     */
+    public Long getSuperScope() {
+        return this.SuperScope;
+    }
+
+    /**
+     * Set Super node scope
+     * @param SuperScope Super node scope
+     */
+    public void setSuperScope(Long SuperScope) {
+        this.SuperScope = SuperScope;
+    }
+
+    /**
+     * Get Number of super nodes 
+     * @return SuperNodeCount Number of super nodes
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set Number of super nodes
+     * @param SuperNodeCount Number of super nodes
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
+    }
+
+    /**
+     * Get List of super node IDs 
+     * @return SuperNodeIds List of super node IDs
+     */
+    public String [] getSuperNodeIds() {
+        return this.SuperNodeIds;
+    }
+
+    /**
+     * Set List of super node IDs
+     * @param SuperNodeIds List of super node IDs
+     */
+    public void setSuperNodeIds(String [] SuperNodeIds) {
+        this.SuperNodeIds = SuperNodeIds;
+    }
+
+    /**
+     * Get Total number of super nodes with TCSS activated 
+     * @return NodeTotalCount Total number of super nodes with TCSS activated
+     */
+    public Long getNodeTotalCount() {
+        return this.NodeTotalCount;
+    }
+
+    /**
+     * Set Total number of super nodes with TCSS activated
+     * @param NodeTotalCount Total number of super nodes with TCSS activated
+     */
+    public void setNodeTotalCount(Long NodeTotalCount) {
+        this.NodeTotalCount = NodeTotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -254,6 +369,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SupportDefenseVulCount != null) {
             this.SupportDefenseVulCount = new Long(source.SupportDefenseVulCount);
         }
+        if (source.HostNodeCount != null) {
+            this.HostNodeCount = new Long(source.HostNodeCount);
+        }
+        if (source.SuperScope != null) {
+            this.SuperScope = new Long(source.SuperScope);
+        }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
+        if (source.SuperNodeIds != null) {
+            this.SuperNodeIds = new String[source.SuperNodeIds.length];
+            for (int i = 0; i < source.SuperNodeIds.length; i++) {
+                this.SuperNodeIds[i] = new String(source.SuperNodeIds[i]);
+            }
+        }
+        if (source.NodeTotalCount != null) {
+            this.NodeTotalCount = new Long(source.NodeTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -271,6 +404,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
         this.setParamSimple(map, prefix + "HostTotalCount", this.HostTotalCount);
         this.setParamSimple(map, prefix + "SupportDefenseVulCount", this.SupportDefenseVulCount);
+        this.setParamSimple(map, prefix + "HostNodeCount", this.HostNodeCount);
+        this.setParamSimple(map, prefix + "SuperScope", this.SuperScope);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
+        this.setParamArraySimple(map, prefix + "SuperNodeIds.", this.SuperNodeIds);
+        this.setParamSimple(map, prefix + "NodeTotalCount", this.NodeTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -40,11 +40,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Version;
 
     /**
+    * Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FixedVersion")
+    @Expose
+    private String FixedVersion;
+
+    /**
+    * Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Component name
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getComponent() {
         return this.Component;
     }
@@ -54,7 +88,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setComponent(String Component) {
         this.Component = Component;
     }
@@ -79,6 +115,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Version = Version;
     }
 
+    /**
+     * Get Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return FixedVersion Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public String getFixedVersion() {
+        return this.FixedVersion;
+    }
+
+    /**
+     * Set Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param FixedVersion Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public void setFixedVersion(String FixedVersion) {
+        this.FixedVersion = FixedVersion;
+    }
+
+    /**
+     * Get Path
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return Path Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param Path Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    /**
+     * Get Type
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return Type Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param Type Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get Add-on name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Name Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public ComponentsInfo() {
     }
 
@@ -93,6 +209,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.FixedVersion != null) {
+            this.FixedVersion = new String(source.FixedVersion);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -102,6 +230,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Component", this.Component);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "FixedVersion", this.FixedVersion);
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

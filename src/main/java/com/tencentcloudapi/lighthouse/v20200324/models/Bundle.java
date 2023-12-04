@@ -39,22 +39,22 @@ public class Bundle extends AbstractModel {
 
     /**
     * System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
     */
     @SerializedName("SystemDiskType")
     @Expose
     private String SystemDiskType;
 
     /**
-    * System disk size.
+    * System disk size in GB.
     */
     @SerializedName("SystemDiskSize")
     @Expose
     private Long SystemDiskSize;
 
     /**
-    * Monthly network traffic in Gb.
+    * Monthly network traffic in GB.
     */
     @SerializedName("MonthlyTraffic")
     @Expose
@@ -178,11 +178,11 @@ Valid values:
 
     /**
      * Get System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li> 
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li> 
      * @return SystemDiskType System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
      */
     public String getSystemDiskType() {
         return this.SystemDiskType;
@@ -190,43 +190,43 @@ Valid values:
 
     /**
      * Set System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
      * @param SystemDiskType System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
      */
     public void setSystemDiskType(String SystemDiskType) {
         this.SystemDiskType = SystemDiskType;
     }
 
     /**
-     * Get System disk size. 
-     * @return SystemDiskSize System disk size.
+     * Get System disk size in GB. 
+     * @return SystemDiskSize System disk size in GB.
      */
     public Long getSystemDiskSize() {
         return this.SystemDiskSize;
     }
 
     /**
-     * Set System disk size.
-     * @param SystemDiskSize System disk size.
+     * Set System disk size in GB.
+     * @param SystemDiskSize System disk size in GB.
      */
     public void setSystemDiskSize(Long SystemDiskSize) {
         this.SystemDiskSize = SystemDiskSize;
     }
 
     /**
-     * Get Monthly network traffic in Gb. 
-     * @return MonthlyTraffic Monthly network traffic in Gb.
+     * Get Monthly network traffic in GB. 
+     * @return MonthlyTraffic Monthly network traffic in GB.
      */
     public Long getMonthlyTraffic() {
         return this.MonthlyTraffic;
     }
 
     /**
-     * Set Monthly network traffic in Gb.
-     * @param MonthlyTraffic Monthly network traffic in Gb.
+     * Set Monthly network traffic in GB.
+     * @param MonthlyTraffic Monthly network traffic in GB.
      */
     public void setMonthlyTraffic(Long MonthlyTraffic) {
         this.MonthlyTraffic = MonthlyTraffic;

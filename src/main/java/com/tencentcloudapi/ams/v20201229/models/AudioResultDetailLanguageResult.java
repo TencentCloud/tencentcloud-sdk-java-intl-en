@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Score;
 
     /**
-    * This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+    * This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
@@ -48,7 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float StartTime;
 
     /**
-    * This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+    * This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
@@ -104,9 +104,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * Get This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @return StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getStartTime() {
@@ -114,9 +114,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * Set This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @param StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(Float StartTime) {
@@ -124,9 +124,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * Get This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @return EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getEndTime() {
@@ -134,9 +134,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * Set This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @param EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(Float EndTime) {

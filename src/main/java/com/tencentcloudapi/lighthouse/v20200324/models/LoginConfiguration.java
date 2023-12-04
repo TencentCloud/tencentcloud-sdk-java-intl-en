@@ -32,16 +32,23 @@ public class LoginConfiguration extends AbstractModel {
     private String AutoGeneratePassword;
 
     /**
-    * Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+    * Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
+
+    /**
+    * 
+    */
+    @SerializedName("KeyIds")
+    @Expose
+    private String [] KeyIds;
 
     /**
      * Get <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
@@ -64,39 +71,55 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
     }
 
     /**
-     * Get Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li> 
-     * @return Password Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+     * Get Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li> 
+     * @return Password Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
-     * @param Password Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+     * Set Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+     * @param Password Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
      */
     public void setPassword(String Password) {
         this.Password = Password;
+    }
+
+    /**
+     * Get  
+     * @return KeyIds 
+     */
+    public String [] getKeyIds() {
+        return this.KeyIds;
+    }
+
+    /**
+     * Set 
+     * @param KeyIds 
+     */
+    public void setKeyIds(String [] KeyIds) {
+        this.KeyIds = KeyIds;
     }
 
     public LoginConfiguration() {
@@ -113,6 +136,12 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.KeyIds != null) {
+            this.KeyIds = new String[source.KeyIds.length];
+            for (int i = 0; i < source.KeyIds.length; i++) {
+                this.KeyIds[i] = new String(source.KeyIds[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoGeneratePassword", this.AutoGeneratePassword);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
 
     }
 }

@@ -109,6 +109,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NetworkPolicyPluginError;
 
     /**
+    * Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterNetworkSettings")
+    @Expose
+    private String ClusterNetworkSettings;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -304,6 +312,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.NetworkPolicyPluginError = NetworkPolicyPluginError;
     }
 
+    /**
+     * Get Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return ClusterNetworkSettings Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public String getClusterNetworkSettings() {
+        return this.ClusterNetworkSettings;
+    }
+
+    /**
+     * Set Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param ClusterNetworkSettings Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterNetworkSettings(String ClusterNetworkSettings) {
+        this.ClusterNetworkSettings = ClusterNetworkSettings;
+    }
+
     public NetworkClusterInfoItem() {
     }
 
@@ -348,6 +376,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.NetworkPolicyPluginError != null) {
             this.NetworkPolicyPluginError = new String(source.NetworkPolicyPluginError);
         }
+        if (source.ClusterNetworkSettings != null) {
+            this.ClusterNetworkSettings = new String(source.ClusterNetworkSettings);
+        }
     }
 
 
@@ -367,6 +398,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
         this.setParamSimple(map, prefix + "NetworkPolicyPluginStatus", this.NetworkPolicyPluginStatus);
         this.setParamSimple(map, prefix + "NetworkPolicyPluginError", this.NetworkPolicyPluginError);
+        this.setParamSimple(map, prefix + "ClusterNetworkSettings", this.ClusterNetworkSettings);
 
     }
 }

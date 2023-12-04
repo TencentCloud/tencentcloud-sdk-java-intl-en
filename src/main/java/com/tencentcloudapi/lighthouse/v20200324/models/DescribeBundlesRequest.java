@@ -45,23 +45,23 @@ public class DescribeBundlesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Filter list
+    * Filter list.
 <li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
 Required: No
-<li>support-platform-type</li>Filter by the **OS type**.
-Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+<li>`support-platform-type`<li>Filter by the **system type**.
+Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
 Type: String
 Required: No
 <li>bundle-type</li>Filter by the **bundle type**.
-Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
 Type: String
 Required: No
 <li>bundle-state</li>Filter by the **bundle status**.
-Valid values: `ONLINE`, `OFFLINE`
+Values: `ONLINE`, `OFFLINE`
 Type: String
 Required: No
-Each request can contain up to 10 `Filters`, and up to 5 `Filter.Values` for each filter. You cannot specify both `BundleIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
     */
     @SerializedName("Filters")
     @Expose
@@ -123,80 +123,80 @@ Each request can contain up to 10 `Filters`, and up to 5 `Filter.Values` for eac
     }
 
     /**
-     * Get Filter list
+     * Get Filter list.
 <li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
 Required: No
-<li>support-platform-type</li>Filter by the **OS type**.
-Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+<li>`support-platform-type`<li>Filter by the **system type**.
+Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
 Type: String
 Required: No
 <li>bundle-type</li>Filter by the **bundle type**.
-Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
 Type: String
 Required: No
 <li>bundle-state</li>Filter by the **bundle status**.
-Valid values: `ONLINE`, `OFFLINE`
+Values: `ONLINE`, `OFFLINE`
 Type: String
 Required: No
-Each request can contain up to 10 `Filters`, and up to 5 `Filter.Values` for each filter. You cannot specify both `BundleIds` and `Filters` at the same time. 
-     * @return Filters Filter list
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time. 
+     * @return Filters Filter list.
 <li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
 Required: No
-<li>support-platform-type</li>Filter by the **OS type**.
-Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+<li>`support-platform-type`<li>Filter by the **system type**.
+Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
 Type: String
 Required: No
 <li>bundle-type</li>Filter by the **bundle type**.
-Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
 Type: String
 Required: No
 <li>bundle-state</li>Filter by the **bundle status**.
-Valid values: `ONLINE`, `OFFLINE`
+Values: `ONLINE`, `OFFLINE`
 Type: String
 Required: No
-Each request can contain up to 10 `Filters`, and up to 5 `Filter.Values` for each filter. You cannot specify both `BundleIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter list
+     * Set Filter list.
 <li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
 Required: No
-<li>support-platform-type</li>Filter by the **OS type**.
-Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+<li>`support-platform-type`<li>Filter by the **system type**.
+Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
 Type: String
 Required: No
 <li>bundle-type</li>Filter by the **bundle type**.
-Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
 Type: String
 Required: No
 <li>bundle-state</li>Filter by the **bundle status**.
-Valid values: `ONLINE`, `OFFLINE`
+Values: `ONLINE`, `OFFLINE`
 Type: String
 Required: No
-Each request can contain up to 10 `Filters`, and up to 5 `Filter.Values` for each filter. You cannot specify both `BundleIds` and `Filters` at the same time.
-     * @param Filters Filter list
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
+     * @param Filters Filter list.
 <li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
 Required: No
-<li>support-platform-type</li>Filter by the **OS type**.
-Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+<li>`support-platform-type`<li>Filter by the **system type**.
+Values: `LINUX_UNIX` (Linux/Unix), `WINDOWS` (Windows).
 Type: String
 Required: No
 <li>bundle-type</li>Filter by the **bundle type**.
-Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle), `STARTER_BUNDLE` (Beginner bundle); `CAREFREE_BUNDLE` (Carefree bundle);
 Type: String
 Required: No
 <li>bundle-state</li>Filter by the **bundle status**.
-Valid values: `ONLINE`, `OFFLINE`
+Values: `ONLINE`, `OFFLINE`
 Type: String
 Required: No
-Each request can contain up to 10 `Filters`, and up to 5 `Filter.Values` for each filter. You cannot specify both `BundleIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `BundleIds` and `Filters` at the same time.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

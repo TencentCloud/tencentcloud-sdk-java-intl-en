@@ -101,6 +101,34 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     private Long NotImportedClusterCount;
 
     /**
+    * Number of EKS clusters
+    */
+    @SerializedName("ServerlessClusterCount")
+    @Expose
+    private Long ServerlessClusterCount;
+
+    /**
+    * 
+    */
+    @SerializedName("TkeClusterCount")
+    @Expose
+    private Long TkeClusterCount;
+
+    /**
+    * 
+    */
+    @SerializedName("UserCreateTencentClusterCount")
+    @Expose
+    private Long UserCreateTencentClusterCount;
+
+    /**
+    * 
+    */
+    @SerializedName("UserCreateHybridClusterCount")
+    @Expose
+    private Long UserCreateHybridClusterCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -284,6 +312,70 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     }
 
     /**
+     * Get Number of EKS clusters 
+     * @return ServerlessClusterCount Number of EKS clusters
+     */
+    public Long getServerlessClusterCount() {
+        return this.ServerlessClusterCount;
+    }
+
+    /**
+     * Set Number of EKS clusters
+     * @param ServerlessClusterCount Number of EKS clusters
+     */
+    public void setServerlessClusterCount(Long ServerlessClusterCount) {
+        this.ServerlessClusterCount = ServerlessClusterCount;
+    }
+
+    /**
+     * Get  
+     * @return TkeClusterCount 
+     */
+    public Long getTkeClusterCount() {
+        return this.TkeClusterCount;
+    }
+
+    /**
+     * Set 
+     * @param TkeClusterCount 
+     */
+    public void setTkeClusterCount(Long TkeClusterCount) {
+        this.TkeClusterCount = TkeClusterCount;
+    }
+
+    /**
+     * Get  
+     * @return UserCreateTencentClusterCount 
+     */
+    public Long getUserCreateTencentClusterCount() {
+        return this.UserCreateTencentClusterCount;
+    }
+
+    /**
+     * Set 
+     * @param UserCreateTencentClusterCount 
+     */
+    public void setUserCreateTencentClusterCount(Long UserCreateTencentClusterCount) {
+        this.UserCreateTencentClusterCount = UserCreateTencentClusterCount;
+    }
+
+    /**
+     * Get  
+     * @return UserCreateHybridClusterCount 
+     */
+    public Long getUserCreateHybridClusterCount() {
+        return this.UserCreateHybridClusterCount;
+    }
+
+    /**
+     * Set 
+     * @param UserCreateHybridClusterCount 
+     */
+    public void setUserCreateHybridClusterCount(Long UserCreateHybridClusterCount) {
+        this.UserCreateHybridClusterCount = UserCreateHybridClusterCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -340,6 +432,18 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
         if (source.NotImportedClusterCount != null) {
             this.NotImportedClusterCount = new Long(source.NotImportedClusterCount);
         }
+        if (source.ServerlessClusterCount != null) {
+            this.ServerlessClusterCount = new Long(source.ServerlessClusterCount);
+        }
+        if (source.TkeClusterCount != null) {
+            this.TkeClusterCount = new Long(source.TkeClusterCount);
+        }
+        if (source.UserCreateTencentClusterCount != null) {
+            this.UserCreateTencentClusterCount = new Long(source.UserCreateTencentClusterCount);
+        }
+        if (source.UserCreateHybridClusterCount != null) {
+            this.UserCreateHybridClusterCount = new Long(source.UserCreateHybridClusterCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +465,10 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
         this.setParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
         this.setParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
+        this.setParamSimple(map, prefix + "ServerlessClusterCount", this.ServerlessClusterCount);
+        this.setParamSimple(map, prefix + "TkeClusterCount", this.TkeClusterCount);
+        this.setParamSimple(map, prefix + "UserCreateTencentClusterCount", this.UserCreateTencentClusterCount);
+        this.setParamSimple(map, prefix + "UserCreateHybridClusterCount", this.UserCreateHybridClusterCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

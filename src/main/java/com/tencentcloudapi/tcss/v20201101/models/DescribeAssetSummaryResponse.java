@@ -164,6 +164,48 @@ public class DescribeAssetSummaryResponse extends AbstractModel {
     private Long HostUnInstallCnt;
 
     /**
+    * Number of super nodes
+    */
+    @SerializedName("SuperNodeCnt")
+    @Expose
+    private Long SuperNodeCnt;
+
+    /**
+    * Number of running super nodes
+    */
+    @SerializedName("SuperNodeRunningCnt")
+    @Expose
+    private Long SuperNodeRunningCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("TodayNewImageCnt")
+    @Expose
+    private Long TodayNewImageCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("TodayUnsafeImageCnt")
+    @Expose
+    private Long TodayUnsafeImageCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("RecommendedFixImageCnt")
+    @Expose
+    private Long RecommendedFixImageCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("ScannedImageCnt")
+    @Expose
+    private Long ScannedImageCnt;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -491,6 +533,102 @@ public class DescribeAssetSummaryResponse extends AbstractModel {
     }
 
     /**
+     * Get Number of super nodes 
+     * @return SuperNodeCnt Number of super nodes
+     */
+    public Long getSuperNodeCnt() {
+        return this.SuperNodeCnt;
+    }
+
+    /**
+     * Set Number of super nodes
+     * @param SuperNodeCnt Number of super nodes
+     */
+    public void setSuperNodeCnt(Long SuperNodeCnt) {
+        this.SuperNodeCnt = SuperNodeCnt;
+    }
+
+    /**
+     * Get Number of running super nodes 
+     * @return SuperNodeRunningCnt Number of running super nodes
+     */
+    public Long getSuperNodeRunningCnt() {
+        return this.SuperNodeRunningCnt;
+    }
+
+    /**
+     * Set Number of running super nodes
+     * @param SuperNodeRunningCnt Number of running super nodes
+     */
+    public void setSuperNodeRunningCnt(Long SuperNodeRunningCnt) {
+        this.SuperNodeRunningCnt = SuperNodeRunningCnt;
+    }
+
+    /**
+     * Get  
+     * @return TodayNewImageCnt 
+     */
+    public Long getTodayNewImageCnt() {
+        return this.TodayNewImageCnt;
+    }
+
+    /**
+     * Set 
+     * @param TodayNewImageCnt 
+     */
+    public void setTodayNewImageCnt(Long TodayNewImageCnt) {
+        this.TodayNewImageCnt = TodayNewImageCnt;
+    }
+
+    /**
+     * Get  
+     * @return TodayUnsafeImageCnt 
+     */
+    public Long getTodayUnsafeImageCnt() {
+        return this.TodayUnsafeImageCnt;
+    }
+
+    /**
+     * Set 
+     * @param TodayUnsafeImageCnt 
+     */
+    public void setTodayUnsafeImageCnt(Long TodayUnsafeImageCnt) {
+        this.TodayUnsafeImageCnt = TodayUnsafeImageCnt;
+    }
+
+    /**
+     * Get  
+     * @return RecommendedFixImageCnt 
+     */
+    public Long getRecommendedFixImageCnt() {
+        return this.RecommendedFixImageCnt;
+    }
+
+    /**
+     * Set 
+     * @param RecommendedFixImageCnt 
+     */
+    public void setRecommendedFixImageCnt(Long RecommendedFixImageCnt) {
+        this.RecommendedFixImageCnt = RecommendedFixImageCnt;
+    }
+
+    /**
+     * Get  
+     * @return ScannedImageCnt 
+     */
+    public Long getScannedImageCnt() {
+        return this.ScannedImageCnt;
+    }
+
+    /**
+     * Set 
+     * @param ScannedImageCnt 
+     */
+    public void setScannedImageCnt(Long ScannedImageCnt) {
+        this.ScannedImageCnt = ScannedImageCnt;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -574,6 +712,24 @@ public class DescribeAssetSummaryResponse extends AbstractModel {
         if (source.HostUnInstallCnt != null) {
             this.HostUnInstallCnt = new Long(source.HostUnInstallCnt);
         }
+        if (source.SuperNodeCnt != null) {
+            this.SuperNodeCnt = new Long(source.SuperNodeCnt);
+        }
+        if (source.SuperNodeRunningCnt != null) {
+            this.SuperNodeRunningCnt = new Long(source.SuperNodeRunningCnt);
+        }
+        if (source.TodayNewImageCnt != null) {
+            this.TodayNewImageCnt = new Long(source.TodayNewImageCnt);
+        }
+        if (source.TodayUnsafeImageCnt != null) {
+            this.TodayUnsafeImageCnt = new Long(source.TodayUnsafeImageCnt);
+        }
+        if (source.RecommendedFixImageCnt != null) {
+            this.RecommendedFixImageCnt = new Long(source.RecommendedFixImageCnt);
+        }
+        if (source.ScannedImageCnt != null) {
+            this.ScannedImageCnt = new Long(source.ScannedImageCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -604,6 +760,12 @@ public class DescribeAssetSummaryResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestImageScanTime", this.LatestImageScanTime);
         this.setParamSimple(map, prefix + "ImageUnsafeCnt", this.ImageUnsafeCnt);
         this.setParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
+        this.setParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
+        this.setParamSimple(map, prefix + "SuperNodeRunningCnt", this.SuperNodeRunningCnt);
+        this.setParamSimple(map, prefix + "TodayNewImageCnt", this.TodayNewImageCnt);
+        this.setParamSimple(map, prefix + "TodayUnsafeImageCnt", this.TodayUnsafeImageCnt);
+        this.setParamSimple(map, prefix + "RecommendedFixImageCnt", this.RecommendedFixImageCnt);
+        this.setParamSimple(map, prefix + "ScannedImageCnt", this.ScannedImageCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

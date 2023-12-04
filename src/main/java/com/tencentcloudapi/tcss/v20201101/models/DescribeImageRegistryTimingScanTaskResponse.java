@@ -77,6 +77,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long [] Id;
 
     /**
+    * Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Latest")
+    @Expose
+    private Boolean Latest;
+
+    /**
+    * 
+    */
+    @SerializedName("ScanEndTime")
+    @Expose
+    private String ScanEndTime;
+
+    /**
+    * 
+    */
+    @SerializedName("RegistryType")
+    @Expose
+    private String [] RegistryType;
+
+    /**
+    * 
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String [] Namespace;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -158,7 +201,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Scan of all images 
      * @return All Scan of all images
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -166,7 +211,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Scan of all images
      * @param All Scan of all images
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }
@@ -209,6 +256,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setId(Long [] Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained. 
+     * @return Latest Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getLatest() {
+        return this.Latest;
+    }
+
+    /**
+     * Set Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param Latest Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public void setLatest(Boolean Latest) {
+        this.Latest = Latest;
+    }
+
+    /**
+     * Get  
+     * @return ScanEndTime 
+     */
+    public String getScanEndTime() {
+        return this.ScanEndTime;
+    }
+
+    /**
+     * Set 
+     * @param ScanEndTime 
+     */
+    public void setScanEndTime(String ScanEndTime) {
+        this.ScanEndTime = ScanEndTime;
+    }
+
+    /**
+     * Get  
+     * @return RegistryType 
+     */
+    public String [] getRegistryType() {
+        return this.RegistryType;
+    }
+
+    /**
+     * Set 
+     * @param RegistryType 
+     */
+    public void setRegistryType(String [] RegistryType) {
+        this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get  
+     * @return ContainerRunning 
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 
+     * @param ContainerRunning 
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get  
+     * @return ScanScope 
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 
+     * @param ScanScope 
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get  
+     * @return Namespace 
+     */
+    public String [] getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 
+     * @param Namespace 
+     */
+    public void setNamespace(String [] Namespace) {
+        this.Namespace = Namespace;
     }
 
     /**
@@ -265,6 +412,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.Latest != null) {
+            this.Latest = new Boolean(source.Latest);
+        }
+        if (source.ScanEndTime != null) {
+            this.ScanEndTime = new String(source.ScanEndTime);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String[source.RegistryType.length];
+            for (int i = 0; i < source.RegistryType.length; i++) {
+                this.RegistryType[i] = new String(source.RegistryType[i]);
+            }
+        }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new String(source.Namespace[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -282,6 +453,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "Latest", this.Latest);
+        this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+        this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

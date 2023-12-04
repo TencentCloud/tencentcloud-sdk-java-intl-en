@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class SecLogJoinInfo extends AbstractModel {
 
     /**
-    * Number of accessed servers
+    * Number of connected general nodes
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
+
+    /**
+    * Number of connected super nodes
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
 
     /**
     * Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
@@ -49,19 +56,35 @@ K8s API: "k8s_api"
     private String LogType;
 
     /**
-     * Get Number of accessed servers 
-     * @return Count Number of accessed servers
+     * Get Number of connected general nodes 
+     * @return Count Number of connected general nodes
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of accessed servers
-     * @param Count Number of accessed servers
+     * Set Number of connected general nodes
+     * @param Count Number of connected general nodes
      */
     public void setCount(Long Count) {
         this.Count = Count;
+    }
+
+    /**
+     * Get Number of connected super nodes 
+     * @return SuperNodeCount Number of connected super nodes
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set Number of connected super nodes
+     * @param SuperNodeCount Number of connected super nodes
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
     }
 
     /**
@@ -123,6 +146,9 @@ K8s API: "k8s_api"
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
         if (source.IsJoined != null) {
             this.IsJoined = new Boolean(source.IsJoined);
         }
@@ -137,6 +163,7 @@ K8s API: "k8s_api"
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
         this.setParamSimple(map, prefix + "IsJoined", this.IsJoined);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
 

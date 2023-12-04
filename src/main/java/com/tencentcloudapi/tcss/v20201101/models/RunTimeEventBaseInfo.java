@@ -73,13 +73,6 @@ public class RunTimeEventBaseInfo extends AbstractModel {
     private String NodeName;
 
     /**
-    * Pod name
-    */
-    @SerializedName("PodName")
-    @Expose
-    private String PodName;
-
-    /**
     * Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
@@ -182,6 +175,104 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
+
+    /**
+    * Node ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * Node subnet ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * Node subnet name
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * Subnet IP range
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * Pod name
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * Pod IP
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod status
+    */
+    @SerializedName("PodStatus")
+    @Expose
+    private String PodStatus;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * Cluster name
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * Unique node ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * uuid
+    */
+    @SerializedName("HostID")
+    @Expose
+    private String HostID;
+
+    /**
+    * 
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 
+    */
+    @SerializedName("WorkloadType")
+    @Expose
+    private String WorkloadType;
 
     /**
      * Get Unique event ID 
@@ -293,22 +384,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
-    }
-
-    /**
-     * Get Pod name 
-     * @return PodName Pod name
-     */
-    public String getPodName() {
-        return this.PodName;
-    }
-
-    /**
-     * Set Pod name
-     * @param PodName Pod name
-     */
-    public void setPodName(String PodName) {
-        this.PodName = PodName;
     }
 
     /**
@@ -607,6 +682,230 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
+    /**
+     * Get Node ID 
+     * @return NodeID Node ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Node ID
+     * @param NodeID Node ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Node type. Valid values: `NORMAL` (general node), `SUPER` (super node) 
+     * @return NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     * @param NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get Node subnet ID 
+     * @return NodeSubNetID Node subnet ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set Node subnet ID
+     * @param NodeSubNetID Node subnet ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get Node subnet name 
+     * @return NodeSubNetName Node subnet name
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set Node subnet name
+     * @param NodeSubNetName Node subnet name
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get Subnet IP range 
+     * @return NodeSubNetCIDR Subnet IP range
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set Subnet IP range
+     * @param NodeSubNetCIDR Subnet IP range
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get Pod name 
+     * @return PodName Pod name
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod name
+     * @param PodName Pod name
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get Pod IP 
+     * @return PodIP Pod IP
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod IP
+     * @param PodIP Pod IP
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod status 
+     * @return PodStatus Pod status
+     */
+    public String getPodStatus() {
+        return this.PodStatus;
+    }
+
+    /**
+     * Set Pod status
+     * @param PodStatus Pod status
+     */
+    public void setPodStatus(String PodStatus) {
+        this.PodStatus = PodStatus;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get Cluster name 
+     * @return ClusterName Cluster name
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set Cluster name
+     * @param ClusterName Cluster name
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get Unique node ID 
+     * @return NodeUniqueID Unique node ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set Unique node ID
+     * @param NodeUniqueID Unique node ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get uuid 
+     * @return HostID uuid
+     */
+    public String getHostID() {
+        return this.HostID;
+    }
+
+    /**
+     * Set uuid
+     * @param HostID uuid
+     */
+    public void setHostID(String HostID) {
+        this.HostID = HostID;
+    }
+
+    /**
+     * Get  
+     * @return Namespace 
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 
+     * @param Namespace 
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get  
+     * @return WorkloadType 
+     */
+    public String getWorkloadType() {
+        return this.WorkloadType;
+    }
+
+    /**
+     * Set 
+     * @param WorkloadType 
+     */
+    public void setWorkloadType(String WorkloadType) {
+        this.WorkloadType = WorkloadType;
+    }
+
     public RunTimeEventBaseInfo() {
     }
 
@@ -635,9 +934,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.NodeName != null) {
             this.NodeName = new String(source.NodeName);
-        }
-        if (source.PodName != null) {
-            this.PodName = new String(source.PodName);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -669,6 +965,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ContainerIsolateOperationSrc != null) {
             this.ContainerIsolateOperationSrc = new String(source.ContainerIsolateOperationSrc);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodStatus != null) {
+            this.PodStatus = new String(source.PodStatus);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.HostID != null) {
+            this.HostID = new String(source.HostID);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
     }
 
 
@@ -683,7 +1021,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
-        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "EventName", this.EventName);
         this.setParamSimple(map, prefix + "EventType", this.EventType);
@@ -694,6 +1031,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodStatus", this.PodStatus);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "HostID", this.HostID);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
 
     }
 }

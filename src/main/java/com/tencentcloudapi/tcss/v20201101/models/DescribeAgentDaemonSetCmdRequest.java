@@ -59,6 +59,13 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel {
     private String ExpireDate;
 
     /**
+    * Custom parameters of the cluster
+    */
+    @SerializedName("ClusterCustomParameters")
+    @Expose
+    private ClusterCustomParameters [] ClusterCustomParameters;
+
+    /**
      * Get Whether it is from Tencent Cloud 
      * @return IsCloud Whether it is from Tencent Cloud
      */
@@ -138,6 +145,22 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel {
         this.ExpireDate = ExpireDate;
     }
 
+    /**
+     * Get Custom parameters of the cluster 
+     * @return ClusterCustomParameters Custom parameters of the cluster
+     */
+    public ClusterCustomParameters [] getClusterCustomParameters() {
+        return this.ClusterCustomParameters;
+    }
+
+    /**
+     * Set Custom parameters of the cluster
+     * @param ClusterCustomParameters Custom parameters of the cluster
+     */
+    public void setClusterCustomParameters(ClusterCustomParameters [] ClusterCustomParameters) {
+        this.ClusterCustomParameters = ClusterCustomParameters;
+    }
+
     public DescribeAgentDaemonSetCmdRequest() {
     }
 
@@ -161,6 +184,12 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel {
         if (source.ExpireDate != null) {
             this.ExpireDate = new String(source.ExpireDate);
         }
+        if (source.ClusterCustomParameters != null) {
+            this.ClusterCustomParameters = new ClusterCustomParameters[source.ClusterCustomParameters.length];
+            for (int i = 0; i < source.ClusterCustomParameters.length; i++) {
+                this.ClusterCustomParameters[i] = new ClusterCustomParameters(source.ClusterCustomParameters[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
+        this.setParamArrayObj(map, prefix + "ClusterCustomParameters.", this.ClusterCustomParameters);
 
     }
 }

@@ -31,7 +31,7 @@ public class MediaInfo extends AbstractModel {
     private String Codecs;
 
     /**
-    * This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+    * This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
     */
     @SerializedName("Duration")
     @Expose
@@ -75,16 +75,16 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable. 
-     * @return Duration This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+     * Get This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable. 
+     * @return Duration This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
-     * @param Duration This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+     * Set This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
+     * @param Duration This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;

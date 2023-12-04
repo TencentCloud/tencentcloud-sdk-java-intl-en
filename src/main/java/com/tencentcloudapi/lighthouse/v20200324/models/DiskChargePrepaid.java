@@ -31,7 +31,13 @@ public class DiskChargePrepaid extends AbstractModel {
     private Long Period;
 
     /**
-    * Whether Auto-Renewal is enabled 
+    * Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -61,16 +67,40 @@ public class DiskChargePrepaid extends AbstractModel {
     }
 
     /**
-     * Get Whether Auto-Renewal is enabled  
-     * @return RenewFlag Whether Auto-Renewal is enabled 
+     * Get Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient. 
+     * @return RenewFlag Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Whether Auto-Renewal is enabled 
-     * @param RenewFlag Whether Auto-Renewal is enabled 
+     * Set Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+     * @param RenewFlag Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
