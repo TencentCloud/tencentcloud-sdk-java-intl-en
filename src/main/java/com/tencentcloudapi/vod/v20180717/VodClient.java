@@ -1314,6 +1314,17 @@ If event notification is used, the type of event notification is [Video editing 
     }
 
     /**
+     *Initiate a Remaster task for audio and video media in VOD
+     * @param req EnhanceMediaQualityRequest
+     * @return EnhanceMediaQualityResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnhanceMediaQualityResponse EnhanceMediaQuality(EnhanceMediaQualityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnhanceMediaQuality", EnhanceMediaQualityResponse.class);
+    }
+
+    /**
      *This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
      * @param req ExecuteFunctionRequest
      * @return ExecuteFunctionResponse

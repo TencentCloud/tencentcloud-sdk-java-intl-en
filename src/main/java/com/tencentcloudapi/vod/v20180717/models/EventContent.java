@@ -242,6 +242,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private QualityInspectTask QualityInspectCompleteEvent;
 
     /**
+    * Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+    */
+    @SerializedName("QualityEnhanceCompleteEvent")
+    @Expose
+    private QualityEnhanceTask QualityEnhanceCompleteEvent;
+
+    /**
      * Get Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again. 
      * @return EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      */
@@ -813,6 +821,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.QualityInspectCompleteEvent = QualityInspectCompleteEvent;
     }
 
+    /**
+     * Get Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained 
+     * @return QualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+     */
+    public QualityEnhanceTask getQualityEnhanceCompleteEvent() {
+        return this.QualityEnhanceCompleteEvent;
+    }
+
+    /**
+     * Set Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+     * @param QualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+     */
+    public void setQualityEnhanceCompleteEvent(QualityEnhanceTask QualityEnhanceCompleteEvent) {
+        this.QualityEnhanceCompleteEvent = QualityEnhanceCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -896,6 +924,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.QualityInspectCompleteEvent != null) {
             this.QualityInspectCompleteEvent = new QualityInspectTask(source.QualityInspectCompleteEvent);
         }
+        if (source.QualityEnhanceCompleteEvent != null) {
+            this.QualityEnhanceCompleteEvent = new QualityEnhanceTask(source.QualityEnhanceCompleteEvent);
+        }
     }
 
 
@@ -928,6 +959,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
         this.setParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
         this.setParamObj(map, prefix + "QualityInspectCompleteEvent.", this.QualityInspectCompleteEvent);
+        this.setParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
 
     }
 }
