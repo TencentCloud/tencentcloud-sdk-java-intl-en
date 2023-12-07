@@ -32,7 +32,7 @@ public class SetTranscodeCallbackRequest extends AbstractModel {
 
     /**
     * Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
     */
     @SerializedName("Callback")
     @Expose
@@ -56,9 +56,9 @@ For more information about the callback format, please [see here](https://intl.c
 
     /**
      * Get Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1). 
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569). 
      * @return Callback Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      */
     public String getCallback() {
         return this.Callback;
@@ -66,9 +66,9 @@ For more information about the callback format, please [see here](https://intl.c
 
     /**
      * Set Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      * @param Callback Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;

@@ -61,19 +61,6 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *课后录制服务已下线
-
-This API is used to create an offline recording task.
-     * @param req CreateOfflineRecordRequest
-     * @return CreateOfflineRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOfflineRecordResponse CreateOfflineRecord(CreateOfflineRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateOfflineRecord", CreateOfflineRecordResponse.class);
-    }
-
-    /**
      *This API is used to create a whiteboard snapshot task. If a callback URL is provided, the whiteboard snapshot result is sent to the callback URL after the task is complete.
      * @param req CreateSnapshotTaskRequest
      * @return CreateSnapshotTaskResponse
@@ -159,32 +146,6 @@ This API is used to create an offline recording task.
     public DescribeIMApplicationsResponse DescribeIMApplications(DescribeIMApplicationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIMApplications", DescribeIMApplicationsResponse.class);
-    }
-
-    /**
-     *课后录制服务已下线
-
-This API is used to query the information about an offline recording task, including the recording progress and recording result.
-     * @param req DescribeOfflineRecordRequest
-     * @return DescribeOfflineRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineRecordResponse DescribeOfflineRecord(DescribeOfflineRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineRecord", DescribeOfflineRecordResponse.class);
-    }
-
-    /**
-     *课后录制服务已下线
-
-This API is used to query the offline recording callback URL.
-     * @param req DescribeOfflineRecordCallbackRequest
-     * @return DescribeOfflineRecordCallbackResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineRecordCallbackResponse DescribeOfflineRecordCallback(DescribeOfflineRecordCallbackRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineRecordCallback", DescribeOfflineRecordCallbackResponse.class);
     }
 
     /**
@@ -514,20 +475,7 @@ This API is used to query the offline recording callback URL.
     }
 
     /**
-     *课后录制服务已下线
-
-This API is used to set the offline recording callback URL.
-     * @param req SetOfflineRecordCallbackRequest
-     * @return SetOfflineRecordCallbackResponse
-     * @throws TencentCloudSDKException
-     */
-    public SetOfflineRecordCallbackResponse SetOfflineRecordCallback(SetOfflineRecordCallbackRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SetOfflineRecordCallback", SetOfflineRecordCallbackResponse.class);
-    }
-
-    /**
-     *This API is used to set the real-time recording callback address. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
+     *This API is used to set the real-time recording callback address. For the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      * @param req SetOnlineRecordCallbackRequest
      * @return SetOnlineRecordCallbackResponse
      * @throws TencentCloudSDKException
@@ -538,7 +486,7 @@ This API is used to set the offline recording callback URL.
     }
 
     /**
-     *This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+     *This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
      * @param req SetOnlineRecordCallbackKeyRequest
      * @return SetOnlineRecordCallbackKeyResponse
      * @throws TencentCloudSDKException
@@ -549,7 +497,7 @@ This API is used to set the offline recording callback URL.
     }
 
     /**
-     *This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+     *This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      * @param req SetTranscodeCallbackRequest
      * @return SetTranscodeCallbackResponse
      * @throws TencentCloudSDKException
@@ -560,7 +508,7 @@ This API is used to set the offline recording callback URL.
     }
 
     /**
-     *This API is used to set the callback authentication key for document transcoding. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+     *This API is used to set the callback authentication key for document transcoding. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
      * @param req SetTranscodeCallbackKeyRequest
      * @return SetTranscodeCallbackKeyResponse
      * @throws TencentCloudSDKException
@@ -593,7 +541,7 @@ This API is used to set the offline recording callback URL.
     }
 
     /**
-     *This API is used to set the whiteboard push callback URL. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+     *This API is used to set the whiteboard push callback URL. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
      * @param req SetWhiteboardPushCallbackRequest
      * @return SetWhiteboardPushCallbackResponse
      * @throws TencentCloudSDKException
@@ -604,7 +552,7 @@ This API is used to set the offline recording callback URL.
     }
 
     /**
-     *This API is used to set the callback authentication key for whiteboard push. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+     *This API is used to set the callback authentication key for whiteboard push. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
      * @param req SetWhiteboardPushCallbackKeyRequest
      * @return SetWhiteboardPushCallbackKeyResponse
      * @throws TencentCloudSDKException

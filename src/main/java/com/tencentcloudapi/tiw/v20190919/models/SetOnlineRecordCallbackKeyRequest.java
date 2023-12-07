@@ -31,7 +31,7 @@ public class SetOnlineRecordCallbackKeyRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+    * Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
     */
     @SerializedName("CallbackKey")
     @Expose
@@ -54,16 +54,16 @@ public class SetOnlineRecordCallbackKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1). 
-     * @return CallbackKey Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+     * Get Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://www.tencentcloud.com/document/product/1176/55569). 
+     * @return CallbackKey Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
-     * @param CallbackKey Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+     * Set Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
+     * @param CallbackKey Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;
