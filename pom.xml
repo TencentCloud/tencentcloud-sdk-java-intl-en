@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tencentcloudapi</groupId>
   <artifactId>tencentcloud-sdk-java-intl-en</artifactId>
-  <version>3.0.822</version>
+  <version>3.0.823</version>
   <packaging>jar</packaging>
   <name>tencentcloud-sdk-java-intl-en</name>
   <url>https://cloud.tencent.com/</url>
@@ -39,6 +39,11 @@
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
+    </dependency>
+      <dependency>
+      <groupId>com.tencentcloudapi</groupId>
+      <artifactId>tencentcloud-sdk-java-common</artifactId>
+      <version>3.1.924</version>
     </dependency>
   </dependencies>
   <properties>
