@@ -65,6 +65,21 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     private String BestFrameBase64;
 
     /**
+    * Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OCRResult")
+    @Expose
+    private OCRResult [] OCRResult;
+
+    /**
+    * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -176,6 +191,42 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
+     * Get Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OCRResult Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OCRResult [] getOCRResult() {
+        return this.OCRResult;
+    }
+
+    /**
+     * Set Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OCRResult Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOCRResult(OCRResult [] OCRResult) {
+        this.OCRResult = OCRResult;
+    }
+
+    /**
+     * Get The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl. 
+     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     * @param Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -217,6 +268,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.BestFrameBase64 != null) {
             this.BestFrameBase64 = new String(source.BestFrameBase64);
         }
+        if (source.OCRResult != null) {
+            this.OCRResult = new OCRResult[source.OCRResult.length];
+            for (int i = 0; i < source.OCRResult.length; i++) {
+                this.OCRResult[i] = new OCRResult(source.OCRResult[i]);
+            }
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -232,6 +292,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamArrayObj(map, prefix + "VerificationDetailList.", this.VerificationDetailList);
         this.setParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
         this.setParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
+        this.setParamArrayObj(map, prefix + "OCRResult.", this.OCRResult);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
