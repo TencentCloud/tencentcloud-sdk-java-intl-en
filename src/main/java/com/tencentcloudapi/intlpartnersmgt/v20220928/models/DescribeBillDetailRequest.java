@@ -31,14 +31,14 @@ public class DescribeBillDetailRequest extends AbstractModel {
     private String Month;
 
     /**
-    * Page parameter: Indicates the number of entries per page. The maximum value is 200.
+    * Page parameter: Indicates the number of entries per page. Value range: [1, 200]
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * A pagination parameter that specifies the current page number
+    * Page parameter: Indicates the current page number. The minimum value is 1.
     */
     @SerializedName("Page")
     @Expose
@@ -75,32 +75,32 @@ public class DescribeBillDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Page parameter: Indicates the number of entries per page. The maximum value is 200. 
-     * @return PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
+     * Get Page parameter: Indicates the number of entries per page. Value range: [1, 200] 
+     * @return PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page parameter: Indicates the number of entries per page. The maximum value is 200.
-     * @param PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
+     * Set Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+     * @param PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get A pagination parameter that specifies the current page number 
-     * @return Page A pagination parameter that specifies the current page number
+     * Get Page parameter: Indicates the current page number. The minimum value is 1. 
+     * @return Page Page parameter: Indicates the current page number. The minimum value is 1.
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set A pagination parameter that specifies the current page number
-     * @param Page A pagination parameter that specifies the current page number
+     * Set Page parameter: Indicates the current page number. The minimum value is 1.
+     * @param Page Page parameter: Indicates the current page number. The minimum value is 1.
      */
     public void setPage(Long Page) {
         this.Page = Page;
