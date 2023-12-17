@@ -12,6 +12,9 @@ public enum IntlpartnersmgtErrorCode {
     // Invalid UIN
      FAILEDOPERATION_UININVALID("FailedOperation.UinInvalid"),
      
+    // 
+     FAILEDOPERATION_UINNOTAGENT("FailedOperation.UinNotAgent"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -77,6 +80,9 @@ public enum IntlpartnersmgtErrorCode {
      
     // InvalidParameterValue.PhoneNumEmpty
      INVALIDPARAMETERVALUE_PHONENUMEMPTY("InvalidParameterValue.PhoneNumEmpty"),
+     
+    // 
+     INVALIDPARAMETERVALUE_UINLIST("InvalidParameterValue.UinList"),
      
     // Missing parameter
      MISSINGPARAMETER("MissingParameter"),
