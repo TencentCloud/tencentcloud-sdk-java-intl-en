@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AddResourceTagRequest extends AbstractModel {
 
     /**
-    * Tag key.
+    * The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag value.
+    * The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+    * Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-     * Get Tag key. 
-     * @return TagKey Tag key.
+     * Get The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1 
+     * @return TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key.
-     * @param TagKey Tag key.
+     * Set The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value. 
-     * @return TagValue Tag value.
+     * Get The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1 
+     * @return TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value.
-     * @param TagValue Tag value.
+     * Set The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) 
-     * @return Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+     * Get Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1 
+     * @return Resource Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
-     * @param Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+     * Set Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
+     * @param Resource Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

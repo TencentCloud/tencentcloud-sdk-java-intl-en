@@ -45,6 +45,13 @@ public class TagWithDelete extends AbstractModel {
     private Long CanDelete;
 
     /**
+    * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get Tag key. 
      * @return TagKey Tag key.
      */
@@ -92,6 +99,22 @@ public class TagWithDelete extends AbstractModel {
         this.CanDelete = CanDelete;
     }
 
+    /**
+     * Get Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained. 
+     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     * @param Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public TagWithDelete() {
     }
 
@@ -109,6 +132,9 @@ public class TagWithDelete extends AbstractModel {
         if (source.CanDelete != null) {
             this.CanDelete = new Long(source.CanDelete);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class TagWithDelete extends AbstractModel {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "TagValue", this.TagValue);
         this.setParamSimple(map, prefix + "CanDelete", this.CanDelete);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

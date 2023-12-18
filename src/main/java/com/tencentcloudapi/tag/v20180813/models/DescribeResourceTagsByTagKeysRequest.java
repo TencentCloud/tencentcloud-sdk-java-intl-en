@@ -45,14 +45,14 @@ public class DescribeResourceTagsByTagKeysRequest extends AbstractModel {
     private String ResourceRegion;
 
     /**
-    * Unique resource ID
+    * List of unique resource IDs, which can contain no more than 20 IDs.
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Resource tag key
+    * List of resource tag keys, which can contain no more than 20 keys.
     */
     @SerializedName("TagKeys")
     @Expose
@@ -121,32 +121,32 @@ public class DescribeResourceTagsByTagKeysRequest extends AbstractModel {
     }
 
     /**
-     * Get Unique resource ID 
-     * @return ResourceIds Unique resource ID
+     * Get List of unique resource IDs, which can contain no more than 20 IDs. 
+     * @return ResourceIds List of unique resource IDs, which can contain no more than 20 IDs.
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Unique resource ID
-     * @param ResourceIds Unique resource ID
+     * Set List of unique resource IDs, which can contain no more than 20 IDs.
+     * @param ResourceIds List of unique resource IDs, which can contain no more than 20 IDs.
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Resource tag key 
-     * @return TagKeys Resource tag key
+     * Get List of resource tag keys, which can contain no more than 20 keys. 
+     * @return TagKeys List of resource tag keys, which can contain no more than 20 keys.
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set Resource tag key
-     * @param TagKeys Resource tag key
+     * Set List of resource tag keys, which can contain no more than 20 keys.
+     * @param TagKeys List of resource tag keys, which can contain no more than 20 keys.
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;

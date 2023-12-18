@@ -67,6 +67,13 @@ Note: this field may return null, indicating that no valid values found.
     private String ServiceType;
 
     /**
+    * Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get Tag key. 
      * @return TagKey Tag key.
      */
@@ -166,6 +173,22 @@ Note: this field may return null, indicating that no valid values found.
         this.ServiceType = ServiceType;
     }
 
+    /**
+     * Get Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained. 
+     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+     * @param Category Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public TagResource() {
     }
 
@@ -192,6 +215,9 @@ Note: this field may return null, indicating that no valid values found.
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -205,6 +231,7 @@ Note: this field may return null, indicating that no valid values found.
         this.setParamSimple(map, prefix + "TagKeyMd5", this.TagKeyMd5);
         this.setParamSimple(map, prefix + "TagValueMd5", this.TagValueMd5);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

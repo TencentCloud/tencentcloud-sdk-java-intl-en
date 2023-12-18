@@ -38,7 +38,7 @@ public class DescribeTagKeysRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Page size. The default value is 0.
+    * Number of entries per page. Default: 15; maximum: 1,000.
     */
     @SerializedName("Limit")
     @Expose
@@ -50,6 +50,13 @@ public class DescribeTagKeysRequest extends AbstractModel {
     @SerializedName("ShowProject")
     @Expose
     private Long ShowProject;
+
+    /**
+    * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
 
     /**
      * Get Creator `Uin`. If not specified, `Uin` is only used as the query condition. 
@@ -84,16 +91,16 @@ public class DescribeTagKeysRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size. The default value is 0. 
-     * @return Limit Page size. The default value is 0.
+     * Get Number of entries per page. Default: 15; maximum: 1,000. 
+     * @return Limit Number of entries per page. Default: 15; maximum: 1,000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size. The default value is 0.
-     * @param Limit Page size. The default value is 0.
+     * Set Number of entries per page. Default: 15; maximum: 1,000.
+     * @param Limit Number of entries per page. Default: 15; maximum: 1,000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -113,6 +120,22 @@ public class DescribeTagKeysRequest extends AbstractModel {
      */
     public void setShowProject(Long ShowProject) {
         this.ShowProject = ShowProject;
+    }
+
+    /**
+     * Get Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All. 
+     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     * @param Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
     }
 
     public DescribeTagKeysRequest() {
@@ -135,6 +158,9 @@ public class DescribeTagKeysRequest extends AbstractModel {
         if (source.ShowProject != null) {
             this.ShowProject = new Long(source.ShowProject);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeTagKeysRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ShowProject", this.ShowProject);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

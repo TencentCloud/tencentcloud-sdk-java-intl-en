@@ -49,6 +49,13 @@ Default value: 50.
     private Long MaxResults;
 
     /**
+    * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get Tag key.
 All tag values corresponding to the list of tag keys.
 Maximum length: 20 
@@ -112,6 +119,22 @@ Default value: 50.
         this.MaxResults = MaxResults;
     }
 
+    /**
+     * Get Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All. 
+     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     * @param Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public GetTagValuesRequest() {
     }
 
@@ -132,6 +155,9 @@ Default value: 50.
         if (source.MaxResults != null) {
             this.MaxResults = new Long(source.MaxResults);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -142,6 +168,7 @@ Default value: 50.
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "PaginationToken", this.PaginationToken);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

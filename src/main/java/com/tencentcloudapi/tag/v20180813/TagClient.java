@@ -193,8 +193,7 @@ public class TagClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query tag keys in an existing tag list.
-
+     *This API is used to query tag keys in the list of created tags.
      * @param req DescribeTagKeysRequest
      * @return DescribeTagKeysResponse
      * @throws TencentCloudSDKException
@@ -227,8 +226,7 @@ public class TagClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query existing tag lists.
-
+     *This API is used to query the list of created tags.
      * @param req DescribeTagsRequest
      * @return DescribeTagsResponse
      * @throws TencentCloudSDKException

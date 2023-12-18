@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AttachResourcesTagRequest extends AbstractModel {
 
     /**
-    * Resource service name (the third segment in the six-segment resource description)
+    * Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
     */
     @SerializedName("ServiceType")
     @Expose
@@ -38,21 +38,21 @@ public class AttachResourcesTagRequest extends AbstractModel {
     private String [] ResourceIds;
 
     /**
-    * Tag key
+    * The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag value
+    * The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+    * Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -66,16 +66,16 @@ public class AttachResourcesTagRequest extends AbstractModel {
     private String ResourcePrefix;
 
     /**
-     * Get Resource service name (the third segment in the six-segment resource description) 
-     * @return ServiceType Resource service name (the third segment in the six-segment resource description)
+     * Get Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1 
+     * @return ServiceType Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set Resource service name (the third segment in the six-segment resource description)
-     * @param ServiceType Resource service name (the third segment in the six-segment resource description)
+     * Set Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
+     * @param ServiceType Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -98,48 +98,48 @@ public class AttachResourcesTagRequest extends AbstractModel {
     }
 
     /**
-     * Get Tag key 
-     * @return TagKey Tag key
+     * Get The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1 
+     * @return TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key
-     * @param TagKey Tag key
+     * Set The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value 
-     * @return TagValue Tag value
+     * Get The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1 
+     * @return TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value
-     * @param TagValue Tag value
+     * Set The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get Resource region. If resources have the region attribute, this field is required; otherwise, it is optional. 
-     * @return ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+     * Get Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing. 
+     * @return ResourceRegion Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
-     * @param ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+     * Set Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
+     * @param ResourceRegion Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

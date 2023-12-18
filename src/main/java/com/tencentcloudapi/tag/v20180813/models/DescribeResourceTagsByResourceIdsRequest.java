@@ -66,6 +66,13 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get Service type. 
      * @return ServiceType Service type.
      */
@@ -161,6 +168,22 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All. 
+     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     * @param Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public DescribeResourceTagsByResourceIdsRequest() {
     }
 
@@ -190,6 +213,9 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

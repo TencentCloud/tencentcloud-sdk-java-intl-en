@@ -24,9 +24,8 @@ import java.util.HashMap;
 public class TagResourcesRequest extends AbstractModel {
 
     /**
-    * Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
-For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
-Value range of N: 0–9
+    * Cloud resource to be bound, represented in the standard six-segment resource format. For the correct format, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) and [Tagging-enabled Resources](https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1).
+Value range of N: 0-9.
     */
     @SerializedName("ResourceList")
     @Expose
@@ -44,24 +43,20 @@ Value range of N: 0–9
     private Tag [] Tags;
 
     /**
-     * Get Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
-For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
-Value range of N: 0–9 
-     * @return ResourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
-For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
-Value range of N: 0–9
+     * Get Cloud resource to be bound, represented in the standard six-segment resource format. For the correct format, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) and [Tagging-enabled Resources](https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1).
+Value range of N: 0-9. 
+     * @return ResourceList Cloud resource to be bound, represented in the standard six-segment resource format. For the correct format, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) and [Tagging-enabled Resources](https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1).
+Value range of N: 0-9.
      */
     public String [] getResourceList() {
         return this.ResourceList;
     }
 
     /**
-     * Set Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
-For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
-Value range of N: 0–9
-     * @param ResourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
-For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
-Value range of N: 0–9
+     * Set Cloud resource to be bound, represented in the standard six-segment resource format. For the correct format, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) and [Tagging-enabled Resources](https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1).
+Value range of N: 0-9.
+     * @param ResourceList Cloud resource to be bound, represented in the standard six-segment resource format. For the correct format, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) and [Tagging-enabled Resources](https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1).
+Value range of N: 0-9.
      */
     public void setResourceList(String [] ResourceList) {
         this.ResourceList = ResourceList;

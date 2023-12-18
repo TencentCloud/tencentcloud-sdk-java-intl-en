@@ -38,6 +38,13 @@ public class Tag extends AbstractModel {
     private String TagValue;
 
     /**
+    * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get Tag key. 
      * @return TagKey Tag key.
      */
@@ -69,6 +76,22 @@ public class Tag extends AbstractModel {
         this.TagValue = TagValue;
     }
 
+    /**
+     * Get Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained. 
+     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     * @param Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public Tag() {
     }
 
@@ -83,6 +106,9 @@ public class Tag extends AbstractModel {
         if (source.TagValue != null) {
             this.TagValue = new String(source.TagValue);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class Tag extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }
