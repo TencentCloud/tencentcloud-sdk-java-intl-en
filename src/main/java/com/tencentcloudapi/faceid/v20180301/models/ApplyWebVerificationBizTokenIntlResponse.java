@@ -25,6 +25,7 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
     * The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
     */
     @SerializedName("VerificationUrl")
     @Expose
@@ -32,6 +33,7 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
     * The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
     */
     @SerializedName("BizToken")
     @Expose
@@ -39,6 +41,7 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
     * The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
     */
     @SerializedName("VerificationURL")
     @Expose
@@ -52,8 +55,10 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed. 
+     * Get The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442 
      * @return VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @deprecated
      */
     @Deprecated
@@ -63,7 +68,9 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
      * Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @param VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @deprecated
      */
     @Deprecated
@@ -72,8 +79,10 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
     }
 
     /**
-     * Get The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API. 
+     * Get The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442 
      * @return BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
      */
     public String getBizToken() {
         return this.BizToken;
@@ -81,15 +90,19 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
      * Set The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @param BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;
     }
 
     /**
-     * Get The verification URL to be opened with a browser to start the verification process. 
+     * Get The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442 
      * @return VerificationURL The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      */
     public String getVerificationURL() {
         return this.VerificationURL;
@@ -97,7 +110,9 @@ public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
      * Set The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @param VerificationURL The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      */
     public void setVerificationURL(String VerificationURL) {
         this.VerificationURL = VerificationURL;
