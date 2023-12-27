@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCustomerInfoRequest extends AbstractModel {
 
     /**
-    * List of customer UINs
+    * List of customer UIN. Array length value: 1-20.
     */
     @SerializedName("CustomerUin")
     @Expose
     private Long [] CustomerUin;
 
     /**
-     * Get List of customer UINs 
-     * @return CustomerUin List of customer UINs
+     * Get List of customer UIN. Array length value: 1-20. 
+     * @return CustomerUin List of customer UIN. Array length value: 1-20.
      */
     public Long [] getCustomerUin() {
         return this.CustomerUin;
     }
 
     /**
-     * Set List of customer UINs
-     * @param CustomerUin List of customer UINs
+     * Set List of customer UIN. Array length value: 1-20.
+     * @param CustomerUin List of customer UIN. Array length value: 1-20.
      */
     public void setCustomerUin(Long [] CustomerUin) {
         this.CustomerUin = CustomerUin;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class QueryCreditByUinListRequest extends AbstractModel {
 
     /**
-    * User list
+    * List of user. Array length value: 1-50.
     */
     @SerializedName("UinList")
     @Expose
     private Long [] UinList;
 
     /**
-     * Get User list 
-     * @return UinList User list
+     * Get List of user. Array length value: 1-50. 
+     * @return UinList List of user. Array length value: 1-50.
      */
     public Long [] getUinList() {
         return this.UinList;
     }
 
     /**
-     * Set User list
-     * @param UinList User list
+     * Set List of user. Array length value: 1-50.
+     * @param UinList List of user. Array length value: 1-50.
      */
     public void setUinList(Long [] UinList) {
         this.UinList = UinList;

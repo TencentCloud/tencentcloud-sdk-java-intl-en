@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueryVoucherListByUinRequest extends AbstractModel {
 
     /**
-    * Customer UIN list
+    * List of customer UIN. Array length value:1-20.
     */
     @SerializedName("ClientUins")
     @Expose
@@ -38,16 +38,16 @@ public class QueryVoucherListByUinRequest extends AbstractModel {
     private String Status;
 
     /**
-     * Get Customer UIN list 
-     * @return ClientUins Customer UIN list
+     * Get List of customer UIN. Array length value:1-20. 
+     * @return ClientUins List of customer UIN. Array length value:1-20.
      */
     public Long [] getClientUins() {
         return this.ClientUins;
     }
 
     /**
-     * Set Customer UIN list
-     * @param ClientUins Customer UIN list
+     * Set List of customer UIN. Array length value:1-20.
+     * @param ClientUins List of customer UIN. Array length value:1-20.
      */
     public void setClientUins(Long [] ClientUins) {
         this.ClientUins = ClientUins;
