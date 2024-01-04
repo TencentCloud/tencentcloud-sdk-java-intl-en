@@ -37,7 +37,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`：Enhance audio/video</li>
+<li>`QualityEnhance`: Enhance audio/video</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -263,7 +263,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`：Enhance audio/video</li> 
+<li>`QualityEnhance`: Enhance audio/video</li> 
      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -277,7 +277,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`：Enhance audio/video</li>
+<li>`QualityEnhance`: Enhance audio/video</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -297,7 +297,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`：Enhance audio/video</li>
+<li>`QualityEnhance`: Enhance audio/video</li>
      * @param TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -311,7 +311,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`：Enhance audio/video</li>
+<li>`QualityEnhance`: Enhance audio/video</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

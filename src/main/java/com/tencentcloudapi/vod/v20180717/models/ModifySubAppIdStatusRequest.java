@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySubAppIdStatusRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -35,23 +35,23 @@ public class ModifySubAppIdStatusRequest extends AbstractModel {
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
-     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -62,12 +62,12 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated. 
+You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated. 
      * @return Status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
      */
     public String getStatus() {
         return this.Status;
@@ -78,12 +78,12 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
      * @param Status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
-You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
      */
     public void setStatus(String Status) {
         this.Status = Status;
