@@ -33,7 +33,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RollingRestartSwitch;
 
     /**
-    * The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+    * The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BatchSize")
@@ -81,9 +81,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+     * Get The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BatchSize The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+     * @return BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBatchSize() {
@@ -91,9 +91,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+     * Set The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BatchSize The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+     * @param BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBatchSize(Long BatchSize) {

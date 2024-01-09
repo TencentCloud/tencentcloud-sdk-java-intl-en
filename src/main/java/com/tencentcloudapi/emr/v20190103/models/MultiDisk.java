@@ -24,84 +24,89 @@ import java.util.HashMap;
 public class MultiDisk extends AbstractModel {
 
     /**
-    * Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
+    * Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Cloud disk size
+    * Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Number of cloud disks of this type
+    * Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li> 
-     * @return DiskType Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
+     * Get Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DiskType Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-     * @param DiskType Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
+     * Set Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DiskType Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Cloud disk size 
-     * @return Volume Cloud disk size
+     * Get Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Volume Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Cloud disk size
-     * @param Volume Cloud disk size
+     * Set Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Volume Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Number of cloud disks of this type 
-     * @return Count Number of cloud disks of this type
+     * Get Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Count Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of cloud disks of this type
-     * @param Count Number of cloud disks of this type
+     * Set Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Count Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCount(Long Count) {
         this.Count = Count;

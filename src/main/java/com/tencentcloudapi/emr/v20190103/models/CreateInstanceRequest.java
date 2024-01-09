@@ -24,19 +24,21 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel {
 
     /**
-    * The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
+    * Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
     */
     @SerializedName("ProductId")
     @Expose
@@ -284,64 +286,72 @@ Hadoop-Hbase
     private MultiZoneSetting [] MultiZoneSettings;
 
     /**
-     * Get The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li> 
-     * @return ProductId The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
+     * Get Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0 
+     * @return ProductId Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
-     * @param ProductId The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
+     * Set Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
+     * @param ProductId Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;

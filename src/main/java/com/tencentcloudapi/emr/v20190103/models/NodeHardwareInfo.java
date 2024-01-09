@@ -424,6 +424,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TradeVersion;
 
     /**
+    * Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ServicesStatus")
+    @Expose
+    private String ServicesStatus;
+
+    /**
      * Get User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `APPID`
@@ -1423,6 +1431,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TradeVersion = TradeVersion;
     }
 
+    /**
+     * Get Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ServicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getServicesStatus() {
+        return this.ServicesStatus;
+    }
+
+    /**
+     * Set Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ServicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setServicesStatus(String ServicesStatus) {
+        this.ServicesStatus = ServicesStatus;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1587,6 +1615,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TradeVersion != null) {
             this.TradeVersion = new Long(source.TradeVersion);
         }
+        if (source.ServicesStatus != null) {
+            this.ServicesStatus = new String(source.ServicesStatus);
+        }
     }
 
 
@@ -1644,6 +1675,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
+        this.setParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
 
     }
 }

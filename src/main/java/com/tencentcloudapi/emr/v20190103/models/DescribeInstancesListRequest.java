@@ -52,7 +52,7 @@ public class DescribeInstancesListRequest extends AbstractModel {
     private String OrderField;
 
     /**
-    * Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+    * Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
     */
     @SerializedName("Asc")
     @Expose
@@ -130,16 +130,16 @@ public class DescribeInstancesListRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`. 
-     * @return Asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+     * Get Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0. 
+     * @return Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
-     * @param Asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+     * Set Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+     * @param Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;

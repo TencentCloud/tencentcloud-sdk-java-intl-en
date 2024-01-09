@@ -73,6 +73,17 @@ This API is used to add user lists (user management).
     }
 
     /**
+     *This API is used to inquiry detailed records of cluster autoscaling.
+     * @param req DescribeAutoScaleRecordsRequest
+     * @return DescribeAutoScaleRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecords(DescribeAutoScaleRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScaleRecords", DescribeAutoScaleRecordsResponse.class);
+    }
+
+    /**
      *This API is used to query the information of nodes in a cluster.
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
@@ -92,6 +103,17 @@ This API is used to add user lists (user management).
     public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEmrApplicationStatics", DescribeEmrApplicationStaticsResponse.class);
+    }
+
+    /**
+     *This API is used to inquiry Hive query data.
+     * @param req DescribeHiveQueriesRequest
+     * @return DescribeHiveQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHiveQueriesResponse DescribeHiveQueries(DescribeHiveQueriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHiveQueries", DescribeHiveQueriesResponse.class);
     }
 
     /**
@@ -206,6 +228,28 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
+     *This API is used to forcibly modify tags.
+     * @param req ModifyResourcesTagsRequest
+     * @return ModifyResourcesTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourcesTagsResponse ModifyResourcesTags(ModifyResourcesTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourcesTags", ModifyResourcesTagsResponse.class);
+    }
+
+    /**
+     *This API is used to change user password (user management).
+     * @param req ModifyUserManagerPwdRequest
+     * @return ModifyUserManagerPwdResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserManagerPwdResponse ModifyUserManagerPwd(ModifyUserManagerPwdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserManagerPwd", ModifyUserManagerPwdResponse.class);
+    }
+
+    /**
      *This API is used to scale out a cluster.
      * @param req ScaleOutClusterRequest
      * @return ScaleOutClusterResponse
@@ -228,7 +272,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to start or stop the monitor or services.
+     *This API is used to start, stop, or restart services.
      * @param req StartStopServiceOrMonitorRequest
      * @return StartStopServiceOrMonitorResponse
      * @throws TencentCloudSDKException
