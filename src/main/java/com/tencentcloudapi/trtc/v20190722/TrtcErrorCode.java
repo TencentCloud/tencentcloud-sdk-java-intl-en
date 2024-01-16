@@ -18,6 +18,9 @@ public enum TrtcErrorCode {
     // Unsupported on-cloud recording method.
      FAILEDOPERATION_CRUNSUPPORTMETHOD("FailedOperation.CRUnsupportMethod"),
      
+    // 
+     FAILEDOPERATION_NOTRTMPFUNCTION("FailedOperation.NotRtmpFunction"),
+     
     // Query task failed
      FAILEDOPERATION_QUERYTASKINFOFAILED("FailedOperation.QueryTaskInfoFailed"),
      
@@ -137,6 +140,9 @@ public enum TrtcErrorCode {
      
     // The number of users exceeds 6.
      INVALIDPARAMETER_USERIDSMORETHANSIX("InvalidParameter.UserIdsMorethanSix"),
+     
+    // 
+     INVALIDPARAMETER_USERSIG("InvalidParameter.UserSig"),
      
     // Invalid RoomId.
      INVALIDPARAMETERVALUE_ROOMID("InvalidParameterValue.RoomId"),
