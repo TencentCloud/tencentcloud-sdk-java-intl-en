@@ -54,7 +54,7 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
     private DestinationInfo [] Destinations;
 
     /**
-    * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+    * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("HlsRemuxSettings")
@@ -166,9 +166,9 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
     }
 
     /**
-     * Get HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+     * Get HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found. 
-     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
      */
     public HlsRemuxSettingsInfo getHlsRemuxSettings() {
@@ -176,9 +176,9 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+     * Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+     * @param HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setHlsRemuxSettings(HlsRemuxSettingsInfo HlsRemuxSettings) {

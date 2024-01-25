@@ -182,6 +182,70 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     }
 
     /**
+     *Query TRTC Monitoring Dashboard - Data Dashboard Quality Metrics (including the following metrics)
+joinSuccessRate: Join channel success rate.
+joinSuccessIn5sRate: Join channel success rate within 5s.
+audioFreezeRate: Audio stutter rate.
+videoFreezeRate: Video stutter rate.
+networkDelay: Lag rate.
+Note:
+1. To call the API, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. Monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+2. The query time range depends on the monitoring dashboard function version, premium edition can query the last 30 days.
+     * @param req DescribeTRTCMarketQualityDataRequest
+     * @return DescribeTRTCMarketQualityDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCMarketQualityDataResponse DescribeTRTCMarketQualityData(DescribeTRTCMarketQualityDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCMarketQualityData", DescribeTRTCMarketQualityDataResponse.class);
+    }
+
+    /**
+     *Query TRTC Monitoring Dashboard - Data Dashboard Scale Metrics (will return userCount, roomCount, peakCurrentUsers, peakCurrentChannels)
+- userCount: number of users in the call,
+- roomCount: number of rooms in the call, counted as one call channel from the time a user joins the channel to the time all users leave the channel.
+- peakCurrentChannels: peak number of channels online at the same time.
+- peakCurrentUsers: peak number of users online at the same time.
+Note:
+1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling, for monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+2. The query time range depends on the monitoring dashboard function version, premium edition can query up to 60 days.
+     * @param req DescribeTRTCMarketScaleDataRequest
+     * @return DescribeTRTCMarketScaleDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCMarketScaleDataResponse DescribeTRTCMarketScaleData(DescribeTRTCMarketScaleDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCMarketScaleData", DescribeTRTCMarketScaleDataResponse.class);
+    }
+
+    /**
+     *Query TRTC Monitoring Dashboard - Real-Time Monitoring Quality Metrics (return the following metrics)
+ -Video stutter rate
+ -Audio stutter rate
+ Note:
+ 1. To call the API, you need to activate the Monitoring Dashboard Standard Edition and Premium Edition. The Monitoring Dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481.
+ 2. The query time range depends on the monitoring dashboard function version. The premium edition can query up to 1 hours
+     * @param req DescribeTRTCRealTimeQualityDataRequest
+     * @return DescribeTRTCRealTimeQualityDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCRealTimeQualityDataResponse DescribeTRTCRealTimeQualityData(DescribeTRTCRealTimeQualityDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCRealTimeQualityData", DescribeTRTCRealTimeQualityDataResponse.class);
+    }
+
+    /**
+     *Query TRTC Monitoring Dashboard - Real-Time Monitoring Scale Metrics (the following metrics will be returned) -userCount (Online users) -roomCount (Online rooms) Note: 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481. 2. The query time range depends on the function version of the monitoring dashboard. The premium edition can query the last 1 hours
+     * @param req DescribeTRTCRealTimeScaleDataRequest
+     * @return DescribeTRTCRealTimeScaleDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleData(DescribeTRTCRealTimeScaleDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCRealTimeScaleData", DescribeTRTCRealTimeScaleDataResponse.class);
+    }
+
+    /**
      *This API is used to query usage data grouped by room.
 - The queried period cannot exceed 24 hours. If the period spans two different days, the data returned may not be accurate due to a delay in data collection. You can make multiple calls to query the usage on different days.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.

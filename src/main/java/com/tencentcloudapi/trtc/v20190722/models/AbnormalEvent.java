@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AbnormalEvent extends AbstractModel {
 
     /**
-    * The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+    * The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
     */
     @SerializedName("AbnormalEventId")
     @Expose
@@ -39,16 +39,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PeerId;
 
     /**
-     * Get The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1 
-     * @return AbnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * Get The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1 
+     * @return AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
      */
     public Long getAbnormalEventId() {
         return this.AbnormalEventId;
     }
 
     /**
-     * Set The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
-     * @param AbnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * Set The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+     * @param AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
      */
     public void setAbnormalEventId(Long AbnormalEventId) {
         this.AbnormalEventId = AbnormalEventId;
