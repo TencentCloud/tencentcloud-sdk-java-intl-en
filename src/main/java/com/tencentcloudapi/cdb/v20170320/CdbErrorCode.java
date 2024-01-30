@@ -63,6 +63,9 @@ public enum CdbErrorCode {
     // Failed to deserialize JSON.
      FAILEDOPERATION_JSONUNMARSHALERROR("FailedOperation.JsonUnmarshalError"),
      
+    // 
+     FAILEDOPERATION_LOGCONTENTOVERLIMIT("FailedOperation.LogContentOverLimit"),
+     
     // No policy modification detected
      FAILEDOPERATION_NOTCHANGESTRATEGY("FailedOperation.NotChangeStrategy"),
      
