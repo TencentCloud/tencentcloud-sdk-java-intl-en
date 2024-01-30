@@ -28,7 +28,7 @@ public class RemoteBackupInfo extends AbstractModel {
     */
     @SerializedName("SubBackupId")
     @Expose
-    private Long [] SubBackupId;
+    private Long SubBackupId;
 
     /**
     * The region where the remote backup resides
@@ -69,7 +69,7 @@ public class RemoteBackupInfo extends AbstractModel {
      * Get ID of the remote backup subtask 
      * @return SubBackupId ID of the remote backup subtask
      */
-    public Long [] getSubBackupId() {
+    public Long getSubBackupId() {
         return this.SubBackupId;
     }
 
@@ -77,7 +77,7 @@ public class RemoteBackupInfo extends AbstractModel {
      * Set ID of the remote backup subtask
      * @param SubBackupId ID of the remote backup subtask
      */
-    public void setSubBackupId(Long [] SubBackupId) {
+    public void setSubBackupId(Long SubBackupId) {
         this.SubBackupId = SubBackupId;
     }
 
@@ -170,10 +170,7 @@ public class RemoteBackupInfo extends AbstractModel {
      */
     public RemoteBackupInfo(RemoteBackupInfo source) {
         if (source.SubBackupId != null) {
-            this.SubBackupId = new Long[source.SubBackupId.length];
-            for (int i = 0; i < source.SubBackupId.length; i++) {
-                this.SubBackupId[i] = new Long(source.SubBackupId[i]);
-            }
+            this.SubBackupId = new Long(source.SubBackupId);
         }
         if (source.Region != null) {
             this.Region = new String(source.Region);
@@ -197,7 +194,7 @@ public class RemoteBackupInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SubBackupId.", this.SubBackupId);
+        this.setParamSimple(map, prefix + "SubBackupId", this.SubBackupId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
