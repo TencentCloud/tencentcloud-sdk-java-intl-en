@@ -45,7 +45,7 @@ public class ApplyConcurrentRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * The application version ID.
+    * Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
     */
     @SerializedName("ApplicationVersionId")
     @Expose
@@ -107,16 +107,16 @@ public class ApplyConcurrentRequest extends AbstractModel {
     }
 
     /**
-     * Get The application version ID. 
-     * @return ApplicationVersionId The application version ID.
+     * Get Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field. 
+     * @return ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
      */
     public String getApplicationVersionId() {
         return this.ApplicationVersionId;
     }
 
     /**
-     * Set The application version ID.
-     * @param ApplicationVersionId The application version ID.
+     * Set Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+     * @param ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
      */
     public void setApplicationVersionId(String ApplicationVersionId) {
         this.ApplicationVersionId = ApplicationVersionId;
