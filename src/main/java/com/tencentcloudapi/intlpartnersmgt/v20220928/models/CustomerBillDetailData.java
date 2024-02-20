@@ -255,6 +255,13 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     private String Id;
 
     /**
+    * Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get Reseller account
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PayerAccountId Reseller account
@@ -842,6 +849,22 @@ Note: The return value may be null, indicating that no valid data can be obtaine
         this.Id = Id;
     }
 
+    /**
+     * Get Tag informationNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CustomerBillDetailData() {
     }
 
@@ -934,6 +957,12 @@ Note: The return value may be null, indicating that no valid data can be obtaine
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -969,6 +998,7 @@ Note: The return value may be null, indicating that no valid data can be obtaine
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
