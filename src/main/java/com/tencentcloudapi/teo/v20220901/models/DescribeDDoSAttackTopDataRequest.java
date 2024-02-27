@@ -51,7 +51,7 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     private String MetricName;
 
     /**
-    * List of site IDs to be queried. All sites will be selected if this field is not specified.
+    * Site ID set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -180,16 +180,16 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     }
 
     /**
-     * Get List of site IDs to be queried. All sites will be selected if this field is not specified. 
-     * @return ZoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
+     * Get Site ID set. This parameter is required. 
+     * @return ZoneIds Site ID set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of site IDs to be queried. All sites will be selected if this field is not specified.
-     * @param ZoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
+     * Set Site ID set. This parameter is required.
+     * @param ZoneIds Site ID set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

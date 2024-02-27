@@ -56,18 +56,15 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel {
     private String [] Port;
 
     /**
-    * The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+    * Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+    * Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
     */
     @SerializedName("OriginValue")
     @Expose
@@ -197,48 +194,36 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li> 
-     * @return OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+     * Get Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li> 
+     * @return OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-     * @param OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+     * Set Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+     * @param OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
-     * @return OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * Get Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
+     * @return OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public String [] getOriginValue() {
         return this.OriginValue;
     }
 
     /**
-     * Set Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-     * @param OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * Set Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @param OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;

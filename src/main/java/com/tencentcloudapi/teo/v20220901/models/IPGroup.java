@@ -38,7 +38,7 @@ public class IPGroup extends AbstractModel {
     private String Name;
 
     /**
-    * IP group information, including IP and IP mask.
+    * IP group content. Only supports IP and IP mask.
     */
     @SerializedName("Content")
     @Expose
@@ -77,16 +77,16 @@ public class IPGroup extends AbstractModel {
     }
 
     /**
-     * Get IP group information, including IP and IP mask. 
-     * @return Content IP group information, including IP and IP mask.
+     * Get IP group content. Only supports IP and IP mask. 
+     * @return Content IP group content. Only supports IP and IP mask.
      */
     public String [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set IP group information, including IP and IP mask.
-     * @param Content IP group information, including IP and IP mask.
+     * Set IP group content. Only supports IP and IP mask.
+     * @param Content IP group content. Only supports IP and IP mask.
      */
     public void setContent(String [] Content) {
         this.Content = Content;

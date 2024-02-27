@@ -56,7 +56,7 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel {
     private String [] ZoneIds;
 
     /**
-    * Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
+    * The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
     */
     @SerializedName("Limit")
     @Expose
@@ -178,16 +178,16 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified. 
-     * @return Limit Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
+     * Get The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries. 
+     * @return Limit The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
-     * @param Limit Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
+     * Set The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
+     * @param Limit The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

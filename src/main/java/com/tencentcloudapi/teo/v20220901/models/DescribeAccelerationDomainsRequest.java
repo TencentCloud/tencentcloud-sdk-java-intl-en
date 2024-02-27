@@ -45,13 +45,16 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
-<li>`domain-name`: Acceleration domain name</li>
-<li>`origin-type`: Type of the origin</li>
-<li>`origin`: Primary origin address</li>
-<li>`backup-origin`: Secondary origin address</li>
-<li>`domain-cname`: CNAME</li>
-<li>`share-cname`: Shared CNAME</li>
+    * Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
+<li>domain-name: Filtering based on the acceleration domain name</li>
+<li>origin-type: Filtering based on the type of the origin server</li>
+<li>origin: Filtering based on the primary origin server address</li>
+<li>backup-origin: Filtering based on the secondary origin server address</li>
+<li>domain-cname: Filtering based on the CNAME</li>
+<li>share-cname: Filtering based on the shared CNAME</li>
+<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
+<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
+<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -133,40 +136,52 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
-<li>`domain-name`: Acceleration domain name</li>
-<li>`origin-type`: Type of the origin</li>
-<li>`origin`: Primary origin address</li>
-<li>`backup-origin`: Secondary origin address</li>
-<li>`domain-cname`: CNAME</li>
-<li>`share-cname`: Shared CNAME</li> 
-     * @return Filters Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
-<li>`domain-name`: Acceleration domain name</li>
-<li>`origin-type`: Type of the origin</li>
-<li>`origin`: Primary origin address</li>
-<li>`backup-origin`: Secondary origin address</li>
-<li>`domain-cname`: CNAME</li>
-<li>`share-cname`: Shared CNAME</li>
+     * Get Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
+<li>domain-name: Filtering based on the acceleration domain name</li>
+<li>origin-type: Filtering based on the type of the origin server</li>
+<li>origin: Filtering based on the primary origin server address</li>
+<li>backup-origin: Filtering based on the secondary origin server address</li>
+<li>domain-cname: Filtering based on the CNAME</li>
+<li>share-cname: Filtering based on the shared CNAME</li>
+<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
+<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
+<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li> 
+     * @return Filters Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
+<li>domain-name: Filtering based on the acceleration domain name</li>
+<li>origin-type: Filtering based on the type of the origin server</li>
+<li>origin: Filtering based on the primary origin server address</li>
+<li>backup-origin: Filtering based on the secondary origin server address</li>
+<li>domain-cname: Filtering based on the CNAME</li>
+<li>share-cname: Filtering based on the shared CNAME</li>
+<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
+<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
+<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
-<li>`domain-name`: Acceleration domain name</li>
-<li>`origin-type`: Type of the origin</li>
-<li>`origin`: Primary origin address</li>
-<li>`backup-origin`: Secondary origin address</li>
-<li>`domain-cname`: CNAME</li>
-<li>`share-cname`: Shared CNAME</li>
-     * @param Filters Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
-<li>`domain-name`: Acceleration domain name</li>
-<li>`origin-type`: Type of the origin</li>
-<li>`origin`: Primary origin address</li>
-<li>`backup-origin`: Secondary origin address</li>
-<li>`domain-cname`: CNAME</li>
-<li>`share-cname`: Shared CNAME</li>
+     * Set Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
+<li>domain-name: Filtering based on the acceleration domain name</li>
+<li>origin-type: Filtering based on the type of the origin server</li>
+<li>origin: Filtering based on the primary origin server address</li>
+<li>backup-origin: Filtering based on the secondary origin server address</li>
+<li>domain-cname: Filtering based on the CNAME</li>
+<li>share-cname: Filtering based on the shared CNAME</li>
+<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
+<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
+<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
+     * @param Filters Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
+<li>domain-name: Filtering based on the acceleration domain name</li>
+<li>origin-type: Filtering based on the type of the origin server</li>
+<li>origin: Filtering based on the primary origin server address</li>
+<li>backup-origin: Filtering based on the secondary origin server address</li>
+<li>domain-cname: Filtering based on the CNAME</li>
+<li>share-cname: Filtering based on the shared CNAME</li>
+<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
+<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
+<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

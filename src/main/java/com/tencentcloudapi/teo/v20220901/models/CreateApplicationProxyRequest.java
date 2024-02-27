@@ -66,9 +66,7 @@ Instance name when `ProxyType=instance`.
     private Long AccelerateType;
 
     /**
-    * The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+    * Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
     */
     @SerializedName("ProxyType")
     @Expose
@@ -214,24 +212,16 @@ Instance name when `ProxyType=instance`.
     }
 
     /**
-     * Get The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`. 
-     * @return ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * Get Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used. 
+     * @return ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
-     * @param ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * Set Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+     * @param ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;

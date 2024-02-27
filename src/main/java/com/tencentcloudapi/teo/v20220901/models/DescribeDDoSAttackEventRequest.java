@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDDoSAttackEventRequest extends AbstractModel {
 
     /**
-    * Start time of the query period.
+    * Start time. Time range: 30 days.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the query period.
+    * End time. Time range: 30 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private Long [] PolicyIds;
 
     /**
-    * (Required) List of sites. No query results are returned if this field is not specified.
+    * ZoneId set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Whether to display the details.
+    * Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
     */
     @SerializedName("ShowDetail")
     @Expose
@@ -101,32 +101,32 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private String OrderType;
 
     /**
-     * Get Start time of the query period. 
-     * @return StartTime Start time of the query period.
+     * Get Start time. Time range: 30 days. 
+     * @return StartTime Start time. Time range: 30 days.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the query period.
-     * @param StartTime Start time of the query period.
+     * Set Start time. Time range: 30 days.
+     * @param StartTime Start time. Time range: 30 days.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the query period. 
-     * @return EndTime End time of the query period.
+     * Get End time. Time range: 30 days. 
+     * @return EndTime End time. Time range: 30 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the query period.
-     * @param EndTime End time of the query period.
+     * Set End time. Time range: 30 days.
+     * @param EndTime End time. Time range: 30 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -149,16 +149,16 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     }
 
     /**
-     * Get (Required) List of sites. No query results are returned if this field is not specified. 
-     * @return ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+     * Get ZoneId set. This parameter is required. 
+     * @return ZoneIds ZoneId set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set (Required) List of sites. No query results are returned if this field is not specified.
-     * @param ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+     * Set ZoneId set. This parameter is required.
+     * @param ZoneIds ZoneId set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -197,16 +197,16 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to display the details. 
-     * @return ShowDetail Whether to display the details.
+     * Get Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned. 
+     * @return ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
      */
     public Boolean getShowDetail() {
         return this.ShowDetail;
     }
 
     /**
-     * Set Whether to display the details.
-     * @param ShowDetail Whether to display the details.
+     * Set Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+     * @param ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
      */
     public void setShowDetail(Boolean ShowDetail) {
         this.ShowDetail = ShowDetail;

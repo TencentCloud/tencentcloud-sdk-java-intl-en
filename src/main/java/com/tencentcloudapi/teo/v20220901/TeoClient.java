@@ -107,7 +107,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
-     *This API is used to create an application proxy.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version [CreateL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103417?from_cn_redirect=1).
      * @param req CreateApplicationProxyRequest
      * @return CreateApplicationProxyResponse
      * @throws TencentCloudSDKException
@@ -118,7 +118,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
-     *This API is used to create an application proxy rule.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [CreateL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103416?from_cn_redirect=1).
      * @param req CreateApplicationProxyRuleRequest
      * @return CreateApplicationProxyRuleResponse
      * @throws TencentCloudSDKException
@@ -137,6 +137,28 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     public CreateConfigGroupVersionResponse CreateConfigGroupVersion(CreateConfigGroupVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateConfigGroupVersion", CreateConfigGroupVersionResponse.class);
+    }
+
+    /**
+     *This API is used to create Layer 4 proxy instances.
+     * @param req CreateL4ProxyRequest
+     * @return CreateL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL4ProxyResponse CreateL4Proxy(CreateL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateL4Proxy", CreateL4ProxyResponse.class);
+    }
+
+    /**
+     *This API is used to create Layer 4 proxy instance rules, supporting both individual and batch creation.
+     * @param req CreateL4ProxyRulesRequest
+     * @return CreateL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL4ProxyRulesResponse CreateL4ProxyRules(CreateL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateL4ProxyRules", CreateL4ProxyRulesResponse.class);
     }
 
     /**
@@ -254,7 +276,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to delete an application proxy.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103415?from_cn_redirect=1).
      * @param req DeleteApplicationProxyRequest
      * @return DeleteApplicationProxyResponse
      * @throws TencentCloudSDKException
@@ -265,7 +287,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to delete an application proxy rule.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103414?from_cn_redirect=1).
      * @param req DeleteApplicationProxyRuleRequest
      * @return DeleteApplicationProxyRuleResponse
      * @throws TencentCloudSDKException
@@ -273,6 +295,28 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a Layer 4 proxy instance.
+     * @param req DeleteL4ProxyRequest
+     * @return DeleteL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL4ProxyResponse DeleteL4Proxy(DeleteL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL4Proxy", DeleteL4ProxyResponse.class);
+    }
+
+    /**
+     *This API is used to delete Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+     * @param req DeleteL4ProxyRulesRequest
+     * @return DeleteL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL4ProxyRulesResponse DeleteL4ProxyRules(DeleteL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL4ProxyRules", DeleteL4ProxyRulesResponse.class);
     }
 
     /**
@@ -364,7 +408,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the list of application proxies.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
      * @param req DescribeApplicationProxiesRequest
      * @return DescribeApplicationProxiesResponse
      * @throws TencentCloudSDKException
@@ -383,6 +427,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeAvailablePlansResponse DescribeAvailablePlans(DescribeAvailablePlansRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAvailablePlans", DescribeAvailablePlansResponse.class);
+    }
+
+    /**
+     *This API is used to query billing data.
+     * @param req DescribeBillingDataRequest
+     * @return DescribeBillingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingData", DescribeBillingDataResponse.class);
     }
 
     /**
@@ -496,6 +551,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to check if the IP is an EdgeOne IP.
+     * @param req DescribeIPRegionRequest
+     * @return DescribeIPRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPRegionResponse DescribeIPRegion(DescribeIPRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPRegion", DescribeIPRegionResponse.class);
+    }
+
+    /**
      *This API is used to query the verification information of a site.
      * @param req DescribeIdentificationsRequest
      * @return DescribeIdentificationsResponse
@@ -504,6 +570,28 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeIdentificationsResponse DescribeIdentifications(DescribeIdentificationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIdentifications", DescribeIdentificationsResponse.class);
+    }
+
+    /**
+     *This API is used to query a Layer 4 proxy instance list.
+     * @param req DescribeL4ProxyRequest
+     * @return DescribeL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL4ProxyResponse DescribeL4Proxy(DescribeL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL4Proxy", DescribeL4ProxyResponse.class);
+    }
+
+    /**
+     *This API is used to query the forwarding rule list under a Layer 4 proxy instance.
+     * @param req DescribeL4ProxyRulesRequest
+     * @return DescribeL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL4ProxyRulesResponse DescribeL4ProxyRules(DescribeL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL4ProxyRules", DescribeL4ProxyRulesResponse.class);
     }
 
     /**
@@ -749,7 +837,8 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to modify an application proxy.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4Proxy
+] (https://intl.cloud.tencent.com/document/product/1552/103411?from_cn_redirect=1).
      * @param req ModifyApplicationProxyRequest
      * @return ModifyApplicationProxyResponse
      * @throws TencentCloudSDKException
@@ -760,7 +849,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to modify an application proxy rule.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103410?from_cn_redirect=1).
      * @param req ModifyApplicationProxyRuleRequest
      * @return ModifyApplicationProxyRuleResponse
      * @throws TencentCloudSDKException
@@ -771,7 +860,8 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to modify the status of an application proxy rule.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRulesStatus
+] (https://intl.cloud.tencent.com/document/product/1552/103409?from_cn_redirect=1).
      * @param req ModifyApplicationProxyRuleStatusRequest
      * @return ModifyApplicationProxyRuleStatusResponse
      * @throws TencentCloudSDKException
@@ -782,7 +872,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to modify the status of an application proxy.
+     *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyStatus] (https://intl.cloud.tencent.com/document/product/1552/103408?from_cn_redirect=1).
      * @param req ModifyApplicationProxyStatusRequest
      * @return ModifyApplicationProxyStatusResponse
      * @throws TencentCloudSDKException
@@ -803,6 +893,50 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyHostsCertificate", ModifyHostsCertificateResponse.class);
+    }
+
+    /**
+     *This API is used to modify the configuration of a Layer 4 proxy instance.
+     * @param req ModifyL4ProxyRequest
+     * @return ModifyL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyResponse ModifyL4Proxy(ModifyL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4Proxy", ModifyL4ProxyResponse.class);
+    }
+
+    /**
+     *This API is used to modify Layer 4 proxy forwarding rules, supporting both individual and batch modification.
+     * @param req ModifyL4ProxyRulesRequest
+     * @return ModifyL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyRulesResponse ModifyL4ProxyRules(ModifyL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4ProxyRules", ModifyL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+     * @param req ModifyL4ProxyRulesStatusRequest
+     * @return ModifyL4ProxyRulesStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyRulesStatusResponse ModifyL4ProxyRulesStatus(ModifyL4ProxyRulesStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4ProxyRulesStatus", ModifyL4ProxyRulesStatusResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable a Layer 4 proxy instance.
+     * @param req ModifyL4ProxyStatusRequest
+     * @return ModifyL4ProxyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyStatusResponse ModifyL4ProxyStatus(ModifyL4ProxyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4ProxyStatus", ModifyL4ProxyStatusResponse.class);
     }
 
     /**

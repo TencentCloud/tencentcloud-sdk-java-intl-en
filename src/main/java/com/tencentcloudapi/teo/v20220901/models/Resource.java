@@ -123,6 +123,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ZoneNumber;
 
     /**
+    * Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get The resource ID. 
      * @return Id The resource ID.
      */
@@ -374,6 +382,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ZoneNumber = ZoneNumber;
     }
 
+    /**
+     * Get Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li> 
+     * @return Type Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+     * @param Type Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public Resource() {
     }
 
@@ -421,6 +449,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ZoneNumber != null) {
             this.ZoneNumber = new Long(source.ZoneNumber);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -440,6 +471,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "ZoneNumber", this.ZoneNumber);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOriginProtectionRequest extends AbstractModel {
 
     /**
-    * List of sites to be queried. All sites will be selected if this field is not specified.
+    * Set of site IDs to be queried. This is a required parameter.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeOriginProtectionRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get List of sites to be queried. All sites will be selected if this field is not specified. 
-     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Get Set of site IDs to be queried. This is a required parameter. 
+     * @return ZoneIds Set of site IDs to be queried. This is a required parameter.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites to be queried. All sites will be selected if this field is not specified.
-     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Set Set of site IDs to be queried. This is a required parameter.
+     * @param ZoneIds Set of site IDs to be queried. This is a required parameter.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

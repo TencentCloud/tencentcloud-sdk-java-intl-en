@@ -64,10 +64,11 @@ u200c<li>`deactivated`: The site is blocked.</li>
     private String Status;
 
     /**
-    * Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
+    * Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -295,28 +296,32 @@ u200c<li>`deactivated`: The site is blocked.</li>
     }
 
     /**
-     * Get Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li> 
-     * @return Type Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
+     * Get Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li> 
+     * @return Type Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
-     * @param Type Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
+     * Set Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
+     * @param Type Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

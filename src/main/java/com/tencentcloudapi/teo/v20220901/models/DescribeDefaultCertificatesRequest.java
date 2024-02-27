@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeDefaultCertificatesRequest extends AbstractModel {
 
     /**
+    * Zone ID.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
     * Filter criteria. Each filter criteria can have up to 5 entries.
 <li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
     */
@@ -44,6 +51,22 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
 
     /**
      * Get Filter criteria. Each filter criteria can have up to 5 entries.
@@ -105,6 +128,9 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDefaultCertificatesRequest(DescribeDefaultCertificatesRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -124,6 +150,7 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

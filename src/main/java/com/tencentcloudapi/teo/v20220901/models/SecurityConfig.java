@@ -24,64 +24,61 @@ import java.util.HashMap;
 public class SecurityConfig extends AbstractModel {
 
     /**
-    * The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WafConfig")
     @Expose
     private WafConfig WafConfig;
 
     /**
-    * The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RateLimitConfig")
     @Expose
     private RateLimitConfig RateLimitConfig;
 
     /**
-    * The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("AclConfig")
     @Expose
     private AclConfig AclConfig;
 
     /**
-    * The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BotConfig")
     @Expose
     private BotConfig BotConfig;
 
     /**
-    * The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SwitchConfig")
     @Expose
     private SwitchConfig SwitchConfig;
 
     /**
-    * The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("IpTableConfig")
     @Expose
     private IpTableConfig IpTableConfig;
 
     /**
-    * The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ExceptConfig")
     @Expose
     private ExceptConfig ExceptConfig;
 
     /**
-    * The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DropPageConfig")
     @Expose
@@ -96,168 +93,155 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private TemplateConfig TemplateConfig;
 
     /**
-    * Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SlowPostConfig")
     @Expose
     private SlowPostConfig SlowPostConfig;
 
     /**
-     * Get The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public WafConfig getWafConfig() {
         return this.WafConfig;
     }
 
     /**
-     * Set The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWafConfig(WafConfig WafConfig) {
         this.WafConfig = WafConfig;
     }
 
     /**
-     * Get The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public RateLimitConfig getRateLimitConfig() {
         return this.RateLimitConfig;
     }
 
     /**
-     * Set The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRateLimitConfig(RateLimitConfig RateLimitConfig) {
         this.RateLimitConfig = RateLimitConfig;
     }
 
     /**
-     * Get The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AclConfig The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AclConfig Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public AclConfig getAclConfig() {
         return this.AclConfig;
     }
 
     /**
-     * Set The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AclConfig The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AclConfig Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setAclConfig(AclConfig AclConfig) {
         this.AclConfig = AclConfig;
     }
 
     /**
-     * Get The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BotConfig The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BotConfig Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public BotConfig getBotConfig() {
         return this.BotConfig;
     }
 
     /**
-     * Set The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BotConfig The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BotConfig Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBotConfig(BotConfig BotConfig) {
         this.BotConfig = BotConfig;
     }
 
     /**
-     * Get The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SwitchConfig The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SwitchConfig getSwitchConfig() {
         return this.SwitchConfig;
     }
 
     /**
-     * Set The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SwitchConfig The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSwitchConfig(SwitchConfig SwitchConfig) {
         this.SwitchConfig = SwitchConfig;
     }
 
     /**
-     * Get The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IpTableConfig The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return IpTableConfig Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public IpTableConfig getIpTableConfig() {
         return this.IpTableConfig;
     }
 
     /**
-     * Set The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IpTableConfig The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param IpTableConfig Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setIpTableConfig(IpTableConfig IpTableConfig) {
         this.IpTableConfig = IpTableConfig;
     }
 
     /**
-     * Get The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExceptConfig The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ExceptConfig Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ExceptConfig getExceptConfig() {
         return this.ExceptConfig;
     }
 
     /**
-     * Set The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptConfig The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExceptConfig Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setExceptConfig(ExceptConfig ExceptConfig) {
         this.ExceptConfig = ExceptConfig;
     }
 
     /**
-     * Get The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return DropPageConfig Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public DropPageConfig getDropPageConfig() {
         return this.DropPageConfig;
     }
 
     /**
-     * Set The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DropPageConfig Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDropPageConfig(DropPageConfig DropPageConfig) {
         this.DropPageConfig = DropPageConfig;
@@ -284,20 +268,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SlowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SlowPostConfig getSlowPostConfig() {
         return this.SlowPostConfig;
     }
 
     /**
-     * Set Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SlowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSlowPostConfig(SlowPostConfig SlowPostConfig) {
         this.SlowPostConfig = SlowPostConfig;

@@ -157,6 +157,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
+    * The recognition results of ID card
+    */
+    @SerializedName("CardInfo")
+    @Expose
+    private CardInfo CardInfo;
+
+    /**
      * Get Whether the authentication or OCR process is successful. 
      * @return IsPass Whether the authentication or OCR process is successful.
      */
@@ -628,6 +635,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    /**
+     * Get The recognition results of ID card 
+     * @return CardInfo The recognition results of ID card
+     */
+    public CardInfo getCardInfo() {
+        return this.CardInfo;
+    }
+
+    /**
+     * Set The recognition results of ID card
+     * @param CardInfo The recognition results of ID card
+     */
+    public void setCardInfo(CardInfo CardInfo) {
+        this.CardInfo = CardInfo;
+    }
+
     public CardVerifyResult() {
     }
 
@@ -651,6 +674,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
+        if (source.CardInfo != null) {
+            this.CardInfo = new CardInfo(source.CardInfo);
+        }
     }
 
 
@@ -663,6 +689,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CardImage.", this.CardImage);
         this.setParamObj(map, prefix + "CardInfoOcrJson.", this.CardInfoOcrJson);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamObj(map, prefix + "CardInfo.", this.CardInfo);
 
     }
 }

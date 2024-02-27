@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteOriginGroupRequest extends AbstractModel {
 
     /**
-    * ID of the site.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * (Required) Origin group IDe group ID. This parameter is required.
+    * Origin server group ID. This parameter is required.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get (Required) Origin group IDe group ID. This parameter is required. 
-     * @return GroupId (Required) Origin group IDe group ID. This parameter is required.
+     * Get Origin server group ID. This parameter is required. 
+     * @return GroupId Origin server group ID. This parameter is required.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set (Required) Origin group IDe group ID. This parameter is required.
-     * @param GroupId (Required) Origin group IDe group ID. This parameter is required.
+     * Set Origin server group ID. This parameter is required.
+     * @param GroupId Origin server group ID. This parameter is required.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

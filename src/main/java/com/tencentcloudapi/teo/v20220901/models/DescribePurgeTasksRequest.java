@@ -32,14 +32,14 @@ The parameter is required.
     private String ZoneId;
 
     /**
-    * Start time of the query.
+    * Start time of the query. Either time or job-id is required.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the query.
+    * End time of the query. Either time or job-id is required.
     */
     @SerializedName("EndTime")
     @Expose
@@ -87,32 +87,32 @@ The parameter is required.
     }
 
     /**
-     * Get Start time of the query. 
-     * @return StartTime Start time of the query.
+     * Get Start time of the query. Either time or job-id is required. 
+     * @return StartTime Start time of the query. Either time or job-id is required.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the query.
-     * @param StartTime Start time of the query.
+     * Set Start time of the query. Either time or job-id is required.
+     * @param StartTime Start time of the query. Either time or job-id is required.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the query. 
-     * @return EndTime End time of the query.
+     * Get End time of the query. Either time or job-id is required. 
+     * @return EndTime End time of the query. Either time or job-id is required.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the query.
-     * @param EndTime End time of the query.
+     * Set End time of the query. Either time or job-id is required.
+     * @param EndTime End time of the query. Either time or job-id is required.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

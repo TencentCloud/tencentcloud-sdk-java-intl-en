@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class PrivateParameter extends AbstractModel {
 
     /**
-    * The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+    * The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
     */
     @SerializedName("Name")
     @Expose
@@ -42,32 +42,32 @@ public class PrivateParameter extends AbstractModel {
     private String Value;
 
     /**
-     * Get The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li> 
-     * @return Name The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+     * Get The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li> 
+     * @return Name The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
-     * @param Name The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+     * Set The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
+     * @param Name The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
      */
     public void setName(String Name) {
         this.Name = Name;

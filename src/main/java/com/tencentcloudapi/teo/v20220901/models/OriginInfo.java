@@ -24,158 +24,282 @@ import java.util.HashMap;
 public class OriginInfo extends AbstractModel {
 
     /**
-    * The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-<li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>  
+    * Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+    * Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
+<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
+<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
+<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
+<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
+<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
+<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+    * The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
     */
     @SerializedName("BackupOrigin")
     @Expose
     private String BackupOrigin;
 
     /**
-    * Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-u200c<li>`on`: Enable private authentication.</li>
-<li>`off`: (Default) Disable private authentication.</li>
+    * Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, the default value is off.
     */
     @SerializedName("PrivateAccess")
     @Expose
     private String PrivateAccess;
 
     /**
-    * The private authentication parameters. This field is valid when `PrivateAccess=on`.
+    * Private authentication parameter. This parameter is valid only when PrivateAccess is on.
     */
     @SerializedName("PrivateParameters")
     @Expose
     private PrivateParameter [] PrivateParameters;
 
     /**
-     * Get The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-<li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>   
-     * @return OriginType The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-<li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>  
+    * VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+    */
+    @SerializedName("VodeoSubAppId")
+    @Expose
+    private Long VodeoSubAppId;
+
+    /**
+    * VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
+<li>All: All storage buckets under the current application;</li>
+<li>Bucket: A specified storage bucket.</li>
+    */
+    @SerializedName("VodeoDistributionRange")
+    @Expose
+    private String VodeoDistributionRange;
+
+    /**
+    * VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+    */
+    @SerializedName("VodeoBucketId")
+    @Expose
+    private String VodeoBucketId;
+
+    /**
+     * Get Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li> 
+     * @return OriginType Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-<li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>  
-     * @param OriginType The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-<li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>  
+     * Set Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+     * @param OriginType Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`. 
-     * @return Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+     * Get Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
+<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
+<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
+<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
+<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
+<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
+<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li> 
+     * @return Origin Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
+<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
+<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
+<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
+<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
+<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
+<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-     * @param Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+     * Set Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
+<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
+<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
+<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
+<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
+<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
+<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
+     * @param Origin Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
+<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
+<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
+<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
+<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
+<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
+<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins. 
-     * @return BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+     * Get The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required. 
+     * @return BackupOrigin The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
      */
     public String getBackupOrigin() {
         return this.BackupOrigin;
     }
 
     /**
-     * Set ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
-     * @param BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+     * Set The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
+     * @param BackupOrigin The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
      */
     public void setBackupOrigin(String BackupOrigin) {
         this.BackupOrigin = BackupOrigin;
     }
 
     /**
-     * Get Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-u200c<li>`on`: Enable private authentication.</li>
-<li>`off`: (Default) Disable private authentication.</li> 
-     * @return PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-u200c<li>`on`: Enable private authentication.</li>
-<li>`off`: (Default) Disable private authentication.</li>
+     * Get Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, the default value is off. 
+     * @return PrivateAccess Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, the default value is off.
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-u200c<li>`on`: Enable private authentication.</li>
-<li>`off`: (Default) Disable private authentication.</li>
-     * @param PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-u200c<li>`on`: Enable private authentication.</li>
-<li>`off`: (Default) Disable private authentication.</li>
+     * Set Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, the default value is off.
+     * @param PrivateAccess Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, the default value is off.
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;
     }
 
     /**
-     * Get The private authentication parameters. This field is valid when `PrivateAccess=on`. 
-     * @return PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
+     * Get Private authentication parameter. This parameter is valid only when PrivateAccess is on. 
+     * @return PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
     }
 
     /**
-     * Set The private authentication parameters. This field is valid when `PrivateAccess=on`.
-     * @param PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
+     * Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
+     * @param PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;
+    }
+
+    /**
+     * Get VODEO sub-application ID. This parameter is required when OriginType is VODEO. 
+     * @return VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+     */
+    public Long getVodeoSubAppId() {
+        return this.VodeoSubAppId;
+    }
+
+    /**
+     * Set VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+     * @param VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+     */
+    public void setVodeoSubAppId(Long VodeoSubAppId) {
+        this.VodeoSubAppId = VodeoSubAppId;
+    }
+
+    /**
+     * Get VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
+<li>All: All storage buckets under the current application;</li>
+<li>Bucket: A specified storage bucket.</li> 
+     * @return VodeoDistributionRange VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
+<li>All: All storage buckets under the current application;</li>
+<li>Bucket: A specified storage bucket.</li>
+     */
+    public String getVodeoDistributionRange() {
+        return this.VodeoDistributionRange;
+    }
+
+    /**
+     * Set VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
+<li>All: All storage buckets under the current application;</li>
+<li>Bucket: A specified storage bucket.</li>
+     * @param VodeoDistributionRange VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
+<li>All: All storage buckets under the current application;</li>
+<li>Bucket: A specified storage bucket.</li>
+     */
+    public void setVodeoDistributionRange(String VodeoDistributionRange) {
+        this.VodeoDistributionRange = VodeoDistributionRange;
+    }
+
+    /**
+     * Get VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket. 
+     * @return VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     */
+    public String getVodeoBucketId() {
+        return this.VodeoBucketId;
+    }
+
+    /**
+     * Set VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     * @param VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     */
+    public void setVodeoBucketId(String VodeoBucketId) {
+        this.VodeoBucketId = VodeoBucketId;
     }
 
     public OriginInfo() {
@@ -204,6 +328,15 @@ u200c<li>`on`: Enable private authentication.</li>
                 this.PrivateParameters[i] = new PrivateParameter(source.PrivateParameters[i]);
             }
         }
+        if (source.VodeoSubAppId != null) {
+            this.VodeoSubAppId = new Long(source.VodeoSubAppId);
+        }
+        if (source.VodeoDistributionRange != null) {
+            this.VodeoDistributionRange = new String(source.VodeoDistributionRange);
+        }
+        if (source.VodeoBucketId != null) {
+            this.VodeoBucketId = new String(source.VodeoBucketId);
+        }
     }
 
 
@@ -216,6 +349,9 @@ u200c<li>`on`: Enable private authentication.</li>
         this.setParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+        this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
+        this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
+        this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
 
     }
 }

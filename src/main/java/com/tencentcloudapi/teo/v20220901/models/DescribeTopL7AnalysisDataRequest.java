@@ -73,7 +73,7 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel {
     private String [] ZoneIds;
 
     /**
-    * Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+    * Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
     */
     @SerializedName("Limit")
     @Expose
@@ -273,16 +273,16 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified. 
-     * @return Limit Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+     * Get Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified. 
+     * @return Limit Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
-     * @param Limit Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+     * Set Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
+     * @param Limit Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

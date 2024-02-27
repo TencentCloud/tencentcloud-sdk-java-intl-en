@@ -122,9 +122,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
     */
@@ -172,6 +172,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RegistrationNumber")
     @Expose
     private String RegistrationNumber;
+
+    /**
+    * Address
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Address")
+    @Expose
+    private Address Address;
 
     /**
      * Get License number
@@ -419,15 +427,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M 
      * @return Sex Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
      */
@@ -437,15 +445,15 @@ Example: M
 
     /**
      * Set Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
      * @param Sex Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
      */
@@ -557,6 +565,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RegistrationNumber = RegistrationNumber;
     }
 
+    /**
+     * Get Address
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Address Address
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Address getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set Address
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Address Address
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAddress(Address Address) {
+        this.Address = Address;
+    }
+
     public GeneralCard() {
     }
 
@@ -619,6 +647,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RegistrationNumber != null) {
             this.RegistrationNumber = new String(source.RegistrationNumber);
         }
+        if (source.Address != null) {
+            this.Address = new Address(source.Address);
+        }
     }
 
 
@@ -644,6 +675,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
         this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
+        this.setParamObj(map, prefix + "Address.", this.Address);
 
     }
 }

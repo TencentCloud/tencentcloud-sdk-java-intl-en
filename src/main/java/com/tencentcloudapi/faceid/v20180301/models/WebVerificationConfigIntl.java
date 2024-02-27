@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class WebVerificationConfigIntl extends AbstractModel {
 
     /**
+    * When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+    */
+    @SerializedName("AutoSkipStartPage")
+    @Expose
+    private Boolean AutoSkipStartPage;
+
+    /**
     * When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
     */
@@ -59,6 +66,29 @@ Example: HKIDCard
     @SerializedName("IDCardType")
     @Expose
     private String IDCardType;
+
+    /**
+    * Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+    */
+    @SerializedName("DisableCheckOcrWarnings")
+    @Expose
+    private Boolean DisableCheckOcrWarnings;
+
+    /**
+     * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
+     * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     */
+    public Boolean getAutoSkipStartPage() {
+        return this.AutoSkipStartPage;
+    }
+
+    /**
+     * Set When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     * @param AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     */
+    public void setAutoSkipStartPage(Boolean AutoSkipStartPage) {
+        this.AutoSkipStartPage = AutoSkipStartPage;
+    }
 
     /**
      * Get When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
@@ -172,6 +202,22 @@ Example: HKIDCard
         this.IDCardType = IDCardType;
     }
 
+    /**
+     * Get Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us. 
+     * @return DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+     */
+    public Boolean getDisableCheckOcrWarnings() {
+        return this.DisableCheckOcrWarnings;
+    }
+
+    /**
+     * Set Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+     * @param DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+     */
+    public void setDisableCheckOcrWarnings(Boolean DisableCheckOcrWarnings) {
+        this.DisableCheckOcrWarnings = DisableCheckOcrWarnings;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -180,6 +226,9 @@ Example: HKIDCard
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public WebVerificationConfigIntl(WebVerificationConfigIntl source) {
+        if (source.AutoSkipStartPage != null) {
+            this.AutoSkipStartPage = new Boolean(source.AutoSkipStartPage);
+        }
         if (source.AutoSkip != null) {
             this.AutoSkip = new Boolean(source.AutoSkip);
         }
@@ -189,6 +238,9 @@ Example: HKIDCard
         if (source.IDCardType != null) {
             this.IDCardType = new String(source.IDCardType);
         }
+        if (source.DisableCheckOcrWarnings != null) {
+            this.DisableCheckOcrWarnings = new Boolean(source.DisableCheckOcrWarnings);
+        }
     }
 
 
@@ -196,9 +248,11 @@ Example: HKIDCard
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AutoSkipStartPage", this.AutoSkipStartPage);
         this.setParamSimple(map, prefix + "AutoSkip", this.AutoSkip);
         this.setParamSimple(map, prefix + "CheckMode", this.CheckMode);
         this.setParamSimple(map, prefix + "IDCardType", this.IDCardType);
+        this.setParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
 
     }
 }
