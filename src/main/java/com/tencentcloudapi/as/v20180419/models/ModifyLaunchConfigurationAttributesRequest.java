@@ -196,6 +196,13 @@ Note: This field is default to empty
     private String [] DisasterRecoverGroupIds;
 
     /**
+    * Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+    */
+    @SerializedName("LoginSettings")
+    @Expose
+    private LoginSettings LoginSettings;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -631,6 +638,22 @@ Note: This field is default to empty
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
+    /**
+     * Get Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed. 
+     * @return LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+     */
+    public LoginSettings getLoginSettings() {
+        return this.LoginSettings;
+    }
+
+    /**
+     * Set Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+     * @param LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+     */
+    public void setLoginSettings(LoginSettings LoginSettings) {
+        this.LoginSettings = LoginSettings;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -714,6 +737,9 @@ Note: This field is default to empty
                 this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
             }
         }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
     }
 
 
@@ -742,6 +768,7 @@ Note: This field is default to empty
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+        this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
 
     }
 }

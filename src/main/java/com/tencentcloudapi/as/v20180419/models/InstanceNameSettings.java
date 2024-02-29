@@ -24,10 +24,7 @@ import java.util.HashMap;
 public class InstanceNameSettings extends AbstractModel {
 
     /**
-    * CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+    * CVM instance name. Value range: 2-108.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -45,28 +42,16 @@ The name contains 2 to 40 characters, and supports multiple dots (.). The string
     private String InstanceNameStyle;
 
     /**
-     * Get CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers. 
-     * @return InstanceName CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+     * Get CVM instance name. Value range: 2-108. 
+     * @return InstanceName CVM instance name. Value range: 2-108.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
-     * @param InstanceName CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+     * Set CVM instance name. Value range: 2-108.
+     * @param InstanceName CVM instance name. Value range: 2-108.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

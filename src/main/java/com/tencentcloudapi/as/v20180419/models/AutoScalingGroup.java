@@ -258,6 +258,14 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
     private Boolean CapacityRebalance;
 
     /**
+    * Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("InstanceNameIndexSettings")
+    @Expose
+    private InstanceNameIndexSettings InstanceNameIndexSettings;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -821,6 +829,26 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
         this.CapacityRebalance = CapacityRebalance;
     }
 
+    /**
+     * Get Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return InstanceNameIndexSettings Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public InstanceNameIndexSettings getInstanceNameIndexSettings() {
+        return this.InstanceNameIndexSettings;
+    }
+
+    /**
+     * Set Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param InstanceNameIndexSettings Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
+        this.InstanceNameIndexSettings = InstanceNameIndexSettings;
+    }
+
     public AutoScalingGroup() {
     }
 
@@ -940,6 +968,9 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
         if (source.CapacityRebalance != null) {
             this.CapacityRebalance = new Boolean(source.CapacityRebalance);
         }
+        if (source.InstanceNameIndexSettings != null) {
+            this.InstanceNameIndexSettings = new InstanceNameIndexSettings(source.InstanceNameIndexSettings);
+        }
     }
 
 
@@ -978,6 +1009,7 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
         this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
+        this.setParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
 
     }
 }

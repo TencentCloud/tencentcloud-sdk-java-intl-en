@@ -216,6 +216,13 @@ Default value: `False`.
     private Boolean CapacityRebalance;
 
     /**
+    * Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+    */
+    @SerializedName("InstanceNameIndexSettings")
+    @Expose
+    private InstanceNameIndexSettings InstanceNameIndexSettings;
+
+    /**
      * Get Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account. 
      * @return AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
      */
@@ -695,6 +702,22 @@ Default value: `False`.
         this.CapacityRebalance = CapacityRebalance;
     }
 
+    /**
+     * Get Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group. 
+     * @return InstanceNameIndexSettings Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     */
+    public InstanceNameIndexSettings getInstanceNameIndexSettings() {
+        return this.InstanceNameIndexSettings;
+    }
+
+    /**
+     * Set Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     * @param InstanceNameIndexSettings Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     */
+    public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
+        this.InstanceNameIndexSettings = InstanceNameIndexSettings;
+    }
+
     public CreateAutoScalingGroupRequest() {
     }
 
@@ -793,6 +816,9 @@ Default value: `False`.
         if (source.CapacityRebalance != null) {
             this.CapacityRebalance = new Boolean(source.CapacityRebalance);
         }
+        if (source.InstanceNameIndexSettings != null) {
+            this.InstanceNameIndexSettings = new InstanceNameIndexSettings(source.InstanceNameIndexSettings);
+        }
     }
 
 
@@ -824,6 +850,7 @@ Default value: `False`.
         this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
+        this.setParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
 
     }
 }
