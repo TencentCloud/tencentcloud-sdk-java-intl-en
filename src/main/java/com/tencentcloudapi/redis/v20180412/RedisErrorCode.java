@@ -213,6 +213,9 @@ public enum RedisErrorCode {
     // The backup has been locked by another task, and the operation cannot be performed temporarily.
      RESOURCEUNAVAILABLE_BACKUPLOCKEDERROR("ResourceUnavailable.BackupLockedError"),
      
+    // 
+     RESOURCEUNAVAILABLE_BACKUPSPECERROR("ResourceUnavailable.BackupSpecError"),
+     
     // Backup status exception. The operation cannot be performed temporarily. The backup may have expired or been deleted.
      RESOURCEUNAVAILABLE_BACKUPSTATUSABNORMAL("ResourceUnavailable.BackupStatusAbnormal"),
      
