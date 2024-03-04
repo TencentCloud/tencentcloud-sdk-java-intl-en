@@ -38,7 +38,7 @@ public class DescribeServiceAccountsRequest extends AbstractModel {
     private Boolean All;
 
     /**
-    * Whether to fill in permission information
+    * Whether to fill in permission information.
     */
     @SerializedName("EmbedPermission")
     @Expose
@@ -98,16 +98,16 @@ public class DescribeServiceAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to fill in permission information 
-     * @return EmbedPermission Whether to fill in permission information
+     * Get Whether to fill in permission information. 
+     * @return EmbedPermission Whether to fill in permission information.
      */
     public Boolean getEmbedPermission() {
         return this.EmbedPermission;
     }
 
     /**
-     * Set Whether to fill in permission information
-     * @param EmbedPermission Whether to fill in permission information
+     * Set Whether to fill in permission information.
+     * @param EmbedPermission Whether to fill in permission information.
      */
     public void setEmbedPermission(Boolean EmbedPermission) {
         this.EmbedPermission = EmbedPermission;

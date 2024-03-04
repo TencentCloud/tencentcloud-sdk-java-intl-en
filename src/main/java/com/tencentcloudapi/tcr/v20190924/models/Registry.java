@@ -133,6 +133,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RenewFlag;
 
     /**
+    * Whether to enable instance deletion protection. false indicates it is not enabled.
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get Instance ID 
      * @return RegistryId Instance ID
      */
@@ -388,6 +395,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get Whether to enable instance deletion protection. false indicates it is not enabled. 
+     * @return DeletionProtection Whether to enable instance deletion protection. false indicates it is not enabled.
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Whether to enable instance deletion protection. false indicates it is not enabled.
+     * @param DeletionProtection Whether to enable instance deletion protection. false indicates it is not enabled.
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public Registry() {
     }
 
@@ -441,6 +464,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -463,6 +489,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         this.setParamSimple(map, prefix + "PayMod", this.PayMod);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

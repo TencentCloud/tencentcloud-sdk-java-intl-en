@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Tag extends AbstractModel {
 
     /**
-    * Cloud tag key
+    * Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Cloud tag value
+    * Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Cloud tag key 
-     * @return Key Cloud tag key
+     * Get Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Key Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Cloud tag key
-     * @param Key Cloud tag key
+     * Set Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Key Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Cloud tag value 
-     * @return Value Cloud tag value
+     * Get Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Value Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Cloud tag value
-     * @param Value Cloud tag value
+     * Set Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Value Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setValue(String Value) {
         this.Value = Value;

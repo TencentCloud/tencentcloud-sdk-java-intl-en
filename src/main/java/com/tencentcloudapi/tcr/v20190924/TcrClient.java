@@ -61,17 +61,6 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a custom account.
-     * @param req CreateCustomAccountRequest
-     * @return CreateCustomAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCustomAccountResponse CreateCustomAccount(CreateCustomAccountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCustomAccount", CreateCustomAccountResponse.class);
-    }
-
-    /**
      *This API is used to create an image acceleration service.
      * @param req CreateImageAccelerationServiceRequest
      * @return CreateImageAccelerationServiceResponse
@@ -182,7 +171,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a service account.
+     *This API is used to create a service level account.
      * @param req CreateServiceAccountRequest
      * @return CreateServiceAccountResponse
      * @throws TencentCloudSDKException
@@ -245,17 +234,6 @@ public class TcrClient extends AbstractClient{
     public CreateWebhookTriggerResponse CreateWebhookTrigger(CreateWebhookTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWebhookTrigger", CreateWebhookTriggerResponse.class);
-    }
-
-    /**
-     *This API is used to delete a custom account.
-     * @param req DeleteCustomAccountRequest
-     * @return DeleteCustomAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteCustomAccountResponse DeleteCustomAccount(DeleteCustomAccountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteCustomAccount", DeleteCustomAccountResponse.class);
     }
 
     /**
@@ -445,17 +423,6 @@ Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes t
     public DescribeChartDownloadInfoResponse DescribeChartDownloadInfo(DescribeChartDownloadInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeChartDownloadInfo", DescribeChartDownloadInfoResponse.class);
-    }
-
-    /**
-     *This API is used to query custom accounts.
-     * @param req DescribeCustomAccountsRequest
-     * @return DescribeCustomAccountsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCustomAccountsResponse DescribeCustomAccounts(DescribeCustomAccountsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCustomAccounts", DescribeCustomAccountsResponse.class);
     }
 
     /**
@@ -745,6 +712,17 @@ Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes t
     }
 
     /**
+     *This API is used to duplicate the Enterprise Edition repository image version.
+     * @param req DuplicateImageRequest
+     * @return DuplicateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DuplicateImageResponse DuplicateImage(DuplicateImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DuplicateImage", DuplicateImageResponse.class);
+    }
+
+    /**
      *This API is used to manage the public network access of an instance.
      * @param req ManageExternalEndpointRequest
      * @return ManageExternalEndpointResponse
@@ -775,17 +753,6 @@ Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes t
     public ManageReplicationResponse ManageReplication(ManageReplicationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ManageReplication", ManageReplicationResponse.class);
-    }
-
-    /**
-     *This API is used to update a custom account.
-     * @param req ModifyCustomAccountRequest
-     * @return ModifyCustomAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCustomAccountResponse ModifyCustomAccount(ModifyCustomAccountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyCustomAccount", ModifyCustomAccountResponse.class);
     }
 
     /**
@@ -863,6 +830,17 @@ Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes t
     public ModifyServiceAccountResponse ModifyServiceAccount(ModifyServiceAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyServiceAccount", ModifyServiceAccountResponse.class);
+    }
+
+    /**
+     *This API is used to update the password for a service level account.
+     * @param req ModifyServiceAccountPasswordRequest
+     * @return ModifyServiceAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceAccountPasswordResponse ModifyServiceAccountPassword(ModifyServiceAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServiceAccountPassword", ModifyServiceAccountPasswordResponse.class);
     }
 
     /**

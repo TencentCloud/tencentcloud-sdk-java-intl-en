@@ -39,7 +39,7 @@ public enum TcrErrorCode {
     // The operation is canceled.
      FAILEDOPERATION_OPERATIONCANCEL("FailedOperation.OperationCancel"),
      
-    // 
+    // Prerequisites not met.
      FAILEDOPERATION_PRECONDITIONFAILED("FailedOperation.PreconditionFailed"),
      
     // The transaction failed.

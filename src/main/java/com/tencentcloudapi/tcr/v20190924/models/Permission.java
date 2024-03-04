@@ -32,8 +32,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String Resource;
 
     /**
-    * Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Actions")
     @Expose
@@ -60,20 +60,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Actions Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Actions Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Actions Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Actions Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setActions(String [] Actions) {
         this.Actions = Actions;

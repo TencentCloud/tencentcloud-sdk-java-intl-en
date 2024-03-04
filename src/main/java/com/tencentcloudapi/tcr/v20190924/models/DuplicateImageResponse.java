@@ -21,22 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomAccountsResponse extends AbstractModel {
-
-    /**
-    * List of custom accounts
-Note: This field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("CustomAccounts")
-    @Expose
-    private CustomAccount [] CustomAccounts;
-
-    /**
-    * Number of custom accounts
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class DuplicateImageResponse extends AbstractModel {
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,42 +29,6 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get List of custom accounts
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return CustomAccounts List of custom accounts
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public CustomAccount [] getCustomAccounts() {
-        return this.CustomAccounts;
-    }
-
-    /**
-     * Set List of custom accounts
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param CustomAccounts List of custom accounts
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setCustomAccounts(CustomAccount [] CustomAccounts) {
-        this.CustomAccounts = CustomAccounts;
-    }
-
-    /**
-     * Get Number of custom accounts 
-     * @return TotalCount Number of custom accounts
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Number of custom accounts
-     * @param TotalCount Number of custom accounts
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -97,23 +46,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public DescribeCustomAccountsResponse() {
+    public DuplicateImageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCustomAccountsResponse(DescribeCustomAccountsResponse source) {
-        if (source.CustomAccounts != null) {
-            this.CustomAccounts = new CustomAccount[source.CustomAccounts.length];
-            for (int i = 0; i < source.CustomAccounts.length; i++) {
-                this.CustomAccounts[i] = new CustomAccount(source.CustomAccounts[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public DuplicateImageResponse(DuplicateImageResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,8 +64,6 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "CustomAccounts.", this.CustomAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

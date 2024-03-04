@@ -32,7 +32,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private ServiceAccount [] ServiceAccounts;
 
     /**
-    * Number of service accounts
+    * Number of service level accounts.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -66,16 +66,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Number of service accounts 
-     * @return TotalCount Number of service accounts
+     * Get Number of service level accounts. 
+     * @return TotalCount Number of service level accounts.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of service accounts
-     * @param TotalCount Number of service accounts
+     * Set Number of service level accounts.
+     * @param TotalCount Number of service level accounts.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

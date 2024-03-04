@@ -21,35 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCustomAccountResponse extends AbstractModel {
+public class ModifyServiceAccountPasswordResponse extends AbstractModel {
 
     /**
-    * Custom username (the prefix `tcr$` is automatically added)
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * Custom password, which is displayed only once
+    * Custom user password, displayed only once. Please make sure to retain it securely.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
-
-    /**
-    * Custom expiry time (timestamp)
-    */
-    @SerializedName("ExpiresAt")
-    @Expose
-    private Long ExpiresAt;
-
-    /**
-    * Custom account creation time
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private String CreateTime;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -59,67 +38,19 @@ public class CreateCustomAccountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Custom username (the prefix `tcr$` is automatically added) 
-     * @return Name Custom username (the prefix `tcr$` is automatically added)
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set Custom username (the prefix `tcr$` is automatically added)
-     * @param Name Custom username (the prefix `tcr$` is automatically added)
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get Custom password, which is displayed only once 
-     * @return Password Custom password, which is displayed only once
+     * Get Custom user password, displayed only once. Please make sure to retain it securely. 
+     * @return Password Custom user password, displayed only once. Please make sure to retain it securely.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Custom password, which is displayed only once
-     * @param Password Custom password, which is displayed only once
+     * Set Custom user password, displayed only once. Please make sure to retain it securely.
+     * @param Password Custom user password, displayed only once. Please make sure to retain it securely.
      */
     public void setPassword(String Password) {
         this.Password = Password;
-    }
-
-    /**
-     * Get Custom expiry time (timestamp) 
-     * @return ExpiresAt Custom expiry time (timestamp)
-     */
-    public Long getExpiresAt() {
-        return this.ExpiresAt;
-    }
-
-    /**
-     * Set Custom expiry time (timestamp)
-     * @param ExpiresAt Custom expiry time (timestamp)
-     */
-    public void setExpiresAt(Long ExpiresAt) {
-        this.ExpiresAt = ExpiresAt;
-    }
-
-    /**
-     * Get Custom account creation time 
-     * @return CreateTime Custom account creation time
-     */
-    public String getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set Custom account creation time
-     * @param CreateTime Custom account creation time
-     */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
     }
 
     /**
@@ -138,25 +69,16 @@ public class CreateCustomAccountResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateCustomAccountResponse() {
+    public ModifyServiceAccountPasswordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateCustomAccountResponse(CreateCustomAccountResponse source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
+    public ModifyServiceAccountPasswordResponse(ModifyServiceAccountPasswordResponse source) {
         if (source.Password != null) {
             this.Password = new String(source.Password);
-        }
-        if (source.ExpiresAt != null) {
-            this.ExpiresAt = new Long(source.ExpiresAt);
-        }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +90,7 @@ public class CreateCustomAccountResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Password", this.Password);
-        this.setParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
