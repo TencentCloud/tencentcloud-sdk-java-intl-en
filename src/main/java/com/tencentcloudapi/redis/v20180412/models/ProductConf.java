@@ -122,13 +122,23 @@ public class ProductConf extends AbstractModel {
     private String PayMode;
 
     /**
-    * Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+    * Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
     */
     @SerializedName("EnableRepicaReadOnly")
     @Expose
     private Boolean EnableRepicaReadOnly;
+
+    /**
+    * Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EnableReplicaReadOnly")
+    @Expose
+    private Boolean EnableReplicaReadOnly;
 
     /**
      * Get Product type
@@ -379,27 +389,55 @@ public class ProductConf extends AbstractModel {
     }
 
     /**
-     * Get Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported. 
-     * @return EnableRepicaReadOnly Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+     * Get Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported. 
+     * @return EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
      */
     public Boolean getEnableRepicaReadOnly() {
         return this.EnableRepicaReadOnly;
     }
 
     /**
-     * Set Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
-     * @param EnableRepicaReadOnly Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+     * Set Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+     * @param EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
      */
     public void setEnableRepicaReadOnly(Boolean EnableRepicaReadOnly) {
         this.EnableRepicaReadOnly = EnableRepicaReadOnly;
+    }
+
+    /**
+     * Get Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return EnableReplicaReadOnly Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Boolean getEnableReplicaReadOnly() {
+        return this.EnableReplicaReadOnly;
+    }
+
+    /**
+     * Set Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param EnableReplicaReadOnly Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setEnableReplicaReadOnly(Boolean EnableReplicaReadOnly) {
+        this.EnableReplicaReadOnly = EnableReplicaReadOnly;
     }
 
     public ProductConf() {
@@ -461,6 +499,9 @@ public class ProductConf extends AbstractModel {
         if (source.EnableRepicaReadOnly != null) {
             this.EnableRepicaReadOnly = new Boolean(source.EnableRepicaReadOnly);
         }
+        if (source.EnableReplicaReadOnly != null) {
+            this.EnableReplicaReadOnly = new Boolean(source.EnableReplicaReadOnly);
+        }
     }
 
 
@@ -481,6 +522,7 @@ public class ProductConf extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ShardNum.", this.ShardNum);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "EnableRepicaReadOnly", this.EnableRepicaReadOnly);
+        this.setParamSimple(map, prefix + "EnableReplicaReadOnly", this.EnableReplicaReadOnly);
 
     }
 }

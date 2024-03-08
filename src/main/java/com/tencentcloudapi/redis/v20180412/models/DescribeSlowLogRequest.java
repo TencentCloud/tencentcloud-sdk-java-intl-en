@@ -67,7 +67,8 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+    * Node role.
+- master: Master node.- slave: Replica node.
     */
     @SerializedName("Role")
     @Expose
@@ -174,16 +175,20 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul> 
-     * @return Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     * Get Node role.
+- master: Master node.- slave: Replica node. 
+     * @return Role Node role.
+- master: Master node.- slave: Replica node.
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
-     * @param Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     * Set Node role.
+- master: Master node.- slave: Replica node.
+     * @param Role Node role.
+- master: Master node.- slave: Replica node.
      */
     public void setRole(String Role) {
         this.Role = Role;

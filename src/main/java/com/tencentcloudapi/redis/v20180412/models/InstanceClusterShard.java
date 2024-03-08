@@ -75,11 +75,20 @@ public class InstanceClusterShard extends AbstractModel {
     private Float StorageSlope;
 
     /**
-    * Instance runtime node ID
+    * This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
     */
     @SerializedName("Runid")
     @Expose
     private String Runid;
+
+    /**
+    * The node ID during instance runtime.
+    */
+    @SerializedName("RunId")
+    @Expose
+    private String RunId;
 
     /**
     * Service status
@@ -211,19 +220,43 @@ public class InstanceClusterShard extends AbstractModel {
     }
 
     /**
-     * Get Instance runtime node ID 
-     * @return Runid Instance runtime node ID
+     * Get This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+ 
+     * @return Runid This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
      */
     public String getRunid() {
         return this.Runid;
     }
 
     /**
-     * Set Instance runtime node ID
-     * @param Runid Instance runtime node ID
+     * Set This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
+     * @param Runid This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
      */
     public void setRunid(String Runid) {
         this.Runid = Runid;
+    }
+
+    /**
+     * Get The node ID during instance runtime. 
+     * @return RunId The node ID during instance runtime.
+     */
+    public String getRunId() {
+        return this.RunId;
+    }
+
+    /**
+     * Set The node ID during instance runtime.
+     * @param RunId The node ID during instance runtime.
+     */
+    public void setRunId(String RunId) {
+        this.RunId = RunId;
     }
 
     /**
@@ -282,6 +315,9 @@ public class InstanceClusterShard extends AbstractModel {
         if (source.Runid != null) {
             this.Runid = new String(source.Runid);
         }
+        if (source.RunId != null) {
+            this.RunId = new String(source.RunId);
+        }
         if (source.Connected != null) {
             this.Connected = new Long(source.Connected);
         }
@@ -300,6 +336,7 @@ public class InstanceClusterShard extends AbstractModel {
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "StorageSlope", this.StorageSlope);
         this.setParamSimple(map, prefix + "Runid", this.Runid);
+        this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "Connected", this.Connected);
 
     }

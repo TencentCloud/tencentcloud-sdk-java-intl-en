@@ -149,7 +149,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an instance sub-account.
+     *This API is used to customize the account for accessing the instance.
      * @param req CreateInstanceAccountRequest
      * @return CreateInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -454,6 +454,17 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceShardsResponse DescribeInstanceShards(DescribeInstanceShardsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceShards", DescribeInstanceShardsResponse.class);
+    }
+
+    /**
+     *This API (DescribeInstanceSupportFeature) is used to query the supported features of the instance.
+     * @param req DescribeInstanceSupportFeatureRequest
+     * @return DescribeInstanceSupportFeatureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeature(DescribeInstanceSupportFeatureRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSupportFeature", DescribeInstanceSupportFeatureResponse.class);
     }
 
     /**
@@ -787,6 +798,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to change the availability zone of the instance.
+     * @param req ModifyInstanceAvailabilityZonesRequest
+     * @return ModifyInstanceAvailabilityZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(ModifyInstanceAvailabilityZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceAvailabilityZones", ModifyInstanceAvailabilityZonesResponse.class);
+    }
+
+    /**
      *This API is used to modify the parameters of TencentDB for Redis instances
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse
@@ -916,6 +938,17 @@ public class RedisClient extends AbstractClient{
     public StartupInstanceResponse StartupInstance(StartupInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartupInstance", StartupInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to immediately switch instances that are in the time window pending switch operation. Users can manually initiate this operation.
+     * @param req SwitchAccessNewInstanceRequest
+     * @return SwitchAccessNewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchAccessNewInstanceResponse SwitchAccessNewInstance(SwitchAccessNewInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchAccessNewInstance", SwitchAccessNewInstanceResponse.class);
     }
 
     /**

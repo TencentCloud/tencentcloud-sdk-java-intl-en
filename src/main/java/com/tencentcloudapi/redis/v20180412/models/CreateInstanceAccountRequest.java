@@ -24,168 +24,178 @@ import java.util.HashMap;
 public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Sub-account name
+    * Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+    * Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * Routing policy. Valid values: master (master node); replication (replica node)
+    * The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Read/Write policy. Valid values: r (read-only); rw (read/write).
+    * The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * Sub-account description information
+    * Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Sub-account name 
-     * @return AccountName Sub-account name
+     * Get Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters. 
+     * @return AccountName Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Sub-account name
-     * @param AccountName Sub-account name
+     * Set Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
+     * @param AccountName Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 
-     * @return AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * Get Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+ 
+     * @return AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-     * @param AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * Set Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
+     * @param AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get Routing policy. Valid values: master (master node); replication (replica node) 
-     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+     * Get The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node. 
+     * @return ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Routing policy. Valid values: master (master node); replication (replica node)
-     * @param ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+     * Set The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
+     * @param ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Read/Write policy. Valid values: r (read-only); rw (read/write). 
-     * @return Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
+     * Get The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission. 
+     * @return Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Read/Write policy. Valid values: r (read-only); rw (read/write).
-     * @param Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
+     * Set The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
+     * @param Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get Sub-account description information 
-     * @return Remark Sub-account description information
+     * Get Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters. 
+     * @return Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Sub-account description information
-     * @param Remark Sub-account description information
+     * Set Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+     * @param Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

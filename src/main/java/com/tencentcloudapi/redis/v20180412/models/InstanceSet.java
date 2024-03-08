@@ -53,7 +53,7 @@ public class InstanceSet extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+    * Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
     */
     @SerializedName("RegionId")
     @Expose
@@ -322,12 +322,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long PasswordFree;
 
     /**
-    * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
+
+    /**
+    * Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IPv6")
+    @Expose
+    private String IPv6;
 
     /**
     * Read-only instance flag (internal parameter, which can be ignored)
@@ -510,16 +518,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul> 
-     * @return RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+     * Get Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul> 
+     * @return RegionId Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
-     * @param RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+     * Set Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
+     * @param RegionId Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
@@ -1154,23 +1162,43 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
+    }
+
+    /**
+     * Get Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIPv6() {
+        return this.IPv6;
+    }
+
+    /**
+     * Set Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIPv6(String IPv6) {
+        this.IPv6 = IPv6;
     }
 
     /**
@@ -1593,6 +1621,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.Vip6 != null) {
             this.Vip6 = new String(source.Vip6);
         }
+        if (source.IPv6 != null) {
+            this.IPv6 = new String(source.IPv6);
+        }
         if (source.ReadOnly != null) {
             this.ReadOnly = new Long(source.ReadOnly);
         }
@@ -1686,6 +1717,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "NetLimit", this.NetLimit);
         this.setParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "IPv6", this.IPv6);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);

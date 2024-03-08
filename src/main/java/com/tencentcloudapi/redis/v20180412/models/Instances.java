@@ -109,12 +109,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Vip;
 
     /**
-    * Internal parameter, which can be ignored.
+    * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
+
+    /**
+    * Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IPv6")
+    @Expose
+    private String IPv6;
 
     /**
     * VPC ID, such as `75101`.
@@ -372,9 +380,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Internal parameter, which can be ignored.
+     * Get Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vip6 Internal parameter, which can be ignored.
+     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip6() {
@@ -382,13 +390,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
+     * Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vip6 Internal parameter, which can be ignored.
+     * @param Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
+    }
+
+    /**
+     * Get Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIPv6() {
+        return this.IPv6;
+    }
+
+    /**
+     * Set Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIPv6(String IPv6) {
+        this.IPv6 = IPv6;
     }
 
     /**
@@ -590,6 +618,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Vip6 != null) {
             this.Vip6 = new String(source.Vip6);
         }
+        if (source.IPv6 != null) {
+            this.IPv6 = new String(source.IPv6);
+        }
         if (source.VpcID != null) {
             this.VpcID = new Long(source.VpcID);
         }
@@ -631,6 +662,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "IPv6", this.IPv6);
         this.setParamSimple(map, prefix + "VpcID", this.VpcID);
         this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "Status", this.Status);

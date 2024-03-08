@@ -47,14 +47,17 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+    * The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+    * For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
     */
     @SerializedName("OrderType")
     @Expose
@@ -75,7 +78,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String [] SubnetIds;
 
     /**
-    * Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+    * Setting keywords field for fuzzy query, only instance names support fuzzy query.
     */
     @SerializedName("SearchKey")
     @Expose
@@ -117,14 +120,21 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long [] RegionIds;
 
     /**
-    * Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+    * Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+    * Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
     */
     @SerializedName("TypeVersion")
     @Expose
@@ -138,7 +148,10 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String EngineName;
 
     /**
-    * Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+    * Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -159,7 +172,8 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * Array of the search keywords, which can query the instance by its ID, name, IP address.
+    * This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
     */
     @SerializedName("SearchKeys")
     @Expose
@@ -194,7 +208,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String [] TagKeys;
 
     /**
-    * Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+    * The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
     */
     @SerializedName("ProductVersions")
     @Expose
@@ -208,7 +224,8 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+    * Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
     */
     @SerializedName("AzMode")
     @Expose
@@ -271,32 +288,44 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul> 
-     * @return OrderBy Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+     * Get The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances. 
+     * @return OrderBy The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
-     * @param OrderBy Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+     * Set The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+     * @param OrderBy The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul> 
-     * @return OrderType Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+     * Get For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order. 
+     * @return OrderType For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
-     * @param OrderType Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+     * Set For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
+     * @param OrderType For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
@@ -335,16 +364,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name. 
-     * @return SearchKey Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+     * Get Setting keywords field for fuzzy query, only instance names support fuzzy query. 
+     * @return SearchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
-     * @param SearchKey Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+     * Set Setting keywords field for fuzzy query, only instance names support fuzzy query.
+     * @param SearchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
@@ -431,32 +460,60 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul> 
-     * @return Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+     * Get Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete. 
+     * @return Status Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
-     * @param Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+     * Set Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
+     * @param Status Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul> 
-     * @return TypeVersion Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+     * Get Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition. 
+     * @return TypeVersion Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
      */
     public Long getTypeVersion() {
         return this.TypeVersion;
     }
 
     /**
-     * Set Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
-     * @param TypeVersion Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+     * Set Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
+     * @param TypeVersion Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
      */
     public void setTypeVersion(Long TypeVersion) {
         this.TypeVersion = TypeVersion;
@@ -479,16 +536,28 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul> 
-     * @return AutoRenew Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+     * Get Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry. 
+     * @return AutoRenew Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
      */
     public Long [] getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
-     * @param AutoRenew Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+     * Set Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
+     * @param AutoRenew Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
      */
     public void setAutoRenew(Long [] AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -527,16 +596,20 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of the search keywords, which can query the instance by its ID, name, IP address. 
-     * @return SearchKeys Array of the search keywords, which can query the instance by its ID, name, IP address.
+     * Get This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query. 
+     * @return SearchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set Array of the search keywords, which can query the instance by its ID, name, IP address.
-     * @param SearchKeys Array of the search keywords, which can query the instance by its ID, name, IP address.
+     * Set This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+     * @param SearchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
@@ -607,16 +680,24 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul> 
-     * @return ProductVersions Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+     * Get The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+ 
+     * @return ProductVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
      */
     public String [] getProductVersions() {
         return this.ProductVersions;
     }
 
     /**
-     * Set Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
-     * @param ProductVersions Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+     * Set The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
+     * @param ProductVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
      */
     public void setProductVersions(String [] ProductVersions) {
         this.ProductVersions = ProductVersions;
@@ -639,16 +720,20 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul> 
-     * @return AzMode AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+     * Get Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones. 
+     * @return AzMode Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
      */
     public String getAzMode() {
         return this.AzMode;
     }
 
     /**
-     * Set AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
-     * @param AzMode AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+     * Set Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+     * @param AzMode Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
      */
     public void setAzMode(String AzMode) {
         this.AzMode = AzMode;

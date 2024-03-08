@@ -21,19 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableReplicaReadonlyResponse extends AbstractModel {
+public class ModifyInstanceAvailabilityZonesResponse extends AbstractModel {
 
     /**
-    * Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
-
-    /**
-    * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,40 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
@@ -102,17 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public EnableReplicaReadonlyResponse() {
+    public ModifyInstanceAvailabilityZonesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnableReplicaReadonlyResponse(EnableReplicaReadonlyResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
+    public ModifyInstanceAvailabilityZonesResponse(ModifyInstanceAvailabilityZonesResponse source) {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
@@ -126,7 +90,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

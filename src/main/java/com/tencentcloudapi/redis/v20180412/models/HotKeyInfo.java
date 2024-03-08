@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class HotKeyInfo extends AbstractModel {
 
     /**
-    * Hot key
+    * The name of the hot key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Type
+    * Key type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Count
+    * Number of accesses for the hot key in a specified time period.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get Hot key 
-     * @return Key Hot key
+     * Get The name of the hot key. 
+     * @return Key The name of the hot key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Hot key
-     * @param Key Hot key
+     * Set The name of the hot key.
+     * @param Key The name of the hot key.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Type 
-     * @return Type Type
+     * Get Key type. 
+     * @return Type Key type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type
-     * @param Type Type
+     * Set Key type.
+     * @param Type Key type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Count 
-     * @return Count Count
+     * Get Number of accesses for the hot key in a specified time period. 
+     * @return Count Number of accesses for the hot key in a specified time period.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Count
-     * @param Count Count
+     * Set Number of accesses for the hot key in a specified time period.
+     * @param Count Number of accesses for the hot key in a specified time period.
      */
     public void setCount(Long Count) {
         this.Count = Count;
