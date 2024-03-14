@@ -52,6 +52,57 @@ public class ModifyStreamPackageChannelEndpointRequest extends AbstractModel {
     private EndpointAuthInfo AuthInfo;
 
     /**
+    * Endpoint protocol.
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * Whether to turn on the time shift function, true: on, false: off, the default is off.
+    */
+    @SerializedName("TimeShiftEnable")
+    @Expose
+    private Boolean TimeShiftEnable;
+
+    /**
+    * The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+    */
+    @SerializedName("TimeShiftDuration")
+    @Expose
+    private Long TimeShiftDuration;
+
+    /**
+    * Advertising insertion function switch.
+    */
+    @SerializedName("SSAIEnable")
+    @Expose
+    private Boolean SSAIEnable;
+
+    /**
+    * Ad insertion function configuration information. Valid when SSAIEnable is turned on.
+    */
+    @SerializedName("SSAIInfo")
+    @Expose
+    private SSAIConf SSAIInfo;
+
+    /**
+    * The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. 
+Calculation starts from the first '/' in the url path, and the subscript starts from 0, the optional range of the subscript is: [0,3].
+    */
+    @SerializedName("CustomUrlParamIndex")
+    @Expose
+    private Long CustomUrlParamIndex;
+
+    /**
+    * Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+    */
+    @SerializedName("CustomUrlParam")
+    @Expose
+    private String CustomUrlParam;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -115,6 +166,126 @@ public class ModifyStreamPackageChannelEndpointRequest extends AbstractModel {
         this.AuthInfo = AuthInfo;
     }
 
+    /**
+     * Get Endpoint protocol. 
+     * @return Protocol Endpoint protocol.
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Endpoint protocol.
+     * @param Protocol Endpoint protocol.
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get Whether to turn on the time shift function, true: on, false: off, the default is off. 
+     * @return TimeShiftEnable Whether to turn on the time shift function, true: on, false: off, the default is off.
+     */
+    public Boolean getTimeShiftEnable() {
+        return this.TimeShiftEnable;
+    }
+
+    /**
+     * Set Whether to turn on the time shift function, true: on, false: off, the default is off.
+     * @param TimeShiftEnable Whether to turn on the time shift function, true: on, false: off, the default is off.
+     */
+    public void setTimeShiftEnable(Boolean TimeShiftEnable) {
+        this.TimeShiftEnable = TimeShiftEnable;
+    }
+
+    /**
+     * Get The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on. 
+     * @return TimeShiftDuration The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+     */
+    public Long getTimeShiftDuration() {
+        return this.TimeShiftDuration;
+    }
+
+    /**
+     * Set The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+     * @param TimeShiftDuration The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+     */
+    public void setTimeShiftDuration(Long TimeShiftDuration) {
+        this.TimeShiftDuration = TimeShiftDuration;
+    }
+
+    /**
+     * Get Advertising insertion function switch. 
+     * @return SSAIEnable Advertising insertion function switch.
+     */
+    public Boolean getSSAIEnable() {
+        return this.SSAIEnable;
+    }
+
+    /**
+     * Set Advertising insertion function switch.
+     * @param SSAIEnable Advertising insertion function switch.
+     */
+    public void setSSAIEnable(Boolean SSAIEnable) {
+        this.SSAIEnable = SSAIEnable;
+    }
+
+    /**
+     * Get Ad insertion function configuration information. Valid when SSAIEnable is turned on. 
+     * @return SSAIInfo Ad insertion function configuration information. Valid when SSAIEnable is turned on.
+     */
+    public SSAIConf getSSAIInfo() {
+        return this.SSAIInfo;
+    }
+
+    /**
+     * Set Ad insertion function configuration information. Valid when SSAIEnable is turned on.
+     * @param SSAIInfo Ad insertion function configuration information. Valid when SSAIEnable is turned on.
+     */
+    public void setSSAIInfo(SSAIConf SSAIInfo) {
+        this.SSAIInfo = SSAIInfo;
+    }
+
+    /**
+     * Get The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. 
+Calculation starts from the first '/' in the url path, and the subscript starts from 0, the optional range of the subscript is: [0,3]. 
+     * @return CustomUrlParamIndex The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. 
+Calculation starts from the first '/' in the url path, and the subscript starts from 0, the optional range of the subscript is: [0,3].
+     */
+    public Long getCustomUrlParamIndex() {
+        return this.CustomUrlParamIndex;
+    }
+
+    /**
+     * Set The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. 
+Calculation starts from the first '/' in the url path, and the subscript starts from 0, the optional range of the subscript is: [0,3].
+     * @param CustomUrlParamIndex The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. 
+Calculation starts from the first '/' in the url path, and the subscript starts from 0, the optional range of the subscript is: [0,3].
+     */
+    public void setCustomUrlParamIndex(Long CustomUrlParamIndex) {
+        this.CustomUrlParamIndex = CustomUrlParamIndex;
+    }
+
+    /**
+     * Get Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars. 
+     * @return CustomUrlParam Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+     */
+    public String getCustomUrlParam() {
+        return this.CustomUrlParam;
+    }
+
+    /**
+     * Set Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+     * @param CustomUrlParam Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+     */
+    public void setCustomUrlParam(String CustomUrlParam) {
+        this.CustomUrlParam = CustomUrlParam;
+    }
+
     public ModifyStreamPackageChannelEndpointRequest() {
     }
 
@@ -135,6 +306,27 @@ public class ModifyStreamPackageChannelEndpointRequest extends AbstractModel {
         if (source.AuthInfo != null) {
             this.AuthInfo = new EndpointAuthInfo(source.AuthInfo);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.TimeShiftEnable != null) {
+            this.TimeShiftEnable = new Boolean(source.TimeShiftEnable);
+        }
+        if (source.TimeShiftDuration != null) {
+            this.TimeShiftDuration = new Long(source.TimeShiftDuration);
+        }
+        if (source.SSAIEnable != null) {
+            this.SSAIEnable = new Boolean(source.SSAIEnable);
+        }
+        if (source.SSAIInfo != null) {
+            this.SSAIInfo = new SSAIConf(source.SSAIInfo);
+        }
+        if (source.CustomUrlParamIndex != null) {
+            this.CustomUrlParamIndex = new Long(source.CustomUrlParamIndex);
+        }
+        if (source.CustomUrlParam != null) {
+            this.CustomUrlParam = new String(source.CustomUrlParam);
+        }
     }
 
 
@@ -146,6 +338,13 @@ public class ModifyStreamPackageChannelEndpointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "TimeShiftEnable", this.TimeShiftEnable);
+        this.setParamSimple(map, prefix + "TimeShiftDuration", this.TimeShiftDuration);
+        this.setParamSimple(map, prefix + "SSAIEnable", this.SSAIEnable);
+        this.setParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
+        this.setParamSimple(map, prefix + "CustomUrlParamIndex", this.CustomUrlParamIndex);
+        this.setParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
 
     }
 }
