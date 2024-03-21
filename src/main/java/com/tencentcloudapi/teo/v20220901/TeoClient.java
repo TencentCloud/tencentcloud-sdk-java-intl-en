@@ -129,6 +129,17 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *This API is used to create key-value indexes for relevant delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If such indexes have been created in CLS, this API will append indexes through merging.
+     * @param req CreateCLSIndexRequest
+     * @return CreateCLSIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSIndexResponse CreateCLSIndex(CreateCLSIndexRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSIndex", CreateCLSIndexResponse.class);
+    }
+
+    /**
      *This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
      * @param req CreateConfigGroupVersionRequest
      * @return CreateConfigGroupVersionResponse
@@ -205,6 +216,18 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     public CreatePurgeTaskResponse CreatePurgeTask(CreatePurgeTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePurgeTask", CreatePurgeTaskResponse.class);
+    }
+
+    /**
+     *This API is used to create real-time log delivery tasks. This API has the following restrictions:
+Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+     * @param req CreateRealtimeLogDeliveryTaskRequest
+     * @return CreateRealtimeLogDeliveryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRealtimeLogDeliveryTaskResponse CreateRealtimeLogDeliveryTask(CreateRealtimeLogDeliveryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRealtimeLogDeliveryTask", CreateRealtimeLogDeliveryTaskResponse.class);
     }
 
     /**
@@ -328,6 +351,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteOriginGroupResponse DeleteOriginGroup(DeleteOriginGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOriginGroup", DeleteOriginGroupResponse.class);
+    }
+
+    /**
+     *This API is used to delete a real-time log delivery task.
+     * @param req DeleteRealtimeLogDeliveryTaskRequest
+     * @return DeleteRealtimeLogDeliveryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRealtimeLogDeliveryTaskResponse DeleteRealtimeLogDeliveryTask(DeleteRealtimeLogDeliveryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRealtimeLogDeliveryTask", DeleteRealtimeLogDeliveryTaskResponse.class);
     }
 
     /**
@@ -650,6 +684,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to query the real-time log delivery task list.
+     * @param req DescribeRealtimeLogDeliveryTasksRequest
+     * @return DescribeRealtimeLogDeliveryTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeLogDeliveryTasksResponse DescribeRealtimeLogDeliveryTasks(DescribeRealtimeLogDeliveryTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRealtimeLogDeliveryTasks", DescribeRealtimeLogDeliveryTasksResponse.class);
+    }
+
+    /**
      *This API is used to query the rules in the rule engine.
      * @param req DescribeRulesRequest
      * @return DescribeRulesResponse
@@ -948,6 +993,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyOriginGroupResponse ModifyOriginGroup(ModifyOriginGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyOriginGroup", ModifyOriginGroupResponse.class);
+    }
+
+    /**
+     *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+     * @param req ModifyRealtimeLogDeliveryTaskRequest
+     * @return ModifyRealtimeLogDeliveryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTask(ModifyRealtimeLogDeliveryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRealtimeLogDeliveryTask", ModifyRealtimeLogDeliveryTaskResponse.class);
     }
 
     /**

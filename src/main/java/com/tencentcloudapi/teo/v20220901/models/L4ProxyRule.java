@@ -133,6 +133,13 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
     private String Status;
 
     /**
+    * BuID.
+    */
+    @SerializedName("BuId")
+    @Expose
+    private String BuId;
+
+    /**
      * Get Forwarding rule ID.
 Note: Do not fill in this parameter when L4ProxyRule is used as an input parameter in CreateL4ProxyRules; it must be filled in when L4ProxyRule is used as an input parameter in ModifyL4ProxyRules. 
      * @return RuleId Forwarding rule ID.
@@ -436,6 +443,22 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
         this.Status = Status;
     }
 
+    /**
+     * Get BuID. 
+     * @return BuId BuID.
+     */
+    public String getBuId() {
+        return this.BuId;
+    }
+
+    /**
+     * Set BuID.
+     * @param BuId BuID.
+     */
+    public void setBuId(String BuId) {
+        this.BuId = BuId;
+    }
+
     public L4ProxyRule() {
     }
 
@@ -483,6 +506,9 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.BuId != null) {
+            this.BuId = new String(source.BuId);
+        }
     }
 
 
@@ -501,6 +527,7 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BuId", this.BuId);
 
     }
 }
