@@ -1358,6 +1358,17 @@ If event notification is used, the type of event notification is [Video editing 
     }
 
     /**
+     *Implement fast splicing and editing of HLS videos to generate new HLS format media.
+     * @param req FastEditMediaRequest
+     * @return FastEditMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public FastEditMediaResponse FastEditMedia(FastEditMediaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FastEditMedia", FastEditMediaResponse.class);
+    }
+
+    /**
      ** After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
   It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
      * @param req ForbidMediaDistributionRequest
