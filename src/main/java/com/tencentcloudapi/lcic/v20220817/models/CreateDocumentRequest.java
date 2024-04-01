@@ -80,6 +80,13 @@ public class CreateDocumentRequest extends AbstractModel {
     private Long DocumentSize;
 
     /**
+    * Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+    */
+    @SerializedName("AutoHandleUnsupportedElement")
+    @Expose
+    private Boolean AutoHandleUnsupportedElement;
+
+    /**
      * Get LCIC SdkAppId 
      * @return SdkAppId LCIC SdkAppId
      */
@@ -207,6 +214,22 @@ public class CreateDocumentRequest extends AbstractModel {
         this.DocumentSize = DocumentSize;
     }
 
+    /**
+     * Get Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT 
+     * @return AutoHandleUnsupportedElement Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+     */
+    public Boolean getAutoHandleUnsupportedElement() {
+        return this.AutoHandleUnsupportedElement;
+    }
+
+    /**
+     * Set Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+     * @param AutoHandleUnsupportedElement Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+     */
+    public void setAutoHandleUnsupportedElement(Boolean AutoHandleUnsupportedElement) {
+        this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;
+    }
+
     public CreateDocumentRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateDocumentRequest extends AbstractModel {
         if (source.DocumentSize != null) {
             this.DocumentSize = new Long(source.DocumentSize);
         }
+        if (source.AutoHandleUnsupportedElement != null) {
+            this.AutoHandleUnsupportedElement = new Boolean(source.AutoHandleUnsupportedElement);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateDocumentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Permission", this.Permission);
         this.setParamSimple(map, prefix + "DocumentType", this.DocumentType);
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
+        this.setParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
 
     }
 }

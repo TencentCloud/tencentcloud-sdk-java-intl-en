@@ -130,6 +130,83 @@ Note: This field may return null, indicating that no valid value was found.
     private Long EnableDirectControl;
 
     /**
+    * 
+    */
+    @SerializedName("InteractionMode")
+    @Expose
+    private Long InteractionMode;
+
+    /**
+    * 
+    */
+    @SerializedName("VideoOrientation")
+    @Expose
+    private Long VideoOrientation;
+
+    /**
+    * 
+    */
+    @SerializedName("IsGradingRequiredPostClass")
+    @Expose
+    private Long IsGradingRequiredPostClass;
+
+    /**
+    * Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private Long RoomType;
+
+    /**
+    * 
+    */
+    @SerializedName("EndDelayTime")
+    @Expose
+    private Long EndDelayTime;
+
+    /**
+    * 
+    */
+    @SerializedName("LiveType")
+    @Expose
+    private Long LiveType;
+
+    /**
+    * 
+    */
+    @SerializedName("RecordLiveUrl")
+    @Expose
+    private String RecordLiveUrl;
+
+    /**
+    * 
+    */
+    @SerializedName("EnableAutoStart")
+    @Expose
+    private Long EnableAutoStart;
+
+    /**
+    * 
+    */
+    @SerializedName("RecordBackground")
+    @Expose
+    private String RecordBackground;
+
+    /**
+    * 
+    */
+    @SerializedName("RecordScene")
+    @Expose
+    private String RecordScene;
+
+    /**
+    * 
+    */
+    @SerializedName("RecordLang")
+    @Expose
+    private String RecordLang;
+
+    /**
      * Get The name.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Name The name.
@@ -397,6 +474,182 @@ Note: This field may return null, indicating that no valid value was found.
         this.EnableDirectControl = EnableDirectControl;
     }
 
+    /**
+     * Get  
+     * @return InteractionMode 
+     */
+    public Long getInteractionMode() {
+        return this.InteractionMode;
+    }
+
+    /**
+     * Set 
+     * @param InteractionMode 
+     */
+    public void setInteractionMode(Long InteractionMode) {
+        this.InteractionMode = InteractionMode;
+    }
+
+    /**
+     * Get  
+     * @return VideoOrientation 
+     */
+    public Long getVideoOrientation() {
+        return this.VideoOrientation;
+    }
+
+    /**
+     * Set 
+     * @param VideoOrientation 
+     */
+    public void setVideoOrientation(Long VideoOrientation) {
+        this.VideoOrientation = VideoOrientation;
+    }
+
+    /**
+     * Get  
+     * @return IsGradingRequiredPostClass 
+     */
+    public Long getIsGradingRequiredPostClass() {
+        return this.IsGradingRequiredPostClass;
+    }
+
+    /**
+     * Set 
+     * @param IsGradingRequiredPostClass 
+     */
+    public void setIsGradingRequiredPostClass(Long IsGradingRequiredPostClass) {
+        this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;
+    }
+
+    /**
+     * Get Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class) 
+     * @return RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public Long getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     * @param RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public void setRoomType(Long RoomType) {
+        this.RoomType = RoomType;
+    }
+
+    /**
+     * Get  
+     * @return EndDelayTime 
+     */
+    public Long getEndDelayTime() {
+        return this.EndDelayTime;
+    }
+
+    /**
+     * Set 
+     * @param EndDelayTime 
+     */
+    public void setEndDelayTime(Long EndDelayTime) {
+        this.EndDelayTime = EndDelayTime;
+    }
+
+    /**
+     * Get  
+     * @return LiveType 
+     */
+    public Long getLiveType() {
+        return this.LiveType;
+    }
+
+    /**
+     * Set 
+     * @param LiveType 
+     */
+    public void setLiveType(Long LiveType) {
+        this.LiveType = LiveType;
+    }
+
+    /**
+     * Get  
+     * @return RecordLiveUrl 
+     */
+    public String getRecordLiveUrl() {
+        return this.RecordLiveUrl;
+    }
+
+    /**
+     * Set 
+     * @param RecordLiveUrl 
+     */
+    public void setRecordLiveUrl(String RecordLiveUrl) {
+        this.RecordLiveUrl = RecordLiveUrl;
+    }
+
+    /**
+     * Get  
+     * @return EnableAutoStart 
+     */
+    public Long getEnableAutoStart() {
+        return this.EnableAutoStart;
+    }
+
+    /**
+     * Set 
+     * @param EnableAutoStart 
+     */
+    public void setEnableAutoStart(Long EnableAutoStart) {
+        this.EnableAutoStart = EnableAutoStart;
+    }
+
+    /**
+     * Get  
+     * @return RecordBackground 
+     */
+    public String getRecordBackground() {
+        return this.RecordBackground;
+    }
+
+    /**
+     * Set 
+     * @param RecordBackground 
+     */
+    public void setRecordBackground(String RecordBackground) {
+        this.RecordBackground = RecordBackground;
+    }
+
+    /**
+     * Get  
+     * @return RecordScene 
+     */
+    public String getRecordScene() {
+        return this.RecordScene;
+    }
+
+    /**
+     * Set 
+     * @param RecordScene 
+     */
+    public void setRecordScene(String RecordScene) {
+        this.RecordScene = RecordScene;
+    }
+
+    /**
+     * Get  
+     * @return RecordLang 
+     */
+    public String getRecordLang() {
+        return this.RecordLang;
+    }
+
+    /**
+     * Set 
+     * @param RecordLang 
+     */
+    public void setRecordLang(String RecordLang) {
+        this.RecordLang = RecordLang;
+    }
+
     public RoomItem() {
     }
 
@@ -444,6 +697,39 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.EnableDirectControl != null) {
             this.EnableDirectControl = new Long(source.EnableDirectControl);
         }
+        if (source.InteractionMode != null) {
+            this.InteractionMode = new Long(source.InteractionMode);
+        }
+        if (source.VideoOrientation != null) {
+            this.VideoOrientation = new Long(source.VideoOrientation);
+        }
+        if (source.IsGradingRequiredPostClass != null) {
+            this.IsGradingRequiredPostClass = new Long(source.IsGradingRequiredPostClass);
+        }
+        if (source.RoomType != null) {
+            this.RoomType = new Long(source.RoomType);
+        }
+        if (source.EndDelayTime != null) {
+            this.EndDelayTime = new Long(source.EndDelayTime);
+        }
+        if (source.LiveType != null) {
+            this.LiveType = new Long(source.LiveType);
+        }
+        if (source.RecordLiveUrl != null) {
+            this.RecordLiveUrl = new String(source.RecordLiveUrl);
+        }
+        if (source.EnableAutoStart != null) {
+            this.EnableAutoStart = new Long(source.EnableAutoStart);
+        }
+        if (source.RecordBackground != null) {
+            this.RecordBackground = new String(source.RecordBackground);
+        }
+        if (source.RecordScene != null) {
+            this.RecordScene = new String(source.RecordScene);
+        }
+        if (source.RecordLang != null) {
+            this.RecordLang = new String(source.RecordLang);
+        }
     }
 
 
@@ -464,6 +750,17 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
         this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+        this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+        this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+        this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+        this.setParamSimple(map, prefix + "LiveType", this.LiveType);
+        this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+        this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+        this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+        this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
+        this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
 
     }
 }

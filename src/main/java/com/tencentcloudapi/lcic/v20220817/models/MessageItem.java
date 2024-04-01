@@ -48,6 +48,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ImageMessage;
 
     /**
+    * Customize the message content. Vaild when message type=2.
+    */
+    @SerializedName("CustomMessage")
+    @Expose
+    private CustomMsgContent CustomMessage;
+
+    /**
      * Get The message type. `0`: Text; `1`: Image.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MessageType The message type. `0`: Text; `1`: Image.
@@ -107,6 +114,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ImageMessage = ImageMessage;
     }
 
+    /**
+     * Get Customize the message content. Vaild when message type=2. 
+     * @return CustomMessage Customize the message content. Vaild when message type=2.
+     */
+    public CustomMsgContent getCustomMessage() {
+        return this.CustomMessage;
+    }
+
+    /**
+     * Set Customize the message content. Vaild when message type=2.
+     * @param CustomMessage Customize the message content. Vaild when message type=2.
+     */
+    public void setCustomMessage(CustomMsgContent CustomMessage) {
+        this.CustomMessage = CustomMessage;
+    }
+
     public MessageItem() {
     }
 
@@ -124,6 +147,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ImageMessage != null) {
             this.ImageMessage = new String(source.ImageMessage);
         }
+        if (source.CustomMessage != null) {
+            this.CustomMessage = new CustomMsgContent(source.CustomMessage);
+        }
     }
 
 
@@ -134,6 +160,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MessageType", this.MessageType);
         this.setParamSimple(map, prefix + "TextMessage", this.TextMessage);
         this.setParamSimple(map, prefix + "ImageMessage", this.ImageMessage);
+        this.setParamObj(map, prefix + "CustomMessage.", this.CustomMessage);
 
     }
 }

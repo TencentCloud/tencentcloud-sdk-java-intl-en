@@ -31,6 +31,13 @@ public class DescribeRoomRequest extends AbstractModel {
     private Long RoomId;
 
     /**
+    * Request RTMP  stream link, 0: no, 1: yes, default is 0.
+    */
+    @SerializedName("RTMPStreamingURL")
+    @Expose
+    private Long RTMPStreamingURL;
+
+    /**
      * Get Room ID	 
      * @return RoomId Room ID	
      */
@@ -46,6 +53,22 @@ public class DescribeRoomRequest extends AbstractModel {
         this.RoomId = RoomId;
     }
 
+    /**
+     * Get Request RTMP  stream link, 0: no, 1: yes, default is 0. 
+     * @return RTMPStreamingURL Request RTMP  stream link, 0: no, 1: yes, default is 0.
+     */
+    public Long getRTMPStreamingURL() {
+        return this.RTMPStreamingURL;
+    }
+
+    /**
+     * Set Request RTMP  stream link, 0: no, 1: yes, default is 0.
+     * @param RTMPStreamingURL Request RTMP  stream link, 0: no, 1: yes, default is 0.
+     */
+    public void setRTMPStreamingURL(Long RTMPStreamingURL) {
+        this.RTMPStreamingURL = RTMPStreamingURL;
+    }
+
     public DescribeRoomRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeRoomRequest extends AbstractModel {
         if (source.RoomId != null) {
             this.RoomId = new Long(source.RoomId);
         }
+        if (source.RTMPStreamingURL != null) {
+            this.RTMPStreamingURL = new Long(source.RTMPStreamingURL);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeRoomRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
 
     }
 }

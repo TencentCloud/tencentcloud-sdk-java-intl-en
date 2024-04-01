@@ -152,6 +152,83 @@ public class CreateRoomRequest extends AbstractModel {
     private Long EnableDirectControl;
 
     /**
+    * Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+    */
+    @SerializedName("InteractionMode")
+    @Expose
+    private Long InteractionMode;
+
+    /**
+    * Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+    */
+    @SerializedName("VideoOrientation")
+    @Expose
+    private Long VideoOrientation;
+
+    /**
+    * Enable after-class grading. 0: not on (default) 1: on
+    */
+    @SerializedName("IsGradingRequiredPostClass")
+    @Expose
+    private Long IsGradingRequiredPostClass;
+
+    /**
+    * Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private Long RoomType;
+
+    /**
+    * Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+    */
+    @SerializedName("EndDelayTime")
+    @Expose
+    private Long EndDelayTime;
+
+    /**
+    * Live type: 0 regular (default) 1 Simulated Live
+    */
+    @SerializedName("LiveType")
+    @Expose
+    private Long LiveType;
+
+    /**
+    * Simulated Live link
+    */
+    @SerializedName("RecordLiveUrl")
+    @Expose
+    private String RecordLiveUrl;
+
+    /**
+    * Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+    */
+    @SerializedName("EnableAutoStart")
+    @Expose
+    private Long EnableAutoStart;
+
+    /**
+    * Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+    */
+    @SerializedName("RecordBackground")
+    @Expose
+    private String RecordBackground;
+
+    /**
+    * Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+    */
+    @SerializedName("RecordScene")
+    @Expose
+    private String RecordScene;
+
+    /**
+    * Record customized language, only when recordlayout=9, this parameter is valid.
+    */
+    @SerializedName("RecordLang")
+    @Expose
+    private String RecordLang;
+
+    /**
      * Get Room name 
      * @return Name Room name
      */
@@ -447,6 +524,186 @@ public class CreateRoomRequest extends AbstractModel {
         this.EnableDirectControl = EnableDirectControl;
     }
 
+    /**
+     * Get Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants 
+     * @return InteractionMode Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+     */
+    public Long getInteractionMode() {
+        return this.InteractionMode;
+    }
+
+    /**
+     * Set Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+     * @param InteractionMode Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+     */
+    public void setInteractionMode(Long InteractionMode) {
+        this.InteractionMode = InteractionMode;
+    }
+
+    /**
+     * Get Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type 
+     * @return VideoOrientation Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+     */
+    public Long getVideoOrientation() {
+        return this.VideoOrientation;
+    }
+
+    /**
+     * Set Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+     * @param VideoOrientation Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+     */
+    public void setVideoOrientation(Long VideoOrientation) {
+        this.VideoOrientation = VideoOrientation;
+    }
+
+    /**
+     * Get Enable after-class grading. 0: not on (default) 1: on 
+     * @return IsGradingRequiredPostClass Enable after-class grading. 0: not on (default) 1: on
+     */
+    public Long getIsGradingRequiredPostClass() {
+        return this.IsGradingRequiredPostClass;
+    }
+
+    /**
+     * Set Enable after-class grading. 0: not on (default) 1: on
+     * @param IsGradingRequiredPostClass Enable after-class grading. 0: not on (default) 1: on
+     */
+    public void setIsGradingRequiredPostClass(Long IsGradingRequiredPostClass) {
+        this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;
+    }
+
+    /**
+     * Get Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class) 
+     * @return RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public Long getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     * @param RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public void setRoomType(Long RoomType) {
+        this.RoomType = RoomType;
+    }
+
+    /**
+     * Get Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes. 
+     * @return EndDelayTime Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+     */
+    public Long getEndDelayTime() {
+        return this.EndDelayTime;
+    }
+
+    /**
+     * Set Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+     * @param EndDelayTime Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+     */
+    public void setEndDelayTime(Long EndDelayTime) {
+        this.EndDelayTime = EndDelayTime;
+    }
+
+    /**
+     * Get Live type: 0 regular (default) 1 Simulated Live 
+     * @return LiveType Live type: 0 regular (default) 1 Simulated Live
+     */
+    public Long getLiveType() {
+        return this.LiveType;
+    }
+
+    /**
+     * Set Live type: 0 regular (default) 1 Simulated Live
+     * @param LiveType Live type: 0 regular (default) 1 Simulated Live
+     */
+    public void setLiveType(Long LiveType) {
+        this.LiveType = LiveType;
+    }
+
+    /**
+     * Get Simulated Live link 
+     * @return RecordLiveUrl Simulated Live link
+     */
+    public String getRecordLiveUrl() {
+        return this.RecordLiveUrl;
+    }
+
+    /**
+     * Set Simulated Live link
+     * @param RecordLiveUrl Simulated Live link
+     */
+    public void setRecordLiveUrl(String RecordLiveUrl) {
+        this.RecordLiveUrl = RecordLiveUrl;
+    }
+
+    /**
+     * Get Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when 
+     * @return EnableAutoStart Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+     */
+    public Long getEnableAutoStart() {
+        return this.EnableAutoStart;
+    }
+
+    /**
+     * Set Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+     * @param EnableAutoStart Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+     */
+    public void setEnableAutoStart(Long EnableAutoStart) {
+        this.EnableAutoStart = EnableAutoStart;
+    }
+
+    /**
+     * Get Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being 
+     * @return RecordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     */
+    public String getRecordBackground() {
+        return this.RecordBackground;
+    }
+
+    /**
+     * Set Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     * @param RecordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     */
+    public void setRecordBackground(String RecordBackground) {
+        this.RecordBackground = RecordBackground;
+    }
+
+    /**
+     * Get Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type. 
+     * @return RecordScene Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+     */
+    public String getRecordScene() {
+        return this.RecordScene;
+    }
+
+    /**
+     * Set Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+     * @param RecordScene Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+     */
+    public void setRecordScene(String RecordScene) {
+        this.RecordScene = RecordScene;
+    }
+
+    /**
+     * Get Record customized language, only when recordlayout=9, this parameter is valid. 
+     * @return RecordLang Record customized language, only when recordlayout=9, this parameter is valid.
+     * @deprecated
+     */
+    @Deprecated
+    public String getRecordLang() {
+        return this.RecordLang;
+    }
+
+    /**
+     * Set Record customized language, only when recordlayout=9, this parameter is valid.
+     * @param RecordLang Record customized language, only when recordlayout=9, this parameter is valid.
+     * @deprecated
+     */
+    @Deprecated
+    public void setRecordLang(String RecordLang) {
+        this.RecordLang = RecordLang;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -512,6 +769,39 @@ public class CreateRoomRequest extends AbstractModel {
         if (source.EnableDirectControl != null) {
             this.EnableDirectControl = new Long(source.EnableDirectControl);
         }
+        if (source.InteractionMode != null) {
+            this.InteractionMode = new Long(source.InteractionMode);
+        }
+        if (source.VideoOrientation != null) {
+            this.VideoOrientation = new Long(source.VideoOrientation);
+        }
+        if (source.IsGradingRequiredPostClass != null) {
+            this.IsGradingRequiredPostClass = new Long(source.IsGradingRequiredPostClass);
+        }
+        if (source.RoomType != null) {
+            this.RoomType = new Long(source.RoomType);
+        }
+        if (source.EndDelayTime != null) {
+            this.EndDelayTime = new Long(source.EndDelayTime);
+        }
+        if (source.LiveType != null) {
+            this.LiveType = new Long(source.LiveType);
+        }
+        if (source.RecordLiveUrl != null) {
+            this.RecordLiveUrl = new String(source.RecordLiveUrl);
+        }
+        if (source.EnableAutoStart != null) {
+            this.EnableAutoStart = new Long(source.EnableAutoStart);
+        }
+        if (source.RecordBackground != null) {
+            this.RecordBackground = new String(source.RecordBackground);
+        }
+        if (source.RecordScene != null) {
+            this.RecordScene = new String(source.RecordScene);
+        }
+        if (source.RecordLang != null) {
+            this.RecordLang = new String(source.RecordLang);
+        }
     }
 
 
@@ -537,6 +827,17 @@ public class CreateRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+        this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+        this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+        this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+        this.setParamSimple(map, prefix + "LiveType", this.LiveType);
+        this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+        this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+        this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+        this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
+        this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
 
     }
 }

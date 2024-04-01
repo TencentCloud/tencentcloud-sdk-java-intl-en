@@ -45,6 +45,20 @@ public class ModifyAppRequest extends AbstractModel {
     private String CallbackKey;
 
     /**
+    * Transfer Id
+    */
+    @SerializedName("TransferId")
+    @Expose
+    private String TransferId;
+
+    /**
+    * Transfer Url
+    */
+    @SerializedName("TransferUrl")
+    @Expose
+    private String TransferUrl;
+
+    /**
      * Get LCIC SdkAppId 
      * @return SdkAppId LCIC SdkAppId
      */
@@ -92,6 +106,38 @@ public class ModifyAppRequest extends AbstractModel {
         this.CallbackKey = CallbackKey;
     }
 
+    /**
+     * Get Transfer Id 
+     * @return TransferId Transfer Id
+     */
+    public String getTransferId() {
+        return this.TransferId;
+    }
+
+    /**
+     * Set Transfer Id
+     * @param TransferId Transfer Id
+     */
+    public void setTransferId(String TransferId) {
+        this.TransferId = TransferId;
+    }
+
+    /**
+     * Get Transfer Url 
+     * @return TransferUrl Transfer Url
+     */
+    public String getTransferUrl() {
+        return this.TransferUrl;
+    }
+
+    /**
+     * Set Transfer Url
+     * @param TransferUrl Transfer Url
+     */
+    public void setTransferUrl(String TransferUrl) {
+        this.TransferUrl = TransferUrl;
+    }
+
     public ModifyAppRequest() {
     }
 
@@ -109,6 +155,12 @@ public class ModifyAppRequest extends AbstractModel {
         if (source.CallbackKey != null) {
             this.CallbackKey = new String(source.CallbackKey);
         }
+        if (source.TransferId != null) {
+            this.TransferId = new String(source.TransferId);
+        }
+        if (source.TransferUrl != null) {
+            this.TransferUrl = new String(source.TransferUrl);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Callback", this.Callback);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "TransferId", this.TransferId);
+        this.setParamSimple(map, prefix + "TransferUrl", this.TransferUrl);
 
     }
 }

@@ -101,21 +101,21 @@ public class MemberRecord extends AbstractModel {
     private Long Rewords;
 
     /**
-    * The user’s IP address.
+    * The user's IP address.
     */
     @SerializedName("IPAddress")
     @Expose
     private String IPAddress;
 
     /**
-    * The user’s location.
+    * The user's location.
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+    * The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
     */
     @SerializedName("Device")
     @Expose
@@ -164,6 +164,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("Stage")
     @Expose
     private Long Stage;
+
+    /**
+    * User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+    */
+    @SerializedName("CurrentState")
+    @Expose
+    private Long CurrentState;
 
     /**
      * Get User ID 
@@ -342,48 +349,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The user’s IP address. 
-     * @return IPAddress The user’s IP address.
+     * Get The user's IP address. 
+     * @return IPAddress The user's IP address.
      */
     public String getIPAddress() {
         return this.IPAddress;
     }
 
     /**
-     * Set The user’s IP address.
-     * @param IPAddress The user’s IP address.
+     * Set The user's IP address.
+     * @param IPAddress The user's IP address.
      */
     public void setIPAddress(String IPAddress) {
         this.IPAddress = IPAddress;
     }
 
     /**
-     * Get The user’s location. 
-     * @return Location The user’s location.
+     * Get The user's location. 
+     * @return Location The user's location.
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set The user’s location.
-     * @param Location The user’s location.
+     * Set The user's location.
+     * @param Location The user's location.
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program. 
-     * @return Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * Get The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program. 
+     * @return Device The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      */
     public Long getDevice() {
         return this.Device;
     }
 
     /**
-     * Set The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-     * @param Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * Set The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * @param Device The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      */
     public void setDevice(Long Device) {
         this.Device = Device;
@@ -493,6 +500,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Stage = Stage;
     }
 
+    /**
+     * Get User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline 
+     * @return CurrentState User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+     */
+    public Long getCurrentState() {
+        return this.CurrentState;
+    }
+
+    /**
+     * Set User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+     * @param CurrentState User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+     */
+    public void setCurrentState(Long CurrentState) {
+        this.CurrentState = CurrentState;
+    }
+
     public MemberRecord() {
     }
 
@@ -564,6 +587,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Stage != null) {
             this.Stage = new Long(source.Stage);
         }
+        if (source.CurrentState != null) {
+            this.CurrentState = new Long(source.CurrentState);
+        }
     }
 
 
@@ -591,6 +617,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
         this.setParamSimple(map, prefix + "Stage", this.Stage);
+        this.setParamSimple(map, prefix + "CurrentState", this.CurrentState);
 
     }
 }

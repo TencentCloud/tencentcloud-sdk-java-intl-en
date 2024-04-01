@@ -31,7 +31,7 @@ public class DocumentInfo extends AbstractModel {
     private String DocumentId;
 
     /**
-    * The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+    * The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DocumentUrl")
     @Expose
@@ -45,7 +45,7 @@ public class DocumentInfo extends AbstractModel {
     private String DocumentName;
 
     /**
-    * The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+    * The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Owner")
     @Expose
@@ -154,6 +154,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Cover;
 
     /**
+    * Document preview address
+    */
+    @SerializedName("Preview")
+    @Expose
+    private String Preview;
+
+    /**
      * Get The document ID. Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -170,16 +177,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The document's original URL. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DocumentUrl The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDocumentUrl() {
         return this.DocumentUrl;
     }
 
     /**
-     * Set The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DocumentUrl The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDocumentUrl(String DocumentUrl) {
         this.DocumentUrl = DocumentUrl;
@@ -202,16 +209,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Owner The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Owner The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
@@ -457,6 +464,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Cover = Cover;
     }
 
+    /**
+     * Get Document preview address 
+     * @return Preview Document preview address
+     */
+    public String getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set Document preview address
+     * @param Preview Document preview address
+     */
+    public void setPreview(String Preview) {
+        this.Preview = Preview;
+    }
+
     public DocumentInfo() {
     }
 
@@ -519,6 +542,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Cover != null) {
             this.Cover = new String(source.Cover);
         }
+        if (source.Preview != null) {
+            this.Preview = new String(source.Preview);
+        }
     }
 
 
@@ -544,6 +570,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Cover", this.Cover);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
 
     }
 }

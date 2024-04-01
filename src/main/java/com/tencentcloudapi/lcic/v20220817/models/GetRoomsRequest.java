@@ -60,6 +60,13 @@ public class GetRoomsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long [] Status;
+
+    /**
      * Get The SDKAppID assigned by LCIC.
  
      * @return SdkAppId The SDKAppID assigned by LCIC.
@@ -143,6 +150,22 @@ public class GetRoomsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired 
+     * @return Status Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+     */
+    public Long [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+     * @param Status Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+     */
+    public void setStatus(Long [] Status) {
+        this.Status = Status;
+    }
+
     public GetRoomsRequest() {
     }
 
@@ -166,6 +189,12 @@ public class GetRoomsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
     }
 
 
@@ -178,6 +207,7 @@ public class GetRoomsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
 
     }
 }

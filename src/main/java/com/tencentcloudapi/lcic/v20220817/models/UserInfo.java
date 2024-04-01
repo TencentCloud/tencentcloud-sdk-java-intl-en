@@ -56,6 +56,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Avatar;
 
     /**
+    * User's Id in the client system
+    */
+    @SerializedName("OriginId")
+    @Expose
+    private String OriginId;
+
+    /**
      * Get 
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SdkAppId 
@@ -135,6 +142,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Avatar = Avatar;
     }
 
+    /**
+     * Get User's Id in the client system 
+     * @return OriginId User's Id in the client system
+     */
+    public String getOriginId() {
+        return this.OriginId;
+    }
+
+    /**
+     * Set User's Id in the client system
+     * @param OriginId User's Id in the client system
+     */
+    public void setOriginId(String OriginId) {
+        this.OriginId = OriginId;
+    }
+
     public UserInfo() {
     }
 
@@ -155,6 +178,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Avatar != null) {
             this.Avatar = new String(source.Avatar);
         }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
     }
 
 
@@ -166,6 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
+        this.setParamSimple(map, prefix + "OriginId", this.OriginId);
 
     }
 }
