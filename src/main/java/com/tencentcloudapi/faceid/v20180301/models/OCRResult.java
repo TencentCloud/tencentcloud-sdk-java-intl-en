@@ -53,6 +53,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
+    * Base64 of cropped image of ID card
+    */
+    @SerializedName("CardCutImageBase64")
+    @Expose
+    private String CardCutImageBase64;
+
+    /**
+    * Base64 of the cropped image on the reverse side of the ID card
+    */
+    @SerializedName("CardBackCutImageBase64")
+    @Expose
+    private String CardBackCutImageBase64;
+
+    /**
      * Get Is the indentity verification or OCR process passed 
      * @return IsPass Is the indentity verification or OCR process passed
      */
@@ -120,6 +134,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    /**
+     * Get Base64 of cropped image of ID card 
+     * @return CardCutImageBase64 Base64 of cropped image of ID card
+     */
+    public String getCardCutImageBase64() {
+        return this.CardCutImageBase64;
+    }
+
+    /**
+     * Set Base64 of cropped image of ID card
+     * @param CardCutImageBase64 Base64 of cropped image of ID card
+     */
+    public void setCardCutImageBase64(String CardCutImageBase64) {
+        this.CardCutImageBase64 = CardCutImageBase64;
+    }
+
+    /**
+     * Get Base64 of the cropped image on the reverse side of the ID card 
+     * @return CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+     */
+    public String getCardBackCutImageBase64() {
+        return this.CardBackCutImageBase64;
+    }
+
+    /**
+     * Set Base64 of the cropped image on the reverse side of the ID card
+     * @param CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+     */
+    public void setCardBackCutImageBase64(String CardBackCutImageBase64) {
+        this.CardBackCutImageBase64 = CardBackCutImageBase64;
+    }
+
     public OCRResult() {
     }
 
@@ -140,6 +186,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
+        if (source.CardCutImageBase64 != null) {
+            this.CardCutImageBase64 = new String(source.CardCutImageBase64);
+        }
+        if (source.CardBackCutImageBase64 != null) {
+            this.CardBackCutImageBase64 = new String(source.CardBackCutImageBase64);
+        }
     }
 
 
@@ -151,6 +203,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CardImageBase64", this.CardImageBase64);
         this.setParamObj(map, prefix + "CardInfo.", this.CardInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
+        this.setParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
 
     }
 }
