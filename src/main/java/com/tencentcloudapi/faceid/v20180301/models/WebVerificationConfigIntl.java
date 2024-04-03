@@ -75,6 +75,41 @@ Example: HKIDCard
     private Boolean DisableCheckOcrWarnings;
 
     /**
+    * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+    */
+    @SerializedName("SecurityLevel")
+    @Expose
+    private Long SecurityLevel;
+
+    /**
+    * Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+    */
+    @SerializedName("SkipPrivacyPolicy")
+    @Expose
+    private Boolean SkipPrivacyPolicy;
+
+    /**
+    * The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+    */
+    @SerializedName("IdCardCutReturn")
+    @Expose
+    private Boolean IdCardCutReturn;
+
+    /**
+    * Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+    */
+    @SerializedName("ThemeColor")
+    @Expose
+    private String ThemeColor;
+
+    /**
+    * International language, the default value is en (English). Currently supported: th: Thai; en: English;
+    */
+    @SerializedName("Language")
+    @Expose
+    private String Language;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -218,6 +253,86 @@ Example: HKIDCard
         this.DisableCheckOcrWarnings = DisableCheckOcrWarnings;
     }
 
+    /**
+     * Get Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3 
+     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     */
+    public Long getSecurityLevel() {
+        return this.SecurityLevel;
+    }
+
+    /**
+     * Set Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     * @param SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     */
+    public void setSecurityLevel(Long SecurityLevel) {
+        this.SecurityLevel = SecurityLevel;
+    }
+
+    /**
+     * Get Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. 
+     * @return SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     */
+    public Boolean getSkipPrivacyPolicy() {
+        return this.SkipPrivacyPolicy;
+    }
+
+    /**
+     * Set Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     * @param SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     */
+    public void setSkipPrivacyPolicy(Boolean SkipPrivacyPolicy) {
+        this.SkipPrivacyPolicy = SkipPrivacyPolicy;
+    }
+
+    /**
+     * Get The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed. 
+     * @return IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     */
+    public Boolean getIdCardCutReturn() {
+        return this.IdCardCutReturn;
+    }
+
+    /**
+     * Set The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     * @param IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     */
+    public void setIdCardCutReturn(Boolean IdCardCutReturn) {
+        this.IdCardCutReturn = IdCardCutReturn;
+    }
+
+    /**
+     * Get Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used. 
+     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     */
+    public String getThemeColor() {
+        return this.ThemeColor;
+    }
+
+    /**
+     * Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     * @param ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     */
+    public void setThemeColor(String ThemeColor) {
+        this.ThemeColor = ThemeColor;
+    }
+
+    /**
+     * Get International language, the default value is en (English). Currently supported: th: Thai; en: English; 
+     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     */
+    public String getLanguage() {
+        return this.Language;
+    }
+
+    /**
+     * Set International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     * @param Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     */
+    public void setLanguage(String Language) {
+        this.Language = Language;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -241,6 +356,21 @@ Example: HKIDCard
         if (source.DisableCheckOcrWarnings != null) {
             this.DisableCheckOcrWarnings = new Boolean(source.DisableCheckOcrWarnings);
         }
+        if (source.SecurityLevel != null) {
+            this.SecurityLevel = new Long(source.SecurityLevel);
+        }
+        if (source.SkipPrivacyPolicy != null) {
+            this.SkipPrivacyPolicy = new Boolean(source.SkipPrivacyPolicy);
+        }
+        if (source.IdCardCutReturn != null) {
+            this.IdCardCutReturn = new Boolean(source.IdCardCutReturn);
+        }
+        if (source.ThemeColor != null) {
+            this.ThemeColor = new String(source.ThemeColor);
+        }
+        if (source.Language != null) {
+            this.Language = new String(source.Language);
+        }
     }
 
 
@@ -253,6 +383,11 @@ Example: HKIDCard
         this.setParamSimple(map, prefix + "CheckMode", this.CheckMode);
         this.setParamSimple(map, prefix + "IDCardType", this.IDCardType);
         this.setParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
+        this.setParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
+        this.setParamSimple(map, prefix + "SkipPrivacyPolicy", this.SkipPrivacyPolicy);
+        this.setParamSimple(map, prefix + "IdCardCutReturn", this.IdCardCutReturn);
+        this.setParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
+        this.setParamSimple(map, prefix + "Language", this.Language);
 
     }
 }
