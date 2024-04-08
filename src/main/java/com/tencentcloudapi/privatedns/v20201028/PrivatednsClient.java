@@ -72,6 +72,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a DNS record for a private domain.
+     * @param req DeletePrivateZoneRecordRequest
+     * @return DeletePrivateZoneRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(DeletePrivateZoneRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrivateZoneRecord", DeletePrivateZoneRecordResponse.class);
+    }
+
+    /**
      *This API is used to get the VPC list of a Private DNS account.
      * @param req DescribeAccountVpcListRequest
      * @return DescribeAccountVpcListResponse
@@ -113,6 +124,28 @@ public class PrivatednsClient extends AbstractClient{
     public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(DescribePrivateDNSAccountListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePrivateDNSAccountList", DescribePrivateDNSAccountListResponse.class);
+    }
+
+    /**
+     *This API is used to get the list of private domains.
+     * @param req DescribePrivateZoneListRequest
+     * @return DescribePrivateZoneListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateZoneListResponse DescribePrivateZoneList(DescribePrivateZoneListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateZoneList", DescribePrivateZoneListResponse.class);
+    }
+
+    /**
+     *This API is used to get the list of records for a private domain.
+     * @param req DescribePrivateZoneRecordListRequest
+     * @return DescribePrivateZoneRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(DescribePrivateZoneRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateZoneRecordList", DescribePrivateZoneRecordListResponse.class);
     }
 
     /**
