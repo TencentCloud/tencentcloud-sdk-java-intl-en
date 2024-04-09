@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AttachPluginRequest extends AbstractModel {
 
     /**
-    * ID of the plugin to be bound
+    * ID of the plugin to be bound.
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * Service ID
+    * Service ID.
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * API environment
+    * API environment.
     */
     @SerializedName("EnvironmentName")
     @Expose
     private String EnvironmentName;
 
     /**
-    * List of APIs bound with the plugin
+    * List of APIs bound with the plugin.
     */
     @SerializedName("ApiIds")
     @Expose
     private String [] ApiIds;
 
     /**
-     * Get ID of the plugin to be bound 
-     * @return PluginId ID of the plugin to be bound
+     * Get ID of the plugin to be bound. 
+     * @return PluginId ID of the plugin to be bound.
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set ID of the plugin to be bound
-     * @param PluginId ID of the plugin to be bound
+     * Set ID of the plugin to be bound.
+     * @param PluginId ID of the plugin to be bound.
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get Service ID 
-     * @return ServiceId Service ID
+     * Get Service ID. 
+     * @return ServiceId Service ID.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Service ID
-     * @param ServiceId Service ID
+     * Set Service ID.
+     * @param ServiceId Service ID.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get API environment 
-     * @return EnvironmentName API environment
+     * Get API environment. 
+     * @return EnvironmentName API environment.
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
     }
 
     /**
-     * Set API environment
-     * @param EnvironmentName API environment
+     * Set API environment.
+     * @param EnvironmentName API environment.
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;
     }
 
     /**
-     * Get List of APIs bound with the plugin 
-     * @return ApiIds List of APIs bound with the plugin
+     * Get List of APIs bound with the plugin. 
+     * @return ApiIds List of APIs bound with the plugin.
      */
     public String [] getApiIds() {
         return this.ApiIds;
     }
 
     /**
-     * Set List of APIs bound with the plugin
-     * @param ApiIds List of APIs bound with the plugin
+     * Set List of APIs bound with the plugin.
+     * @param ApiIds List of APIs bound with the plugin.
      */
     public void setApiIds(String [] ApiIds) {
         this.ApiIds = ApiIds;

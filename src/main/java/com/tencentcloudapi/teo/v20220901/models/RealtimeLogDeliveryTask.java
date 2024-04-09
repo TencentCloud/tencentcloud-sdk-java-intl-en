@@ -101,24 +101,21 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private Long Sample;
 
     /**
-    * The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CLS")
     @Expose
     private CLSTopic CLS;
 
     /**
-    * The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CustomEndpoint")
     @Expose
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("S3")
     @Expose
@@ -315,60 +312,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CLS The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CLS Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CLSTopic getCLS() {
         return this.CLS;
     }
 
     /**
-     * Set The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CLS The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CLS Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCLS(CLSTopic CLS) {
         this.CLS = CLS;
     }
 
     /**
-     * Get The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CustomEndpoint The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CustomEndpoint getCustomEndpoint() {
         return this.CustomEndpoint;
     }
 
     /**
-     * Set The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomEndpoint The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
         this.CustomEndpoint = CustomEndpoint;
     }
 
     /**
-     * Get The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return S3 The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return S3 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public S3 getS3() {
         return this.S3;
     }
 
     /**
-     * Set The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3 The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param S3 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setS3(S3 S3) {
         this.S3 = S3;

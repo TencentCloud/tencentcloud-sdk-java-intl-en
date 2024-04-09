@@ -71,7 +71,7 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`:   All protocols. </li>If it’s not specified, `all` is used. This parameter is not yet available now.
+<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
     */
     @SerializedName("Protocol")
     @Expose
@@ -82,7 +82,7 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
     */
     @SerializedName("Interval")
     @Expose
@@ -90,10 +90,10 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
     * Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
-<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
+<li>domains: Filter based on domain name. </li>
+<li>tagKey: Filter based on Tag Key. </li>
+<li>tagValue: Filter based on Tag Value. </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -226,12 +226,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`:   All protocols. </li>If it’s not specified, `all` is used. This parameter is not yet available now. 
+<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now. 
      * @return Protocol The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`:   All protocols. </li>If it’s not specified, `all` is used. This parameter is not yet available now.
+<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      */
     public String getProtocol() {
         return this.Protocol;
@@ -242,12 +242,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`:   All protocols. </li>If it’s not specified, `all` is used. This parameter is not yet available now.
+<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      * @param Protocol The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`:   All protocols. </li>If it’s not specified, `all` is used. This parameter is not yet available now.
+<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -258,12 +258,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`. 
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`. 
      * @return Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      */
     public String getInterval() {
         return this.Interval;
@@ -274,12 +274,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      * @param Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -287,15 +287,15 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
      * Get Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
-<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li> 
+<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
+<li>domains: Filter based on domain name. </li>
+<li>tagKey: Filter based on Tag Key. </li>
+<li>tagValue: Filter based on Tag Value. </li> 
      * @return Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
-<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
+<li>domains: Filter based on domain name. </li>
+<li>tagKey: Filter based on Tag Key. </li>
+<li>tagValue: Filter based on Tag Value. </li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
@@ -303,15 +303,15 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
      * Set Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
-<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
+<li>domains: Filter based on domain name. </li>
+<li>tagKey: Filter based on Tag Key. </li>
+<li>tagValue: Filter based on Tag Value. </li>
      * @param Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
-<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
+<li>domains: Filter based on domain name. </li>
+<li>tagKey: Filter based on Tag Key. </li>
+<li>tagValue: Filter based on Tag Value. </li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

@@ -197,8 +197,6 @@ This API is not fully available for the time being. For more information, contac
 
     /**
      *This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
-
-This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
      * @param req MLIDPassportOCRRequest
      * @return MLIDPassportOCRResponse
      * @throws TencentCloudSDKException

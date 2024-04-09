@@ -45,9 +45,9 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel {
     private String RuleId;
 
     /**
-    * The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+    * Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -174,24 +174,24 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified. 
-     * @return OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+     * Get Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li> 
+     * @return OriginType Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
-     * @param OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+     * Set Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
+     * @param OriginType Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;

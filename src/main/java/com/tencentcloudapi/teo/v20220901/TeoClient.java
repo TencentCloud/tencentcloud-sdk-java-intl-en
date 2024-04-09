@@ -219,8 +219,8 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
-     *This API is used to create real-time log delivery tasks. This API has the following restrictions:
-Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+     *This API is used to create a real-time log delivery task. The following limits apply:
+An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combination of the same data delivery type (LogType) and data delivery area (Area) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) API to check whether the entity has been added to another real-time log delivery task.
      * @param req CreateRealtimeLogDeliveryTaskRequest
      * @return CreateRealtimeLogDeliveryTaskResponse
      * @throws TencentCloudSDKException
@@ -714,6 +714,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeRulesSettingResponse DescribeRulesSetting(DescribeRulesSettingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRulesSetting", DescribeRulesSettingResponse.class);
+    }
+
+    /**
+     *This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
+     * @param req DescribeSecurityIPGroupInfoRequest
+     * @return DescribeSecurityIPGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(DescribeSecurityIPGroupInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityIPGroupInfo", DescribeSecurityIPGroupInfoResponse.class);
     }
 
     /**

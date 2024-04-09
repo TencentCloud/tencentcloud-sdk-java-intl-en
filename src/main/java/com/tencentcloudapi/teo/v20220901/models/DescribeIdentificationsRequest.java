@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeIdentificationsRequest extends AbstractModel {
 
     /**
-    * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
+    * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -46,20 +45,16 @@ public class DescribeIdentificationsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li> 
-     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
+     * Get Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li> 
+     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
-     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
+     * Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+     * @param Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

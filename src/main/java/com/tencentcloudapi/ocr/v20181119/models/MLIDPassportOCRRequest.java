@@ -31,11 +31,23 @@ public class MLIDPassportOCRRequest extends AbstractModel {
     private String ImageBase64;
 
     /**
-    * Whether to return an image. Default value: false.
+    * Whether to return an image. 
+Default value: false.
     */
     @SerializedName("RetImage")
     @Expose
     private Boolean RetImage;
+
+    /**
+    * URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+    */
+    @SerializedName("ImageUrl")
+    @Expose
+    private String ImageUrl;
 
     /**
      * Get Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image. 
@@ -54,19 +66,55 @@ public class MLIDPassportOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to return an image. Default value: false. 
-     * @return RetImage Whether to return an image. Default value: false.
+     * Get Whether to return an image. 
+Default value: false. 
+     * @return RetImage Whether to return an image. 
+Default value: false.
      */
     public Boolean getRetImage() {
         return this.RetImage;
     }
 
     /**
-     * Set Whether to return an image. Default value: false.
-     * @param RetImage Whether to return an image. Default value: false.
+     * Set Whether to return an image. 
+Default value: false.
+     * @param RetImage Whether to return an image. 
+Default value: false.
      */
     public void setRetImage(Boolean RetImage) {
         this.RetImage = RetImage;
+    }
+
+    /**
+     * Get URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low. 
+     * @return ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public String getImageUrl() {
+        return this.ImageUrl;
+    }
+
+    /**
+     * Set URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
     }
 
     public MLIDPassportOCRRequest() {
@@ -83,6 +131,9 @@ public class MLIDPassportOCRRequest extends AbstractModel {
         if (source.RetImage != null) {
             this.RetImage = new Boolean(source.RetImage);
         }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
     }
 
 
@@ -92,6 +143,7 @@ public class MLIDPassportOCRRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "RetImage", this.RetImage);
+        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
 
     }
 }

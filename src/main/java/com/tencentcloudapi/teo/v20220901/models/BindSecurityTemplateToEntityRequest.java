@@ -48,7 +48,11 @@ public class BindSecurityTemplateToEntityRequest extends AbstractModel {
     private String Operate;
 
     /**
-    * Specifies the policy template ID to bind or unbind.
+    * Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -124,16 +128,32 @@ public class BindSecurityTemplateToEntityRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the policy template ID to bind or unbind. 
-     * @return TemplateId Specifies the policy template ID to bind or unbind.
+     * Get Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding. 
+     * @return TemplateId Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Specifies the policy template ID to bind or unbind.
-     * @param TemplateId Specifies the policy template ID to bind or unbind.
+     * Set Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
+     * @param TemplateId Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

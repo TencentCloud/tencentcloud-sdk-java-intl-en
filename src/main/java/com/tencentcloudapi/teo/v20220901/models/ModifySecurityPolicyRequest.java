@@ -38,14 +38,20 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     private SecurityConfig SecurityConfig;
 
     /**
-    * The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+    * Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * The template ID. You must specify either this field or "Entity".
+    * Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -84,32 +90,56 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId". 
-     * @return Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+     * Get Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time. 
+     * @return Entity Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
-     * @param Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+     * Set Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+     * @param Entity Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
     }
 
     /**
-     * Get The template ID. You must specify either this field or "Entity". 
-     * @return TemplateId The template ID. You must specify either this field or "Entity".
+     * Get Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time. 
+     * @return TemplateId Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set The template ID. You must specify either this field or "Entity".
-     * @param TemplateId The template ID. You must specify either this field or "Entity".
+     * Set Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+     * @param TemplateId Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
