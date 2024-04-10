@@ -45,14 +45,14 @@ public class CreateCosRechargeRequest extends AbstractModel {
     private String Name;
 
     /**
-    * COS bucket.
+    * COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * Region where the COS bucket is located.
+    * The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -74,7 +74,7 @@ Default value: `minimalist_log`
     private String LogType;
 
     /**
-    * Valid values: "" (default), "gzip", "lzop", "snappy"
+    * Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
     */
     @SerializedName("Compress")
     @Expose
@@ -136,32 +136,32 @@ Default value: `minimalist_log`
     }
 
     /**
-     * Get COS bucket. 
-     * @return Bucket COS bucket.
+     * Get COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1). 
+     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS bucket.
-     * @param Bucket COS bucket.
+     * Set COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+     * @param Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get Region where the COS bucket is located. 
-     * @return BucketRegion Region where the COS bucket is located.
+     * Get The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1). 
+     * @return BucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set Region where the COS bucket is located.
-     * @param BucketRegion Region where the COS bucket is located.
+     * Set The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
+     * @param BucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
@@ -204,16 +204,16 @@ Default value: `minimalist_log`
     }
 
     /**
-     * Get Valid values: "" (default), "gzip", "lzop", "snappy" 
-     * @return Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+     * Get Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "". 
+     * @return Compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set Valid values: "" (default), "gzip", "lzop", "snappy"
-     * @param Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+     * Set Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+     * @param Compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

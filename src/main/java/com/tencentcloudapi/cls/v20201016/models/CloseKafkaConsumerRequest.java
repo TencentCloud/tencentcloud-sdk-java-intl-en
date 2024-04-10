@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CloseKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * CLS topic identifier
+    * Log Topic ID
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-     * Get CLS topic identifier 
-     * @return FromTopicId CLS topic identifier
+     * Get Log Topic ID 
+     * @return FromTopicId Log Topic ID
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set CLS topic identifier
-     * @param FromTopicId CLS topic identifier
+     * Set Log Topic ID
+     * @param FromTopicId Log Topic ID
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;

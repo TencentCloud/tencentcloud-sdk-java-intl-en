@@ -31,10 +31,7 @@ public class AlarmNotice extends AbstractModel {
     private String Name;
 
     /**
-    * Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+    * Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
     */
     @SerializedName("Type")
     @Expose
@@ -81,6 +78,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String UpdateTime;
 
     /**
+    * Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NoticeRules")
+    @Expose
+    private NoticeRule [] NoticeRules;
+
+    /**
      * Get Alarm notification template name 
      * @return Name Alarm notification template name
      */
@@ -97,28 +101,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared 
-     * @return Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * Get Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li> 
+     * @return Type Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-     * @param Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * Set Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
+     * @param Type Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -224,6 +216,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Notification rules.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NoticeRules Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public NoticeRule [] getNoticeRules() {
+        return this.NoticeRules;
+    }
+
+    /**
+     * Set Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NoticeRules Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNoticeRules(NoticeRule [] NoticeRules) {
+        this.NoticeRules = NoticeRules;
+    }
+
     public AlarmNotice() {
     }
 
@@ -259,6 +267,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.NoticeRules != null) {
+            this.NoticeRules = new NoticeRule[source.NoticeRules.length];
+            for (int i = 0; i < source.NoticeRules.length; i++) {
+                this.NoticeRules[i] = new NoticeRule(source.NoticeRules[i]);
+            }
+        }
     }
 
 
@@ -273,6 +287,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
 
     }
 }

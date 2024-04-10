@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class ConsumerContent extends AbstractModel {
 
     /**
-    * Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
+    * Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnableTag")
     @Expose
@@ -40,36 +40,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] MetaFields;
 
     /**
-    * This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
+    * When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagJsonNotTiled")
     @Expose
     private Boolean TagJsonNotTiled;
 
     /**
-    * Shipping timestamp precision in seconds (default) or milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TimestampAccuracy")
     @Expose
     private Long TimestampAccuracy;
 
     /**
-     * Get Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return EnableTag Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
+    * Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("JsonType")
+    @Expose
+    private Long JsonType;
+
+    /**
+     * Get Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnableTag Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEnableTag() {
         return this.EnableTag;
     }
 
     /**
-     * Set Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param EnableTag Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnableTag Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnableTag(Boolean EnableTag) {
         this.EnableTag = EnableTag;
@@ -96,43 +105,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TagJsonNotTiled When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getTagJsonNotTiled() {
         return this.TagJsonNotTiled;
     }
 
     /**
-     * Set This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TagJsonNotTiled When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagJsonNotTiled(Boolean TagJsonNotTiled) {
         this.TagJsonNotTiled = TagJsonNotTiled;
     }
 
     /**
-     * Get Shipping timestamp precision in seconds (default) or milliseconds
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TimestampAccuracy Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTimestampAccuracy() {
         return this.TimestampAccuracy;
     }
 
     /**
-     * Set Shipping timestamp precision in seconds (default) or milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TimestampAccuracy Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTimestampAccuracy(Long TimestampAccuracy) {
         this.TimestampAccuracy = TimestampAccuracy;
+    }
+
+    /**
+     * Get Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JsonType Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getJsonType() {
+        return this.JsonType;
+    }
+
+    /**
+     * Set Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JsonType Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setJsonType(Long JsonType) {
+        this.JsonType = JsonType;
     }
 
     public ConsumerContent() {
@@ -158,6 +191,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TimestampAccuracy != null) {
             this.TimestampAccuracy = new Long(source.TimestampAccuracy);
         }
+        if (source.JsonType != null) {
+            this.JsonType = new Long(source.JsonType);
+        }
     }
 
 
@@ -169,6 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
         this.setParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
         this.setParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
+        this.setParamSimple(map, prefix + "JsonType", this.JsonType);
 
     }
 }

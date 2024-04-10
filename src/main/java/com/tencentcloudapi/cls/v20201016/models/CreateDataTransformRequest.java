@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDataTransformRequest extends AbstractModel {
 
     /**
-    * Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+    * Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
     */
     @SerializedName("FuncType")
     @Expose
@@ -52,11 +52,19 @@ public class CreateDataTransformRequest extends AbstractModel {
     private String EtlContent;
 
     /**
-    * Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+    * Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
+
+    /**
+    * Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+    */
+    @SerializedName("DstResources")
+    @Expose
+    private DataTransformResouceInfo [] DstResources;
 
     /**
     * Task status. Valid values: 1 (enabled) and 2 (disabled).
@@ -66,13 +74,6 @@ public class CreateDataTransformRequest extends AbstractModel {
     private Long EnableFlag;
 
     /**
-    * Target topic ID and alias of the data processing task
-    */
-    @SerializedName("DstResources")
-    @Expose
-    private DataTransformResouceInfo [] DstResources;
-
-    /**
     * Test data used for previewing the processing result
     */
     @SerializedName("PreviewLogStatistics")
@@ -80,16 +81,16 @@ public class CreateDataTransformRequest extends AbstractModel {
     private PreviewLogStatistic [] PreviewLogStatistics;
 
     /**
-     * Get Task type. Valid values: 1 (specified topic) and 2 (dynamically created). 
-     * @return FuncType Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+     * Get Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1). 
+     * @return FuncType Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
      */
     public Long getFuncType() {
         return this.FuncType;
     }
 
     /**
-     * Set Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
-     * @param FuncType Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+     * Set Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
+     * @param FuncType Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
      */
     public void setFuncType(Long FuncType) {
         this.FuncType = FuncType;
@@ -144,19 +145,39 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task. 
-     * @return TaskType Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+     * Get Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks. 
+     * @return TaskType Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
-     * @param TaskType Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+     * Set Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
+     * @param TaskType Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
+    }
+
+    /**
+     * Get Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2. 
+     * @return DstResources Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+     */
+    public DataTransformResouceInfo [] getDstResources() {
+        return this.DstResources;
+    }
+
+    /**
+     * Set Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+     * @param DstResources Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+     */
+    public void setDstResources(DataTransformResouceInfo [] DstResources) {
+        this.DstResources = DstResources;
     }
 
     /**
@@ -173,22 +194,6 @@ public class CreateDataTransformRequest extends AbstractModel {
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
-    }
-
-    /**
-     * Get Target topic ID and alias of the data processing task 
-     * @return DstResources Target topic ID and alias of the data processing task
-     */
-    public DataTransformResouceInfo [] getDstResources() {
-        return this.DstResources;
-    }
-
-    /**
-     * Set Target topic ID and alias of the data processing task
-     * @param DstResources Target topic ID and alias of the data processing task
-     */
-    public void setDstResources(DataTransformResouceInfo [] DstResources) {
-        this.DstResources = DstResources;
     }
 
     /**
@@ -230,14 +235,14 @@ public class CreateDataTransformRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
-        if (source.EnableFlag != null) {
-            this.EnableFlag = new Long(source.EnableFlag);
-        }
         if (source.DstResources != null) {
             this.DstResources = new DataTransformResouceInfo[source.DstResources.length];
             for (int i = 0; i < source.DstResources.length; i++) {
                 this.DstResources[i] = new DataTransformResouceInfo(source.DstResources[i]);
             }
+        }
+        if (source.EnableFlag != null) {
+            this.EnableFlag = new Long(source.EnableFlag);
         }
         if (source.PreviewLogStatistics != null) {
             this.PreviewLogStatistics = new PreviewLogStatistic[source.PreviewLogStatistics.length];
@@ -257,8 +262,8 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
-        this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+        this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
 
     }

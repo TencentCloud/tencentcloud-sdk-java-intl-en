@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * `TopicId` created by the CLS console
+    * Log Topic ID
     */
     @SerializedName("FromTopicId")
     @Expose
@@ -45,16 +45,16 @@ public class OpenKafkaConsumerRequest extends AbstractModel {
     private KafkaConsumerContent ConsumerContent;
 
     /**
-     * Get `TopicId` created by the CLS console 
-     * @return FromTopicId `TopicId` created by the CLS console
+     * Get Log Topic ID 
+     * @return FromTopicId Log Topic ID
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set `TopicId` created by the CLS console
-     * @param FromTopicId `TopicId` created by the CLS console
+     * Set Log Topic ID
+     * @param FromTopicId Log Topic ID
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;

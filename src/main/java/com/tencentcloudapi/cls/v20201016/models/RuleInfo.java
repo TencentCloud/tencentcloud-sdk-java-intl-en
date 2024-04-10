@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleInfo extends AbstractModel {
 
     /**
-    * Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+    * Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FullText")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private FullTextInfo FullText;
 
     /**
-    * Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+    * Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeyValue")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RuleKeyValueInfo KeyValue;
 
     /**
-    * Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+    * Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tag")
@@ -48,19 +48,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RuleTagInfo Tag;
 
     /**
-    * Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DynamicIndex")
     @Expose
     private DynamicIndex DynamicIndex;
 
     /**
-     * Get Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+     * Get Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+     * @return FullText Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FullTextInfo getFullText() {
@@ -68,9 +66,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+     * Set Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+     * @param FullText Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFullText(FullTextInfo FullText) {
@@ -78,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+     * Get Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+     * @return KeyValue Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleKeyValueInfo getKeyValue() {
@@ -88,9 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+     * Set Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+     * @param KeyValue Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeyValue(RuleKeyValueInfo KeyValue) {
@@ -98,9 +96,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+     * Get Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+     * @return Tag Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleTagInfo getTag() {
@@ -108,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+     * Set Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+     * @param Tag Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTag(RuleTagInfo Tag) {
@@ -118,28 +116,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DynamicIndex Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DynamicIndex getDynamicIndex() {
         return this.DynamicIndex;
     }
 
     /**
-     * Set Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DynamicIndex Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDynamicIndex(DynamicIndex DynamicIndex) {
         this.DynamicIndex = DynamicIndex;

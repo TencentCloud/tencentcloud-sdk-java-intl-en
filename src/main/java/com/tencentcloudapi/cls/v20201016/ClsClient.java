@@ -61,6 +61,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to verify the syntax of data processing DSL functions.
+     * @param req CheckFunctionRequest
+     * @return CheckFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckFunctionResponse CheckFunction(CheckFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckFunction", CheckFunctionResponse.class);
+    }
+
+    /**
      *This API is used to check whether the Kafka service cluster is accessible.
      * @param req CheckRechargeKafkaServerRequest
      * @return CheckRechargeKafkaServerResponse
@@ -105,6 +116,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an alarm blocking rule.
+     * @param req CreateAlarmShieldRequest
+     * @return CreateAlarmShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmShieldResponse CreateAlarmShield(CreateAlarmShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAlarmShield", CreateAlarmShieldResponse.class);
+    }
+
+    /**
      *This API is used to create a collection rule configuration.
      * @param req CreateConfigRequest
      * @return CreateConfigResponse
@@ -116,7 +138,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a shipping task.
+     *This API is used to create a CKafka delivery task.
      * @param req CreateConsumerRequest
      * @return CreateConsumerResponse
      * @throws TencentCloudSDKException
@@ -146,6 +168,17 @@ public class ClsClient extends AbstractClient{
     public CreateDataTransformResponse CreateDataTransform(CreateDataTransformRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDataTransform", CreateDataTransformResponse.class);
+    }
+
+    /**
+     *This API is used to create a delivery SCF task.
+     * @param req CreateDeliverCloudFunctionRequest
+     * @return CreateDeliverCloudFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeliverCloudFunctionResponse CreateDeliverCloudFunction(CreateDeliverCloudFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeliverCloudFunction", CreateDeliverCloudFunctionResponse.class);
     }
 
     /**
@@ -204,6 +237,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a scheduled SQL analysis task.
+     * @param req CreateScheduledSqlRequest
+     * @return CreateScheduledSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScheduledSqlResponse CreateScheduledSql(CreateScheduledSqlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateScheduledSql", CreateScheduledSqlResponse.class);
+    }
+
+    /**
      *This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
      * @param req CreateShipperRequest
      * @return CreateShipperResponse
@@ -245,6 +289,17 @@ public class ClsClient extends AbstractClient{
     public DeleteAlarmNoticeResponse DeleteAlarmNotice(DeleteAlarmNoticeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlarmNotice", DeleteAlarmNoticeResponse.class);
+    }
+
+    /**
+     *This API is used to delete an alarm blocking rule.
+     * @param req DeleteAlarmShieldRequest
+     * @return DeleteAlarmShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
     }
 
     /**
@@ -358,6 +413,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete scheduled SQL analysis tasks.
+     * @param req DeleteScheduledSqlRequest
+     * @return DeleteScheduledSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScheduledSqlResponse DeleteScheduledSql(DeleteScheduledSqlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteScheduledSql", DeleteScheduledSqlResponse.class);
+    }
+
+    /**
      *This API is used to delete a COS shipping task.
      * @param req DeleteShipperRequest
      * @return DeleteShipperResponse
@@ -388,6 +454,17 @@ public class ClsClient extends AbstractClient{
     public DescribeAlarmNoticesResponse DescribeAlarmNotices(DescribeAlarmNoticesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlarmNotices", DescribeAlarmNoticesResponse.class);
+    }
+
+    /**
+     *Accesses alarm blocking configuration rules
+     * @param req DescribeAlarmShieldsRequest
+     * @return DescribeAlarmShieldsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmShieldsResponse DescribeAlarmShields(DescribeAlarmShieldsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarmShields", DescribeAlarmShieldsResponse.class);
     }
 
     /**
@@ -490,6 +567,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *Accesses Kafka protocol consumption information
+     * @param req DescribeKafkaConsumerRequest
+     * @return DescribeKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerResponse DescribeKafkaConsumer(DescribeKafkaConsumerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumer", DescribeKafkaConsumerResponse.class);
+    }
+
+    /**
      *This API is used to get the list of Kafka data subscription tasks.
      * @param req DescribeKafkaRechargesRequest
      * @return DescribeKafkaRechargesResponse
@@ -501,7 +589,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to search for content in the log context.
+     *This API is used to search for content near the log context. For more details, see [Context Search](https://intl.cloud.tencent.com/document/product/614/53248?from_cn_redirect=1).The maximum value of API's return data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
      * @param req DescribeLogContextRequest
      * @return DescribeLogContextResponse
      * @throws TencentCloudSDKException
@@ -556,7 +644,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the machine status in the specified machine group.
+     *Gets the status of a machine under the specified machine group
      * @param req DescribeMachinesRequest
      * @return DescribeMachinesResponse
      * @throws TencentCloudSDKException
@@ -575,6 +663,17 @@ public class ClsClient extends AbstractClient{
     public DescribePartitionsResponse DescribePartitions(DescribePartitionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePartitions", DescribePartitionsResponse.class);
+    }
+
+    /**
+     *This API is used to access the scheduled SQL analysis task list.
+     * @param req DescribeScheduledSqlInfoRequest
+     * @return DescribeScheduledSqlInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(DescribeScheduledSqlInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScheduledSqlInfo", DescribeScheduledSqlInfoResponse.class);
     }
 
     /**
@@ -611,7 +710,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the records of alarm tasks.
+     *This API is used to access alarm policy execution details.
      * @param req GetAlarmLogRequest
      * @return GetAlarmLogResponse
      * @throws TencentCloudSDKException
@@ -655,6 +754,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify alarm blocking rules.
+     * @param req ModifyAlarmShieldRequest
+     * @return ModifyAlarmShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
+    }
+
+    /**
      *This API is used to modify a collection rule configuration.
      * @param req ModifyConfigRequest
      * @return ModifyConfigResponse
@@ -666,7 +776,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify a shipping task.
+     *This API is used to modify a CKafka delivery task
      * @param req ModifyConsumerRequest
      * @return ModifyConsumerResponse
      * @throws TencentCloudSDKException
@@ -700,7 +810,6 @@ public class ClsClient extends AbstractClient{
 
     /**
      *This API is used to modify the index configuration. It is subject to the default request frequency limit, and the number of concurrent requests to the same log topic cannot exceed 1, i.e., the index configuration of only one log topic can be modified at a time.
-
      * @param req ModifyIndexRequest
      * @return ModifyIndexResponse
      * @throws TencentCloudSDKException
@@ -708,6 +817,17 @@ public class ClsClient extends AbstractClient{
     public ModifyIndexResponse ModifyIndex(ModifyIndexRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyIndex", ModifyIndexResponse.class);
+    }
+
+    /**
+     *Modifies Kafka Protocol consumption information
+     * @param req ModifyKafkaConsumerRequest
+     * @return ModifyKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKafkaConsumerResponse ModifyKafkaConsumer(ModifyKafkaConsumerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyKafkaConsumer", ModifyKafkaConsumerResponse.class);
     }
 
     /**
@@ -741,6 +861,17 @@ public class ClsClient extends AbstractClient{
     public ModifyMachineGroupResponse ModifyMachineGroup(ModifyMachineGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMachineGroup", ModifyMachineGroupResponse.class);
+    }
+
+    /**
+     *This API is used to modify scheduled SQL analysis tasks.
+     * @param req ModifyScheduledSqlRequest
+     * @return ModifyScheduledSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScheduledSqlResponse ModifyScheduledSql(ModifyScheduledSqlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyScheduledSql", ModifyScheduledSqlResponse.class);
     }
 
     /**
@@ -788,6 +919,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *Queries the latest metric value at a specified time
+     * @param req QueryMetricRequest
+     * @return QueryMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMetricResponse QueryMetric(QueryMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryMetric", QueryMetricResponse.class);
+    }
+
+    /**
+     *This API is used to query the trend of metrics within a specified time range.
+     * @param req QueryRangeMetricRequest
+     * @return QueryRangeMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryRangeMetricResponse QueryRangeMetric(QueryRangeMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryRangeMetric", QueryRangeMetricResponse.class);
+    }
+
+    /**
      *This API is used to retry a failed shipping task.
      * @param req RetryShipperTaskRequest
      * @return RetryShipperTaskResponse
@@ -799,7 +952,19 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent queries to the same log topic cannot exceed 15.
+     *This API is used to preview COS import information.
+     * @param req SearchCosRechargeInfoRequest
+     * @return SearchCosRechargeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchCosRechargeInfoResponse SearchCosRechargeInfo(SearchCosRechargeInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchCosRechargeInfo", SearchCosRechargeInfoResponse.class);
+    }
+
+    /**
+     *This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
+3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
      * @param req SearchLogRequest
      * @return SearchLogResponse
      * @throws TencentCloudSDKException

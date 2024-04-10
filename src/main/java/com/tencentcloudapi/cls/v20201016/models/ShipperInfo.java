@@ -171,6 +171,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long HistoryStatus;
 
     /**
+    * COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get Shipping rule ID 
      * @return ShipperId Shipping rule ID
      */
@@ -530,6 +538,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HistoryStatus = HistoryStatus;
     }
 
+    /**
+     * Get COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StorageType COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StorageType COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public ShipperInfo() {
     }
 
@@ -598,6 +626,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HistoryStatus != null) {
             this.HistoryStatus = new Long(source.HistoryStatus);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -624,6 +655,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "RemainTime", this.RemainTime);
         this.setParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

@@ -73,7 +73,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+    * lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
     */
     @SerializedName("Period")
     @Expose
@@ -87,15 +87,14 @@ public class CreateTopicRequest extends AbstractModel {
     private String Describes;
 
     /**
-    * `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+    * 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
 
     /**
-    * Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+    * Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
     */
     @SerializedName("IsWebTracking")
     @Expose
@@ -214,16 +213,16 @@ A value other than `0`: The number of STANDARD storage days after log transition
     }
 
     /**
-     * Get Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention. 
-     * @return Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+     * Get lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure). 
+     * @return Period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
-     * @param Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+     * Set lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * @param Period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -246,36 +245,32 @@ A value other than `0`: The number of STANDARD storage days after log transition
     }
 
     /**
-     * Get `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`. 
-     * @return HotPeriod `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     * Get 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot. 
+     * @return HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
-     * @param HotPeriod `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     * Set 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+     * @param HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
     }
 
     /**
-     * Get Whether to enable web tracking. Valid values: `false` (disable); `true` (enable) 
-     * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * Get Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1). 
+     * @return IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-     * @param IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * Set Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+     * @param IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;

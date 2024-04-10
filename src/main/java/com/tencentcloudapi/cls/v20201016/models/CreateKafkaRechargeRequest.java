@@ -59,6 +59,13 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * Log Import Rules.
+    */
+    @SerializedName("LogRechargeRule")
+    @Expose
+    private LogRechargeRuleInfo LogRechargeRule;
+
+    /**
     * CKafka instance ID, which is required when `KafkaType` is set to `0`
     */
     @SerializedName("KafkaInstance")
@@ -80,7 +87,7 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+    * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
     */
     @SerializedName("Protocol")
     @Expose
@@ -92,13 +99,6 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
-
-    /**
-    * Log import rule
-    */
-    @SerializedName("LogRechargeRule")
-    @Expose
-    private LogRechargeRuleInfo LogRechargeRule;
 
     /**
      * Get Target topic ID 
@@ -181,6 +181,22 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
+     * Get Log Import Rules. 
+     * @return LogRechargeRule Log Import Rules.
+     */
+    public LogRechargeRuleInfo getLogRechargeRule() {
+        return this.LogRechargeRule;
+    }
+
+    /**
+     * Set Log Import Rules.
+     * @param LogRechargeRule Log Import Rules.
+     */
+    public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
+        this.LogRechargeRule = LogRechargeRule;
+    }
+
+    /**
      * Get CKafka instance ID, which is required when `KafkaType` is set to `0` 
      * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
      */
@@ -229,16 +245,16 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true` 
-     * @return Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * Get Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required 
+     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-     * @param Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * @param Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
@@ -258,22 +274,6 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
-    }
-
-    /**
-     * Get Log import rule 
-     * @return LogRechargeRule Log import rule
-     */
-    public LogRechargeRuleInfo getLogRechargeRule() {
-        return this.LogRechargeRule;
-    }
-
-    /**
-     * Set Log import rule
-     * @param LogRechargeRule Log import rule
-     */
-    public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
-        this.LogRechargeRule = LogRechargeRule;
     }
 
     public CreateKafkaRechargeRequest() {
@@ -299,6 +299,9 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.LogRechargeRule != null) {
+            this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
+        }
         if (source.KafkaInstance != null) {
             this.KafkaInstance = new String(source.KafkaInstance);
         }
@@ -314,9 +317,6 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
         if (source.ConsumerGroupName != null) {
             this.ConsumerGroupName = new String(source.ConsumerGroupName);
         }
-        if (source.LogRechargeRule != null) {
-            this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
-        }
     }
 
 
@@ -329,12 +329,12 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KafkaType", this.KafkaType);
         this.setParamSimple(map, prefix + "UserKafkaTopics", this.UserKafkaTopics);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
         this.setParamSimple(map, prefix + "KafkaInstance", this.KafkaInstance);
         this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
         this.setParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
-        this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
 
     }
 }

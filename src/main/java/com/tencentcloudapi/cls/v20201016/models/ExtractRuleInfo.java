@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ExtractRuleInfo extends AbstractModel {
 
     /**
-    * Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TimeKey")
     @Expose
@@ -40,40 +39,35 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String TimeFormat;
 
     /**
-    * Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Delimiter")
     @Expose
     private String Delimiter;
 
     /**
-    * Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LogRegex")
     @Expose
     private String LogRegex;
 
     /**
-    * First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BeginRegex")
     @Expose
     private String BeginRegex;
 
     /**
-    * Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Keys")
     @Expose
     private String [] Keys;
 
     /**
-    * Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterKeyRegex")
     @Expose
@@ -96,8 +90,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String UnMatchLogKey;
 
     /**
-    * Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Backtracking")
     @Expose
@@ -175,20 +168,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MetaTagInfo [] MetaTags;
 
     /**
-     * Get Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Windows event log collection
+    */
+    @SerializedName("EventLogRules")
+    @Expose
+    private EventLog [] EventLogRules;
+
+    /**
+     * Get Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return TimeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTimeKey() {
         return this.TimeKey;
     }
 
     /**
-     * Set Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+     * @param TimeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
@@ -215,100 +211,80 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Delimiter Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDelimiter() {
         return this.Delimiter;
     }
 
     /**
-     * Set Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Delimiter Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;
     }
 
     /**
-     * Get Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LogRegex Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return LogRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLogRegex() {
         return this.LogRegex;
     }
 
     /**
-     * Set Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LogRegex Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+     * @param LogRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
     }
 
     /**
-     * Get First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return BeginRegex First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return BeginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBeginRegex() {
         return this.BeginRegex;
     }
 
     /**
-     * Set First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param BeginRegex First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+     * @param BeginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBeginRegex(String BeginRegex) {
         this.BeginRegex = BeginRegex;
     }
 
     /**
-     * Get Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return FilterKeyRegex Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FilterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public KeyRegexInfo [] getFilterKeyRegex() {
         return this.FilterKeyRegex;
     }
 
     /**
-     * Set Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param FilterKeyRegex Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FilterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterKeyRegex(KeyRegexInfo [] FilterKeyRegex) {
         this.FilterKeyRegex = FilterKeyRegex;
@@ -355,20 +331,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Backtracking Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBacktracking() {
         return this.Backtracking;
     }
 
     /**
-     * Set Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Backtracking Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBacktracking(Long Backtracking) {
         this.Backtracking = Backtracking;
@@ -562,6 +534,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MetaTags = MetaTags;
     }
 
+    /**
+     * Get Windows event log collection 
+     * @return EventLogRules Windows event log collection
+     */
+    public EventLog [] getEventLogRules() {
+        return this.EventLogRules;
+    }
+
+    /**
+     * Set Windows event log collection
+     * @param EventLogRules Windows event log collection
+     */
+    public void setEventLogRules(EventLog [] EventLogRules) {
+        this.EventLogRules = EventLogRules;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -633,6 +621,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
             }
         }
+        if (source.EventLogRules != null) {
+            this.EventLogRules = new EventLog[source.EventLogRules.length];
+            for (int i = 0; i < source.EventLogRules.length; i++) {
+                this.EventLogRules[i] = new EventLog(source.EventLogRules[i]);
+            }
+        }
     }
 
 
@@ -658,6 +652,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MetadataType", this.MetadataType);
         this.setParamSimple(map, prefix + "PathRegex", this.PathRegex);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+        this.setParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
 
     }
 }

@@ -31,14 +31,14 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     private Long KafkaType;
 
     /**
-    * CKafka instance ID, which is required when `KafkaType` is set to `0`
+    * Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * Service address
+    * Service AddressWhen KafkaType is 1, ServerAddr is required
     */
     @SerializedName("ServerAddr")
     @Expose
@@ -52,7 +52,7 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+    * Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
     */
     @SerializedName("Protocol")
     @Expose
@@ -75,32 +75,32 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     }
 
     /**
-     * Get CKafka instance ID, which is required when `KafkaType` is set to `0` 
-     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Get Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required 
+     * @return KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Set Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+     * @param KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get Service address 
-     * @return ServerAddr Service address
+     * Get Service AddressWhen KafkaType is 1, ServerAddr is required 
+     * @return ServerAddr Service AddressWhen KafkaType is 1, ServerAddr is required
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set Service address
-     * @param ServerAddr Service address
+     * Set Service AddressWhen KafkaType is 1, ServerAddr is required
+     * @param ServerAddr Service AddressWhen KafkaType is 1, ServerAddr is required
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
@@ -123,16 +123,16 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     }
 
     /**
-     * Get Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true` 
-     * @return Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * Get Encryption access protocol. Required when IsEncryptionAddr parameter is set to true 
+     * @return Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-     * @param Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * Set Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+     * @param Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;

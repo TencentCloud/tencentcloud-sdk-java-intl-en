@@ -115,6 +115,13 @@ public class CreateShipperRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * COS bucket storage type
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get ID of the log topic to which the shipping rule to be created belongs 
      * @return TopicId ID of the log topic to which the shipping rule to be created belongs
      */
@@ -322,6 +329,22 @@ public class CreateShipperRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get COS bucket storage type 
+     * @return StorageType COS bucket storage type
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set COS bucket storage type
+     * @param StorageType COS bucket storage type
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public CreateShipperRequest() {
     }
 
@@ -372,6 +395,9 @@ public class CreateShipperRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class CreateShipperRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

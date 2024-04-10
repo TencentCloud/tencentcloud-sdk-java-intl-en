@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaConsumerContent extends AbstractModel {
 
     /**
-    * Format. Valid values: 0 (full-text) and 1 (JSON).
+    * Consumption data format. Valid values: 0 (original content) and 1 (JSON).
     */
     @SerializedName("Format")
     @Expose
@@ -48,9 +48,15 @@ This parameter does not need to be set when `Format` is set to `0`.
     private String [] MetaFields;
 
     /**
-    * Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+    * Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagTransaction")
@@ -58,25 +64,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TagTransaction;
 
     /**
-    * JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+    * JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
     */
     @SerializedName("JsonType")
     @Expose
     private Long JsonType;
 
     /**
-     * Get Format. Valid values: 0 (full-text) and 1 (JSON). 
-     * @return Format Format. Valid values: 0 (full-text) and 1 (JSON).
+     * Get Consumption data format. Valid values: 0 (original content) and 1 (JSON). 
+     * @return Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
      */
     public Long getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Format. Valid values: 0 (full-text) and 1 (JSON).
-     * @param Format Format. Valid values: 0 (full-text) and 1 (JSON).
+     * Set Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+     * @param Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
      */
     public void setFormat(Long Format) {
         this.Format = Format;
@@ -127,13 +138,25 @@ This parameter does not need to be set when `Format` is set to `0`.
     }
 
     /**
-     * Get Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+     * Get Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TagTransaction Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+     * @return TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTagTransaction() {
@@ -141,13 +164,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+     * Set Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagTransaction Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+     * @param TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagTransaction(Long TagTransaction) {
@@ -155,24 +190,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped. 
-     * @return JsonType JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+     * Get JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}` 
+     * @return JsonType JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      */
     public Long getJsonType() {
         return this.JsonType;
     }
 
     /**
-     * Set JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
-     * @param JsonType JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+     * Set JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+     * @param JsonType JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;

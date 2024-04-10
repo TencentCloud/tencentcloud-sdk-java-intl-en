@@ -59,6 +59,13 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
+    * Whether to enable delivery service log. 1 for disabled, 2 for enabled
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
      * Get Data processing task ID 
      * @return TaskId Data processing task ID
      */
@@ -138,6 +145,22 @@ public class ModifyDataTransformRequest extends AbstractModel {
         this.DstResources = DstResources;
     }
 
+    /**
+     * Get Whether to enable delivery service log. 1 for disabled, 2 for enabled 
+     * @return HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     * @param HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
     public ModifyDataTransformRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyDataTransformRequest extends AbstractModel {
                 this.DstResources[i] = new DataTransformResouceInfo(source.DstResources[i]);
             }
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
 
     }
 }

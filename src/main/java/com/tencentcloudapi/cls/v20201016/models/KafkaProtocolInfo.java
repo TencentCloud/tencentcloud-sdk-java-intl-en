@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaProtocolInfo extends AbstractModel {
 
     /**
-    * Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+    * Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Protocol")
@@ -32,33 +32,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mechanism")
     @Expose
     private String Mechanism;
 
     /**
-    * Username
-Note: This field may return null, indicating that no valid values can be obtained.
+    * UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * User password
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+     * Get Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Protocol Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+     * @return Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProtocol() {
@@ -66,9 +63,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+     * Set Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Protocol Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+     * @param Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProtocol(String Protocol) {
@@ -76,60 +73,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mechanism Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMechanism() {
         return this.Mechanism;
     }
 
     /**
-     * Set Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mechanism Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMechanism(String Mechanism) {
         this.Mechanism = Mechanism;
     }
 
     /**
-     * Get Username
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get User password
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Password User password
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set User password
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Password User password
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPassword(String Password) {
         this.Password = Password;

@@ -73,11 +73,25 @@ public class CreateMachineGroupRequest extends AbstractModel {
     private Boolean ServiceLogging;
 
     /**
+    * Offline cleaning time for machines in machine group
+    */
+    @SerializedName("DelayCleanupTime")
+    @Expose
+    private Long DelayCleanupTime;
+
+    /**
     * Metadata information list of a machine group
     */
     @SerializedName("MetaTags")
     @Expose
     private MetaTagInfo [] MetaTags;
+
+    /**
+    * System type, default 0, 0: Linux, 1: Windows
+    */
+    @SerializedName("OSType")
+    @Expose
+    private Long OSType;
 
     /**
      * Get Machine group name, which must be unique 
@@ -192,6 +206,22 @@ public class CreateMachineGroupRequest extends AbstractModel {
     }
 
     /**
+     * Get Offline cleaning time for machines in machine group 
+     * @return DelayCleanupTime Offline cleaning time for machines in machine group
+     */
+    public Long getDelayCleanupTime() {
+        return this.DelayCleanupTime;
+    }
+
+    /**
+     * Set Offline cleaning time for machines in machine group
+     * @param DelayCleanupTime Offline cleaning time for machines in machine group
+     */
+    public void setDelayCleanupTime(Long DelayCleanupTime) {
+        this.DelayCleanupTime = DelayCleanupTime;
+    }
+
+    /**
      * Get Metadata information list of a machine group 
      * @return MetaTags Metadata information list of a machine group
      */
@@ -205,6 +235,22 @@ public class CreateMachineGroupRequest extends AbstractModel {
      */
     public void setMetaTags(MetaTagInfo [] MetaTags) {
         this.MetaTags = MetaTags;
+    }
+
+    /**
+     * Get System type, default 0, 0: Linux, 1: Windows 
+     * @return OSType System type, default 0, 0: Linux, 1: Windows
+     */
+    public Long getOSType() {
+        return this.OSType;
+    }
+
+    /**
+     * Set System type, default 0, 0: Linux, 1: Windows
+     * @param OSType System type, default 0, 0: Linux, 1: Windows
+     */
+    public void setOSType(Long OSType) {
+        this.OSType = OSType;
     }
 
     public CreateMachineGroupRequest() {
@@ -239,11 +285,17 @@ public class CreateMachineGroupRequest extends AbstractModel {
         if (source.ServiceLogging != null) {
             this.ServiceLogging = new Boolean(source.ServiceLogging);
         }
+        if (source.DelayCleanupTime != null) {
+            this.DelayCleanupTime = new Long(source.DelayCleanupTime);
+        }
         if (source.MetaTags != null) {
             this.MetaTags = new MetaTagInfo[source.MetaTags.length];
             for (int i = 0; i < source.MetaTags.length; i++) {
                 this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
             }
+        }
+        if (source.OSType != null) {
+            this.OSType = new Long(source.OSType);
         }
     }
 
@@ -259,7 +311,9 @@ public class CreateMachineGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+        this.setParamSimple(map, prefix + "DelayCleanupTime", this.DelayCleanupTime);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+        this.setParamSimple(map, prefix + "OSType", this.OSType);
 
     }
 }

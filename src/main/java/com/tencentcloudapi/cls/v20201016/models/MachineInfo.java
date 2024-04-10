@@ -31,6 +31,13 @@ public class MachineInfo extends AbstractModel {
     private String Ip;
 
     /**
+    * Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
     * Machine status. Valid values: `0`: exceptional; `1`: normal
     */
     @SerializedName("Status")
@@ -59,21 +66,21 @@ public class MachineInfo extends AbstractModel {
     private String Version;
 
     /**
-    * Machine update feature status
+    * Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
     */
     @SerializedName("UpdateStatus")
     @Expose
     private Long UpdateStatus;
 
     /**
-    * Machine update result flag
+    * Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Machine update result information
+    * Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -93,6 +100,22 @@ public class MachineInfo extends AbstractModel {
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
+    }
+
+    /**
+     * Get Machine instance IDNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
     }
 
     /**
@@ -160,48 +183,48 @@ public class MachineInfo extends AbstractModel {
     }
 
     /**
-     * Get Machine update feature status 
-     * @return UpdateStatus Machine update feature status
+     * Get Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed. 
+     * @return UpdateStatus Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
      */
     public Long getUpdateStatus() {
         return this.UpdateStatus;
     }
 
     /**
-     * Set Machine update feature status
-     * @param UpdateStatus Machine update feature status
+     * Set Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
+     * @param UpdateStatus Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
      */
     public void setUpdateStatus(Long UpdateStatus) {
         this.UpdateStatus = UpdateStatus;
     }
 
     /**
-     * Get Machine update result flag 
-     * @return ErrCode Machine update result flag
+     * Get Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions. 
+     * @return ErrCode Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Machine update result flag
-     * @param ErrCode Machine update result flag
+     * Set Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
+     * @param ErrCode Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Machine update result information 
-     * @return ErrMsg Machine update result information
+     * Get Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure. 
+     * @return ErrMsg Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
      */
     public String getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set Machine update result information
-     * @param ErrMsg Machine update result information
+     * Set Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
+     * @param ErrMsg Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
@@ -217,6 +240,9 @@ public class MachineInfo extends AbstractModel {
     public MachineInfo(MachineInfo source) {
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -247,6 +273,7 @@ public class MachineInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "AutoUpdate", this.AutoUpdate);

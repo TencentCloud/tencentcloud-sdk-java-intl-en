@@ -31,7 +31,7 @@ public class CreateConsumerRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * Whether to ship log metadata. Default value: `true`
+    * Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
     */
     @SerializedName("NeedContent")
     @Expose
@@ -52,7 +52,7 @@ public class CreateConsumerRequest extends AbstractModel {
     private Ckafka Ckafka;
 
     /**
-    * Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+    * Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
     */
     @SerializedName("Compression")
     @Expose
@@ -75,16 +75,16 @@ public class CreateConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to ship log metadata. Default value: `true` 
-     * @return NeedContent Whether to ship log metadata. Default value: `true`
+     * Get Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid. 
+     * @return NeedContent Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
      */
     public Boolean getNeedContent() {
         return this.NeedContent;
     }
 
     /**
-     * Set Whether to ship log metadata. Default value: `true`
-     * @param NeedContent Whether to ship log metadata. Default value: `true`
+     * Set Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
+     * @param NeedContent Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
      */
     public void setNeedContent(Boolean NeedContent) {
         this.NeedContent = NeedContent;
@@ -123,16 +123,16 @@ public class CreateConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4). 
-     * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+     * Get Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4] 
+     * @return Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-     * @param Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+     * Set Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+     * @param Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

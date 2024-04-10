@@ -73,6 +73,13 @@ public class CreateExportRequest extends AbstractModel {
     private String Format;
 
     /**
+    * Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get Log topic ID 
      * @return TopicId Log topic ID
      */
@@ -184,6 +191,22 @@ public class CreateExportRequest extends AbstractModel {
         this.Format = Format;
     }
 
+    /**
+     * Get Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax. 
+     * @return SyntaxRule Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+     * @param SyntaxRule Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public CreateExportRequest() {
     }
 
@@ -213,6 +236,9 @@ public class CreateExportRequest extends AbstractModel {
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateExportRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

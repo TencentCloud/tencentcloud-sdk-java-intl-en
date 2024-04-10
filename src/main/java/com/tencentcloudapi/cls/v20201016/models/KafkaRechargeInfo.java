@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class KafkaRechargeInfo extends AbstractModel {
 
     /**
-    * Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
     @Expose
@@ -103,16 +102,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ConsumerGroupName;
 
     /**
-    * Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Offset")
     @Expose
@@ -143,20 +140,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-     * Get Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Id Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Id Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -339,40 +332,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

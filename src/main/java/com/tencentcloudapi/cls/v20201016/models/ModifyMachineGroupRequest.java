@@ -80,6 +80,13 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private Boolean ServiceLogging;
 
     /**
+    * Regular offline cleaning time for machines in machine group
+    */
+    @SerializedName("DelayCleanupTime")
+    @Expose
+    private Long DelayCleanupTime;
+
+    /**
     * Metadata information list of a machine group
     */
     @SerializedName("MetaTags")
@@ -215,6 +222,22 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     }
 
     /**
+     * Get Regular offline cleaning time for machines in machine group 
+     * @return DelayCleanupTime Regular offline cleaning time for machines in machine group
+     */
+    public Long getDelayCleanupTime() {
+        return this.DelayCleanupTime;
+    }
+
+    /**
+     * Set Regular offline cleaning time for machines in machine group
+     * @param DelayCleanupTime Regular offline cleaning time for machines in machine group
+     */
+    public void setDelayCleanupTime(Long DelayCleanupTime) {
+        this.DelayCleanupTime = DelayCleanupTime;
+    }
+
+    /**
      * Get Metadata information list of a machine group 
      * @return MetaTags Metadata information list of a machine group
      */
@@ -265,6 +288,9 @@ public class ModifyMachineGroupRequest extends AbstractModel {
         if (source.ServiceLogging != null) {
             this.ServiceLogging = new Boolean(source.ServiceLogging);
         }
+        if (source.DelayCleanupTime != null) {
+            this.DelayCleanupTime = new Long(source.DelayCleanupTime);
+        }
         if (source.MetaTags != null) {
             this.MetaTags = new MetaTagInfo[source.MetaTags.length];
             for (int i = 0; i < source.MetaTags.length; i++) {
@@ -286,6 +312,7 @@ public class ModifyMachineGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+        this.setParamSimple(map, prefix + "DelayCleanupTime", this.DelayCleanupTime);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
 
     }

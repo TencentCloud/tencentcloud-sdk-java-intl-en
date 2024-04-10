@@ -45,7 +45,7 @@ public class ModifyTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * Whether to start collection for this log topic
+    * Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
     */
     @SerializedName("Status")
     @Expose
@@ -88,7 +88,7 @@ A value other than `0`: The number of STANDARD storage days after log transition
     private Long HotPeriod;
 
     /**
-    * Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+    * Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
     */
     @SerializedName("IsWebTracking")
     @Expose
@@ -143,16 +143,16 @@ A value other than `0`: The number of STANDARD storage days after log transition
     }
 
     /**
-     * Get Whether to start collection for this log topic 
-     * @return Status Whether to start collection for this log topic
+     * Get Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter. 
+     * @return Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether to start collection for this log topic
-     * @param Status Whether to start collection for this log topic
+     * Set Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
+     * @param Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
@@ -243,16 +243,16 @@ A value other than `0`: The number of STANDARD storage days after log transition
     }
 
     /**
-     * Get Whether to enable web tracking. Valid values: `false` (disable); `true` (enable) 
-     * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * Get Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1). 
+     * @return IsWebTracking Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-     * @param IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * Set Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+     * @param IsWebTracking Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;

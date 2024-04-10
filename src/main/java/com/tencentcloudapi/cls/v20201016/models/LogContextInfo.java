@@ -90,6 +90,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IndexStatus;
 
     /**
+    * Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HighLights")
+    @Expose
+    private HighLightItem [] HighLights;
+
+    /**
      * Get Log source device 
      * @return Source Log source device
      */
@@ -245,6 +252,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IndexStatus = IndexStatus;
     }
 
+    /**
+     * Get Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return HighLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public HighLightItem [] getHighLights() {
+        return this.HighLights;
+    }
+
+    /**
+     * Set Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+     * @param HighLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHighLights(HighLightItem [] HighLights) {
+        this.HighLights = HighLights;
+    }
+
     public LogContextInfo() {
     }
 
@@ -280,6 +303,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IndexStatus != null) {
             this.IndexStatus = new String(source.IndexStatus);
         }
+        if (source.HighLights != null) {
+            this.HighLights = new HighLightItem[source.HighLights.length];
+            for (int i = 0; i < source.HighLights.length; i++) {
+                this.HighLights[i] = new HighLightItem(source.HighLights[i]);
+            }
+        }
     }
 
 
@@ -296,6 +325,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "RawLog", this.RawLog);
         this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
+        this.setParamArrayObj(map, prefix + "HighLights.", this.HighLights);
 
     }
 }

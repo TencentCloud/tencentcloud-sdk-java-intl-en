@@ -101,7 +101,7 @@ public class ExportInfo extends AbstractModel {
     private Long To;
 
     /**
-    * Log export path
+    * Log export path, valid for one hour. Please download using this path as soon as possible.
     */
     @SerializedName("CosPath")
     @Expose
@@ -113,6 +113,13 @@ public class ExportInfo extends AbstractModel {
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
 
     /**
      * Get Log topic ID 
@@ -291,16 +298,16 @@ public class ExportInfo extends AbstractModel {
     }
 
     /**
-     * Get Log export path 
-     * @return CosPath Log export path
+     * Get Log export path, valid for one hour. Please download using this path as soon as possible. 
+     * @return CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
      */
     public String getCosPath() {
         return this.CosPath;
     }
 
     /**
-     * Set Log export path
-     * @param CosPath Log export path
+     * Set Log export path, valid for one hour. Please download using this path as soon as possible.
+     * @param CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;
@@ -320,6 +327,22 @@ public class ExportInfo extends AbstractModel {
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax. 
+     * @return SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     * @param SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
     }
 
     public ExportInfo() {
@@ -369,6 +392,9 @@ public class ExportInfo extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class ExportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "CosPath", this.CosPath);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

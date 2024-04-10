@@ -47,6 +47,14 @@ Queries all logs using * or an empty string
     private String Query;
 
     /**
+    * Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
     * - The ID of the log topic to be searched for. Only one log topic can be specified.
 - To search for multiple log topics at a time, use the `Topics` parameter.
     */
@@ -55,25 +63,20 @@ Queries all logs using * or an empty string
     private String TopicId;
 
     /**
-    * The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+    * - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+    */
+    @SerializedName("Topics")
+    @Expose
+    private MultiTopicSearchInformation [] Topics;
+
+    /**
+    * Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
-
-    /**
-    * You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-    */
-    @SerializedName("Context")
-    @Expose
-    private String Context;
 
     /**
     * Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
@@ -86,13 +89,11 @@ Notes:
     private String Sort;
 
     /**
-    * If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+    * Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
     */
-    @SerializedName("UseNewAnalysis")
+    @SerializedName("Context")
     @Expose
-    private Boolean UseNewAnalysis;
+    private String Context;
 
     /**
     * Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
@@ -106,22 +107,13 @@ Default value: `1`
     private Float SamplingRate;
 
     /**
-    * Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+    * If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
     */
-    @SerializedName("SyntaxRule")
+    @SerializedName("UseNewAnalysis")
     @Expose
-    private Long SyntaxRule;
-
-    /**
-    * - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-    */
-    @SerializedName("Topics")
-    @Expose
-    private MultiTopicSearchInformation [] Topics;
+    private Boolean UseNewAnalysis;
 
     /**
      * Get Start time of the log to be searched, which is a Unix timestamp in milliseconds 
@@ -180,6 +172,26 @@ Queries all logs using * or an empty string
     }
 
     /**
+     * Get Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a> 
+     * @return SyntaxRule Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     * @param SyntaxRule Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
      * Get - The ID of the log topic to be searched for. Only one log topic can be specified.
 - To search for multiple log topics at a time, use the `Topics` parameter. 
      * @return TopicId - The ID of the log topic to be searched for. Only one log topic can be specified.
@@ -200,63 +212,43 @@ Queries all logs using * or an empty string
     }
 
     /**
-     * Get The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>. 
-     * @return Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+     * Get - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`. 
+     * @return Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     */
+    public MultiTopicSearchInformation [] getTopics() {
+        return this.Topics;
+    }
+
+    /**
+     * Set - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     * @param Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     */
+    public void setTopics(MultiTopicSearchInformation [] Topics) {
+        this.Topics = Topics;
+    }
+
+    /**
+     * Get Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a> 
+     * @return Limit Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-     * @param Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+     * Set Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
+     * @param Limit Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
-    }
-
-    /**
-     * Get You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>. 
-     * @return Context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-     */
-    public String getContext() {
-        return this.Context;
-    }
-
-    /**
-     * Set You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-     * @param Context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-     */
-    public void setContext(String Context) {
-        this.Context = Context;
     }
 
     /**
@@ -288,27 +280,19 @@ Notes:
     }
 
     /**
-     * Get If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`). 
-     * @return UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+     * Get Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a> 
+     * @return Context Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
      */
-    public Boolean getUseNewAnalysis() {
-        return this.UseNewAnalysis;
+    public String getContext() {
+        return this.Context;
     }
 
     /**
-     * Set If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
-     * @param UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+     * Set Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
+     * @param Context Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
      */
-    public void setUseNewAnalysis(Boolean UseNewAnalysis) {
-        this.UseNewAnalysis = UseNewAnalysis;
+    public void setContext(String Context) {
+        this.Context = Context;
     }
 
     /**
@@ -344,51 +328,27 @@ Default value: `1`
     }
 
     /**
-     * Get Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a> 
-     * @return SyntaxRule Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+     * Get If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`). 
+     * @return UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
      */
-    public Long getSyntaxRule() {
-        return this.SyntaxRule;
+    public Boolean getUseNewAnalysis() {
+        return this.UseNewAnalysis;
     }
 
     /**
-     * Set Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
-     * @param SyntaxRule Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+     * Set If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+     * @param UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
      */
-    public void setSyntaxRule(Long SyntaxRule) {
-        this.SyntaxRule = SyntaxRule;
-    }
-
-    /**
-     * Get - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`. 
-     * @return Topics - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-     */
-    public MultiTopicSearchInformation [] getTopics() {
-        return this.Topics;
-    }
-
-    /**
-     * Set - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-     * @param Topics - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-     */
-    public void setTopics(MultiTopicSearchInformation [] Topics) {
-        this.Topics = Topics;
+    public void setUseNewAnalysis(Boolean UseNewAnalysis) {
+        this.UseNewAnalysis = UseNewAnalysis;
     }
 
     public SearchLogRequest() {
@@ -408,32 +368,32 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Context != null) {
-            this.Context = new String(source.Context);
-        }
-        if (source.Sort != null) {
-            this.Sort = new String(source.Sort);
-        }
-        if (source.UseNewAnalysis != null) {
-            this.UseNewAnalysis = new Boolean(source.UseNewAnalysis);
-        }
-        if (source.SamplingRate != null) {
-            this.SamplingRate = new Float(source.SamplingRate);
-        }
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
         }
         if (source.Topics != null) {
             this.Topics = new MultiTopicSearchInformation[source.Topics.length];
             for (int i = 0; i < source.Topics.length; i++) {
                 this.Topics[i] = new MultiTopicSearchInformation(source.Topics[i]);
             }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.SamplingRate != null) {
+            this.SamplingRate = new Float(source.SamplingRate);
+        }
+        if (source.UseNewAnalysis != null) {
+            this.UseNewAnalysis = new Boolean(source.UseNewAnalysis);
         }
     }
 
@@ -445,14 +405,14 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Query", this.Query);
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Context", this.Context);
-        this.setParamSimple(map, prefix + "Sort", this.Sort);
-        this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
-        this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+        this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
 
     }
 }

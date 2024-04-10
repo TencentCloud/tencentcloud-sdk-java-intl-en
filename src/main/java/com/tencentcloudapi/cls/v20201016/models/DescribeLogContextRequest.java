@@ -38,28 +38,29 @@ public class DescribeLogContextRequest extends AbstractModel {
     private String BTime;
 
     /**
-    * Log package number
+    * Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
     */
     @SerializedName("PkgId")
     @Expose
     private String PkgId;
 
     /**
-    * Log number in log package
+    * Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
     */
     @SerializedName("PkgLogId")
     @Expose
     private Long PkgLogId;
 
     /**
-    * Number of previous logs. Default value: 10
+    * The previous ${PrevLogs} logs. Default value: 10.
     */
     @SerializedName("PrevLogs")
     @Expose
     private Long PrevLogs;
 
     /**
-    * Number of next logs. Default value: 10
+    * The next ${NextLogs} logs. Default value: 10.
     */
     @SerializedName("NextLogs")
     @Expose
@@ -98,64 +99,68 @@ public class DescribeLogContextRequest extends AbstractModel {
     }
 
     /**
-     * Get Log package number 
-     * @return PkgId Log package number
+     * Get Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API. 
+     * @return PkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set Log package number
-     * @param PkgId Log package number
+     * Set Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+     * @param PkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get Log number in log package 
-     * @return PkgLogId Log number in log package
+     * Get Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information. 
+     * @return PkgLogId Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
      */
     public Long getPkgLogId() {
         return this.PkgLogId;
     }
 
     /**
-     * Set Log number in log package
-     * @param PkgLogId Log number in log package
+     * Set Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
+     * @param PkgLogId Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
      */
     public void setPkgLogId(Long PkgLogId) {
         this.PkgLogId = PkgLogId;
     }
 
     /**
-     * Get Number of previous logs. Default value: 10 
-     * @return PrevLogs Number of previous logs. Default value: 10
+     * Get The previous ${PrevLogs} logs. Default value: 10. 
+     * @return PrevLogs The previous ${PrevLogs} logs. Default value: 10.
      */
     public Long getPrevLogs() {
         return this.PrevLogs;
     }
 
     /**
-     * Set Number of previous logs. Default value: 10
-     * @param PrevLogs Number of previous logs. Default value: 10
+     * Set The previous ${PrevLogs} logs. Default value: 10.
+     * @param PrevLogs The previous ${PrevLogs} logs. Default value: 10.
      */
     public void setPrevLogs(Long PrevLogs) {
         this.PrevLogs = PrevLogs;
     }
 
     /**
-     * Get Number of next logs. Default value: 10 
-     * @return NextLogs Number of next logs. Default value: 10
+     * Get The next ${NextLogs} logs. Default value: 10. 
+     * @return NextLogs The next ${NextLogs} logs. Default value: 10.
      */
     public Long getNextLogs() {
         return this.NextLogs;
     }
 
     /**
-     * Set Number of next logs. Default value: 10
-     * @param NextLogs Number of next logs. Default value: 10
+     * Set The next ${NextLogs} logs. Default value: 10.
+     * @param NextLogs The next ${NextLogs} logs. Default value: 10.
      */
     public void setNextLogs(Long NextLogs) {
         this.NextLogs = NextLogs;

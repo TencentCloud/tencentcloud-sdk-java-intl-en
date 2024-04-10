@@ -25,26 +25,30 @@ public class DescribeMachineGroupsRequest extends AbstractModel {
 
     /**
     * machineGroupName
-- Filter by **machine group name**
+- Filter by [Machine Group Name].
 - Type: String
 - Required: No
 
 machineGroupId
-- Filter by **machine group ID**
+- Filter by [Machine group ID].
 - Type: String
 - Required: No
 
+osType
+- Filter by [Operating System Type].
+- Type: Int
+- Required: No
+
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
 - Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-- Type: String
+- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
 - Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
     */
     @SerializedName("Filters")
     @Expose
@@ -66,47 +70,55 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
 
     /**
      * Get machineGroupName
-- Filter by **machine group name**
+- Filter by [Machine Group Name].
 - Type: String
 - Required: No
 
 machineGroupId
-- Filter by **machine group ID**
+- Filter by [Machine group ID].
 - Type: String
 - Required: No
 
+osType
+- Filter by [Operating System Type].
+- Type: Int
+- Required: No
+
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
 - Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-- Type: String
+- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
 - Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`. 
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5. 
      * @return Filters machineGroupName
-- Filter by **machine group name**
+- Filter by [Machine Group Name].
 - Type: String
 - Required: No
 
 machineGroupId
-- Filter by **machine group ID**
+- Filter by [Machine group ID].
 - Type: String
 - Required: No
 
+osType
+- Filter by [Operating System Type].
+- Type: Int
+- Required: No
+
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
 - Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-- Type: String
+- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
 - Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -114,47 +126,55 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
 
     /**
      * Set machineGroupName
-- Filter by **machine group name**
+- Filter by [Machine Group Name].
 - Type: String
 - Required: No
 
 machineGroupId
-- Filter by **machine group ID**
+- Filter by [Machine group ID].
 - Type: String
 - Required: No
 
+osType
+- Filter by [Operating System Type].
+- Type: Int
+- Required: No
+
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
 - Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-- Type: String
+- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
 - Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      * @param Filters machineGroupName
-- Filter by **machine group name**
+- Filter by [Machine Group Name].
 - Type: String
 - Required: No
 
 machineGroupId
-- Filter by **machine group ID**
+- Filter by [Machine group ID].
 - Type: String
 - Required: No
 
+osType
+- Filter by [Operating System Type].
+- Type: Int
+- Required: No
+
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
 - Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-- Type: String
+- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
 - Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

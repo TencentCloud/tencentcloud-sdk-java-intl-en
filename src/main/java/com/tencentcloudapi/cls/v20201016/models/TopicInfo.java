@@ -31,14 +31,14 @@ public class TopicInfo extends AbstractModel {
     private String LogsetId;
 
     /**
-    * Log topic ID
+    *  Topic ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Log topic name
+    * Topic Name
     */
     @SerializedName("TopicName")
     @Expose
@@ -52,15 +52,14 @@ public class TopicInfo extends AbstractModel {
     private Long PartitionCount;
 
     /**
-    * Whether index is enabled
+    * Whether the topic has indexing enabled (the topic type must be log topic)
     */
     @SerializedName("Index")
     @Expose
     private Boolean Index;
 
     /**
-    * Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssumerName")
     @Expose
@@ -74,15 +73,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * Whether collection is enabled in the log topic
+    * Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -105,8 +103,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long MaxSplitPartitions;
 
     /**
-    * Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageType")
     @Expose
@@ -129,7 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SubAssumerName;
 
     /**
-    * Log topic description
+    * Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Describes")
@@ -137,13 +134,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Describes;
 
     /**
-    * The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+    * Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
+
+    /**
+    * Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
+    * Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsWebTracking")
+    @Expose
+    private Boolean IsWebTracking;
 
     /**
      * Get Logset ID 
@@ -162,32 +175,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get  Topic ID 
+     * @return TopicId  Topic ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set  Topic ID
+     * @param TopicId  Topic ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Log topic name 
-     * @return TopicName Log topic name
+     * Get Topic Name 
+     * @return TopicName Topic Name
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name
-     * @param TopicName Log topic name
+     * Set Topic Name
+     * @param TopicName Topic Name
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -210,36 +223,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether index is enabled 
-     * @return Index Whether index is enabled
+     * Get Whether the topic has indexing enabled (the topic type must be log topic) 
+     * @return Index Whether the topic has indexing enabled (the topic type must be log topic)
      */
     public Boolean getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Whether index is enabled
-     * @param Index Whether index is enabled
+     * Set Whether the topic has indexing enabled (the topic type must be log topic)
+     * @param Index Whether the topic has indexing enabled (the topic type must be log topic)
      */
     public void setIndex(Boolean Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAssumerName() {
         return this.AssumerName;
     }
 
     /**
-     * Set Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAssumerName(String AssumerName) {
         this.AssumerName = AssumerName;
@@ -262,36 +271,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether collection is enabled in the log topic 
-     * @return Status Whether collection is enabled in the log topic
+     * Get Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter. 
+     * @return Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether collection is enabled in the log topic
-     * @param Status Whether collection is enabled in the log topic
+     * Set Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+     * @param Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Tags Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Tags Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -338,20 +343,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return StorageType Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param StorageType Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+     * @param StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
@@ -398,9 +399,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Log topic description
+     * Get Topic description
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Describes Log topic description
+     * @return Describes Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescribes() {
@@ -408,9 +409,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Log topic description
+     * Set Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Describes Log topic description
+     * @param Describes Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescribes(String Describes) {
@@ -418,11 +419,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+     * Get Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+     * @return HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHotPeriod() {
@@ -430,15 +429,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+     * Set Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+     * @param HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
+    }
+
+    /**
+     * Get Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BizType Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BizType Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
+    /**
+     * Get Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsWebTracking() {
+        return this.IsWebTracking;
+    }
+
+    /**
+     * Set Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsWebTracking(Boolean IsWebTracking) {
+        this.IsWebTracking = IsWebTracking;
     }
 
     public TopicInfo() {
@@ -500,6 +541,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
+        if (source.IsWebTracking != null) {
+            this.IsWebTracking = new Boolean(source.IsWebTracking);
+        }
     }
 
 
@@ -523,6 +570,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
 
     }
 }

@@ -108,6 +108,13 @@ public class ModifyShipperRequest extends AbstractModel {
     private Long FilenameMode;
 
     /**
+    * COS Bucket Type
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get Shipping rule ID 
      * @return ShipperId Shipping rule ID
      */
@@ -299,6 +306,22 @@ public class ModifyShipperRequest extends AbstractModel {
         this.FilenameMode = FilenameMode;
     }
 
+    /**
+     * Get COS Bucket Type 
+     * @return StorageType COS Bucket Type
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set COS Bucket Type
+     * @param StorageType COS Bucket Type
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public ModifyShipperRequest() {
     }
 
@@ -346,6 +369,9 @@ public class ModifyShipperRequest extends AbstractModel {
         if (source.FilenameMode != null) {
             this.FilenameMode = new Long(source.FilenameMode);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class ModifyShipperRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

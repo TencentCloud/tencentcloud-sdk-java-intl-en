@@ -45,7 +45,7 @@ public class AlarmInfo extends AbstractModel {
     private MonitorTime MonitorTime;
 
     /**
-    * Trigger condition
+    * Single trigger condition. Mutually exclusive with the MultiConditions parameter.
     */
     @SerializedName("Condition")
     @Expose
@@ -125,6 +125,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private AnalysisDimensional [] Analysis;
 
     /**
+    * Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GroupTriggerStatus")
+    @Expose
+    private Boolean GroupTriggerStatus;
+
+    /**
+    * Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GroupTriggerCondition")
+    @Expose
+    private String [] GroupTriggerCondition;
+
+    /**
+    * Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MonitorObjectType")
+    @Expose
+    private Long MonitorObjectType;
+
+    /**
+    * Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MultiConditions")
+    @Expose
+    private MultiCondition [] MultiConditions;
+
+    /**
      * Get Alarm policy name 
      * @return Name Alarm policy name
      */
@@ -173,16 +209,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Trigger condition 
-     * @return Condition Trigger condition
+     * Get Single trigger condition. Mutually exclusive with the MultiConditions parameter. 
+     * @return Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Trigger condition
-     * @param Condition Trigger condition
+     * Set Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+     * @param Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -360,6 +396,90 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Analysis = Analysis;
     }
 
+    /**
+     * Get Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getGroupTriggerStatus() {
+        return this.GroupTriggerStatus;
+    }
+
+    /**
+     * Set Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
+        this.GroupTriggerStatus = GroupTriggerStatus;
+    }
+
+    /**
+     * Get Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getGroupTriggerCondition() {
+        return this.GroupTriggerCondition;
+    }
+
+    /**
+     * Set Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
+        this.GroupTriggerCondition = GroupTriggerCondition;
+    }
+
+    /**
+     * Get Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMonitorObjectType() {
+        return this.MonitorObjectType;
+    }
+
+    /**
+     * Set Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMonitorObjectType(Long MonitorObjectType) {
+        this.MonitorObjectType = MonitorObjectType;
+    }
+
+    /**
+     * Get Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public MultiCondition [] getMultiConditions() {
+        return this.MultiConditions;
+    }
+
+    /**
+     * Set Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMultiConditions(MultiCondition [] MultiConditions) {
+        this.MultiConditions = MultiConditions;
+    }
+
     public AlarmInfo() {
     }
 
@@ -419,6 +539,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Analysis[i] = new AnalysisDimensional(source.Analysis[i]);
             }
         }
+        if (source.GroupTriggerStatus != null) {
+            this.GroupTriggerStatus = new Boolean(source.GroupTriggerStatus);
+        }
+        if (source.GroupTriggerCondition != null) {
+            this.GroupTriggerCondition = new String[source.GroupTriggerCondition.length];
+            for (int i = 0; i < source.GroupTriggerCondition.length; i++) {
+                this.GroupTriggerCondition[i] = new String(source.GroupTriggerCondition[i]);
+            }
+        }
+        if (source.MonitorObjectType != null) {
+            this.MonitorObjectType = new Long(source.MonitorObjectType);
+        }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.MultiConditions != null) {
+            this.MultiConditions = new MultiCondition[source.MultiConditions.length];
+            for (int i = 0; i < source.MultiConditions.length; i++) {
+                this.MultiConditions[i] = new MultiCondition(source.MultiConditions[i]);
+            }
+        }
     }
 
 
@@ -440,6 +581,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+        this.setParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+        this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+        this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
 
     }
 }

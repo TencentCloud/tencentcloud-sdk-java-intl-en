@@ -38,10 +38,10 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+    * Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
     */
     @SerializedName("Type")
     @Expose
@@ -60,6 +60,13 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
+
+    /**
+    * Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+    */
+    @SerializedName("NoticeRules")
+    @Expose
+    private NoticeRule [] NoticeRules;
 
     /**
      * Get Notification group ID 
@@ -94,28 +101,28 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     }
 
     /**
-     * Get Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared 
-     * @return Type Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+     * Get Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li> 
+     * @return Type Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
-     * @param Type Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+     * Set Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
+     * @param Type Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -153,6 +160,22 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
         this.WebCallbacks = WebCallbacks;
     }
 
+    /**
+     * Get Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set. 
+     * @return NoticeRules Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+     */
+    public NoticeRule [] getNoticeRules() {
+        return this.NoticeRules;
+    }
+
+    /**
+     * Set Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+     * @param NoticeRules Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+     */
+    public void setNoticeRules(NoticeRule [] NoticeRules) {
+        this.NoticeRules = NoticeRules;
+    }
+
     public ModifyAlarmNoticeRequest() {
     }
 
@@ -182,6 +205,12 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
                 this.WebCallbacks[i] = new WebCallback(source.WebCallbacks[i]);
             }
         }
+        if (source.NoticeRules != null) {
+            this.NoticeRules = new NoticeRule[source.NoticeRules.length];
+            for (int i = 0; i < source.NoticeRules.length; i++) {
+                this.NoticeRules[i] = new NoticeRule(source.NoticeRules[i]);
+            }
+        }
     }
 
 
@@ -194,6 +223,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
         this.setParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
+        this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
 
     }
 }

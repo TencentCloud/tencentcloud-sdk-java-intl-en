@@ -38,7 +38,7 @@ public class PreviewKafkaRechargeRequest extends AbstractModel {
     private Long KafkaType;
 
     /**
-    * List of Kafka topics to import data from. Separate multiple topics with commas (,).
+    * List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
     */
     @SerializedName("UserKafkaTopics")
     @Expose
@@ -52,28 +52,30 @@ public class PreviewKafkaRechargeRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * CKafka instance ID, which is required when `KafkaType` is set to `0`
+    * Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * Service address
+    * Service AddressServerAddr is required when KafkaType is 1
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Whether the service address uses an encrypted connection
+    * Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+    * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
     */
     @SerializedName("Protocol")
     @Expose
@@ -126,16 +128,16 @@ public class PreviewKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get List of Kafka topics to import data from. Separate multiple topics with commas (,). 
-     * @return UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * Get List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics. 
+     * @return UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
-     * @param UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * Set List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+     * @param UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
@@ -158,64 +160,72 @@ public class PreviewKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get CKafka instance ID, which is required when `KafkaType` is set to `0` 
-     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Get Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0 
+     * @return KafkaInstance Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Set Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
+     * @param KafkaInstance Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get Service address 
-     * @return ServerAddr Service address
+     * Get Service AddressServerAddr is required when KafkaType is 1 
+     * @return ServerAddr Service AddressServerAddr is required when KafkaType is 1
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set Service address
-     * @param ServerAddr Service address
+     * Set Service AddressServerAddr is required when KafkaType is 1
+     * @param ServerAddr Service AddressServerAddr is required when KafkaType is 1
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Whether the service address uses an encrypted connection 
-     * @return IsEncryptionAddr Whether the service address uses an encrypted connection
+     * Get Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1. 
+     * @return IsEncryptionAddr Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set Whether the service address uses an encrypted connection
-     * @param IsEncryptionAddr Whether the service address uses an encrypted connection
+     * Set Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
+     * @param IsEncryptionAddr Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true` 
-     * @return Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * Get Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required 
+     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-     * @param Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * @param Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;

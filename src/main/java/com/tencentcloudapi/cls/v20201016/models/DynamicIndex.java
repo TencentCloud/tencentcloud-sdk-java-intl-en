@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DynamicIndex extends AbstractModel {
 
     /**
-    * Dynamic index configuration status
+    * Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -32,9 +32,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean Status;
 
     /**
-     * Get Dynamic index configuration status
+     * Get Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Dynamic index configuration status
+     * @return Status Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getStatus() {
@@ -42,9 +42,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Dynamic index configuration status
+     * Set Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Dynamic index configuration status
+     * @param Status Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Boolean Status) {
