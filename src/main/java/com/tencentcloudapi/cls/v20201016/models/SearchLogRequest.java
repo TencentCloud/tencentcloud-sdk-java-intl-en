@@ -98,7 +98,7 @@ Notes:
     /**
     * Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
     */
@@ -298,12 +298,12 @@ Notes:
     /**
      * Get Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1` 
      * @return SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
      */
@@ -314,12 +314,12 @@ Default value: `1`
     /**
      * Set Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
      * @param SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
      */

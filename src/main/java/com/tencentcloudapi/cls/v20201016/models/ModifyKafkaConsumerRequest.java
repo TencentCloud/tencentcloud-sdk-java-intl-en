@@ -31,7 +31,7 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
     private String FromTopicId;
 
     /**
-    * Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+    * Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
     */
     @SerializedName("Compression")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get Compression mode [0:NONE；2:SNAPPY；3:LZ4] 
-     * @return Compression Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+     * Get Compression mode [0: NONE; 2: SNAPPY; 3: LZ4] 
+     * @return Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Compression mode [0:NONE；2:SNAPPY；3:LZ4]
-     * @param Compression Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+     * Set Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+     * @param Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

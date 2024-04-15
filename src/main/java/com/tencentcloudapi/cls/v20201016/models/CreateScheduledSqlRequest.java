@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateScheduledSqlRequest extends AbstractModel {
 
     /**
-    * Source Log Topic
+    * Source log topic
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-    * Task Name
+    * Task name
     */
     @SerializedName("Name")
     @Expose
@@ -52,28 +52,28 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * Query Statement
+    * Query statement
     */
     @SerializedName("ScheduledSqlContent")
     @Expose
     private String ScheduledSqlContent;
 
     /**
-    * Schedule Start Time, Unix timestamp, in milliseconds
+    * Schedule start time, Unix timestamp, in milliseconds
     */
     @SerializedName("ProcessStartTime")
     @Expose
     private Long ProcessStartTime;
 
     /**
-    * Schedule Type: 1 Continuous Running 2 Specified Time Range
+    * Schedule type: 1: Continuous running; 2: Specified time range
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * Scheduling Interval (Minutes)
+    * Scheduling interval (minutes)
     */
     @SerializedName("ProcessPeriod")
     @Expose
@@ -87,21 +87,21 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     private String ProcessTimeWindow;
 
     /**
-    * Execution Delay (Seconds)
+    * Execution delay (Seconds)
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * Source Topic ID Region Information
+    * Source topic ID region information
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+    * Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
     */
     @SerializedName("ProcessEndTime")
     @Expose
@@ -115,32 +115,32 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     private Long SyntaxRule;
 
     /**
-     * Get Source Log Topic 
-     * @return SrcTopicId Source Log Topic
+     * Get Source log topic 
+     * @return SrcTopicId Source log topic
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source Log Topic
-     * @param SrcTopicId Source Log Topic
+     * Set Source log topic
+     * @param SrcTopicId Source log topic
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name 
+     * @return Name Task name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name
+     * @param Name Task name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -179,64 +179,64 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get Query Statement 
-     * @return ScheduledSqlContent Query Statement
+     * Get Query statement 
+     * @return ScheduledSqlContent Query statement
      */
     public String getScheduledSqlContent() {
         return this.ScheduledSqlContent;
     }
 
     /**
-     * Set Query Statement
-     * @param ScheduledSqlContent Query Statement
+     * Set Query statement
+     * @param ScheduledSqlContent Query statement
      */
     public void setScheduledSqlContent(String ScheduledSqlContent) {
         this.ScheduledSqlContent = ScheduledSqlContent;
     }
 
     /**
-     * Get Schedule Start Time, Unix timestamp, in milliseconds 
-     * @return ProcessStartTime Schedule Start Time, Unix timestamp, in milliseconds
+     * Get Schedule start time, Unix timestamp, in milliseconds 
+     * @return ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
      */
     public Long getProcessStartTime() {
         return this.ProcessStartTime;
     }
 
     /**
-     * Set Schedule Start Time, Unix timestamp, in milliseconds
-     * @param ProcessStartTime Schedule Start Time, Unix timestamp, in milliseconds
+     * Set Schedule start time, Unix timestamp, in milliseconds
+     * @param ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
      */
     public void setProcessStartTime(Long ProcessStartTime) {
         this.ProcessStartTime = ProcessStartTime;
     }
 
     /**
-     * Get Schedule Type: 1 Continuous Running 2 Specified Time Range 
-     * @return ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
+     * Get Schedule type: 1: Continuous running; 2: Specified time range 
+     * @return ProcessType Schedule type: 1: Continuous running; 2: Specified time range
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set Schedule Type: 1 Continuous Running 2 Specified Time Range
-     * @param ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
+     * Set Schedule type: 1: Continuous running; 2: Specified time range
+     * @param ProcessType Schedule type: 1: Continuous running; 2: Specified time range
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get Scheduling Interval (Minutes) 
-     * @return ProcessPeriod Scheduling Interval (Minutes)
+     * Get Scheduling interval (minutes) 
+     * @return ProcessPeriod Scheduling interval (minutes)
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set Scheduling Interval (Minutes)
-     * @param ProcessPeriod Scheduling Interval (Minutes)
+     * Set Scheduling interval (minutes)
+     * @param ProcessPeriod Scheduling interval (minutes)
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
@@ -259,48 +259,48 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get Execution Delay (Seconds) 
-     * @return ProcessDelay Execution Delay (Seconds)
+     * Get Execution delay (Seconds) 
+     * @return ProcessDelay Execution delay (Seconds)
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set Execution Delay (Seconds)
-     * @param ProcessDelay Execution Delay (Seconds)
+     * Set Execution delay (Seconds)
+     * @param ProcessDelay Execution delay (Seconds)
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get Source Topic ID Region Information 
-     * @return SrcTopicRegion Source Topic ID Region Information
+     * Get Source topic ID region information 
+     * @return SrcTopicRegion Source topic ID region information
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set Source Topic ID Region Information
-     * @param SrcTopicRegion Source Topic ID Region Information
+     * Set Source topic ID region information
+     * @param SrcTopicRegion Source topic ID region information
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds 
-     * @return ProcessEndTime Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * Get Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds 
+     * @return ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
      */
     public Long getProcessEndTime() {
         return this.ProcessEndTime;
     }
 
     /**
-     * Set Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
-     * @param ProcessEndTime Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * Set Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * @param ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
      */
     public void setProcessEndTime(Long ProcessEndTime) {
         this.ProcessEndTime = ProcessEndTime;

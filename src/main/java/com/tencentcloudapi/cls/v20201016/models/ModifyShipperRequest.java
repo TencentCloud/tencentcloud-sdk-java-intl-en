@@ -59,14 +59,14 @@ public class ModifyShipperRequest extends AbstractModel {
     private String ShipperName;
 
     /**
-    * Shipping time interval in seconds. Default value: 300. Value range: 300–900
+    * Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+    * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
     */
     @SerializedName("MaxSize")
     @Expose
@@ -108,7 +108,7 @@ public class ModifyShipperRequest extends AbstractModel {
     private Long FilenameMode;
 
     /**
-    * COS Bucket Type
+    * COS bucket type
     */
     @SerializedName("StorageType")
     @Expose
@@ -195,32 +195,32 @@ public class ModifyShipperRequest extends AbstractModel {
     }
 
     /**
-     * Get Shipping time interval in seconds. Default value: 300. Value range: 300–900 
-     * @return Interval Shipping time interval in seconds. Default value: 300. Value range: 300–900
+     * Get Shipping time interval in seconds. Default value: 300. Value range: 300 to 900 
+     * @return Interval Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Shipping time interval in seconds. Default value: 300. Value range: 300–900
-     * @param Interval Shipping time interval in seconds. Default value: 300. Value range: 300–900
+     * Set Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
+     * @param Interval Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256 
-     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+     * Get Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256 
+     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
-     * @param MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+     * Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
+     * @param MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
@@ -307,16 +307,16 @@ public class ModifyShipperRequest extends AbstractModel {
     }
 
     /**
-     * Get COS Bucket Type 
-     * @return StorageType COS Bucket Type
+     * Get COS bucket type 
+     * @return StorageType COS bucket type
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set COS Bucket Type
-     * @param StorageType COS Bucket Type
+     * Set COS bucket type
+     * @param StorageType COS bucket type
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

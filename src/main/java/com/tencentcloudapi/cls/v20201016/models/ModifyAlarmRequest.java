@@ -45,7 +45,7 @@ public class ModifyAlarmRequest extends AbstractModel {
     private MonitorTime MonitorTime;
 
     /**
-    * Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+    * Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
     */
     @SerializedName("Condition")
     @Expose
@@ -54,28 +54,28 @@ public class ModifyAlarmRequest extends AbstractModel {
     /**
     * Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+    * Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
     */
     @SerializedName("MultiConditions")
     @Expose
     private MultiCondition [] MultiConditions;
 
     /**
-    * Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+    * Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
     */
     @SerializedName("TriggerCount")
     @Expose
     private Long TriggerCount;
 
     /**
-    * Repeated alarm interval in minutes. Value range: 0–1440.
+    * Repeated alarm interval in minutes. Value range: 0 to 1440
     */
     @SerializedName("AlarmPeriod")
     @Expose
@@ -131,7 +131,7 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
     private AnalysisDimensional [] Analysis;
 
     /**
-    * Group trigger status. true: enabled, false: disabled (default)
+    * Group trigger status. true: enabled; false: disabled (default)
     */
     @SerializedName("GroupTriggerStatus")
     @Expose
@@ -216,16 +216,16 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
     }
 
     /**
-     * Get Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
-     * @return Condition Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Get Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
+     * @return Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param Condition Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Set Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @param Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -234,10 +234,10 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
     /**
      * Get Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
      * @return AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
@@ -246,58 +246,58 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
     /**
      * Set Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      * @param AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
-     * @return MultiConditions Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Get Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
+     * @return MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public MultiCondition [] getMultiConditions() {
         return this.MultiConditions;
     }
 
     /**
-     * Set Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param MultiConditions Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Set Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @param MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {
         this.MultiConditions = MultiConditions;
     }
 
     /**
-     * Get Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10. 
-     * @return TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+     * Get Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10 
+     * @return TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
      */
     public Long getTriggerCount() {
         return this.TriggerCount;
     }
 
     /**
-     * Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
-     * @param TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+     * Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+     * @param TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
      */
     public void setTriggerCount(Long TriggerCount) {
         this.TriggerCount = TriggerCount;
     }
 
     /**
-     * Get Repeated alarm interval in minutes. Value range: 0–1440. 
-     * @return AlarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
+     * Get Repeated alarm interval in minutes. Value range: 0 to 1440 
+     * @return AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set Repeated alarm interval in minutes. Value range: 0–1440.
-     * @param AlarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
+     * Set Repeated alarm interval in minutes. Value range: 0 to 1440
+     * @param AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
@@ -416,16 +416,16 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
     }
 
     /**
-     * Get Group trigger status. true: enabled, false: disabled (default) 
-     * @return GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
+     * Get Group trigger status. true: enabled; false: disabled (default) 
+     * @return GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
      */
     public Boolean getGroupTriggerStatus() {
         return this.GroupTriggerStatus;
     }
 
     /**
-     * Set Group trigger status. true: enabled, false: disabled (default)
-     * @param GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
+     * Set Group trigger status. true: enabled; false: disabled (default)
+     * @param GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
         this.GroupTriggerStatus = GroupTriggerStatus;

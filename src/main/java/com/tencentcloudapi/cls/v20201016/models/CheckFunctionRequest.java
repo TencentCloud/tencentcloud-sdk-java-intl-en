@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckFunctionRequest extends AbstractModel {
 
     /**
-    * The processing statement entered by the user
+    * Processing statement entered by the user
     */
     @SerializedName("EtlContent")
     @Expose
@@ -38,23 +38,23 @@ public class CheckFunctionRequest extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
-    * The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+    * Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
     */
     @SerializedName("FuncType")
     @Expose
     private Long FuncType;
 
     /**
-     * Get The processing statement entered by the user 
-     * @return EtlContent The processing statement entered by the user
+     * Get Processing statement entered by the user 
+     * @return EtlContent Processing statement entered by the user
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set The processing statement entered by the user
-     * @param EtlContent The processing statement entered by the user
+     * Set Processing statement entered by the user
+     * @param EtlContent Processing statement entered by the user
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;
@@ -77,16 +77,16 @@ public class CheckFunctionRequest extends AbstractModel {
     }
 
     /**
-     * Get The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation) 
-     * @return FuncType The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+     * Get Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation) 
+     * @return FuncType Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
      */
     public Long getFuncType() {
         return this.FuncType;
     }
 
     /**
-     * Set The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
-     * @param FuncType The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+     * Set Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+     * @param FuncType Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
      */
     public void setFuncType(Long FuncType) {
         this.FuncType = FuncType;

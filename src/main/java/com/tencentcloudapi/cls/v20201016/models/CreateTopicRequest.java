@@ -73,7 +73,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+    * lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
     */
     @SerializedName("Period")
     @Expose
@@ -213,16 +213,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure). 
-     * @return Period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * Get lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure). 
+     * @return Period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
-     * @param Period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * Set lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * @param Period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

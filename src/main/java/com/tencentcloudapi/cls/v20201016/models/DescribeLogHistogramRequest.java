@@ -52,7 +52,7 @@ public class DescribeLogHistogramRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+    * Interval in milliseconds. Condition: (To-From) / Interval <= 200
     */
     @SerializedName("Interval")
     @Expose
@@ -132,16 +132,16 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
     }
 
     /**
-     * Get Interval in milliseconds. Condition: (To – From) / Interval ≤ 200 
-     * @return Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+     * Get Interval in milliseconds. Condition: (To-From) / Interval <= 200 
+     * @return Interval Interval in milliseconds. Condition: (To-From) / Interval <= 200
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
-     * @param Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+     * Set Interval in milliseconds. Condition: (To-From) / Interval <= 200
+     * @param Interval Interval in milliseconds. Condition: (To-From) / Interval <= 200
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

@@ -66,7 +66,7 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     private String Prefix;
 
     /**
-    * Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+    * Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
     */
     @SerializedName("Compress")
     @Expose
@@ -169,16 +169,16 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "". 
-     * @return Compress Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+     * Get Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "". 
+     * @return Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
-     * @param Compress Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+     * Set Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+     * @param Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

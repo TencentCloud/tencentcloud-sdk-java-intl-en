@@ -31,7 +31,7 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * Source Log Topic
+    * Source log topic
     */
     @SerializedName("SrcTopicId")
     @Expose
@@ -117,16 +117,16 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get Source Log Topic 
-     * @return SrcTopicId Source Log Topic
+     * Get Source log topic 
+     * @return SrcTopicId Source log topic
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source Log Topic
-     * @param SrcTopicId Source Log Topic
+     * Set Source log topic
+     * @param SrcTopicId Source log topic
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;

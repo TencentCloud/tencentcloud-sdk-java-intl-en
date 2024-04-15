@@ -52,7 +52,7 @@ public class CreateConsumerRequest extends AbstractModel {
     private Ckafka Ckafka;
 
     /**
-    * Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+    * Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
     */
     @SerializedName("Compression")
     @Expose
@@ -123,16 +123,16 @@ public class CreateConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4] 
-     * @return Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+     * Get Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4] 
+     * @return Compression Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
-     * @param Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+     * Set Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
+     * @param Compression Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

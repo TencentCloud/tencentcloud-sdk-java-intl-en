@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CheckFunctionResponse extends AbstractModel {
 
     /**
-    * Failure Error Code
+    * Failure error code
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * Failure Error Message
+    * Failure error message
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -45,32 +45,32 @@ public class CheckFunctionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Failure Error Code 
-     * @return ErrorCode Failure Error Code
+     * Get Failure error code 
+     * @return ErrorCode Failure error code
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set Failure Error Code
-     * @param ErrorCode Failure Error Code
+     * Set Failure error code
+     * @param ErrorCode Failure error code
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get Failure Error Message 
-     * @return ErrorMsg Failure Error Message
+     * Get Failure error message 
+     * @return ErrorMsg Failure error message
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set Failure Error Message
-     * @param ErrorMsg Failure Error Message
+     * Set Failure error message
+     * @param ErrorMsg Failure error message
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
