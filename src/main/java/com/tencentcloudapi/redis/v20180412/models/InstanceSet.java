@@ -266,184 +266,161 @@ public class InstanceSet extends AbstractModel {
     private Long SlaveReadWeight;
 
     /**
-    * Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTagInfo [] InstanceTags;
 
     /**
-    * Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClientLimit")
     @Expose
     private Long ClientLimit;
 
     /**
-    * DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DtsStatus")
     @Expose
     private Long DtsStatus;
 
     /**
-    * Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetLimit")
     @Expose
     private Long NetLimit;
 
     /**
-    * Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PasswordFree")
     @Expose
     private Long PasswordFree;
 
     /**
-    * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
 
     /**
-    * Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IPv6")
     @Expose
     private String IPv6;
 
     /**
-    * Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-    * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RemainBandwidthDuration")
     @Expose
     private String RemainBandwidthDuration;
 
     /**
-    * This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MonitorVersion")
     @Expose
     private String MonitorVersion;
 
     /**
-    * The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClientLimitMin")
     @Expose
     private Long ClientLimitMin;
 
     /**
-    * The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClientLimitMax")
     @Expose
     private Long ClientLimitMax;
 
     /**
-    * Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeSet")
     @Expose
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WanAddress")
     @Expose
     private String WanAddress;
 
     /**
-    * Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("PolarisServer")
     @Expose
     private String PolarisServer;
 
     /**
-    * The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CurrentRedisVersion")
     @Expose
     private String CurrentRedisVersion;
 
     /**
-    * Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
     private String UpgradeProxyVersion;
 
     /**
-    * Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("UpgradeRedisVersion")
     @Expose
@@ -1022,460 +999,368 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InstanceTags Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceTags Note: This field may return null, indicating that no valid values can be obtained.
      */
     public InstanceTagInfo [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InstanceTags Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceTags Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get Project name
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ProjectName Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProjectName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ProjectName Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProjectName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NoAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NoAuth Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NoAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NoAuth Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ClientLimit Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClientLimit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClientLimit() {
         return this.ClientLimit;
     }
 
     /**
-     * Set Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ClientLimit Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClientLimit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;
     }
 
     /**
-     * Get DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DtsStatus Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDtsStatus() {
         return this.DtsStatus;
     }
 
     /**
-     * Set DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DtsStatus Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDtsStatus(Long DtsStatus) {
         this.DtsStatus = DtsStatus;
     }
 
     /**
-     * Get Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NetLimit Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NetLimit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNetLimit() {
         return this.NetLimit;
     }
 
     /**
-     * Set Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NetLimit Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NetLimit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetLimit(Long NetLimit) {
         this.NetLimit = NetLimit;
     }
 
     /**
-     * Get Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PasswordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PasswordFree Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPasswordFree() {
         return this.PasswordFree;
     }
 
     /**
-     * Set Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PasswordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PasswordFree Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPasswordFree(Long PasswordFree) {
         this.PasswordFree = PasswordFree;
     }
 
     /**
-     * Get Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Vip6 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Vip6 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IPv6 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIPv6() {
         return this.IPv6;
     }
 
     /**
-     * Set Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IPv6 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIPv6(String IPv6) {
         this.IPv6 = IPv6;
     }
 
     /**
-     * Get Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ReadOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReadOnly Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ReadOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReadOnly Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RemainBandwidthDuration Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemainBandwidthDuration() {
         return this.RemainBandwidthDuration;
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RemainBandwidthDuration Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
         this.RemainBandwidthDuration = RemainBandwidthDuration;
     }
 
     /**
-     * Get This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DiskSize This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DiskSize Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DiskSize This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DiskSize Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MonitorVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MonitorVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ClientLimitMin The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClientLimitMin Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClientLimitMin() {
         return this.ClientLimitMin;
     }
 
     /**
-     * Set The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ClientLimitMin The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClientLimitMin Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClientLimitMin(Long ClientLimitMin) {
         this.ClientLimitMin = ClientLimitMin;
     }
 
     /**
-     * Get The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ClientLimitMax The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClientLimitMax Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClientLimitMax() {
         return this.ClientLimitMax;
     }
 
     /**
-     * Set The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ClientLimitMax The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClientLimitMax Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClientLimitMax(Long ClientLimitMax) {
         this.ClientLimitMax = ClientLimitMax;
     }
 
     /**
-     * Get Instance node details
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NodeSet Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NodeSet Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NodeSet Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NodeSet Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
     }
 
     /**
-     * Get Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Region Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Region Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Region Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Region Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Public IP
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return WanAddress Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return WanAddress Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getWanAddress() {
         return this.WanAddress;
     }
 
     /**
-     * Set Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param WanAddress Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param WanAddress Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWanAddress(String WanAddress) {
         this.WanAddress = WanAddress;
     }
 
     /**
-     * Get Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return PolarisServer Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getPolarisServer() {
         return this.PolarisServer;
     }
 
     /**
-     * Set Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param PolarisServer Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPolarisServer(String PolarisServer) {
         this.PolarisServer = PolarisServer;
     }
 
     /**
-     * Get The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CurrentProxyVersion The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CurrentProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CurrentProxyVersion The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CurrentProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CurrentRedisVersion The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CurrentRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getCurrentRedisVersion() {
         return this.CurrentRedisVersion;
     }
 
     /**
-     * Set The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CurrentRedisVersion The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CurrentRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {
         this.CurrentRedisVersion = CurrentRedisVersion;
     }
 
     /**
-     * Get Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UpgradeProxyVersion Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UpgradeProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
     }
 
     /**
-     * Set Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UpgradeProxyVersion Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UpgradeProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;
     }
 
     /**
-     * Get Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UpgradeRedisVersion Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UpgradeRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getUpgradeRedisVersion() {
         return this.UpgradeRedisVersion;
     }
 
     /**
-     * Set Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UpgradeRedisVersion Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UpgradeRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
         this.UpgradeRedisVersion = UpgradeRedisVersion;

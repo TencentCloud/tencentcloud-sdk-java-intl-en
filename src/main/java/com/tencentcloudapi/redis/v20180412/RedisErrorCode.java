@@ -123,6 +123,9 @@ public enum RedisErrorCode {
     // Business verification failed
      INVALIDPARAMETERVALUE_CHECKNOTPASS("InvalidParameterValue.CheckNotPass"),
      
+    // A renaming rule error occurred.
+     INVALIDPARAMETERVALUE_INSTANCENAMERULEERROR("InvalidParameterValue.InstanceNameRuleError"),
+     
     // The type of instances requested for purchase is incorrect (TypeId - 1: Cluster Edition; 2: Master-Replica Edition, i.e., the legacy Master-Replica Edition).
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPEID("InvalidParameterValue.InvalidInstanceTypeId"),
      
@@ -131,6 +134,9 @@ public enum RedisErrorCode {
      
     // The requested capacity is out of the purchasable capacity range.
      INVALIDPARAMETERVALUE_MEMSIZENOTINRANGE("InvalidParameterValue.MemSizeNotInRange"),
+     
+    // The instance has already been bound.
+     INVALIDPARAMETERVALUE_NOTREPEATBIND("InvalidParameterValue.NotRepeatBind"),
      
     // The password is empty.
      INVALIDPARAMETERVALUE_PASSWORDEMPTY("InvalidParameterValue.PasswordEmpty"),
@@ -167,6 +173,12 @@ public enum RedisErrorCode {
      
     // The quota limit has been reached.
      LIMITEXCEEDED("LimitExceeded"),
+     
+    // The number of bound instances exceeds the upper limit.
+     LIMITEXCEEDED_EXCEEDUPPERLIMIT("LimitExceeded.ExceedUpperLimit"),
+     
+    // The bound instance must not be specified.
+     LIMITEXCEEDED_INSTANCENOTEMPTY("LimitExceeded.InstanceNotEmpty"),
      
     // The requested capacity is out of the purchasable specification range (`memSize` should be an integer multiple of 1,024 in MB).
      LIMITEXCEEDED_INVALIDMEMSIZE("LimitExceeded.InvalidMemSize"),
