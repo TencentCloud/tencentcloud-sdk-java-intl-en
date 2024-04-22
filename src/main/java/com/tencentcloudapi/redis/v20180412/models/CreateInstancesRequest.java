@@ -227,6 +227,13 @@ Node information of an instance. Currently, information about the node type (mas
     private String RedisClusterId;
 
     /**
+    * Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+    */
+    @SerializedName("AlarmPolicyList")
+    @Expose
+    private String [] AlarmPolicyList;
+
+    /**
      * Get Instance type
 <ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul> 
      * @return TypeId Instance type
@@ -738,6 +745,22 @@ Node information of an instance. Currently, information about the node type (mas
         this.RedisClusterId = RedisClusterId;
     }
 
+    /**
+     * Get Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view. 
+     * @return AlarmPolicyList Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+     */
+    public String [] getAlarmPolicyList() {
+        return this.AlarmPolicyList;
+    }
+
+    /**
+     * Set Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+     * @param AlarmPolicyList Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+     */
+    public void setAlarmPolicyList(String [] AlarmPolicyList) {
+        this.AlarmPolicyList = AlarmPolicyList;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -830,6 +853,12 @@ Node information of an instance. Currently, information about the node type (mas
         if (source.RedisClusterId != null) {
             this.RedisClusterId = new String(source.RedisClusterId);
         }
+        if (source.AlarmPolicyList != null) {
+            this.AlarmPolicyList = new String[source.AlarmPolicyList.length];
+            for (int i = 0; i < source.AlarmPolicyList.length; i++) {
+                this.AlarmPolicyList[i] = new String(source.AlarmPolicyList[i]);
+            }
+        }
     }
 
 
@@ -862,6 +891,7 @@ Node information of an instance. Currently, information about the node type (mas
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
 
     }
 }
