@@ -76,6 +76,28 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to download billing files and return billing file URLs by customers.
+     * @param req DescribeBillDownloadUrlRequest
+     * @return DescribeBillDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillDownloadUrlResponse DescribeBillDownloadUrl(DescribeBillDownloadUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillDownloadUrl", DescribeBillDownloadUrlResponse.class);
+    }
+
+    /**
+     *External API for the L1 billing of the customer billing center
+     * @param req DescribeBillSummaryRequest
+     * @return DescribeBillSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryResponse DescribeBillSummary(DescribeBillSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillSummary", DescribeBillSummaryResponse.class);
+    }
+
+    /**
      *This API is used to obtain the total amount of customer bills by payment mode.
      * @param req DescribeBillSummaryByPayModeRequest
      * @return DescribeBillSummaryByPayModeResponse
