@@ -186,6 +186,17 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify customer remarks.
+     * @param req ModifyClientRemarkRequest
+     * @return ModifyClientRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClientRemarkResponse ModifyClientRemark(ModifyClientRemarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClientRemark", ModifyClientRemarkResponse.class);
+    }
+
+    /**
      *This API is used to query the account verification status.
      * @param req QueryAccountVerificationStatusRequest
      * @return QueryAccountVerificationStatusResponse

@@ -110,6 +110,13 @@ Example: HKIDCard
     private String Language;
 
     /**
+    * Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+    */
+    @SerializedName("AutoDowngrade")
+    @Expose
+    private Long AutoDowngrade;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -333,6 +340,22 @@ Example: HKIDCard
         this.Language = Language;
     }
 
+    /**
+     * Get Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1. 
+     * @return AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     */
+    public Long getAutoDowngrade() {
+        return this.AutoDowngrade;
+    }
+
+    /**
+     * Set Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     * @param AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     */
+    public void setAutoDowngrade(Long AutoDowngrade) {
+        this.AutoDowngrade = AutoDowngrade;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -371,6 +394,9 @@ Example: HKIDCard
         if (source.Language != null) {
             this.Language = new String(source.Language);
         }
+        if (source.AutoDowngrade != null) {
+            this.AutoDowngrade = new Long(source.AutoDowngrade);
+        }
     }
 
 
@@ -388,6 +414,7 @@ Example: HKIDCard
         this.setParamSimple(map, prefix + "IdCardCutReturn", this.IdCardCutReturn);
         this.setParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
         this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
 
     }
 }
