@@ -285,6 +285,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OriginalCostWithSP;
 
     /**
+    * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
      * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
      * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
@@ -888,6 +895,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.OriginalCostWithSP = OriginalCostWithSP;
     }
 
+    /**
+     * Get Billing monthNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
     public BillDistributionResourceSummary() {
     }
 
@@ -1010,6 +1033,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OriginalCostWithSP != null) {
             this.OriginalCostWithSP = new String(source.OriginalCostWithSP);
         }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
     }
 
 
@@ -1054,6 +1080,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
         this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
         this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetWebVerificationResultIntlRequest extends AbstractModel {
+public class AnalyseOwnerUinDetail extends AbstractModel {
 
     /**
-    * The token for the web-based verification, which is generated using the `ApplyWebVerificationBizTokenIntl` API.
+    * User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("BizToken")
+    @SerializedName("OwnerUin")
     @Expose
-    private String BizToken;
+    private String OwnerUin;
 
     /**
-     * Get The token for the web-based verification, which is generated using the `ApplyWebVerificationBizTokenIntl` API. 
-     * @return BizToken The token for the web-based verification, which is generated using the `ApplyWebVerificationBizTokenIntl` API.
+     * Get User UIN
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OwnerUin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getBizToken() {
-        return this.BizToken;
+    public String getOwnerUin() {
+        return this.OwnerUin;
     }
 
     /**
-     * Set The token for the web-based verification, which is generated using the `ApplyWebVerificationBizTokenIntl` API.
-     * @param BizToken The token for the web-based verification, which is generated using the `ApplyWebVerificationBizTokenIntl` API.
+     * Set User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OwnerUin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setBizToken(String BizToken) {
-        this.BizToken = BizToken;
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
     }
 
-    public GetWebVerificationResultIntlRequest() {
+    public AnalyseOwnerUinDetail() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetWebVerificationResultIntlRequest(GetWebVerificationResultIntlRequest source) {
-        if (source.BizToken != null) {
-            this.BizToken = new String(source.BizToken);
+    public AnalyseOwnerUinDetail(AnalyseOwnerUinDetail source) {
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
         }
     }
 
@@ -64,7 +69,7 @@ public class GetWebVerificationResultIntlRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BizToken", this.BizToken);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
 
     }
 }

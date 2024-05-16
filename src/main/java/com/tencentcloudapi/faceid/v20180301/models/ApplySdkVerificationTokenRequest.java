@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ApplySdkVerificationTokenRequest extends AbstractModel {
 
     /**
-    * Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-    */
-    @SerializedName("NeedVerifyIdCard")
-    @Expose
-    private Boolean NeedVerifyIdCard;
-
-    /**
     * The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -64,6 +57,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
     */
     @SerializedName("IdCardType")
     @Expose
@@ -75,6 +71,13 @@ Default value: 4
     @SerializedName("CompareImage")
     @Expose
     private String CompareImage;
+
+    /**
+    * Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+    */
+    @SerializedName("NeedVerifyIdCard")
+    @Expose
+    private Boolean NeedVerifyIdCard;
 
     /**
     * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
@@ -97,22 +100,6 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
     @SerializedName("Extra")
     @Expose
     private String Extra;
-
-    /**
-     * Get Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`. 
-     * @return NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-     */
-    public Boolean getNeedVerifyIdCard() {
-        return this.NeedVerifyIdCard;
-    }
-
-    /**
-     * Set Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-     * @param NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-     */
-    public void setNeedVerifyIdCard(Boolean NeedVerifyIdCard) {
-        this.NeedVerifyIdCard = NeedVerifyIdCard;
-    }
 
     /**
      * Get The verification mode. Valid values:
@@ -192,7 +179,10 @@ Default value: 4
 6. `PhilippinesTinID`: Philippine TIN ID card
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
-9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions 
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card 
      * @return IdCardType The identity document type. Valid values: 
 1. `HK` (default): Identity card of Hong Kong (China)
 2. `ML`: Malaysian identity card
@@ -203,6 +193,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
      */
     public String getIdCardType() {
         return this.IdCardType;
@@ -219,6 +212,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
      * @param IdCardType The identity document type. Valid values: 
 1. `HK` (default): Identity card of Hong Kong (China)
 2. `ML`: Malaysian identity card
@@ -229,6 +225,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
@@ -248,6 +247,26 @@ Default value: 4
      */
     public void setCompareImage(String CompareImage) {
         this.CompareImage = CompareImage;
+    }
+
+    /**
+     * Get Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`. 
+     * @return NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+     * @deprecated
+     */
+    @Deprecated
+    public Boolean getNeedVerifyIdCard() {
+        return this.NeedVerifyIdCard;
+    }
+
+    /**
+     * Set Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+     * @param NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+     * @deprecated
+     */
+    @Deprecated
+    public void setNeedVerifyIdCard(Boolean NeedVerifyIdCard) {
+        this.NeedVerifyIdCard = NeedVerifyIdCard;
     }
 
     /**
@@ -310,9 +329,6 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ApplySdkVerificationTokenRequest(ApplySdkVerificationTokenRequest source) {
-        if (source.NeedVerifyIdCard != null) {
-            this.NeedVerifyIdCard = new Boolean(source.NeedVerifyIdCard);
-        }
         if (source.CheckMode != null) {
             this.CheckMode = new Long(source.CheckMode);
         }
@@ -324,6 +340,9 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
         }
         if (source.CompareImage != null) {
             this.CompareImage = new String(source.CompareImage);
+        }
+        if (source.NeedVerifyIdCard != null) {
+            this.NeedVerifyIdCard = new Boolean(source.NeedVerifyIdCard);
         }
         if (source.DisableChangeOcrResult != null) {
             this.DisableChangeOcrResult = new Boolean(source.DisableChangeOcrResult);
@@ -341,11 +360,11 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
         this.setParamSimple(map, prefix + "CheckMode", this.CheckMode);
         this.setParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
         this.setParamSimple(map, prefix + "CompareImage", this.CompareImage);
+        this.setParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
         this.setParamSimple(map, prefix + "DisableChangeOcrResult", this.DisableChangeOcrResult);
         this.setParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
         this.setParamSimple(map, prefix + "Extra", this.Extra);

@@ -197,7 +197,9 @@ Note: To query the product codes used in the current month, call <a href="https:
     /**
      * Get The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.  
      * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+     * @deprecated
      */
+    @Deprecated
     public String getPeriodType() {
         return this.PeriodType;
     }
@@ -205,7 +207,9 @@ Note: To query the product codes used in the current month, call <a href="https:
     /**
      * Set The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
      * @param PeriodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+     * @deprecated
      */
+    @Deprecated
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }

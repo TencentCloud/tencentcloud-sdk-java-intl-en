@@ -224,6 +224,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FormulaUrl;
 
     /**
+    * Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillDay")
+    @Expose
+    private String BillDay;
+
+    /**
+    * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
+    * Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RegionType")
+    @Expose
+    private String RegionType;
+
+    /**
+    * Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RegionTypeName")
+    @Expose
+    private String RegionTypeName;
+
+    /**
+    * Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReserveDetail")
+    @Expose
+    private String ReserveDetail;
+
+    /**
      * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
      * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
@@ -687,6 +729,102 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.FormulaUrl = FormulaUrl;
     }
 
+    /**
+     * Get Billing dayNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillDay() {
+        return this.BillDay;
+    }
+
+    /**
+     * Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * @param BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillDay(String BillDay) {
+        this.BillDay = BillDay;
+    }
+
+    /**
+     * Get Billing monthNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
+    /**
+     * Get Billing record IDNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Id Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Id Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return RegionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRegionType() {
+        return this.RegionType;
+    }
+
+    /**
+     * Set Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+     * @param RegionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRegionType(String RegionType) {
+        this.RegionType = RegionType;
+    }
+
+    /**
+     * Get Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RegionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRegionTypeName() {
+        return this.RegionTypeName;
+    }
+
+    /**
+     * Set Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RegionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRegionTypeName(String RegionTypeName) {
+        this.RegionTypeName = RegionTypeName;
+    }
+
+    /**
+     * Get Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getReserveDetail() {
+        return this.ReserveDetail;
+    }
+
+    /**
+     * Set Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReserveDetail(String ReserveDetail) {
+        this.ReserveDetail = ReserveDetail;
+    }
+
     public BillDetail() {
     }
 
@@ -788,6 +926,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FormulaUrl != null) {
             this.FormulaUrl = new String(source.FormulaUrl);
         }
+        if (source.BillDay != null) {
+            this.BillDay = new String(source.BillDay);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RegionType != null) {
+            this.RegionType = new String(source.RegionType);
+        }
+        if (source.RegionTypeName != null) {
+            this.RegionTypeName = new String(source.RegionTypeName);
+        }
+        if (source.ReserveDetail != null) {
+            this.ReserveDetail = new String(source.ReserveDetail);
+        }
     }
 
 
@@ -823,6 +979,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
         this.setParamSimple(map, prefix + "Formula", this.Formula);
         this.setParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
+        this.setParamSimple(map, prefix + "BillDay", this.BillDay);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "RegionType", this.RegionType);
+        this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
+        this.setParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
 
     }
 }

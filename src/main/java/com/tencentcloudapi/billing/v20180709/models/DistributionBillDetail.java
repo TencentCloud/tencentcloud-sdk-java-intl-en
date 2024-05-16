@@ -222,6 +222,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FormulaUrl;
 
     /**
+    * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
+    * Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillDay")
+    @Expose
+    private String BillDay;
+
+    /**
      * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
      * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
@@ -689,6 +703,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.FormulaUrl = FormulaUrl;
     }
 
+    /**
+     * Get Billing monthNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
+    /**
+     * Get Billing dayNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillDay() {
+        return this.BillDay;
+    }
+
+    /**
+     * Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * @param BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillDay(String BillDay) {
+        this.BillDay = BillDay;
+    }
+
     public DistributionBillDetail() {
     }
 
@@ -787,6 +833,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FormulaUrl != null) {
             this.FormulaUrl = new String(source.FormulaUrl);
         }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
+        if (source.BillDay != null) {
+            this.BillDay = new String(source.BillDay);
+        }
     }
 
 
@@ -821,6 +873,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
         this.setParamSimple(map, prefix + "Formula", this.Formula);
         this.setParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+        this.setParamSimple(map, prefix + "BillDay", this.BillDay);
 
     }
 }

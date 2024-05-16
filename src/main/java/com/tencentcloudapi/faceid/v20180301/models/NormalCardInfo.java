@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CardInfo extends AbstractModel {
+public class NormalCardInfo extends AbstractModel {
 
     /**
     * Hong Kong ID Card
@@ -29,7 +29,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("HKIDCard")
     @Expose
-    private HKIDCard HKIDCard;
+    private NormalHKIDCard HKIDCard;
 
     /**
     * Malaysia ID Card
@@ -37,7 +37,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("MLIDCard")
     @Expose
-    private MLIDCard MLIDCard;
+    private NormalMLIDCard MLIDCard;
 
     /**
     * Philippines VoteID Card
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("IndonesiaIDCard")
     @Expose
-    private IndonesiaIDCard IndonesiaIDCard;
+    private NormalIndonesiaIDCard IndonesiaIDCard;
 
     /**
     * Philippines Driving License
@@ -117,7 +117,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("ThailandIDCard")
     @Expose
-    private ThailandIDCard ThailandIDCard;
+    private NormalThailandIDCard ThailandIDCard;
 
     /**
     * Singapore ID Card
@@ -141,7 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public HKIDCard getHKIDCard() {
+    public NormalHKIDCard getHKIDCard() {
         return this.HKIDCard;
     }
 
@@ -151,7 +151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setHKIDCard(HKIDCard HKIDCard) {
+    public void setHKIDCard(NormalHKIDCard HKIDCard) {
         this.HKIDCard = HKIDCard;
     }
 
@@ -161,7 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return MLIDCard Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public MLIDCard getMLIDCard() {
+    public NormalMLIDCard getMLIDCard() {
         return this.MLIDCard;
     }
 
@@ -171,7 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param MLIDCard Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setMLIDCard(MLIDCard MLIDCard) {
+    public void setMLIDCard(NormalMLIDCard MLIDCard) {
         this.MLIDCard = MLIDCard;
     }
 
@@ -201,7 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return IndonesiaIDCard Indonesia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public IndonesiaIDCard getIndonesiaIDCard() {
+    public NormalIndonesiaIDCard getIndonesiaIDCard() {
         return this.IndonesiaIDCard;
     }
 
@@ -211,7 +211,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param IndonesiaIDCard Indonesia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setIndonesiaIDCard(IndonesiaIDCard IndonesiaIDCard) {
+    public void setIndonesiaIDCard(NormalIndonesiaIDCard IndonesiaIDCard) {
         this.IndonesiaIDCard = IndonesiaIDCard;
     }
 
@@ -361,7 +361,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return ThailandIDCard Thailand ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public ThailandIDCard getThailandIDCard() {
+    public NormalThailandIDCard getThailandIDCard() {
         return this.ThailandIDCard;
     }
 
@@ -371,7 +371,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ThailandIDCard Thailand ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setThailandIDCard(ThailandIDCard ThailandIDCard) {
+    public void setThailandIDCard(NormalThailandIDCard ThailandIDCard) {
         this.ThailandIDCard = ThailandIDCard;
     }
 
@@ -415,25 +415,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MacaoIDCard = MacaoIDCard;
     }
 
-    public CardInfo() {
+    public NormalCardInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CardInfo(CardInfo source) {
+    public NormalCardInfo(NormalCardInfo source) {
         if (source.HKIDCard != null) {
-            this.HKIDCard = new HKIDCard(source.HKIDCard);
+            this.HKIDCard = new NormalHKIDCard(source.HKIDCard);
         }
         if (source.MLIDCard != null) {
-            this.MLIDCard = new MLIDCard(source.MLIDCard);
+            this.MLIDCard = new NormalMLIDCard(source.MLIDCard);
         }
         if (source.PhilippinesVoteID != null) {
             this.PhilippinesVoteID = new PhilippinesVoteID(source.PhilippinesVoteID);
         }
         if (source.IndonesiaIDCard != null) {
-            this.IndonesiaIDCard = new IndonesiaIDCard(source.IndonesiaIDCard);
+            this.IndonesiaIDCard = new NormalIndonesiaIDCard(source.IndonesiaIDCard);
         }
         if (source.PhilippinesDrivingLicense != null) {
             this.PhilippinesDrivingLicense = new PhilippinesDrivingLicense(source.PhilippinesDrivingLicense);
@@ -457,7 +457,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
             this.IndonesiaDrivingLicense = new IndonesiaDrivingLicense(source.IndonesiaDrivingLicense);
         }
         if (source.ThailandIDCard != null) {
-            this.ThailandIDCard = new ThailandIDCard(source.ThailandIDCard);
+            this.ThailandIDCard = new NormalThailandIDCard(source.ThailandIDCard);
         }
         if (source.SingaporeIDCard != null) {
             this.SingaporeIDCard = new SingaporeIDCard(source.SingaporeIDCard);

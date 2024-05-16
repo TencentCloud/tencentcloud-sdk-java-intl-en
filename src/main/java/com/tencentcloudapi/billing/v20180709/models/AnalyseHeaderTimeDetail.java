@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetWebVerificationResultRequest extends AbstractModel {
+public class AnalyseHeaderTimeDetail extends AbstractModel {
 
     /**
-    * The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+    * DateNote: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("BizToken")
+    @SerializedName("Name")
     @Expose
-    private String BizToken;
+    private String Name;
 
     /**
-     * Get The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API. 
-     * @return BizToken The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+     * Get DateNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name DateNote: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getBizToken() {
-        return this.BizToken;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
-     * @param BizToken The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+     * Set DateNote: This field may return null, indicating that no valid values can be obtained.
+     * @param Name DateNote: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setBizToken(String BizToken) {
-        this.BizToken = BizToken;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public GetWebVerificationResultRequest() {
+    public AnalyseHeaderTimeDetail() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetWebVerificationResultRequest(GetWebVerificationResultRequest source) {
-        if (source.BizToken != null) {
-            this.BizToken = new String(source.BizToken);
+    public AnalyseHeaderTimeDetail(AnalyseHeaderTimeDetail source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
     }
 
@@ -64,7 +64,7 @@ public class GetWebVerificationResultRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BizToken", this.BizToken);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

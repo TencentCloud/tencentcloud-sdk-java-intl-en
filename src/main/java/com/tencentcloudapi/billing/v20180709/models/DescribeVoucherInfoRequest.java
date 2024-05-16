@@ -129,6 +129,20 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
     private String Operator;
 
     /**
+    * The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+    */
+    @SerializedName("VoucherMainType")
+    @Expose
+    private String VoucherMainType;
+
+    /**
+    * Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+    */
+    @SerializedName("VoucherSubType")
+    @Expose
+    private String VoucherSubType;
+
+    /**
      * Get The number of records per page. The default is 20, and the maximum is 1,000. 
      * @return Limit The number of records per page. The default is 20, and the maximum is 1,000.
      */
@@ -368,6 +382,38 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively. 
+     * @return VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     */
+    public String getVoucherMainType() {
+        return this.VoucherMainType;
+    }
+
+    /**
+     * Set The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     * @param VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     */
+    public void setVoucherMainType(String VoucherMainType) {
+        this.VoucherMainType = VoucherMainType;
+    }
+
+    /**
+     * Get Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher. 
+     * @return VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     */
+    public String getVoucherSubType() {
+        return this.VoucherSubType;
+    }
+
+    /**
+     * Set Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     * @param VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     */
+    public void setVoucherSubType(String VoucherSubType) {
+        this.VoucherSubType = VoucherSubType;
+    }
+
     public DescribeVoucherInfoRequest() {
     }
 
@@ -421,6 +467,12 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.VoucherMainType != null) {
+            this.VoucherMainType = new String(source.VoucherMainType);
+        }
+        if (source.VoucherSubType != null) {
+            this.VoucherSubType = new String(source.VoucherSubType);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "PayScene", this.PayScene);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "VoucherMainType", this.VoucherMainType);
+        this.setParamSimple(map, prefix + "VoucherSubType", this.VoucherSubType);
 
     }
 }

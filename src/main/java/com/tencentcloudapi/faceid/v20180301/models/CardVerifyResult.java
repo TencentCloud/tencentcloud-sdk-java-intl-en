@@ -31,6 +31,13 @@ public class CardVerifyResult extends AbstractModel {
     private Boolean IsPass;
 
     /**
+    * Whether the user modified the card recognition result
+    */
+    @SerializedName("IsEdit")
+    @Expose
+    private Boolean IsEdit;
+
+    /**
     * The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -164,6 +171,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CardInfo CardInfo;
 
     /**
+    * License OCR result
+    */
+    @SerializedName("NormalCardInfo")
+    @Expose
+    private NormalCardInfo NormalCardInfo;
+
+    /**
+    * Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+    */
+    @SerializedName("WarnCardInfos")
+    @Expose
+    private Long [] WarnCardInfos;
+
+    /**
      * Get Whether the authentication or OCR process is successful. 
      * @return IsPass Whether the authentication or OCR process is successful.
      */
@@ -177,6 +204,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setIsPass(Boolean IsPass) {
         this.IsPass = IsPass;
+    }
+
+    /**
+     * Get Whether the user modified the card recognition result 
+     * @return IsEdit Whether the user modified the card recognition result
+     */
+    public Boolean getIsEdit() {
+        return this.IsEdit;
+    }
+
+    /**
+     * Set Whether the user modified the card recognition result
+     * @param IsEdit Whether the user modified the card recognition result
+     */
+    public void setIsEdit(Boolean IsEdit) {
+        this.IsEdit = IsEdit;
     }
 
     /**
@@ -638,7 +681,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get The recognition results of ID card 
      * @return CardInfo The recognition results of ID card
+     * @deprecated
      */
+    @Deprecated
     public CardInfo getCardInfo() {
         return this.CardInfo;
     }
@@ -646,9 +691,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set The recognition results of ID card
      * @param CardInfo The recognition results of ID card
+     * @deprecated
      */
+    @Deprecated
     public void setCardInfo(CardInfo CardInfo) {
         this.CardInfo = CardInfo;
+    }
+
+    /**
+     * Get License OCR result 
+     * @return NormalCardInfo License OCR result
+     */
+    public NormalCardInfo getNormalCardInfo() {
+        return this.NormalCardInfo;
+    }
+
+    /**
+     * Set License OCR result
+     * @param NormalCardInfo License OCR result
+     */
+    public void setNormalCardInfo(NormalCardInfo NormalCardInfo) {
+        this.NormalCardInfo = NormalCardInfo;
+    }
+
+    /**
+     * Get Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled. 
+     * @return WarnCardInfos Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     */
+    public Long [] getWarnCardInfos() {
+        return this.WarnCardInfos;
+    }
+
+    /**
+     * Set Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     * @param WarnCardInfos Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     */
+    public void setWarnCardInfos(Long [] WarnCardInfos) {
+        this.WarnCardInfos = WarnCardInfos;
     }
 
     public CardVerifyResult() {
@@ -661,6 +764,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public CardVerifyResult(CardVerifyResult source) {
         if (source.IsPass != null) {
             this.IsPass = new Boolean(source.IsPass);
+        }
+        if (source.IsEdit != null) {
+            this.IsEdit = new Boolean(source.IsEdit);
         }
         if (source.CardVideo != null) {
             this.CardVideo = new FileInfo(source.CardVideo);
@@ -677,6 +783,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CardInfo != null) {
             this.CardInfo = new CardInfo(source.CardInfo);
         }
+        if (source.NormalCardInfo != null) {
+            this.NormalCardInfo = new NormalCardInfo(source.NormalCardInfo);
+        }
+        if (source.WarnCardInfos != null) {
+            this.WarnCardInfos = new Long[source.WarnCardInfos.length];
+            for (int i = 0; i < source.WarnCardInfos.length; i++) {
+                this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
+            }
+        }
     }
 
 
@@ -685,11 +800,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsPass", this.IsPass);
+        this.setParamSimple(map, prefix + "IsEdit", this.IsEdit);
         this.setParamObj(map, prefix + "CardVideo.", this.CardVideo);
         this.setParamObj(map, prefix + "CardImage.", this.CardImage);
         this.setParamObj(map, prefix + "CardInfoOcrJson.", this.CardInfoOcrJson);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
         this.setParamObj(map, prefix + "CardInfo.", this.CardInfo);
+        this.setParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
+        this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
 
     }
 }

@@ -208,6 +208,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *This API is used to view cost analysis details.
+     * @param req DescribeCostExplorerSummaryRequest
+     * @return DescribeCostExplorerSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostExplorerSummaryResponse DescribeCostExplorerSummary(DescribeCostExplorerSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostExplorerSummary", DescribeCostExplorerSummaryResponse.class);
+    }
+
+    /**
      *This API is used to query COS usage details.
      * @param req DescribeDosageCosDetailByDateRequest
      * @return DescribeDosageCosDetailByDateResponse
