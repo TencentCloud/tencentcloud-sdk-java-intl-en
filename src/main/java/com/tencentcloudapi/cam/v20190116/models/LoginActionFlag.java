@@ -59,6 +59,20 @@ public class LoginActionFlag extends AbstractModel {
     private Long Custom;
 
     /**
+    * Mail
+    */
+    @SerializedName("Mail")
+    @Expose
+    private Long Mail;
+
+    /**
+    * U2F token
+    */
+    @SerializedName("U2FToken")
+    @Expose
+    private Long U2FToken;
+
+    /**
      * Get Phone 
      * @return Phone Phone
      */
@@ -138,6 +152,38 @@ public class LoginActionFlag extends AbstractModel {
         this.Custom = Custom;
     }
 
+    /**
+     * Get Mail 
+     * @return Mail Mail
+     */
+    public Long getMail() {
+        return this.Mail;
+    }
+
+    /**
+     * Set Mail
+     * @param Mail Mail
+     */
+    public void setMail(Long Mail) {
+        this.Mail = Mail;
+    }
+
+    /**
+     * Get U2F token 
+     * @return U2FToken U2F token
+     */
+    public Long getU2FToken() {
+        return this.U2FToken;
+    }
+
+    /**
+     * Set U2F token
+     * @param U2FToken U2F token
+     */
+    public void setU2FToken(Long U2FToken) {
+        this.U2FToken = U2FToken;
+    }
+
     public LoginActionFlag() {
     }
 
@@ -161,6 +207,12 @@ public class LoginActionFlag extends AbstractModel {
         if (source.Custom != null) {
             this.Custom = new Long(source.Custom);
         }
+        if (source.Mail != null) {
+            this.Mail = new Long(source.Mail);
+        }
+        if (source.U2FToken != null) {
+            this.U2FToken = new Long(source.U2FToken);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class LoginActionFlag extends AbstractModel {
         this.setParamSimple(map, prefix + "Stoken", this.Stoken);
         this.setParamSimple(map, prefix + "Wechat", this.Wechat);
         this.setParamSimple(map, prefix + "Custom", this.Custom);
+        this.setParamSimple(map, prefix + "Mail", this.Mail);
+        this.setParamSimple(map, prefix + "U2FToken", this.U2FToken);
 
     }
 }
