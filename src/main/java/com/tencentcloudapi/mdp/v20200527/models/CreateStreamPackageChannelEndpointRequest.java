@@ -45,6 +45,34 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
     private EndpointAuthInfo AuthInfo;
 
     /**
+    * Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * Mainifest name, default is main.
+    */
+    @SerializedName("Manifest")
+    @Expose
+    private String Manifest;
+
+    /**
+    * Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+    */
+    @SerializedName("TimeShiftEnable")
+    @Expose
+    private Boolean TimeShiftEnable;
+
+    /**
+    * The number of days to look back in TimeShift, up to 30 days is supported.
+    */
+    @SerializedName("TimeShiftDuration")
+    @Expose
+    private Long TimeShiftDuration;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -92,6 +120,70 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
         this.AuthInfo = AuthInfo;
     }
 
+    /**
+     * Get Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint). 
+     * @return Protocol Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+     * @param Protocol Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get Mainifest name, default is main. 
+     * @return Manifest Mainifest name, default is main.
+     */
+    public String getManifest() {
+        return this.Manifest;
+    }
+
+    /**
+     * Set Mainifest name, default is main.
+     * @param Manifest Mainifest name, default is main.
+     */
+    public void setManifest(String Manifest) {
+        this.Manifest = Manifest;
+    }
+
+    /**
+     * Get Whether to turn on the TimeShift function, true: on, false: off, the default is off. 
+     * @return TimeShiftEnable Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+     */
+    public Boolean getTimeShiftEnable() {
+        return this.TimeShiftEnable;
+    }
+
+    /**
+     * Set Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+     * @param TimeShiftEnable Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+     */
+    public void setTimeShiftEnable(Boolean TimeShiftEnable) {
+        this.TimeShiftEnable = TimeShiftEnable;
+    }
+
+    /**
+     * Get The number of days to look back in TimeShift, up to 30 days is supported. 
+     * @return TimeShiftDuration The number of days to look back in TimeShift, up to 30 days is supported.
+     */
+    public Long getTimeShiftDuration() {
+        return this.TimeShiftDuration;
+    }
+
+    /**
+     * Set The number of days to look back in TimeShift, up to 30 days is supported.
+     * @param TimeShiftDuration The number of days to look back in TimeShift, up to 30 days is supported.
+     */
+    public void setTimeShiftDuration(Long TimeShiftDuration) {
+        this.TimeShiftDuration = TimeShiftDuration;
+    }
+
     public CreateStreamPackageChannelEndpointRequest() {
     }
 
@@ -109,6 +201,18 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
         if (source.AuthInfo != null) {
             this.AuthInfo = new EndpointAuthInfo(source.AuthInfo);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Manifest != null) {
+            this.Manifest = new String(source.Manifest);
+        }
+        if (source.TimeShiftEnable != null) {
+            this.TimeShiftEnable = new Boolean(source.TimeShiftEnable);
+        }
+        if (source.TimeShiftDuration != null) {
+            this.TimeShiftDuration = new Long(source.TimeShiftDuration);
+        }
     }
 
 
@@ -119,6 +223,10 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Manifest", this.Manifest);
+        this.setParamSimple(map, prefix + "TimeShiftEnable", this.TimeShiftEnable);
+        this.setParamSimple(map, prefix + "TimeShiftDuration", this.TimeShiftDuration);
 
     }
 }
