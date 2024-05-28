@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Total;
 
     /**
-    * Context information returned by this request. The value can be passed in as the value of parameters in the next request to accelerate queries. Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Context")
     @Expose
@@ -89,16 +89,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Context information returned by this request. The value can be passed in as the value of parameters in the next request to accelerate queries. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Context Context information returned by this request. The value can be passed in as the value of parameters in the next request to accelerate queries. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Context Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set Context information returned by this request. The value can be passed in as the value of parameters in the next request to accelerate queries. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Context Context information returned by this request. The value can be passed in as the value of parameters in the next request to accelerate queries. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Context Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContext(String Context) {
         this.Context = Context;

@@ -208,6 +208,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *This API is used to query consumption details.
+     * @param req DescribeCostDetailRequest
+     * @return DescribeCostDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostDetailResponse DescribeCostDetail(DescribeCostDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostDetail", DescribeCostDetailResponse.class);
+    }
+
+    /**
      *This API is used to view cost analysis details.
      * @param req DescribeCostExplorerSummaryRequest
      * @return DescribeCostExplorerSummaryResponse
@@ -216,6 +227,50 @@ Note: The API request may fail due to network instability or other exceptions. I
     public DescribeCostExplorerSummaryResponse DescribeCostExplorerSummary(DescribeCostExplorerSummaryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCostExplorerSummary", DescribeCostExplorerSummaryResponse.class);
+    }
+
+    /**
+     *This API is used to obtain consumption details summarized by product.
+     * @param req DescribeCostSummaryByProductRequest
+     * @return DescribeCostSummaryByProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByProductResponse DescribeCostSummaryByProduct(DescribeCostSummaryByProductRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostSummaryByProduct", DescribeCostSummaryByProductResponse.class);
+    }
+
+    /**
+     *This API is used to obtain consumption details summarized by project.
+     * @param req DescribeCostSummaryByProjectRequest
+     * @return DescribeCostSummaryByProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByProjectResponse DescribeCostSummaryByProject(DescribeCostSummaryByProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostSummaryByProject", DescribeCostSummaryByProjectResponse.class);
+    }
+
+    /**
+     *This API is used to obtain consumption details summarized by region.
+     * @param req DescribeCostSummaryByRegionRequest
+     * @return DescribeCostSummaryByRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByRegionResponse DescribeCostSummaryByRegion(DescribeCostSummaryByRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostSummaryByRegion", DescribeCostSummaryByRegionResponse.class);
+    }
+
+    /**
+     *This API is used to obtain consumption details summarized by resource.
+     * @param req DescribeCostSummaryByResourceRequest
+     * @return DescribeCostSummaryByResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByResourceResponse DescribeCostSummaryByResource(DescribeCostSummaryByResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostSummaryByResource", DescribeCostSummaryByResourceResponse.class);
     }
 
     /**
