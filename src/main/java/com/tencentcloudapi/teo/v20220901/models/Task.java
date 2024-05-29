@@ -31,13 +31,6 @@ public class Task extends AbstractModel {
     private String JobId;
 
     /**
-    * Status of the task.
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
-
-    /**
     * Resource.
     */
     @SerializedName("Target")
@@ -50,6 +43,24 @@ public class Task extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
+    * Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
     * Creation time of the task.
@@ -82,22 +93,6 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get Status of the task. 
-     * @return Status Status of the task.
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Status of the task.
-     * @param Status Status of the task.
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    /**
      * Get Resource. 
      * @return Target Resource.
      */
@@ -127,6 +122,54 @@ public class Task extends AbstractModel {
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get  
+     * @return Method 
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 
+     * @param Method 
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
+    }
+
+    /**
+     * Get Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li> 
+     * @return Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+     * @param Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
@@ -172,14 +215,17 @@ public class Task extends AbstractModel {
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
         if (source.Target != null) {
             this.Target = new String(source.Target);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -195,9 +241,10 @@ public class Task extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

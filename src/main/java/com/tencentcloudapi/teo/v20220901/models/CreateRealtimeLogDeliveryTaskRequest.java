@@ -107,6 +107,15 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
+    * Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+    */
+    @SerializedName("LogFormat")
+    @Expose
+    private LogFormat LogFormat;
+
+    /**
     * The configuration information of CLS. This parameter is required when TaskType is cls.
     */
     @SerializedName("CLS")
@@ -340,6 +349,30 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat. 
+     * @return LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+     */
+    public LogFormat getLogFormat() {
+        return this.LogFormat;
+    }
+
+    /**
+     * Set Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+     * @param LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+     */
+    public void setLogFormat(LogFormat LogFormat) {
+        this.LogFormat = LogFormat;
+    }
+
+    /**
      * Get The configuration information of CLS. This parameter is required when TaskType is cls. 
      * @return CLS The configuration information of CLS. This parameter is required when TaskType is cls.
      */
@@ -437,6 +470,9 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.Sample != null) {
             this.Sample = new Long(source.Sample);
         }
+        if (source.LogFormat != null) {
+            this.LogFormat = new LogFormat(source.LogFormat);
+        }
         if (source.CLS != null) {
             this.CLS = new CLSTopic(source.CLS);
         }
@@ -463,6 +499,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
+        this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);
         this.setParamObj(map, prefix + "CLS.", this.CLS);
         this.setParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
         this.setParamObj(map, prefix + "S3.", this.S3);

@@ -184,6 +184,18 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *If you need to use the EdgeOne product, you must create a billing plan through this interface.
+> After creating a plan, you need to complete the process of creating a site and binding the plan through [CreateZone](https://intl.cloud.tencent.com/document/product/1552/80719?from_cn_redirect=1), so that the EdgeOne can provide services properly.
+     * @param req CreatePlanRequest
+     * @return CreatePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePlanResponse CreatePlan(CreatePlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePlan", CreatePlanResponse.class);
+    }
+
+    /**
      *This API is used to purchase a plan for a new site.
      * @param req CreatePlanForZoneRequest
      * @return CreatePlanForZoneResponse
@@ -816,6 +828,24 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *To stop billing for your EdgeOne plan, you can use this interface to terminate the billing plan.
+> Terminating a billing plan requires the following conditions:
+    1. The plan has expired (except for the Enterprise Edition Plan);
+    2. All sites under the plan have been either shut down or deleted.
+
+> The site status can be queried through the [Query Site List](https://intl.cloud.tencent.com/document/product/1552/80713?from_cn_redirect=1) interface.
+A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://intl.cloud.tencent.com/document/product/1552/80707?from_cn_redirect=1) interface.
+A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/document/product/1552/80717?from_cn_redirect=1) interface.
+     * @param req DestroyPlanRequest
+     * @return DestroyPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPlanResponse DestroyPlan(DestroyPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyPlan", DestroyPlanResponse.class);
+    }
+
+    /**
      *This API is used to download L4 logs.
      * @param req DownloadL4LogsRequest
      * @return DownloadL4LogsResponse
@@ -846,6 +876,18 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
+    }
+
+    /**
+     *When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.
+> This interface only supports the Enterprise Edition Plan.
+     * @param req IncreasePlanQuotaRequest
+     * @return IncreasePlanQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public IncreasePlanQuotaResponse IncreasePlanQuota(IncreasePlanQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IncreasePlanQuota", IncreasePlanQuotaResponse.class);
     }
 
     /**
@@ -1007,6 +1049,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
+     *Modify the plan settings. Currently, only the auto-renewal switch of prepaid plans can be modified.
+     * @param req ModifyPlanRequest
+     * @return ModifyPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPlanResponse ModifyPlan(ModifyPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPlan", ModifyPlanResponse.class);
+    }
+
+    /**
      *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
      * @param req ModifyRealtimeLogDeliveryTaskRequest
      * @return ModifyRealtimeLogDeliveryTaskResponse
@@ -1081,6 +1134,32 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
+    }
+
+    /**
+     *When your plan needs to be extended, you can use this interface to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
+> For cost details, refer to [Plan Fees](https://intl.cloud.tencent.com/document/product/1552/94158?from_cn_redirect=1).
+     * @param req RenewPlanRequest
+     * @return RenewPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewPlanResponse RenewPlan(RenewPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewPlan", RenewPlanResponse.class);
+    }
+
+    /**
+     *When you need features available only in higher-tier plans, you can upgrade your plan through this interface. Upgrades are only supported for Personal and Basic Edition Plans.
+> For differences between EdgeOne billing plans, refer to [Comparison of EdgeOne Plans](https://intl.cloud.tencent.com/document/product/1552/94165?from_cn_redirect=1).
+For EdgeOne plan upgrade rules and pricing details, refer to [EdgeOne Plan Upgrade Guide](https://intl.cloud.tencent.com/document/product/1552/95291?from_cn_redirect=1).
+If your plan needs to upgrade to the Enterprise Edition, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+     * @param req UpgradePlanRequest
+     * @return UpgradePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradePlanResponse UpgradePlan(UpgradePlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradePlan", UpgradePlanResponse.class);
     }
 
     /**

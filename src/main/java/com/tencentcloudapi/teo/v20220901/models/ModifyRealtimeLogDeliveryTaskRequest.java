@@ -91,6 +91,13 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
+    * Output format for log delivery. If this field is not specified, the original configuration will be retained.
+    */
+    @SerializedName("LogFormat")
+    @Expose
+    private LogFormat LogFormat;
+
+    /**
     * The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
     */
     @SerializedName("CustomEndpoint")
@@ -265,6 +272,22 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get Output format for log delivery. If this field is not specified, the original configuration will be retained. 
+     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     */
+    public LogFormat getLogFormat() {
+        return this.LogFormat;
+    }
+
+    /**
+     * Set Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     * @param LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     */
+    public void setLogFormat(LogFormat LogFormat) {
+        this.LogFormat = LogFormat;
+    }
+
+    /**
      * Get The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained. 
      * @return CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
      */
@@ -343,6 +366,9 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.Sample != null) {
             this.Sample = new Long(source.Sample);
         }
+        if (source.LogFormat != null) {
+            this.LogFormat = new LogFormat(source.LogFormat);
+        }
         if (source.CustomEndpoint != null) {
             this.CustomEndpoint = new CustomEndpoint(source.CustomEndpoint);
         }
@@ -365,6 +391,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
+        this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);
         this.setParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
         this.setParamObj(map, prefix + "S3.", this.S3);
 

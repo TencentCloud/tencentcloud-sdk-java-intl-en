@@ -60,10 +60,14 @@ public class DescribePrefetchTasksRequest extends AbstractModel {
 
     /**
     * Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id<br> Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>target<br> Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>domains<br> Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
-<li>statuses<br> Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
+<li>job-id 
+Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>target
+Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>domains 
+Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
+<li>statuses
+Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -151,15 +155,23 @@ public class DescribePrefetchTasksRequest extends AbstractModel {
 
     /**
      * Get Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id<br> Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>target<br> Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>domains<br> Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
-<li>statuses<br> Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li> 
+<li>job-id 
+Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>target
+Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>domains 
+Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
+<li>statuses
+Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li> 
      * @return Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id<br> Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>target<br> Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>domains<br> Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
-<li>statuses<br> Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
+<li>job-id 
+Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>target
+Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>domains 
+Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
+<li>statuses
+Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -167,15 +179,23 @@ public class DescribePrefetchTasksRequest extends AbstractModel {
 
     /**
      * Set Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id<br> Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>target<br> Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>domains<br> Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
-<li>statuses<br> Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
+<li>job-id 
+Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>target
+Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>domains 
+Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
+<li>statuses
+Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
      * @param Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id<br> Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>target<br> Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
-<li>domains<br> Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
-<li>statuses<br> Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
+<li>job-id 
+Filter based on task ID.  job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>target
+Filter based on target resource information. target format: http://www.qq.com/1.txt. Multiple values are not supported, Fuzzy search is not supported. </li>
+<li>domains 
+Filter based on domain name. domains format: www.qq.com. Fuzzy search is not supported.</li>
+<li>statuses
+Filter based on task status.  Fuzzy search is not supported. Options:<br> processing: Processing<br> success: Success<br> failed: Failure<br> timeout: Timeout</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
