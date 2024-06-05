@@ -24,13 +24,13 @@ import java.util.HashMap;
 public class OriginDetail extends AbstractModel {
 
     /**
-    * Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+    * The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
     */
     @SerializedName("OriginType")
@@ -110,21 +110,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VodeoBucketId;
 
     /**
-     * Get Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+     * Get The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li> 
-     * @return OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+     * @return OriginType The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public String getOriginType() {
@@ -132,21 +132,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+     * Set The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-     * @param OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+     * @param OriginType The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public void setOriginType(String OriginType) {

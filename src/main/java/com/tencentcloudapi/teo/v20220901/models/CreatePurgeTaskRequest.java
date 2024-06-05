@@ -65,6 +65,13 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     private Boolean EncodeUrl;
 
     /**
+    * The information attached when the node cache purge type is set to purge_cache_tag.
+    */
+    @SerializedName("CacheTag")
+    @Expose
+    private CacheTag CacheTag;
+
+    /**
      * Get ID of the site. 
      * @return ZoneId ID of the site.
      */
@@ -172,6 +179,22 @@ Note that if it’s enabled, the purging is based on the converted URLs.
         this.EncodeUrl = EncodeUrl;
     }
 
+    /**
+     * Get The information attached when the node cache purge type is set to purge_cache_tag. 
+     * @return CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     */
+    public CacheTag getCacheTag() {
+        return this.CacheTag;
+    }
+
+    /**
+     * Set The information attached when the node cache purge type is set to purge_cache_tag.
+     * @param CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     */
+    public void setCacheTag(CacheTag CacheTag) {
+        this.CacheTag = CacheTag;
+    }
+
     public CreatePurgeTaskRequest() {
     }
 
@@ -198,6 +221,9 @@ Note that if it’s enabled, the purging is based on the converted URLs.
         if (source.EncodeUrl != null) {
             this.EncodeUrl = new Boolean(source.EncodeUrl);
         }
+        if (source.CacheTag != null) {
+            this.CacheTag = new CacheTag(source.CacheTag);
+        }
     }
 
 
@@ -210,6 +236,7 @@ Note that if it’s enabled, the purging is based on the converted URLs.
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
+        this.setParamObj(map, prefix + "CacheTag.", this.CacheTag);
 
     }
 }

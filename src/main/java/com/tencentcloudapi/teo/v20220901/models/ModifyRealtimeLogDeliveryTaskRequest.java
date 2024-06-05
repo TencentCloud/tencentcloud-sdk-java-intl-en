@@ -91,7 +91,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
-    * Output format for log delivery. If this field is not specified, the original configuration will be retained.
+    * Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
     */
     @SerializedName("LogFormat")
     @Expose
@@ -272,16 +272,16 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Output format for log delivery. If this field is not specified, the original configuration will be retained. 
-     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     * Get Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat. 
+     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set Output format for log delivery. If this field is not specified, the original configuration will be retained.
-     * @param LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     * Set Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * @param LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
