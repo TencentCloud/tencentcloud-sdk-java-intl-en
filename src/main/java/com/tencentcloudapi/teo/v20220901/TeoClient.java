@@ -151,6 +151,17 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *This API is used to create a custom response page.
+     * @param req CreateCustomizeErrorPageRequest
+     * @return CreateCustomizeErrorPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(CreateCustomizeErrorPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomizeErrorPage", CreateCustomizeErrorPageResponse.class);
+    }
+
+    /**
      *This API is used to create Layer 4 proxy instances.
      * @param req CreateL4ProxyRequest
      * @return CreateL4ProxyResponse
@@ -330,6 +341,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a custom response page.
+     * @param req DeleteCustomErrorPageRequest
+     * @return DeleteCustomErrorPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomErrorPageResponse DeleteCustomErrorPage(DeleteCustomErrorPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomErrorPage", DeleteCustomErrorPageResponse.class);
     }
 
     /**
@@ -517,6 +539,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeContentQuotaResponse DescribeContentQuota(DescribeContentQuotaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeContentQuota", DescribeContentQuotaResponse.class);
+    }
+
+    /**
+     *This API is used to query the custom response page list.
+     * @param req DescribeCustomErrorPagesRequest
+     * @return DescribeCustomErrorPagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomErrorPagesResponse DescribeCustomErrorPages(DescribeCustomErrorPagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomErrorPages", DescribeCustomErrorPagesResponse.class);
     }
 
     /**
@@ -992,6 +1025,17 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(ModifyApplicationProxyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApplicationProxyStatus", ModifyApplicationProxyStatusResponse.class);
+    }
+
+    /**
+     *This API is used to modify a custom response page.
+     * @param req ModifyCustomErrorPageRequest
+     * @return ModifyCustomErrorPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
     }
 
     /**

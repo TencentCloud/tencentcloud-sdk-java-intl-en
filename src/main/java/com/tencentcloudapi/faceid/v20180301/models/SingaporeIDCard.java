@@ -32,6 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ChName;
 
     /**
+    * Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ChineseName")
+    @Expose
+    private String ChineseName;
+
+    /**
     * English name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -40,12 +48,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EnName;
 
     /**
+    * English name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FullName")
+    @Expose
+    private String FullName;
+
+    /**
     * License number
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ID")
     @Expose
     private String ID;
+
+    /**
+    * License number
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LicenseNumber")
+    @Expose
+    private String LicenseNumber;
 
     /**
     * Gender
@@ -64,6 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CountryOfBirth;
 
     /**
+    * Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Nationality")
+    @Expose
+    private String Nationality;
+
+    /**
     * Birthday
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -80,7 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Address;
 
     /**
-    * Nationality (on the back)
+    * Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Race")
@@ -124,7 +156,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ChName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getChName() {
         return this.ChName;
     }
@@ -134,9 +168,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ChName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setChName(String ChName) {
         this.ChName = ChName;
+    }
+
+    /**
+     * Get Chinese name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ChineseName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getChineseName() {
+        return this.ChineseName;
+    }
+
+    /**
+     * Set Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ChineseName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setChineseName(String ChineseName) {
+        this.ChineseName = ChineseName;
     }
 
     /**
@@ -144,7 +200,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return EnName English name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getEnName() {
         return this.EnName;
     }
@@ -154,9 +212,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param EnName English name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setEnName(String EnName) {
         this.EnName = EnName;
+    }
+
+    /**
+     * Get English name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FullName English name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getFullName() {
+        return this.FullName;
+    }
+
+    /**
+     * Set English name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FullName English name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFullName(String FullName) {
+        this.FullName = FullName;
     }
 
     /**
@@ -164,7 +244,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ID License number
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getID() {
         return this.ID;
     }
@@ -174,9 +256,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ID License number
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    /**
+     * Get License number
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LicenseNumber License number
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getLicenseNumber() {
+        return this.LicenseNumber;
+    }
+
+    /**
+     * Set License number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LicenseNumber License number
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLicenseNumber(String LicenseNumber) {
+        this.LicenseNumber = LicenseNumber;
     }
 
     /**
@@ -204,7 +308,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CountryOfBirth Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getCountryOfBirth() {
         return this.CountryOfBirth;
     }
@@ -214,9 +320,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param CountryOfBirth Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setCountryOfBirth(String CountryOfBirth) {
         this.CountryOfBirth = CountryOfBirth;
+    }
+
+    /**
+     * Get Nationality
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Nationality Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNationality() {
+        return this.Nationality;
+    }
+
+    /**
+     * Set Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Nationality Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNationality(String Nationality) {
+        this.Nationality = Nationality;
     }
 
     /**
@@ -260,9 +388,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Nationality (on the back)
+     * Get Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Race Nationality (on the back)
+     * @return Race Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRace() {
@@ -270,9 +398,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Nationality (on the back)
+     * Set Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Race Nationality (on the back)
+     * @param Race Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRace(String Race) {
@@ -370,17 +498,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ChName != null) {
             this.ChName = new String(source.ChName);
         }
+        if (source.ChineseName != null) {
+            this.ChineseName = new String(source.ChineseName);
+        }
         if (source.EnName != null) {
             this.EnName = new String(source.EnName);
         }
+        if (source.FullName != null) {
+            this.FullName = new String(source.FullName);
+        }
         if (source.ID != null) {
             this.ID = new String(source.ID);
+        }
+        if (source.LicenseNumber != null) {
+            this.LicenseNumber = new String(source.LicenseNumber);
         }
         if (source.Sex != null) {
             this.Sex = new String(source.Sex);
         }
         if (source.CountryOfBirth != null) {
             this.CountryOfBirth = new String(source.CountryOfBirth);
+        }
+        if (source.Nationality != null) {
+            this.Nationality = new String(source.Nationality);
         }
         if (source.Birthday != null) {
             this.Birthday = new String(source.Birthday);
@@ -411,10 +551,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ChName", this.ChName);
+        this.setParamSimple(map, prefix + "ChineseName", this.ChineseName);
         this.setParamSimple(map, prefix + "EnName", this.EnName);
+        this.setParamSimple(map, prefix + "FullName", this.FullName);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
         this.setParamSimple(map, prefix + "Sex", this.Sex);
         this.setParamSimple(map, prefix + "CountryOfBirth", this.CountryOfBirth);
+        this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamSimple(map, prefix + "Birthday", this.Birthday);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "Race", this.Race);

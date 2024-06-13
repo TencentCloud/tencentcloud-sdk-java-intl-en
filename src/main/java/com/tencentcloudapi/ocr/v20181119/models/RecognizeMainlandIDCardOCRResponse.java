@@ -85,6 +85,7 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
@@ -248,6 +249,7 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled. 
@@ -256,6 +258,7 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
@@ -270,6 +273,7 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
@@ -278,6 +282,7 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.

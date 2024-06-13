@@ -24,14 +24,7 @@ import java.util.HashMap;
 public class RateLimitTemplateDetail extends AbstractModel {
 
     /**
-    * The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Mode")
     @Expose
@@ -45,18 +38,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long ID;
 
     /**
-    * The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The blocking duration, in seconds. Value range: 0-172800.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("PunishTime")
     @Expose
@@ -77,44 +66,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long Period;
 
     /**
-     * Get The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Mode Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Mode Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -137,48 +98,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Action Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Action Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The blocking duration, in seconds. Value range: 0-172800.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return PunishTime The blocking duration, in seconds. Value range: 0-172800.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return PunishTime Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set The blocking duration, in seconds. Value range: 0-172800.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param PunishTime The blocking duration, in seconds. Value range: 0-172800.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param PunishTime Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;

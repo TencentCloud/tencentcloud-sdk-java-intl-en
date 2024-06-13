@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class HKIDCardOCRRequest extends AbstractModel {
 
     /**
-    * Whether to check for authenticity.
-    */
-    @SerializedName("DetectFake")
-    @Expose
-    private Boolean DetectFake;
-
-    /**
     * Whether to return identity photo.
     */
     @SerializedName("ReturnHeadImage")
     @Expose
     private Boolean ReturnHeadImage;
+
+    /**
+    * Whether to check for authenticity.
+    */
+    @SerializedName("DetectFake")
+    @Expose
+    private Boolean DetectFake;
 
     /**
     * Base64 string of the image
@@ -58,22 +58,6 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     private String ImageUrl;
 
     /**
-     * Get Whether to check for authenticity. 
-     * @return DetectFake Whether to check for authenticity.
-     */
-    public Boolean getDetectFake() {
-        return this.DetectFake;
-    }
-
-    /**
-     * Set Whether to check for authenticity.
-     * @param DetectFake Whether to check for authenticity.
-     */
-    public void setDetectFake(Boolean DetectFake) {
-        this.DetectFake = DetectFake;
-    }
-
-    /**
      * Get Whether to return identity photo. 
      * @return ReturnHeadImage Whether to return identity photo.
      */
@@ -87,6 +71,26 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public void setReturnHeadImage(Boolean ReturnHeadImage) {
         this.ReturnHeadImage = ReturnHeadImage;
+    }
+
+    /**
+     * Get Whether to check for authenticity. 
+     * @return DetectFake Whether to check for authenticity.
+     * @deprecated
+     */
+    @Deprecated
+    public Boolean getDetectFake() {
+        return this.DetectFake;
+    }
+
+    /**
+     * Set Whether to check for authenticity.
+     * @param DetectFake Whether to check for authenticity.
+     * @deprecated
+     */
+    @Deprecated
+    public void setDetectFake(Boolean DetectFake) {
+        this.DetectFake = DetectFake;
     }
 
     /**
@@ -153,11 +157,11 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public HKIDCardOCRRequest(HKIDCardOCRRequest source) {
-        if (source.DetectFake != null) {
-            this.DetectFake = new Boolean(source.DetectFake);
-        }
         if (source.ReturnHeadImage != null) {
             this.ReturnHeadImage = new Boolean(source.ReturnHeadImage);
+        }
+        if (source.DetectFake != null) {
+            this.DetectFake = new Boolean(source.DetectFake);
         }
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
@@ -172,8 +176,8 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DetectFake", this.DetectFake);
         this.setParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
+        this.setParamSimple(map, prefix + "DetectFake", this.DetectFake);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
 
