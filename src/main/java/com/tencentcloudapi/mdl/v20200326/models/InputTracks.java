@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSdkVerificationResultRequest extends AbstractModel {
+public class InputTracks extends AbstractModel {
 
     /**
-    * The token used to identify an SDK-based verification process. 
+    * Audio track configuration information.
     */
-    @SerializedName("SdkToken")
+    @SerializedName("Tracks")
     @Expose
-    private String SdkToken;
+    private InputTrack [] Tracks;
 
     /**
-     * Get The token used to identify an SDK-based verification process.  
-     * @return SdkToken The token used to identify an SDK-based verification process. 
+     * Get Audio track configuration information. 
+     * @return Tracks Audio track configuration information.
      */
-    public String getSdkToken() {
-        return this.SdkToken;
+    public InputTrack [] getTracks() {
+        return this.Tracks;
     }
 
     /**
-     * Set The token used to identify an SDK-based verification process. 
-     * @param SdkToken The token used to identify an SDK-based verification process. 
+     * Set Audio track configuration information.
+     * @param Tracks Audio track configuration information.
      */
-    public void setSdkToken(String SdkToken) {
-        this.SdkToken = SdkToken;
+    public void setTracks(InputTrack [] Tracks) {
+        this.Tracks = Tracks;
     }
 
-    public GetSdkVerificationResultRequest() {
+    public InputTracks() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSdkVerificationResultRequest(GetSdkVerificationResultRequest source) {
-        if (source.SdkToken != null) {
-            this.SdkToken = new String(source.SdkToken);
+    public InputTracks(InputTracks source) {
+        if (source.Tracks != null) {
+            this.Tracks = new InputTrack[source.Tracks.length];
+            for (int i = 0; i < source.Tracks.length; i++) {
+                this.Tracks[i] = new InputTrack(source.Tracks[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class GetSdkVerificationResultRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkToken", this.SdkToken);
+        this.setParamArrayObj(map, prefix + "Tracks.", this.Tracks);
 
     }
 }

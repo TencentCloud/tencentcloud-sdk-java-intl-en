@@ -136,6 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MacaoIDCard MacaoIDCard;
 
     /**
+    * Mainland ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MainlandIDCard")
+    @Expose
+    private MainlandIDCard MainlandIDCard;
+
+    /**
      * Get Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HKIDCard Hong Kong ID Card
@@ -415,6 +423,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MacaoIDCard = MacaoIDCard;
     }
 
+    /**
+     * Get Mainland ID Card
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MainlandIDCard Mainland ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public MainlandIDCard getMainlandIDCard() {
+        return this.MainlandIDCard;
+    }
+
+    /**
+     * Set Mainland ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MainlandIDCard Mainland ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMainlandIDCard(MainlandIDCard MainlandIDCard) {
+        this.MainlandIDCard = MainlandIDCard;
+    }
+
     public NormalCardInfo() {
     }
 
@@ -465,6 +493,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MacaoIDCard != null) {
             this.MacaoIDCard = new MacaoIDCard(source.MacaoIDCard);
         }
+        if (source.MainlandIDCard != null) {
+            this.MainlandIDCard = new MainlandIDCard(source.MainlandIDCard);
+        }
     }
 
 
@@ -486,6 +517,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ThailandIDCard.", this.ThailandIDCard);
         this.setParamObj(map, prefix + "SingaporeIDCard.", this.SingaporeIDCard);
         this.setParamObj(map, prefix + "MacaoIDCard.", this.MacaoIDCard);
+        this.setParamObj(map, prefix + "MainlandIDCard.", this.MainlandIDCard);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSdkVerificationResultRequest extends AbstractModel {
+public class InputTrack extends AbstractModel {
 
     /**
-    * The token used to identify an SDK-based verification process. 
+    * Audio track index 1-based index mapping to the specified audio track integer starting from 1.
     */
-    @SerializedName("SdkToken")
+    @SerializedName("TrackIndex")
     @Expose
-    private String SdkToken;
+    private Long TrackIndex;
 
     /**
-     * Get The token used to identify an SDK-based verification process.  
-     * @return SdkToken The token used to identify an SDK-based verification process. 
+     * Get Audio track index 1-based index mapping to the specified audio track integer starting from 1. 
+     * @return TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
      */
-    public String getSdkToken() {
-        return this.SdkToken;
+    public Long getTrackIndex() {
+        return this.TrackIndex;
     }
 
     /**
-     * Set The token used to identify an SDK-based verification process. 
-     * @param SdkToken The token used to identify an SDK-based verification process. 
+     * Set Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+     * @param TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
      */
-    public void setSdkToken(String SdkToken) {
-        this.SdkToken = SdkToken;
+    public void setTrackIndex(Long TrackIndex) {
+        this.TrackIndex = TrackIndex;
     }
 
-    public GetSdkVerificationResultRequest() {
+    public InputTrack() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSdkVerificationResultRequest(GetSdkVerificationResultRequest source) {
-        if (source.SdkToken != null) {
-            this.SdkToken = new String(source.SdkToken);
+    public InputTrack(InputTrack source) {
+        if (source.TrackIndex != null) {
+            this.TrackIndex = new Long(source.TrackIndex);
         }
     }
 
@@ -64,7 +64,7 @@ public class GetSdkVerificationResultRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkToken", this.SdkToken);
+        this.setParamSimple(map, prefix + "TrackIndex", this.TrackIndex);
 
     }
 }

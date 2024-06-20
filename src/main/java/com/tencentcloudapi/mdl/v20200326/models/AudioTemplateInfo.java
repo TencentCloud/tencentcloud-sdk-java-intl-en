@@ -60,6 +60,27 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     private String LanguageCode;
 
     /**
+    * Audio transcoding special configuration information.
+    */
+    @SerializedName("AudioNormalization")
+    @Expose
+    private AudioNormalizationSettings AudioNormalization;
+
+    /**
+    * Audio sampling rate, unit HZ.
+    */
+    @SerializedName("AudioSampleRate")
+    @Expose
+    private Long AudioSampleRate;
+
+    /**
+    * Audio encoding parameters.
+    */
+    @SerializedName("AudioCodecDetails")
+    @Expose
+    private AudioCodecDetail AudioCodecDetails;
+
+    /**
      * Get Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH. 
      * @return AudioSelectorName Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
      */
@@ -143,6 +164,54 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         this.LanguageCode = LanguageCode;
     }
 
+    /**
+     * Get Audio transcoding special configuration information. 
+     * @return AudioNormalization Audio transcoding special configuration information.
+     */
+    public AudioNormalizationSettings getAudioNormalization() {
+        return this.AudioNormalization;
+    }
+
+    /**
+     * Set Audio transcoding special configuration information.
+     * @param AudioNormalization Audio transcoding special configuration information.
+     */
+    public void setAudioNormalization(AudioNormalizationSettings AudioNormalization) {
+        this.AudioNormalization = AudioNormalization;
+    }
+
+    /**
+     * Get Audio sampling rate, unit HZ. 
+     * @return AudioSampleRate Audio sampling rate, unit HZ.
+     */
+    public Long getAudioSampleRate() {
+        return this.AudioSampleRate;
+    }
+
+    /**
+     * Set Audio sampling rate, unit HZ.
+     * @param AudioSampleRate Audio sampling rate, unit HZ.
+     */
+    public void setAudioSampleRate(Long AudioSampleRate) {
+        this.AudioSampleRate = AudioSampleRate;
+    }
+
+    /**
+     * Get Audio encoding parameters. 
+     * @return AudioCodecDetails Audio encoding parameters.
+     */
+    public AudioCodecDetail getAudioCodecDetails() {
+        return this.AudioCodecDetails;
+    }
+
+    /**
+     * Set Audio encoding parameters.
+     * @param AudioCodecDetails Audio encoding parameters.
+     */
+    public void setAudioCodecDetails(AudioCodecDetail AudioCodecDetails) {
+        this.AudioCodecDetails = AudioCodecDetails;
+    }
+
     public AudioTemplateInfo() {
     }
 
@@ -166,6 +235,15 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         if (source.LanguageCode != null) {
             this.LanguageCode = new String(source.LanguageCode);
         }
+        if (source.AudioNormalization != null) {
+            this.AudioNormalization = new AudioNormalizationSettings(source.AudioNormalization);
+        }
+        if (source.AudioSampleRate != null) {
+            this.AudioSampleRate = new Long(source.AudioSampleRate);
+        }
+        if (source.AudioCodecDetails != null) {
+            this.AudioCodecDetails = new AudioCodecDetail(source.AudioCodecDetails);
+        }
     }
 
 
@@ -178,6 +256,9 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         this.setParamSimple(map, prefix + "Acodec", this.Acodec);
         this.setParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
         this.setParamSimple(map, prefix + "LanguageCode", this.LanguageCode);
+        this.setParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
+        this.setParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
+        this.setParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
 
     }
 }

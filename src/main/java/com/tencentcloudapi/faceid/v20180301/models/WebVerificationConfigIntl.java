@@ -75,7 +75,7 @@ Example: HKIDCard
     private Boolean DisableCheckOcrWarnings;
 
     /**
-    * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+    * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
     */
     @SerializedName("SecurityLevel")
     @Expose
@@ -261,16 +261,16 @@ Example: HKIDCard
     }
 
     /**
-     * Get Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3 
-     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     * Get Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3 
+     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
      */
     public Long getSecurityLevel() {
         return this.SecurityLevel;
     }
 
     /**
-     * Set Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
-     * @param SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     * Set Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+     * @param SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
      */
     public void setSecurityLevel(Long SecurityLevel) {
         this.SecurityLevel = SecurityLevel;

@@ -143,6 +143,104 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private String SubtitleConfiguration;
 
     /**
+    * Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+    */
+    @SerializedName("FaceBlurringEnabled")
+    @Expose
+    private Long FaceBlurringEnabled;
+
+    /**
+    * Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+    */
+    @SerializedName("AudioSelectorName")
+    @Expose
+    private String AudioSelectorName;
+
+    /**
+    * Audio transcoding special configuration information.
+    */
+    @SerializedName("AudioNormalization")
+    @Expose
+    private AudioNormalizationSettings AudioNormalization;
+
+    /**
+    * Audio sampling rate, unit HZ.
+    */
+    @SerializedName("AudioSampleRate")
+    @Expose
+    private Long AudioSampleRate;
+
+    /**
+    * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+    */
+    @SerializedName("FrameRateType")
+    @Expose
+    private String FrameRateType;
+
+    /**
+    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+    */
+    @SerializedName("FrameRateNumerator")
+    @Expose
+    private Long FrameRateNumerator;
+
+    /**
+    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+    */
+    @SerializedName("FrameRateDenominator")
+    @Expose
+    private Long FrameRateDenominator;
+
+    /**
+    * The number of B frames can be selected from 1 to 3.
+    */
+    @SerializedName("BFramesNum")
+    @Expose
+    private Long BFramesNum;
+
+    /**
+    * The number of reference frames can be selected from 1 to 16.
+    */
+    @SerializedName("RefFramesNum")
+    @Expose
+    private Long RefFramesNum;
+
+    /**
+    * Additional video bitrate configuration.
+    */
+    @SerializedName("AdditionalRateSettings")
+    @Expose
+    private AdditionalRateSetting AdditionalRateSettings;
+
+    /**
+    * Video encoding configuration.
+    */
+    @SerializedName("VideoCodecDetails")
+    @Expose
+    private VideoCodecDetail VideoCodecDetails;
+
+    /**
+    * Audio encoding configuration.
+    */
+    @SerializedName("AudioCodecDetails")
+    @Expose
+    private AudioCodecDetail AudioCodecDetails;
+
+    /**
+    * Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+    */
+    @SerializedName("MultiAudioTrackEnabled")
+    @Expose
+    private Long MultiAudioTrackEnabled;
+
+    /**
+    * Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+    */
+    @SerializedName("AudioTracks")
+    @Expose
+    private AudioTrackInfo [] AudioTracks;
+
+    /**
      * Get Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits 
      * @return Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      */
@@ -426,6 +524,230 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.SubtitleConfiguration = SubtitleConfiguration;
     }
 
+    /**
+     * Get Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0. 
+     * @return FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+     */
+    public Long getFaceBlurringEnabled() {
+        return this.FaceBlurringEnabled;
+    }
+
+    /**
+     * Set Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+     * @param FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+     */
+    public void setFaceBlurringEnabled(Long FaceBlurringEnabled) {
+        this.FaceBlurringEnabled = FaceBlurringEnabled;
+    }
+
+    /**
+     * Get Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'. 
+     * @return AudioSelectorName Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+     */
+    public String getAudioSelectorName() {
+        return this.AudioSelectorName;
+    }
+
+    /**
+     * Set Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+     * @param AudioSelectorName Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+     */
+    public void setAudioSelectorName(String AudioSelectorName) {
+        this.AudioSelectorName = AudioSelectorName;
+    }
+
+    /**
+     * Get Audio transcoding special configuration information. 
+     * @return AudioNormalization Audio transcoding special configuration information.
+     */
+    public AudioNormalizationSettings getAudioNormalization() {
+        return this.AudioNormalization;
+    }
+
+    /**
+     * Set Audio transcoding special configuration information.
+     * @param AudioNormalization Audio transcoding special configuration information.
+     */
+    public void setAudioNormalization(AudioNormalizationSettings AudioNormalization) {
+        this.AudioNormalization = AudioNormalization;
+    }
+
+    /**
+     * Get Audio sampling rate, unit HZ. 
+     * @return AudioSampleRate Audio sampling rate, unit HZ.
+     */
+    public Long getAudioSampleRate() {
+        return this.AudioSampleRate;
+    }
+
+    /**
+     * Set Audio sampling rate, unit HZ.
+     * @param AudioSampleRate Audio sampling rate, unit HZ.
+     */
+    public void setAudioSampleRate(Long AudioSampleRate) {
+        this.AudioSampleRate = AudioSampleRate;
+    }
+
+    /**
+     * Get This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter. 
+     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     */
+    public String getFrameRateType() {
+        return this.FrameRateType;
+    }
+
+    /**
+     * Set This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * @param FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     */
+    public void setFrameRateType(String FrameRateType) {
+        this.FrameRateType = FrameRateType;
+    }
+
+    /**
+     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting. 
+     * @return FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     */
+    public Long getFrameRateNumerator() {
+        return this.FrameRateNumerator;
+    }
+
+    /**
+     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * @param FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     */
+    public void setFrameRateNumerator(Long FrameRateNumerator) {
+        this.FrameRateNumerator = FrameRateNumerator;
+    }
+
+    /**
+     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting. 
+     * @return FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     */
+    public Long getFrameRateDenominator() {
+        return this.FrameRateDenominator;
+    }
+
+    /**
+     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * @param FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     */
+    public void setFrameRateDenominator(Long FrameRateDenominator) {
+        this.FrameRateDenominator = FrameRateDenominator;
+    }
+
+    /**
+     * Get The number of B frames can be selected from 1 to 3. 
+     * @return BFramesNum The number of B frames can be selected from 1 to 3.
+     */
+    public Long getBFramesNum() {
+        return this.BFramesNum;
+    }
+
+    /**
+     * Set The number of B frames can be selected from 1 to 3.
+     * @param BFramesNum The number of B frames can be selected from 1 to 3.
+     */
+    public void setBFramesNum(Long BFramesNum) {
+        this.BFramesNum = BFramesNum;
+    }
+
+    /**
+     * Get The number of reference frames can be selected from 1 to 16. 
+     * @return RefFramesNum The number of reference frames can be selected from 1 to 16.
+     */
+    public Long getRefFramesNum() {
+        return this.RefFramesNum;
+    }
+
+    /**
+     * Set The number of reference frames can be selected from 1 to 16.
+     * @param RefFramesNum The number of reference frames can be selected from 1 to 16.
+     */
+    public void setRefFramesNum(Long RefFramesNum) {
+        this.RefFramesNum = RefFramesNum;
+    }
+
+    /**
+     * Get Additional video bitrate configuration. 
+     * @return AdditionalRateSettings Additional video bitrate configuration.
+     */
+    public AdditionalRateSetting getAdditionalRateSettings() {
+        return this.AdditionalRateSettings;
+    }
+
+    /**
+     * Set Additional video bitrate configuration.
+     * @param AdditionalRateSettings Additional video bitrate configuration.
+     */
+    public void setAdditionalRateSettings(AdditionalRateSetting AdditionalRateSettings) {
+        this.AdditionalRateSettings = AdditionalRateSettings;
+    }
+
+    /**
+     * Get Video encoding configuration. 
+     * @return VideoCodecDetails Video encoding configuration.
+     */
+    public VideoCodecDetail getVideoCodecDetails() {
+        return this.VideoCodecDetails;
+    }
+
+    /**
+     * Set Video encoding configuration.
+     * @param VideoCodecDetails Video encoding configuration.
+     */
+    public void setVideoCodecDetails(VideoCodecDetail VideoCodecDetails) {
+        this.VideoCodecDetails = VideoCodecDetails;
+    }
+
+    /**
+     * Get Audio encoding configuration. 
+     * @return AudioCodecDetails Audio encoding configuration.
+     */
+    public AudioCodecDetail getAudioCodecDetails() {
+        return this.AudioCodecDetails;
+    }
+
+    /**
+     * Set Audio encoding configuration.
+     * @param AudioCodecDetails Audio encoding configuration.
+     */
+    public void setAudioCodecDetails(AudioCodecDetail AudioCodecDetails) {
+        this.AudioCodecDetails = AudioCodecDetails;
+    }
+
+    /**
+     * Get Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0. 
+     * @return MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+     */
+    public Long getMultiAudioTrackEnabled() {
+        return this.MultiAudioTrackEnabled;
+    }
+
+    /**
+     * Set Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+     * @param MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+     */
+    public void setMultiAudioTrackEnabled(Long MultiAudioTrackEnabled) {
+        this.MultiAudioTrackEnabled = MultiAudioTrackEnabled;
+    }
+
+    /**
+     * Get Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on. 
+     * @return AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+     */
+    public AudioTrackInfo [] getAudioTracks() {
+        return this.AudioTracks;
+    }
+
+    /**
+     * Set Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+     * @param AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+     */
+    public void setAudioTracks(AudioTrackInfo [] AudioTracks) {
+        this.AudioTracks = AudioTracks;
+    }
+
     public AVTemplate() {
     }
 
@@ -482,6 +804,51 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         if (source.SubtitleConfiguration != null) {
             this.SubtitleConfiguration = new String(source.SubtitleConfiguration);
         }
+        if (source.FaceBlurringEnabled != null) {
+            this.FaceBlurringEnabled = new Long(source.FaceBlurringEnabled);
+        }
+        if (source.AudioSelectorName != null) {
+            this.AudioSelectorName = new String(source.AudioSelectorName);
+        }
+        if (source.AudioNormalization != null) {
+            this.AudioNormalization = new AudioNormalizationSettings(source.AudioNormalization);
+        }
+        if (source.AudioSampleRate != null) {
+            this.AudioSampleRate = new Long(source.AudioSampleRate);
+        }
+        if (source.FrameRateType != null) {
+            this.FrameRateType = new String(source.FrameRateType);
+        }
+        if (source.FrameRateNumerator != null) {
+            this.FrameRateNumerator = new Long(source.FrameRateNumerator);
+        }
+        if (source.FrameRateDenominator != null) {
+            this.FrameRateDenominator = new Long(source.FrameRateDenominator);
+        }
+        if (source.BFramesNum != null) {
+            this.BFramesNum = new Long(source.BFramesNum);
+        }
+        if (source.RefFramesNum != null) {
+            this.RefFramesNum = new Long(source.RefFramesNum);
+        }
+        if (source.AdditionalRateSettings != null) {
+            this.AdditionalRateSettings = new AdditionalRateSetting(source.AdditionalRateSettings);
+        }
+        if (source.VideoCodecDetails != null) {
+            this.VideoCodecDetails = new VideoCodecDetail(source.VideoCodecDetails);
+        }
+        if (source.AudioCodecDetails != null) {
+            this.AudioCodecDetails = new AudioCodecDetail(source.AudioCodecDetails);
+        }
+        if (source.MultiAudioTrackEnabled != null) {
+            this.MultiAudioTrackEnabled = new Long(source.MultiAudioTrackEnabled);
+        }
+        if (source.AudioTracks != null) {
+            this.AudioTracks = new AudioTrackInfo[source.AudioTracks.length];
+            for (int i = 0; i < source.AudioTracks.length; i++) {
+                this.AudioTracks[i] = new AudioTrackInfo(source.AudioTracks[i]);
+            }
+        }
     }
 
 
@@ -505,6 +872,20 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
         this.setParamSimple(map, prefix + "SmartSubtitles", this.SmartSubtitles);
         this.setParamSimple(map, prefix + "SubtitleConfiguration", this.SubtitleConfiguration);
+        this.setParamSimple(map, prefix + "FaceBlurringEnabled", this.FaceBlurringEnabled);
+        this.setParamSimple(map, prefix + "AudioSelectorName", this.AudioSelectorName);
+        this.setParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
+        this.setParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
+        this.setParamSimple(map, prefix + "FrameRateType", this.FrameRateType);
+        this.setParamSimple(map, prefix + "FrameRateNumerator", this.FrameRateNumerator);
+        this.setParamSimple(map, prefix + "FrameRateDenominator", this.FrameRateDenominator);
+        this.setParamSimple(map, prefix + "BFramesNum", this.BFramesNum);
+        this.setParamSimple(map, prefix + "RefFramesNum", this.RefFramesNum);
+        this.setParamObj(map, prefix + "AdditionalRateSettings.", this.AdditionalRateSettings);
+        this.setParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
+        this.setParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
+        this.setParamSimple(map, prefix + "MultiAudioTrackEnabled", this.MultiAudioTrackEnabled);
+        this.setParamArrayObj(map, prefix + "AudioTracks.", this.AudioTracks);
 
     }
 }

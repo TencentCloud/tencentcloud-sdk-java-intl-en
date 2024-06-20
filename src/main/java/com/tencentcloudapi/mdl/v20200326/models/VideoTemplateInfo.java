@@ -95,6 +95,62 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String WatermarkId;
 
     /**
+    * Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+    */
+    @SerializedName("FaceBlurringEnabled")
+    @Expose
+    private Long FaceBlurringEnabled;
+
+    /**
+    * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+    */
+    @SerializedName("FrameRateType")
+    @Expose
+    private String FrameRateType;
+
+    /**
+    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+    */
+    @SerializedName("FrameRateNumerator")
+    @Expose
+    private Long FrameRateNumerator;
+
+    /**
+    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+    */
+    @SerializedName("FrameRateDenominator")
+    @Expose
+    private Long FrameRateDenominator;
+
+    /**
+    * The number of B frames can be selected from 1 to 3.
+    */
+    @SerializedName("BFramesNum")
+    @Expose
+    private Long BFramesNum;
+
+    /**
+    * The number of reference frames can be selected from 1 to 16.
+    */
+    @SerializedName("RefFramesNum")
+    @Expose
+    private Long RefFramesNum;
+
+    /**
+    * Additional video bitrate configuration.
+    */
+    @SerializedName("AdditionalRateSettings")
+    @Expose
+    private AdditionalRateSetting AdditionalRateSettings;
+
+    /**
+    * Video encoding configuration.
+    */
+    @SerializedName("VideoCodecDetails")
+    @Expose
+    private VideoCodecDetail VideoCodecDetails;
+
+    /**
      * Get Video transcoding template name, which can contain 1-20 letters and digits. 
      * @return Name Video transcoding template name, which can contain 1-20 letters and digits.
      */
@@ -258,6 +314,134 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.WatermarkId = WatermarkId;
     }
 
+    /**
+     * Get Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0. 
+     * @return FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+     */
+    public Long getFaceBlurringEnabled() {
+        return this.FaceBlurringEnabled;
+    }
+
+    /**
+     * Set Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+     * @param FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+     */
+    public void setFaceBlurringEnabled(Long FaceBlurringEnabled) {
+        this.FaceBlurringEnabled = FaceBlurringEnabled;
+    }
+
+    /**
+     * Get This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter. 
+     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     */
+    public String getFrameRateType() {
+        return this.FrameRateType;
+    }
+
+    /**
+     * Set This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * @param FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     */
+    public void setFrameRateType(String FrameRateType) {
+        this.FrameRateType = FrameRateType;
+    }
+
+    /**
+     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting. 
+     * @return FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     */
+    public Long getFrameRateNumerator() {
+        return this.FrameRateNumerator;
+    }
+
+    /**
+     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * @param FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     */
+    public void setFrameRateNumerator(Long FrameRateNumerator) {
+        this.FrameRateNumerator = FrameRateNumerator;
+    }
+
+    /**
+     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting. 
+     * @return FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     */
+    public Long getFrameRateDenominator() {
+        return this.FrameRateDenominator;
+    }
+
+    /**
+     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * @param FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     */
+    public void setFrameRateDenominator(Long FrameRateDenominator) {
+        this.FrameRateDenominator = FrameRateDenominator;
+    }
+
+    /**
+     * Get The number of B frames can be selected from 1 to 3. 
+     * @return BFramesNum The number of B frames can be selected from 1 to 3.
+     */
+    public Long getBFramesNum() {
+        return this.BFramesNum;
+    }
+
+    /**
+     * Set The number of B frames can be selected from 1 to 3.
+     * @param BFramesNum The number of B frames can be selected from 1 to 3.
+     */
+    public void setBFramesNum(Long BFramesNum) {
+        this.BFramesNum = BFramesNum;
+    }
+
+    /**
+     * Get The number of reference frames can be selected from 1 to 16. 
+     * @return RefFramesNum The number of reference frames can be selected from 1 to 16.
+     */
+    public Long getRefFramesNum() {
+        return this.RefFramesNum;
+    }
+
+    /**
+     * Set The number of reference frames can be selected from 1 to 16.
+     * @param RefFramesNum The number of reference frames can be selected from 1 to 16.
+     */
+    public void setRefFramesNum(Long RefFramesNum) {
+        this.RefFramesNum = RefFramesNum;
+    }
+
+    /**
+     * Get Additional video bitrate configuration. 
+     * @return AdditionalRateSettings Additional video bitrate configuration.
+     */
+    public AdditionalRateSetting getAdditionalRateSettings() {
+        return this.AdditionalRateSettings;
+    }
+
+    /**
+     * Set Additional video bitrate configuration.
+     * @param AdditionalRateSettings Additional video bitrate configuration.
+     */
+    public void setAdditionalRateSettings(AdditionalRateSetting AdditionalRateSettings) {
+        this.AdditionalRateSettings = AdditionalRateSettings;
+    }
+
+    /**
+     * Get Video encoding configuration. 
+     * @return VideoCodecDetails Video encoding configuration.
+     */
+    public VideoCodecDetail getVideoCodecDetails() {
+        return this.VideoCodecDetails;
+    }
+
+    /**
+     * Set Video encoding configuration.
+     * @param VideoCodecDetails Video encoding configuration.
+     */
+    public void setVideoCodecDetails(VideoCodecDetail VideoCodecDetails) {
+        this.VideoCodecDetails = VideoCodecDetails;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -296,6 +480,30 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.WatermarkId != null) {
             this.WatermarkId = new String(source.WatermarkId);
         }
+        if (source.FaceBlurringEnabled != null) {
+            this.FaceBlurringEnabled = new Long(source.FaceBlurringEnabled);
+        }
+        if (source.FrameRateType != null) {
+            this.FrameRateType = new String(source.FrameRateType);
+        }
+        if (source.FrameRateNumerator != null) {
+            this.FrameRateNumerator = new Long(source.FrameRateNumerator);
+        }
+        if (source.FrameRateDenominator != null) {
+            this.FrameRateDenominator = new Long(source.FrameRateDenominator);
+        }
+        if (source.BFramesNum != null) {
+            this.BFramesNum = new Long(source.BFramesNum);
+        }
+        if (source.RefFramesNum != null) {
+            this.RefFramesNum = new Long(source.RefFramesNum);
+        }
+        if (source.AdditionalRateSettings != null) {
+            this.AdditionalRateSettings = new AdditionalRateSetting(source.AdditionalRateSettings);
+        }
+        if (source.VideoCodecDetails != null) {
+            this.VideoCodecDetails = new VideoCodecDetail(source.VideoCodecDetails);
+        }
     }
 
 
@@ -313,6 +521,14 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "BitrateCompressionRatio", this.BitrateCompressionRatio);
         this.setParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
         this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
+        this.setParamSimple(map, prefix + "FaceBlurringEnabled", this.FaceBlurringEnabled);
+        this.setParamSimple(map, prefix + "FrameRateType", this.FrameRateType);
+        this.setParamSimple(map, prefix + "FrameRateNumerator", this.FrameRateNumerator);
+        this.setParamSimple(map, prefix + "FrameRateDenominator", this.FrameRateDenominator);
+        this.setParamSimple(map, prefix + "BFramesNum", this.BFramesNum);
+        this.setParamSimple(map, prefix + "RefFramesNum", this.RefFramesNum);
+        this.setParamObj(map, prefix + "AdditionalRateSettings.", this.AdditionalRateSettings);
+        this.setParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
 
     }
 }

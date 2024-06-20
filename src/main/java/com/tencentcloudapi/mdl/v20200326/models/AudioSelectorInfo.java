@@ -38,6 +38,20 @@ public class AudioSelectorInfo extends AbstractModel {
     private AudioPidSelectionInfo AudioPidSelection;
 
     /**
+    * Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+    */
+    @SerializedName("AudioSelectorType")
+    @Expose
+    private String AudioSelectorType;
+
+    /**
+    * AudioTrack configuration.
+    */
+    @SerializedName("AudioTrackSelection")
+    @Expose
+    private InputTracks AudioTrackSelection;
+
+    /**
      * Get Audio name, which can contain 1-32 letters, digits, and underscores. 
      * @return Name Audio name, which can contain 1-32 letters, digits, and underscores.
      */
@@ -69,6 +83,38 @@ public class AudioSelectorInfo extends AbstractModel {
         this.AudioPidSelection = AudioPidSelection;
     }
 
+    /**
+     * Get Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR. 
+     * @return AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     */
+    public String getAudioSelectorType() {
+        return this.AudioSelectorType;
+    }
+
+    /**
+     * Set Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     * @param AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     */
+    public void setAudioSelectorType(String AudioSelectorType) {
+        this.AudioSelectorType = AudioSelectorType;
+    }
+
+    /**
+     * Get AudioTrack configuration. 
+     * @return AudioTrackSelection AudioTrack configuration.
+     */
+    public InputTracks getAudioTrackSelection() {
+        return this.AudioTrackSelection;
+    }
+
+    /**
+     * Set AudioTrack configuration.
+     * @param AudioTrackSelection AudioTrack configuration.
+     */
+    public void setAudioTrackSelection(InputTracks AudioTrackSelection) {
+        this.AudioTrackSelection = AudioTrackSelection;
+    }
+
     public AudioSelectorInfo() {
     }
 
@@ -83,6 +129,12 @@ public class AudioSelectorInfo extends AbstractModel {
         if (source.AudioPidSelection != null) {
             this.AudioPidSelection = new AudioPidSelectionInfo(source.AudioPidSelection);
         }
+        if (source.AudioSelectorType != null) {
+            this.AudioSelectorType = new String(source.AudioSelectorType);
+        }
+        if (source.AudioTrackSelection != null) {
+            this.AudioTrackSelection = new InputTracks(source.AudioTrackSelection);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class AudioSelectorInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "AudioPidSelection.", this.AudioPidSelection);
+        this.setParamSimple(map, prefix + "AudioSelectorType", this.AudioSelectorType);
+        this.setParamObj(map, prefix + "AudioTrackSelection.", this.AudioTrackSelection);
 
     }
 }
