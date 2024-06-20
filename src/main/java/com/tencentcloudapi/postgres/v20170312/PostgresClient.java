@@ -83,7 +83,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a full backup of an instance.
+     *This API is used to create a data backup of an instance.
      * @param req CreateBaseBackupRequest
      * @return CreateBaseBackupResponse
      * @throws TencentCloudSDKException
@@ -116,9 +116,9 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
-<li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
-<li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
+     *This API is used to create one or more PostgreSQL instances. Instances created through this interface do not need to be initialized and can be used directly.
+<li>After an instance is successfully created, it will automatically start up, and its status changes to "Running".</li>
+<li>For prepaid instances, the required amount for the instance purchase will be deducted in advance. For post-paid hourly instances, the amount required for the purchase within the first hour will be temporarily frozen. Please ensure that your account balance is sufficient before calling this interface.</li>
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
@@ -184,7 +184,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete the specified full backup of an instance.
+     *This API is used to delete a specified data backup for an instance.
      * @param req DeleteBaseBackupRequest
      * @return DeleteBaseBackupResponse
      * @throws TencentCloudSDKException
@@ -338,7 +338,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of full backups.
+     *This API is used to query the list of data backups.
      * @param req DescribeBaseBackupsRequest
      * @return DescribeBaseBackupsResponse
      * @throws TencentCloudSDKException
@@ -472,7 +472,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
+     *This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
      * @param req DescribeDBXlogsRequest
      * @return DescribeDBXlogsResponse
      * @throws TencentCloudSDKException
@@ -758,7 +758,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the specified expiration time of a full backup for an instance.
+     *This API is used to modify the expiration time of a specified data backup for an instance.
      * @param req ModifyBaseBackupExpireTimeRequest
      * @return ModifyBaseBackupExpireTimeResponse
      * @throws TencentCloudSDKException
@@ -980,6 +980,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to recover database-related objects such as databases and tables on the original instance based on the backup set or recovery target time.
+     * @param req RestoreDBInstanceObjectsRequest
+     * @return RestoreDBInstanceObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreDBInstanceObjectsResponse RestoreDBInstanceObjects(RestoreDBInstanceObjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreDBInstanceObjects", RestoreDBInstanceObjectsResponse.class);
+    }
+
+    /**
      *This API is used to set auto-renewal.
      * @param req SetAutoRenewFlagRequest
      * @return SetAutoRenewFlagResponse
@@ -1024,6 +1035,17 @@ public class PostgresClient extends AbstractClient{
     public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpgradeDBInstanceKernelVersion", UpgradeDBInstanceKernelVersionResponse.class);
+    }
+
+    /**
+     *This API is used to upgrade the major kernel version of an instance, for example, from PostgreSQL 12 to PostgreSQL 15.
+     * @param req UpgradeDBInstanceMajorVersionRequest
+     * @return UpgradeDBInstanceMajorVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersion(UpgradeDBInstanceMajorVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeDBInstanceMajorVersion", UpgradeDBInstanceMajorVersionResponse.class);
     }
 
 }

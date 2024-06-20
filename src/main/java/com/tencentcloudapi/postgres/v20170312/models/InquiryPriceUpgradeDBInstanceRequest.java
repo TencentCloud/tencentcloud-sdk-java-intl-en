@@ -52,6 +52,13 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
+    * Instance CPU size, unit: Core
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get Instance disk size in GB 
      * @return Storage Instance disk size in GB
      */
@@ -115,6 +122,22 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    /**
+     * Get Instance CPU size, unit: Core 
+     * @return Cpu Instance CPU size, unit: Core
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Instance CPU size, unit: Core
+     * @param Cpu Instance CPU size, unit: Core
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
     public InquiryPriceUpgradeDBInstanceRequest() {
     }
 
@@ -135,6 +158,9 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

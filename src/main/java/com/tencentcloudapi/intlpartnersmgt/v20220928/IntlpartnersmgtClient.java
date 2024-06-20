@@ -65,7 +65,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the customer bill details.
+     *This API is used to query bill details by customers.
      * @param req DescribeBillDetailRequest
      * @return DescribeBillDetailResponse
      * @throws TencentCloudSDKException
@@ -131,7 +131,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the customer bill details.
+     *This API is used to query the customer bill details by resellers.
      * @param req DescribeCustomerBillDetailRequest
      * @return DescribeCustomerBillDetailResponse
      * @throws TencentCloudSDKException

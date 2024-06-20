@@ -31,49 +31,49 @@ public class DescribeSlowQueryListRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+    * Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+    * Query end time, in the format of 2018-01-01 00:00:00.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Filter by database name. This parameter is optional.
+    * Database name.
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+    * Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+    * Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Number of entries per page. Value range: [1,100]. Default value: `20`.
+    * Number of results returned per page, with a value range of 1-100. The default value is `50`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination offset. Value range: [0,INF). Default value: `0`.
+    * Data offset, which starts from 0. The default value is `0`.
     */
     @SerializedName("Offset")
     @Expose
@@ -96,112 +96,112 @@ public class DescribeSlowQueryListRequest extends AbstractModel {
     }
 
     /**
-     * Get Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period. 
-     * @return StartTime Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+     * Get Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period. 
+     * @return StartTime Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
-     * @param StartTime Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+     * Set Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
+     * @param StartTime Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". 
-     * @return EndTime End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+     * Get Query end time, in the format of 2018-01-01 00:00:00. 
+     * @return EndTime Query end time, in the format of 2018-01-01 00:00:00.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
-     * @param EndTime End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+     * Set Query end time, in the format of 2018-01-01 00:00:00.
+     * @param EndTime Query end time, in the format of 2018-01-01 00:00:00.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Filter by database name. This parameter is optional. 
-     * @return DatabaseName Filter by database name. This parameter is optional.
+     * Get Database name. 
+     * @return DatabaseName Database name.
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set Filter by database name. This parameter is optional.
-     * @param DatabaseName Filter by database name. This parameter is optional.
+     * Set Database name.
+     * @param DatabaseName Database name.
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`. 
-     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+     * Get Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	 
+     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
-     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+     * Set Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
+     * @param OrderByType Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Sort by field. Valid values: `SessionStartTime` (default), `Duration`. 
-     * @return OrderBy Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+     * Get Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`. 
+     * @return OrderBy Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
-     * @param OrderBy Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+     * Set Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
+     * @param OrderBy Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Number of entries per page. Value range: [1,100]. Default value: `20`. 
-     * @return Limit Number of entries per page. Value range: [1,100]. Default value: `20`.
+     * Get Number of results returned per page, with a value range of 1-100. The default value is `50`. 
+     * @return Limit Number of results returned per page, with a value range of 1-100. The default value is `50`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Value range: [1,100]. Default value: `20`.
-     * @param Limit Number of entries per page. Value range: [1,100]. Default value: `20`.
+     * Set Number of results returned per page, with a value range of 1-100. The default value is `50`.
+     * @param Limit Number of results returned per page, with a value range of 1-100. The default value is `50`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination offset. Value range: [0,INF). Default value: `0`. 
-     * @return Offset Pagination offset. Value range: [0,INF). Default value: `0`.
+     * Get Data offset, which starts from 0. The default value is `0`. 
+     * @return Offset Data offset, which starts from 0. The default value is `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Value range: [0,INF). Default value: `0`.
-     * @param Offset Pagination offset. Value range: [0,INF). Default value: `0`.
+     * Set Data offset, which starts from 0. The default value is `0`.
+     * @param Offset Data offset, which starts from 0. The default value is `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

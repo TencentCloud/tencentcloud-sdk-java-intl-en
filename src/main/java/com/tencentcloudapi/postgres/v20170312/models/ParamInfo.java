@@ -163,7 +163,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String LastModifyTime;
 
     /**
-    * Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+    * Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StandbyRelated")
@@ -171,7 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long StandbyRelated;
 
     /**
-    * Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+    * Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VersionRelationSet")
@@ -179,7 +179,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ParamVersionRelation [] VersionRelationSet;
 
     /**
-    * Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+    * Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SpecRelationSet")
@@ -539,9 +539,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+     * Get Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+     * @return StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStandbyRelated() {
@@ -549,9 +549,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+     * Set Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+     * @param StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStandbyRelated(Long StandbyRelated) {
@@ -559,9 +559,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+     * Get Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+     * @return VersionRelationSet Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ParamVersionRelation [] getVersionRelationSet() {
@@ -569,9 +569,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+     * Set Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+     * @param VersionRelationSet Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersionRelationSet(ParamVersionRelation [] VersionRelationSet) {
@@ -579,9 +579,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+     * Get Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+     * @return SpecRelationSet Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ParamSpecRelation [] getSpecRelationSet() {
@@ -589,9 +589,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+     * Set Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+     * @param SpecRelationSet Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSpecRelationSet(ParamSpecRelation [] SpecRelationSet) {

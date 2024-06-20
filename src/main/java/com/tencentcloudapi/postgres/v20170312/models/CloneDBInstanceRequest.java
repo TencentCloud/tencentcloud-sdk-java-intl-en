@@ -45,19 +45,23 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private Long Storage;
 
     /**
-    * Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+    * Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+    * Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -85,10 +89,12 @@ Default value: `0`.
     private String Name;
 
     /**
-    * Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+    * Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -125,10 +131,12 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     private DBNode [] DBNodeSet;
 
     /**
-    * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+    * Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -163,11 +171,11 @@ Default value: `0`.
     private String RecoveryTargetTime;
 
     /**
-    * Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+    * Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
     */
     @SerializedName("SyncMode")
     @Expose
@@ -222,52 +230,68 @@ Default value for the standby instance: `Async`.
     }
 
     /**
-     * Get Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`. 
-     * @return Period Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * Get Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+ 
+     * @return Period Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-     * @param Period Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * Set Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
+     * @param Period Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`. 
-     * @return AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * Get Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0 
+     * @return AutoRenewFlag Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-     * @param AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * Set Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
+     * @param AutoRenewFlag Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -322,28 +346,36 @@ Default value: `0`.
     }
 
     /**
-     * Get Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`. 
-     * @return InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+     * Get Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID 
+     * @return InstanceChargeType Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
-     * @param InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+     * Set Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
+     * @param InstanceChargeType Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -422,28 +454,36 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     }
 
     /**
-     * Get Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`. 
-     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Get Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0 
+     * @return AutoVoucher Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Set Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
+     * @param AutoVoucher Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -514,32 +554,32 @@ Default value: `0`.
     }
 
     /**
-     * Get Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`. 
-     * @return SyncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+     * Get Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async 
+     * @return SyncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
      */
     public String getSyncMode() {
         return this.SyncMode;
     }
 
     /**
-     * Set Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
-     * @param SyncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+     * Set Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
+     * @param SyncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
      */
     public void setSyncMode(String SyncMode) {
         this.SyncMode = SyncMode;

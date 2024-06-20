@@ -31,6 +31,27 @@ public class DescribeDatabasesRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
+    * Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * Data offset, which starts from 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Number of items displayed at a time
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get Instance ID 
      * @return DBInstanceId Instance ID
      */
@@ -46,6 +67,54 @@ public class DescribeDatabasesRequest extends AbstractModel {
         this.DBInstanceId = DBInstanceId;
     }
 
+    /**
+     * Get Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria. 
+     * @return Filters Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+     * @param Filters Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get Data offset, which starts from 0. 
+     * @return Offset Data offset, which starts from 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Data offset, which starts from 0.
+     * @param Offset Data offset, which starts from 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Number of items displayed at a time 
+     * @return Limit Number of items displayed at a time
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Number of items displayed at a time
+     * @param Limit Number of items displayed at a time
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeDatabasesRequest() {
     }
 
@@ -57,6 +126,18 @@ public class DescribeDatabasesRequest extends AbstractModel {
         if (source.DBInstanceId != null) {
             this.DBInstanceId = new String(source.DBInstanceId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -65,6 +146,9 @@ public class DescribeDatabasesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

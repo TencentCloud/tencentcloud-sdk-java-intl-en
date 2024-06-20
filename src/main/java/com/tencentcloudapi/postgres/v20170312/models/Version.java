@@ -71,7 +71,7 @@ TDE: Supports data encryption.
     private String Status;
 
     /**
-    * List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+    * List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
     */
     @SerializedName("AvailableUpgradeTarget")
     @Expose
@@ -194,16 +194,16 @@ TDE: Supports data encryption.
     }
 
     /**
-     * Get List of versions to which this database version (`DBKernelVersion`) can be upgraded. 
-     * @return AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+     * Get List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6). 
+     * @return AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
      */
     public String [] getAvailableUpgradeTarget() {
         return this.AvailableUpgradeTarget;
     }
 
     /**
-     * Set List of versions to which this database version (`DBKernelVersion`) can be upgraded.
-     * @param AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+     * Set List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
+     * @param AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
      */
     public void setAvailableUpgradeTarget(String [] AvailableUpgradeTarget) {
         this.AvailableUpgradeTarget = AvailableUpgradeTarget;

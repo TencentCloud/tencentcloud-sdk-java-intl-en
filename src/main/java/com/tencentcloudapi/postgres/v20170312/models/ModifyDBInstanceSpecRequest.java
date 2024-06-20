@@ -45,10 +45,10 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long Storage;
 
     /**
-    * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+    * Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -69,11 +69,11 @@ Default value: `0`.
     private Long ActivityId;
 
     /**
-    * Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+    * Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -92,6 +92,13 @@ Default value: `0`.
     @SerializedName("SwitchEndTime")
     @Expose
     private String SwitchEndTime;
+
+    /**
+    * Instance CPU size in Cores after modification.
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
 
     /**
      * Get Instance ID in the format of postgres-6bwgamo3. 
@@ -142,28 +149,28 @@ Default value: `0`.
     }
 
     /**
-     * Get Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`. 
-     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Get Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0 
+     * @return AutoVoucher Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Set Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+     * @param AutoVoucher Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -202,32 +209,32 @@ Default value: `0`.
     }
 
     /**
-     * Get Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`.  
-     * @return SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * Get Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0 
+     * @return SwitchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-     * @param SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * Set Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
+     * @param SwitchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
@@ -263,6 +270,22 @@ Default value: `0`.
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;
+    }
+
+    /**
+     * Get Instance CPU size in Cores after modification. 
+     * @return Cpu Instance CPU size in Cores after modification.
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Instance CPU size in Cores after modification.
+     * @param Cpu Instance CPU size in Cores after modification.
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
     }
 
     public ModifyDBInstanceSpecRequest() {
@@ -303,6 +326,9 @@ Default value: `0`.
         if (source.SwitchEndTime != null) {
             this.SwitchEndTime = new String(source.SwitchEndTime);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
     }
 
 
@@ -319,6 +345,7 @@ Default value: `0`.
         this.setParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

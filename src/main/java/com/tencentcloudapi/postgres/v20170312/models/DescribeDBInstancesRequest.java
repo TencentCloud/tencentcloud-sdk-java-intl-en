@@ -24,12 +24,14 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * Filter instances using one or more criteria. Valid filter names:
+    * Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
     */
     @SerializedName("Filters")
     @Expose
@@ -64,36 +66,44 @@ db-tag-key: filter by tag key (in string format)
     private String OrderByType;
 
     /**
-     * Get Filter instances using one or more criteria. Valid filter names:
+     * Get Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
-db-tag-key: filter by tag key (in string format) 
-     * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format) 
+     * @return Filters Query using one or more filter criteria. Filter criteria currently supported include:
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter instances using one or more criteria. Valid filter names:
+     * Set Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
-     * @param Filters Filter instances using one or more criteria. Valid filter names:
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
+     * @param Filters Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

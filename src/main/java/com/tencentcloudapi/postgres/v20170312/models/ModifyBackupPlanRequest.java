@@ -59,6 +59,13 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     private String [] BackupPeriod;
 
     /**
+    * Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+    */
+    @SerializedName("LogBackupRetentionPeriod")
+    @Expose
+    private Long LogBackupRetentionPeriod;
+
+    /**
      * Get Instance ID 
      * @return DBInstanceId Instance ID
      */
@@ -138,6 +145,22 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         this.BackupPeriod = BackupPeriod;
     }
 
+    /**
+     * Get Instance log backup retention duration, with a value range of 7-1830 and a unit of day 
+     * @return LogBackupRetentionPeriod Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+     */
+    public Long getLogBackupRetentionPeriod() {
+        return this.LogBackupRetentionPeriod;
+    }
+
+    /**
+     * Set Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+     * @param LogBackupRetentionPeriod Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+     */
+    public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
+        this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
+    }
+
     public ModifyBackupPlanRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyBackupPlanRequest extends AbstractModel {
                 this.BackupPeriod[i] = new String(source.BackupPeriod[i]);
             }
         }
+        if (source.LogBackupRetentionPeriod != null) {
+            this.LogBackupRetentionPeriod = new Long(source.LogBackupRetentionPeriod);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
         this.setParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
         this.setParamArraySimple(map, prefix + "BackupPeriod.", this.BackupPeriod);
+        this.setParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
 
     }
 }

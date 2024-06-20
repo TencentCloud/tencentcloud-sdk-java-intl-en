@@ -45,28 +45,28 @@ public class BackupSummary extends AbstractModel {
     private Long LogBackupSize;
 
     /**
-    * Number of manually created full backups of an instance
+    * Number of manually created instance data backups.
     */
     @SerializedName("ManualBaseBackupCount")
     @Expose
     private Long ManualBaseBackupCount;
 
     /**
-    * Size of manually created full backups of an instance
+    * Size of manually created instance data backups.
     */
     @SerializedName("ManualBaseBackupSize")
     @Expose
     private Long ManualBaseBackupSize;
 
     /**
-    * Number of automatically created full backups of an instance
+    * Number of automatically created instance data backups.
     */
     @SerializedName("AutoBaseBackupCount")
     @Expose
     private Long AutoBaseBackupCount;
 
     /**
-    * Size of automatically created full backups of an instance
+    * Size of automatically created instance data backups.
     */
     @SerializedName("AutoBaseBackupSize")
     @Expose
@@ -135,64 +135,64 @@ public class BackupSummary extends AbstractModel {
     }
 
     /**
-     * Get Number of manually created full backups of an instance 
-     * @return ManualBaseBackupCount Number of manually created full backups of an instance
+     * Get Number of manually created instance data backups. 
+     * @return ManualBaseBackupCount Number of manually created instance data backups.
      */
     public Long getManualBaseBackupCount() {
         return this.ManualBaseBackupCount;
     }
 
     /**
-     * Set Number of manually created full backups of an instance
-     * @param ManualBaseBackupCount Number of manually created full backups of an instance
+     * Set Number of manually created instance data backups.
+     * @param ManualBaseBackupCount Number of manually created instance data backups.
      */
     public void setManualBaseBackupCount(Long ManualBaseBackupCount) {
         this.ManualBaseBackupCount = ManualBaseBackupCount;
     }
 
     /**
-     * Get Size of manually created full backups of an instance 
-     * @return ManualBaseBackupSize Size of manually created full backups of an instance
+     * Get Size of manually created instance data backups. 
+     * @return ManualBaseBackupSize Size of manually created instance data backups.
      */
     public Long getManualBaseBackupSize() {
         return this.ManualBaseBackupSize;
     }
 
     /**
-     * Set Size of manually created full backups of an instance
-     * @param ManualBaseBackupSize Size of manually created full backups of an instance
+     * Set Size of manually created instance data backups.
+     * @param ManualBaseBackupSize Size of manually created instance data backups.
      */
     public void setManualBaseBackupSize(Long ManualBaseBackupSize) {
         this.ManualBaseBackupSize = ManualBaseBackupSize;
     }
 
     /**
-     * Get Number of automatically created full backups of an instance 
-     * @return AutoBaseBackupCount Number of automatically created full backups of an instance
+     * Get Number of automatically created instance data backups. 
+     * @return AutoBaseBackupCount Number of automatically created instance data backups.
      */
     public Long getAutoBaseBackupCount() {
         return this.AutoBaseBackupCount;
     }
 
     /**
-     * Set Number of automatically created full backups of an instance
-     * @param AutoBaseBackupCount Number of automatically created full backups of an instance
+     * Set Number of automatically created instance data backups.
+     * @param AutoBaseBackupCount Number of automatically created instance data backups.
      */
     public void setAutoBaseBackupCount(Long AutoBaseBackupCount) {
         this.AutoBaseBackupCount = AutoBaseBackupCount;
     }
 
     /**
-     * Get Size of automatically created full backups of an instance 
-     * @return AutoBaseBackupSize Size of automatically created full backups of an instance
+     * Get Size of automatically created instance data backups. 
+     * @return AutoBaseBackupSize Size of automatically created instance data backups.
      */
     public Long getAutoBaseBackupSize() {
         return this.AutoBaseBackupSize;
     }
 
     /**
-     * Set Size of automatically created full backups of an instance
-     * @param AutoBaseBackupSize Size of automatically created full backups of an instance
+     * Set Size of automatically created instance data backups.
+     * @param AutoBaseBackupSize Size of automatically created instance data backups.
      */
     public void setAutoBaseBackupSize(Long AutoBaseBackupSize) {
         this.AutoBaseBackupSize = AutoBaseBackupSize;

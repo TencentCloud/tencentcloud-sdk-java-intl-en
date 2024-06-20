@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class DescribeServerlessDBInstancesRequest extends AbstractModel {
 
     /**
-    * Query conditions
+    * Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
     */
     @SerializedName("Filter")
     @Expose
@@ -59,16 +65,40 @@ public class DescribeServerlessDBInstancesRequest extends AbstractModel {
     private String OrderByType;
 
     /**
-     * Get Query conditions 
-     * @return Filter Query conditions
+     * Get Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria. 
+     * @return Filter Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
      */
     public Filter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Query conditions
-     * @param Filter Query conditions
+     * Set Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
+     * @param Filter Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
      */
     public void setFilter(Filter [] Filter) {
         this.Filter = Filter;

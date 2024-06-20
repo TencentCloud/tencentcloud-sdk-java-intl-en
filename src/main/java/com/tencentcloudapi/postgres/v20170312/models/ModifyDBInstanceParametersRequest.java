@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDBInstanceParametersRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Parameters to be modified and their new values
+    * Parameters to be modified and expected values.
     */
     @SerializedName("ParamList")
     @Expose
     private ParamEntry [] ParamList;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+     * Get Instance ID. 
+     * @return DBInstanceId Instance ID.
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID.
+     * @param DBInstanceId Instance ID.
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Parameters to be modified and their new values 
-     * @return ParamList Parameters to be modified and their new values
+     * Get Parameters to be modified and expected values. 
+     * @return ParamList Parameters to be modified and expected values.
      */
     public ParamEntry [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set Parameters to be modified and their new values
-     * @param ParamList Parameters to be modified and their new values
+     * Set Parameters to be modified and expected values.
+     * @param ParamList Parameters to be modified and expected values.
      */
     public void setParamList(ParamEntry [] ParamList) {
         this.ParamList = ParamList;
