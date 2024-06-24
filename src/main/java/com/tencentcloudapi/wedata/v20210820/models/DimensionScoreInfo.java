@@ -76,7 +76,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Float Score;
 
     /**
-    * 
+    * Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("UserIdStr")
     @Expose
@@ -207,16 +208,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return UserIdStr 
+     * Get Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UserIdStr Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getUserIdStr() {
         return this.UserIdStr;
     }
 
     /**
-     * Set 
-     * @param UserIdStr 
+     * Set Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UserIdStr Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setUserIdStr(String UserIdStr) {
         this.UserIdStr = UserIdStr;

@@ -178,7 +178,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long [] DatasourceTypes;
 
     /**
-    * 
+    * Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("UserIdStr")
     @Expose
@@ -561,16 +562,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return UserIdStr 
+     * Get Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UserIdStr Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getUserIdStr() {
         return this.UserIdStr;
     }
 
     /**
-     * Set 
-     * @param UserIdStr 
+     * Set Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UserIdStr Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setUserIdStr(String UserIdStr) {
         this.UserIdStr = UserIdStr;

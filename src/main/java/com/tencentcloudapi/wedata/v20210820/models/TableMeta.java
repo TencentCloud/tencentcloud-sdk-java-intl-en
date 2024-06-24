@@ -442,6 +442,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long PartitionExpireDays;
 
     /**
+    * Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("TableProperties")
+    @Expose
+    private TableMetaProperty [] TableProperties;
+
+    /**
      * Get Global Unique ID of the Table
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return TableId Global Unique ID of the Table
@@ -1477,6 +1485,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.PartitionExpireDays = PartitionExpireDays;
     }
 
+    /**
+     * Get Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return TableProperties Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public TableMetaProperty [] getTableProperties() {
+        return this.TableProperties;
+    }
+
+    /**
+     * Set Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param TableProperties Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setTableProperties(TableMetaProperty [] TableProperties) {
+        this.TableProperties = TableProperties;
+    }
+
     public TableMeta() {
     }
 
@@ -1656,6 +1684,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.PartitionExpireDays != null) {
             this.PartitionExpireDays = new Long(source.PartitionExpireDays);
         }
+        if (source.TableProperties != null) {
+            this.TableProperties = new TableMetaProperty[source.TableProperties.length];
+            for (int i = 0; i < source.TableProperties.length; i++) {
+                this.TableProperties[i] = new TableMetaProperty(source.TableProperties[i]);
+            }
+        }
     }
 
 
@@ -1716,6 +1750,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
         this.setParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
         this.setParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
+        this.setParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
 
     }
 }

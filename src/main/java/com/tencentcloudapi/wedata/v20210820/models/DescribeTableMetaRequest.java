@@ -31,6 +31,20 @@ public class DescribeTableMetaRequest extends AbstractModel {
     private String TableId;
 
     /**
+    * Query conditions by Name
+    */
+    @SerializedName("TableNameFilter")
+    @Expose
+    private TableNameFilter TableNameFilter;
+
+    /**
+    * Query condition type: 0 by ID, 1 by Name, default is 0
+    */
+    @SerializedName("TableFilterType")
+    @Expose
+    private Long TableFilterType;
+
+    /**
      * Get Unique Table ID 
      * @return TableId Unique Table ID
      */
@@ -46,6 +60,38 @@ public class DescribeTableMetaRequest extends AbstractModel {
         this.TableId = TableId;
     }
 
+    /**
+     * Get Query conditions by Name 
+     * @return TableNameFilter Query conditions by Name
+     */
+    public TableNameFilter getTableNameFilter() {
+        return this.TableNameFilter;
+    }
+
+    /**
+     * Set Query conditions by Name
+     * @param TableNameFilter Query conditions by Name
+     */
+    public void setTableNameFilter(TableNameFilter TableNameFilter) {
+        this.TableNameFilter = TableNameFilter;
+    }
+
+    /**
+     * Get Query condition type: 0 by ID, 1 by Name, default is 0 
+     * @return TableFilterType Query condition type: 0 by ID, 1 by Name, default is 0
+     */
+    public Long getTableFilterType() {
+        return this.TableFilterType;
+    }
+
+    /**
+     * Set Query condition type: 0 by ID, 1 by Name, default is 0
+     * @param TableFilterType Query condition type: 0 by ID, 1 by Name, default is 0
+     */
+    public void setTableFilterType(Long TableFilterType) {
+        this.TableFilterType = TableFilterType;
+    }
+
     public DescribeTableMetaRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeTableMetaRequest extends AbstractModel {
         if (source.TableId != null) {
             this.TableId = new String(source.TableId);
         }
+        if (source.TableNameFilter != null) {
+            this.TableNameFilter = new TableNameFilter(source.TableNameFilter);
+        }
+        if (source.TableFilterType != null) {
+            this.TableFilterType = new Long(source.TableFilterType);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeTableMetaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableId", this.TableId);
+        this.setParamObj(map, prefix + "TableNameFilter.", this.TableNameFilter);
+        this.setParamSimple(map, prefix + "TableFilterType", this.TableFilterType);
 
     }
 }

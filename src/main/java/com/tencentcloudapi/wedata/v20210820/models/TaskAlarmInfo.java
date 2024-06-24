@@ -269,6 +269,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String LarkWebHooks;
 
     /**
+    * DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DingDingWebHooks")
+    @Expose
+    private String DingDingWebHooks;
+
+    /**
      * Get Task ID 
      * @return TaskId Task ID
      */
@@ -864,6 +872,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.LarkWebHooks = LarkWebHooks;
     }
 
+    /**
+     * Get DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return DingDingWebHooks DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getDingDingWebHooks() {
+        return this.DingDingWebHooks;
+    }
+
+    /**
+     * Set DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DingDingWebHooks DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setDingDingWebHooks(String DingDingWebHooks) {
+        this.DingDingWebHooks = DingDingWebHooks;
+    }
+
     public TaskAlarmInfo() {
     }
 
@@ -977,6 +1005,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.LarkWebHooks != null) {
             this.LarkWebHooks = new String(source.LarkWebHooks);
         }
+        if (source.DingDingWebHooks != null) {
+            this.DingDingWebHooks = new String(source.DingDingWebHooks);
+        }
     }
 
 
@@ -1016,6 +1047,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "LatestAlarmTime", this.LatestAlarmTime);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
+        this.setParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
 
     }
 }

@@ -40,7 +40,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String ReceiverName;
 
     /**
-    * 
+    * Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ReceiverUserIdStr")
     @Expose
@@ -87,16 +88,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return ReceiverUserIdStr 
+     * Get Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ReceiverUserIdStr Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getReceiverUserIdStr() {
         return this.ReceiverUserIdStr;
     }
 
     /**
-     * Set 
-     * @param ReceiverUserIdStr 
+     * Set Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ReceiverUserIdStr Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setReceiverUserIdStr(String ReceiverUserIdStr) {
         this.ReceiverUserIdStr = ReceiverUserIdStr;

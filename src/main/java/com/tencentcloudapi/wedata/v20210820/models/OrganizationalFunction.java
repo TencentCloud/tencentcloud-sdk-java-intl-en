@@ -220,14 +220,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String Tag;
 
     /**
-    * 
+    * Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("OperatorUserIdsStr")
     @Expose
     private String [] OperatorUserIdsStr;
 
     /**
-    * 
+    * Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("OwnerUserIdsStr")
     @Expose
@@ -706,32 +708,40 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return OperatorUserIdsStr 
+     * Get Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return OperatorUserIdsStr Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String [] getOperatorUserIdsStr() {
         return this.OperatorUserIdsStr;
     }
 
     /**
-     * Set 
-     * @param OperatorUserIdsStr 
+     * Set Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param OperatorUserIdsStr Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOperatorUserIdsStr(String [] OperatorUserIdsStr) {
         this.OperatorUserIdsStr = OperatorUserIdsStr;
     }
 
     /**
-     * Get  
-     * @return OwnerUserIdsStr 
+     * Get Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return OwnerUserIdsStr Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String [] getOwnerUserIdsStr() {
         return this.OwnerUserIdsStr;
     }
 
     /**
-     * Set 
-     * @param OwnerUserIdsStr 
+     * Set Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param OwnerUserIdsStr Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOwnerUserIdsStr(String [] OwnerUserIdsStr) {
         this.OwnerUserIdsStr = OwnerUserIdsStr;

@@ -435,6 +435,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Orchestration Space - Workflow - Create Task Folder
+     * @param req CreateTaskFolderRequest
+     * @return CreateTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
+    }
+
+    /**
      *Submit Task Version
      * @param req CreateTaskVersionDsRequest
      * @return CreateTaskVersionDsResponse
@@ -1857,7 +1868,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *Instance Diagnosis
+     *Instance diagnosis for diagnosing instances in INITIAL, DEPENDENCE, ALLOCATED, LAUNCHED, EVENT_LISTENING, BEFORE_ASPECT, EXPIRED, FAILED states
      * @param req DiagnoseProRequest
      * @return DiagnoseProResponse
      * @throws TencentCloudSDKException
@@ -2198,6 +2209,17 @@ Modify Task Script
     public ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(ModifyWorkflowScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyWorkflowSchedule", ModifyWorkflowScheduleResponse.class);
+    }
+
+    /**
+     *Orchestration Space - Workflow - Move Task to Workflow Folder
+     * @param req MoveTasksToFolderRequest
+     * @return MoveTasksToFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public MoveTasksToFolderResponse MoveTasksToFolder(MoveTasksToFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MoveTasksToFolder", MoveTasksToFolderResponse.class);
     }
 
     /**

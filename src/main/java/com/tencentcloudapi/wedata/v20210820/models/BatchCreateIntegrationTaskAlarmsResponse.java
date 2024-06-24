@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class BatchCreateIntegrationTaskAlarmsResponse extends AbstractModel {
 
     /**
-    * Number of Successfully Operated TasksNote: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SuccessCount")
     @Expose
     private Long SuccessCount;
 
     /**
-    * Number of Failed TasksNote: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FailedCount")
     @Expose
     private Long FailedCount;
 
     /**
-    * Total Number of TasksNote: This field may return null, indicating that no valid value can be obtained.
+    * Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -52,48 +52,48 @@ public class BatchCreateIntegrationTaskAlarmsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of Successfully Operated TasksNote: This field may return null, indicating that no valid value can be obtained. 
-     * @return SuccessCount Number of Successfully Operated TasksNote: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SuccessCount Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getSuccessCount() {
         return this.SuccessCount;
     }
 
     /**
-     * Set Number of Successfully Operated TasksNote: This field may return null, indicating that no valid value can be obtained.
-     * @param SuccessCount Number of Successfully Operated TasksNote: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SuccessCount Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSuccessCount(Long SuccessCount) {
         this.SuccessCount = SuccessCount;
     }
 
     /**
-     * Get Number of Failed TasksNote: This field may return null, indicating that no valid value can be obtained. 
-     * @return FailedCount Number of Failed TasksNote: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return FailedCount Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getFailedCount() {
         return this.FailedCount;
     }
 
     /**
-     * Set Number of Failed TasksNote: This field may return null, indicating that no valid value can be obtained.
-     * @param FailedCount Number of Failed TasksNote: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param FailedCount Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFailedCount(Long FailedCount) {
         this.FailedCount = FailedCount;
     }
 
     /**
-     * Get Total Number of TasksNote: This field may return null, indicating that no valid value can be obtained. 
-     * @return TotalCount Total Number of TasksNote: This field may return null, indicating that no valid value can be obtained.
+     * Get Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return TotalCount Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total Number of TasksNote: This field may return null, indicating that no valid value can be obtained.
-     * @param TotalCount Total Number of TasksNote: This field may return null, indicating that no valid value can be obtained.
+     * Set Note: This field may return null, indicating that no valid value can be obtained.
+     * @param TotalCount Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
