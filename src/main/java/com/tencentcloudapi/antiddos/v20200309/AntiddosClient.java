@@ -413,7 +413,9 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get an Anti-DDoS IP blocklist/allowlist.
+     *接口变更
+
+This API is used to get an Anti-DDoS IP blocklist/allowlist.
      * @param req DescribeBlackWhiteIpListRequest
      * @return DescribeBlackWhiteIpListResponse
      * @throws TencentCloudSDKException
@@ -634,7 +636,9 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
+     *接口变更
+
+This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
      * @param req DescribeListProtectThresholdConfigRequest
      * @return DescribeListProtectThresholdConfigResponse
      * @throws TencentCloudSDKException
