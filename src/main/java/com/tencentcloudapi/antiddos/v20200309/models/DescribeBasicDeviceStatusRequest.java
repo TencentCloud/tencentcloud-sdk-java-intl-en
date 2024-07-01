@@ -31,6 +31,27 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
     private String [] IpList;
 
     /**
+    * 
+    */
+    @SerializedName("IdList")
+    @Expose
+    private String [] IdList;
+
+    /**
+    * 
+    */
+    @SerializedName("FilterRegion")
+    @Expose
+    private Long FilterRegion;
+
+    /**
+    * 
+    */
+    @SerializedName("CnameWafIdList")
+    @Expose
+    private String [] CnameWafIdList;
+
+    /**
      * Get List of IP resources 
      * @return IpList List of IP resources
      */
@@ -44,6 +65,54 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;
+    }
+
+    /**
+     * Get  
+     * @return IdList 
+     */
+    public String [] getIdList() {
+        return this.IdList;
+    }
+
+    /**
+     * Set 
+     * @param IdList 
+     */
+    public void setIdList(String [] IdList) {
+        this.IdList = IdList;
+    }
+
+    /**
+     * Get  
+     * @return FilterRegion 
+     */
+    public Long getFilterRegion() {
+        return this.FilterRegion;
+    }
+
+    /**
+     * Set 
+     * @param FilterRegion 
+     */
+    public void setFilterRegion(Long FilterRegion) {
+        this.FilterRegion = FilterRegion;
+    }
+
+    /**
+     * Get  
+     * @return CnameWafIdList 
+     */
+    public String [] getCnameWafIdList() {
+        return this.CnameWafIdList;
+    }
+
+    /**
+     * Set 
+     * @param CnameWafIdList 
+     */
+    public void setCnameWafIdList(String [] CnameWafIdList) {
+        this.CnameWafIdList = CnameWafIdList;
     }
 
     public DescribeBasicDeviceStatusRequest() {
@@ -60,6 +129,21 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
                 this.IpList[i] = new String(source.IpList[i]);
             }
         }
+        if (source.IdList != null) {
+            this.IdList = new String[source.IdList.length];
+            for (int i = 0; i < source.IdList.length; i++) {
+                this.IdList[i] = new String(source.IdList[i]);
+            }
+        }
+        if (source.FilterRegion != null) {
+            this.FilterRegion = new Long(source.FilterRegion);
+        }
+        if (source.CnameWafIdList != null) {
+            this.CnameWafIdList = new String[source.CnameWafIdList.length];
+            for (int i = 0; i < source.CnameWafIdList.length; i++) {
+                this.CnameWafIdList[i] = new String(source.CnameWafIdList[i]);
+            }
+        }
     }
 
 
@@ -68,6 +152,9 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
+        this.setParamArraySimple(map, prefix + "IdList.", this.IdList);
+        this.setParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
+        this.setParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
 
     }
 }
