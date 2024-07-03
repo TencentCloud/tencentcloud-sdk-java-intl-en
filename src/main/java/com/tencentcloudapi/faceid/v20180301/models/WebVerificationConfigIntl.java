@@ -103,7 +103,7 @@ Example: HKIDCard
     private String ThemeColor;
 
     /**
-    * International language, the default value is en (English). Currently supported: th: Thai; en: English;
+    * International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
     */
     @SerializedName("Language")
     @Expose
@@ -325,16 +325,16 @@ Example: HKIDCard
     }
 
     /**
-     * Get International language, the default value is en (English). Currently supported: th: Thai; en: English; 
-     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     * Get International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia. 
+     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set International language, the default value is en (English). Currently supported: th: Thai; en: English;
-     * @param Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     * Set International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+     * @param Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
      */
     public void setLanguage(String Language) {
         this.Language = Language;
