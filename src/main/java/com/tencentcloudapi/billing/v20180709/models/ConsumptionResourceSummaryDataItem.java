@@ -299,6 +299,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ComponentConfig;
 
     /**
+    * Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String Tags;
+
+    /**
      * Get Resource ID 
      * @return ResourceId Resource ID
      */
@@ -930,6 +937,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ComponentConfig = ComponentConfig;
     }
 
+    /**
+     * Get Tag information.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(String Tags) {
+        this.Tags = Tags;
+    }
+
     public ConsumptionResourceSummaryDataItem() {
     }
 
@@ -1055,6 +1078,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ComponentConfig != null) {
             this.ComponentConfig = new String(source.ComponentConfig);
         }
+        if (source.Tags != null) {
+            this.Tags = new String(source.Tags);
+        }
     }
 
 
@@ -1101,6 +1127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PayTime", this.PayTime);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+        this.setParamSimple(map, prefix + "Tags", this.Tags);
 
     }
 }
