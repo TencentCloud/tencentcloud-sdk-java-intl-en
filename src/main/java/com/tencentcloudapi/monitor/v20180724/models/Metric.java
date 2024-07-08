@@ -106,7 +106,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Operators")
     @Expose
@@ -114,11 +114,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Periods")
     @Expose
     private Long [] Periods;
+
+    /**
+    * 
+    */
+    @SerializedName("IsLatenessMetric")
+    @Expose
+    private Long IsLatenessMetric;
 
     /**
      * Get Alarm policy type 
@@ -314,9 +321,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Operators Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Operator [] getOperators() {
         return this.Operators;
@@ -324,9 +331,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Operators Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOperators(Operator [] Operators) {
         this.Operators = Operators;
@@ -334,9 +341,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Periods Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getPeriods() {
         return this.Periods;
@@ -344,12 +351,28 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Periods Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPeriods(Long [] Periods) {
         this.Periods = Periods;
+    }
+
+    /**
+     * Get  
+     * @return IsLatenessMetric 
+     */
+    public Long getIsLatenessMetric() {
+        return this.IsLatenessMetric;
+    }
+
+    /**
+     * Set 
+     * @param IsLatenessMetric 
+     */
+    public void setIsLatenessMetric(Long IsLatenessMetric) {
+        this.IsLatenessMetric = IsLatenessMetric;
     }
 
     public Metric() {
@@ -408,6 +431,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                 this.Periods[i] = new Long(source.Periods[i]);
             }
         }
+        if (source.IsLatenessMetric != null) {
+            this.IsLatenessMetric = new Long(source.IsLatenessMetric);
+        }
     }
 
 
@@ -428,6 +454,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamArrayObj(map, prefix + "Operators.", this.Operators);
         this.setParamArraySimple(map, prefix + "Periods.", this.Periods);
+        this.setParamSimple(map, prefix + "IsLatenessMetric", this.IsLatenessMetric);
 
     }
 }

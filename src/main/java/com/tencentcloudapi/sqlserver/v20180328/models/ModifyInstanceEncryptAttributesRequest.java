@@ -31,7 +31,7 @@ public class ModifyInstanceEncryptAttributesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+    * Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
     */
     @SerializedName("CertificateAttribution")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyInstanceEncryptAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`. 
-     * @return CertificateAttribution Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+     * Get Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`. 
+     * @return CertificateAttribution Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
      */
     public String getCertificateAttribution() {
         return this.CertificateAttribution;
     }
 
     /**
-     * Set Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
-     * @param CertificateAttribution Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+     * Set Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+     * @param CertificateAttribution Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
      */
     public void setCertificateAttribution(String CertificateAttribution) {
         this.CertificateAttribution = CertificateAttribution;

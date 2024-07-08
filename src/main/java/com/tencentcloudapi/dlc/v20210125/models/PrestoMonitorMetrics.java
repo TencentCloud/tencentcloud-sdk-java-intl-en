@@ -25,7 +25,7 @@ public class PrestoMonitorMetrics extends AbstractModel {
 
     /**
     * 	The Alluxio cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LocalCacheHitRate")
     @Expose
@@ -33,7 +33,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The Fragment cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FragmentCacheHitRate")
     @Expose
@@ -41,9 +41,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get 	The Alluxio cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LocalCacheHitRate 	The Alluxio cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getLocalCacheHitRate() {
         return this.LocalCacheHitRate;
@@ -51,9 +51,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set 	The Alluxio cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LocalCacheHitRate 	The Alluxio cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLocalCacheHitRate(Float LocalCacheHitRate) {
         this.LocalCacheHitRate = LocalCacheHitRate;
@@ -61,9 +61,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The Fragment cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FragmentCacheHitRate The Fragment cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getFragmentCacheHitRate() {
         return this.FragmentCacheHitRate;
@@ -71,9 +71,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The Fragment cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param FragmentCacheHitRate The Fragment cache hit rate.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFragmentCacheHitRate(Float FragmentCacheHitRate) {
         this.FragmentCacheHitRate = FragmentCacheHitRate;

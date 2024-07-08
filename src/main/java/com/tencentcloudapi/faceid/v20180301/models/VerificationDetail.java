@@ -25,7 +25,7 @@ public class VerificationDetail extends AbstractModel {
 
     /**
     * The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -33,7 +33,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -41,7 +41,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The result of this liveness detection process. `0` indicates success.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LivenessErrorCode")
     @Expose
@@ -57,7 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CompareErrorCode")
     @Expose
@@ -65,7 +65,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The result description of this comparison process.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CompareErrorMsg")
     @Expose
@@ -81,7 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Similarity")
     @Expose
@@ -97,9 +97,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getErrorCode() {
         return this.ErrorCode;
@@ -107,9 +107,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
@@ -117,9 +117,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrorMsg The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -127,9 +127,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrorMsg The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
@@ -137,9 +137,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The result of this liveness detection process. `0` indicates success.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLivenessErrorCode() {
         return this.LivenessErrorCode;
@@ -147,9 +147,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The result of this liveness detection process. `0` indicates success.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLivenessErrorCode(Long LivenessErrorCode) {
         this.LivenessErrorCode = LivenessErrorCode;
@@ -177,9 +177,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCompareErrorCode() {
         return this.CompareErrorCode;
@@ -187,9 +187,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCompareErrorCode(Long CompareErrorCode) {
         this.CompareErrorCode = CompareErrorCode;
@@ -197,9 +197,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The result description of this comparison process.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CompareErrorMsg The result description of this comparison process.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCompareErrorMsg() {
         return this.CompareErrorMsg;
@@ -207,9 +207,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The result description of this comparison process.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CompareErrorMsg The result description of this comparison process.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCompareErrorMsg(String CompareErrorMsg) {
         this.CompareErrorMsg = CompareErrorMsg;
@@ -237,9 +237,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getSimilarity() {
         return this.Similarity;
@@ -247,9 +247,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSimilarity(Float Similarity) {
         this.Similarity = Similarity;

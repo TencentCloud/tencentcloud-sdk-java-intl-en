@@ -26,7 +26,7 @@ public class GetWebVerificationResultIntlResponse extends AbstractModel {
     /**
     * The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -34,7 +34,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -42,7 +42,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VerificationDetailList")
     @Expose
@@ -50,15 +50,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VideoBase64")
     @Expose
     private String VideoBase64;
 
     /**
-    * The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BestFrameBase64")
     @Expose
@@ -89,10 +89,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getErrorCode() {
         return this.ErrorCode;
@@ -101,10 +101,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     /**
      * Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
@@ -112,9 +112,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrorMsg The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -122,9 +122,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrorMsg The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
@@ -132,9 +132,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VerificationDetail [] getVerificationDetailList() {
         return this.VerificationDetailList;
@@ -142,9 +142,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVerificationDetailList(VerificationDetail [] VerificationDetailList) {
         this.VerificationDetailList = VerificationDetailList;
@@ -152,9 +152,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVideoBase64() {
         return this.VideoBase64;
@@ -162,29 +162,29 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVideoBase64(String VideoBase64) {
         this.VideoBase64 = VideoBase64;
     }
 
     /**
-     * Get The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return BestFrameBase64 The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBestFrameBase64() {
         return this.BestFrameBase64;
     }
 
     /**
-     * Set The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param BestFrameBase64 The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBestFrameBase64(String BestFrameBase64) {
         this.BestFrameBase64 = BestFrameBase64;

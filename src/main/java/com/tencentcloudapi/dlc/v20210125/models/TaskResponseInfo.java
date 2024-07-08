@@ -310,7 +310,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CommonMetrics")
     @Expose
@@ -318,7 +318,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkMonitorMetrics")
     @Expose
@@ -326,11 +326,32 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrestoMonitorMetrics")
     @Expose
     private PrestoMonitorMetrics PrestoMonitorMetrics;
+
+    /**
+    * 
+    */
+    @SerializedName("ResultFormat")
+    @Expose
+    private String ResultFormat;
+
+    /**
+    * 
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
+
+    /**
+    * 
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
 
     /**
      * Get Database name of the task 
@@ -1030,9 +1051,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CommonMetrics Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CommonMetrics getCommonMetrics() {
         return this.CommonMetrics;
@@ -1040,9 +1061,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CommonMetrics Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCommonMetrics(CommonMetrics CommonMetrics) {
         this.CommonMetrics = CommonMetrics;
@@ -1050,9 +1071,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SparkMonitorMetrics The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SparkMonitorMetrics getSparkMonitorMetrics() {
         return this.SparkMonitorMetrics;
@@ -1060,9 +1081,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SparkMonitorMetrics The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkMonitorMetrics(SparkMonitorMetrics SparkMonitorMetrics) {
         this.SparkMonitorMetrics = SparkMonitorMetrics;
@@ -1070,9 +1091,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PrestoMonitorMetrics The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PrestoMonitorMetrics getPrestoMonitorMetrics() {
         return this.PrestoMonitorMetrics;
@@ -1080,12 +1101,60 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param PrestoMonitorMetrics The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrestoMonitorMetrics(PrestoMonitorMetrics PrestoMonitorMetrics) {
         this.PrestoMonitorMetrics = PrestoMonitorMetrics;
+    }
+
+    /**
+     * Get  
+     * @return ResultFormat 
+     */
+    public String getResultFormat() {
+        return this.ResultFormat;
+    }
+
+    /**
+     * Set 
+     * @param ResultFormat 
+     */
+    public void setResultFormat(String ResultFormat) {
+        this.ResultFormat = ResultFormat;
+    }
+
+    /**
+     * Get  
+     * @return EngineTypeDetail 
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set 
+     * @param EngineTypeDetail 
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
+    }
+
+    /**
+     * Get  
+     * @return ResourceGroupName 
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 
+     * @param ResourceGroupName 
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
     }
 
     public TaskResponseInfo() {
@@ -1216,6 +1285,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         if (source.PrestoMonitorMetrics != null) {
             this.PrestoMonitorMetrics = new PrestoMonitorMetrics(source.PrestoMonitorMetrics);
         }
+        if (source.ResultFormat != null) {
+            this.ResultFormat = new String(source.ResultFormat);
+        }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -1263,6 +1341,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         this.setParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
         this.setParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
         this.setParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
+        this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

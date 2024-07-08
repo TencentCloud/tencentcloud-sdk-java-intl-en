@@ -191,6 +191,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long [] WarnCardInfos;
 
     /**
+    * Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+    */
+    @SerializedName("EditDetails")
+    @Expose
+    private EditDetail [] EditDetails;
+
+    /**
      * Get Whether the authentication or OCR process is successful. 
      * @return IsPass Whether the authentication or OCR process is successful.
      */
@@ -754,6 +761,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.WarnCardInfos = WarnCardInfos;
     }
 
+    /**
+     * Get Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty. 
+     * @return EditDetails Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+     */
+    public EditDetail [] getEditDetails() {
+        return this.EditDetails;
+    }
+
+    /**
+     * Set Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+     * @param EditDetails Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+     */
+    public void setEditDetails(EditDetail [] EditDetails) {
+        this.EditDetails = EditDetails;
+    }
+
     public CardVerifyResult() {
     }
 
@@ -792,6 +815,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
             }
         }
+        if (source.EditDetails != null) {
+            this.EditDetails = new EditDetail[source.EditDetails.length];
+            for (int i = 0; i < source.EditDetails.length; i++) {
+                this.EditDetails[i] = new EditDetail(source.EditDetails[i]);
+            }
+        }
     }
 
 
@@ -808,6 +837,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CardInfo.", this.CardInfo);
         this.setParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+        this.setParamArrayObj(map, prefix + "EditDetails.", this.EditDetails);
 
     }
 }

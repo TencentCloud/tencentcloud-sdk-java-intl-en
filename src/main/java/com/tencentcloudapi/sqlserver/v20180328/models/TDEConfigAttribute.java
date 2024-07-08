@@ -31,15 +31,15 @@ public class TDEConfigAttribute extends AbstractModel {
     private String Encryption;
 
     /**
-    * Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+    * Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
     */
     @SerializedName("CertificateAttribution")
     @Expose
     private String CertificateAttribution;
 
     /**
-    * ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    * ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QuoteUin")
     @Expose
@@ -62,36 +62,36 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     }
 
     /**
-     * Get Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate). 
-     * @return CertificateAttribution Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+     * Get Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate). 
+     * @return CertificateAttribution Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
      */
     public String getCertificateAttribution() {
         return this.CertificateAttribution;
     }
 
     /**
-     * Set Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
-     * @param CertificateAttribution Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+     * Set Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
+     * @param CertificateAttribution Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
      */
     public void setCertificateAttribution(String CertificateAttribution) {
         this.CertificateAttribution = CertificateAttribution;
     }
 
     /**
-     * Get ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
-     * @return QuoteUin ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * Get ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QuoteUin ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuoteUin() {
         return this.QuoteUin;
     }
 
     /**
-     * Set ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-     * @param QuoteUin ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * Set ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QuoteUin ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuoteUin(String QuoteUin) {
         this.QuoteUin = QuoteUin;

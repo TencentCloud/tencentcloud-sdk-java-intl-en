@@ -264,7 +264,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TaskNum;
 
     /**
-    * Engine status. -100 (default value): unknown; -2–11: normal.
+    * Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineStatus")
@@ -321,11 +321,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsSessionStarted")
     @Expose
     private Boolean IsSessionStarted;
+
+    /**
+    * 
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
 
     /**
      * Get Spark job ID 
@@ -892,9 +899,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Engine status. -100 (default value): unknown; -2–11: normal.
+     * Get Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
+     * @return DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDataEngineStatus() {
@@ -902,9 +909,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Engine status. -100 (default value): unknown; -2–11: normal.
+     * Set Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
+     * @param DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineStatus(Long DataEngineStatus) {
@@ -1033,9 +1040,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsSessionStarted() {
         return this.IsSessionStarted;
@@ -1043,12 +1050,28 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsSessionStarted(Boolean IsSessionStarted) {
         this.IsSessionStarted = IsSessionStarted;
+    }
+
+    /**
+     * Get  
+     * @return EngineTypeDetail 
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set 
+     * @param EngineTypeDetail 
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
     }
 
     public SparkJobInfo() {
@@ -1182,6 +1205,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         if (source.IsSessionStarted != null) {
             this.IsSessionStarted = new Boolean(source.IsSessionStarted);
         }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
     }
 
 
@@ -1230,6 +1256,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
         this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
 
     }
 }

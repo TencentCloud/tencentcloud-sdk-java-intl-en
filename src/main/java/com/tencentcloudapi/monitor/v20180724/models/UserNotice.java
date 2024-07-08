@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ReceiverType;
 
     /**
-    * Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+    * Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long StartTime;
 
     /**
-    * Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+    * Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
@@ -80,7 +80,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long [] PhoneOrder;
 
     /**
-    * Number of phone pollings. Value range: 1–5
+    * Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhoneCircleTimes")
@@ -88,7 +88,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long PhoneCircleTimes;
 
     /**
-    * Call interval in seconds within one polling. Value range: 60–900
+    * Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhoneInnerInterval")
@@ -96,7 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long PhoneInnerInterval;
 
     /**
-    * Polling interval in seconds. Value range: 60–900
+    * Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhoneCircleInterval")
@@ -129,7 +129,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OnCallFormIDs")
     @Expose
@@ -156,9 +156,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * Get Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @return StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getStartTime() {
@@ -166,9 +166,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * Set Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @param StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(Long StartTime) {
@@ -176,9 +176,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * Get Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @return EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getEndTime() {
@@ -186,9 +186,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * Set Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @param EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(Long EndTime) {
@@ -276,9 +276,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of phone pollings. Value range: 1–5
+     * Get Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PhoneCircleTimes Number of phone pollings. Value range: 1–5
+     * @return PhoneCircleTimes Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPhoneCircleTimes() {
@@ -286,9 +286,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Number of phone pollings. Value range: 1–5
+     * Set Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PhoneCircleTimes Number of phone pollings. Value range: 1–5
+     * @param PhoneCircleTimes Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPhoneCircleTimes(Long PhoneCircleTimes) {
@@ -296,9 +296,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Call interval in seconds within one polling. Value range: 60–900
+     * Get Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PhoneInnerInterval Call interval in seconds within one polling. Value range: 60–900
+     * @return PhoneInnerInterval Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPhoneInnerInterval() {
@@ -306,9 +306,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Call interval in seconds within one polling. Value range: 60–900
+     * Set Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PhoneInnerInterval Call interval in seconds within one polling. Value range: 60–900
+     * @param PhoneInnerInterval Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPhoneInnerInterval(Long PhoneInnerInterval) {
@@ -316,9 +316,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Polling interval in seconds. Value range: 60–900
+     * Get Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PhoneCircleInterval Polling interval in seconds. Value range: 60–900
+     * @return PhoneCircleInterval Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPhoneCircleInterval() {
@@ -326,9 +326,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Polling interval in seconds. Value range: 60–900
+     * Set Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PhoneCircleInterval Polling interval in seconds. Value range: 60–900
+     * @param PhoneCircleInterval Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPhoneCircleInterval(Long PhoneCircleInterval) {
@@ -397,9 +397,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OnCallFormIDs List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getOnCallFormIDs() {
         return this.OnCallFormIDs;
@@ -407,9 +407,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OnCallFormIDs List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOnCallFormIDs(String [] OnCallFormIDs) {
         this.OnCallFormIDs = OnCallFormIDs;

@@ -21,67 +21,93 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBTDEEncrypt extends AbstractModel {
+public class SSLConfig extends AbstractModel {
 
     /**
     * 
-    */
-    @SerializedName("DBName")
-    @Expose
-    private String DBName;
-
-    /**
-    * TDE status. Valid values: `enable` (enabled), `disable` (disabled).
     */
     @SerializedName("Encryption")
     @Expose
     private String Encryption;
 
     /**
+    * 
+    */
+    @SerializedName("SSLValidityPeriod")
+    @Expose
+    private String SSLValidityPeriod;
+
+    /**
+    * 
+    */
+    @SerializedName("SSLValidity")
+    @Expose
+    private Long SSLValidity;
+
+    /**
      * Get  
-     * @return DBName 
-     */
-    public String getDBName() {
-        return this.DBName;
-    }
-
-    /**
-     * Set 
-     * @param DBName 
-     */
-    public void setDBName(String DBName) {
-        this.DBName = DBName;
-    }
-
-    /**
-     * Get TDE status. Valid values: `enable` (enabled), `disable` (disabled). 
-     * @return Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * @return Encryption 
      */
     public String getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
-     * @param Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * Set 
+     * @param Encryption 
      */
     public void setEncryption(String Encryption) {
         this.Encryption = Encryption;
     }
 
-    public DBTDEEncrypt() {
+    /**
+     * Get  
+     * @return SSLValidityPeriod 
+     */
+    public String getSSLValidityPeriod() {
+        return this.SSLValidityPeriod;
+    }
+
+    /**
+     * Set 
+     * @param SSLValidityPeriod 
+     */
+    public void setSSLValidityPeriod(String SSLValidityPeriod) {
+        this.SSLValidityPeriod = SSLValidityPeriod;
+    }
+
+    /**
+     * Get  
+     * @return SSLValidity 
+     */
+    public Long getSSLValidity() {
+        return this.SSLValidity;
+    }
+
+    /**
+     * Set 
+     * @param SSLValidity 
+     */
+    public void setSSLValidity(Long SSLValidity) {
+        this.SSLValidity = SSLValidity;
+    }
+
+    public SSLConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DBTDEEncrypt(DBTDEEncrypt source) {
-        if (source.DBName != null) {
-            this.DBName = new String(source.DBName);
-        }
+    public SSLConfig(SSLConfig source) {
         if (source.Encryption != null) {
             this.Encryption = new String(source.Encryption);
+        }
+        if (source.SSLValidityPeriod != null) {
+            this.SSLValidityPeriod = new String(source.SSLValidityPeriod);
+        }
+        if (source.SSLValidity != null) {
+            this.SSLValidity = new Long(source.SSLValidity);
         }
     }
 
@@ -90,8 +116,9 @@ public class DBTDEEncrypt extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DBName", this.DBName);
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamSimple(map, prefix + "SSLValidityPeriod", this.SSLValidityPeriod);
+        this.setParamSimple(map, prefix + "SSLValidity", this.SSLValidity);
 
     }
 }

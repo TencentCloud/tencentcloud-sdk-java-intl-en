@@ -1051,7 +1051,7 @@ Only after a service is published to an environment can its APIs be called. You 
     }
 
     /**
-     *u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+     *This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
      * @param req UpdateServiceRequest
      * @return UpdateServiceResponse
      * @throws TencentCloudSDKException

@@ -208,7 +208,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
-     *This API is used to get the verification result with the corresponding BizToken after the u200dweb-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+     *This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
      * @param req GetWebVerificationResultIntlRequest
      * @return GetWebVerificationResultIntlResponse
      * @throws TencentCloudSDKException
