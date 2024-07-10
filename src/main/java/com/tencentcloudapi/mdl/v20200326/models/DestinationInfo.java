@@ -55,6 +55,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Password;
 
     /**
+    * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+    */
+    @SerializedName("DestinationType")
+    @Expose
+    private String DestinationType;
+
+    /**
      * Get Relay destination address. Length limit: [1,512]. 
      * @return OutputUrl Relay destination address. Length limit: [1,512].
      */
@@ -130,6 +137,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Password = Password;
     }
 
+    /**
+     * Get The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. 
+     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     */
+    public String getDestinationType() {
+        return this.DestinationType;
+    }
+
+    /**
+     * Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     * @param DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     */
+    public void setDestinationType(String DestinationType) {
+        this.DestinationType = DestinationType;
+    }
+
     public DestinationInfo() {
     }
 
@@ -150,6 +173,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.DestinationType != null) {
+            this.DestinationType = new String(source.DestinationType);
+        }
     }
 
 
@@ -161,6 +187,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AuthKey", this.AuthKey);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "DestinationType", this.DestinationType);
 
     }
 }

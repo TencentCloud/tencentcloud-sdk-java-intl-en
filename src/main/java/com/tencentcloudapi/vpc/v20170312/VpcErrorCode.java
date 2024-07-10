@@ -366,7 +366,7 @@ public enum VpcErrorCode {
     // The traffic package ID is invalid.
      INVALIDPARAMETERVALUE_TRAFFICPACKAGEIDMALFORMED("InvalidParameterValue.TrafficPackageIdMalformed"),
      
-    // u200dThis traffic package is not found.
+    // This traffic package is not found.
      INVALIDPARAMETERVALUE_TRAFFICPACKAGENOTFOUND("InvalidParameterValue.TrafficPackageNotFound"),
      
     // The specified traffic package does not support this operation. 
@@ -524,6 +524,9 @@ public enum VpcErrorCode {
      
     // The IP range resources are insufficient.
      RESOURCEINSUFFICIENT_CIDRBLOCK("ResourceInsufficient.CidrBlock"),
+     
+    // 
+     RESOURCEINSUFFICIENT_INSTANCE("ResourceInsufficient.Instance"),
      
     // The subnet does not have sufficient IPs.
      RESOURCEINSUFFICIENT_SUBNET("ResourceInsufficient.Subnet"),
@@ -711,6 +714,9 @@ public enum VpcErrorCode {
     // Insufficient account balance.
      UNSUPPORTEDOPERATION_INSUFFICIENTFUNDS("UnsupportedOperation.InsufficientFunds"),
      
+    // 
+     UNSUPPORTEDOPERATION_INSUFFICIENTINTERNETSERVICEPROVIDERS("UnsupportedOperation.InsufficientInternetServiceProviders"),
+     
     // Unsupported operation.
      UNSUPPORTEDOPERATION_INVALIDACTION("UnsupportedOperation.InvalidAction"),
      
@@ -797,6 +803,9 @@ public enum VpcErrorCode {
      
     // The default route table cannot be deleted.
      UNSUPPORTEDOPERATION_NOTSUPPORTDELETEDEFAULTROUTETABLE("UnsupportedOperation.NotSupportDeleteDefaultRouteTable"),
+     
+    // 
+     UNSUPPORTEDOPERATION_NOTSUPPORTZONE("UnsupportedOperation.NotSupportZone"),
      
     // This type of addresses cannot be released.
      UNSUPPORTEDOPERATION_NOTSUPPORTEDADDRESSIPSCHARGETYPE("UnsupportedOperation.NotSupportedAddressIpsChargeType"),

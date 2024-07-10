@@ -108,6 +108,13 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Boolean PublicIpFromSameZone;
 
     /**
+    * 
+    */
+    @SerializedName("NatProductVersion")
+    @Expose
+    private Long NatProductVersion;
+
+    /**
      * Get NAT gateway name 
      * @return NatGatewayName NAT gateway name
      */
@@ -299,6 +306,22 @@ public class CreateNatGatewayRequest extends AbstractModel {
         this.PublicIpFromSameZone = PublicIpFromSameZone;
     }
 
+    /**
+     * Get  
+     * @return NatProductVersion 
+     */
+    public Long getNatProductVersion() {
+        return this.NatProductVersion;
+    }
+
+    /**
+     * Set 
+     * @param NatProductVersion 
+     */
+    public void setNatProductVersion(Long NatProductVersion) {
+        this.NatProductVersion = NatProductVersion;
+    }
+
     public CreateNatGatewayRequest() {
     }
 
@@ -349,6 +372,9 @@ public class CreateNatGatewayRequest extends AbstractModel {
         if (source.PublicIpFromSameZone != null) {
             this.PublicIpFromSameZone = new Boolean(source.PublicIpFromSameZone);
         }
+        if (source.NatProductVersion != null) {
+            this.NatProductVersion = new Long(source.NatProductVersion);
+        }
     }
 
 
@@ -368,6 +394,7 @@ public class CreateNatGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
+        this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
 
     }
 }

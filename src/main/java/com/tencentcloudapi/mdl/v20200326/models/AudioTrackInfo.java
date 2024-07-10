@@ -66,6 +66,13 @@ public class AudioTrackInfo extends AbstractModel {
     private AudioNormalizationSettings AudioNormalization;
 
     /**
+    * Audio encoding configuration.
+    */
+    @SerializedName("AudioCodecDetails")
+    @Expose
+    private AudioCodecDetail AudioCodecDetails;
+
+    /**
      * Get User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel. 
      * @return TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
      */
@@ -161,6 +168,22 @@ public class AudioTrackInfo extends AbstractModel {
         this.AudioNormalization = AudioNormalization;
     }
 
+    /**
+     * Get Audio encoding configuration. 
+     * @return AudioCodecDetails Audio encoding configuration.
+     */
+    public AudioCodecDetail getAudioCodecDetails() {
+        return this.AudioCodecDetails;
+    }
+
+    /**
+     * Set Audio encoding configuration.
+     * @param AudioCodecDetails Audio encoding configuration.
+     */
+    public void setAudioCodecDetails(AudioCodecDetail AudioCodecDetails) {
+        this.AudioCodecDetails = AudioCodecDetails;
+    }
+
     public AudioTrackInfo() {
     }
 
@@ -187,6 +210,9 @@ public class AudioTrackInfo extends AbstractModel {
         if (source.AudioNormalization != null) {
             this.AudioNormalization = new AudioNormalizationSettings(source.AudioNormalization);
         }
+        if (source.AudioCodecDetails != null) {
+            this.AudioCodecDetails = new AudioCodecDetail(source.AudioCodecDetails);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class AudioTrackInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
         this.setParamSimple(map, prefix + "AudioSelectorName", this.AudioSelectorName);
         this.setParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
+        this.setParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
 
     }
 }

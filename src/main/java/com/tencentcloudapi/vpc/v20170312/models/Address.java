@@ -186,11 +186,32 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String InstanceType;
 
     /**
-    * ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+    * 
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
+    * ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
     */
     @SerializedName("AntiDDoSPackageId")
     @Expose
     private String AntiDDoSPackageId;
+
+    /**
+    * 
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private String RenewFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("BandwidthPackageId")
+    @Expose
+    private String BandwidthPackageId;
 
     /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
@@ -589,19 +610,67 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP.  
-     * @return AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+     * Get  
+     * @return Egress 
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 
+     * @param Egress 
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
+    /**
+     * Get ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP.  
+     * @return AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
      */
     public String getAntiDDoSPackageId() {
         return this.AntiDDoSPackageId;
     }
 
     /**
-     * Set ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
-     * @param AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+     * Set ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
+     * @param AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
      */
     public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
         this.AntiDDoSPackageId = AntiDDoSPackageId;
+    }
+
+    /**
+     * Get  
+     * @return RenewFlag 
+     */
+    public String getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 
+     * @param RenewFlag 
+     */
+    public void setRenewFlag(String RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get  
+     * @return BandwidthPackageId 
+     */
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
+    }
+
+    /**
+     * Set 
+     * @param BandwidthPackageId 
+     */
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
     }
 
     public Address() {
@@ -678,8 +747,17 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
         if (source.AntiDDoSPackageId != null) {
             this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
     }
 
@@ -709,7 +787,10 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
 }

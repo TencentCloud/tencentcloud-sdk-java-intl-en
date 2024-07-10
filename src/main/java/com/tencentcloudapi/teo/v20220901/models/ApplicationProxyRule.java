@@ -99,7 +99,7 @@ Note that each rule can have up to 20 ports.
 
     /**
     * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -116,7 +116,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleTag")
     @Expose
@@ -324,9 +324,9 @@ Note that each rule can have up to 20 ports.
 
     /**
      * Get Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
@@ -334,9 +334,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
@@ -368,9 +368,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return RuleTag Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleTag() {
         return this.RuleTag;
@@ -378,9 +378,9 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 
     /**
      * Set Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleTag Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

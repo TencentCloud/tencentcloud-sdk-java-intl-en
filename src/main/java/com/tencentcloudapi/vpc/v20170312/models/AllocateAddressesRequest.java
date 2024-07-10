@@ -129,7 +129,7 @@ Whether the Anycast EIP can be bound to CLB instances.
     private String Egress;
 
     /**
-    * Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+    * Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
     */
     @SerializedName("AntiDDoSPackageId")
     @Expose
@@ -419,16 +419,16 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
-     * Get Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP. 
-     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+     * Get Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP. 
+     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      */
     public String getAntiDDoSPackageId() {
         return this.AntiDDoSPackageId;
     }
 
     /**
-     * Set Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
-     * @param AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+     * Set Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     * @param AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      */
     public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
         this.AntiDDoSPackageId = AntiDDoSPackageId;
