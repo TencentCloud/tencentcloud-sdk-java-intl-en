@@ -83,6 +83,13 @@ Note: this field may return `null`, indicating that no valid value was found.
     private AVTemplate [] AVTemplates;
 
     /**
+    * 
+    */
+    @SerializedName("CaptionTemplates")
+    @Expose
+    private SubtitleConf [] CaptionTemplates;
+
+    /**
     * Event settings
 Note: This field may return `null`, indicating that no valid value was found.
     */
@@ -111,6 +118,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("PipelineInputSettings")
     @Expose
     private PipelineInputSettingsInfo PipelineInputSettings;
+
+    /**
+    * Recognition configuration for input content.
+    */
+    @SerializedName("InputAnalysisSettings")
+    @Expose
+    private InputAnalysisInfo InputAnalysisSettings;
+
+    /**
+    * Console tag list.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get Channel ID 
@@ -253,6 +274,22 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get  
+     * @return CaptionTemplates 
+     */
+    public SubtitleConf [] getCaptionTemplates() {
+        return this.CaptionTemplates;
+    }
+
+    /**
+     * Set 
+     * @param CaptionTemplates 
+     */
+    public void setCaptionTemplates(SubtitleConf [] CaptionTemplates) {
+        this.CaptionTemplates = CaptionTemplates;
+    }
+
+    /**
      * Get Event settings
 Note: This field may return `null`, indicating that no valid value was found. 
      * @return PlanSettings Event settings
@@ -324,6 +361,38 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.PipelineInputSettings = PipelineInputSettings;
     }
 
+    /**
+     * Get Recognition configuration for input content. 
+     * @return InputAnalysisSettings Recognition configuration for input content.
+     */
+    public InputAnalysisInfo getInputAnalysisSettings() {
+        return this.InputAnalysisSettings;
+    }
+
+    /**
+     * Set Recognition configuration for input content.
+     * @param InputAnalysisSettings Recognition configuration for input content.
+     */
+    public void setInputAnalysisSettings(InputAnalysisInfo InputAnalysisSettings) {
+        this.InputAnalysisSettings = InputAnalysisSettings;
+    }
+
+    /**
+     * Get Console tag list. 
+     * @return Tags Console tag list.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Console tag list.
+     * @param Tags Console tag list.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public StreamLiveChannelInfo() {
     }
 
@@ -371,6 +440,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.AVTemplates[i] = new AVTemplate(source.AVTemplates[i]);
             }
         }
+        if (source.CaptionTemplates != null) {
+            this.CaptionTemplates = new SubtitleConf[source.CaptionTemplates.length];
+            for (int i = 0; i < source.CaptionTemplates.length; i++) {
+                this.CaptionTemplates[i] = new SubtitleConf(source.CaptionTemplates[i]);
+            }
+        }
         if (source.PlanSettings != null) {
             this.PlanSettings = new PlanSettings(source.PlanSettings);
         }
@@ -382,6 +457,15 @@ Note: This field may return `null`, indicating that no valid value was found.
         }
         if (source.PipelineInputSettings != null) {
             this.PipelineInputSettings = new PipelineInputSettingsInfo(source.PipelineInputSettings);
+        }
+        if (source.InputAnalysisSettings != null) {
+            this.InputAnalysisSettings = new InputAnalysisInfo(source.InputAnalysisSettings);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
     }
 
@@ -398,10 +482,13 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+        this.setParamArrayObj(map, prefix + "CaptionTemplates.", this.CaptionTemplates);
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
         this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
         this.setParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
         this.setParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
+        this.setParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

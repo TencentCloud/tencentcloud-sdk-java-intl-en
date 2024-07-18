@@ -149,6 +149,17 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *Query the highlight result information corresponding to the media live broadcast channel.
+     * @param req DescribeMediaLiveHighlightResultRequest
+     * @return DescribeMediaLiveHighlightResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaLiveHighlightResultResponse DescribeMediaLiveHighlightResult(DescribeMediaLiveHighlightResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMediaLiveHighlightResult", DescribeMediaLiveHighlightResultResponse.class);
+    }
+
+    /**
      *This API is used to query a StreamLive channel.
      * @param req DescribeStreamLiveChannelRequest
      * @return DescribeStreamLiveChannelResponse

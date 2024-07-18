@@ -63,6 +63,13 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String [] AVTemplateNames;
 
     /**
+    * For the subtitle template used, only the AVTemplateNames is valid.
+    */
+    @SerializedName("CaptionTemplateNames")
+    @Expose
+    private String [] CaptionTemplateNames;
+
+    /**
     * Meta information controls configuration.
     */
     @SerializedName("TimedMetadataSettings")
@@ -166,6 +173,22 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get For the subtitle template used, only the AVTemplateNames is valid. 
+     * @return CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+     */
+    public String [] getCaptionTemplateNames() {
+        return this.CaptionTemplateNames;
+    }
+
+    /**
+     * Set For the subtitle template used, only the AVTemplateNames is valid.
+     * @param CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+     */
+    public void setCaptionTemplateNames(String [] CaptionTemplateNames) {
+        this.CaptionTemplateNames = CaptionTemplateNames;
+    }
+
+    /**
      * Get Meta information controls configuration. 
      * @return TimedMetadataSettings Meta information controls configuration.
      */
@@ -213,6 +236,12 @@ Note: this field may return `null`, indicating that no valid value was found.
                 this.AVTemplateNames[i] = new String(source.AVTemplateNames[i]);
             }
         }
+        if (source.CaptionTemplateNames != null) {
+            this.CaptionTemplateNames = new String[source.CaptionTemplateNames.length];
+            for (int i = 0; i < source.CaptionTemplateNames.length; i++) {
+                this.CaptionTemplateNames[i] = new String(source.CaptionTemplateNames[i]);
+            }
+        }
         if (source.TimedMetadataSettings != null) {
             this.TimedMetadataSettings = new TimedMetadataSettingInfo(source.TimedMetadataSettings);
         }
@@ -228,6 +257,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "VideoTemplateNames.", this.VideoTemplateNames);
         this.setParamObj(map, prefix + "Scte35Settings.", this.Scte35Settings);
         this.setParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
+        this.setParamArraySimple(map, prefix + "CaptionTemplateNames.", this.CaptionTemplateNames);
         this.setParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
 
     }

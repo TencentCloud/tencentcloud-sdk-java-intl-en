@@ -38,7 +38,7 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     private AttachedInput [] AttachedInputs;
 
     /**
-    * Configuration information of the channel’s output groups. Quantity: [1, 10]
+    * Configuration information of the channel's output groups. Quantity: [1, 10]
     */
     @SerializedName("OutputGroups")
     @Expose
@@ -64,6 +64,13 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     @SerializedName("AVTemplates")
     @Expose
     private AVTemplate [] AVTemplates;
+
+    /**
+    * Subtitle template configuration, only AVTemplates are valid.
+    */
+    @SerializedName("CaptionTemplates")
+    @Expose
+    private SubtitleConf [] CaptionTemplates;
 
     /**
     * Event settings
@@ -92,6 +99,20 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     @SerializedName("PipelineInputSettings")
     @Expose
     private PipelineInputSettingsInfo PipelineInputSettings;
+
+    /**
+    * Recognition configuration for input content.
+    */
+    @SerializedName("InputAnalysisSettings")
+    @Expose
+    private InputAnalysisInfo InputAnalysisSettings;
+
+    /**
+    * Console tag list.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level 
@@ -126,16 +147,16 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get Configuration information of the channel’s output groups. Quantity: [1, 10] 
-     * @return OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
+     * Get Configuration information of the channel's output groups. Quantity: [1, 10] 
+     * @return OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
      */
     public StreamLiveOutputGroupsInfo [] getOutputGroups() {
         return this.OutputGroups;
     }
 
     /**
-     * Set Configuration information of the channel’s output groups. Quantity: [1, 10]
-     * @param OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
+     * Set Configuration information of the channel's output groups. Quantity: [1, 10]
+     * @param OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
      */
     public void setOutputGroups(StreamLiveOutputGroupsInfo [] OutputGroups) {
         this.OutputGroups = OutputGroups;
@@ -187,6 +208,22 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
      */
     public void setAVTemplates(AVTemplate [] AVTemplates) {
         this.AVTemplates = AVTemplates;
+    }
+
+    /**
+     * Get Subtitle template configuration, only AVTemplates are valid. 
+     * @return CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
+     */
+    public SubtitleConf [] getCaptionTemplates() {
+        return this.CaptionTemplates;
+    }
+
+    /**
+     * Set Subtitle template configuration, only AVTemplates are valid.
+     * @param CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
+     */
+    public void setCaptionTemplates(SubtitleConf [] CaptionTemplates) {
+        this.CaptionTemplates = CaptionTemplates;
     }
 
     /**
@@ -253,6 +290,38 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         this.PipelineInputSettings = PipelineInputSettings;
     }
 
+    /**
+     * Get Recognition configuration for input content. 
+     * @return InputAnalysisSettings Recognition configuration for input content.
+     */
+    public InputAnalysisInfo getInputAnalysisSettings() {
+        return this.InputAnalysisSettings;
+    }
+
+    /**
+     * Set Recognition configuration for input content.
+     * @param InputAnalysisSettings Recognition configuration for input content.
+     */
+    public void setInputAnalysisSettings(InputAnalysisInfo InputAnalysisSettings) {
+        this.InputAnalysisSettings = InputAnalysisSettings;
+    }
+
+    /**
+     * Get Console tag list. 
+     * @return Tags Console tag list.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Console tag list.
+     * @param Tags Console tag list.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateStreamLiveChannelRequest() {
     }
 
@@ -294,6 +363,12 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
                 this.AVTemplates[i] = new AVTemplate(source.AVTemplates[i]);
             }
         }
+        if (source.CaptionTemplates != null) {
+            this.CaptionTemplates = new SubtitleConf[source.CaptionTemplates.length];
+            for (int i = 0; i < source.CaptionTemplates.length; i++) {
+                this.CaptionTemplates[i] = new SubtitleConf(source.CaptionTemplates[i]);
+            }
+        }
         if (source.PlanSettings != null) {
             this.PlanSettings = new PlanSettings(source.PlanSettings);
         }
@@ -305,6 +380,15 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         }
         if (source.PipelineInputSettings != null) {
             this.PipelineInputSettings = new PipelineInputSettingsInfo(source.PipelineInputSettings);
+        }
+        if (source.InputAnalysisSettings != null) {
+            this.InputAnalysisSettings = new InputAnalysisInfo(source.InputAnalysisSettings);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
     }
 
@@ -319,10 +403,13 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+        this.setParamArrayObj(map, prefix + "CaptionTemplates.", this.CaptionTemplates);
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
         this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
         this.setParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
         this.setParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
+        this.setParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
