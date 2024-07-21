@@ -105,7 +105,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to disable u200dthe database proxy.
+     *This API is used to disable the database proxy.
      * @param req CloseProxyRequest
      * @return CloseProxyResponse
      * @throws TencentCloudSDKException

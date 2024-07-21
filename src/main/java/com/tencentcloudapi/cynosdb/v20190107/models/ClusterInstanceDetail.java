@@ -88,7 +88,7 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaintainStartTime")
     @Expose
@@ -96,7 +96,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaintainDuration")
     @Expose
@@ -104,19 +104,33 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-    * Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceTasks")
+    @Expose
+    private ObjectTask [] InstanceTasks;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceDeviceType")
+    @Expose
+    private String InstanceDeviceType;
 
     /**
      * Get Instance ID 
@@ -264,9 +278,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MaintainStartTime Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
@@ -274,9 +288,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaintainStartTime Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
@@ -284,9 +298,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MaintainDuration Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
@@ -294,9 +308,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaintainDuration Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
@@ -304,9 +318,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
@@ -314,32 +328,64 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
     /**
-     * Get Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return ServerlessStatus Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ServerlessStatus Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param ServerlessStatus Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ServerlessStatus Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
+    }
+
+    /**
+     * Get  
+     * @return InstanceTasks 
+     */
+    public ObjectTask [] getInstanceTasks() {
+        return this.InstanceTasks;
+    }
+
+    /**
+     * Set 
+     * @param InstanceTasks 
+     */
+    public void setInstanceTasks(ObjectTask [] InstanceTasks) {
+        this.InstanceTasks = InstanceTasks;
+    }
+
+    /**
+     * Get  
+     * @return InstanceDeviceType 
+     */
+    public String getInstanceDeviceType() {
+        return this.InstanceDeviceType;
+    }
+
+    /**
+     * Set 
+     * @param InstanceDeviceType 
+     */
+    public void setInstanceDeviceType(String InstanceDeviceType) {
+        this.InstanceDeviceType = InstanceDeviceType;
     }
 
     public ClusterInstanceDetail() {
@@ -392,6 +438,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.InstanceTasks != null) {
+            this.InstanceTasks = new ObjectTask[source.InstanceTasks.length];
+            for (int i = 0; i < source.InstanceTasks.length; i++) {
+                this.InstanceTasks[i] = new ObjectTask(source.InstanceTasks[i]);
+            }
+        }
+        if (source.InstanceDeviceType != null) {
+            this.InstanceDeviceType = new String(source.InstanceDeviceType);
+        }
     }
 
 
@@ -412,6 +467,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
         this.setParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
+        this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
 
     }
 }

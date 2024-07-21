@@ -33,7 +33,7 @@ public class RelatedInstance extends AbstractModel {
     /**
     * Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
     */
@@ -60,12 +60,12 @@ public class RelatedInstance extends AbstractModel {
     /**
      * Get Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance 
      * @return InstanceStatus Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
      */
@@ -76,12 +76,12 @@ public class RelatedInstance extends AbstractModel {
     /**
      * Set Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
      * @param InstanceStatus Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
      */

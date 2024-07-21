@@ -122,7 +122,7 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel {
     private String RegistryPrefix;
 
     /**
-    * u200dTags bound with the cluster
+    * Tags bound with the cluster
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -353,16 +353,16 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get u200dTags bound with the cluster 
-     * @return TagSpecification u200dTags bound with the cluster
+     * Get Tags bound with the cluster 
+     * @return TagSpecification Tags bound with the cluster
      */
     public TagSpecification getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set u200dTags bound with the cluster
-     * @param TagSpecification u200dTags bound with the cluster
+     * Set Tags bound with the cluster
+     * @param TagSpecification Tags bound with the cluster
      */
     public void setTagSpecification(TagSpecification TagSpecification) {
         this.TagSpecification = TagSpecification;

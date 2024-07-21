@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReloadBalanceProxyNodeRequest extends AbstractModel {
+public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
-    * Cluster ID
+    * 
     */
-    @SerializedName("ClusterId")
+    @SerializedName("Zone")
     @Expose
-    private String ClusterId;
+    private String Zone;
 
     /**
-    * Database proxy group ID
+    * 
     */
-    @SerializedName("ProxyGroupId")
+    @SerializedName("BinlogSyncWay")
     @Expose
-    private String ProxyGroupId;
+    private String BinlogSyncWay;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get  
+     * @return Zone 
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getZone() {
+        return this.Zone;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set 
+     * @param Zone 
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     /**
-     * Get Database proxy group ID 
-     * @return ProxyGroupId Database proxy group ID
+     * Get  
+     * @return BinlogSyncWay 
      */
-    public String getProxyGroupId() {
-        return this.ProxyGroupId;
+    public String getBinlogSyncWay() {
+        return this.BinlogSyncWay;
     }
 
     /**
-     * Set Database proxy group ID
-     * @param ProxyGroupId Database proxy group ID
+     * Set 
+     * @param BinlogSyncWay 
      */
-    public void setProxyGroupId(String ProxyGroupId) {
-        this.ProxyGroupId = ProxyGroupId;
+    public void setBinlogSyncWay(String BinlogSyncWay) {
+        this.BinlogSyncWay = BinlogSyncWay;
     }
 
-    public ReloadBalanceProxyNodeRequest() {
+    public SlaveZoneAttrItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReloadBalanceProxyNodeRequest(ReloadBalanceProxyNodeRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public SlaveZoneAttrItem(SlaveZoneAttrItem source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
-        if (source.ProxyGroupId != null) {
-            this.ProxyGroupId = new String(source.ProxyGroupId);
+        if (source.BinlogSyncWay != null) {
+            this.BinlogSyncWay = new String(source.BinlogSyncWay);
         }
     }
 
@@ -90,8 +90,8 @@ public class ReloadBalanceProxyNodeRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
 
     }
 }

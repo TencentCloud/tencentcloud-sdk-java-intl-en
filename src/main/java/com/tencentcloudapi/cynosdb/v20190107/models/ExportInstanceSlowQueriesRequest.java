@@ -87,7 +87,7 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel {
     private String FileType;
 
     /**
-    * Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+    * Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
     */
     @SerializedName("OrderBy")
     @Expose
@@ -245,16 +245,16 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`. 
-     * @return OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * Get Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`. 
+     * @return OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
-     * @param OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * Set Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * @param OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

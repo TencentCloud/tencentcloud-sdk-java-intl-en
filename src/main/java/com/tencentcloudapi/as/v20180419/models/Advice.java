@@ -45,7 +45,7 @@ public class Advice extends AbstractModel {
     private String Solution;
 
     /**
-    * u200dRisk level of the scaling group configuration. Valid values: <br>
+    * Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
     */
@@ -102,10 +102,10 @@ public class Advice extends AbstractModel {
     }
 
     /**
-     * Get u200dRisk level of the scaling group configuration. Valid values: <br>
+     * Get Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br> 
-     * @return Level u200dRisk level of the scaling group configuration. Valid values: <br>
+     * @return Level Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
      */
@@ -114,10 +114,10 @@ public class Advice extends AbstractModel {
     }
 
     /**
-     * Set u200dRisk level of the scaling group configuration. Valid values: <br>
+     * Set Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
-     * @param Level u200dRisk level of the scaling group configuration. Valid values: <br>
+     * @param Level Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
      */

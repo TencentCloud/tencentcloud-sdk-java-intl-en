@@ -31,7 +31,7 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     private Long GoodsNum;
 
     /**
-    * Shard u200dcount
+    * Shard count
     */
     @SerializedName("ShardNum")
     @Expose
@@ -73,7 +73,7 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * (Disused) u200dNumber of CPU u200dcores
+    * (Disused) Number of CPU cores
     */
     @SerializedName("Cpu")
     @Expose
@@ -185,14 +185,14 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     private Long Ipv6Flag;
 
     /**
-    * (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+    * (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+    * List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
     */
     @SerializedName("InitParams")
     @Expose
@@ -206,14 +206,14 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     private String MasterHostId;
 
     /**
-    * Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+    * Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
     */
     @SerializedName("SlaveHostIds")
     @Expose
     private String [] SlaveHostIds;
 
     /**
-    * ID of the u200dsource instance to be rolled back
+    * ID of the source instance to be rolled back
     */
     @SerializedName("RollbackInstanceId")
     @Expose
@@ -225,6 +225,13 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     @SerializedName("RollbackTime")
     @Expose
     private String RollbackTime;
+
+    /**
+    * 
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
 
     /**
      * Get Number of created instances 
@@ -243,16 +250,16 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Shard u200dcount 
-     * @return ShardNum Shard u200dcount
+     * Get Shard count 
+     * @return ShardNum Shard count
      */
     public Long getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set Shard u200dcount
-     * @param ShardNum Shard u200dcount
+     * Set Shard count
+     * @param ShardNum Shard count
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
@@ -339,16 +346,16 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get (Disused) u200dNumber of CPU u200dcores 
-     * @return Cpu (Disused) u200dNumber of CPU u200dcores
+     * Get (Disused) Number of CPU cores 
+     * @return Cpu (Disused) Number of CPU cores
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set (Disused) u200dNumber of CPU u200dcores
-     * @param Cpu (Disused) u200dNumber of CPU u200dcores
+     * Set (Disused) Number of CPU cores
+     * @param Cpu (Disused) Number of CPU cores
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -595,32 +602,32 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API. 
-     * @return Pid (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+     * Get (Disused) Pid, which can be queried by the `DescribeSpecInfo` API. 
+     * @return Pid (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
-     * @param Pid (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+     * Set (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
+     * @param Pid (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`). 
-     * @return InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+     * Get List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`). 
+     * @return InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
      */
     public DBParamValue [] getInitParams() {
         return this.InitParams;
     }
 
     /**
-     * Set List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
-     * @param InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+     * Set List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
+     * @param InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
      */
     public void setInitParams(DBParamValue [] InitParams) {
         this.InitParams = InitParams;
@@ -643,32 +650,32 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly. 
-     * @return SlaveHostIds Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+     * Get Specified UUID for the replica node. If left empty, it will be assigned by the system randomly. 
+     * @return SlaveHostIds Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
      */
     public String [] getSlaveHostIds() {
         return this.SlaveHostIds;
     }
 
     /**
-     * Set Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
-     * @param SlaveHostIds Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+     * Set Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
+     * @param SlaveHostIds Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
      */
     public void setSlaveHostIds(String [] SlaveHostIds) {
         this.SlaveHostIds = SlaveHostIds;
     }
 
     /**
-     * Get ID of the u200dsource instance to be rolled back 
-     * @return RollbackInstanceId ID of the u200dsource instance to be rolled back
+     * Get ID of the source instance to be rolled back 
+     * @return RollbackInstanceId ID of the source instance to be rolled back
      */
     public String getRollbackInstanceId() {
         return this.RollbackInstanceId;
     }
 
     /**
-     * Set ID of the u200dsource instance to be rolled back
-     * @param RollbackInstanceId ID of the u200dsource instance to be rolled back
+     * Set ID of the source instance to be rolled back
+     * @param RollbackInstanceId ID of the source instance to be rolled back
      */
     public void setRollbackInstanceId(String RollbackInstanceId) {
         this.RollbackInstanceId = RollbackInstanceId;
@@ -688,6 +695,22 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
      */
     public void setRollbackTime(String RollbackTime) {
         this.RollbackTime = RollbackTime;
+    }
+
+    /**
+     * Get  
+     * @return DcnSyncMode 
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set 
+     * @param DcnSyncMode 
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
     }
 
     public CreateDedicatedClusterDCDBInstanceRequest() {
@@ -797,6 +820,9 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
         if (source.RollbackTime != null) {
             this.RollbackTime = new String(source.RollbackTime);
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
     }
 
 
@@ -833,6 +859,7 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
         this.setParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
         this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
 
     }
 }

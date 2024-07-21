@@ -31,7 +31,7 @@ public class DescribeSupportProxyVersionRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Database proxy u200dgroup ID
+    * Database proxy group ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeSupportProxyVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get Database proxy u200dgroup ID 
-     * @return ProxyGroupId Database proxy u200dgroup ID
+     * Get Database proxy group ID 
+     * @return ProxyGroupId Database proxy group ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy u200dgroup ID
-     * @param ProxyGroupId Database proxy u200dgroup ID
+     * Set Database proxy group ID
+     * @param ProxyGroupId Database proxy group ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

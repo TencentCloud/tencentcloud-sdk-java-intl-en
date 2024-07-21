@@ -31,7 +31,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Database proxy u200dgroup ID
+    * Database proxy group ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -126,7 +126,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String ConnectionPoolType;
 
     /**
-    * Connection u200dpersistence timeout
+    * Connection persistence timeout
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -149,16 +149,16 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get Database proxy u200dgroup ID 
-     * @return ProxyGroupId Database proxy u200dgroup ID
+     * Get Database proxy group ID 
+     * @return ProxyGroupId Database proxy group ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy u200dgroup ID
-     * @param ProxyGroupId Database proxy u200dgroup ID
+     * Set Database proxy group ID
+     * @param ProxyGroupId Database proxy group ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
@@ -373,16 +373,16 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get Connection u200dpersistence timeout 
-     * @return ConnectionPoolTimeOut Connection u200dpersistence timeout
+     * Get Connection persistence timeout 
+     * @return ConnectionPoolTimeOut Connection persistence timeout
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set Connection u200dpersistence timeout
-     * @param ConnectionPoolTimeOut Connection u200dpersistence timeout
+     * Set Connection persistence timeout
+     * @param ConnectionPoolTimeOut Connection persistence timeout
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;

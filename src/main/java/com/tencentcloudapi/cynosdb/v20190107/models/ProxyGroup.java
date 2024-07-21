@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyGroup extends AbstractModel {
 
     /**
-    * Database proxy u200dgroup ID
+    * Database proxy group ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -38,7 +38,7 @@ public class ProxyGroup extends AbstractModel {
     private Long ProxyNodeCount;
 
     /**
-    * Database proxy u200dgroup status
+    * Database proxy group status
     */
     @SerializedName("Status")
     @Expose
@@ -67,7 +67,7 @@ public class ProxyGroup extends AbstractModel {
 
     /**
     * Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -75,7 +75,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppId")
     @Expose
@@ -83,23 +83,23 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-     * Get Database proxy u200dgroup ID 
-     * @return ProxyGroupId Database proxy u200dgroup ID
+     * Get Database proxy group ID 
+     * @return ProxyGroupId Database proxy group ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy u200dgroup ID
-     * @param ProxyGroupId Database proxy u200dgroup ID
+     * Set Database proxy group ID
+     * @param ProxyGroupId Database proxy group ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
@@ -122,16 +122,16 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
     }
 
     /**
-     * Get Database proxy u200dgroup status 
-     * @return Status Database proxy u200dgroup status
+     * Get Database proxy group status 
+     * @return Status Database proxy group status
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Database proxy u200dgroup status
-     * @param Status Database proxy u200dgroup status
+     * Set Database proxy group status
+     * @param Status Database proxy group status
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -187,9 +187,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ClusterId Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -197,9 +197,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ClusterId Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -207,9 +207,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAppId() {
         return this.AppId;
@@ -217,9 +217,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AppId User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -227,9 +227,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OpenRw Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOpenRw() {
         return this.OpenRw;
@@ -237,9 +237,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OpenRw Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

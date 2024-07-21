@@ -25,7 +25,7 @@ public class BindInstanceInfo extends AbstractModel {
 
     /**
     * ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -47,7 +47,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExtendIds")
     @Expose
@@ -55,9 +55,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceId ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -65,9 +65,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -107,9 +107,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ExtendIds ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getExtendIds() {
         return this.ExtendIds;
@@ -117,9 +117,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExtendIds ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtendIds(String [] ExtendIds) {
         this.ExtendIds = ExtendIds;

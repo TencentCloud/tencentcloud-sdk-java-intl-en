@@ -25,23 +25,23 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProxyGroup")
     @Expose
     private ProxyGroup ProxyGroup;
 
     /**
-    * Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+    * Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProxyGroupRwInfo")
     @Expose
     private ProxyGroupRwInfo ProxyGroupRwInfo;
 
     /**
-    * Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+    * Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProxyNodes")
     @Expose
@@ -49,7 +49,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -57,7 +57,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetAddrInfos")
     @Expose
@@ -65,7 +65,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tasks")
     @Expose
@@ -73,9 +73,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ProxyGroup Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ProxyGroup getProxyGroup() {
         return this.ProxyGroup;
@@ -83,49 +83,49 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProxyGroup Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProxyGroup(ProxyGroup ProxyGroup) {
         this.ProxyGroup = ProxyGroup;
     }
 
     /**
-     * Get Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
-     * @return ProxyGroupRwInfo Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+     * Get Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProxyGroupRwInfo Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ProxyGroupRwInfo getProxyGroupRwInfo() {
         return this.ProxyGroupRwInfo;
     }
 
     /**
-     * Set Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-     * @param ProxyGroupRwInfo Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+     * Set Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProxyGroupRwInfo Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProxyGroupRwInfo(ProxyGroupRwInfo ProxyGroupRwInfo) {
         this.ProxyGroupRwInfo = ProxyGroupRwInfo;
     }
 
     /**
-     * Get Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
-     * @return ProxyNodes Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+     * Get Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProxyNodes Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ProxyNodeInfo [] getProxyNodes() {
         return this.ProxyNodes;
     }
 
     /**
-     * Set Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-     * @param ProxyNodes Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+     * Set Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProxyNodes Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProxyNodes(ProxyNodeInfo [] ProxyNodes) {
         this.ProxyNodes = ProxyNodes;
@@ -133,9 +133,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConnectionPool Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ProxyConnectionPoolInfo getConnectionPool() {
         return this.ConnectionPool;
@@ -143,9 +143,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConnectionPool Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConnectionPool(ProxyConnectionPoolInfo ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
@@ -153,9 +153,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NetAddrInfos Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NetAddr [] getNetAddrInfos() {
         return this.NetAddrInfos;
@@ -163,9 +163,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetAddrInfos Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetAddrInfos(NetAddr [] NetAddrInfos) {
         this.NetAddrInfos = NetAddrInfos;
@@ -173,9 +173,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Tasks Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
@@ -183,9 +183,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tasks Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;

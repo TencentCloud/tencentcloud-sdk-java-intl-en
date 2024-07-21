@@ -218,7 +218,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Vport;
 
     /**
-    * VIP u200dand vport of the read-only instance in a cluster
+    * VIP and vport of the read-only instance in a cluster
     */
     @SerializedName("RoAddr")
     @Expose
@@ -384,6 +384,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * 
+    */
+    @SerializedName("SlaveZoneAttr")
+    @Expose
+    private SlaveZoneAttrItem [] SlaveZoneAttr;
 
     /**
      * Get Cluster ID 
@@ -850,16 +864,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VIP u200dand vport of the read-only instance in a cluster 
-     * @return RoAddr VIP u200dand vport of the read-only instance in a cluster
+     * Get VIP and vport of the read-only instance in a cluster 
+     * @return RoAddr VIP and vport of the read-only instance in a cluster
      */
     public Addr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set VIP u200dand vport of the read-only instance in a cluster
-     * @param RoAddr VIP u200dand vport of the read-only instance in a cluster
+     * Set VIP and vport of the read-only instance in a cluster
+     * @param RoAddr VIP and vport of the read-only instance in a cluster
      */
     public void setRoAddr(Addr [] RoAddr) {
         this.RoAddr = RoAddr;
@@ -1257,6 +1271,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get  
+     * @return NetworkType 
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 
+     * @param NetworkType 
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get  
+     * @return SlaveZoneAttr 
+     */
+    public SlaveZoneAttrItem [] getSlaveZoneAttr() {
+        return this.SlaveZoneAttr;
+    }
+
+    /**
+     * Set 
+     * @param SlaveZoneAttr 
+     */
+    public void setSlaveZoneAttr(SlaveZoneAttrItem [] SlaveZoneAttr) {
+        this.SlaveZoneAttr = SlaveZoneAttr;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1427,6 +1473,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.SlaveZoneAttr != null) {
+            this.SlaveZoneAttr = new SlaveZoneAttrItem[source.SlaveZoneAttr.length];
+            for (int i = 0; i < source.SlaveZoneAttr.length; i++) {
+                this.SlaveZoneAttr[i] = new SlaveZoneAttrItem(source.SlaveZoneAttr[i]);
+            }
+        }
     }
 
 
@@ -1482,6 +1537,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
 
     }
 }

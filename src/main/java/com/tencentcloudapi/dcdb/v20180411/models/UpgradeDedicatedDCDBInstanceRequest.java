@@ -59,14 +59,14 @@ public class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel {
     private SplitShardConfig SplitShardConfig;
 
     /**
-    * Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+    * Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
     */
     @SerializedName("SwitchAutoRetry")
     @Expose
     private Long SwitchAutoRetry;
 
     /**
-    * Switch u200dstart u200dtime
+    * Switch start time
     */
     @SerializedName("SwitchStartTime")
     @Expose
@@ -160,32 +160,32 @@ public class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes). 
-     * @return SwitchAutoRetry Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+     * Get Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes). 
+     * @return SwitchAutoRetry Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
      */
     public Long getSwitchAutoRetry() {
         return this.SwitchAutoRetry;
     }
 
     /**
-     * Set Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
-     * @param SwitchAutoRetry Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+     * Set Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+     * @param SwitchAutoRetry Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
      */
     public void setSwitchAutoRetry(Long SwitchAutoRetry) {
         this.SwitchAutoRetry = SwitchAutoRetry;
     }
 
     /**
-     * Get Switch u200dstart u200dtime 
-     * @return SwitchStartTime Switch u200dstart u200dtime
+     * Get Switch start time 
+     * @return SwitchStartTime Switch start time
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set Switch u200dstart u200dtime
-     * @param SwitchStartTime Switch u200dstart u200dtime
+     * Set Switch start time
+     * @param SwitchStartTime Switch start time
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;

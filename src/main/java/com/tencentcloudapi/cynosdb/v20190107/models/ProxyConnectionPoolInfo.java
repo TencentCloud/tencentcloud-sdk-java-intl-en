@@ -25,7 +25,7 @@ public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
     * Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -33,7 +33,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OpenConnectionPool")
     @Expose
@@ -41,7 +41,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
     * Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConnectionPoolType")
     @Expose
@@ -49,9 +49,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
@@ -59,9 +59,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
@@ -69,9 +69,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OpenConnectionPool Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
@@ -79,9 +79,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OpenConnectionPool Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
@@ -89,9 +89,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
@@ -99,9 +99,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;

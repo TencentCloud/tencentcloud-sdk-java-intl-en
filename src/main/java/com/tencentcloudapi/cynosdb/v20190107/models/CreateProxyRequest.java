@@ -45,7 +45,7 @@ public class CreateProxyRequest extends AbstractModel {
     private Long Mem;
 
     /**
-    * VPC ID, which is the same as that of the cluster by defaultu200d.
+    * VPC ID, which is the same as that of the cluster by default.
     */
     @SerializedName("UniqueVpcId")
     @Expose
@@ -73,7 +73,7 @@ public class CreateProxyRequest extends AbstractModel {
     private String ConnectionPoolType;
 
     /**
-    * Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+    * Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
     */
     @SerializedName("OpenConnectionPool")
     @Expose
@@ -156,16 +156,16 @@ public class CreateProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID, which is the same as that of the cluster by defaultu200d. 
-     * @return UniqueVpcId VPC ID, which is the same as that of the cluster by defaultu200d.
+     * Get VPC ID, which is the same as that of the cluster by default. 
+     * @return UniqueVpcId VPC ID, which is the same as that of the cluster by default.
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set VPC ID, which is the same as that of the cluster by defaultu200d.
-     * @param UniqueVpcId VPC ID, which is the same as that of the cluster by defaultu200d.
+     * Set VPC ID, which is the same as that of the cluster by default.
+     * @param UniqueVpcId VPC ID, which is the same as that of the cluster by default.
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
@@ -220,16 +220,16 @@ public class CreateProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable). 
-     * @return OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+     * Get Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable). 
+     * @return OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
-     * @param OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+     * Set Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+     * @param OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;

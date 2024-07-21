@@ -67,7 +67,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
     * Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OpenRw")
     @Expose
@@ -192,9 +192,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Get Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOpenRw() {
         return this.OpenRw;
@@ -202,9 +202,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
     /**
      * Set Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

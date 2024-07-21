@@ -39,7 +39,7 @@ public class Addon extends AbstractModel {
 
     /**
     * Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RawValues")
     @Expose
@@ -47,7 +47,7 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
     * Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Phase")
     @Expose
@@ -55,7 +55,7 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
     * Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Reason")
     @Expose
@@ -95,9 +95,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Get Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return RawValues Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getRawValues() {
         return this.RawValues;
@@ -105,9 +105,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Set Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param RawValues Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRawValues(String RawValues) {
         this.RawValues = RawValues;
@@ -115,9 +115,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Get Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Phase Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getPhase() {
         return this.Phase;
@@ -125,9 +125,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Set Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Phase Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;
@@ -135,9 +135,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Get Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Reason Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getReason() {
         return this.Reason;
@@ -145,9 +145,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Set Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Reason Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
