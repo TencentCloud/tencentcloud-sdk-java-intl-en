@@ -38,7 +38,7 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String RoomId;
 
     /**
-    * Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+    * Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
     */
     @SerializedName("RoomIdType")
     @Expose
@@ -52,7 +52,7 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String UserId;
 
     /**
-    * UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+    * UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
     */
     @SerializedName("UserSig")
     @Expose
@@ -88,6 +88,13 @@ Source URL. Example value: https://a.b/test.mp4
     private AudioEncodeParams AudioEncodeParams;
 
     /**
+    * 
+    */
+    @SerializedName("StreamUrl")
+    @Expose
+    private String StreamUrl;
+
+    /**
      * Get TRTC's [SdkAppId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#sdkappid), the same as the SdkAppId corresponding to the Record room. 
      * @return SdkAppId TRTC's [SdkAppId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#sdkappid), the same as the SdkAppId corresponding to the Record room.
      */
@@ -120,16 +127,16 @@ Source URL. Example value: https://a.b/test.mp4
     }
 
     /**
-     * Get Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default) 
-     * @return RoomIdType Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+     * Get Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default) 
+     * @return RoomIdType Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
      */
     public Long getRoomIdType() {
         return this.RoomIdType;
     }
 
     /**
-     * Set Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
-     * @param RoomIdType Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+     * Set Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+     * @param RoomIdType Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
      */
     public void setRoomIdType(Long RoomIdType) {
         this.RoomIdType = RoomIdType;
@@ -152,16 +159,16 @@ Source URL. Example value: https://a.b/test.mp4
     }
 
     /**
-     * Get UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme. 
-     * @return UserSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+     * Get UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme. 
+     * @return UserSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
      */
     public String getUserSig() {
         return this.UserSig;
     }
 
     /**
-     * Set UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
-     * @param UserSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+     * Set UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
+     * @param UserSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
      */
     public void setUserSig(String UserSig) {
         this.UserSig = UserSig;
@@ -235,6 +242,22 @@ Source URL. Example value: https://a.b/test.mp4
         this.AudioEncodeParams = AudioEncodeParams;
     }
 
+    /**
+     * Get  
+     * @return StreamUrl 
+     */
+    public String getStreamUrl() {
+        return this.StreamUrl;
+    }
+
+    /**
+     * Set 
+     * @param StreamUrl 
+     */
+    public void setStreamUrl(String StreamUrl) {
+        this.StreamUrl = StreamUrl;
+    }
+
     public StartStreamIngestRequest() {
     }
 
@@ -273,6 +296,9 @@ Source URL. Example value: https://a.b/test.mp4
         if (source.AudioEncodeParams != null) {
             this.AudioEncodeParams = new AudioEncodeParams(source.AudioEncodeParams);
         }
+        if (source.StreamUrl != null) {
+            this.StreamUrl = new String(source.StreamUrl);
+        }
     }
 
 
@@ -289,6 +315,7 @@ Source URL. Example value: https://a.b/test.mp4
         this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
         this.setParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
         this.setParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
+        this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
 
     }
 }
