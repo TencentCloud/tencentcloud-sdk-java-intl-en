@@ -160,24 +160,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AccountMode;
 
     /**
-    * ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TmpSecretKey")
     @Expose
     private String TmpSecretKey;
 
     /**
-    * Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TmpToken")
     @Expose
@@ -524,60 +521,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpSecretId ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * Set ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpSecretId ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpSecretKey Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * Set Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpSecretKey Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;
     }
 
     /**
-     * Get Temporary token
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpToken Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTmpToken() {
         return this.TmpToken;
     }
 
     /**
-     * Set Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpToken Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTmpToken(String TmpToken) {
         this.TmpToken = TmpToken;

@@ -32,7 +32,7 @@ public class ErrInfo extends AbstractModel {
 
     /**
     * Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Message")
     @Expose
@@ -40,7 +40,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Solution")
     @Expose
@@ -64,9 +64,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Message Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMessage() {
         return this.Message;
@@ -74,9 +74,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Message Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -84,9 +84,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Solution Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSolution() {
         return this.Solution;
@@ -94,9 +94,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Solution Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;

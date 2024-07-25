@@ -49,7 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -97,7 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task error and the corresponding solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrInfo")
     @Expose
@@ -165,9 +165,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CurrentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCurrentStepProgress() {
         return this.CurrentStepProgress;
@@ -175,9 +175,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CurrentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCurrentStepProgress(Long CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;
@@ -285,9 +285,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Task error and the corresponding solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrInfo Task error and the corresponding solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ErrInfo getErrInfo() {
         return this.ErrInfo;
@@ -295,9 +295,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Task error and the corresponding solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrInfo Task error and the corresponding solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrInfo(ErrInfo ErrInfo) {
         this.ErrInfo = ErrInfo;

@@ -48,8 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DatabaseType;
 
     /**
-    * Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Info")
     @Expose
@@ -116,20 +115,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Database information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Info Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Endpoint [] getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Database information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Info Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInfo(Endpoint [] Info) {
         this.Info = Info;

@@ -40,8 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DBItem [] Databases;
 
     /**
-    * Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvancedObjects")
     @Expose
@@ -88,20 +87,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedObjects Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdvancedObjects Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAdvancedObjects() {
         return this.AdvancedObjects;
     }
 
     /**
-     * Set Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedObjects Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedObjects Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {
         this.AdvancedObjects = AdvancedObjects;

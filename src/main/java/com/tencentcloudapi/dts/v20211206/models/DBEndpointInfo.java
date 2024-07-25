@@ -48,8 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DatabaseType;
 
     /**
-    * Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeType")
     @Expose
@@ -87,6 +86,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DatabaseNetEnv")
     @Expose
     private String DatabaseNetEnv;
+
+    /**
+    * 
+    */
+    @SerializedName("ConnectType")
+    @Expose
+    private String ConnectType;
 
     /**
      * Get Instance region
@@ -149,20 +155,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NodeType Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NodeType Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
@@ -252,6 +254,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DatabaseNetEnv = DatabaseNetEnv;
     }
 
+    /**
+     * Get  
+     * @return ConnectType 
+     */
+    public String getConnectType() {
+        return this.ConnectType;
+    }
+
+    /**
+     * Set 
+     * @param ConnectType 
+     */
+    public void setConnectType(String ConnectType) {
+        this.ConnectType = ConnectType;
+    }
+
     public DBEndpointInfo() {
     }
 
@@ -290,6 +308,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DatabaseNetEnv != null) {
             this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
         }
+        if (source.ConnectType != null) {
+            this.ConnectType = new String(source.ConnectType);
+        }
     }
 
 
@@ -305,6 +326,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+        this.setParamSimple(map, prefix + "ConnectType", this.ConnectType);
 
     }
 }

@@ -88,8 +88,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private KafkaOption KafkaOption;
 
     /**
-    * Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+    * Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RateLimitOption")
     @Expose
@@ -97,11 +97,25 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
     private Long AutoRetryTimeRangeMinutes;
+
+    /**
+    * 
+    */
+    @SerializedName("FilterBeginCommit")
+    @Expose
+    private Boolean FilterBeginCommit;
+
+    /**
+    * 
+    */
+    @SerializedName("FilterCheckpoint")
+    @Expose
+    private Boolean FilterCheckpoint;
 
     /**
      * Get Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
@@ -264,20 +278,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
-     * @return RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * Get Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RateLimitOption Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RateLimitOption getRateLimitOption() {
         return this.RateLimitOption;
     }
 
     /**
-     * Set Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-     * @param RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * Set Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RateLimitOption Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRateLimitOption(RateLimitOption RateLimitOption) {
         this.RateLimitOption = RateLimitOption;
@@ -285,9 +299,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
@@ -295,12 +309,44 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Get  
+     * @return FilterBeginCommit 
+     */
+    public Boolean getFilterBeginCommit() {
+        return this.FilterBeginCommit;
+    }
+
+    /**
+     * Set 
+     * @param FilterBeginCommit 
+     */
+    public void setFilterBeginCommit(Boolean FilterBeginCommit) {
+        this.FilterBeginCommit = FilterBeginCommit;
+    }
+
+    /**
+     * Get  
+     * @return FilterCheckpoint 
+     */
+    public Boolean getFilterCheckpoint() {
+        return this.FilterCheckpoint;
+    }
+
+    /**
+     * Set 
+     * @param FilterCheckpoint 
+     */
+    public void setFilterCheckpoint(Boolean FilterCheckpoint) {
+        this.FilterCheckpoint = FilterCheckpoint;
     }
 
     public Options() {
@@ -347,6 +393,12 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
+        if (source.FilterBeginCommit != null) {
+            this.FilterBeginCommit = new Boolean(source.FilterBeginCommit);
+        }
+        if (source.FilterCheckpoint != null) {
+            this.FilterCheckpoint = new Boolean(source.FilterCheckpoint);
+        }
     }
 
 
@@ -364,6 +416,8 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
         this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+        this.setParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
+        this.setParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
 
     }
 }

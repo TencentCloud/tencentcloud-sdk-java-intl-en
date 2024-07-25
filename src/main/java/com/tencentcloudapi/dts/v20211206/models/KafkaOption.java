@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaOption extends AbstractModel {
 
     /**
-    * Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+    * Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
     */
     @SerializedName("DataType")
     @Expose
@@ -52,16 +52,16 @@ public class KafkaOption extends AbstractModel {
     private TopicRule [] TopicRules;
 
     /**
-     * Get Type of data that is delivered to Kafka, such as `Avro` and `Json`. 
-     * @return DataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+     * Get Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json 
+     * @return DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set Type of data that is delivered to Kafka, such as `Avro` and `Json`.
-     * @param DataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+     * Set Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+     * @param DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;

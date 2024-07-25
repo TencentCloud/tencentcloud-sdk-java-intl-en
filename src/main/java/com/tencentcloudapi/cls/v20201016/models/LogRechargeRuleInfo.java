@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
-    * Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
+    * Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
     */
     @SerializedName("RechargeType")
     @Expose
@@ -132,16 +132,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Keys;
 
     /**
-     * Get Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex) 
-     * @return RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
+     * Get Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex) 
+     * @return RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
      */
     public String getRechargeType() {
         return this.RechargeType;
     }
 
     /**
-     * Set Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
-     * @param RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
+     * Set Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
+     * @param RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
      */
     public void setRechargeType(String RechargeType) {
         this.RechargeType = RechargeType;

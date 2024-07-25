@@ -192,24 +192,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RoleExternalId;
 
     /**
-    * ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TmpSecretKey")
     @Expose
     private String TmpSecretKey;
 
     /**
-    * Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TmpToken")
     @Expose
@@ -233,11 +230,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CcnOwnerUin")
     @Expose
     private String CcnOwnerUin;
+
+    /**
+    * 
+    */
+    @SerializedName("ChildInstanceId")
+    @Expose
+    private String ChildInstanceId;
+
+    /**
+    * 
+    */
+    @SerializedName("ChildInstanceType")
+    @Expose
+    private String ChildInstanceType;
+
+    /**
+    * 
+    */
+    @SerializedName("SetId")
+    @Expose
+    private String SetId;
 
     /**
      * Get Region name, such as `ap-guangzhou`.
@@ -660,60 +678,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpSecretId ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * Set ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpSecretId ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpSecretKey Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * Set Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpSecretKey Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;
     }
 
     /**
-     * Get Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpToken Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTmpToken() {
         return this.TmpToken;
     }
 
     /**
-     * Set Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpToken Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTmpToken(String TmpToken) {
         this.TmpToken = TmpToken;
@@ -761,9 +767,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCcnOwnerUin() {
         return this.CcnOwnerUin;
@@ -771,12 +777,60 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCcnOwnerUin(String CcnOwnerUin) {
         this.CcnOwnerUin = CcnOwnerUin;
+    }
+
+    /**
+     * Get  
+     * @return ChildInstanceId 
+     */
+    public String getChildInstanceId() {
+        return this.ChildInstanceId;
+    }
+
+    /**
+     * Set 
+     * @param ChildInstanceId 
+     */
+    public void setChildInstanceId(String ChildInstanceId) {
+        this.ChildInstanceId = ChildInstanceId;
+    }
+
+    /**
+     * Get  
+     * @return ChildInstanceType 
+     */
+    public String getChildInstanceType() {
+        return this.ChildInstanceType;
+    }
+
+    /**
+     * Set 
+     * @param ChildInstanceType 
+     */
+    public void setChildInstanceType(String ChildInstanceType) {
+        this.ChildInstanceType = ChildInstanceType;
+    }
+
+    /**
+     * Get  
+     * @return SetId 
+     */
+    public String getSetId() {
+        return this.SetId;
+    }
+
+    /**
+     * Set 
+     * @param SetId 
+     */
+    public void setSetId(String SetId) {
+        this.SetId = SetId;
     }
 
     public Endpoint() {
@@ -868,6 +922,15 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
         if (source.CcnOwnerUin != null) {
             this.CcnOwnerUin = new String(source.CcnOwnerUin);
         }
+        if (source.ChildInstanceId != null) {
+            this.ChildInstanceId = new String(source.ChildInstanceId);
+        }
+        if (source.ChildInstanceType != null) {
+            this.ChildInstanceType = new String(source.ChildInstanceType);
+        }
+        if (source.SetId != null) {
+            this.SetId = new String(source.SetId);
+        }
     }
 
 
@@ -902,6 +965,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
+        this.setParamSimple(map, prefix + "ChildInstanceId", this.ChildInstanceId);
+        this.setParamSimple(map, prefix + "ChildInstanceType", this.ChildInstanceType);
+        this.setParamSimple(map, prefix + "SetId", this.SetId);
 
     }
 }

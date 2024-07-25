@@ -145,7 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcNodeType")
     @Expose
@@ -153,7 +153,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcInfos")
     @Expose
@@ -193,7 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstNodeType")
     @Expose
@@ -201,7 +201,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
     * Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstInfos")
     @Expose
@@ -297,7 +297,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DumperResumeCtrl")
     @Expose
@@ -605,9 +605,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SrcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcNodeType() {
         return this.SrcNodeType;
@@ -615,9 +615,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcNodeType(String SrcNodeType) {
         this.SrcNodeType = SrcNodeType;
@@ -625,9 +625,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SrcInfos Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SyncDBEndpointInfos getSrcInfos() {
         return this.SrcInfos;
@@ -635,9 +635,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcInfos Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
         this.SrcInfos = SrcInfos;
@@ -725,9 +725,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDstNodeType() {
         return this.DstNodeType;
@@ -735,9 +735,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstNodeType(String DstNodeType) {
         this.DstNodeType = DstNodeType;
@@ -745,9 +745,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Get Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DstInfos Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SyncDBEndpointInfos getDstInfos() {
         return this.DstInfos;
@@ -755,9 +755,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DstInfos Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstInfos(SyncDBEndpointInfos DstInfos) {
         this.DstInfos = DstInfos;
@@ -985,9 +985,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDumperResumeCtrl() {
         return this.DumperResumeCtrl;
@@ -995,9 +995,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDumperResumeCtrl(String DumperResumeCtrl) {
         this.DumperResumeCtrl = DumperResumeCtrl;
