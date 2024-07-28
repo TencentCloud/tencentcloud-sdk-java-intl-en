@@ -67,7 +67,6 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -170,10 +169,8 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     }
 
     /**
-     * Get Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained. 
+     * Get Resource tags 
      * @return ResourceTags Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public String [] getResourceTags() {
         return this.ResourceTags;
@@ -181,9 +178,7 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
     /**
      * Set Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      * @param ResourceTags Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public void setResourceTags(String [] ResourceTags) {
         this.ResourceTags = ResourceTags;

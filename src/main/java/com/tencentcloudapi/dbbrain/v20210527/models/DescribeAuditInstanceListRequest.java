@@ -31,7 +31,7 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     private String Product;
 
     /**
-    * Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+    * Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
     */
     @SerializedName("NodeRequestType")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`. 
-     * @return NodeRequestType Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+     * Get Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`. 
+     * @return NodeRequestType Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
      */
     public String getNodeRequestType() {
         return this.NodeRequestType;
     }
 
     /**
-     * Set Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
-     * @param NodeRequestType Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+     * Set Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
+     * @param NodeRequestType Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
      */
     public void setNodeRequestType(String NodeRequestType) {
         this.NodeRequestType = NodeRequestType;
