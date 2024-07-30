@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyCertificateRequest extends AbstractModel {
 
     /**
-    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
     */
     @SerializedName("DvAuthMethod")
     @Expose
@@ -122,16 +122,23 @@ public class ApplyCertificateRequest extends AbstractModel {
     private Boolean DeleteDnsAutoRecord;
 
     /**
-     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation 
-     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+    * 
+    */
+    @SerializedName("DnsNames")
+    @Expose
+    private String [] DnsNames;
+
+    /**
+     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation. 
+     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public String getDvAuthMethod() {
         return this.DvAuthMethod;
     }
 
     /**
-     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
-     * @param DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+     * @param DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public void setDvAuthMethod(String DvAuthMethod) {
         this.DvAuthMethod = DvAuthMethod;
@@ -345,6 +352,22 @@ public class ApplyCertificateRequest extends AbstractModel {
         this.DeleteDnsAutoRecord = DeleteDnsAutoRecord;
     }
 
+    /**
+     * Get  
+     * @return DnsNames 
+     */
+    public String [] getDnsNames() {
+        return this.DnsNames;
+    }
+
+    /**
+     * Set 
+     * @param DnsNames 
+     */
+    public void setDnsNames(String [] DnsNames) {
+        this.DnsNames = DnsNames;
+    }
+
     public ApplyCertificateRequest() {
     }
 
@@ -395,6 +418,12 @@ public class ApplyCertificateRequest extends AbstractModel {
         if (source.DeleteDnsAutoRecord != null) {
             this.DeleteDnsAutoRecord = new Boolean(source.DeleteDnsAutoRecord);
         }
+        if (source.DnsNames != null) {
+            this.DnsNames = new String[source.DnsNames.length];
+            for (int i = 0; i < source.DnsNames.length; i++) {
+                this.DnsNames[i] = new String(source.DnsNames[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class ApplyCertificateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
+        this.setParamArraySimple(map, prefix + "DnsNames.", this.DnsNames);
 
     }
 }

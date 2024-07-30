@@ -25,9 +25,10 @@ public class GetCardVerificationResultResponse extends AbstractModel {
 
     /**
     * Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
     */
     @SerializedName("Status")
     @Expose
@@ -93,13 +94,15 @@ Example value: ID_CARD
 
     /**
      * Get Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected 
+PASSED
+WARNING
+REJECTED
+PROCESSING 
      * @return Status Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
      */
     public String getStatus() {
         return this.Status;
@@ -107,13 +110,15 @@ Rejected
 
     /**
      * Set Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
      * @param Status Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
      */
     public void setStatus(String Status) {
         this.Status = Status;

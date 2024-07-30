@@ -38,14 +38,14 @@ public class DescribeCSRSetRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * The domain for CSR filtering.
+    * The domain for CSR filtering
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The encryption algorithm for CSR filtering.
+    * The encryption algorithm for CSR filtering
     */
     @SerializedName("EncryptAlgo")
     @Expose
@@ -84,32 +84,32 @@ public class DescribeCSRSetRequest extends AbstractModel {
     }
 
     /**
-     * Get The domain for CSR filtering. 
-     * @return Domain The domain for CSR filtering.
+     * Get The domain for CSR filtering 
+     * @return Domain The domain for CSR filtering
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain for CSR filtering.
-     * @param Domain The domain for CSR filtering.
+     * Set The domain for CSR filtering
+     * @param Domain The domain for CSR filtering
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The encryption algorithm for CSR filtering. 
-     * @return EncryptAlgo The encryption algorithm for CSR filtering.
+     * Get The encryption algorithm for CSR filtering 
+     * @return EncryptAlgo The encryption algorithm for CSR filtering
      */
     public String getEncryptAlgo() {
         return this.EncryptAlgo;
     }
 
     /**
-     * Set The encryption algorithm for CSR filtering.
-     * @param EncryptAlgo The encryption algorithm for CSR filtering.
+     * Set The encryption algorithm for CSR filtering
+     * @param EncryptAlgo The encryption algorithm for CSR filtering
      */
     public void setEncryptAlgo(String EncryptAlgo) {
         this.EncryptAlgo = EncryptAlgo;

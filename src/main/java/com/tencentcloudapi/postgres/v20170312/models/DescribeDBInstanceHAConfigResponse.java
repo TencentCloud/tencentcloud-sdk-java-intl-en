@@ -51,22 +51,22 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
     private Long MaxStandbyLag;
 
     /**
-    * Maximum data sync lag for u200du200dstandby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
+    * Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxSyncStandbyLatency")
     @Expose
     private Long MaxSyncStandbyLatency;
 
     /**
-    * Maximum sync delay time for u200dstandby server. If the delay time for u200dstandby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
+    * Maximum sync delay time for standby server. If the delay time for standby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field will not return for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxSyncStandbyLag")
     @Expose
@@ -152,64 +152,64 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get Maximum data sync lag for u200du200dstandby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
+     * Get Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return MaxSyncStandbyLatency Maximum data sync lag for u200du200dstandby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxSyncStandbyLatency Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxSyncStandbyLatency() {
         return this.MaxSyncStandbyLatency;
     }
 
     /**
-     * Set Maximum data sync lag for u200du200dstandby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
+     * Set Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param MaxSyncStandbyLatency Maximum data sync lag for u200du200dstandby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxSyncStandbyLatency Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxSyncStandbyLatency(Long MaxSyncStandbyLatency) {
         this.MaxSyncStandbyLatency = MaxSyncStandbyLatency;
     }
 
     /**
-     * Get Maximum sync delay time for u200dstandby server. If the delay time for u200dstandby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
+     * Get Maximum sync delay time for standby server. If the delay time for standby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field will not return for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return MaxSyncStandbyLag Maximum sync delay time for u200dstandby server. If the delay time for u200dstandby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxSyncStandbyLag Maximum sync delay time for standby server. If the delay time for standby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field will not return for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxSyncStandbyLag() {
         return this.MaxSyncStandbyLag;
     }
 
     /**
-     * Set Maximum sync delay time for u200dstandby server. If the delay time for u200dstandby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
+     * Set Maximum sync delay time for standby server. If the delay time for standby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field will not return for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param MaxSyncStandbyLag Maximum sync delay time for u200dstandby server. If the delay time for u200dstandby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxSyncStandbyLag Maximum sync delay time for standby server. If the delay time for standby server and the data lag are both less than or equals to the values of `MaxSyncStandbyLag` and `MaxSyncStandbyLatency` respectively, the standby server adopts sync replication mode; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field will not return for async instance
 and semi-sync (non-downgradable to async) instance.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxSyncStandbyLag(Long MaxSyncStandbyLag) {
         this.MaxSyncStandbyLag = MaxSyncStandbyLag;

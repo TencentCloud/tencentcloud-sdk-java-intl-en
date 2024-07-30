@@ -113,7 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -357,9 +357,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return CreateTime The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -367,9 +367,9 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
     /**
      * Set The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param CreateTime The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
