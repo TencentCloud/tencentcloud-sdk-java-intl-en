@@ -23,6 +23,62 @@ import java.util.HashMap;
 
 public class DataEngineConfigPair extends AbstractModel {
 
+    /**
+    * Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigItem")
+    @Expose
+    private String ConfigItem;
+
+    /**
+    * Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigValue")
+    @Expose
+    private String ConfigValue;
+
+    /**
+     * Get Configuration items
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigItem Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getConfigItem() {
+        return this.ConfigItem;
+    }
+
+    /**
+     * Set Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigItem Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigItem(String ConfigItem) {
+        this.ConfigItem = ConfigItem;
+    }
+
+    /**
+     * Get Configuration values
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigValue Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getConfigValue() {
+        return this.ConfigValue;
+    }
+
+    /**
+     * Set Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigValue Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigValue(String ConfigValue) {
+        this.ConfigValue = ConfigValue;
+    }
+
     public DataEngineConfigPair() {
     }
 
@@ -31,6 +87,12 @@ public class DataEngineConfigPair extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DataEngineConfigPair(DataEngineConfigPair source) {
+        if (source.ConfigItem != null) {
+            this.ConfigItem = new String(source.ConfigItem);
+        }
+        if (source.ConfigValue != null) {
+            this.ConfigValue = new String(source.ConfigValue);
+        }
     }
 
 
@@ -38,6 +100,8 @@ public class DataEngineConfigPair extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ConfigItem", this.ConfigItem);
+        this.setParamSimple(map, prefix + "ConfigValue", this.ConfigValue);
 
     }
 }

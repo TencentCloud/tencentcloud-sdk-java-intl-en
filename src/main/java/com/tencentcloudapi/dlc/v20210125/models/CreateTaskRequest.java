@@ -52,6 +52,13 @@ public class CreateTaskRequest extends AbstractModel {
     private String DataEngineName;
 
     /**
+    * Standard spark execution task resourceGroupName
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get Computing task. This parameter contains the task type and related configuration information. 
      * @return Task Computing task. This parameter contains the task type and related configuration information.
      */
@@ -115,6 +122,22 @@ public class CreateTaskRequest extends AbstractModel {
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get Standard spark execution task resourceGroupName 
+     * @return ResourceGroupName Standard spark execution task resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set Standard spark execution task resourceGroupName
+     * @param ResourceGroupName Standard spark execution task resourceGroupName
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateTaskRequest extends AbstractModel {
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

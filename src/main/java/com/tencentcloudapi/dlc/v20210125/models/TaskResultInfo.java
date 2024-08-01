@@ -161,6 +161,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TotalTime;
 
     /**
+    * Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QueryResultTime")
+    @Expose
+    private Float QueryResultTime;
+
+    /**
      * Get Unique task ID 
      * @return TaskId Unique task ID
      */
@@ -480,6 +488,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TotalTime = TotalTime;
     }
 
+    /**
+     * Get Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QueryResultTime Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getQueryResultTime() {
+        return this.QueryResultTime;
+    }
+
+    /**
+     * Set Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QueryResultTime Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQueryResultTime(Float QueryResultTime) {
+        this.QueryResultTime = QueryResultTime;
+    }
+
     public TaskResultInfo() {
     }
 
@@ -548,6 +576,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TotalTime != null) {
             this.TotalTime = new Long(source.TotalTime);
         }
+        if (source.QueryResultTime != null) {
+            this.QueryResultTime = new Float(source.QueryResultTime);
+        }
     }
 
 
@@ -574,6 +605,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
         this.setParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
+        this.setParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
 
     }
 }

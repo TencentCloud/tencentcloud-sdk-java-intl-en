@@ -108,7 +108,7 @@ public class CreateDataEngineRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+    * The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -232,6 +232,27 @@ public class CreateDataEngineRequest extends AbstractModel {
     @SerializedName("SessionResourceTemplate")
     @Expose
     private SessionResourceTemplate SessionResourceTemplate;
+
+    /**
+    * Automatically grant permissions
+    */
+    @SerializedName("AutoAuthorization")
+    @Expose
+    private Boolean AutoAuthorization;
+
+    /**
+    * Engine network ID
+    */
+    @SerializedName("EngineNetworkId")
+    @Expose
+    private String EngineNetworkId;
+
+    /**
+    * Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+    */
+    @SerializedName("EngineGeneration")
+    @Expose
+    private String EngineGeneration;
 
     /**
      * Get The engine type. Valid values: `spark` and `presto`. 
@@ -430,16 +451,16 @@ public class CreateDataEngineRequest extends AbstractModel {
     }
 
     /**
-     * Get The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months. 
-     * @return TimeSpan The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+     * Get The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1. 
+     * @return TimeSpan The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
-     * @param TimeSpan The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+     * Set The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
+     * @param TimeSpan The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -717,6 +738,54 @@ public class CreateDataEngineRequest extends AbstractModel {
         this.SessionResourceTemplate = SessionResourceTemplate;
     }
 
+    /**
+     * Get Automatically grant permissions 
+     * @return AutoAuthorization Automatically grant permissions
+     */
+    public Boolean getAutoAuthorization() {
+        return this.AutoAuthorization;
+    }
+
+    /**
+     * Set Automatically grant permissions
+     * @param AutoAuthorization Automatically grant permissions
+     */
+    public void setAutoAuthorization(Boolean AutoAuthorization) {
+        this.AutoAuthorization = AutoAuthorization;
+    }
+
+    /**
+     * Get Engine network ID 
+     * @return EngineNetworkId Engine network ID
+     */
+    public String getEngineNetworkId() {
+        return this.EngineNetworkId;
+    }
+
+    /**
+     * Set Engine network ID
+     * @param EngineNetworkId Engine network ID
+     */
+    public void setEngineNetworkId(String EngineNetworkId) {
+        this.EngineNetworkId = EngineNetworkId;
+    }
+
+    /**
+     * Get Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default. 
+     * @return EngineGeneration Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+     */
+    public String getEngineGeneration() {
+        return this.EngineGeneration;
+    }
+
+    /**
+     * Set Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+     * @param EngineGeneration Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+     */
+    public void setEngineGeneration(String EngineGeneration) {
+        this.EngineGeneration = EngineGeneration;
+    }
+
     public CreateDataEngineRequest() {
     }
 
@@ -821,6 +890,15 @@ public class CreateDataEngineRequest extends AbstractModel {
         if (source.SessionResourceTemplate != null) {
             this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
         }
+        if (source.AutoAuthorization != null) {
+            this.AutoAuthorization = new Boolean(source.AutoAuthorization);
+        }
+        if (source.EngineNetworkId != null) {
+            this.EngineNetworkId = new String(source.EngineNetworkId);
+        }
+        if (source.EngineGeneration != null) {
+            this.EngineGeneration = new String(source.EngineGeneration);
+        }
     }
 
 
@@ -858,6 +936,9 @@ public class CreateDataEngineRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+        this.setParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
+        this.setParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
+        this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
 
     }
 }

@@ -102,6 +102,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DbGovernPolicyIsDisable;
 
     /**
+    * Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SmartPolicy")
+    @Expose
+    private SmartPolicy SmartPolicy;
+
+    /**
      * Get The database name. 
      * @return DatabaseName The database name.
      */
@@ -258,7 +266,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return GovernPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public DataGovernPolicy getGovernPolicy() {
         return this.GovernPolicy;
     }
@@ -268,7 +278,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param GovernPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setGovernPolicy(DataGovernPolicy GovernPolicy) {
         this.GovernPolicy = GovernPolicy;
     }
@@ -278,7 +290,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getDbGovernPolicyIsDisable() {
         return this.DbGovernPolicyIsDisable;
     }
@@ -288,9 +302,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setDbGovernPolicyIsDisable(String DbGovernPolicyIsDisable) {
         this.DbGovernPolicyIsDisable = DbGovernPolicyIsDisable;
+    }
+
+    /**
+     * Get Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SmartPolicy Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SmartPolicy getSmartPolicy() {
+        return this.SmartPolicy;
+    }
+
+    /**
+     * Set Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartPolicy Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSmartPolicy(SmartPolicy SmartPolicy) {
+        this.SmartPolicy = SmartPolicy;
     }
 
     public TableBaseInfo() {
@@ -331,6 +367,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DbGovernPolicyIsDisable != null) {
             this.DbGovernPolicyIsDisable = new String(source.DbGovernPolicyIsDisable);
         }
+        if (source.SmartPolicy != null) {
+            this.SmartPolicy = new SmartPolicy(source.SmartPolicy);
+        }
     }
 
 
@@ -348,6 +387,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
         this.setParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
+        this.setParamObj(map, prefix + "SmartPolicy.", this.SmartPolicy);
 
     }
 }

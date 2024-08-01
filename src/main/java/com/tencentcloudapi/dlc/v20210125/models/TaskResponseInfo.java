@@ -101,8 +101,7 @@ public class TaskResponseInfo extends AbstractModel {
     private String RowAffectInfo;
 
     /**
-    * Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataSet")
     @Expose
@@ -137,217 +136,189 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TaskType;
 
     /**
-    * Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProgressDetail")
     @Expose
     private String ProgressDetail;
 
     /**
-    * Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineId")
     @Expose
     private String DataEngineId;
 
     /**
-    * Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineName")
     @Expose
     private String DataEngineName;
 
     /**
-    * Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InputType")
     @Expose
     private String InputType;
 
     /**
-    * Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InputConf")
     @Expose
     private String InputConf;
 
     /**
-    * Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataNumber")
     @Expose
     private Long DataNumber;
 
     /**
-    * Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CanDownload")
     @Expose
     private Boolean CanDownload;
 
     /**
-    * User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserAlias")
     @Expose
     private String UserAlias;
 
     /**
-    * Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkJobName")
     @Expose
     private String SparkJobName;
 
     /**
-    * Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkJobId")
     @Expose
     private String SparkJobId;
 
     /**
-    * JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkJobFile")
     @Expose
     private String SparkJobFile;
 
     /**
-    * Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UiUrl")
     @Expose
     private String UiUrl;
 
     /**
-    * The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalTime")
     @Expose
     private Long TotalTime;
 
     /**
-    * The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CmdArgs")
     @Expose
     private String CmdArgs;
 
     /**
-    * The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageVersion")
     @Expose
     private String ImageVersion;
 
     /**
-    * The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DriverSize")
     @Expose
     private String DriverSize;
 
     /**
-    * The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecutorSize")
     @Expose
     private String ExecutorSize;
 
     /**
-    * The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecutorNums")
     @Expose
     private Long ExecutorNums;
 
     /**
-    * The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecutorMaxNumbers")
     @Expose
     private Long ExecutorMaxNumbers;
 
     /**
-    * Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CommonMetrics")
     @Expose
     private CommonMetrics CommonMetrics;
 
     /**
-    * The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkMonitorMetrics")
     @Expose
     private SparkMonitorMetrics SparkMonitorMetrics;
 
     /**
-    * The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrestoMonitorMetrics")
     @Expose
     private PrestoMonitorMetrics PrestoMonitorMetrics;
 
     /**
-    * 
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResultFormat")
     @Expose
     private String ResultFormat;
 
     /**
-    * 
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EngineTypeDetail")
     @Expose
     private String EngineTypeDetail;
 
     /**
-    * 
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceGroupName")
     @Expose
@@ -530,20 +501,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataSet Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataSet Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataSet() {
         return this.DataSet;
     }
 
     /**
-     * Set Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataSet Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataSet Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataSet(String DataSet) {
         this.DataSet = DataSet;
@@ -614,544 +581,432 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task progress details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProgressDetail Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProgressDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProgressDetail() {
         return this.ProgressDetail;
     }
 
     /**
-     * Set Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProgressDetail Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProgressDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProgressDetail(String ProgressDetail) {
         this.ProgressDetail = ProgressDetail;
     }
 
     /**
-     * Get Task end time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UpdateTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UpdateTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngineId Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineId Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngineId() {
         return this.DataEngineId;
     }
 
     /**
-     * Set Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngineId Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineId Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;
     }
 
     /**
-     * Get Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperateUin Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OperateUin Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperateUin Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OperateUin Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngineName Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngineName() {
         return this.DataEngineName;
     }
 
     /**
-     * Set Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngineName Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InputType Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InputType Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InputType Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InputType Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get Import configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InputConf Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InputConf Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInputConf() {
         return this.InputConf;
     }
 
     /**
-     * Set Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InputConf Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InputConf Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInputConf(String InputConf) {
         this.InputConf = InputConf;
     }
 
     /**
-     * Get Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataNumber Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataNumber Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDataNumber() {
         return this.DataNumber;
     }
 
     /**
-     * Set Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataNumber Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataNumber Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataNumber(Long DataNumber) {
         this.DataNumber = DataNumber;
     }
 
     /**
-     * Get Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CanDownload Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CanDownload Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getCanDownload() {
         return this.CanDownload;
     }
 
     /**
-     * Set Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CanDownload Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CanDownload Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCanDownload(Boolean CanDownload) {
         this.CanDownload = CanDownload;
     }
 
     /**
-     * Get User alias
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserAlias User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UserAlias Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserAlias() {
         return this.UserAlias;
     }
 
     /**
-     * Set User alias
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserAlias User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UserAlias Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserAlias(String UserAlias) {
         this.UserAlias = UserAlias;
     }
 
     /**
-     * Get Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkJobName Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkJobName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSparkJobName() {
         return this.SparkJobName;
     }
 
     /**
-     * Set Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkJobName Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkJobName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkJobName(String SparkJobName) {
         this.SparkJobName = SparkJobName;
     }
 
     /**
-     * Get Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkJobId Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkJobId Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSparkJobId() {
         return this.SparkJobId;
     }
 
     /**
-     * Set Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkJobId Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkJobId Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkJobId(String SparkJobId) {
         this.SparkJobId = SparkJobId;
     }
 
     /**
-     * Get JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkJobFile JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkJobFile Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSparkJobFile() {
         return this.SparkJobFile;
     }
 
     /**
-     * Set JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkJobFile JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkJobFile Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkJobFile(String SparkJobFile) {
         this.SparkJobFile = SparkJobFile;
     }
 
     /**
-     * Get Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UiUrl Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UiUrl Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUiUrl() {
         return this.UiUrl;
     }
 
     /**
-     * Set Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UiUrl Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UiUrl Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUiUrl(String UiUrl) {
         this.UiUrl = UiUrl;
     }
 
     /**
-     * Get The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalTime The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalTime() {
         return this.TotalTime;
     }
 
     /**
-     * Set The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalTime The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalTime(Long TotalTime) {
         this.TotalTime = TotalTime;
     }
 
     /**
-     * Get The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CmdArgs The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CmdArgs Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CmdArgs The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CmdArgs Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;
     }
 
     /**
-     * Get The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageVersion The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ImageVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageVersion() {
         return this.ImageVersion;
     }
 
     /**
-     * Set The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageVersion The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageVersion(String ImageVersion) {
         this.ImageVersion = ImageVersion;
     }
 
     /**
-     * Get The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DriverSize The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DriverSize Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDriverSize() {
         return this.DriverSize;
     }
 
     /**
-     * Set The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DriverSize The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DriverSize Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDriverSize(String DriverSize) {
         this.DriverSize = DriverSize;
     }
 
     /**
-     * Get The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecutorSize The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutorSize Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExecutorSize() {
         return this.ExecutorSize;
     }
 
     /**
-     * Set The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecutorSize The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutorSize Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecutorSize(String ExecutorSize) {
         this.ExecutorSize = ExecutorSize;
     }
 
     /**
-     * Get The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutorNums Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getExecutorNums() {
         return this.ExecutorNums;
     }
 
     /**
-     * Set The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutorNums Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecutorNums(Long ExecutorNums) {
         this.ExecutorNums = ExecutorNums;
     }
 
     /**
-     * Get The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getExecutorMaxNumbers() {
         return this.ExecutorMaxNumbers;
     }
 
     /**
-     * Set The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecutorMaxNumbers(Long ExecutorMaxNumbers) {
         this.ExecutorMaxNumbers = ExecutorMaxNumbers;
     }
 
     /**
-     * Get Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CommonMetrics Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CommonMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CommonMetrics getCommonMetrics() {
         return this.CommonMetrics;
     }
 
     /**
-     * Set Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CommonMetrics Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CommonMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCommonMetrics(CommonMetrics CommonMetrics) {
         this.CommonMetrics = CommonMetrics;
     }
 
     /**
-     * Get The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkMonitorMetrics The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SparkMonitorMetrics getSparkMonitorMetrics() {
         return this.SparkMonitorMetrics;
     }
 
     /**
-     * Set The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkMonitorMetrics The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkMonitorMetrics(SparkMonitorMetrics SparkMonitorMetrics) {
         this.SparkMonitorMetrics = SparkMonitorMetrics;
     }
 
     /**
-     * Get The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrestoMonitorMetrics The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PrestoMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PrestoMonitorMetrics getPrestoMonitorMetrics() {
         return this.PrestoMonitorMetrics;
     }
 
     /**
-     * Set The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrestoMonitorMetrics The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PrestoMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrestoMonitorMetrics(PrestoMonitorMetrics PrestoMonitorMetrics) {
         this.PrestoMonitorMetrics = PrestoMonitorMetrics;
     }
 
     /**
-     * Get  
-     * @return ResultFormat 
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResultFormat Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResultFormat() {
         return this.ResultFormat;
     }
 
     /**
-     * Set 
-     * @param ResultFormat 
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResultFormat Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResultFormat(String ResultFormat) {
         this.ResultFormat = ResultFormat;
     }
 
     /**
-     * Get  
-     * @return EngineTypeDetail 
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEngineTypeDetail() {
         return this.EngineTypeDetail;
     }
 
     /**
-     * Set 
-     * @param EngineTypeDetail 
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEngineTypeDetail(String EngineTypeDetail) {
         this.EngineTypeDetail = EngineTypeDetail;
     }
 
     /**
-     * Get  
-     * @return ResourceGroupName 
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceGroupName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
     }
 
     /**
-     * Set 
-     * @param ResourceGroupName 
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceGroupName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;

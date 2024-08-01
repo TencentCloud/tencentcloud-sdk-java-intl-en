@@ -24,308 +24,253 @@ import java.util.HashMap;
 public class CommonMetrics extends AbstractModel {
 
     /**
-    * The task creation time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTaskTime")
     @Expose
     private Float CreateTaskTime;
 
     /**
-    * The processing time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessTime")
     @Expose
     private Float ProcessTime;
 
     /**
-    * The queue time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QueueTime")
     @Expose
     private Float QueueTime;
 
     /**
-    * The execution duration in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecutionTime")
     @Expose
     private Float ExecutionTime;
 
     /**
-    * Whether the result cache is hit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsResultCacheHit")
     @Expose
     private Boolean IsResultCacheHit;
 
     /**
-    * The volume of matched materialized views, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MatchedMVBytes")
     @Expose
     private Long MatchedMVBytes;
 
     /**
-    * The list of matched materialized views.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MatchedMVs")
     @Expose
     private String MatchedMVs;
 
     /**
-    * The result data in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AffectedBytes")
     @Expose
     private String AffectedBytes;
 
     /**
-    * 	The number of rows in the result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AffectedRows")
     @Expose
     private Long AffectedRows;
 
     /**
-    * The volume of the data scanned, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessedBytes")
     @Expose
     private Long ProcessedBytes;
 
     /**
-    * 	The number of scanned rows.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessedRows")
     @Expose
     private Long ProcessedRows;
 
     /**
-     * Get The task creation time in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTaskTime The task creation time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CreateTaskTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCreateTaskTime() {
         return this.CreateTaskTime;
     }
 
     /**
-     * Set The task creation time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTaskTime The task creation time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CreateTaskTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTaskTime(Float CreateTaskTime) {
         this.CreateTaskTime = CreateTaskTime;
     }
 
     /**
-     * Get The processing time in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessTime The processing time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProcessTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getProcessTime() {
         return this.ProcessTime;
     }
 
     /**
-     * Set The processing time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessTime The processing time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcessTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessTime(Float ProcessTime) {
         this.ProcessTime = ProcessTime;
     }
 
     /**
-     * Get The queue time in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QueueTime The queue time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QueueTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getQueueTime() {
         return this.QueueTime;
     }
 
     /**
-     * Set The queue time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QueueTime The queue time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QueueTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQueueTime(Float QueueTime) {
         this.QueueTime = QueueTime;
     }
 
     /**
-     * Get The execution duration in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecutionTime The execution duration in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecutionTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getExecutionTime() {
         return this.ExecutionTime;
     }
 
     /**
-     * Set The execution duration in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecutionTime The execution duration in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecutionTime Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecutionTime(Float ExecutionTime) {
         this.ExecutionTime = ExecutionTime;
     }
 
     /**
-     * Get Whether the result cache is hit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsResultCacheHit Whether the result cache is hit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsResultCacheHit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsResultCacheHit() {
         return this.IsResultCacheHit;
     }
 
     /**
-     * Set Whether the result cache is hit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsResultCacheHit Whether the result cache is hit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsResultCacheHit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsResultCacheHit(Boolean IsResultCacheHit) {
         this.IsResultCacheHit = IsResultCacheHit;
     }
 
     /**
-     * Get The volume of matched materialized views, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MatchedMVBytes The volume of matched materialized views, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MatchedMVBytes Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMatchedMVBytes() {
         return this.MatchedMVBytes;
     }
 
     /**
-     * Set The volume of matched materialized views, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MatchedMVBytes The volume of matched materialized views, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MatchedMVBytes Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMatchedMVBytes(Long MatchedMVBytes) {
         this.MatchedMVBytes = MatchedMVBytes;
     }
 
     /**
-     * Get The list of matched materialized views.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MatchedMVs The list of matched materialized views.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MatchedMVs Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMatchedMVs() {
         return this.MatchedMVs;
     }
 
     /**
-     * Set The list of matched materialized views.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MatchedMVs The list of matched materialized views.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MatchedMVs Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMatchedMVs(String MatchedMVs) {
         this.MatchedMVs = MatchedMVs;
     }
 
     /**
-     * Get The result data in bytes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AffectedBytes The result data in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AffectedBytes Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAffectedBytes() {
         return this.AffectedBytes;
     }
 
     /**
-     * Set The result data in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AffectedBytes The result data in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AffectedBytes Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAffectedBytes(String AffectedBytes) {
         this.AffectedBytes = AffectedBytes;
     }
 
     /**
-     * Get 	The number of rows in the result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AffectedRows 	The number of rows in the result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AffectedRows Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAffectedRows() {
         return this.AffectedRows;
     }
 
     /**
-     * Set 	The number of rows in the result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AffectedRows 	The number of rows in the result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AffectedRows Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAffectedRows(Long AffectedRows) {
         this.AffectedRows = AffectedRows;
     }
 
     /**
-     * Get The volume of the data scanned, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessedBytes The volume of the data scanned, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProcessedBytes Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProcessedBytes() {
         return this.ProcessedBytes;
     }
 
     /**
-     * Set The volume of the data scanned, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessedBytes The volume of the data scanned, in bytes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcessedBytes Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessedBytes(Long ProcessedBytes) {
         this.ProcessedBytes = ProcessedBytes;
     }
 
     /**
-     * Get 	The number of scanned rows.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessedRows 	The number of scanned rows.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProcessedRows Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProcessedRows() {
         return this.ProcessedRows;
     }
 
     /**
-     * Set 	The number of scanned rows.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessedRows 	The number of scanned rows.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcessedRows Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessedRows(Long ProcessedRows) {
         this.ProcessedRows = ProcessedRows;

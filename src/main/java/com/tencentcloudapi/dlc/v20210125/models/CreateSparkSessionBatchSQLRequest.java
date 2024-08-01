@@ -31,7 +31,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
     private String DataEngineName;
 
     /**
-    * The SQL statement to execute.
+    * Run SQL. The base64 encoding is needed.
     */
     @SerializedName("ExecuteSQL")
     @Expose
@@ -96,11 +96,18 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
     private KVPair [] Arguments;
 
     /**
-    * Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+    * Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
     */
     @SerializedName("IsInherit")
     @Expose
     private Long IsInherit;
+
+    /**
+    * User-defined primary key, and it should be unique.
+    */
+    @SerializedName("CustomKey")
+    @Expose
+    private String CustomKey;
 
     /**
      * Get The name of the engine for executing the Spark job. 
@@ -119,16 +126,16 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
     }
 
     /**
-     * Get The SQL statement to execute. 
-     * @return ExecuteSQL The SQL statement to execute.
+     * Get Run SQL. The base64 encoding is needed. 
+     * @return ExecuteSQL Run SQL. The base64 encoding is needed.
      */
     public String getExecuteSQL() {
         return this.ExecuteSQL;
     }
 
     /**
-     * Set The SQL statement to execute.
-     * @param ExecuteSQL The SQL statement to execute.
+     * Set Run SQL. The base64 encoding is needed.
+     * @param ExecuteSQL Run SQL. The base64 encoding is needed.
      */
     public void setExecuteSQL(String ExecuteSQL) {
         this.ExecuteSQL = ExecuteSQL;
@@ -271,19 +278,35 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
     }
 
     /**
-     * Get Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes. 
-     * @return IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     * Get Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters. 
+     * @return IsInherit Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
      */
     public Long getIsInherit() {
         return this.IsInherit;
     }
 
     /**
-     * Set Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
-     * @param IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     * Set Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
+     * @param IsInherit Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
      */
     public void setIsInherit(Long IsInherit) {
         this.IsInherit = IsInherit;
+    }
+
+    /**
+     * Get User-defined primary key, and it should be unique. 
+     * @return CustomKey User-defined primary key, and it should be unique.
+     */
+    public String getCustomKey() {
+        return this.CustomKey;
+    }
+
+    /**
+     * Set User-defined primary key, and it should be unique.
+     * @param CustomKey User-defined primary key, and it should be unique.
+     */
+    public void setCustomKey(String CustomKey) {
+        this.CustomKey = CustomKey;
     }
 
     public CreateSparkSessionBatchSQLRequest() {
@@ -330,6 +353,9 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
         if (source.IsInherit != null) {
             this.IsInherit = new Long(source.IsInherit);
         }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
     }
 
 
@@ -348,6 +374,7 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
         this.setParamSimple(map, prefix + "SessionName", this.SessionName);
         this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "CustomKey", this.CustomKey);
 
     }
 }

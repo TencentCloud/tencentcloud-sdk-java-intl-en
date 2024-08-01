@@ -66,32 +66,28 @@ public class UserRole extends AbstractModel {
     private String Desc;
 
     /**
-    * The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CosPermissionList")
     @Expose
     private CosPermission [] CosPermissionList;
 
     /**
-    * The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PermissionJson")
     @Expose
@@ -194,80 +190,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The role name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoleName The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RoleName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoleName The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RoleName Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Creator The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Creator Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Creator The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Creator Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosPermissionList The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CosPermissionList Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CosPermission [] getCosPermissionList() {
         return this.CosPermissionList;
     }
 
     /**
-     * Set The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosPermissionList The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CosPermissionList Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCosPermissionList(CosPermission [] CosPermissionList) {
         this.CosPermissionList = CosPermissionList;
     }
 
     /**
-     * Get The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PermissionJson The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PermissionJson Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPermissionJson() {
         return this.PermissionJson;
     }
 
     /**
-     * Set The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PermissionJson The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PermissionJson Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPermissionJson(String PermissionJson) {
         this.PermissionJson = PermissionJson;

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class CosPermission extends AbstractModel {
 
     /**
-    * The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CosPath")
     @Expose
     private String CosPath;
 
     /**
-    * The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Permissions")
     @Expose
     private String [] Permissions;
 
     /**
-     * Get The COS path.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosPath The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CosPath Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCosPath() {
         return this.CosPath;
     }
 
     /**
-     * Set The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosPath The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CosPath Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;
     }
 
     /**
-     * Get The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Permissions The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Permissions Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPermissions() {
         return this.Permissions;
     }
 
     /**
-     * Set The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Permissions The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Permissions Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPermissions(String [] Permissions) {
         this.Permissions = Permissions;

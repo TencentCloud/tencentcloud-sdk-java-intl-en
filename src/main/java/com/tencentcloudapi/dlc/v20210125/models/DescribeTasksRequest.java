@@ -85,6 +85,13 @@ task-kind - string (filter by task type)
     private String DataEngineName;
 
     /**
+    * Resource group name of the spark engine
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get Number of returned results. Default value: 10. Maximum value: 100. 
      * @return Limit Number of returned results. Default value: 10. Maximum value: 100.
      */
@@ -232,6 +239,22 @@ task-kind - string (filter by task type)
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get Resource group name of the spark engine 
+     * @return ResourceGroupName Resource group name of the spark engine
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set Resource group name of the spark engine
+     * @param ResourceGroupName Resource group name of the spark engine
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public DescribeTasksRequest() {
     }
 
@@ -267,6 +290,9 @@ task-kind - string (filter by task type)
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -282,6 +308,7 @@ task-kind - string (filter by task type)
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

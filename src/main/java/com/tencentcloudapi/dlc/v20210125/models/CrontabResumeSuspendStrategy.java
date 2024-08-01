@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
-    * The scheduled start time, such as 8:00 AM every Monday.
+    * Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResumeTime")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ResumeTime;
 
     /**
-    * The scheduled suspension time, such as 8:00 PM every Monday.
+    * Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuspendTime")
@@ -48,9 +48,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SuspendStrategy;
 
     /**
-     * Get The scheduled start time, such as 8:00 AM every Monday.
+     * Get Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResumeTime The scheduled start time, such as 8:00 AM every Monday.
+     * @return ResumeTime Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResumeTime() {
@@ -58,9 +58,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The scheduled start time, such as 8:00 AM every Monday.
+     * Set Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResumeTime The scheduled start time, such as 8:00 AM every Monday.
+     * @param ResumeTime Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResumeTime(String ResumeTime) {
@@ -68,9 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The scheduled suspension time, such as 8:00 PM every Monday.
+     * Get Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuspendTime The scheduled suspension time, such as 8:00 PM every Monday.
+     * @return SuspendTime Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSuspendTime() {
@@ -78,9 +78,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The scheduled suspension time, such as 8:00 PM every Monday.
+     * Set Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuspendTime The scheduled suspension time, such as 8:00 PM every Monday.
+     * @param SuspendTime Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSuspendTime(String SuspendTime) {

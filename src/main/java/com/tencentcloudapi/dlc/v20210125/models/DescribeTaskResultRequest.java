@@ -45,6 +45,13 @@ public class DescribeTaskResultRequest extends AbstractModel {
     private Long MaxResults;
 
     /**
+    * Whether to convert the data type
+    */
+    @SerializedName("IsTransformDataType")
+    @Expose
+    private Boolean IsTransformDataType;
+
+    /**
      * Get Unique task ID 
      * @return TaskId Unique task ID
      */
@@ -92,6 +99,22 @@ public class DescribeTaskResultRequest extends AbstractModel {
         this.MaxResults = MaxResults;
     }
 
+    /**
+     * Get Whether to convert the data type 
+     * @return IsTransformDataType Whether to convert the data type
+     */
+    public Boolean getIsTransformDataType() {
+        return this.IsTransformDataType;
+    }
+
+    /**
+     * Set Whether to convert the data type
+     * @param IsTransformDataType Whether to convert the data type
+     */
+    public void setIsTransformDataType(Boolean IsTransformDataType) {
+        this.IsTransformDataType = IsTransformDataType;
+    }
+
     public DescribeTaskResultRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeTaskResultRequest extends AbstractModel {
         if (source.MaxResults != null) {
             this.MaxResults = new Long(source.MaxResults);
         }
+        if (source.IsTransformDataType != null) {
+            this.IsTransformDataType = new Boolean(source.IsTransformDataType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeTaskResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "IsTransformDataType", this.IsTransformDataType);
 
     }
 }

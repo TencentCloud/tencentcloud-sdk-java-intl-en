@@ -52,6 +52,13 @@ public class CreateTasksRequest extends AbstractModel {
     private String DataEngineName;
 
     /**
+    * Resource group name of the spark cluster
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field). 
      * @return DatabaseName Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
      */
@@ -115,6 +122,22 @@ public class CreateTasksRequest extends AbstractModel {
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get Resource group name of the spark cluster 
+     * @return ResourceGroupName Resource group name of the spark cluster
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set Resource group name of the spark cluster
+     * @param ResourceGroupName Resource group name of the spark cluster
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public CreateTasksRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateTasksRequest extends AbstractModel {
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateTasksRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

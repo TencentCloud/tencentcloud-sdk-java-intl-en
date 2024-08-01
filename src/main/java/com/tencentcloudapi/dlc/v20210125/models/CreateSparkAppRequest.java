@@ -52,7 +52,7 @@ public class CreateSparkAppRequest extends AbstractModel {
     private String AppFile;
 
     /**
-    * The data access policy (CAM role arn).
+    * Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
     */
     @SerializedName("RoleArn")
     @Expose
@@ -291,16 +291,16 @@ public class CreateSparkAppRequest extends AbstractModel {
     }
 
     /**
-     * Get The data access policy (CAM role arn). 
-     * @return RoleArn The data access policy (CAM role arn).
+     * Get Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API. 
+     * @return RoleArn Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
      */
     public Long getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set The data access policy (CAM role arn).
-     * @param RoleArn The data access policy (CAM role arn).
+     * Set Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
+     * @param RoleArn Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
      */
     public void setRoleArn(Long RoleArn) {
         this.RoleArn = RoleArn;

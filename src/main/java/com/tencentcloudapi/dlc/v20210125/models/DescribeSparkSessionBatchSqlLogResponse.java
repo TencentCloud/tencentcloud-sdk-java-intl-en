@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel {
 
     /**
-    * The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
+    * Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
     */
     @SerializedName("State")
     @Expose
@@ -46,16 +46,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception). 
-     * @return State The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
+     * Get Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout 
+     * @return State Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
-     * @param State The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
+     * Set Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
+     * @param State Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
      */
     public void setState(Long State) {
         this.State = State;

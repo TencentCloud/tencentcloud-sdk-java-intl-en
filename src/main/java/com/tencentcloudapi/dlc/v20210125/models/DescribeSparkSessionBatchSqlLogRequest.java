@@ -31,6 +31,13 @@ public class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel {
     private String BatchId;
 
     /**
+    * User-defined primary key. If it is specified, the query should be based on the value.
+    */
+    @SerializedName("CustomKey")
+    @Expose
+    private String CustomKey;
+
+    /**
      * Get The unique ID of a Spark SQL job. 
      * @return BatchId The unique ID of a Spark SQL job.
      */
@@ -46,6 +53,22 @@ public class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel {
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get User-defined primary key. If it is specified, the query should be based on the value. 
+     * @return CustomKey User-defined primary key. If it is specified, the query should be based on the value.
+     */
+    public String getCustomKey() {
+        return this.CustomKey;
+    }
+
+    /**
+     * Set User-defined primary key. If it is specified, the query should be based on the value.
+     * @param CustomKey User-defined primary key. If it is specified, the query should be based on the value.
+     */
+    public void setCustomKey(String CustomKey) {
+        this.CustomKey = CustomKey;
+    }
+
     public DescribeSparkSessionBatchSqlLogRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel {
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "CustomKey", this.CustomKey);
 
     }
 }

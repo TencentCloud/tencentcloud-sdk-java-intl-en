@@ -31,6 +31,13 @@ public class CancelSparkSessionBatchSQLRequest extends AbstractModel {
     private String BatchId;
 
     /**
+    * User-defined primary key. If it is specified, the value should be used for querying.
+    */
+    @SerializedName("CustomKey")
+    @Expose
+    private String CustomKey;
+
+    /**
      * Get The unique identifier of a batch task. 
      * @return BatchId The unique identifier of a batch task.
      */
@@ -46,6 +53,22 @@ public class CancelSparkSessionBatchSQLRequest extends AbstractModel {
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get User-defined primary key. If it is specified, the value should be used for querying. 
+     * @return CustomKey User-defined primary key. If it is specified, the value should be used for querying.
+     */
+    public String getCustomKey() {
+        return this.CustomKey;
+    }
+
+    /**
+     * Set User-defined primary key. If it is specified, the value should be used for querying.
+     * @param CustomKey User-defined primary key. If it is specified, the value should be used for querying.
+     */
+    public void setCustomKey(String CustomKey) {
+        this.CustomKey = CustomKey;
+    }
+
     public CancelSparkSessionBatchSQLRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CancelSparkSessionBatchSQLRequest extends AbstractModel {
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CancelSparkSessionBatchSQLRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "CustomKey", this.CustomKey);
 
     }
 }

@@ -192,143 +192,126 @@ public class SparkJobInfo extends AbstractModel {
     private Long JobStatus;
 
     /**
-    * Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StreamingStat")
     @Expose
     private StreamingStatistics StreamingStat;
 
     /**
-    * Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataSource")
     @Expose
     private String DataSource;
 
     /**
-    * PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsLocalPythonFiles")
     @Expose
     private String IsLocalPythonFiles;
 
     /**
-    * Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppPythonFiles")
     @Expose
     private String AppPythonFiles;
 
     /**
-    * Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsLocalArchives")
     @Expose
     private String IsLocalArchives;
 
     /**
-    * Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobArchives")
     @Expose
     private String JobArchives;
 
     /**
-    * The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkImage")
     @Expose
     private String SparkImage;
 
     /**
-    * PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobPythonFiles")
     @Expose
     private String JobPythonFiles;
 
     /**
-    * Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskNum")
     @Expose
     private Long TaskNum;
 
     /**
-    * Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineStatus")
     @Expose
     private Long DataEngineStatus;
 
     /**
-    * The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobExecutorMaxNumbers")
     @Expose
     private Long JobExecutorMaxNumbers;
 
     /**
-    * The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparkImageVersion")
     @Expose
     private String SparkImageVersion;
 
     /**
-    * The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineClusterType")
     @Expose
     private String DataEngineClusterType;
 
     /**
-    * `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngineImageVersion")
     @Expose
     private String DataEngineImageVersion;
 
     /**
-    * Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsInherit")
     @Expose
     private Long IsInherit;
 
     /**
-    * Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsSessionStarted")
     @Expose
     private Boolean IsSessionStarted;
 
     /**
-    * 
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EngineTypeDetail")
     @Expose
@@ -719,356 +702,288 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StreamingStat Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StreamingStat Note: This field may return null, indicating that no valid values can be obtained.
      */
     public StreamingStatistics getStreamingStat() {
         return this.StreamingStat;
     }
 
     /**
-     * Set Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StreamingStat Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StreamingStat Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStreamingStat(StreamingStatistics StreamingStat) {
         this.StreamingStat = StreamingStat;
     }
 
     /**
-     * Get Data source name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataSource Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataSource Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataSource Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataSource Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;
     }
 
     /**
-     * Get PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsLocalPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsLocalPythonFiles() {
         return this.IsLocalPythonFiles;
     }
 
     /**
-     * Set PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsLocalPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsLocalPythonFiles(String IsLocalPythonFiles) {
         this.IsLocalPythonFiles = IsLocalPythonFiles;
     }
 
     /**
-     * Get Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppPythonFiles Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AppPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAppPythonFiles() {
         return this.AppPythonFiles;
     }
 
     /**
-     * Set Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppPythonFiles Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AppPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAppPythonFiles(String AppPythonFiles) {
         this.AppPythonFiles = AppPythonFiles;
     }
 
     /**
-     * Get Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsLocalArchives Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsLocalArchives() {
         return this.IsLocalArchives;
     }
 
     /**
-     * Set Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsLocalArchives Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsLocalArchives(String IsLocalArchives) {
         this.IsLocalArchives = IsLocalArchives;
     }
 
     /**
-     * Get Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobArchives Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JobArchives Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJobArchives() {
         return this.JobArchives;
     }
 
     /**
-     * Set Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobArchives Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JobArchives Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobArchives(String JobArchives) {
         this.JobArchives = JobArchives;
     }
 
     /**
-     * Get The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkImage The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkImage Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSparkImage() {
         return this.SparkImage;
     }
 
     /**
-     * Set The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkImage The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkImage Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkImage(String SparkImage) {
         this.SparkImage = SparkImage;
     }
 
     /**
-     * Get PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JobPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJobPythonFiles() {
         return this.JobPythonFiles;
     }
 
     /**
-     * Set PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JobPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobPythonFiles(String JobPythonFiles) {
         this.JobPythonFiles = JobPythonFiles;
     }
 
     /**
-     * Get Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskNum Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TaskNum Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTaskNum() {
         return this.TaskNum;
     }
 
     /**
-     * Set Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskNum Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskNum Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskNum(Long TaskNum) {
         this.TaskNum = TaskNum;
     }
 
     /**
-     * Get Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineStatus Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDataEngineStatus() {
         return this.DataEngineStatus;
     }
 
     /**
-     * Set Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineStatus Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineStatus(Long DataEngineStatus) {
         this.DataEngineStatus = DataEngineStatus;
     }
 
     /**
-     * Get The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JobExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getJobExecutorMaxNumbers() {
         return this.JobExecutorMaxNumbers;
     }
 
     /**
-     * Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JobExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobExecutorMaxNumbers(Long JobExecutorMaxNumbers) {
         this.JobExecutorMaxNumbers = JobExecutorMaxNumbers;
     }
 
     /**
-     * Get The image version.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkImageVersion The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkImageVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSparkImageVersion() {
         return this.SparkImageVersion;
     }
 
     /**
-     * Set The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkImageVersion The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkImageVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparkImageVersion(String SparkImageVersion) {
         this.SparkImageVersion = SparkImageVersion;
     }
 
     /**
-     * Get The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SessionId The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SessionId Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SessionId The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SessionId Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineClusterType Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngineClusterType() {
         return this.DataEngineClusterType;
     }
 
     /**
-     * Set `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineClusterType Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineClusterType(String DataEngineClusterType) {
         this.DataEngineClusterType = DataEngineClusterType;
     }
 
     /**
-     * Get `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataEngineImageVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngineImageVersion() {
         return this.DataEngineImageVersion;
     }
 
     /**
-     * Set `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataEngineImageVersion Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngineImageVersion(String DataEngineImageVersion) {
         this.DataEngineImageVersion = DataEngineImageVersion;
     }
 
     /**
-     * Get Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsInherit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsInherit() {
         return this.IsInherit;
     }
 
     /**
-     * Set Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsInherit Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsInherit(Long IsInherit) {
         this.IsInherit = IsInherit;
     }
 
     /**
-     * Get Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsSessionStarted Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsSessionStarted() {
         return this.IsSessionStarted;
     }
 
     /**
-     * Set Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsSessionStarted Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsSessionStarted(Boolean IsSessionStarted) {
         this.IsSessionStarted = IsSessionStarted;
     }
 
     /**
-     * Get  
-     * @return EngineTypeDetail 
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEngineTypeDetail() {
         return this.EngineTypeDetail;
     }
 
     /**
-     * Set 
-     * @param EngineTypeDetail 
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEngineTypeDetail(String EngineTypeDetail) {
         this.EngineTypeDetail = EngineTypeDetail;

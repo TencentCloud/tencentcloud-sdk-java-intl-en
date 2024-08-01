@@ -59,6 +59,21 @@ public class TColumn extends AbstractModel {
     private Boolean NotNull;
 
     /**
+    * Indicate the length of the entire numeric with a value of 1-38
+    */
+    @SerializedName("Precision")
+    @Expose
+    private Long Precision;
+
+    /**
+    * Indicate the length of the decimal part.
+Scale is smaller than Precision.
+    */
+    @SerializedName("Scale")
+    @Expose
+    private Long Scale;
+
+    /**
      * Get The field name. 
      * @return Name The field name.
      */
@@ -138,6 +153,42 @@ public class TColumn extends AbstractModel {
         this.NotNull = NotNull;
     }
 
+    /**
+     * Get Indicate the length of the entire numeric with a value of 1-38 
+     * @return Precision Indicate the length of the entire numeric with a value of 1-38
+     */
+    public Long getPrecision() {
+        return this.Precision;
+    }
+
+    /**
+     * Set Indicate the length of the entire numeric with a value of 1-38
+     * @param Precision Indicate the length of the entire numeric with a value of 1-38
+     */
+    public void setPrecision(Long Precision) {
+        this.Precision = Precision;
+    }
+
+    /**
+     * Get Indicate the length of the decimal part.
+Scale is smaller than Precision. 
+     * @return Scale Indicate the length of the decimal part.
+Scale is smaller than Precision.
+     */
+    public Long getScale() {
+        return this.Scale;
+    }
+
+    /**
+     * Set Indicate the length of the decimal part.
+Scale is smaller than Precision.
+     * @param Scale Indicate the length of the decimal part.
+Scale is smaller than Precision.
+     */
+    public void setScale(Long Scale) {
+        this.Scale = Scale;
+    }
+
     public TColumn() {
     }
 
@@ -161,6 +212,12 @@ public class TColumn extends AbstractModel {
         if (source.NotNull != null) {
             this.NotNull = new Boolean(source.NotNull);
         }
+        if (source.Precision != null) {
+            this.Precision = new Long(source.Precision);
+        }
+        if (source.Scale != null) {
+            this.Scale = new Long(source.Scale);
+        }
     }
 
 
@@ -173,6 +230,8 @@ public class TColumn extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamSimple(map, prefix + "NotNull", this.NotNull);
+        this.setParamSimple(map, prefix + "Precision", this.Precision);
+        this.setParamSimple(map, prefix + "Scale", this.Scale);
 
     }
 }
