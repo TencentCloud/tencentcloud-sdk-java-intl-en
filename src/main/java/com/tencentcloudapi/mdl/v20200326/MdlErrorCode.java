@@ -30,6 +30,9 @@ public enum MdlErrorCode {
     // The quantity exceeds the limit.
      INVALIDPARAMETER_EXCEEDEDQUANTITYLIMIT("InvalidParameter.ExceededQuantityLimit"),
      
+    // 
+     INVALIDPARAMETER_FRAMECAPTURETEMPLATES("InvalidParameter.FrameCaptureTemplates"),
+     
     // Invalid `Id`.
      INVALIDPARAMETER_ID("InvalidParameter.Id"),
      

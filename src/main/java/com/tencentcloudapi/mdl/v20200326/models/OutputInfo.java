@@ -77,6 +77,13 @@ Note: this field may return `null`, indicating that no valid value was found.
     private TimedMetadataSettingInfo TimedMetadataSettings;
 
     /**
+    * Frame capture template name array. Quantity limit: [0,1].
+    */
+    @SerializedName("FrameCaptureTemplateNames")
+    @Expose
+    private String [] FrameCaptureTemplateNames;
+
+    /**
      * Get Output name. 
      * @return Name Output name.
      */
@@ -204,6 +211,22 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.TimedMetadataSettings = TimedMetadataSettings;
     }
 
+    /**
+     * Get Frame capture template name array. Quantity limit: [0,1]. 
+     * @return FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+     */
+    public String [] getFrameCaptureTemplateNames() {
+        return this.FrameCaptureTemplateNames;
+    }
+
+    /**
+     * Set Frame capture template name array. Quantity limit: [0,1].
+     * @param FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+     */
+    public void setFrameCaptureTemplateNames(String [] FrameCaptureTemplateNames) {
+        this.FrameCaptureTemplateNames = FrameCaptureTemplateNames;
+    }
+
     public OutputInfo() {
     }
 
@@ -245,6 +268,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.TimedMetadataSettings != null) {
             this.TimedMetadataSettings = new TimedMetadataSettingInfo(source.TimedMetadataSettings);
         }
+        if (source.FrameCaptureTemplateNames != null) {
+            this.FrameCaptureTemplateNames = new String[source.FrameCaptureTemplateNames.length];
+            for (int i = 0; i < source.FrameCaptureTemplateNames.length; i++) {
+                this.FrameCaptureTemplateNames[i] = new String(source.FrameCaptureTemplateNames[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
         this.setParamArraySimple(map, prefix + "CaptionTemplateNames.", this.CaptionTemplateNames);
         this.setParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
+        this.setParamArraySimple(map, prefix + "FrameCaptureTemplateNames.", this.FrameCaptureTemplateNames);
 
     }
 }

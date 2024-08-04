@@ -134,6 +134,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Tag [] Tags;
 
     /**
+    * Frame capture templates.
+    */
+    @SerializedName("FrameCaptureTemplates")
+    @Expose
+    private FrameCaptureTemplate [] FrameCaptureTemplates;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -393,6 +400,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.Tags = Tags;
     }
 
+    /**
+     * Get Frame capture templates. 
+     * @return FrameCaptureTemplates Frame capture templates.
+     */
+    public FrameCaptureTemplate [] getFrameCaptureTemplates() {
+        return this.FrameCaptureTemplates;
+    }
+
+    /**
+     * Set Frame capture templates.
+     * @param FrameCaptureTemplates Frame capture templates.
+     */
+    public void setFrameCaptureTemplates(FrameCaptureTemplate [] FrameCaptureTemplates) {
+        this.FrameCaptureTemplates = FrameCaptureTemplates;
+    }
+
     public StreamLiveChannelInfo() {
     }
 
@@ -467,6 +490,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.FrameCaptureTemplates != null) {
+            this.FrameCaptureTemplates = new FrameCaptureTemplate[source.FrameCaptureTemplates.length];
+            for (int i = 0; i < source.FrameCaptureTemplates.length; i++) {
+                this.FrameCaptureTemplates[i] = new FrameCaptureTemplate(source.FrameCaptureTemplates[i]);
+            }
+        }
     }
 
 
@@ -489,6 +518,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
         this.setParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "FrameCaptureTemplates.", this.FrameCaptureTemplates);
 
     }
 }

@@ -115,6 +115,13 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * Frame capture templates.
+    */
+    @SerializedName("FrameCaptureTemplates")
+    @Expose
+    private FrameCaptureTemplate [] FrameCaptureTemplates;
+
+    /**
      * Get Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level 
      * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      */
@@ -322,6 +329,22 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Frame capture templates. 
+     * @return FrameCaptureTemplates Frame capture templates.
+     */
+    public FrameCaptureTemplate [] getFrameCaptureTemplates() {
+        return this.FrameCaptureTemplates;
+    }
+
+    /**
+     * Set Frame capture templates.
+     * @param FrameCaptureTemplates Frame capture templates.
+     */
+    public void setFrameCaptureTemplates(FrameCaptureTemplate [] FrameCaptureTemplates) {
+        this.FrameCaptureTemplates = FrameCaptureTemplates;
+    }
+
     public CreateStreamLiveChannelRequest() {
     }
 
@@ -390,6 +413,12 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.FrameCaptureTemplates != null) {
+            this.FrameCaptureTemplates = new FrameCaptureTemplate[source.FrameCaptureTemplates.length];
+            for (int i = 0; i < source.FrameCaptureTemplates.length; i++) {
+                this.FrameCaptureTemplates[i] = new FrameCaptureTemplate(source.FrameCaptureTemplates[i]);
+            }
+        }
     }
 
 
@@ -410,6 +439,7 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
         this.setParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "FrameCaptureTemplates.", this.FrameCaptureTemplates);
 
     }
 }

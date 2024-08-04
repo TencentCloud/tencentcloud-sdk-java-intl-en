@@ -55,11 +55,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Password;
 
     /**
-    * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+    * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
     */
     @SerializedName("DestinationType")
     @Expose
     private String DestinationType;
+
+    /**
+    * Aws S3 destination setting.
+    */
+    @SerializedName("AmazonS3Settings")
+    @Expose
+    private AmazonS3Settings AmazonS3Settings;
+
+    /**
+    * Cos destination setting.
+    */
+    @SerializedName("CosSettings")
+    @Expose
+    private CosSettings CosSettings;
 
     /**
      * Get Relay destination address. Length limit: [1,512]. 
@@ -138,19 +152,51 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. 
-     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     * Get The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS. 
+     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
      */
     public String getDestinationType() {
         return this.DestinationType;
     }
 
     /**
-     * Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
-     * @param DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     * Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+     * @param DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
      */
     public void setDestinationType(String DestinationType) {
         this.DestinationType = DestinationType;
+    }
+
+    /**
+     * Get Aws S3 destination setting. 
+     * @return AmazonS3Settings Aws S3 destination setting.
+     */
+    public AmazonS3Settings getAmazonS3Settings() {
+        return this.AmazonS3Settings;
+    }
+
+    /**
+     * Set Aws S3 destination setting.
+     * @param AmazonS3Settings Aws S3 destination setting.
+     */
+    public void setAmazonS3Settings(AmazonS3Settings AmazonS3Settings) {
+        this.AmazonS3Settings = AmazonS3Settings;
+    }
+
+    /**
+     * Get Cos destination setting. 
+     * @return CosSettings Cos destination setting.
+     */
+    public CosSettings getCosSettings() {
+        return this.CosSettings;
+    }
+
+    /**
+     * Set Cos destination setting.
+     * @param CosSettings Cos destination setting.
+     */
+    public void setCosSettings(CosSettings CosSettings) {
+        this.CosSettings = CosSettings;
     }
 
     public DestinationInfo() {
@@ -176,6 +222,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DestinationType != null) {
             this.DestinationType = new String(source.DestinationType);
         }
+        if (source.AmazonS3Settings != null) {
+            this.AmazonS3Settings = new AmazonS3Settings(source.AmazonS3Settings);
+        }
+        if (source.CosSettings != null) {
+            this.CosSettings = new CosSettings(source.CosSettings);
+        }
     }
 
 
@@ -188,6 +240,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "DestinationType", this.DestinationType);
+        this.setParamObj(map, prefix + "AmazonS3Settings.", this.AmazonS3Settings);
+        this.setParamObj(map, prefix + "CosSettings.", this.CosSettings);
 
     }
 }
