@@ -50,6 +50,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to update databases in the DMS metadata module.
+     * @param req AlterDMSDatabaseRequest
+     * @return AlterDMSDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public AlterDMSDatabaseResponse AlterDMSDatabase(AlterDMSDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AlterDMSDatabase", AlterDMSDatabaseResponse.class);
+    }
+
+    /**
      *This API is used to bind the authentication policy to the user.
      * @param req AttachUserPolicyRequest
      * @return AttachUserPolicyResponse
@@ -146,6 +157,17 @@ public class DlcClient extends AbstractClient{
     public CreateCHDFSBindingProductResponse CreateCHDFSBindingProduct(CreateCHDFSBindingProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCHDFSBindingProduct", CreateCHDFSBindingProductResponse.class);
+    }
+
+    /**
+     *This API is used to create databases in the DMS metadata module.
+     * @param req CreateDMSDatabaseRequest
+     * @return CreateDMSDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDMSDatabaseResponse CreateDMSDatabase(CreateDMSDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDMSDatabase", CreateDMSDatabaseResponse.class);
     }
 
     /**
@@ -366,6 +388,17 @@ public class DlcClient extends AbstractClient{
     public DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccess(DescribeDLCCatalogAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDLCCatalogAccess", DescribeDLCCatalogAccessResponse.class);
+    }
+
+    /**
+     *This API is used to obtain databases in the DMS metadata module.
+     * @param req DescribeDMSDatabaseRequest
+     * @return DescribeDMSDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDMSDatabaseResponse DescribeDMSDatabase(DescribeDMSDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDMSDatabase", DescribeDMSDatabaseResponse.class);
     }
 
     /**
@@ -696,6 +729,17 @@ public class DlcClient extends AbstractClient{
     public DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(DetachWorkGroupPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DetachWorkGroupPolicy", DetachWorkGroupPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to delete databases in the DMS metadata module.
+     * @param req DropDMSDatabaseRequest
+     * @return DropDMSDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DropDMSDatabaseResponse DropDMSDatabase(DropDMSDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DropDMSDatabase", DropDMSDatabaseResponse.class);
     }
 
     /**
