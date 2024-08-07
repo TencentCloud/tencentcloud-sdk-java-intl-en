@@ -40,8 +40,8 @@ Example value: "Success"
     private String Description;
 
     /**
-    * This value is valid when the “Result” parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 1,000. 
+    * This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
+This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
 Example value: 80.00
     */
     @SerializedName("Sim")
@@ -50,7 +50,7 @@ Example value: 80.00
 
     /**
     * The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
-Note: This field may return “null”, indicating that no valid value can be obtained. 
+Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
     */
     @SerializedName("BestFrameBase64")
@@ -105,11 +105,11 @@ Example value: "Success"
     }
 
     /**
-     * Get This value is valid when the “Result” parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 1,000. 
+     * Get This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
+This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
 Example value: 80.00 
-     * @return Sim This value is valid when the “Result” parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 1,000. 
+     * @return Sim This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
+This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
 Example value: 80.00
      */
     public Float getSim() {
@@ -117,11 +117,11 @@ Example value: 80.00
     }
 
     /**
-     * Set This value is valid when the “Result” parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 1,000. 
+     * Set This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
+This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
 Example value: 80.00
-     * @param Sim This value is valid when the “Result” parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 1,000. 
+     * @param Sim This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
+This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
 Example value: 80.00
      */
     public void setSim(Float Sim) {
@@ -130,10 +130,10 @@ Example value: 80.00
 
     /**
      * Get The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
-Note: This field may return “null”, indicating that no valid value can be obtained. 
+Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q==" 
      * @return BestFrameBase64 The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
-Note: This field may return “null”, indicating that no valid value can be obtained. 
+Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      */
     public String getBestFrameBase64() {
@@ -142,10 +142,10 @@ Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
 
     /**
      * Set The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
-Note: This field may return “null”, indicating that no valid value can be obtained. 
+Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      * @param BestFrameBase64 The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
-Note: This field may return “null”, indicating that no valid value can be obtained. 
+Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      */
     public void setBestFrameBase64(String BestFrameBase64) {

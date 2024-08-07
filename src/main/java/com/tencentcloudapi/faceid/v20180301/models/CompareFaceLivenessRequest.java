@@ -34,8 +34,8 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     private String ImageBase64;
 
     /**
-    * Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+    * Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     */
@@ -53,7 +53,7 @@ Example value: "SILENT"
     private String LivenessType;
 
     /**
-    * When the “LivenessType” parameter is “ACTION”, it must be specified.
+    * When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -62,7 +62,7 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
     */
     @SerializedName("ValidateData")
@@ -98,12 +98,12 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     }
 
     /**
-     * Get Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+     * Get Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q==" 
-     * @return VideoBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+     * @return VideoBase64 Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
      */
@@ -112,12 +112,12 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     }
 
     /**
-     * Set Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+     * Set Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-     * @param VideoBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+     * @param VideoBase64 Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
      */
@@ -150,7 +150,7 @@ Example value: "SILENT"
     }
 
     /**
-     * Get When the “LivenessType” parameter is “ACTION”, it must be specified.
+     * Get When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -159,9 +159,9 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: "" 
-     * @return ValidateData When the “LivenessType” parameter is “ACTION”, it must be specified.
+     * @return ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -170,7 +170,7 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
      */
     public String getValidateData() {
@@ -178,7 +178,7 @@ Example value: ""
     }
 
     /**
-     * Set When the “LivenessType” parameter is “ACTION”, it must be specified.
+     * Set When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -187,9 +187,9 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
-     * @param ValidateData When the “LivenessType” parameter is “ACTION”, it must be specified.
+     * @param ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -198,7 +198,7 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
      */
     public void setValidateData(String ValidateData) {
