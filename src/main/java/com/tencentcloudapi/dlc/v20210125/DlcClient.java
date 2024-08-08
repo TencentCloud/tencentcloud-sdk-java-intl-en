@@ -743,6 +743,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete tables in the DMS metadata module.
+     * @param req DropDMSTableRequest
+     * @return DropDMSTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DropDMSTableResponse DropDMSTable(DropDMSTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DropDMSTable", DropDMSTableResponse.class);
+    }
+
+    /**
      *This API is used to generate SQL statements for creating a managed table.
      * @param req GenerateCreateMangedTableSqlRequest
      * @return GenerateCreateMangedTableSqlResponse

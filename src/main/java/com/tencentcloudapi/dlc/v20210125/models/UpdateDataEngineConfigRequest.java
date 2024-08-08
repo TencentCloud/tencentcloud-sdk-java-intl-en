@@ -38,6 +38,20 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
     private String DataEngineConfigCommand;
 
     /**
+    * Whether to use lakeFS as result storage
+    */
+    @SerializedName("UseLakeFs")
+    @Expose
+    private Boolean UseLakeFs;
+
+    /**
+    * User-defined result path
+    */
+    @SerializedName("CustomResultPath")
+    @Expose
+    private String CustomResultPath;
+
+    /**
      * Get Engine ID 
      * @return DataEngineIds Engine ID
      */
@@ -69,6 +83,38 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
         this.DataEngineConfigCommand = DataEngineConfigCommand;
     }
 
+    /**
+     * Get Whether to use lakeFS as result storage 
+     * @return UseLakeFs Whether to use lakeFS as result storage
+     */
+    public Boolean getUseLakeFs() {
+        return this.UseLakeFs;
+    }
+
+    /**
+     * Set Whether to use lakeFS as result storage
+     * @param UseLakeFs Whether to use lakeFS as result storage
+     */
+    public void setUseLakeFs(Boolean UseLakeFs) {
+        this.UseLakeFs = UseLakeFs;
+    }
+
+    /**
+     * Get User-defined result path 
+     * @return CustomResultPath User-defined result path
+     */
+    public String getCustomResultPath() {
+        return this.CustomResultPath;
+    }
+
+    /**
+     * Set User-defined result path
+     * @param CustomResultPath User-defined result path
+     */
+    public void setCustomResultPath(String CustomResultPath) {
+        this.CustomResultPath = CustomResultPath;
+    }
+
     public UpdateDataEngineConfigRequest() {
     }
 
@@ -86,6 +132,12 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
         if (source.DataEngineConfigCommand != null) {
             this.DataEngineConfigCommand = new String(source.DataEngineConfigCommand);
         }
+        if (source.UseLakeFs != null) {
+            this.UseLakeFs = new Boolean(source.UseLakeFs);
+        }
+        if (source.CustomResultPath != null) {
+            this.CustomResultPath = new String(source.CustomResultPath);
+        }
     }
 
 
@@ -95,6 +147,8 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
         this.setParamSimple(map, prefix + "DataEngineConfigCommand", this.DataEngineConfigCommand);
+        this.setParamSimple(map, prefix + "UseLakeFs", this.UseLakeFs);
+        this.setParamSimple(map, prefix + "CustomResultPath", this.CustomResultPath);
 
     }
 }
