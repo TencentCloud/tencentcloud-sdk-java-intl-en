@@ -42,6 +42,9 @@ public enum TrtcErrorCode {
     // Task has ended when calling the interface.
      FAILEDOPERATION_TASKFINISHED("FailedOperation.TaskFinished"),
      
+    // TaskId Not Exist
+     FAILEDOPERATION_TASKNOTEXIST("FailedOperation.TaskNotExist"),
+     
     // The user is not in the room.
      FAILEDOPERATION_USERNOTEXIST("FailedOperation.UserNotExist"),
      
@@ -128,6 +131,9 @@ public enum TrtcErrorCode {
      
     // StrRoomId parameter error.
      INVALIDPARAMETER_STRROOMID("InvalidParameter.StrRoomId"),
+     
+    // Invalid StreamUrl format
+     INVALIDPARAMETER_STREAMURL("InvalidParameter.StreamUrl"),
      
     // TaskId parameter error.
      INVALIDPARAMETER_TASKID("InvalidParameter.TaskId"),

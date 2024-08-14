@@ -505,4 +505,15 @@ Note: For details about how to use this API, see the `StartPublishCdnStream` doc
         return this.internalRequest(req, "UpdatePublishCdnStream", UpdatePublishCdnStreamResponse.class);
     }
 
+    /**
+     *You can update the StreamUrl of the Relay task.
+     * @param req UpdateStreamIngestRequest
+     * @return UpdateStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateStreamIngestResponse UpdateStreamIngest(UpdateStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateStreamIngest", UpdateStreamIngestResponse.class);
+    }
+
 }

@@ -59,12 +59,11 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String UserSig;
 
     /**
-    * 	
-Source URL. Example value: https://a.b/test.mp4
+    * The Url of the media resource.
     */
-    @SerializedName("SourceUrl")
+    @SerializedName("StreamUrl")
     @Expose
-    private String [] SourceUrl;
+    private String StreamUrl;
 
     /**
     * TRTC room permission Encryption ticket, only needed when advanced permission control is enabled in the Console. After enabling advanced permission control in the TRTC Console, TRTC's backend service system will verify a so-called [PrivateMapKey] 'Permission ticket', which contains an encrypted RoomId and an encrypted 'Permission bit list'. Since PrivateMapKey contains RoomId, providing only UserSig without PrivateMapKey does not allow entry into the specified room.
@@ -88,11 +87,40 @@ Source URL. Example value: https://a.b/test.mp4
     private AudioEncodeParams AudioEncodeParams;
 
     /**
+    * 	
+Source URL. Example value: https://a.b/test.mp4
+    */
+    @SerializedName("SourceUrl")
+    @Expose
+    private String [] SourceUrl;
+
+    /**
     * 
     */
-    @SerializedName("StreamUrl")
+    @SerializedName("SeekSecond")
     @Expose
-    private String StreamUrl;
+    private Long SeekSecond;
+
+    /**
+    * Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+    */
+    @SerializedName("AutoPush")
+    @Expose
+    private Boolean AutoPush;
+
+    /**
+    * Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+    */
+    @SerializedName("RepeatNum")
+    @Expose
+    private Long RepeatNum;
+
+    /**
+    * Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+    */
+    @SerializedName("MaxDuration")
+    @Expose
+    private Long MaxDuration;
 
     /**
      * Get TRTC's [SdkAppId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#sdkappid), the same as the SdkAppId corresponding to the Record room. 
@@ -175,23 +203,19 @@ Source URL. Example value: https://a.b/test.mp4
     }
 
     /**
-     * Get 	
-Source URL. Example value: https://a.b/test.mp4 
-     * @return SourceUrl 	
-Source URL. Example value: https://a.b/test.mp4
+     * Get The Url of the media resource. 
+     * @return StreamUrl The Url of the media resource.
      */
-    public String [] getSourceUrl() {
-        return this.SourceUrl;
+    public String getStreamUrl() {
+        return this.StreamUrl;
     }
 
     /**
-     * Set 	
-Source URL. Example value: https://a.b/test.mp4
-     * @param SourceUrl 	
-Source URL. Example value: https://a.b/test.mp4
+     * Set The Url of the media resource.
+     * @param StreamUrl The Url of the media resource.
      */
-    public void setSourceUrl(String [] SourceUrl) {
-        this.SourceUrl = SourceUrl;
+    public void setStreamUrl(String StreamUrl) {
+        this.StreamUrl = StreamUrl;
     }
 
     /**
@@ -213,7 +237,9 @@ Source URL. Example value: https://a.b/test.mp4
     /**
      * Get Video Codec Parameters. Optional, if not filled, Keep original stream Parameters. 
      * @return VideoEncodeParams Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
+     * @deprecated
      */
+    @Deprecated
     public VideoEncodeParams getVideoEncodeParams() {
         return this.VideoEncodeParams;
     }
@@ -221,7 +247,9 @@ Source URL. Example value: https://a.b/test.mp4
     /**
      * Set Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
      * @param VideoEncodeParams Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
+     * @deprecated
      */
+    @Deprecated
     public void setVideoEncodeParams(VideoEncodeParams VideoEncodeParams) {
         this.VideoEncodeParams = VideoEncodeParams;
     }
@@ -229,7 +257,9 @@ Source URL. Example value: https://a.b/test.mp4
     /**
      * Get Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters. 
      * @return AudioEncodeParams Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
+     * @deprecated
      */
+    @Deprecated
     public AudioEncodeParams getAudioEncodeParams() {
         return this.AudioEncodeParams;
     }
@@ -237,25 +267,99 @@ Source URL. Example value: https://a.b/test.mp4
     /**
      * Set Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
      * @param AudioEncodeParams Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
+     * @deprecated
      */
+    @Deprecated
     public void setAudioEncodeParams(AudioEncodeParams AudioEncodeParams) {
         this.AudioEncodeParams = AudioEncodeParams;
     }
 
     /**
-     * Get  
-     * @return StreamUrl 
+     * Get 	
+Source URL. Example value: https://a.b/test.mp4 
+     * @return SourceUrl 	
+Source URL. Example value: https://a.b/test.mp4
+     * @deprecated
      */
-    public String getStreamUrl() {
-        return this.StreamUrl;
+    @Deprecated
+    public String [] getSourceUrl() {
+        return this.SourceUrl;
+    }
+
+    /**
+     * Set 	
+Source URL. Example value: https://a.b/test.mp4
+     * @param SourceUrl 	
+Source URL. Example value: https://a.b/test.mp4
+     * @deprecated
+     */
+    @Deprecated
+    public void setSourceUrl(String [] SourceUrl) {
+        this.SourceUrl = SourceUrl;
+    }
+
+    /**
+     * Get  
+     * @return SeekSecond 
+     */
+    public Long getSeekSecond() {
+        return this.SeekSecond;
     }
 
     /**
      * Set 
-     * @param StreamUrl 
+     * @param SeekSecond 
      */
-    public void setStreamUrl(String StreamUrl) {
-        this.StreamUrl = StreamUrl;
+    public void setSeekSecond(Long SeekSecond) {
+        this.SeekSecond = SeekSecond;
+    }
+
+    /**
+     * Get Enable auto relay to cdn, please make sure that this feature has been enabled in the console. 
+     * @return AutoPush Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+     */
+    public Boolean getAutoPush() {
+        return this.AutoPush;
+    }
+
+    /**
+     * Set Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+     * @param AutoPush Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+     */
+    public void setAutoPush(Boolean AutoPush) {
+        this.AutoPush = AutoPush;
+    }
+
+    /**
+     * Get Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration. 
+     * @return RepeatNum Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+     */
+    public Long getRepeatNum() {
+        return this.RepeatNum;
+    }
+
+    /**
+     * Set Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+     * @param RepeatNum Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+     */
+    public void setRepeatNum(Long RepeatNum) {
+        this.RepeatNum = RepeatNum;
+    }
+
+    /**
+     * Get Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes 
+     * @return MaxDuration Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+     */
+    public Long getMaxDuration() {
+        return this.MaxDuration;
+    }
+
+    /**
+     * Set Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+     * @param MaxDuration Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+     */
+    public void setMaxDuration(Long MaxDuration) {
+        this.MaxDuration = MaxDuration;
     }
 
     public StartStreamIngestRequest() {
@@ -281,11 +385,8 @@ Source URL. Example value: https://a.b/test.mp4
         if (source.UserSig != null) {
             this.UserSig = new String(source.UserSig);
         }
-        if (source.SourceUrl != null) {
-            this.SourceUrl = new String[source.SourceUrl.length];
-            for (int i = 0; i < source.SourceUrl.length; i++) {
-                this.SourceUrl[i] = new String(source.SourceUrl[i]);
-            }
+        if (source.StreamUrl != null) {
+            this.StreamUrl = new String(source.StreamUrl);
         }
         if (source.PrivateMapKey != null) {
             this.PrivateMapKey = new String(source.PrivateMapKey);
@@ -296,8 +397,23 @@ Source URL. Example value: https://a.b/test.mp4
         if (source.AudioEncodeParams != null) {
             this.AudioEncodeParams = new AudioEncodeParams(source.AudioEncodeParams);
         }
-        if (source.StreamUrl != null) {
-            this.StreamUrl = new String(source.StreamUrl);
+        if (source.SourceUrl != null) {
+            this.SourceUrl = new String[source.SourceUrl.length];
+            for (int i = 0; i < source.SourceUrl.length; i++) {
+                this.SourceUrl[i] = new String(source.SourceUrl[i]);
+            }
+        }
+        if (source.SeekSecond != null) {
+            this.SeekSecond = new Long(source.SeekSecond);
+        }
+        if (source.AutoPush != null) {
+            this.AutoPush = new Boolean(source.AutoPush);
+        }
+        if (source.RepeatNum != null) {
+            this.RepeatNum = new Long(source.RepeatNum);
+        }
+        if (source.MaxDuration != null) {
+            this.MaxDuration = new Long(source.MaxDuration);
         }
     }
 
@@ -311,11 +427,15 @@ Source URL. Example value: https://a.b/test.mp4
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "UserSig", this.UserSig);
-        this.setParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+        this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
         this.setParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
         this.setParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
-        this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+        this.setParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+        this.setParamSimple(map, prefix + "SeekSecond", this.SeekSecond);
+        this.setParamSimple(map, prefix + "AutoPush", this.AutoPush);
+        this.setParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
+        this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
 
     }
 }
