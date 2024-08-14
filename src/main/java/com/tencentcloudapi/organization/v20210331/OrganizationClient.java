@@ -73,6 +73,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a delegated admin of the organization service.
+     * @param req CreateOrgServiceAssignRequest
+     * @return CreateOrgServiceAssignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrgServiceAssignResponse CreateOrgServiceAssign(CreateOrgServiceAssignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrgServiceAssign", CreateOrgServiceAssignResponse.class);
+    }
+
+    /**
      *This API is used to create an organization member.
      * @param req CreateOrganizationMemberRequest
      * @return CreateOrganizationMemberResponse
@@ -92,6 +103,17 @@ public class OrganizationClient extends AbstractClient{
     public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOrganizationMemberPolicy", CreateOrganizationMemberPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to delete a delegated admin of the organization service.
+     * @param req DeleteOrgServiceAssignRequest
+     * @return DeleteOrgServiceAssignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrgServiceAssignResponse DeleteOrgServiceAssign(DeleteOrgServiceAssignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrgServiceAssign", DeleteOrgServiceAssignResponse.class);
     }
 
     /**
@@ -183,6 +205,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the list of delegated admins of the organization service.
+     * @param req ListOrgServiceAssignMemberRequest
+     * @return ListOrgServiceAssignMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOrgServiceAssignMemberResponse ListOrgServiceAssignMember(ListOrgServiceAssignMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOrgServiceAssignMember", ListOrgServiceAssignMemberResponse.class);
+    }
+
+    /**
      *This API is used to get the list of access identities of an organization member.
      * @param req ListOrganizationIdentityRequest
      * @return ListOrganizationIdentityResponse
@@ -191,6 +224,17 @@ public class OrganizationClient extends AbstractClient{
     public ListOrganizationIdentityResponse ListOrganizationIdentity(ListOrganizationIdentityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListOrganizationIdentity", ListOrganizationIdentityResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of organization service settings.
+     * @param req ListOrganizationServiceRequest
+     * @return ListOrganizationServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOrganizationServiceResponse ListOrganizationService(ListOrganizationServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOrganizationService", ListOrganizationServiceResponse.class);
     }
 
     /**

@@ -39,6 +39,17 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to allocate credit pools to second-level resellers by distributors.
+     * @param req AllocateCreditPoolRequest
+     * @return AllocateCreditPoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateCreditPoolResponse AllocateCreditPool(AllocateCreditPoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AllocateCreditPool", AllocateCreditPoolResponse.class);
+    }
+
+    /**
      *This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
 1. The credit is valid permanently and will not be zeroed regularly.
 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.

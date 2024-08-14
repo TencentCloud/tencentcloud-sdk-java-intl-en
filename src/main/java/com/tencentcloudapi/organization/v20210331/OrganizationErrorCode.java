@@ -27,6 +27,9 @@ public enum OrganizationErrorCode {
     // An exception occurred while creating the role.
      FAILEDOPERATION_CREATEROLE("FailedOperation.CreateRole"),
      
+    // An error occurred in the query of the organization service usage status.
+     FAILEDOPERATION_DESCRIBEORGSERVICEUSAGESTATUSERR("FailedOperation.DescribeOrgServiceUsageStatusErr"),
+     
     // You cannot quit an organization created by yourself.
      FAILEDOPERATION_DISABLEQUITSELFCREATEDORGANIZATION("FailedOperation.DisableQuitSelfCreatedOrganization"),
      
@@ -81,6 +84,9 @@ public enum OrganizationErrorCode {
     // The organization policy is invalid.
      FAILEDOPERATION_ORGANIZATIONPOLICYILLEGAL("FailedOperation.OrganizationPolicyIllegal"),
      
+    // Organization service delegation is in use.
+     FAILEDOPERATION_ORGANIZATIONSERVICEASSIGNISUSE("FailedOperation.OrganizationServiceAssignIsUse"),
+     
     // The payer is invalid.
      FAILEDOPERATION_PAYUINILLEGAL("FailedOperation.PayUinIllegal"),
      
@@ -108,6 +114,9 @@ public enum OrganizationErrorCode {
     // The number of members to be created exceeds the upper limit.
      LIMITEXCEEDED_CREATEMEMBEROVERLIMIT("LimitExceeded.CreateMemberOverLimit"),
      
+    // The number of delegated admins for the service exceeds the limit.
+     LIMITEXCEEDED_CREATEORGSERVICEASSIGNOVERLIMIT("LimitExceeded.CreateOrgServiceAssignOverLimit"),
+     
     // The department has too many levels.
      LIMITEXCEEDED_NODEDEPTHEXCEEDLIMIT("LimitExceeded.NodeDepthExceedLimit"),
      
@@ -134,6 +143,9 @@ public enum OrganizationErrorCode {
      
     // The organization does not exist.
      RESOURCENOTFOUND_ORGANIZATIONNOTEXIST("ResourceNotFound.OrganizationNotExist"),
+     
+    // Organization service delegation does not exist.
+     RESOURCENOTFOUND_ORGANIZATIONSERVICEASSIGNNOTEXIST("ResourceNotFound.OrganizationServiceAssignNotExist"),
      
     // The organization service does not exist.
      RESOURCENOTFOUND_ORGANIZATIONSERVICENOTEXIST("ResourceNotFound.OrganizationServiceNotExist"),
