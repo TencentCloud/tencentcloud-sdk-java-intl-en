@@ -55,6 +55,13 @@ Note: this field may return `null`, indicating that no valid value was found.
     private FailOverSettings FailOverSettings;
 
     /**
+    * Caption selector for the input. There can be 0 to 1 audio selectors.
+    */
+    @SerializedName("CaptionSelectors")
+    @Expose
+    private CaptionSelector [] CaptionSelectors;
+
+    /**
      * Get Input ID 
      * @return Id Input ID
      */
@@ -130,6 +137,22 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.FailOverSettings = FailOverSettings;
     }
 
+    /**
+     * Get Caption selector for the input. There can be 0 to 1 audio selectors. 
+     * @return CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+     */
+    public CaptionSelector [] getCaptionSelectors() {
+        return this.CaptionSelectors;
+    }
+
+    /**
+     * Set Caption selector for the input. There can be 0 to 1 audio selectors.
+     * @param CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+     */
+    public void setCaptionSelectors(CaptionSelector [] CaptionSelectors) {
+        this.CaptionSelectors = CaptionSelectors;
+    }
+
     public AttachedInput() {
     }
 
@@ -153,6 +176,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.FailOverSettings != null) {
             this.FailOverSettings = new FailOverSettings(source.FailOverSettings);
         }
+        if (source.CaptionSelectors != null) {
+            this.CaptionSelectors = new CaptionSelector[source.CaptionSelectors.length];
+            for (int i = 0; i < source.CaptionSelectors.length; i++) {
+                this.CaptionSelectors[i] = new CaptionSelector(source.CaptionSelectors[i]);
+            }
+        }
     }
 
 
@@ -164,6 +193,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "AudioSelectors.", this.AudioSelectors);
         this.setParamSimple(map, prefix + "PullBehavior", this.PullBehavior);
         this.setParamObj(map, prefix + "FailOverSettings.", this.FailOverSettings);
+        this.setParamArrayObj(map, prefix + "CaptionSelectors.", this.CaptionSelectors);
 
     }
 }
