@@ -149,6 +149,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to check the permission status.
+     * @param req CheckGrantedPermissionRequest
+     * @return CheckGrantedPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckGrantedPermissionResponse CheckGrantedPermission(CheckGrantedPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckGrantedPermission", CheckGrantedPermissionResponse.class);
+    }
+
+    /**
+     *This API is used to copy a table.
+     * @param req CopyDLCTableRequest
+     * @return CopyDLCTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyDLCTableResponse CopyDLCTable(CopyDLCTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyDLCTable", CopyDLCTableResponse.class);
+    }
+
+    /**
      *This API is used to create metadata acceleration buckets and the binding relationship between products.
      * @param req CreateCHDFSBindingProductRequest
      * @return CreateCHDFSBindingProductResponse
@@ -157,6 +179,17 @@ public class DlcClient extends AbstractClient{
     public CreateCHDFSBindingProductResponse CreateCHDFSBindingProduct(CreateCHDFSBindingProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCHDFSBindingProduct", CreateCHDFSBindingProductResponse.class);
+    }
+
+    /**
+     *This API is used to create a table.
+     * @param req CreateDLCTableRequest
+     * @return CreateDLCTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDLCTableResponse CreateDLCTable(CreateDLCTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDLCTable", CreateDLCTableResponse.class);
     }
 
     /**
@@ -391,6 +424,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the table.
+     * @param req DescribeDLCTableRequest
+     * @return DescribeDLCTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLCTableResponse DescribeDLCTable(DescribeDLCTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLCTable", DescribeDLCTableResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of tables.
+     * @param req DescribeDLCTableListRequest
+     * @return DescribeDLCTableListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLCTableListResponse DescribeDLCTableList(DescribeDLCTableListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLCTableList", DescribeDLCTableListResponse.class);
+    }
+
+    /**
      *This API is used to obtain databases in the DMS metadata module.
      * @param req DescribeDMSDatabaseRequest
      * @return DescribeDMSDatabaseResponse
@@ -399,6 +454,17 @@ public class DlcClient extends AbstractClient{
     public DescribeDMSDatabaseResponse DescribeDMSDatabase(DescribeDMSDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDMSDatabase", DescribeDMSDatabaseResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of databases.
+     * @param req DescribeDMSDatabaseListRequest
+     * @return DescribeDMSDatabaseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDMSDatabaseListResponse DescribeDMSDatabaseList(DescribeDMSDatabaseListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDMSDatabaseList", DescribeDMSDatabaseListResponse.class);
     }
 
     /**
@@ -468,6 +534,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the job information.
+     * @param req DescribeJobRequest
+     * @return DescribeJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJob", DescribeJobResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of job information.
+     * @param req DescribeJobsRequest
+     * @return DescribeJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobs", DescribeJobsResponse.class);
+    }
+
+    /**
      *This API is used to query the summary of a specified directory in a managed storage.
      * @param req DescribeLakeFsDirSummaryRequest
      * @return DescribeLakeFsDirSummaryResponse
@@ -498,6 +586,17 @@ public class DlcClient extends AbstractClient{
     public DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingList(DescribeOtherCHDFSBindingListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOtherCHDFSBindingList", DescribeOtherCHDFSBindingListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the query results.
+     * @param req DescribeQueryRequest
+     * @return DescribeQueryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQueryResponse DescribeQuery(DescribeQueryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQuery", DescribeQueryResponse.class);
     }
 
     /**
@@ -597,6 +696,17 @@ public class DlcClient extends AbstractClient{
     public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTaskResult", DescribeTaskResultResponse.class);
+    }
+
+    /**
+     *This API is used to describe the information on task statistics.
+     * @param req DescribeTaskStatisticsRequest
+     * @return DescribeTaskStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskStatisticsResponse DescribeTaskStatistics(DescribeTaskStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskStatistics", DescribeTaskStatisticsResponse.class);
     }
 
     /**
@@ -729,6 +839,17 @@ public class DlcClient extends AbstractClient{
     public DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(DetachWorkGroupPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DetachWorkGroupPolicy", DetachWorkGroupPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to delete the table.
+     * @param req DropDLCTableRequest
+     * @return DropDLCTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DropDLCTableResponse DropDLCTable(DropDLCTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DropDLCTable", DropDLCTableResponse.class);
     }
 
     /**

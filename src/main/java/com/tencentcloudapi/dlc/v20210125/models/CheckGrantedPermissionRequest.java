@@ -21,46 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmartOptimizerWrittenPolicy extends AbstractModel {
+public class CheckGrantedPermissionRequest extends AbstractModel {
 
     /**
-    * none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Permission check
     */
-    @SerializedName("WrittenEnable")
+    @SerializedName("CheckPermission")
     @Expose
-    private String WrittenEnable;
+    private CheckPermission [] CheckPermission;
 
     /**
-     * Get none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Permission check 
+     * @return CheckPermission Permission check
      */
-    public String getWrittenEnable() {
-        return this.WrittenEnable;
+    public CheckPermission [] getCheckPermission() {
+        return this.CheckPermission;
     }
 
     /**
-     * Set none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Permission check
+     * @param CheckPermission Permission check
      */
-    public void setWrittenEnable(String WrittenEnable) {
-        this.WrittenEnable = WrittenEnable;
+    public void setCheckPermission(CheckPermission [] CheckPermission) {
+        this.CheckPermission = CheckPermission;
     }
 
-    public SmartOptimizerWrittenPolicy() {
+    public CheckGrantedPermissionRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmartOptimizerWrittenPolicy(SmartOptimizerWrittenPolicy source) {
-        if (source.WrittenEnable != null) {
-            this.WrittenEnable = new String(source.WrittenEnable);
+    public CheckGrantedPermissionRequest(CheckGrantedPermissionRequest source) {
+        if (source.CheckPermission != null) {
+            this.CheckPermission = new CheckPermission[source.CheckPermission.length];
+            for (int i = 0; i < source.CheckPermission.length; i++) {
+                this.CheckPermission[i] = new CheckPermission(source.CheckPermission[i]);
+            }
         }
     }
 
@@ -69,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+        this.setParamArrayObj(map, prefix + "CheckPermission.", this.CheckPermission);
 
     }
 }

@@ -52,6 +52,38 @@ public class LakeFsInfo extends AbstractModel {
     private Long CreateTimeStamp;
 
     /**
+    * Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DefaultBucket")
+    @Expose
+    private Long DefaultBucket;
+
+    /**
+    * Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ShortName")
+    @Expose
+    private String ShortName;
+
+    /**
+    * Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get Managed storage name 
      * @return Name Managed storage name
      */
@@ -115,6 +147,86 @@ public class LakeFsInfo extends AbstractModel {
         this.CreateTimeStamp = CreateTimeStamp;
     }
 
+    /**
+     * Get Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DefaultBucket Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDefaultBucket() {
+        return this.DefaultBucket;
+    }
+
+    /**
+     * Set Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DefaultBucket Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDefaultBucket(Long DefaultBucket) {
+        this.DefaultBucket = DefaultBucket;
+    }
+
+    /**
+     * Get Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ShortName Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getShortName() {
+        return this.ShortName;
+    }
+
+    /**
+     * Set Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ShortName Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setShortName(String ShortName) {
+        this.ShortName = ShortName;
+    }
+
+    /**
+     * Get Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Description Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Description Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public LakeFsInfo() {
     }
 
@@ -135,6 +247,18 @@ public class LakeFsInfo extends AbstractModel {
         if (source.CreateTimeStamp != null) {
             this.CreateTimeStamp = new Long(source.CreateTimeStamp);
         }
+        if (source.DefaultBucket != null) {
+            this.DefaultBucket = new Long(source.DefaultBucket);
+        }
+        if (source.ShortName != null) {
+            this.ShortName = new String(source.ShortName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -146,6 +270,10 @@ public class LakeFsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SpaceUsedSize", this.SpaceUsedSize);
         this.setParamSimple(map, prefix + "CreateTimeStamp", this.CreateTimeStamp);
+        this.setParamSimple(map, prefix + "DefaultBucket", this.DefaultBucket);
+        this.setParamSimple(map, prefix + "ShortName", this.ShortName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

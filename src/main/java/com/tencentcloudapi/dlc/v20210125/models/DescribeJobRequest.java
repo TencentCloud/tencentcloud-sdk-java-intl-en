@@ -21,46 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmartOptimizerWrittenPolicy extends AbstractModel {
+public class DescribeJobRequest extends AbstractModel {
 
     /**
-    * none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Job ID
     */
-    @SerializedName("WrittenEnable")
+    @SerializedName("JobId")
     @Expose
-    private String WrittenEnable;
+    private String JobId;
 
     /**
-     * Get none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Job ID 
+     * @return JobId Job ID
      */
-    public String getWrittenEnable() {
-        return this.WrittenEnable;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Job ID
+     * @param JobId Job ID
      */
-    public void setWrittenEnable(String WrittenEnable) {
-        this.WrittenEnable = WrittenEnable;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public SmartOptimizerWrittenPolicy() {
+    public DescribeJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmartOptimizerWrittenPolicy(SmartOptimizerWrittenPolicy source) {
-        if (source.WrittenEnable != null) {
-            this.WrittenEnable = new String(source.WrittenEnable);
+    public DescribeJobRequest(DescribeJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -69,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

@@ -21,46 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmartOptimizerWrittenPolicy extends AbstractModel {
+public class DescribeQueryRequest extends AbstractModel {
 
     /**
-    * none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID
     */
-    @SerializedName("WrittenEnable")
+    @SerializedName("TaskId")
     @Expose
-    private String WrittenEnable;
+    private String TaskId;
 
     /**
-     * Get none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID 
+     * @return TaskId Task ID
      */
-    public String getWrittenEnable() {
-        return this.WrittenEnable;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID
+     * @param TaskId Task ID
      */
-    public void setWrittenEnable(String WrittenEnable) {
-        this.WrittenEnable = WrittenEnable;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
-    public SmartOptimizerWrittenPolicy() {
+    public DescribeQueryRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmartOptimizerWrittenPolicy(SmartOptimizerWrittenPolicy source) {
-        if (source.WrittenEnable != null) {
-            this.WrittenEnable = new String(source.WrittenEnable);
+    public DescribeQueryRequest(DescribeQueryRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
     }
 
@@ -69,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

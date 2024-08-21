@@ -21,170 +21,201 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmartOptimizerLifecyclePolicy extends AbstractModel {
+public class ResourceBaseInfo extends AbstractModel {
 
     /**
-    * Enable the lifecycle
+    * Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("LifecycleEnable")
+    @SerializedName("Catalog")
     @Expose
-    private String LifecycleEnable;
+    private String Catalog;
 
     /**
-    * Expiration time
+    * Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Expiration")
+    @SerializedName("Schema")
     @Expose
-    private Long Expiration;
+    private String Schema;
 
     /**
-    * Whether to delete the table
+    * Table name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("DropTable")
+    @SerializedName("Table")
     @Expose
-    private Boolean DropTable;
+    private String Table;
 
     /**
-    * Expired fields
+    * View name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ExpiredField")
+    @SerializedName("View")
     @Expose
-    private String ExpiredField;
+    private String View;
 
     /**
-    * Expired field format
+    * Database name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ExpiredFieldFormat")
+    @SerializedName("Database")
     @Expose
-    private String ExpiredFieldFormat;
+    private String Database;
 
     /**
-     * Get Enable the lifecycle
+    * Function name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Function")
+    @Expose
+    private String Function;
+
+    /**
+     * Get Catalog name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LifecycleEnable Enable the lifecycle
+     * @return Catalog Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getLifecycleEnable() {
-        return this.LifecycleEnable;
+    public String getCatalog() {
+        return this.Catalog;
     }
 
     /**
-     * Set Enable the lifecycle
+     * Set Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LifecycleEnable Enable the lifecycle
+     * @param Catalog Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setLifecycleEnable(String LifecycleEnable) {
-        this.LifecycleEnable = LifecycleEnable;
+    public void setCatalog(String Catalog) {
+        this.Catalog = Catalog;
     }
 
     /**
-     * Get Expiration time
+     * Get Schema name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Expiration Expiration time
+     * @return Schema Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Long getExpiration() {
-        return this.Expiration;
+    public String getSchema() {
+        return this.Schema;
     }
 
     /**
-     * Set Expiration time
+     * Set Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Expiration Expiration time
+     * @param Schema Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setExpiration(Long Expiration) {
-        this.Expiration = Expiration;
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
     }
 
     /**
-     * Get Whether to delete the table
+     * Get Table name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DropTable Whether to delete the table
+     * @return Table Table name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Boolean getDropTable() {
-        return this.DropTable;
+    public String getTable() {
+        return this.Table;
     }
 
     /**
-     * Set Whether to delete the table
+     * Set Table name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DropTable Whether to delete the table
+     * @param Table Table name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setDropTable(Boolean DropTable) {
-        this.DropTable = DropTable;
+    public void setTable(String Table) {
+        this.Table = Table;
     }
 
     /**
-     * Get Expired fields
+     * Get View name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpiredField Expired fields
+     * @return View View name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getExpiredField() {
-        return this.ExpiredField;
+    public String getView() {
+        return this.View;
     }
 
     /**
-     * Set Expired fields
+     * Set View name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpiredField Expired fields
+     * @param View View name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setExpiredField(String ExpiredField) {
-        this.ExpiredField = ExpiredField;
+    public void setView(String View) {
+        this.View = View;
     }
 
     /**
-     * Get Expired field format
+     * Get Database name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpiredFieldFormat Expired field format
+     * @return Database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getExpiredFieldFormat() {
-        return this.ExpiredFieldFormat;
+    public String getDatabase() {
+        return this.Database;
     }
 
     /**
-     * Set Expired field format
+     * Set Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpiredFieldFormat Expired field format
+     * @param Database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setExpiredFieldFormat(String ExpiredFieldFormat) {
-        this.ExpiredFieldFormat = ExpiredFieldFormat;
+    public void setDatabase(String Database) {
+        this.Database = Database;
     }
 
-    public SmartOptimizerLifecyclePolicy() {
+    /**
+     * Get Function name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Function Function name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getFunction() {
+        return this.Function;
+    }
+
+    /**
+     * Set Function name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Function Function name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFunction(String Function) {
+        this.Function = Function;
+    }
+
+    public ResourceBaseInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmartOptimizerLifecyclePolicy(SmartOptimizerLifecyclePolicy source) {
-        if (source.LifecycleEnable != null) {
-            this.LifecycleEnable = new String(source.LifecycleEnable);
+    public ResourceBaseInfo(ResourceBaseInfo source) {
+        if (source.Catalog != null) {
+            this.Catalog = new String(source.Catalog);
         }
-        if (source.Expiration != null) {
-            this.Expiration = new Long(source.Expiration);
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
         }
-        if (source.DropTable != null) {
-            this.DropTable = new Boolean(source.DropTable);
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
         }
-        if (source.ExpiredField != null) {
-            this.ExpiredField = new String(source.ExpiredField);
+        if (source.View != null) {
+            this.View = new String(source.View);
         }
-        if (source.ExpiredFieldFormat != null) {
-            this.ExpiredFieldFormat = new String(source.ExpiredFieldFormat);
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.Function != null) {
+            this.Function = new String(source.Function);
         }
     }
 
@@ -193,11 +224,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LifecycleEnable", this.LifecycleEnable);
-        this.setParamSimple(map, prefix + "Expiration", this.Expiration);
-        this.setParamSimple(map, prefix + "DropTable", this.DropTable);
-        this.setParamSimple(map, prefix + "ExpiredField", this.ExpiredField);
-        this.setParamSimple(map, prefix + "ExpiredFieldFormat", this.ExpiredFieldFormat);
+        this.setParamSimple(map, prefix + "Catalog", this.Catalog);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "Table", this.Table);
+        this.setParamSimple(map, prefix + "View", this.View);
+        this.setParamSimple(map, prefix + "Database", this.Database);
+        this.setParamSimple(map, prefix + "Function", this.Function);
 
     }
 }

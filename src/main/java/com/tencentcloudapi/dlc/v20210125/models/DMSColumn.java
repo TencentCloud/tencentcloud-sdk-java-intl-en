@@ -21,10 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TColumn extends AbstractModel {
+public class DMSColumn extends AbstractModel {
 
     /**
-    * Field name
+    * Name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
@@ -32,7 +32,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Name;
 
     /**
-    * Field type
+    * Description
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * Type
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -40,48 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * Field description
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Comment")
-    @Expose
-    private String Comment;
-
-    /**
-    * Field default values
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Default")
-    @Expose
-    private String Default;
-
-    /**
-    * Is the field non-empty?
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("NotNull")
-    @Expose
-    private Boolean NotNull;
-
-    /**
-    * Indicate the length of the entire numeric with a value of 1-38
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Precision")
-    @Expose
-    private Long Precision;
-
-    /**
-    * Indicates the length of the decimal part.
-Scale is smaller than Precision.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Scale")
-    @Expose
-    private Long Scale;
-
-    /**
-    * Field position: Fields with smaller values need to be placed first.
+    * Sort
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Position")
@@ -89,7 +56,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Position;
 
     /**
-    * Whether it is a partition field
+    * Additional Parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Params")
+    @Expose
+    private KVPair [] Params;
+
+    /**
+    * Business parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BizParams")
+    @Expose
+    private KVPair [] BizParams;
+
+    /**
+    * Whether partitioned
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsPartition")
@@ -97,9 +80,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsPartition;
 
     /**
-     * Get Field name
+     * Get Name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Field name
+     * @return Name Name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
@@ -107,9 +90,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Field name
+     * Set Name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Field name
+     * @param Name Name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
@@ -117,9 +100,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Field type
+     * Get Description
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Field type
+     * @return Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get Type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Type Type
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -127,9 +130,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Field type
+     * Set Type
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Field type
+     * @param Type Type
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
@@ -137,113 +140,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Field description
+     * Get Sort
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Comment Field description
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getComment() {
-        return this.Comment;
-    }
-
-    /**
-     * Set Field description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Comment Field description
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setComment(String Comment) {
-        this.Comment = Comment;
-    }
-
-    /**
-     * Get Field default values
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Default Field default values
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getDefault() {
-        return this.Default;
-    }
-
-    /**
-     * Set Field default values
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Default Field default values
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDefault(String Default) {
-        this.Default = Default;
-    }
-
-    /**
-     * Get Is the field non-empty?
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NotNull Is the field non-empty?
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public Boolean getNotNull() {
-        return this.NotNull;
-    }
-
-    /**
-     * Set Is the field non-empty?
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NotNull Is the field non-empty?
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setNotNull(Boolean NotNull) {
-        this.NotNull = NotNull;
-    }
-
-    /**
-     * Get Indicate the length of the entire numeric with a value of 1-38
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Precision Indicate the length of the entire numeric with a value of 1-38
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getPrecision() {
-        return this.Precision;
-    }
-
-    /**
-     * Set Indicate the length of the entire numeric with a value of 1-38
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Precision Indicate the length of the entire numeric with a value of 1-38
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setPrecision(Long Precision) {
-        this.Precision = Precision;
-    }
-
-    /**
-     * Get Indicates the length of the decimal part.
-Scale is smaller than Precision.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Scale Indicates the length of the decimal part.
-Scale is smaller than Precision.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getScale() {
-        return this.Scale;
-    }
-
-    /**
-     * Set Indicates the length of the decimal part.
-Scale is smaller than Precision.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Scale Indicates the length of the decimal part.
-Scale is smaller than Precision.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setScale(Long Scale) {
-        this.Scale = Scale;
-    }
-
-    /**
-     * Get Field position: Fields with smaller values need to be placed first.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Position Field position: Fields with smaller values need to be placed first.
+     * @return Position Sort
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPosition() {
@@ -251,9 +150,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Field position: Fields with smaller values need to be placed first.
+     * Set Sort
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Position Field position: Fields with smaller values need to be placed first.
+     * @param Position Sort
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPosition(Long Position) {
@@ -261,9 +160,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether it is a partition field
+     * Get Additional Parameters
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsPartition Whether it is a partition field
+     * @return Params Additional Parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public KVPair [] getParams() {
+        return this.Params;
+    }
+
+    /**
+     * Set Additional Parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Params Additional Parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setParams(KVPair [] Params) {
+        this.Params = Params;
+    }
+
+    /**
+     * Get Business parameters
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BizParams Business parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public KVPair [] getBizParams() {
+        return this.BizParams;
+    }
+
+    /**
+     * Set Business parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BizParams Business parameters
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBizParams(KVPair [] BizParams) {
+        this.BizParams = BizParams;
+    }
+
+    /**
+     * Get Whether partitioned
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsPartition Whether partitioned
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsPartition() {
@@ -271,46 +210,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether it is a partition field
+     * Set Whether partitioned
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsPartition Whether it is a partition field
+     * @param IsPartition Whether partitioned
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsPartition(Boolean IsPartition) {
         this.IsPartition = IsPartition;
     }
 
-    public TColumn() {
+    public DMSColumn() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TColumn(TColumn source) {
+    public DMSColumn(DMSColumn source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
-        if (source.Comment != null) {
-            this.Comment = new String(source.Comment);
-        }
-        if (source.Default != null) {
-            this.Default = new String(source.Default);
-        }
-        if (source.NotNull != null) {
-            this.NotNull = new Boolean(source.NotNull);
-        }
-        if (source.Precision != null) {
-            this.Precision = new Long(source.Precision);
-        }
-        if (source.Scale != null) {
-            this.Scale = new Long(source.Scale);
-        }
         if (source.Position != null) {
             this.Position = new Long(source.Position);
+        }
+        if (source.Params != null) {
+            this.Params = new KVPair[source.Params.length];
+            for (int i = 0; i < source.Params.length; i++) {
+                this.Params[i] = new KVPair(source.Params[i]);
+            }
+        }
+        if (source.BizParams != null) {
+            this.BizParams = new KVPair[source.BizParams.length];
+            for (int i = 0; i < source.BizParams.length; i++) {
+                this.BizParams[i] = new KVPair(source.BizParams[i]);
+            }
         }
         if (source.IsPartition != null) {
             this.IsPartition = new Boolean(source.IsPartition);
@@ -323,13 +262,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Comment", this.Comment);
-        this.setParamSimple(map, prefix + "Default", this.Default);
-        this.setParamSimple(map, prefix + "NotNull", this.NotNull);
-        this.setParamSimple(map, prefix + "Precision", this.Precision);
-        this.setParamSimple(map, prefix + "Scale", this.Scale);
         this.setParamSimple(map, prefix + "Position", this.Position);
+        this.setParamArrayObj(map, prefix + "Params.", this.Params);
+        this.setParamArrayObj(map, prefix + "BizParams.", this.BizParams);
         this.setParamSimple(map, prefix + "IsPartition", this.IsPartition);
 
     }

@@ -21,46 +21,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmartOptimizerWrittenPolicy extends AbstractModel {
+public class DMSColumnOrder extends AbstractModel {
 
     /**
-    * none/enable/disable/default
+    * Column name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("WrittenEnable")
+    @SerializedName("Col")
     @Expose
-    private String WrittenEnable;
+    private String Col;
 
     /**
-     * Get none/enable/disable/default
+    * Sort
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Order")
+    @Expose
+    private Long Order;
+
+    /**
+     * Get Column name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WrittenEnable none/enable/disable/default
+     * @return Col Column name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getWrittenEnable() {
-        return this.WrittenEnable;
+    public String getCol() {
+        return this.Col;
     }
 
     /**
-     * Set none/enable/disable/default
+     * Set Column name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WrittenEnable none/enable/disable/default
+     * @param Col Column name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setWrittenEnable(String WrittenEnable) {
-        this.WrittenEnable = WrittenEnable;
+    public void setCol(String Col) {
+        this.Col = Col;
     }
 
-    public SmartOptimizerWrittenPolicy() {
+    /**
+     * Get Sort
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Order Sort
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Sort
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Order Sort
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    public DMSColumnOrder() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmartOptimizerWrittenPolicy(SmartOptimizerWrittenPolicy source) {
-        if (source.WrittenEnable != null) {
-            this.WrittenEnable = new String(source.WrittenEnable);
+    public DMSColumnOrder(DMSColumnOrder source) {
+        if (source.Col != null) {
+            this.Col = new String(source.Col);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
         }
     }
 
@@ -69,7 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+        this.setParamSimple(map, prefix + "Col", this.Col);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }
