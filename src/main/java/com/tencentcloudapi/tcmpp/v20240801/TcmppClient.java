@@ -39,7 +39,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add users to a team
+     *This API is used to add a team member.
      * @param req AddTeamMemberRequest
      * @return AddTeamMemberResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,18 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add an application
+     *This API is used to configure the preview version of a mini program.
+     * @param req ConfigureMNPPreviewRequest
+     * @return ConfigureMNPPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfigureMNPPreviewResponse ConfigureMNPPreview(ConfigureMNPPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConfigureMNPPreview", ConfigureMNPPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to create an application.
      * @param req CreateApplicationRequest
      * @return CreateApplicationResponse
      * @throws TencentCloudSDKException
@@ -72,7 +83,18 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add new mini program version to the console
+     *This API is used to create a sensitive API of an application.
+     * @param req CreateApplicationSensitiveAPIRequest
+     * @return CreateApplicationSensitiveAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationSensitiveAPIResponse CreateApplicationSensitiveAPI(CreateApplicationSensitiveAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApplicationSensitiveAPI", CreateApplicationSensitiveAPIResponse.class);
+    }
+
+    /**
+     *This API is used to add a new mini program version
      * @param req CreateConsoleMNPVersionCompileTaskRequest
      * @return CreateConsoleMNPVersionCompileTaskResponse
      * @throws TencentCloudSDKException
@@ -105,6 +127,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a global domain allowlist or blocklist.
+     * @param req CreateGlobalDomainACLRequest
+     * @return CreateGlobalDomainACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalDomainACLResponse CreateGlobalDomainACL(CreateGlobalDomainACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalDomainACL", CreateGlobalDomainACLResponse.class);
+    }
+
+    /**
      *This API is used to create a mini program
      * @param req CreateMNPRequest
      * @return CreateMNPResponse
@@ -113,6 +146,50 @@ public class TcmppClient extends AbstractClient{
     public CreateMNPResponse CreateMNP(CreateMNPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMNP", CreateMNPResponse.class);
+    }
+
+    /**
+     *This API is used to create a mini program approval request.
+     * @param req CreateMNPApprovalRequest
+     * @return CreateMNPApprovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPApprovalResponse CreateMNPApproval(CreateMNPApprovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPApproval", CreateMNPApprovalResponse.class);
+    }
+
+    /**
+     *This API is used to add a domain name to the allowlist/blocklist of a mini program.
+     * @param req CreateMNPDomainACLRequest
+     * @return CreateMNPDomainACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPDomainACLResponse CreateMNPDomainACL(CreateMNPDomainACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPDomainACL", CreateMNPDomainACLResponse.class);
+    }
+
+    /**
+     *This API is used to create a permission request to allow a mini program calling sensitive APIs.
+     * @param req CreateMNPSensitiveAPIPermissionApprovalRequest
+     * @return CreateMNPSensitiveAPIPermissionApprovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPSensitiveAPIPermissionApprovalResponse CreateMNPSensitiveAPIPermissionApproval(CreateMNPSensitiveAPIPermissionApprovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPSensitiveAPIPermissionApproval", CreateMNPSensitiveAPIPermissionApprovalResponse.class);
+    }
+
+    /**
+     *This API is used to create a mini program version.
+     * @param req CreateMNPVersionRequest
+     * @return CreateMNPVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPVersionResponse CreateMNPVersion(CreateMNPVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPVersion", CreateMNPVersionResponse.class);
     }
 
     /**
@@ -160,7 +237,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to apply for sensitive API call permissions
+     *This API is used to apply for sensitive API permissions
      * @param req CreateSensitiveApiApplyRequest
      * @return CreateSensitiveApiApplyResponse
      * @throws TencentCloudSDKException
@@ -171,7 +248,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a team
+     *This API is used to create a team.
      * @param req CreateTeamRequest
      * @return CreateTeamResponse
      * @throws TencentCloudSDKException
@@ -215,6 +292,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a sensitive API.
+     * @param req DeleteApplicationSensitiveAPIRequest
+     * @return DeleteApplicationSensitiveAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationSensitiveAPIResponse DeleteApplicationSensitiveAPI(DeleteApplicationSensitiveAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApplicationSensitiveAPI", DeleteApplicationSensitiveAPIResponse.class);
+    }
+
+    /**
      *This API is used to delete domains from allowlist or blocklist
      * @param req DeleteGlobalDomainRequest
      * @return DeleteGlobalDomainResponse
@@ -237,7 +325,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a sensitive API
+     *This API is used to delete sensitive API
      * @param req DeleteSensitiveAPIRequest
      * @return DeleteSensitiveAPIResponse
      * @throws TencentCloudSDKException
@@ -281,7 +369,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query application details
+     *This API is used to query details of an application. 
      * @param req DescribeApplicationRequest
      * @return DescribeApplicationResponse
      * @throws TencentCloudSDKException
@@ -303,7 +391,18 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query application list data
+     *This API is used to query the configuration files of an application.
+     * @param req DescribeApplicationConfigFileRequest
+     * @return DescribeApplicationConfigFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationConfigFileResponse DescribeApplicationConfigFile(DescribeApplicationConfigFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationConfigFile", DescribeApplicationConfigFileResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of application. 
      * @param req DescribeApplicationListRequest
      * @return DescribeApplicationListResponse
      * @throws TencentCloudSDKException
@@ -325,7 +424,18 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query if the mini program version is uploaded successfully
+     *This API is used to list sensitive APIs of an application. 
+     * @param req DescribeApplicationSensitiveAPIListRequest
+     * @return DescribeApplicationSensitiveAPIListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationSensitiveAPIListResponse DescribeApplicationSensitiveAPIList(DescribeApplicationSensitiveAPIListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationSensitiveAPIList", DescribeApplicationSensitiveAPIListResponse.class);
+    }
+
+    /**
+     *This API is used to query if the mini program version is created successfully
      * @param req DescribeConsoleMNPVersionCompileTaskRequest
      * @return DescribeConsoleMNPVersionCompileTaskResponse
      * @throws TencentCloudSDKException
@@ -358,6 +468,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the global domain allowlist and blocklist.
+     * @param req DescribeGlobalDomainACLRequest
+     * @return DescribeGlobalDomainACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalDomainACLResponse DescribeGlobalDomainACL(DescribeGlobalDomainACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalDomainACL", DescribeGlobalDomainACLResponse.class);
+    }
+
+    /**
      *This API is used to query domain allowlist and blocklist
      * @param req DescribeGlobalDomainListRequest
      * @return DescribeGlobalDomainListResponse
@@ -366,6 +487,39 @@ public class TcmppClient extends AbstractClient{
     public DescribeGlobalDomainListResponse DescribeGlobalDomainList(DescribeGlobalDomainListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGlobalDomainList", DescribeGlobalDomainListResponse.class);
+    }
+
+    /**
+     *This API is used to query details of a mini program. 
+     * @param req DescribeMNPRequest
+     * @return DescribeMNPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPResponse DescribeMNP(DescribeMNPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNP", DescribeMNPResponse.class);
+    }
+
+    /**
+     *This API is used to query the mini program version management information
+     * @param req DescribeMNPAllStageVersionsRequest
+     * @return DescribeMNPAllStageVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPAllStageVersionsResponse DescribeMNPAllStageVersions(DescribeMNPAllStageVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPAllStageVersions", DescribeMNPAllStageVersionsResponse.class);
+    }
+
+    /**
+     *This API is used to list the approval requests related with a mini program version.
+     * @param req DescribeMNPApprovalListRequest
+     * @return DescribeMNPApprovalListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPApprovalListResponse DescribeMNPApprovalList(DescribeMNPApprovalListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPApprovalList", DescribeMNPApprovalListResponse.class);
     }
 
     /**
@@ -380,6 +534,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of mini program types.
+     * @param req DescribeMNPCategoryRequest
+     * @return DescribeMNPCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPCategoryResponse DescribeMNPCategory(DescribeMNPCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPCategory", DescribeMNPCategoryResponse.class);
+    }
+
+    /**
      *This API is used to query mini program details
      * @param req DescribeMNPDetailRequest
      * @return DescribeMNPDetailResponse
@@ -388,6 +553,28 @@ public class TcmppClient extends AbstractClient{
     public DescribeMNPDetailResponse DescribeMNPDetail(DescribeMNPDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNPDetail", DescribeMNPDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the domain name allowlist / blocklist of a mini program. 
+     * @param req DescribeMNPDomainACLRequest
+     * @return DescribeMNPDomainACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPDomainACLResponse DescribeMNPDomainACL(DescribeMNPDomainACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPDomainACL", DescribeMNPDomainACLResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of mini programs.
+     * @param req DescribeMNPListRequest
+     * @return DescribeMNPListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPListResponse DescribeMNPList(DescribeMNPListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPList", DescribeMNPListResponse.class);
     }
 
     /**
@@ -413,6 +600,28 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *DescribeMNPOfflinePackageURL
+     * @param req DescribeMNPOfflinePackageURLRequest
+     * @return DescribeMNPOfflinePackageURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPOfflinePackageURLResponse DescribeMNPOfflinePackageURL(DescribeMNPOfflinePackageURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPOfflinePackageURL", DescribeMNPOfflinePackageURLResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of a mini program preview version.
+     * @param req DescribeMNPPreviewRequest
+     * @return DescribeMNPPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPPreviewResponse DescribeMNPPreview(DescribeMNPPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPPreview", DescribeMNPPreviewResponse.class);
+    }
+
+    /**
      *This API is used to query the details filled in the service description
      * @param req DescribeMNPPrivacyRequest
      * @return DescribeMNPPrivacyResponse
@@ -421,6 +630,50 @@ public class TcmppClient extends AbstractClient{
     public DescribeMNPPrivacyResponse DescribeMNPPrivacy(DescribeMNPPrivacyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNPPrivacy", DescribeMNPPrivacyResponse.class);
+    }
+
+    /**
+     *This API is used to list all released versions of a mini program.
+     * @param req DescribeMNPReleasedVersionHistoryRequest
+     * @return DescribeMNPReleasedVersionHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPReleasedVersionHistoryResponse DescribeMNPReleasedVersionHistory(DescribeMNPReleasedVersionHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPReleasedVersionHistory", DescribeMNPReleasedVersionHistoryResponse.class);
+    }
+
+    /**
+     *This API is used to query details of a specific permission request to call sensitive APIs.
+     * @param req DescribeMNPSensitiveAPIPermissionApprovalRequest
+     * @return DescribeMNPSensitiveAPIPermissionApprovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSensitiveAPIPermissionApprovalResponse DescribeMNPSensitiveAPIPermissionApproval(DescribeMNPSensitiveAPIPermissionApprovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSensitiveAPIPermissionApproval", DescribeMNPSensitiveAPIPermissionApprovalResponse.class);
+    }
+
+    /**
+     *This API is used to query permission requests to allow a mini program calling sensitive APIs.
+     * @param req DescribeMNPSensitiveAPIPermissionApprovalListRequest
+     * @return DescribeMNPSensitiveAPIPermissionApprovalListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSensitiveAPIPermissionApprovalListResponse DescribeMNPSensitiveAPIPermissionApprovalList(DescribeMNPSensitiveAPIPermissionApprovalListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSensitiveAPIPermissionApprovalList", DescribeMNPSensitiveAPIPermissionApprovalListResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of sensitive APIs that available to a mini program.
+     * @param req DescribeMNPSensitiveAPIPermissionListRequest
+     * @return DescribeMNPSensitiveAPIPermissionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSensitiveAPIPermissionListResponse DescribeMNPSensitiveAPIPermissionList(DescribeMNPSensitiveAPIPermissionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSensitiveAPIPermissionList", DescribeMNPSensitiveAPIPermissionListResponse.class);
     }
 
     /**
@@ -435,7 +688,18 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the details of the mini program trial version
+     *This API is used to query the result of the task to create a mini program version.
+     * @param req DescribeMNPVersionRequest
+     * @return DescribeMNPVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPVersionResponse DescribeMNPVersion(DescribeMNPVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPVersion", DescribeMNPVersionResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of the mini program preview version
      * @param req DescribeMNPVersionPreviewRequest
      * @return DescribeMNPVersionPreviewResponse
      * @throws TencentCloudSDKException
@@ -457,7 +721,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the current release version of the mini program
+     *This API is used to query the release version history
      * @param req DescribeOnlineVersionRequest
      * @return DescribeOnlineVersionResponse
      * @throws TencentCloudSDKException
@@ -479,7 +743,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query role list data
+     *This API is used to query the list of roles. 
      * @param req DescribeRoleListRequest
      * @return DescribeRoleListResponse
      * @throws TencentCloudSDKException
@@ -512,7 +776,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query sensitive API call details
+     *This API is used to query sensitive API permission approval details
      * @param req DescribeSensitiveApiApplyDetailRequest
      * @return DescribeSensitiveApiApplyDetailResponse
      * @throws TencentCloudSDKException
@@ -523,7 +787,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the sensitive APIs that require permission
+     *This API is used to query the sensitive API permission list
      * @param req DescribeSensitiveApiAuthListRequest
      * @return DescribeSensitiveApiAuthListResponse
      * @throws TencentCloudSDKException
@@ -556,7 +820,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query team details
+     *This API is used to query details of a team. 
      * @param req DescribeTeamRequest
      * @return DescribeTeamResponse
      * @throws TencentCloudSDKException
@@ -578,7 +842,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the team list that can be viewed by the current role permissions
+     *This API is used to query the list of teams. 
      * @param req DescribeTeamListRequest
      * @return DescribeTeamListResponse
      * @throws TencentCloudSDKException
@@ -622,6 +886,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query details of a user. 
+     * @param req DescribeUserRequest
+     * @return DescribeUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUser", DescribeUserResponse.class);
+    }
+
+    /**
      *This API is used to query user details
      * @param req DescribeUserDetailRequest
      * @return DescribeUserDetailResponse
@@ -644,6 +919,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to set a sensitive API to Restricted.
+     * @param req DisableApplicationSensitiveAPIRequest
+     * @return DisableApplicationSensitiveAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableApplicationSensitiveAPIResponse DisableApplicationSensitiveAPI(DisableApplicationSensitiveAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableApplicationSensitiveAPI", DisableApplicationSensitiveAPIResponse.class);
+    }
+
+    /**
      *This API is used to disable the company’s domain name that obtained the ICP filing
      * @param req DisableTeamDomainRequest
      * @return DisableTeamDomainResponse
@@ -652,6 +938,17 @@ public class TcmppClient extends AbstractClient{
     public DisableTeamDomainResponse DisableTeamDomain(DisableTeamDomainRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableTeamDomain", DisableTeamDomainResponse.class);
+    }
+
+    /**
+     *This API is used to set an application sensitive API to public.
+     * @param req EnableApplicationSensitiveAPIRequest
+     * @return EnableApplicationSensitiveAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableApplicationSensitiveAPIResponse EnableApplicationSensitiveAPI(EnableApplicationSensitiveAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableApplicationSensitiveAPI", EnableApplicationSensitiveAPIResponse.class);
     }
 
     /**
@@ -721,6 +1018,17 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
+     *This API is used to edit the mini program domain information.
+     * @param req ModifyMNPDomainRequest
+     * @return ModifyMNPDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMNPDomainResponse ModifyMNPDomain(ModifyMNPDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMNPDomain", ModifyMNPDomainResponse.class);
+    }
+
+    /**
      *This API is used to remove the mini program
      * @param req ModifyMNPStatusOfflineRequest
      * @return ModifyMNPStatusOfflineResponse
@@ -732,7 +1040,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to configure the mini program trial version
+     *This API is used to configure the mini program preview version
      * @param req ModifyMNPVersionPreviewRequest
      * @return ModifyMNPVersionPreviewResponse
      * @throws TencentCloudSDKException
@@ -754,7 +1062,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to approve the release of the mini program version
+     *This API is used to approve or reject the release of the mini program version
      * @param req ModifyPlatformAuditStatusRequest
      * @return ModifyPlatformAuditStatusResponse
      * @throws TencentCloudSDKException
@@ -765,7 +1073,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to approve sensitive API call permission
+     *This API is used to approve or reject the sensitive API permission application
      * @param req ModifySensitiveAPIAuditStatusRequest
      * @return ModifySensitiveAPIAuditStatusResponse
      * @throws TencentCloudSDKException
@@ -787,7 +1095,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to change team member roles
+     *This API is used to modify team member information.
      * @param req ModifyTeamMemberRequest
      * @return ModifyTeamMemberResponse
      * @throws TencentCloudSDKException
@@ -798,7 +1106,7 @@ public class TcmppClient extends AbstractClient{
     }
 
     /**
-     *This API is used to edit user information
+     *This API is used to modify user information.
      * @param req ModifyUserRequest
      * @return ModifyUserResponse
      * @throws TencentCloudSDKException
@@ -817,6 +1125,61 @@ public class TcmppClient extends AbstractClient{
     public ModifyUserPasswordResponse ModifyUserPassword(ModifyUserPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserPassword", ModifyUserPasswordResponse.class);
+    }
+
+    /**
+     *This API is used to approve or reject the release of a mini program version.
+     * @param req ProcessMNPApprovalRequest
+     * @return ProcessMNPApprovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessMNPApprovalResponse ProcessMNPApproval(ProcessMNPApprovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessMNPApproval", ProcessMNPApprovalResponse.class);
+    }
+
+    /**
+     *This API is used to approve or reject the sensitive API permission application. 
+     * @param req ProcessMNPSensitiveAPIPermissionApprovalRequest
+     * @return ProcessMNPSensitiveAPIPermissionApprovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessMNPSensitiveAPIPermissionApprovalResponse ProcessMNPSensitiveAPIPermissionApproval(ProcessMNPSensitiveAPIPermissionApprovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessMNPSensitiveAPIPermissionApproval", ProcessMNPSensitiveAPIPermissionApprovalResponse.class);
+    }
+
+    /**
+     *This API is used to release a mini program version.
+     * @param req ReleaseMNPVersionRequest
+     * @return ReleaseMNPVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseMNPVersionResponse ReleaseMNPVersion(ReleaseMNPVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseMNPVersion", ReleaseMNPVersionResponse.class);
+    }
+
+    /**
+     *This API is used to remove a mini program.
+     * @param req RemoveMNPRequest
+     * @return RemoveMNPResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveMNPResponse RemoveMNP(RemoveMNPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveMNP", RemoveMNPResponse.class);
+    }
+
+    /**
+     *This API is used to rollback a mini program online version.
+     * @param req RollbackMNPVersionRequest
+     * @return RollbackMNPVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackMNPVersionResponse RollbackMNPVersion(RollbackMNPVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RollbackMNPVersion", RollbackMNPVersionResponse.class);
     }
 
 }

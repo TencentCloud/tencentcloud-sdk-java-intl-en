@@ -80,6 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Status;
 
     /**
+    * Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TeamName")
+    @Expose
+    private String TeamName;
+
+    /**
      * Get User ID
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return UserId User ID
@@ -124,7 +132,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Teams Associated team
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getTeams() {
         return this.Teams;
     }
@@ -134,7 +144,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Teams Associated team
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setTeams(String Teams) {
         this.Teams = Teams;
     }
@@ -219,6 +231,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Status = Status;
     }
 
+    /**
+     * Get Team name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TeamName Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTeamName() {
+        return this.TeamName;
+    }
+
+    /**
+     * Set Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TeamName Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTeamName(String TeamName) {
+        this.TeamName = TeamName;
+    }
+
     public DescribeUserListData() {
     }
 
@@ -248,6 +280,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.TeamName != null) {
+            this.TeamName = new String(source.TeamName);
+        }
     }
 
 
@@ -262,6 +297,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TeamName", this.TeamName);
 
     }
 }

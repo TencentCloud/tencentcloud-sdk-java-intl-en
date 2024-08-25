@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateSensitiveApiApplyResponse extends AbstractModel {
 
     /**
-    * Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Response data
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Data Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ResourceIdStringInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set Response data
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Data Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(ResourceIdStringInfo Data) {
         this.Data = Data;

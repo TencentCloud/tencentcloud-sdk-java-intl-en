@@ -52,6 +52,13 @@ public class ModifyUserRequest extends AbstractModel {
     private String PlatformId;
 
     /**
+    * Account
+    */
+    @SerializedName("UserAccount")
+    @Expose
+    private String UserAccount;
+
+    /**
      * Get User ID 
      * @return UserId User ID
      */
@@ -115,6 +122,26 @@ public class ModifyUserRequest extends AbstractModel {
         this.PlatformId = PlatformId;
     }
 
+    /**
+     * Get Account 
+     * @return UserAccount Account
+     * @deprecated
+     */
+    @Deprecated
+    public String getUserAccount() {
+        return this.UserAccount;
+    }
+
+    /**
+     * Set Account
+     * @param UserAccount Account
+     * @deprecated
+     */
+    @Deprecated
+    public void setUserAccount(String UserAccount) {
+        this.UserAccount = UserAccount;
+    }
+
     public ModifyUserRequest() {
     }
 
@@ -135,6 +162,9 @@ public class ModifyUserRequest extends AbstractModel {
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
         }
+        if (source.UserAccount != null) {
+            this.UserAccount = new String(source.UserAccount);
+        }
     }
 
 
@@ -146,6 +176,7 @@ public class ModifyUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
+        this.setParamSimple(map, prefix + "UserAccount", this.UserAccount);
 
     }
 }

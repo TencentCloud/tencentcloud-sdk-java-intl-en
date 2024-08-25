@@ -59,14 +59,14 @@ public class ModifyApplicationRequest extends AbstractModel {
     private String PlatformId;
 
     /**
-    * Android package name
+    * Android app package name
     */
     @SerializedName("AndroidAppKey")
     @Expose
     private String AndroidAppKey;
 
     /**
-    * iOS bundleId
+    * iOS App bundleId
     */
     @SerializedName("IosAppKey")
     @Expose
@@ -78,20 +78,6 @@ public class ModifyApplicationRequest extends AbstractModel {
     @SerializedName("Remark")
     @Expose
     private String Remark;
-
-    /**
-    * Android App download address
-    */
-    @SerializedName("AndroidAppURL")
-    @Expose
-    private String AndroidAppURL;
-
-    /**
-    * iOS App download address
-    */
-    @SerializedName("IosAppURL")
-    @Expose
-    private String IosAppURL;
 
     /**
      * Get Application ID 
@@ -174,32 +160,32 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Android package name 
-     * @return AndroidAppKey Android package name
+     * Get Android app package name 
+     * @return AndroidAppKey Android app package name
      */
     public String getAndroidAppKey() {
         return this.AndroidAppKey;
     }
 
     /**
-     * Set Android package name
-     * @param AndroidAppKey Android package name
+     * Set Android app package name
+     * @param AndroidAppKey Android app package name
      */
     public void setAndroidAppKey(String AndroidAppKey) {
         this.AndroidAppKey = AndroidAppKey;
     }
 
     /**
-     * Get iOS bundleId 
-     * @return IosAppKey iOS bundleId
+     * Get iOS App bundleId 
+     * @return IosAppKey iOS App bundleId
      */
     public String getIosAppKey() {
         return this.IosAppKey;
     }
 
     /**
-     * Set iOS bundleId
-     * @param IosAppKey iOS bundleId
+     * Set iOS App bundleId
+     * @param IosAppKey iOS App bundleId
      */
     public void setIosAppKey(String IosAppKey) {
         this.IosAppKey = IosAppKey;
@@ -219,38 +205,6 @@ public class ModifyApplicationRequest extends AbstractModel {
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
-    }
-
-    /**
-     * Get Android App download address 
-     * @return AndroidAppURL Android App download address
-     */
-    public String getAndroidAppURL() {
-        return this.AndroidAppURL;
-    }
-
-    /**
-     * Set Android App download address
-     * @param AndroidAppURL Android App download address
-     */
-    public void setAndroidAppURL(String AndroidAppURL) {
-        this.AndroidAppURL = AndroidAppURL;
-    }
-
-    /**
-     * Get iOS App download address 
-     * @return IosAppURL iOS App download address
-     */
-    public String getIosAppURL() {
-        return this.IosAppURL;
-    }
-
-    /**
-     * Set iOS App download address
-     * @param IosAppURL iOS App download address
-     */
-    public void setIosAppURL(String IosAppURL) {
-        this.IosAppURL = IosAppURL;
     }
 
     public ModifyApplicationRequest() {
@@ -285,12 +239,6 @@ public class ModifyApplicationRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
-        if (source.AndroidAppURL != null) {
-            this.AndroidAppURL = new String(source.AndroidAppURL);
-        }
-        if (source.IosAppURL != null) {
-            this.IosAppURL = new String(source.IosAppURL);
-        }
     }
 
 
@@ -306,8 +254,6 @@ public class ModifyApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
         this.setParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
-        this.setParamSimple(map, prefix + "AndroidAppURL", this.AndroidAppURL);
-        this.setParamSimple(map, prefix + "IosAppURL", this.IosAppURL);
 
     }
 }

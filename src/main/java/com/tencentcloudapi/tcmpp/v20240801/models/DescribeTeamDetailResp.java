@@ -94,6 +94,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RegisterLink;
 
     /**
+    * Application name. It’s required when querying details of a mini program team.
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
      * Get Team name
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TeamName Team name
@@ -265,6 +272,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RegisterLink = RegisterLink;
     }
 
+    /**
+     * Get Application name. It’s required when querying details of a mini program team. 
+     * @return ApplicationName Application name. It’s required when querying details of a mini program team.
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set Application name. It’s required when querying details of a mini program team.
+     * @param ApplicationName Application name. It’s required when querying details of a mini program team.
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
     public DescribeTeamDetailResp() {
     }
 
@@ -300,6 +323,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RegisterLink != null) {
             this.RegisterLink = new String(source.RegisterLink);
         }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
     }
 
 
@@ -316,6 +342,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BindMiniTeamCount", this.BindMiniTeamCount);
         this.setParamSimple(map, prefix + "BindTeamName", this.BindTeamName);
         this.setParamSimple(map, prefix + "RegisterLink", this.RegisterLink);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
 
     }
 }

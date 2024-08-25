@@ -38,7 +38,7 @@ public class CreateTeamRequest extends AbstractModel {
     private String AdminUserId;
 
     /**
-    * Team permission type 1 Mini program 2 App (Multiple selection)
+    * Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
     */
     @SerializedName("TeamRoleTypeList")
     @Expose
@@ -98,16 +98,16 @@ public class CreateTeamRequest extends AbstractModel {
     }
 
     /**
-     * Get Team permission type 1 Mini program 2 App (Multiple selection) 
-     * @return TeamRoleTypeList Team permission type 1 Mini program 2 App (Multiple selection)
+     * Get Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported) 
+     * @return TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
      */
     public Long [] getTeamRoleTypeList() {
         return this.TeamRoleTypeList;
     }
 
     /**
-     * Set Team permission type 1 Mini program 2 App (Multiple selection)
-     * @param TeamRoleTypeList Team permission type 1 Mini program 2 App (Multiple selection)
+     * Set Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+     * @param TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
      */
     public void setTeamRoleTypeList(Long [] TeamRoleTypeList) {
         this.TeamRoleTypeList = TeamRoleTypeList;

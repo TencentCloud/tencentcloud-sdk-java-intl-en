@@ -45,48 +45,6 @@ public class CreateApplicationRequest extends AbstractModel {
     private String PlatformId;
 
     /**
-    * Android package name
-    */
-    @SerializedName("AndroidAppKey")
-    @Expose
-    private String AndroidAppKey;
-
-    /**
-    * iOS bundleId
-    */
-    @SerializedName("IosAppKey")
-    @Expose
-    private String IosAppKey;
-
-    /**
-    * Introduction
-    */
-    @SerializedName("Intro")
-    @Expose
-    private String Intro;
-
-    /**
-    * Remarks
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
-    * Android App download address
-    */
-    @SerializedName("AndroidAppURL")
-    @Expose
-    private String AndroidAppURL;
-
-    /**
-    * iOS App download address
-    */
-    @SerializedName("IosAppURL")
-    @Expose
-    private String IosAppURL;
-
-    /**
     * Team ID
     */
     @SerializedName("TeamId")
@@ -99,6 +57,34 @@ public class CreateApplicationRequest extends AbstractModel {
     @SerializedName("ApplicationType")
     @Expose
     private Long ApplicationType;
+
+    /**
+    * Introduction
+    */
+    @SerializedName("Intro")
+    @Expose
+    private String Intro;
+
+    /**
+    * Android app package name
+    */
+    @SerializedName("AndroidAppKey")
+    @Expose
+    private String AndroidAppKey;
+
+    /**
+    * iOS App bundleId
+    */
+    @SerializedName("IosAppKey")
+    @Expose
+    private String IosAppKey;
+
+    /**
+    * Remarks
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
      * Get Application name 
@@ -149,102 +135,6 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Android package name 
-     * @return AndroidAppKey Android package name
-     */
-    public String getAndroidAppKey() {
-        return this.AndroidAppKey;
-    }
-
-    /**
-     * Set Android package name
-     * @param AndroidAppKey Android package name
-     */
-    public void setAndroidAppKey(String AndroidAppKey) {
-        this.AndroidAppKey = AndroidAppKey;
-    }
-
-    /**
-     * Get iOS bundleId 
-     * @return IosAppKey iOS bundleId
-     */
-    public String getIosAppKey() {
-        return this.IosAppKey;
-    }
-
-    /**
-     * Set iOS bundleId
-     * @param IosAppKey iOS bundleId
-     */
-    public void setIosAppKey(String IosAppKey) {
-        this.IosAppKey = IosAppKey;
-    }
-
-    /**
-     * Get Introduction 
-     * @return Intro Introduction
-     */
-    public String getIntro() {
-        return this.Intro;
-    }
-
-    /**
-     * Set Introduction
-     * @param Intro Introduction
-     */
-    public void setIntro(String Intro) {
-        this.Intro = Intro;
-    }
-
-    /**
-     * Get Remarks 
-     * @return Remark Remarks
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set Remarks
-     * @param Remark Remarks
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
-     * Get Android App download address 
-     * @return AndroidAppURL Android App download address
-     */
-    public String getAndroidAppURL() {
-        return this.AndroidAppURL;
-    }
-
-    /**
-     * Set Android App download address
-     * @param AndroidAppURL Android App download address
-     */
-    public void setAndroidAppURL(String AndroidAppURL) {
-        this.AndroidAppURL = AndroidAppURL;
-    }
-
-    /**
-     * Get iOS App download address 
-     * @return IosAppURL iOS App download address
-     */
-    public String getIosAppURL() {
-        return this.IosAppURL;
-    }
-
-    /**
-     * Set iOS App download address
-     * @param IosAppURL iOS App download address
-     */
-    public void setIosAppURL(String IosAppURL) {
-        this.IosAppURL = IosAppURL;
-    }
-
-    /**
      * Get Team ID 
      * @return TeamId Team ID
      */
@@ -276,6 +166,70 @@ public class CreateApplicationRequest extends AbstractModel {
         this.ApplicationType = ApplicationType;
     }
 
+    /**
+     * Get Introduction 
+     * @return Intro Introduction
+     */
+    public String getIntro() {
+        return this.Intro;
+    }
+
+    /**
+     * Set Introduction
+     * @param Intro Introduction
+     */
+    public void setIntro(String Intro) {
+        this.Intro = Intro;
+    }
+
+    /**
+     * Get Android app package name 
+     * @return AndroidAppKey Android app package name
+     */
+    public String getAndroidAppKey() {
+        return this.AndroidAppKey;
+    }
+
+    /**
+     * Set Android app package name
+     * @param AndroidAppKey Android app package name
+     */
+    public void setAndroidAppKey(String AndroidAppKey) {
+        this.AndroidAppKey = AndroidAppKey;
+    }
+
+    /**
+     * Get iOS App bundleId 
+     * @return IosAppKey iOS App bundleId
+     */
+    public String getIosAppKey() {
+        return this.IosAppKey;
+    }
+
+    /**
+     * Set iOS App bundleId
+     * @param IosAppKey iOS App bundleId
+     */
+    public void setIosAppKey(String IosAppKey) {
+        this.IosAppKey = IosAppKey;
+    }
+
+    /**
+     * Get Remarks 
+     * @return Remark Remarks
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remarks
+     * @param Remark Remarks
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public CreateApplicationRequest() {
     }
 
@@ -293,29 +247,23 @@ public class CreateApplicationRequest extends AbstractModel {
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
         }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new Long(source.ApplicationType);
+        }
+        if (source.Intro != null) {
+            this.Intro = new String(source.Intro);
+        }
         if (source.AndroidAppKey != null) {
             this.AndroidAppKey = new String(source.AndroidAppKey);
         }
         if (source.IosAppKey != null) {
             this.IosAppKey = new String(source.IosAppKey);
         }
-        if (source.Intro != null) {
-            this.Intro = new String(source.Intro);
-        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
-        }
-        if (source.AndroidAppURL != null) {
-            this.AndroidAppURL = new String(source.AndroidAppURL);
-        }
-        if (source.IosAppURL != null) {
-            this.IosAppURL = new String(source.IosAppURL);
-        }
-        if (source.TeamId != null) {
-            this.TeamId = new String(source.TeamId);
-        }
-        if (source.ApplicationType != null) {
-            this.ApplicationType = new Long(source.ApplicationType);
         }
     }
 
@@ -327,14 +275,12 @@ public class CreateApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "Logo", this.Logo);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
-        this.setParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
-        this.setParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
-        this.setParamSimple(map, prefix + "Intro", this.Intro);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
-        this.setParamSimple(map, prefix + "AndroidAppURL", this.AndroidAppURL);
-        this.setParamSimple(map, prefix + "IosAppURL", this.IosAppURL);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamSimple(map, prefix + "Intro", this.Intro);
+        this.setParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
+        this.setParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }
