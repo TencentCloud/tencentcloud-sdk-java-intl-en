@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel {
 
     /**
-    * Offset.
+    * Offset. Its value must be an integer multiple of the limit. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number of returned results.
+    * Limit. Value range: 1-50. Default value: 10.
     */
     @SerializedName("Limit")
     @Expose
@@ -45,39 +45,39 @@ public class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel
     private Long MemberUin;
 
     /**
-    * Policy ID.
+    * Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+     * Get Offset. Its value must be an integer multiple of the limit. Default value: 0. 
+     * @return Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set Offset. Its value must be an integer multiple of the limit. Default value: 0.
+     * @param Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number of returned results. 
-     * @return Limit Maximum number of returned results.
+     * Get Limit. Value range: 1-50. Default value: 10. 
+     * @return Limit Limit. Value range: 1-50. Default value: 10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of returned results.
-     * @param Limit Maximum number of returned results.
+     * Set Limit. Value range: 1-50. Default value: 10.
+     * @param Limit Limit. Value range: 1-50. Default value: 10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -100,16 +100,16 @@ public class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel
     }
 
     /**
-     * Get Policy ID. 
-     * @return PolicyId Policy ID.
+     * Get Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1). 
+     * @return PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID.
-     * @param PolicyId Policy ID.
+     * Set Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+     * @param PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

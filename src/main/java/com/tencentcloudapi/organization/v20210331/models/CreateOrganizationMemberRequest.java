@@ -45,7 +45,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private Long [] PermissionIds;
 
     /**
-    * ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+    * Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
     */
     @SerializedName("NodeId")
     @Expose
@@ -142,16 +142,16 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API. 
-     * @return NodeId ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+     * Get Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1). 
+     * @return NodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
-     * @param NodeId ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+     * Set Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * @param NodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;

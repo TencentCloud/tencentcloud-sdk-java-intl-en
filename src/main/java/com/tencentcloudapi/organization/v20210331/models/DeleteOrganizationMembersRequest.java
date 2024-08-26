@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteOrganizationMembersRequest extends AbstractModel {
 
     /**
-    * List of UINs of the members to be deleted.
+    * Uin list of the deleted members.
     */
     @SerializedName("MemberUin")
     @Expose
     private Long [] MemberUin;
 
     /**
-     * Get List of UINs of the members to be deleted. 
-     * @return MemberUin List of UINs of the members to be deleted.
+     * Get Uin list of the deleted members. 
+     * @return MemberUin Uin list of the deleted members.
      */
     public Long [] getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set List of UINs of the members to be deleted.
-     * @param MemberUin List of UINs of the members to be deleted.
+     * Set Uin list of the deleted members.
+     * @param MemberUin Uin list of the deleted members.
      */
     public void setMemberUin(Long [] MemberUin) {
         this.MemberUin = MemberUin;

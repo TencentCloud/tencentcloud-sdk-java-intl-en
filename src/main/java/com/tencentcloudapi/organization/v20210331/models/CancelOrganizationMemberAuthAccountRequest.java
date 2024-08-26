@@ -31,7 +31,7 @@ public class CancelOrganizationMemberAuthAccountRequest extends AbstractModel {
     private Long MemberUin;
 
     /**
-    * Policy ID.
+    * Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
     */
     @SerializedName("PolicyId")
     @Expose
@@ -61,16 +61,16 @@ public class CancelOrganizationMemberAuthAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Policy ID. 
-     * @return PolicyId Policy ID.
+     * Get Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1). 
+     * @return PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID.
-     * @param PolicyId Policy ID.
+     * Set Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+     * @param PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

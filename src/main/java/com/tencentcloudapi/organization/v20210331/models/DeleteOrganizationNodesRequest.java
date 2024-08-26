@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteOrganizationNodesRequest extends AbstractModel {
 
     /**
-    * List of node IDs.
+    * Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
     */
     @SerializedName("NodeId")
     @Expose
     private Long [] NodeId;
 
     /**
-     * Get List of node IDs. 
-     * @return NodeId List of node IDs.
+     * Get Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1). 
+     * @return NodeId Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public Long [] getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set List of node IDs.
-     * @param NodeId List of node IDs.
+     * Set Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * @param NodeId Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public void setNodeId(Long [] NodeId) {
         this.NodeId = NodeId;

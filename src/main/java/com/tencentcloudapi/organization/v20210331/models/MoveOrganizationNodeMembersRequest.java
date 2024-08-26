@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MoveOrganizationNodeMembersRequest extends AbstractModel {
 
     /**
-    * Organization node ID.
+    * Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * Member UIN list.
+    * Uin list of the members.
     */
     @SerializedName("MemberUin")
     @Expose
     private Long [] MemberUin;
 
     /**
-     * Get Organization node ID. 
-     * @return NodeId Organization node ID.
+     * Get Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1). 
+     * @return NodeId Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Organization node ID.
-     * @param NodeId Organization node ID.
+     * Set Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * @param NodeId Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get Member UIN list. 
-     * @return MemberUin Member UIN list.
+     * Get Uin list of the members. 
+     * @return MemberUin Uin list of the members.
      */
     public Long [] getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set Member UIN list.
-     * @param MemberUin Member UIN list.
+     * Set Uin list of the members.
+     * @param MemberUin Uin list of the members.
      */
     public void setMemberUin(Long [] MemberUin) {
         this.MemberUin = MemberUin;

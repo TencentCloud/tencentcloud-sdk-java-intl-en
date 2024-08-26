@@ -31,7 +31,7 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Offset.
+    * Offset. Its value must be an integer multiple of the limit. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+     * Get Offset. Its value must be an integer multiple of the limit. Default value: 0. 
+     * @return Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set Offset. Its value must be an integer multiple of the limit. Default value: 0.
+     * @param Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

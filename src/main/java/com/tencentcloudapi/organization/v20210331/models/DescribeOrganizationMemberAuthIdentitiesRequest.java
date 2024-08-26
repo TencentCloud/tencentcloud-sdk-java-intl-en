@@ -38,11 +38,18 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
     private Long Limit;
 
     /**
-    * Organization member UIN.
+    * Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
+
+    /**
+    * Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+    */
+    @SerializedName("IdentityId")
+    @Expose
+    private Long IdentityId;
 
     /**
      * Get Offset, which is an integer multiple of the value of `Limit`. Default value: `0`. 
@@ -77,19 +84,35 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
     }
 
     /**
-     * Get Organization member UIN. 
-     * @return MemberUin Organization member UIN.
+     * Get Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered. 
+     * @return MemberUin Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set Organization member UIN.
-     * @param MemberUin Organization member UIN.
+     * Set Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
+     * @param MemberUin Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1). 
+     * @return IdentityId Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+     */
+    public Long getIdentityId() {
+        return this.IdentityId;
+    }
+
+    /**
+     * Set Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+     * @param IdentityId Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+     */
+    public void setIdentityId(Long IdentityId) {
+        this.IdentityId = IdentityId;
     }
 
     public DescribeOrganizationMemberAuthIdentitiesRequest() {
@@ -109,6 +132,9 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
         if (source.MemberUin != null) {
             this.MemberUin = new Long(source.MemberUin);
         }
+        if (source.IdentityId != null) {
+            this.IdentityId = new Long(source.IdentityId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "IdentityId", this.IdentityId);
 
     }
 }

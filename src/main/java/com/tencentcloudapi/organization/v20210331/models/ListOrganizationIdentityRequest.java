@@ -45,7 +45,7 @@ public class ListOrganizationIdentityRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-    * Search by identity ID.
+    * Identity ID, which can be searched by identity ID.
     */
     @SerializedName("IdentityId")
     @Expose
@@ -107,16 +107,16 @@ public class ListOrganizationIdentityRequest extends AbstractModel {
     }
 
     /**
-     * Get Search by identity ID. 
-     * @return IdentityId Search by identity ID.
+     * Get Identity ID, which can be searched by identity ID. 
+     * @return IdentityId Identity ID, which can be searched by identity ID.
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set Search by identity ID.
-     * @param IdentityId Search by identity ID.
+     * Set Identity ID, which can be searched by identity ID.
+     * @param IdentityId Identity ID, which can be searched by identity ID.
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

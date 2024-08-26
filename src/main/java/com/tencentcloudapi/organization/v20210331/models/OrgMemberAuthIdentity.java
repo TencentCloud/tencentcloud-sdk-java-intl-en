@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IdentityRoleAliasName;
 
     /**
-    * Description
+    * Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Description;
 
     /**
-    * Creation time.
+    * Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * Update time.
+    * Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
@@ -72,12 +72,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
-    * Identity type (`1`: Preset; `2`: Custom)
+    * Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityType")
     @Expose
     private Long IdentityType;
+
+    /**
+    * Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MemberUin")
+    @Expose
+    private Long MemberUin;
+
+    /**
+    * Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MemberName")
+    @Expose
+    private String MemberName;
 
     /**
      * Get Identity ID.
@@ -140,9 +164,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Description
+     * Get Identity description.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Description
+     * @return Description Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
@@ -150,9 +174,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Description
+     * Set Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Description
+     * @param Description Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
@@ -160,9 +184,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time.
+     * Get Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time.
+     * @return CreateTime Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
@@ -170,9 +194,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Creation time.
+     * Set Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time.
+     * @param CreateTime Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
@@ -180,9 +204,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Update time.
+     * Get Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time.
+     * @return UpdateTime Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
@@ -190,9 +214,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Update time.
+     * Set Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time.
+     * @param UpdateTime Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
@@ -200,9 +224,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Identity type (`1`: Preset; `2`: Custom)
+     * Get Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IdentityType Identity type (`1`: Preset; `2`: Custom)
+     * @return IdentityType Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdentityType() {
@@ -210,13 +234,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Identity type (`1`: Preset; `2`: Custom)
+     * Set Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IdentityType Identity type (`1`: Preset; `2`: Custom)
+     * @param IdentityType Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityType(Long IdentityType) {
         this.IdentityType = IdentityType;
+    }
+
+    /**
+     * Get Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MemberUin Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMemberUin() {
+        return this.MemberUin;
+    }
+
+    /**
+     * Set Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MemberUin Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMemberUin(Long MemberUin) {
+        this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get Member name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MemberName Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMemberName() {
+        return this.MemberName;
+    }
+
+    /**
+     * Set Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MemberName Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMemberName(String MemberName) {
+        this.MemberName = MemberName;
     }
 
     public OrgMemberAuthIdentity() {
@@ -248,6 +332,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IdentityType != null) {
             this.IdentityType = new Long(source.IdentityType);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.MemberUin != null) {
+            this.MemberUin = new Long(source.MemberUin);
+        }
+        if (source.MemberName != null) {
+            this.MemberName = new String(source.MemberName);
+        }
     }
 
 
@@ -262,6 +355,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "MemberName", this.MemberName);
 
     }
 }

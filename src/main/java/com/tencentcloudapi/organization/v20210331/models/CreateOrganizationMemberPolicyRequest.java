@@ -38,7 +38,7 @@ public class CreateOrganizationMemberPolicyRequest extends AbstractModel {
     private String PolicyName;
 
     /**
-    * Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+    * Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
     */
     @SerializedName("IdentityId")
     @Expose
@@ -84,16 +84,16 @@ public class CreateOrganizationMemberPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API. 
-     * @return IdentityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+     * Get Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1). 
+     * @return IdentityId Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
-     * @param IdentityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+     * Set Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
+     * @param IdentityId Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

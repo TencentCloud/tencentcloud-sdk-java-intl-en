@@ -31,7 +31,7 @@ public class BindOrganizationMemberAuthAccountRequest extends AbstractModel {
     private Long MemberUin;
 
     /**
-    * Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+    * Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
     */
     @SerializedName("PolicyId")
     @Expose
@@ -61,16 +61,16 @@ public class BindOrganizationMemberAuthAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API. 
-     * @return PolicyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+     * Get Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1). 
+     * @return PolicyId Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
-     * @param PolicyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+     * Set Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+     * @param PolicyId Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

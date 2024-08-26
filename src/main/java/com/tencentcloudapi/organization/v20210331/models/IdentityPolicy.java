@@ -24,49 +24,105 @@ import java.util.HashMap;
 public class IdentityPolicy extends AbstractModel {
 
     /**
-    * Policy ID
+    * CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * Policy name
+    * CAM preset policy name, which is valid and required when PolicyType is a preset policy.
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-     * Get Policy ID 
-     * @return PolicyId Policy ID
+    * Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PolicyType")
+    @Expose
+    private Long PolicyType;
+
+    /**
+    * Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PolicyDocument")
+    @Expose
+    private String PolicyDocument;
+
+    /**
+     * Get CAM preset policy ID, which is valid and required when PolicyType is a preset policy. 
+     * @return PolicyId CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID
-     * @param PolicyId Policy ID
+     * Set CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
+     * @param PolicyId CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get Policy name 
-     * @return PolicyName Policy name
+     * Get CAM preset policy name, which is valid and required when PolicyType is a preset policy. 
+     * @return PolicyName CAM preset policy name, which is valid and required when PolicyType is a preset policy.
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set Policy name
-     * @param PolicyName Policy name
+     * Set CAM preset policy name, which is valid and required when PolicyType is a preset policy.
+     * @param PolicyName CAM preset policy name, which is valid and required when PolicyType is a preset policy.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
+    }
+
+    /**
+     * Get Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PolicyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getPolicyType() {
+        return this.PolicyType;
+    }
+
+    /**
+     * Set Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PolicyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPolicyType(Long PolicyType) {
+        this.PolicyType = PolicyType;
+    }
+
+    /**
+     * Get Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPolicyDocument() {
+        return this.PolicyDocument;
+    }
+
+    /**
+     * Set Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPolicyDocument(String PolicyDocument) {
+        this.PolicyDocument = PolicyDocument;
     }
 
     public IdentityPolicy() {
@@ -83,6 +139,12 @@ public class IdentityPolicy extends AbstractModel {
         if (source.PolicyName != null) {
             this.PolicyName = new String(source.PolicyName);
         }
+        if (source.PolicyType != null) {
+            this.PolicyType = new Long(source.PolicyType);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
     }
 
 
@@ -92,6 +154,8 @@ public class IdentityPolicy extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
+        this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
+        this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
 
     }
 }
